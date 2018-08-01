@@ -14,7 +14,7 @@
     * [From crowi-plus \(オンプレミス\)](getting-started/migration-guide/from-crowi-plus-onpuremisu.md)
     * [From crowi-plus-docker-compose](getting-started/migration-guide/from-crowi-plus-docker-compose.md)
 * [Management Cookbook](management-cookbook/README.md)
-  * [systemd による自動起動](management-cookbook/systemd-niyoru.md)
+  * [systemd による自動起動](management-cookbook/launch-with-systemd.md)
   * [Multiple Sites](management-cookbook/multi-app.md)
   * [Let's Encrypt による HTTPS 運用](management-cookbook/lets-encrypt-niyoru-https.md)
   * [MongoDB のバックアップ/リストア](management-cookbook/backup-mongodb.md)
