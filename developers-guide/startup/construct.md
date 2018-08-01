@@ -1,7 +1,3 @@
----
-description: 'WESEEK, Inc. での統一環境を紹介します'
----
-
 # 開発環境の構築
 
 {% hint style="success" %}

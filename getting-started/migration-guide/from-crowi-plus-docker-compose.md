@@ -1,7 +1,3 @@
----
-description: crowi-plus-docker-compose から growi-docker-compose への移行手順を紹介します
----
-
 # From crowi-plus-docker-compose
 
 

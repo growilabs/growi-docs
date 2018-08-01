@@ -1,7 +1,3 @@
----
-description: '1セットの MongoDB, Elasticsearch で複数の GROWI アプリケーションを運用する方法を紹介します'
----
-
 # Multiple Sites
 
 {% hint style="info" %}

@@ -1,7 +1,3 @@
----
-description: GROWI 利用者、開発者のためのドキュメントサイトです
----
-
 # README
 
 [![](https://user-images.githubusercontent.com/1638767/38254268-d4476bbe-3793-11e8-964c-8865d690baff.png)](https://growi.org)
