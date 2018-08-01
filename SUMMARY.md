@@ -19,6 +19,7 @@
   * [Let's Encrypt による HTTPS 運用](management-cookbook/lets-encrypt-niyoru-https.md)
   * [MongoDB のバックアップ/リストア](management-cookbook/backup-mongodb.md)
   * [MongoDB の定期バックアップ](management-cookbook/mongodb-regular-backup.md)
+  * [HackMD\(CodiMD\)連携](management-cookbook/integrate-with-hackmd.md)
 * [Configuration Cookbook](configuration-cookbook/README.md)
   * [Line Breaks の ON/OFF](configuration-cookbook/line-breaks-no-onoff.md)
   * [ファイルのアップロード設定](configuration-cookbook/fuirunoappurdo.md)
