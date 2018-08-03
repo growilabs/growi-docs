@@ -110,7 +110,7 @@ $ dpkg -l | grep elasticsearch
 ii  elasticsearch                    5.6.10                                     all          Elasticsearch is a distributed RESTful search engine built for the cloud. Reference documentation can be found at https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html and the 'Elasticsearch: The Definitive Guide' book can be found at https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html
 ```
 
-`systemctl` コマンドを使って、Elasticsearch を起動します。
+`systemctl` コマンドを使って、Elasticsearch を起動します。
 
 ```shell
 $ sudo systemctl start elasticsearch
@@ -137,7 +137,7 @@ $ sudo systemctl status elasticsearch
 まずは、Elasticsearch plugin をインストールするために利用するコマンドを検索します
 
 ```shell
-$ dpkg -L elasticsearch | grep bin |grep plugin
+$ dpkg -L elasticsearch | grep bin | grep plugin
 /usr/share/elasticsearch/bin/elasticsearch-plugin
 ```
 
@@ -157,7 +157,7 @@ $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 [公式ページ](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-ubuntu/) に従ってインストールを実施します。
 バージョンは、MongoDB 3.6 をインストールします
 
-まずは、`apt` のためにpublic key をインポートします。
+まずは、`apt` のために public key をインポートします。
 ```shell
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
 ```
@@ -191,7 +191,7 @@ ii  mongodb-org-shell                3.6.6                                      
 ii  mongodb-org-tools                3.6.6                                      amd64        MongoDB tools
 ```
 
- `systemctl` コマンドを使って、MongoDB を起動します。
+ `systemctl` コマンドを使って、MongoDB を起動します。
 
 ```shell
 $ sudo systemctl start mongod
@@ -212,7 +212,7 @@ $ sudo systemctl status mongod
 ## GROWI
 ### インストール
 
-https://github.com/weseek/growi  からソースコードを取得し、https://github.com/weseek/growi/releases にて、最新の安定版のバージョンを確認します。
+https://github.com/weseek/growi  からソースコードを取得し、https://github.com/weseek/growi/releases にて、最新の安定版のバージョンを確認します。
 
 ここでは `/opt/growi` 配下にインストールする手順を記載しています。
 
@@ -222,7 +222,7 @@ $ cd /opt/
 $ sudo git clone https://github.com/weseek/growi /opt/growi
 $ cd /opt/growi
 
-# タグの確認
+# タグの確認
 $ sudo git tag -l
 ...
 v3.1.7
@@ -246,11 +246,11 @@ $ sudo yarn
 
 ### 起動確認
 
-パッケージのインストールが完了したら、起動確認を行います。
+パッケージのインストールが完了したら、起動確認を行います。
 
 ここでは MongoDB と Elasticsearch が同一ホストで稼働していることを前提としています。
 
-`MONGO_URI` と `ELASTICSEARCH_URI` は環境に合わせて適宜書き換えてください。
+`MONGO_URI` と `ELASTICSEARCH_URI` は環境に合わせて適宜書き換えてください。
 
 ```shell
 $ sudo \
@@ -264,9 +264,9 @@ npm start
 > env-cmd config/env.prod.js node app.js
 ```
 
-`http://<hostname or ip address>:3000/` にアクセスし、初回セットアップ画面が表示されることを確認します。
+`http://<hostname or ip address>:3000/` にアクセスし、初回セットアップ画面が表示されることを確認します。
 
-### systemd による自動起動の設定
+### systemd による自動起動の設定
 
 (TODO)
 * systemd の設定は Management Cookbook の「[systemd による自動起動](../management-cookbook/launch-with-systemd.md)」へのリンクを貼る
@@ -276,7 +276,7 @@ npm start
 ここでは、起動した GROWI に対してリバースプロキシを行うための設定例を記載します。
 
 ### Apache
-#### インストール
+#### インストール
 
 ```shell
 $ sudo apt-get update && sudo apt-get -y install apache2
@@ -337,7 +337,7 @@ $ sudo apt-get update && sudo apt-get -y install nginx
 #### リバースプロキシの設定例
 
 ここでは HTTPS を利用する設定例を記載しています。
-&lt;server&gt; など&lt;&gt;で囲まれている箇所は、適宜環境に合わせて設定してください。
+&lt;server&gt; など&lt;&gt;で囲まれている箇所は、適宜環境に合わせて設定してください。
 
 ```nginx
 upstream growi {
