@@ -30,7 +30,7 @@ $ curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
 $ sudo bash nodesource_setup.sh
 ```
 
-これで `apt-get` 経由で node.js が取得できるようになったので、 `apt-get` コマンドでインストールを行います。
+これで `apt-get` 経由で node.js が取得できるようになったので、 `apt-get` コマンドでインストールを行います。
 
 ```shell
 $ sudo apt-get install nodejs
@@ -57,7 +57,7 @@ $ yarn -v
 ### インストール
 
 [公式ページ](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) に従い、インストールを進めます。
-ここでは Elasticsearch 5.x をインストールするために若干の修正をしています
+ここでは Elasticsearch 5.x をインストールするために若干の修正をしています
 
 まず、Elasticsearch を実行できるように JDK8 をインストールします。
 
