@@ -25,7 +25,7 @@ docker-compose -f docker-compose.dev.yml up
 以下のコンテナ群が起動します
 
 | Product | Port | Desc |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | MongoDB | 27017 |  |
 | ElasticSearch | 9200 |  |
 | [elasticsearch-head](https://github.com/mobz/elasticsearch-head) | 9100 | A web front end for an Elasticsearch cluster |
