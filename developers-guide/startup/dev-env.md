@@ -99,7 +99,45 @@ $ yarn -v
    * {% code-tabs %}
      {% code-tabs-item title="Vagrantfile" %}
      ```ruby
-     Vagrant.configure(2) do |config|  config.vm.box = "envimation/ubuntu-xenial-docker"  #### provision  ### change mirror (activate if you need)  #config.vm.provision "shell", inline: <<-SHELL  #  sed -i.bak -e "s%http://archive.ubuntu.com/ubuntu/%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list  #SHELL  ### install apt packages  config.vm.provision "shell", preserve_order: true, inline: <<-SHELL    apt-get update && apt-get install -q -y tmux git nano less  SHELL  ### clone git  config.vm.provision "shell", privileged: false, inline: <<-SHELL    git clone https://github.com/weseek/growi-docker-compose  SHELL  ## port forwarding  # MongoDB  config.vm.network "forwarded_port", guest: 27017, host: 27017, host_ip: "127.0.0.1"  # Redis  config.vm.network "forwarded_port", guest: 6379, host: 6379, host_ip: "127.0.0.1"  # ElasticSearch  config.vm.network "forwarded_port", guest: 9200, host: 9200, host_ip: "127.0.0.1"  # elasticsearch-head  config.vm.network "forwarded_port", guest: 9100, host: 9100, host_ip: "127.0.0.1"  # Provider Options  config.vm.provider "virtualbox" do |vb|    vb.customize ["modifyvm", :id, "--memory", "1024"]  endend
+     Vagrant.configure(2) do |config|
+  
+       config.vm.box = "envimation/ubuntu-xenial-docker"
+
+       ### provision
+       ### change mirror
+       config.vm.provision "shell", inline: <<-SHELL
+         sed -i.bak -e "s%http://archive.ubuntu.com/ubuntu/%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list
+       SHELL
+       ### install packages
+       config.vm.provision :shell, :inline => "apt-get update && apt-get install -q -y tmux git nano less"
+       ### clone growi-docker-compose for development
+       config.vm.provision :shell, privileged: false, inline: <<-SHELL
+         git clone -q https://github.com/weseek/growi-docker-compose.git growi
+       SHELL
+
+       ## port forwarding
+       # HackMD
+       config.vm.network "forwarded_port", guest: 3010, host: 3010, host_ip: "empty"
+       # MongoDB
+       config.vm.network "forwarded_port", guest: 27017, host: 27017, host_ip: "127.0.0.1"
+       # Redis
+       config.vm.network "forwarded_port", guest: 6379, host: 6379, host_ip: "127.0.0.1"
+       # ElasticSearch
+       config.vm.network "forwarded_port", guest: 9200, host: 9200, host_ip: "127.0.0.1"
+       # elasticsearch-head
+       config.vm.network "forwarded_port", guest: 9100, host: 9100, host_ip: "127.0.0.1"
+       # MariaDB
+       config.vm.network "forwarded_port", guest: 3306, host: 3306, host_ip: "127.0.0.1"
+       # phpMyAdmin
+       config.vm.network "forwarded_port", guest: 8080, host: 8080, host_ip: "127.0.0.1"
+
+       # Provider Options
+       config.vm.provider "virtualbox" do |vb|
+         vb.customize ["modifyvm", :id, "--memory", "4096"]
+       end
+
+     end
+
      ```
      {% endcode-tabs-item %}
      {% endcode-tabs %}

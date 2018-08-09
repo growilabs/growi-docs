@@ -30,9 +30,9 @@
 * [開発ガイド](developers-guide/README.md)
   * [Architecture](developers-guide/architecture.md)
   * [開発スタートアップ](developers-guide/startup/README.md)
-    * [開発環境の構築](developers-guide/startup/construct.md)
+    * [開発環境の構築](developers-guide/startup/dev-env.md)
     * [起動](developers-guide/startup/launch.md)
-    * [環境変数の設定](developers-guide/startup/no-1.md)
-    * [ロガーの設定](developers-guide/startup/rogno.md)
-    * [VSCode によるリモートデバッグ](developers-guide/startup/vscode-niyorurimtodebaggu.md)
+    * [環境変数の設定](developers-guide/startup/env-vars.md)
+    * [ロガーの設定](developers-guide/startup/logger.md)
+    * [VSCode によるリモートデバッグ](developers-guide/startup/debug-with-vscode.md)
 

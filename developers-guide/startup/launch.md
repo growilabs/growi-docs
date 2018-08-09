@@ -10,11 +10,11 @@ $ git clone https://github.com/weseek/growi.git
 
 ### 実行環境のバージョンの確認
 
-[開発環境の構築\#バージョンの確認](construct.md#bjonno) を参照
+[開発環境の構築\#バージョンの確認](dev-env.md#bjonno) を参照
 
 ### 開発用データストアの準備
 
-[開発環境の構築\#開発環境の依存インフラの準備](construct.md#noinfurano) で作成した Docker 利用可能な環境で以下を実行
+[開発環境の構築\#開発環境の依存インフラの準備](dev-env.md#noinfurano) で作成した Docker 利用可能な環境で以下を実行
 
 ```bash
 git clone https://github.com/weseek/growi-docker-compose.git
