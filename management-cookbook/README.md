@@ -1,8 +1,8 @@
 ---
-description: GROWI 管理者向けの便利なクックブックを紹介します
+description: GROWI 管理ページでの様々な設定を紹介します
 ---
 
-# Management Cookbook
+# GROWI 管理者の Cookbook
 
 
 

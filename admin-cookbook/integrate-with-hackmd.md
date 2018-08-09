@@ -1,3 +1,7 @@
+---
+description: HackMD(CodiMD)と連携し、同時多人数編集を実現します
+---
+
 # HackMD\(CodiMD\)連携
 
 ## 既存の HackMD\(CodiMD\) と連携する

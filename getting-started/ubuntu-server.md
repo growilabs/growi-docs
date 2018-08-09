@@ -9,10 +9,12 @@
 * node.js 8.x \(DO NOT USE 9.x\)
 * npm 5.x
 * yarn
-* Elasticsearch 5.x
 * MongoDB 3.x
-* systemd
-* Apache or nginx
+* \(Option\) Elasticsearch 5.x
+* \(Option\) systemd
+* \(Option\) Apache or nginx
+
+Option となっているものは必須ではありませんが、このドキュメントではこれらを全て利用し、全文検索可能な GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホスト起動と同時に起動させるところまでを扱います。
 
 ## node.js 8.x & npm のインストール
 
@@ -90,7 +92,7 @@ $ echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo te
 $ sudo apt-get update && sudo apt-get install elasticsearch
 ```
 
-インストールが完了したら、Elasticsearch に割り当てるメモリを調整します。 1GB 割当のところを 256MB に変更します。
+インストールが完了したら、Elasticsearch に割り当てるメモリを調整します。メモリの割り当ては個人ユースであれば 256MB で十分です。チーム規模、ページの量に応じて変更してください。
 
 ```text
 $ sudo vim /etc/elasticsearch/jvm.options
@@ -274,7 +276,7 @@ npm start
 
 \(TODO\)
 
-* systemd の設定は Management Cookbook の「[systemd による自動起動](../management-cookbook/launch-with-systemd.md)」へのリンクを貼る
+* systemd の設定は Management Cookbook の「[systemd による自動起動](../admin-cookbook/launch-with-systemd.md)」へのリンクを貼る
 
 ## リバースプロキシの設定
 
