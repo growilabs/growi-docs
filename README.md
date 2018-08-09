@@ -1,6 +1,10 @@
 # README
 
-## [![](https://user-images.githubusercontent.com/1638767/38254268-d4476bbe-3793-11e8-964c-8865d690baff.png)](https://growi.org)
+<p align="center">
+  <a href="https://growi.org">
+    <img src="https://user-images.githubusercontent.com/1638767/38254268-d4476bbe-3793-11e8-964c-8865d690baff.png" width="240px">
+  </a>
+</p>
 
 ## GROWI Docs について
 
