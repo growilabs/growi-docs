@@ -1,7 +1,7 @@
 # Table of contents
 
 * [README](README.md)
-* [Features](features.md)
+* [What's New?](news.md)
 * [インストール](getting-started/README.md)
   * [Heroku](getting-started/heroku.md)
   * [docker-compose](getting-started/docker-compose.md)
