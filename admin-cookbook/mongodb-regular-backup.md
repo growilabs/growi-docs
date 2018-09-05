@@ -2,15 +2,19 @@
 
 ## 前提条件
 
-* docker
-* バックアップファイルをアップロードするための AWS S3 バケット
-  * S3 バケットへのアクセス権を持った IAM ユーザーのアクセスキーおよびシークレットキー
+* バックアップ/リストアは、[weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を利用します
 
 #### 必要なもの
 
 * docker
 * バックアップファイルをアップロードするための AWS S3 バケット
   * S3 バケットへのアクセス権を持った IAM ユーザーのアクセスキーおよびシークレットキー
+
+{% hint style="info" %}
+事前に 以下のページを確認しておきましょう。
+
+{% page-ref page="backup-mongodb.md" %}
+{% endhint %}
 
 ## バックアップ用コンテナの起動
 
