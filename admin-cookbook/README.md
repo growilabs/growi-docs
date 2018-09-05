@@ -1,5 +1,5 @@
 ---
-description: システム管理者向けの Tips や設定を紹介します
+description: GROWI 管理者向けの便利なクックブックを紹介します
 ---
 
 # システム管理者の Cookbook

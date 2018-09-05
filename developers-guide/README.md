@@ -1,7 +1,3 @@
----
-description: 開発者向けの情報です
----
-
 # 開発ガイド
 
 {% page-ref page="architecture.md" %}

@@ -1,5 +1,5 @@
 ---
-description: GROWI 管理ページでの様々な設定を紹介します
+description: GROWI アプリケーションの設定などに関する Cookbook を紹介します
 ---
 
 # GROWI 管理者の Cookbook
