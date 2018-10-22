@@ -246,7 +246,7 @@ $ sudo git checkout -b v3.1.9 refs/tags/v3.1.9
 ソースコードを clone した後に、`yarn` コマンドを利用して、 GROWI に必要なパッケージをインストールします。
 
 ```text
-$ sudo /opt/growi/
+$ cd /opt/growi
 $ sudo yarn
 ```
 
