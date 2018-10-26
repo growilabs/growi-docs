@@ -10,7 +10,7 @@
 * バックアップファイルをアップロードするための AWS S3 バケット
   * S3 バケットへのアクセス権を持った IAM ユーザーのアクセスキーおよびシークレットキー
 
-## 事前作業\(バックアップ/リストア両方\) {#preparation}
+## 事前作業\(バックアップ/リストア両方\) <a id="preparation"></a>
 
 {% hint style="info" %}
 [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) は、シェルスクリプトを実行するテンポラリなコンテナを作成してバックアップ/リストアを行います。そのため、コンテナ内から MongoDB サーバーへ接続が可能であるように、docker コマンドオプションを適宜追加する必要があります。
