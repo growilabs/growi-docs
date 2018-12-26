@@ -1,4 +1,4 @@
-box: alpine/git
+box: node:10
 
 deploy:
   steps:
