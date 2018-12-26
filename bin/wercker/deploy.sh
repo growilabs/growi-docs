@@ -1,3 +1,7 @@
+##
+## refs https://vuepress.vuejs.org/guide/deploy.html#github-pages
+##
+
 #!/usr/bin/env sh
 
 # abort on errors

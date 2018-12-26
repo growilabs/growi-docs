@@ -1,0 +1,19 @@
+box: node:10
+
+deploy:
+  steps:
+    - script:
+      code: |
+        sh ./bin/wercker/init-git.sh
+
+    - script:
+      code: |
+        sh /bin/wercker/deploy.sh
+
+  after-steps:
+    - slack-notifier:
+      url: $SLACK_WEBHOOK_URL
+      channel: ci
+      username: wercker
+      notify_on: "failed"
+
