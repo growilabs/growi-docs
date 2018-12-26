@@ -26,7 +26,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "vuepress": "^0.14.8"
+    "vuepress": "^1.0.0-alpha.30"
   },
   "engines": {
     "node": ">=10.14 <11",
