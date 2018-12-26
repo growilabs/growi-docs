@@ -8,7 +8,7 @@ deploy:
 
     - script:
       code: |
-        sh /bin/wercker/deploy.sh
+        sh ./bin/wercker/deploy.sh
 
   after-steps:
     - slack-notifier:
