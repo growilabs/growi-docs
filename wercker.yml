@@ -3,11 +3,29 @@ box: node:10
 deploy:
   steps:
     - script:
+      name: set yarn cache-folder
+      code: yarn config set cache-folder $WERCKER_CACHE_DIR/yarn
+
+    - script:
+      name: install dependencies
       code: |
-        sh ./bin/wercker/init-git.sh
+        yarn
+
+    - script:
+      name: print dependencies
+      code: |
+        echo -n "node " && node -v
+        echo -n "npm " && npm -v
+        yarn list --depth=0
 
     - script:
       code: |
+        yarn docs:build
+
+    - script:
+      name: deploy to GitHub Pages
+      code: |
+        sh ./bin/wercker/init-git.sh
         sh ./bin/wercker/deploy.sh
 
   after-steps:
