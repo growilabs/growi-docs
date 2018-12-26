@@ -1,0 +1,31 @@
+{
+  "name": "growi-docs",
+  "version": "1.0.0",
+  "description": "GROWI documentation repository",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "start": "docs:dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weseek/growi-docs.git"
+  },
+  "keywords": [
+    "node",
+    "vuepress",
+    "markdown",
+    "growi",
+    "documentation"
+  ],
+  "author": "Yuki Takei <yuki@weseek.co.jp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weseek/growi-docs/issues"
+  },
+  "homepage": "https://github.com/weseek/growi-docs#readme",
+  "devDependencies": {
+    "vuepress": "^0.14.8"
+  }
+}
