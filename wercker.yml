@@ -19,6 +19,7 @@ deploy:
         yarn list --depth=0
 
     - script:
+      name: build docs
       code: |
         yarn docs:build
 
