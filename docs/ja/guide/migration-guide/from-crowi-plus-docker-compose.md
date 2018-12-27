@@ -1,31 +1,29 @@
-# From crowi-plus-docker-compose
+# crowi-plus-docker-compose からの移行
 
-
-
-{% hint style="danger" %}
+::: danger
 `docker-compose.yml`は編集せず、`Dockerfile` のみ編集してください
-{% endhint %}
+:::
 
-### Dockerfile
+## Dockerfile
 
 1. `FROM` と`ENV APP_DIR` 行を以下のように書き換えます
    * **Before**
 
-     ```text
+     ```docker
        FROM weseek/crowi-plus:2
        ENV APP_DIR /opt/crowi-plus
      ```
 
    * **After**
 
-     ```text
+     ```docker
        FROM weseek/growi:3
        ENV APP_DIR /opt/growi
      ```
 2. GROWI では、lsx プラグインと pukiwiki-like-linker プラグインはオフィシャルイメージに含まれるようになりました。そのため、以下の行をコメントアウトするか、削除してください。
    * **Before**
 
-     ```text
+     ```docker
        # install plugins if necessary
        RUN echo "install plugins" \
        #  && npm install --save \
@@ -38,7 +36,7 @@
 
    * **After**
 
-     ```text
+     ```docker
        # install plugins if necessary
        # ;;
        # ;; NOTE: In GROWI v3 and later,
@@ -55,7 +53,7 @@
        #RUN npm run build:prod
      ```
 
-### Start
+## Start
 
 1. `docker-compose up`
 

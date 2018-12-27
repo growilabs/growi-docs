@@ -39,8 +39,8 @@ module.exports = {
             title: 'インストール',
             collapsable: false,
             children: [
-              '/ja/guide/getting-started/heroku.md',
               '/ja/guide/getting-started/docker-compose.md',
+              '/ja/guide/getting-started/heroku.md',
               '/ja/guide/getting-started/ubuntu-server.md',
               '/ja/guide/getting-started/centos.md',
               '/ja/guide/getting-started/raspberry-pi.md',
@@ -50,9 +50,9 @@ module.exports = {
             title: '他システムからの移行',
             collapsable: true,
             children: [
-              '/ja/guide/migration-guide/from-crowi-plus-onpuremisu.md',
+              '/ja/guide/migration-guide/from-crowi-plus-onpremise.md',
               '/ja/guide/migration-guide/from-crowi-plus-docker-compose.md',
-              '/ja/guide/migration-guide/from-crowi-onpuremisu.md',
+              '/ja/guide/migration-guide/from-crowi-onpremise.md',
               '/ja/guide/migration-guide/from-bakudankun-crowi.md',
             ]
           },
@@ -62,9 +62,9 @@ module.exports = {
             children: [
               '/ja/guide/admin-cookbook/launch-with-systemd.md',
               '/ja/guide/admin-cookbook/multi-app.md',
-              '/ja/guide/admin-cookbook/lets-encrypt-niyoru-https.md',
-              '/ja/guide/admin-cookbook/backup-mongodb.md',
-              '/ja/guide/admin-cookbook/mongodb-regular-backup.md',
+              '/ja/guide/admin-cookbook/lets-encrypt.md',
+              '/ja/guide/admin-cookbook/mongodb-backup.md',
+              '/ja/guide/admin-cookbook/mongodb-backup-regular.md',
               '/ja/guide/admin-cookbook/integrate-with-hackmd.md',
             ]
           },
