@@ -1,6 +1,7 @@
 module.exports = {
   title: 'GROWI Docs',
   serviceWorker: true,
+  plugins: [ 'tabs' ],
   markdown: {
     toc: { includeLevel: [2] },
   },

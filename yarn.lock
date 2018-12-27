@@ -6925,6 +6925,11 @@ vue-style-loader@^4.1.0:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
+vue-tabs-component@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/vue-tabs-component/-/vue-tabs-component-1.5.0.tgz#9b2f02adbc9bb58395729d68c4906a795a20d728"
+  integrity sha512-ld4p+hv49Fimw+zv/7GQqMhbjAHjpbWF3UiJtmMaSnvLKbsB1ysfs9dQH0SZ8NvdYpqqKay/VLIqR9yXgse1Sg==
+
 vue-template-compiler@^2.5.16:
   version "2.5.21"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.5.21.tgz#a57ceb903177e8f643560a8d639a0f8db647054a"
@@ -6955,6 +6960,11 @@ vuepress-html-webpack-plugin@^3.2.0:
     tapable "^1.0.0"
     toposort "^1.0.0"
     util.promisify "1.0.0"
+
+vuepress-plugin-tabs@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-tabs/-/vuepress-plugin-tabs-0.2.0.tgz#86ce4e6b5994e7604f44b1ce271e4f400c319912"
+  integrity sha512-33jGoKfA7fnCGfxtOEMcXaU49tCDi6VmqW/C9BuDf0DmL9WPncCN0McF+5Kx3nfHWCpWur5oOya5NHyWa+lf9A==
 
 vuepress@^1.0.0-alpha.30:
   version "1.0.0-alpha.30"
