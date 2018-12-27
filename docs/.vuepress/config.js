@@ -17,8 +17,10 @@ module.exports = {
   },
   themeConfig: {
     repo: 'weseek/growi-docs',
-    lastUpdated: 'Last Updated',
+    docsDir: 'docs',
     editLinks: true,
+    editLinkText: 'Edit this page on GitHub',
+    lastUpdated: 'Last Updated',
     locales: {
       '/': {
         label: '日本語',
