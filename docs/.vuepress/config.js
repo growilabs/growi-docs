@@ -14,15 +14,16 @@ module.exports = {
   themeConfig: {
     repo: 'weseek/growi-docs',
     lastUpdated: 'Last Updated',
+    editLinks: true,
     locales: {
       '/': {
         label: '日本語',
         selectText: '言語',
-        editLinkText: 'GitHub 上でこのページを編集する',
         nav: [
           { text: 'Home', link: '/' },
-          { text: 'Guide', link: '/guide/' },
-          { text: '(TBD) API リファレンス', link: '/api/' },
+          { text: 'ガイド', link: '/ja/guide/' },
+          { text: '(TBD) API リファレンス', link: '/api/v3.md' },
+          { text: 'リリースノート', link: 'https://github.com/weseek/growi/releases' },
           {
             text: '外部サイト',
             items: [
@@ -33,51 +34,60 @@ module.exports = {
           }
         ],
         sidebar: [
+          '/ja/guide/',
           {
             title: 'インストール',
             collapsable: false,
             children: [
-              '/guide/getting-started/heroku.md',
-              '/guide/getting-started/docker-compose.md',
-              '/guide/getting-started/ubuntu-server.md',
-              '/guide/getting-started/centos.md',
-              '/guide/getting-started/raspberry-pi.md',
+              '/ja/guide/getting-started/heroku.md',
+              '/ja/guide/getting-started/docker-compose.md',
+              '/ja/guide/getting-started/ubuntu-server.md',
+              '/ja/guide/getting-started/centos.md',
+              '/ja/guide/getting-started/raspberry-pi.md',
             ]
           },
           {
             title: '他システムからの移行',
             collapsable: true,
             children: [
-              '/guide/migration-guide/from-crowi-plus-onpuremisu.md',
-              '/guide/migration-guide/from-crowi-plus-docker-compose.md',
-              '/guide/migration-guide/from-crowi-onpuremisu.md',
-              '/guide/migration-guide/from-bakudankun-crowi.md',
+              '/ja/guide/migration-guide/from-crowi-plus-onpuremisu.md',
+              '/ja/guide/migration-guide/from-crowi-plus-docker-compose.md',
+              '/ja/guide/migration-guide/from-crowi-onpuremisu.md',
+              '/ja/guide/migration-guide/from-bakudankun-crowi.md',
             ]
           },
           {
             title: 'システム管理者のクックブック',
             collapsable: false,
             children: [
-              '/guide/admin-cookbook/launch-with-systemd.md',
-              '/guide/admin-cookbook/multi-app.md',
-              '/guide/admin-cookbook/lets-encrypt-niyoru-https.md',
-              '/guide/admin-cookbook/backup-mongodb.md',
-              '/guide/admin-cookbook/mongodb-regular-backup.md',
-              '/guide/admin-cookbook/integrate-with-hackmd.md',
+              '/ja/guide/admin-cookbook/launch-with-systemd.md',
+              '/ja/guide/admin-cookbook/multi-app.md',
+              '/ja/guide/admin-cookbook/lets-encrypt-niyoru-https.md',
+              '/ja/guide/admin-cookbook/backup-mongodb.md',
+              '/ja/guide/admin-cookbook/mongodb-regular-backup.md',
+              '/ja/guide/admin-cookbook/integrate-with-hackmd.md',
             ]
           },
           {
             title: 'GROWI 管理者のクックブック',
             collapsable: false,
             children: [
-              '/guide/management-cookbook/line-breaks-no-onoff.md',
-              '/guide/management-cookbook/fuirunoappurdo.md',
-              '/guide/management-cookbook/ldap-xie.md',
-              '/guide/management-cookbook/active-directory-xie.md',
-              '/guide/management-cookbook/google-analytics-no.md',
-              '/guide/management-cookbook/slackmattermost-heno.md',
+              '/ja/guide/management-cookbook/line-breaks-no-onoff.md',
+              '/ja/guide/management-cookbook/fuirunoappurdo.md',
+              '/ja/guide/management-cookbook/ldap-xie.md',
+              '/ja/guide/management-cookbook/active-directory-xie.md',
+              '/ja/guide/management-cookbook/google-analytics-no.md',
+              '/ja/guide/management-cookbook/slackmattermost-heno.md',
             ]
-          }
+          },
+          {
+            title: 'API リファレンス',
+            collapsable: false,
+            children: [
+              '/api/v3.md',
+              '/api/v1.md',
+            ]
+          },
         ],
       }
     }

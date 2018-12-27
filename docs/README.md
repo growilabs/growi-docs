@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: https://user-images.githubusercontent.com/1638767/38254268-d4476bbe-3793-11e8-964c-8865d690baff.png
-actionText: Get Started
-actionLink: /guide/getting-started/
+actionText: ガイドを見る
+actionLink: /ja/guide/
 features:
   - title: Simplicity First
     details: Minimal setup with markdown-centered project structure helps you focus on writing.
