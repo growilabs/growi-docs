@@ -37,7 +37,7 @@ GROWI は [Bunyan](https://github.com/trentm/node-bunyan) および [browser-bun
 #### 設定ルール
 * `${ログネームスペース}: '${ログレベル}',` の形式で列挙してください  
     e.g.
-    ```java{4,5}
+    ```javascript{4,5}
     module.exports = {
       default: 'info',
 
