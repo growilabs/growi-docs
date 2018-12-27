@@ -34,7 +34,7 @@ module.exports = {
         ],
         sidebar: [
           {
-            title: 'Getting Started',
+            title: 'インストール',
             collapsable: false,
             children: [
               '/guide/getting-started/heroku.md',
@@ -45,8 +45,38 @@ module.exports = {
             ]
           },
           {
-            title: 'Group 2',
-            children: [ /* ... */ ]
+            title: '他システムからの移行',
+            collapsable: true,
+            children: [
+              '/guide/migration-guide/from-crowi-plus-onpuremisu.md',
+              '/guide/migration-guide/from-crowi-plus-docker-compose.md',
+              '/guide/migration-guide/from-crowi-onpuremisu.md',
+              '/guide/migration-guide/from-bakudankun-crowi.md',
+            ]
+          },
+          {
+            title: 'システム管理者のクックブック',
+            collapsable: false,
+            children: [
+              '/guide/admin-cookbook/launch-with-systemd.md',
+              '/guide/admin-cookbook/multi-app.md',
+              '/guide/admin-cookbook/lets-encrypt-niyoru-https.md',
+              '/guide/admin-cookbook/backup-mongodb.md',
+              '/guide/admin-cookbook/mongodb-regular-backup.md',
+              '/guide/admin-cookbook/integrate-with-hackmd.md',
+            ]
+          },
+          {
+            title: 'GROWI 管理者のクックブック',
+            collapsable: false,
+            children: [
+              '/guide/management-cookbook/line-breaks-no-onoff.md',
+              '/guide/management-cookbook/fuirunoappurdo.md',
+              '/guide/management-cookbook/ldap-xie.md',
+              '/guide/management-cookbook/active-directory-xie.md',
+              '/guide/management-cookbook/google-analytics-no.md',
+              '/guide/management-cookbook/slackmattermost-heno.md',
+            ]
           }
         ],
       }
