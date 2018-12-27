@@ -3,6 +3,7 @@
 GROWI Docs へようこそ。  
 このサイトは以下のセクションで構成されています。
 
+## ユーザーズガイド
 ### [インストール](getting-started/docker-compose.md)
 
 様々な方法による GROWI のインストール手順の紹介です。
@@ -21,3 +22,11 @@ GROWI システムを動作させているサーバー・コンテナクラス�
 ### [GROWI 管理者のクックブック](management-cookbook/line-breaks.md)
 
 GROWI システム本体の管理者向けのクックブックです。
+
+## [開発ガイド](/ja/dev/architecture.md)
+
+開発者のためのドキュメントです。
+
+## [(TBD) API リファレンス (英語)](/api/)
+
+開発者のためのドキュメントです。
