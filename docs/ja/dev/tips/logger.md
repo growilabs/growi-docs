@@ -6,6 +6,8 @@ GROWI は [Bunyan](https://github.com/trentm/node-bunyan) および [browser-bun
 また、古いコードでは [debug](https://www.npmjs.com/package/debug) を利用してログを出力していますが、 `debug()` は Bunyan の `logger.debug()` に置き換えられます。
 :::
 
+[[toc]]
+
 ## ログレベル
 
 * ログレベルの定義は [Bunyan#Levels](https://github.com/trentm/node-bunyan#levels) を参照してください

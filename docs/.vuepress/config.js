@@ -27,7 +27,7 @@ module.exports = {
           { text: 'Home', link: '/' },
           { text: 'ユーザーズガイド', link: '/ja/guide/' },
           { text: '開発ガイド', link: '/ja/dev/architecture.md' },
-          { text: '(TBD) API', link: '/api/v3.md' },
+          { text: '(TBD) API', link: '/api/' },
           { text: 'リリースノート', link: 'https://github.com/weseek/growi/releases' },
           {
             text: '外部サイト',
@@ -92,7 +92,7 @@ module.exports = {
               collapsable: false,
               children: [
                 ['/ja/dev/', '開発ガイド'],
-                ['/api/v3.md', '(TBD) API リファレンス (英語)'],
+                ['/api/', '(TBD) API リファレンス (英語)'],
               ]
             },
           ],
@@ -127,12 +127,17 @@ module.exports = {
               collapsable: false,
               children: [
                 ['/ja/guide/', 'ユーザーズガイド'],
-                ['/api/v3.md', '(TBD) API リファレンス (英語)'],
+                ['/api/', '(TBD) API リファレンス (英語)'],
               ]
             },
+          ],
+          '/api/': [
+            ['/api/', 'Introduction'],
+            '/api/v3.md',
+            '/api/v1.md',
           ]
         }
       }
-    }
+    },
   },
 }
