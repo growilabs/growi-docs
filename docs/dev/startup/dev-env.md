@@ -77,7 +77,7 @@ Node.js, npm, Yarn 共に、CI 環境で利用する `node:8` のバージョン
 
 ::::
 
-### バージョンの確認
+### Versions confirmed to work
 
 ```bash
 $ node -v
