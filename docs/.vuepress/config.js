@@ -28,7 +28,7 @@ module.exports = {
         nav: [
           { text: 'Home', link: '/' },
           { text: 'ユーザーズガイド', link: '/ja/guide/' },
-          { text: '開発ガイド', link: '/ja/dev/architecture.md' },
+          { text: '開発ガイド', link: '/ja/dev/' },
           { text: '(TBD) API', link: '/api/' },
           { text: 'リリースノート', link: 'https://github.com/weseek/growi/releases' },
           {
