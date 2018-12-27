@@ -26,7 +26,7 @@ module.exports = {
         nav: [
           { text: 'Home', link: '/' },
           { text: 'ユーザーズガイド', link: '/ja/guide/' },
-          { text: '開発ガイド', link: '/ja/guide/' },
+          { text: '開発ガイド', link: '/ja/dev/architecture.md' },
           { text: '(TBD) API', link: '/api/v3.md' },
           { text: 'リリースノート', link: 'https://github.com/weseek/growi/releases' },
           {
@@ -66,6 +66,7 @@ module.exports = {
               title: 'システム管理者のクックブック',
               collapsable: false,
               children: [
+                '/ja/guide/admin-cookbook/logging.md',
                 '/ja/guide/admin-cookbook/launch-with-systemd.md',
                 '/ja/guide/admin-cookbook/multi-app.md',
                 '/ja/guide/admin-cookbook/lets-encrypt.md',
@@ -90,13 +91,13 @@ module.exports = {
               title: 'その他のドキュメント',
               collapsable: false,
               children: [
-                ['/ja/dev/architecture.md', '開発ガイド'],
+                ['/ja/dev/', '開発ガイド'],
                 ['/api/v3.md', '(TBD) API リファレンス (英語)'],
               ]
             },
           ],
           '/ja/dev/': [
-            '/ja/dev/architecture.md',
+            '/ja/dev/',
             {
               title: '開発スタートアップ',
               collapsable: false,
@@ -113,6 +114,21 @@ module.exports = {
                 '/ja/dev/tips/logger.md',
                 '/ja/dev/tips/debug-with-vscode.md',
               ],
+            },
+            {
+              title: 'プラグイン開発',
+              collapsable: false,
+              children: [
+                '/ja/dev/plugin/',
+              ],
+            },
+            {
+              title: 'その他のドキュメント',
+              collapsable: false,
+              children: [
+                ['/ja/guide/', 'ユーザーズガイド'],
+                ['/api/v3.md', '(TBD) API リファレンス (英語)'],
+              ]
             },
           ]
         }
