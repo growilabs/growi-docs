@@ -117,7 +117,7 @@ module.exports = {
               ],
             },
             {
-              title: 'Develop Plugin',
+              title: 'Plugin',
               collapsable: false,
               children: [
                 '/dev/plugin/',
@@ -235,7 +235,7 @@ module.exports = {
               ],
             },
             {
-              title: 'プラグイン開発',
+              title: 'プラグイン',
               collapsable: false,
               children: [
                 '/ja/dev/plugin/',
