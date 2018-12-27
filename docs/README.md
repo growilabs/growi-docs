@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: https://user-images.githubusercontent.com/1638767/38254268-d4476bbe-3793-11e8-964c-8865d690baff.png
-actionText: ガイドを見る
+actionText: Get Started
 actionLink: /ja/guide/
 features:
   - title: Markdown x Wiki
