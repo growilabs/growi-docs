@@ -1,6 +1,9 @@
 module.exports = {
   title: 'GROWI Docs',
   serviceWorker: true,
+  markdown: {
+    toc: { includeLevel: [2] },
+  },
   locales: {
     '/': {
       lang: 'ja',
@@ -72,12 +75,12 @@ module.exports = {
             title: 'GROWI 管理者のクックブック',
             collapsable: false,
             children: [
-              '/ja/guide/management-cookbook/line-breaks-no-onoff.md',
-              '/ja/guide/management-cookbook/fuirunoappurdo.md',
-              '/ja/guide/management-cookbook/ldap-xie.md',
-              '/ja/guide/management-cookbook/active-directory-xie.md',
-              '/ja/guide/management-cookbook/google-analytics-no.md',
-              '/ja/guide/management-cookbook/slackmattermost-heno.md',
+              '/ja/guide/management-cookbook/line-breaks.md',
+              '/ja/guide/management-cookbook/attachment.md',
+              '/ja/guide/management-cookbook/ldap.md',
+              '/ja/guide/management-cookbook/active-directory.md',
+              '/ja/guide/management-cookbook/google-analytics.md',
+              '/ja/guide/management-cookbook/slack.md',
             ]
           },
           {

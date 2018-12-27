@@ -1,5 +1,7 @@
 # Ubuntu Server
 
+[[toc]]
+
 ## 概要
 
 この章では Ubuntu Server 16.04 \(Xenial\) に GROWI をインストールする方法を紹介します。 14.04 や 18.04 は現在未検証です。

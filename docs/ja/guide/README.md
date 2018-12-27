@@ -18,6 +18,6 @@ GROWI の前身である crowi-plus からの移行や、フォーク元であ�
 
 GROWI システムを動作させているサーバー・コンテナクラスタ・ネットワーク管理者向けのクックブックです。
 
-### [GROWI 管理者のクックブック](management-cookbook/)
+### [GROWI 管理者のクックブック](management-cookbook/line-breaks.md)
 
 GROWI システム本体の管理者向けのクックブックです。
