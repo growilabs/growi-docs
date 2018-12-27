@@ -1,8 +1,8 @@
 # Let's Encrypt による HTTPS 運用
 
-{% hint style="info" %}
+::: tip
 この Cookbook は [docker-compose](../getting-started/docker-compose.md) による管理を前提としています
-{% endhint %}
+:::
 
 ### TODO
 
