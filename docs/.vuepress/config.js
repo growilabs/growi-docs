@@ -54,6 +54,13 @@ module.exports = {
               ]
             },
             {
+              title: 'Upgrading',
+              collapsable: true,
+              children: [
+                '/guide/upgrading/34x.md',
+              ]
+            },
+            {
               title: 'Migration form other system',
               collapsable: true,
               children: [
@@ -169,6 +176,13 @@ module.exports = {
                 '/ja/guide/getting-started/ubuntu-server.md',
                 '/ja/guide/getting-started/centos.md',
                 '/ja/guide/getting-started/raspberry-pi.md',
+              ]
+            },
+            {
+              title: 'アップグレード',
+              collapsable: true,
+              children: [
+                '/ja/guide/upgrading/34x.md',
               ]
             },
             {
