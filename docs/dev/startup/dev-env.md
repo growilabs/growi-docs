@@ -37,7 +37,7 @@
 
 ## Node.js 実行環境のインストール
 
-Node.js, npm, Yarn 共に、CI 環境で利用する `node:8` のバージョンに合わせる
+Node.js, npm, Yarn 共に、CI 環境で利用する `node:10` のバージョンに合わせる
 
 :::: tabs
 
@@ -47,7 +47,7 @@ Node.js, npm, Yarn 共に、CI 環境で利用する `node:8` のバージョン
     * [https://github.com/marcelklehr/nodist/releases](https://github.com/marcelklehr/nodist/releases) から NodistSetup-vX.X.X.exe をダウンロードして実行
 1. Node.js, npm インストール
     ``` cmd
-    nodist global 8
+    nodist global 10
     ```
 
 1. Yarn インストール
@@ -67,7 +67,7 @@ Node.js, npm, Yarn 共に、CI 環境で利用する `node:8` のバージョン
     ```
 1. Node.js, npm インストール
     ```bash
-    nodebrew install-binary v8.x
+    nodebrew install-binary v10.x
     ```
 * Yarn インストール
     ```bash

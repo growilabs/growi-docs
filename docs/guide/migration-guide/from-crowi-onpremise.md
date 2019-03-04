@@ -17,13 +17,12 @@
 ## node 実行環境の準備
 
 - [README.md#dependencies](https://github.com/weseek/growi/blob/master/README.md#dependencies) を参考に、node.js, npm, yarn をセットアップする
-  - node.js は 8.x にアップグレード
+  - node.js は 10.x にアップグレード
   - yarn は新規インストール
 
 ## ElasticSearch のバージョンアップ及びプラグイン追加
 
-1. **バージョン 5.1 以上** を利用する  
-    6.x は利用できない
+1. バージョン 6.6 以上を利用する  
 1. 以下のプラグインをインストールする
     - [Japanese (kuromoji) Analysis plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-kuromoji.html)
         ```bash
