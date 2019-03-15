@@ -58,6 +58,7 @@ module.exports = {
               collapsable: true,
               children: [
                 '/guide/upgrading/34x.md',
+                '/guide/upgrading/upgrade-growi-in-heroku.md'
               ]
             },
             {
@@ -172,7 +173,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/guide/getting-started/docker-compose.md',
-                '/ja/guide/getting-started/heroku.md',
+                '/ja/guide/getting-started/upgrade-growi-in-heroku.md',
                 '/ja/guide/getting-started/ubuntu-server.md',
                 '/ja/guide/getting-started/centos.md',
                 '/ja/guide/getting-started/raspberry-pi.md',

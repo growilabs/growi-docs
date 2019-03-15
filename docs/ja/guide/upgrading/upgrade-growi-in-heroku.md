@@ -4,13 +4,12 @@
 
 ## Heroku CLI を使ってリポジトリをクローンする
 
-
-まず以下のコマンドによりログインします。
+まず以下のコマンドによりHerokuにログインします。
 ```
 $ heroku login 
 ```
 
-続いて, リポジトリをクローンします。クローンするときの名前はHerokuでのApp Nameになります.
+続いて, Herokuからリポジトリをクローンします。クローンするときの名前はHerokuでのApp Nameになります.
 `warning: You appear to have cloned an empty repository.`のようなメッセージが出ることがありますが無視して構いません。
 ```
 heroku git:clone -a [App Name]
