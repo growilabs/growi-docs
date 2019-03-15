@@ -26,8 +26,8 @@ module.exports = {
         label: 'English',
         nav: [
           { text: 'Home', link: '/' },
-          { text: 'Users Guide', link: '/ja/guide/' },
-          { text: 'Developers Guide', link: '/ja/dev/' },
+          { text: 'Users Guide', link: '/guide/' },
+          { text: 'Developers Guide', link: '/dev/' },
           { text: '(TBD) API', link: '/api/' },
           { text: 'Release Note', link: 'https://github.com/weseek/growi/releases' },
           {
