@@ -173,7 +173,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/guide/getting-started/docker-compose.md',
-                '/ja/guide/getting-started/upgrade-growi-in-heroku.md',
+                '/ja/guide/getting-started/heroku.md',
                 '/ja/guide/getting-started/ubuntu-server.md',
                 '/ja/guide/getting-started/centos.md',
                 '/ja/guide/getting-started/raspberry-pi.md',
