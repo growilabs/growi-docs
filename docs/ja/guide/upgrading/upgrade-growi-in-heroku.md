@@ -39,7 +39,7 @@ $ git pull origin --tags
 $ git checkout -b growi-vX.X.X refs/tags/vX.X.X
 ```
 
-作成したブランチをHerokuリポジトリのmasterにpushします。これにより、Heroku上でbuildとdeployが行われエラー等がでなければアップグレード完了となります.
+作成したブランチをHerokuリポジトリのmasterにpushします。これにより、Heroku上でbuildとdeployが行われエラー等がでなければアップグレード完了となります。場合によっては`--force`オプションの付与が必要になります。
 ```
 $ git push heroku growi-vX.X.X:master
 ```
