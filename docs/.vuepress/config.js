@@ -58,6 +58,7 @@ module.exports = {
               collapsable: true,
               children: [
                 '/guide/upgrading/34x.md',
+                '/guide/upgrading/upgrade-growi-in-heroku.md',
               ]
             },
             {
@@ -183,6 +184,7 @@ module.exports = {
               collapsable: true,
               children: [
                 '/ja/guide/upgrading/34x.md',
+                '/ja/guide/upgrading/upgrade-growi-in-heroku.md'
               ]
             },
             {
