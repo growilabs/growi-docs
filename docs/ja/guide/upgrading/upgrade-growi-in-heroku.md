@@ -4,7 +4,7 @@
 
 [公式ページ](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)を参考にHeroku CLIをインストールしてください。
 
-## Heroku CLI を使ってリポジトリをクローンする
+## Heroku CLI を使って App のリポジトリを更新する
 
 まず以下のコマンドによりHerokuにログインします。
 ```
@@ -29,7 +29,7 @@ heroku	https://git.heroku.com/[App Name].git (push)
 $ git remote add origin https://github.com/weseek/growi.git
 ```
 
-GROWIリポジトリからtag一覧を取得します。
+登録したGROWIリポジトリからtag一覧を取得します。
 ```
 $ git pull origin --tags 
 ```
@@ -39,7 +39,7 @@ $ git pull origin --tags
 $ git checkout -b growi-vX.X.X refs/tags/vX.X.X
 ```
 
-作成したブランチをherokuのmasterにpushします。これにより、Heroku上でbuildとdeployが行われエラー等がでなければアップグレード完了となります.
+作成したブランチをHerokuリポジトリのmasterにpushします。これにより、Heroku上でbuildとdeployが行われエラー等がでなければアップグレード完了となります.
 ```
 $ git push heroku growi-vX.X.X:master
 ```
