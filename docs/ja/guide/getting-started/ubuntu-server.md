@@ -9,7 +9,7 @@
 セットアップに必要となるソフトウェアは以下の通りです。
 
 * node.js 8.x \(DO NOT USE 9.x\)
-* npm 5.x
+* npm 5.x or 6.x
 * yarn
 * MongoDB 3.x
 * \(Option\) Elasticsearch 5.x
@@ -160,7 +160,7 @@ $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 
 ### インストール
 
-[公式ページ](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-ubuntu/) に従ってインストールを実施します。 バージョンは、MongoDB 3.6 をインストールします
+[公式ページ](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-ubuntu/) に従ってインストールを実施します。 バージョンは、MongoDB 3.6 です。
 
 まずは、`apt` のために public key をインポートします。
 
@@ -276,9 +276,7 @@ npm start
 
 ### systemd による自動起動の設定
 
-\(TODO\)
-
-* systemd の設定は Management Cookbook の「[systemd による自動起動](../admin-cookbook/launch-with-systemd.md)」へのリンクを貼る
+「[systemd による自動起動](../admin-cookbook/launch-with-systemd.md)」を参照して下さい。
 
 ## リバースプロキシの設定
 
@@ -392,4 +390,3 @@ server {
 ```text
 $ sudo systemctl enable nginx
 ```
-
