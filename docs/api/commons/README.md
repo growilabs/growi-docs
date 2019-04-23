@@ -1,6 +1,6 @@
 # GROWI Commons Libraries
 
-## [pathUtils]()
+## [path-utils](util/path-utils.html)
 
 An utility object provides functions working with GROWI page path.
 
@@ -11,69 +11,7 @@ import { pathUtils } from 'growi-commons`;
 const { pathUtils } = require('growi-commons);
 ```
 
-### pathUtils.encodePagePath(path)
-
-Encode specified `path` with [encodeURIComponent](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
-
-- Params
-  - `path`: [[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)]
-- Returns: [[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)]
-
-```javascript
-(TBD: Example)
-```
-
-### pathUtils.encodePagesPath(pages)
-
-Encode specified `path` with [encodeURIComponent](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
-
-- Params
-  - `pages`: [Page[]] An array of Page models
-- Returns: [Page[]] Array of Page models that each of `path` have been encoded
-
-```javascript
-(TBD: Example)
-```
-
-### pathUtils.hasHeadingSlash(path)
-
-```javascript
-(TBD: Example)
-```
-
-### pathUtils.hasTrailingSlash(path)
-
-```javascript
-(TBD: Example)
-```
-
-### pathUtils.addHeadingSlash(path)
-
-```javascript
-(TBD: Example)
-```
-
-### pathUtils.addTrailingSlash(path)
-
-```javascript
-(TBD: Example)
-```
-
-### pathUtils.removeTrailingSlash(path)
-
-```javascript
-(TBD: Example)
-```
-
-### pathUtils.normalizePath(path)
-
-A short-hand method to add heading slash and remove trailing slash.
-
-```javascript
-(TBD: Example)
-```
-
-## [customTagUtils](plugin/util/custom-tag-utils.html)
+## [custom-tag-utils](plugin/util/custom-tag-utils.html)
 
 An utility object provides functions and classes for custom tags with syntax like `$lsx(/)`.
 
@@ -84,26 +22,40 @@ import { customTagUtils } from 'growi-commons`;
 const { customTagUtils } = require('growi-commons);
 ```
 
-### customTagUtils.TagContext
+### customTagUtils.[TagContext](plugin/model/tag-context.html#TagContext)
+
+TagContext class is provided by a property of `customTagUtils`.
+
+See [tag-context](plugin/model/tag-context.html) module.
 
 ```javascript
 const { TagContext } = customTagUtils;
 ```
 
-### customTagUtils.ArgsParser
+### customTagUtils.[ArgsParser](plugin/util/args-parser.html#ArgsParser)
+
+ArgsParser class is provided by a property of `customTagUtils`.
+
+See [args-parser](plugin/util/args-parser.html) module.
 
 ```javascript
 const { ArgsParser } = customTagUtils;
 ```
 
-### customTagUtils.OptionParser
+### customTagUtils.[OptionParser](plugin/util/option-parser.html#OptionParser)
+
+OptionParser class is provided by a property of `customTagUtils`.
+
+See [option-parser](plugin/model/option-parser.html) module.
 
 ```javascript
 const { OptionParser } = customTagUtils;
 ```
 
 
-## [BasicInterceptor](util/basic-interceptor.html)
+## [basic-interceptor](util/basic-interceptor.html)
+
+BasicInterceptor class is provided by [basic-interceptor](util/basic-interceptor.html) module.
 
 ```javascript
 // import
