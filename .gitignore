@@ -17,6 +17,7 @@ package-lock.json
 
 # Dist #
 docs/.vuepress/dist
+docs/api/commons
 
 # Doc #
 
