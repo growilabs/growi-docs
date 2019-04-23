@@ -21,6 +21,7 @@ deploy:
     - script:
       name: build docs
       code: |
+        yarn commons:build
         yarn docs:build
 
     - script:
