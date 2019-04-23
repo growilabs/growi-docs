@@ -142,8 +142,9 @@ module.exports = {
           ],
           '/api/': [
             ['/api/', 'Introduction'],
-            '/api/v3.md',
-            '/api/v1.md',
+            '/api/commons.md',
+            '/api/rest-v3.md',
+            '/api/rest-v1.md',
           ]
         }
       },
