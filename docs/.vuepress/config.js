@@ -1,3 +1,5 @@
+const growiCommonsConfig = require('../api/commons/config');
+
 module.exports = {
   title: 'GROWI Docs',
   serviceWorker: true,
@@ -39,7 +41,7 @@ module.exports = {
             ]
           }
         ],
-        sidebar: {
+        sidebar: Object.assign(growiCommonsConfig.sidebarTree(), {
           '/guide/': [
             '/guide/',
             {
@@ -142,11 +144,11 @@ module.exports = {
           ],
           '/api/': [
             ['/api/', 'Introduction'],
-            '/api/commons.md',
+            '/api/commons/',
             '/api/rest-v3.md',
             '/api/rest-v1.md',
           ]
-        }
+        }),
       },
       '/ja/': {
         label: '日本語',

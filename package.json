@@ -19,15 +19,26 @@
   "bugs": {
     "url": "https://github.com/weseek/growi-docs/issues"
   },
+  "watch": {
+    "commons:dev": "../growi-commons/src"
+  },
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "start": "npm run docs:dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commons:base": "vuepress-jsdoc --dist docs --folder api/commons --exclude test,*.test.js",
+    "commons:dev": "npm run commons:base -- --source ../growi-commons/src",
+    "commons:build": "npm run commons:base -- --source ./node_modules/growi-commons/src",
+    "start": "run-p docs:dev commons:dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm-watch"
   },
   "devDependencies": {
+    "growi-commons": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.6.0",
     "vue-tabs-component": "^1.5.0",
     "vuepress": "^1.0.0-alpha.30",
+    "vuepress-jsdoc": "^1.7.2",
     "vuepress-plugin-tabs": "^0.2.0"
   },
   "engines": {
