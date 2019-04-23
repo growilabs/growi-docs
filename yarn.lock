@@ -3646,10 +3646,10 @@ gray-matter@^4.0.1:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-growi-commons@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/growi-commons/-/growi-commons-4.0.0.tgz#f0c0b0f2bac218111555869d7d405e235fb053c6"
-  integrity sha512-5y0pX8efYW8Abov+9MnLypFWIXPSNb4C81VsRbDWAEIUOiFjEn8Tp7PBzxtT51pk9WMenljFMo7rGOxuDgkDzw==
+growi-commons@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/growi-commons/-/growi-commons-4.0.1.tgz#e0e71c9c286f493e11c0703c809385bcdc6a97a9"
+  integrity sha512-haH4Av1WuQIHic4Jv2RRwDprbKecRKF/3C0wVk9ssBzWtB3V6Oghj5gksajDpYOd7tOKdvkVEqqkFfIV4JQUyQ==
 
 handlebars@^4.0.11:
   version "4.1.2"

@@ -33,7 +33,7 @@
     "watch": "npm-watch"
   },
   "devDependencies": {
-    "growi-commons": "^4.0.0",
+    "growi-commons": "^4.0.1",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.6.0",
     "vue-tabs-component": "^1.5.0",
