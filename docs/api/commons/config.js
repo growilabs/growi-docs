@@ -1,1 +1,1 @@
-exports.fileTree=[];exports.sidebarTree = (title = 'Mainpage') => ({"/api/commons/":[]});
+exports.fileTree=[];exports.sidebarTree = (title = 'Overview') => ({"/api/commons/":[]});

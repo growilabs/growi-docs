@@ -41,7 +41,7 @@ module.exports = {
             ]
           }
         ],
-        sidebar: Object.assign(growiCommonsConfig.sidebarTree(), {
+        sidebar: Object.assign(growiCommonsConfig.sidebarTree('Overview'), {
           '/guide/': [
             '/guide/',
             {

@@ -28,7 +28,7 @@
     "commons:base": "vuepress-jsdoc --dist docs --folder api/commons --exclude test,*.test.js",
     "commons:dev": "npm run commons:base -- --source ../growi-commons/src",
     "commons:build": "npm run commons:base -- --source ./node_modules/growi-commons/src",
-    "start": "run-p docs:dev commons:dev",
+    "start": "npm run docs:dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npm-watch"
   },
