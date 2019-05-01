@@ -1,0 +1,16 @@
+{
+  // 既定の改行文字。LF の場合には \n を CRLF の場合には \r\n を使用してください。
+  "files.eol": "\n",
+
+  // for vscode-eslint
+  "eslint.autoFixOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+
+  // for prettier-vecode + prettier-stylelint
+  "prettier.stylelintIntegration": true,
+  "[scss]": {
+    "editor.formatOnSave": true
+  }
+}

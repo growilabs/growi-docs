@@ -33,9 +33,15 @@
     "watch": "npm-watch"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "growi-commons": "weseek/growi-commons#master",
+    "eslint": "^5.15.1",
+    "eslint-config-weseek": "^1.0.1",
+    "eslint-plugin-import": "^2.16.0",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.6.0",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint-config-recess-order": "^2.0.1",
     "vue-tabs-component": "^1.5.0",
     "vuepress": "^1.0.0-alpha.30",
     "vuepress-jsdoc": "^1.7.2",
