@@ -30,7 +30,7 @@ module.exports = {
           { text: 'Home', link: '/' },
           { text: 'Users Guide', link: '/guide/' },
           { text: 'Developers Guide', link: '/dev/' },
-          { text: '(TBD) API', link: '/api/' },
+          { text: 'API Reference', link: '/api/' },
           { text: 'Release Note', link: 'https://github.com/weseek/growi/releases' },
           {
             text: 'External Sites',
@@ -103,7 +103,7 @@ module.exports = {
               collapsable: false,
               children: [
                 ['/dev/', 'Developers Guide'],
-                ['/api/', '(TBD) API Reference'],
+                ['/api/', 'API Reference'],
               ]
             },
           ],
@@ -138,7 +138,7 @@ module.exports = {
               collapsable: false,
               children: [
                 ['/guide/', 'Users Guide'],
-                ['/api/', '(TBD) API Reference'],
+                ['/api/', 'API Reference'],
               ]
             },
           ],
@@ -157,7 +157,7 @@ module.exports = {
           { text: 'ホーム', link: '/ja/' },
           { text: 'ユーザーズガイド', link: '/ja/guide/' },
           { text: '開発ガイド', link: '/ja/dev/' },
-          { text: '(TBD) API', link: '/api/' },
+          { text: 'API リファレンス (英語)', link: '/api/' },
           { text: 'リリースノート', link: 'https://github.com/weseek/growi/releases' },
           {
             text: '外部サイト',
@@ -230,7 +230,7 @@ module.exports = {
               collapsable: false,
               children: [
                 ['/ja/dev/', '開発ガイド'],
-                ['/api/', '(TBD) API リファレンス (英語)'],
+                ['/api/', 'API リファレンス (英語)'],
               ]
             },
           ],
@@ -265,7 +265,7 @@ module.exports = {
               collapsable: false,
               children: [
                 ['/ja/guide/', 'ユーザーズガイド'],
-                ['/api/', '(TBD) API リファレンス (英語)'],
+                ['/api/', 'API リファレンス (英語)'],
               ]
             },
           ],
