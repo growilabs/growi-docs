@@ -4,6 +4,7 @@
 
 An utility object provides functions working with GROWI page path.
 
+Usage:
 ```javascript
 // import
 import { pathUtils } from 'growi-commons`;
@@ -11,10 +12,18 @@ import { pathUtils } from 'growi-commons`;
 const { pathUtils } = require('growi-commons);
 ```
 
+<div style="text-align: right">
+
+[> show detail](util/path-utils.html)
+
+</div>
+
+
 ## [custom-tag-utils](plugin/util/custom-tag-utils.html)
 
 An utility object provides functions and classes for custom tags with syntax like `$lsx(/)`.
 
+Usage:
 ```javascript
 // import
 import { customTagUtils } from 'growi-commons`;
@@ -22,41 +31,66 @@ import { customTagUtils } from 'growi-commons`;
 const { customTagUtils } = require('growi-commons);
 ```
 
+<div style="text-align: right">
+
+[> show detail](plugin/util/custom-tag-utils.html)
+
+</div>
+
+
 ### customTagUtils.[TagContext](plugin/model/tag-context.html#TagContext)
 
 TagContext class is provided by a property of `customTagUtils`.
 
-See [tag-context](plugin/model/tag-context.html) module.
-
+Usage:
 ```javascript
 const { TagContext } = customTagUtils;
 ```
+
+<div style="text-align: right">
+
+[> show detail](plugin/model/tag-context.html)
+
+</div>
+
 
 ### customTagUtils.[ArgsParser](plugin/util/args-parser.html#ArgsParser)
 
 ArgsParser class is provided by a property of `customTagUtils`.
 
-See [args-parser](plugin/util/args-parser.html) module.
-
+Usage:
 ```javascript
 const { ArgsParser } = customTagUtils;
 ```
+
+<div style="text-align: right">
+
+[> show detail](plugin/util/args-parser.html)
+
+</div>
+
 
 ### customTagUtils.[OptionParser](plugin/util/option-parser.html#OptionParser)
 
 OptionParser class is provided by a property of `customTagUtils`.
 
-See [option-parser](plugin/util/option-parser.html) module.
-
+Usage:
 ```javascript
 const { OptionParser } = customTagUtils;
 ```
+
+<div style="text-align: right">
+
+[> show detail](plugin/util/option-parser.html)
+
+</div>
 
 
 ## [basic-interceptor](util/basic-interceptor.html)
 
 BasicInterceptor class is provided by [basic-interceptor](util/basic-interceptor.html) module.
 
+Usage:
 ```javascript
 // import
 import { BasicInterceptor } from 'growi-commons`;
@@ -64,9 +98,16 @@ import { BasicInterceptor } from 'growi-commons`;
 const { BasicInterceptor } = require('growi-commons);
 ```
 
+<div style="text-align: right">
+
+[> show detail](util/basic-interceptor.html)
+
+</div>
+
 
 ## LocalStorageManager
 
+Usage:
 ```javascript
 // import
 import { LocalStorageManager } from 'growi-commons`;
@@ -77,4 +118,8 @@ const { LocalStorageManager } = require('growi-commons);
 const localStorageManager = LocalStorageManager.getInstance();
 ```
 
-(TBD)
+<div style="text-align: right">
+
+[> (TBD) show detail]()
+
+</div>
