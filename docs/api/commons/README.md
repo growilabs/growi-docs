@@ -46,7 +46,7 @@ const { ArgsParser } = customTagUtils;
 
 OptionParser class is provided by a property of `customTagUtils`.
 
-See [option-parser](plugin/model/option-parser.html) module.
+See [option-parser](plugin/util/option-parser.html) module.
 
 ```javascript
 const { OptionParser } = customTagUtils;
