@@ -21,7 +21,12 @@
   },
   "watch": {
     "commons:dev": "../growi-commons/src",
-    "apiv3:dev": "../growi/src/server/routes/apiv3"
+    "apiv3:dev": {
+      "patterns": [
+        "../growi/config/swagger-definition.js",
+        "../growi/src/server/routes/apiv3"
+      ]
+    }
   },
   "scripts": {
     "apiv3:jsdoc:base": "swagger-jsdoc -o tmp/swagger.json",
