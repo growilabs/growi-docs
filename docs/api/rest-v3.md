@@ -1,5 +1,10 @@
 ---
-sidebar: 'auto'
+title: GROWI REST API v3
+sidebar: false
+prev: false
+next: false
+editLink: false
+layout: FluidLayout
 ---
 
-# (TBD) GROWI REST API (v3)
+<Embed src="/redoc.html" />

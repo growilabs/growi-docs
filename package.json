@@ -20,9 +20,16 @@
     "url": "https://github.com/weseek/growi-docs/issues"
   },
   "watch": {
-    "commons:dev": "../growi-commons/src"
+    "commons:dev": "../growi-commons/src",
+    "apiv3:dev": "../growi/src/server/routes/apiv3"
   },
   "scripts": {
+    "apiv3:jsdoc:base": "swagger-jsdoc -o tmp/swagger.json",
+    "apiv3:jsdoc:dev": "npm run apiv3:jsdoc:base -- -d ../growi/config/swagger-definition.js ../growi/src/server/routes/apiv3/**/*.js",
+    "apiv3:jsdoc:build": "npm run apiv3:jsdoc:base -- -d tmp/growi/config/swagger-definition.js tmp/growi/src/server/routes/apiv3/**/*.js",
+    "apiv3:redoc": "redoc-cli bundle -o docs/.vuepress/public/redoc.html tmp/swagger.json",
+    "apiv3:dev": "run-s apiv3:jsdoc:dev apiv3:redoc",
+    "apiv3:build": "run-s apiv3:jsdoc:build apiv3:redoc",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "commons:base": "vuepress-jsdoc --dist docs --folder api/commons --exclude test,*.test.js",
@@ -34,14 +41,16 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "growi-commons": "weseek/growi-commons#master",
     "eslint": "^5.15.1",
     "eslint-config-weseek": "^1.0.1",
     "eslint-plugin-import": "^2.16.0",
+    "growi-commons": "weseek/growi-commons#master",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.6.0",
     "prettier-stylelint": "^0.4.2",
+    "redoc-cli": "^0.8.3",
     "stylelint-config-recess-order": "^2.0.1",
+    "swagger-jsdoc": "^3.2.9",
     "vue-tabs-component": "^1.5.0",
     "vuepress": "^1.0.0-alpha.30",
     "vuepress-jsdoc": "^1.7.2",
