@@ -28,7 +28,7 @@ deploy:
       name: build docs
       code: |
         yarn commons:build
-        yarn apiv3:builc
+        yarn apiv3:build
         yarn docs:build
 
     - script:
