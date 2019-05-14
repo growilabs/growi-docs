@@ -2,7 +2,7 @@
 home: true
 heroImage: https://user-images.githubusercontent.com/1638767/38254268-d4476bbe-3793-11e8-964c-8865d690baff.png
 actionText: ガイドを見る
-actionLink: guide/
+actionLink: /ja/guide/
 features:
   - title: Markdown x Wiki
     details: 左右2画面でのリアルタイムプレビューが可能。言語ごとのコードハイライトや絵文字や注釈(footnotes)、タスクリスト、Bootstrap による HTML コードにも対応しています。
