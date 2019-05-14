@@ -5,7 +5,7 @@ actionText: Get Started
 actionLink: /guide/
 features:
   - title: Markdown x Wiki
-    details: What you see is what you write with live preview. Write with emoji, footnote, to do list, raw HTML with Bootstrap, and syntax highlighting for various languages.
+    details: What you see is what you write with live preview. Write with emojis, footnotes, to do list, raw HTML with Bootstrap, and syntax highlighting for various languages.
   - title: Highly Customizable
     details: Pick a theme, authentication method, and keymap (Vim/Emacs/Sublime Text). Customize GROWI to satisfy the demands of both administrators and users.
   - title: Ever-Growing 
