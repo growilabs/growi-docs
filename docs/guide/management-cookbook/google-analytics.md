@@ -1,7 +1,7 @@
-# Google Analytics の設定
+# Google Analytics Settings
 
-1. 管理 → カスタマイズ\(`/admin/customize` ページへ遷移\)
-2. 以下のコードをカスタムスクリプトに設定
+1. Manage → Customize\(`/admin/customize` page transition \)
+2. Set the code below as a custom script
 
    ```javascript
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -13,7 +13,7 @@
    ga('send', 'pageview');
    ```
 
-   * `UA-XXXXXXXX-X` 部分は各自の環境に合わせて書き換えてください
+   * `UA-XXXXXXXX-X` should be rewritten based on individual environments
 
 
 
