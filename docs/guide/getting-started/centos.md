@@ -16,11 +16,11 @@ Software needed for Setup are listed below.
 * \(Option\) systemd
 * \(Option\) Apache or nginx
 
-Software listed as 'Option' are not required, but in this document all are used, from constructing an environment using Apache or nginx as a reverse proxy for the full-text search feasible Growi, to simultaneous activation with the host using systemd.
+Software listed as 'Option' are not required, but in this document all are used, for construction of an environment using Apache or nginx as a reverse proxy for the full-text search feasible Growi, to simultaneous activation with the host using systemd.
 
 ## Installation for node.js 8.x & npm
 
-### Use NodeSource repository
+### Use the NodeSource repository
 
 Retrieve the Node.js installation script from [https://rpm.nodesource.com/](https://rpm.nodesource.com/). The working directory is the home directory.
 
