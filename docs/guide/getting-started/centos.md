@@ -18,37 +18,37 @@ Software needed for Setup are listed below.
 
 Software listed as 'Option' are not required, but in this document all are used, from constructing an environment using Apache or nginx as a reverse proxy for the full-text search feasible Growi, to simultaneous activation with the host using systemd.
 
-## Install node.js 8.x & npm
+## Installation for node.js 8.x & npm
 
-### NodeSource repository を利用する
+### Use NodeSource repository
 
-[https://rpm.nodesource.com/](https://rpm.nodesource.com/)からNode.js のインストールスクリプトを取得します。作業ディレクトリはホームディレクトリです。
+Retrieve the Node.js installation script from [https://rpm.nodesource.com/](https://rpm.nodesource.com/). The working directory is the home directory.
 
 ```text
 $ cd ~
 $ curl -sL https://rpm.nodesource.com/setup_8.x -o nodesource_setup.sh
 ```
 
-取得したスクリプトを実行します。
+Execute the retrieved script.
 
 ```text
 $ sudo bash nodesource_setup.sh
 ```
 
-これで `yum` 経由で node.js が取得できるようになったので、 `yum` コマンドでインストールを行います。
+Now that node.js can be retrieved via `yum`, use the `yum` command to install.
 
 ```text
 $ sudo yum install -y nodejs
 ```
 
-GROWI では yarn を用いたパッケージインストールを利用するため、ここで `yarn` コマンドをインストールしておきます。
+Since GROWI uses yarn for package installation, install the `yarn` command.
 
 ```text
 $ curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
 $ sudo yum install -y yarn
 ```
 
-Node.js, npm, yarn のインストールが完了したら、インストールしたバージョンを確認しましょう。
+Once installation for Node.js, npm, yarn is completed, check the installed versions.
 
 ```text
 $ node -v
