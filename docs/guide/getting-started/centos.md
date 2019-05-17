@@ -12,17 +12,17 @@ Software needed for Setup are listed below.
 * npm 6.x
 * yarn
 * MongoDB 3.x
-* \(Option\) Elasticsearch 5.x
-* \(Option\) systemd
-* \(Option\) Apache or nginx
+* \(Optional\) Elasticsearch 5.x
+* \(Optional\) systemd
+* \(Optional\) Apache or nginx
 
-Software listed as 'Option' are not required, but in this document all are used, for construction of an environment using Apache or nginx as a reverse proxy for the full-text search feasible Growi, to simultaneous activation with the host using systemd.
+Software listed as 'Optional' are not required, but in this document all are used, from construction of an environment using Apache or nginx as a reverse proxy for the full-text search feasible Growi, to simultaneously launching the host OS using systemd.
 
 ## Installation for node.js 8.x & npm
 
 ### Use the NodeSource repository
 
-Retrieve the Node.js installation script from [https://rpm.nodesource.com/](https://rpm.nodesource.com/). The working directory is the home directory.
+Download the Node.js installation script from [https://rpm.nodesource.com/](https://rpm.nodesource.com/). The working directory is the home directory.
 
 ```text
 $ cd ~
