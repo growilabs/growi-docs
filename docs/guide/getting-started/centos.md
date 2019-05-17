@@ -2,11 +2,11 @@
 
 [[toc]]
 
-## 概要
+## Overview
 
-この章ではCentOS 7にGROWIをインストールする方法を紹介します。CentOS 6は現在未検証です。
+In this chapter we will introduce the installation process for GROWI on CentOS 7. Installation on CentOS 6 has not been verified.
 
-セットアップに必要となるソフトウェアは以下の通りです。
+Software needed for Setup are listed below.
 
 * node.js 8.x \(DO NOT USE 9.x\)
 * npm 6.x
@@ -16,9 +16,9 @@
 * \(Option\) systemd
 * \(Option\) Apache or nginx
 
-Option となっているものは必須ではありませんが、このドキュメントではこれら全てを利用し、全文検索可能な GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホスト起動と同時に起動させるところまでを扱います。
+Software listed as 'Option' are not required, but in this document all are used, from constructing an environment using Apache or nginx as a reverse proxy for the full-text search feasible Growi, to simultaneous activation with the host using systemd.
 
-## node.js 8.x & npm のインストール
+## Install node.js 8.x & npm
 
 ### NodeSource repository を利用する
 
