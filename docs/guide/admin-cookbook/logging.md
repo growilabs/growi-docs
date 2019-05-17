@@ -1,33 +1,33 @@
-# ロギング
+# Logging
 
-システムがクラッシュするような場合や、認証失敗の原因を調査したいというシチュエーションでは、ロギングの設定を行う事でシステムに関するより詳細な情報を得ることができます。
+Logger can provide more detailed information if configured. Logger configuration may be helpful in investigating a system clash and authentication failure.
 
-## ログレベルの変更方法
+## Change Log Level
 
-環境変数 `DEBUG` に、ログレベルを上げたいログネームスペースをカンマ区切りで列挙し、GROWI を再起動してください。
+Add log namespaces separated with a comma to the enviroment vairable `DEBUG` and restart GROWI.
 
-### 例
+### Example
 
 ```
 DEBUG=growi:routes:page,growi:routes:login-passport
 ```
 
-## 主要なログネームスペースリスト
+## List of Major Log Namespaces
 
-|GROWI 対象モジュール|log namespaces|
+|GROWI tatget module|log namespaces|
 |---|---|
-|ログイン/ログアウト|`growi:routes:login,growi:routes:login-passport`|
-|OAuth/LDAP 等の Passport 認証機構|`growi:service:PassportService`|
-|ユーザーデータの操作|`growi:models:user*`|
-|ページ操作|`growi:routes:page,growi:models:page`|
-|設定の保存・参照|`growi:models:config,growi:service:Config*`|
-|管理画面での操作|`growi:routes:admin`|
-|ファイルアップロード|`growi:models:attachment,growi:service:fileUploader*`|
-|全文検索|`growi:lib:search`|
-|メール送信|`growi:lib:mailer`|
+|login/logout|`growi:routes:login,growi:routes:login-passport`|
+|passport authentication (OAuth/LDAP)|`growi:service:PassportService`|
+|user data operation|`growi:models:user*`|
+|page operation|`growi:routes:page,growi:models:page`|
+|save/retrieve configs|`growi:models:config,growi:service:Config*`|
+|admin operation|`growi:routes:admin`|
+|file upload|`growi:models:attachment,growi:service:fileUploader*`|
+|full-text search|`growi:lib:search`|
+|send mails|`growi:lib:mailer`|
 
 ### 
 
-## 更に詳しい情報
+## More
 
-[開発ガイド](/ja/dev/) 中の [ロガーの設定](/ja/dev/tips/logger.md) を参照してください。
+Refer to [Logger](/dev/tips/logger.html) in [Developers Guide](/dev/).
