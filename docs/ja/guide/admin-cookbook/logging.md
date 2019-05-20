@@ -30,4 +30,4 @@ DEBUG=growi:routes:page,growi:routes:login-passport
 
 ## 更に詳しい情報
 
-[開発ガイド](/ja/dev/) 中の [ロガーの設定](/ja/dev/tips/logger.md) を参照してください。
+[開発ガイド](/ja/dev/) 中の [ロガーの設定](/ja/dev/tips/logger.html) を参照してください。
