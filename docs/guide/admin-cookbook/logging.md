@@ -4,7 +4,7 @@ Logger can provide more detailed information if configured. Logger configuration
 
 ## Change Log Level
 
-Add log namespaces separated with a comma to the enviroment vairable `DEBUG` and restart GROWI.
+Add log namespaces separated with a comma to the environment vairable `DEBUG` and restart GROWI.
 
 ### Example
 
