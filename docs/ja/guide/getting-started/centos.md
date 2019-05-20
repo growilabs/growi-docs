@@ -12,11 +12,11 @@
 * npm 6.x
 * yarn
 * MongoDB 3.x
-* \(Option\) Elasticsearch 5.x
-* \(Option\) systemd
-* \(Option\) Apache or nginx
+* \(Optional\) Elasticsearch 5.x
+* \(Optional\) systemd
+* \(Optional\) Apache or nginx
 
-Option となっているものは必須ではありませんが、このドキュメントではこれら全てを利用し、全文検索可能な GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホスト起動と同時に起動させるところまでを扱います。
+Optional となっているものは必須ではありませんが、このドキュメントではこれら全てを利用し、全文検索可能な GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホスト起動と同時に起動させるところまでを扱います。
 
 ## node.js 8.x & npm のインストール
 

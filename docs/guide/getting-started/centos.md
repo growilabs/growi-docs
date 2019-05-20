@@ -2,53 +2,53 @@
 
 [[toc]]
 
-## 概要
+## Overview
 
-この章ではCentOS 7にGROWIをインストールする方法を紹介します。CentOS 6は現在未検証です。
+In this chapter we will introduce the installation process for GROWI on CentOS 7. Installation on CentOS 6 has not been verified.
 
-セットアップに必要となるソフトウェアは以下の通りです。
+Software needed for Setup are listed below.
 
 * node.js 8.x \(DO NOT USE 9.x\)
 * npm 6.x
 * yarn
 * MongoDB 3.x
-* \(Option\) Elasticsearch 5.x
-* \(Option\) systemd
-* \(Option\) Apache or nginx
+* \(Optional\) Elasticsearch 5.x
+* \(Optional\) systemd
+* \(Optional\) Apache or nginx
 
-Option となっているものは必須ではありませんが、このドキュメントではこれら全てを利用し、全文検索可能な GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホスト起動と同時に起動させるところまでを扱います。
+Software listed as 'Optional' are not required, but in this document all are used, from construction of an environment using Apache or nginx as a reverse proxy for the full-text search feasible Growi, to simultaneously launching the host OS using systemd.
 
-## node.js 8.x & npm のインストール
+## Installation for node.js 8.x & npm
 
-### NodeSource repository を利用する
+### Use the NodeSource repository
 
-[https://rpm.nodesource.com/](https://rpm.nodesource.com/)からNode.js のインストールスクリプトを取得します。作業ディレクトリはホームディレクトリです。
+Download the Node.js installation script from [https://rpm.nodesource.com/](https://rpm.nodesource.com/). The working directory is the home directory.
 
 ```text
 $ cd ~
 $ curl -sL https://rpm.nodesource.com/setup_8.x -o nodesource_setup.sh
 ```
 
-取得したスクリプトを実行します。
+Execute the retrieved script.
 
 ```text
 $ sudo bash nodesource_setup.sh
 ```
 
-これで `yum` 経由で node.js が取得できるようになったので、 `yum` コマンドでインストールを行います。
+Now that node.js can be retrieved via `yum`, use the `yum` command to install.
 
 ```text
 $ sudo yum install -y nodejs
 ```
 
-GROWI では yarn を用いたパッケージインストールを利用するため、ここで `yarn` コマンドをインストールしておきます。
+Since GROWI uses yarn for package installation, install the `yarn` command.
 
 ```text
 $ curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
 $ sudo yum install -y yarn
 ```
 
-Node.js, npm, yarn のインストールが完了したら、インストールしたバージョンを確認しましょう。
+Once installation for Node.js, npm, yarn is completed, check the installed versions.
 
 ```text
 $ node -v
