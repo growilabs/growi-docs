@@ -18,6 +18,7 @@
 
 Optional となっているものは必須ではありませんが、このドキュメントではこれら全てを利用し、全文検索可能な GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホスト起動と同時に起動させるところまでを扱います。
 
+<!-- ここまで作成 -->
 ## node.js 8.x & npm のインストール
 
 ### NodeSource repository を利用する
