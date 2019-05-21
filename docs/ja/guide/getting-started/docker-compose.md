@@ -4,15 +4,15 @@
 
 ## 概要
 
-この章ではCentOS 7にGROWIをインストールする方法を紹介します。CentOS 6は現在未検証です。
+この章ではdocker-composeをインストールする方法を紹介します。
 
 セットアップに必要となるソフトウェアは以下の通りです。
 
-* node.js 8.x \(DO NOT USE 9.x\)
+* node.js 10.x \(DO NOT USE 11.x\)
 * npm 6.x
 * yarn
 * MongoDB 3.x
-* \(Optional\) Elasticsearch 5.x
+* \(Optional\) Elasticsearch 6.x
 * \(Optional\) systemd
 * \(Optional\) Apache or nginx
 
