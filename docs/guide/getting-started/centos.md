@@ -134,27 +134,27 @@ Check the status to verify it is running properly.
 $ sudo systemctl status elasticsearch
 ```
 
-### GROWI に必要な Elasticsearch プラグインのインストール
+### Installation for Elasticsearch plugins needed for GROWI
 
-以下の Elasticsearch plugin をインストールします
+We will install the Elasticsearch plugins shown below
 
 * [Japanese \(kuromoji\) Analysis plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-kuromoji.html)
 * [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-icu.html)
 
-まずは、Elasticsearch plugin をインストールするために利用するコマンドを検索します
+First, search for the command used to install Elasticsearch plugins
 
 ```text
 $ rpm -ql elasticsearch | grep bin | grep plugin
 /usr/share/elasticsearch/bin/elasticsearch-plugin
 ```
 
-上記で出力されたコマンドを利用して、 analysis-kuromoji plugin と analysis-icu plugin をインストールします
+Using the command above, install both the analysis-kuromoji plugin and the analysis-icu plugin
 
 ```text
-# analysis-kuromoji のインストール
+# Installation for analysis-kuromoji
 $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromoji
 
-# analysis-icu plugin のインストール
+# Installation for analysis-icu plugin
 $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 ```
 
