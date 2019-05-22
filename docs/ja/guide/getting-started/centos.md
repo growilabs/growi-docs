@@ -24,6 +24,10 @@ Optional となっているものは必須ではありませんが、このド�
 
 [https://rpm.nodesource.com/](https://rpm.nodesource.com/)からNode.js のインストールスクリプトを取得します。作業ディレクトリはホームディレクトリです。
 
+::: warning
+このドキュメントは古くなっています。現在の GROWI がサポートする Elasticsearch の最新版は 6.x 系です (2019年05月時点)
+:::
+
 ```text
 $ cd ~
 $ curl -sL https://rpm.nodesource.com/setup_8.x -o nodesource_setup.sh

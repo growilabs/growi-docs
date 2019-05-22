@@ -65,13 +65,17 @@ $ yarn -v
 
 Follow the [Official Website](https://www.elastic.co/guide/en/elasticsearch/reference/current/rpm.html) to proceed installation. Here we make a few changes to install Elasticsearch 5.x
 
+::: warning
+This document is outdated. GROWI currently supports the most recent version of Elasticsearch 6.x (updated 05/2019)
+:::
+
 First, install JDK8 to make Elasticsearch runnable.
 
 ```text
 $ sudo yum install java-1.8.0-openjdk
 ```
 
-To install the package, include the Elasticsearch repository's GPG key.
+To install the package, import the Elasticsearch repository's GPG key.
 
 ```text
 $ sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
@@ -96,7 +100,7 @@ Now Elasticsearch can be installed via yum. Install.
 $ sudo yum install -y elasticsearch
 ```
 
-Once the installation is complete, adjust the distributed memory to Elasticsearch. If the usage is for individual use, 256MB should be enough for memory distribution. Make changes based on the scale of the team and the amount of pages.
+Once the installation is complete, specifiy the memory allocation pool size for Elasticsearch. If the usage is for individual use, 256MB should be enough for memory allocation. Make changes based on the scale of the team and the amount of pages.
 
 ```text
 $ sudo vim /etc/elasticsearch/jvm.options
