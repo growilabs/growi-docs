@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this chapter, we will introduce how to autostart GROWI using systemd.
+This chapter introduces how to autostart GROWI using systemd.
 
 ## Create a Unit File
 
@@ -28,7 +28,7 @@ WantedBy=multi-user.target
 
 #### WorkingDirectory
 
-Set `WorkingDirectory` to the directory where GROWI is located. If you have followed GROWI Docs, GROWI should be found in  `/opt/growi`. Set it according to your environment.
+Set `WorkingDirectory` to the directory where GROWI is located. If you have followed [GROWI Docs](../getting-started/docker-compose.html), GROWI should be found in  `/opt/growi`. Set it according to your environment.
 
 
 #### Environment

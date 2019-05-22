@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this chapter we will introduce the installation process for GROWI on CentOS 7. Installation on CentOS 6 has not been verified.
+This chapter introduces the installation process for GROWI on CentOS 7. Installation on CentOS 6 has not been verified.
 
 Software needed for Setup are listed below.
 
