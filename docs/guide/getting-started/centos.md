@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this chapter we will introduce the installation process for GROWI on CentOS 7. Installation on CentOS 6 has not been verified.
+This chapter introduces the installation process for GROWI on CentOS 7. Installation on CentOS 6 has not been verified.
 
 Software needed for Setup are listed below.
 
@@ -29,7 +29,7 @@ $ cd ~
 $ curl -sL https://rpm.nodesource.com/setup_8.x -o nodesource_setup.sh
 ```
 
-Execute the retrieved script.
+Run the retrieved script.
 
 ```text
 $ sudo bash nodesource_setup.sh
@@ -61,23 +61,27 @@ $ yarn -v
 
 ## Elasticsearch
 
-### インストール
+### Installation
 
-[公式ページ](https://www.elastic.co/guide/en/elasticsearch/reference/current/rpm.html) に従い、インストールを進めます。 ここでは Elasticsearch 5.x をインストールするために若干の修正をしています
+Follow the [Official Website](https://www.elastic.co/guide/en/elasticsearch/reference/current/rpm.html) to proceed installation. Here we make a few changes to install Elasticsearch 5.x
 
-まず、 Elasticsearch を実行できるように JDK8 をインストールします。
+::: warning
+This document is outdated. GROWI currently supports the most recent version of Elasticsearch 6.x (updated 05/2019)
+:::
+
+First, install JDK8 to make Elasticsearch runnable.
 
 ```text
 $ sudo yum install java-1.8.0-openjdk
 ```
 
-パッケージをインストールするために、Elasticsearch レポジトリの GPG キーを追加します。
+To install the package, import the Elasticsearch repository's GPG key.
 
 ```text
 $ sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 ```
 
-Elasticsearch のレポジトリを追加します。以下の内容を`/etc/yum.repos.d/elasticsearch.repo` に書き込みます。
+Add the Elasticsearch repository. Insert the following into `/etc/yum.repos.d/elasticsearch.repo`.
 
 ```text
 [elasticsearch-5.x]
@@ -90,71 +94,71 @@ autorefresh=1
 type=rpm-md
 ```
 
-これで、yum 経由で Elasticsearch がインストールできるようになったため、インストールを行います。
+Now Elasticsearch can be installed via yum. Install.
 
 ```text
 $ sudo yum install -y elasticsearch
 ```
 
-インストールが完了したら、Elasticsearch に割り当てるメモリを調整します。メモリの割り当ては個人ユースであれば 256MB で十分です。チーム規模、ページの量に応じて変更してください。
+Once the installation is complete, specifiy the memory allocation pool size for Elasticsearch. If the usage is for individual use, 256MB should be enough for memory allocation. Make changes based on the scale of the team and the amount of pages.
 
 ```text
 $ sudo vim /etc/elasticsearch/jvm.options
-# 編集前
+# Before edit
 -Xms2g
 -Xmx2g
 
-# 編集後
+# After edit
 -Xms256m
 -Xmx256m
 ```
 
-インストールが完了したら、 パッケージのバージョンを確認します。
+Once installation is completed, check the package version.
 
 ```text
 $ yum list installed | grep elasticsearch
 elasticsearch.noarch                 5.6.16-1                        @elasticsearch-5.x
 ```
 
-`systemctl` コマンドを使って、Elasticsearch を起動します。
+Using the `systemctl` command, launch Elasticsearch.
 
 ```text
 $ sudo systemctl start elasticsearch
 ```
 
-elsticsearch の自動起動設定を有効化します。
+Enable the autoboot setting of elsticsearch
 
 ```text
 $ sudo systemctl enable elasticsearch
 ```
 
-正常に起動しているか確認を行います。
+Check the status to verify it is running properly.
 
 ```text
 $ sudo systemctl status elasticsearch
 ```
 
-### GROWI に必要な Elasticsearch プラグインのインストール
+### Installation for Elasticsearch plugins needed for GROWI
 
-以下の Elasticsearch plugin をインストールします
+We will install the Elasticsearch plugins shown below
 
 * [Japanese \(kuromoji\) Analysis plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-kuromoji.html)
 * [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-icu.html)
 
-まずは、Elasticsearch plugin をインストールするために利用するコマンドを検索します
+First, search for the command used to install Elasticsearch plugins
 
 ```text
 $ rpm -ql elasticsearch | grep bin | grep plugin
 /usr/share/elasticsearch/bin/elasticsearch-plugin
 ```
 
-上記で出力されたコマンドを利用して、 analysis-kuromoji plugin と analysis-icu plugin をインストールします
+Using the command above, install both the analysis-kuromoji plugin and the analysis-icu plugin
 
 ```text
-# analysis-kuromoji のインストール
+# Installation for analysis-kuromoji
 $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromoji
 
-# analysis-icu plugin のインストール
+# Installation for analysis-icu plugin
 $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 ```
 
