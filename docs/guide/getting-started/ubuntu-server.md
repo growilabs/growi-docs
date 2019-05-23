@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this chapter we will introduce the installation process for GROWI on Ubuntu Server 16.04 \(Xenial\). Installation on 14.04 and 18.04 have not been verified.
+This chapter introduces the installation process for GROWI on Ubuntu Server 16.04 \(Xenial\). Installation on 14.04 and 18.04 have not been verified.
 
 Software needed for Setup are listed below.
 
