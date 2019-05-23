@@ -18,10 +18,45 @@
 
 Optional となっているものは必須ではありませんが、このドキュメントではこれら全てを利用し、全文検索可能な GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホスト起動と同時に起動させるところまでを扱います。
 
-<!-- ここまで作成 -->
-## node.js 8.x & npm のインストール
+## node.js 10.x & npm のインストール
 
-### NodeSource repository を利用する
+### nodist を利用する(for Windows)
+nodist (Node.js) インストール
+
+Nodeのバージョン管理ツール「nodist」 をインストール
+
+https://github.com/marcelklehr/nodist/releases から NodistSetup-vX.X.X.exe をダウンロードして実行
+
+Node.js, npm インストール
+
+nodist global 8
+
+Yarnインストール
+
+https://yarnpkg.com/ja/docs/install から DL してインストール
+
+### nodebrew を利用する(for MacOS)
+homebrew インストール (すでにインストールしている人は一応updateはしておく))
+
+https://brew.sh/index_ja の記載に従ってインストールする
+
+nodebrew をインストール
+
+brew install nodebrew
+
+nodebrew setup
+
+(この辺の記事を参考にして設定する)
+
+Node.js, npm インストール
+
+nodebrew install-binary v8.x
+
+Yarn インストール
+
+brew install yarn
+
+###  NodeSource repository を利用する(for CentOS)
 
 [https://rpm.nodesource.com/](https://rpm.nodesource.com/)からNode.js のインストールスクリプトを取得します。作業ディレクトリはホームディレクトリです。
 
