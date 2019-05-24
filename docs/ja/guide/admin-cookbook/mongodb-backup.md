@@ -2,9 +2,9 @@
 
 [[toc]]
 
-## 前提条件
+## 概要
 
-* バックアップ/リストアは、[weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を利用します
+この章では[weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を利用したバックアップとリストアの方法を紹介します。
 
 ### 必要なもの
 

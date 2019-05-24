@@ -2,11 +2,11 @@
 
 [[toc]]
 
-## Assumption
+## Overview
 
-* Required to use [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup)
+This chapter introduces how to backup and restore GROWI data using [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup).
 
-### Prerequisites
+### Requirements
 
 * Docker
 * AWS S3 bucket to upload backup files
@@ -35,7 +35,7 @@ The command above shows the container name is `serene_swartzman`, therefore the 
 
 ### If MongoDB Is NOT Running as a Docker Container
 
-#### If Docker Host is Linux
+#### When Docker Host is Linux
 
 Add `--network host` to use the same network with the host.
 
@@ -58,7 +58,7 @@ Add `--network host` to use the same network with the host.
       -e S3_TARGET_BUCKET_URL=<Target S3 Bucket URL (s3://...)> \
       weseek/mongodb-awesome-backup
     ```
-2. The command grabs data from all databases in the target MongoDB server, and upload it as `backup-YYYYMMdd.tar.bz2` in the S3 bucket 
+2. The command creates a backup for all databases in the target MongoDB server, and upload it as `backup-YYYYMMdd.tar.bz2` in the S3 bucket 
 
 ::: tip
 See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options
