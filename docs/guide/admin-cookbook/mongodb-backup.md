@@ -12,15 +12,17 @@ This chapter introduces how to backup and restore GROWI data using [weseek/mongo
 * AWS S3 bucket to upload backup files
   * Access key and secret key for a user authorized to access S3 bucket.
 
-## Before You Start
+## Using AWS S3
+
+### Before You Start
 
 To backup/restore MongoDBs, [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) creates a temporary container that executes shell scripts. In order to access the MongoDB server from the temporary container, add the docker command option below.
 
-### If MongoDB Is Running as a Docker Container
+#### When MongoDB Is Running as a Docker Container
 
 Run a command to find out the container name, and add an option `--link ${container}:mongo` with the container name \(`${container}`\).
 
-#### e.g.
+##### e.g.
 
 Use `docker ps` to find out the container name.
 
@@ -33,21 +35,21 @@ man
 
 The command above shows the container name is `serene_swartzman`, therefore the option is `--link serene_swartz:mongo`.
 
-### If MongoDB Is NOT Running as a Docker Container
+#### When MongoDB Is NOT Running as a Docker Container
 
-#### When Docker Host is Linux
+##### When Docker Host is Linux
 
 Add `--network host` to use the same network with the host.
 
-#### For Docker for Mac
+##### For Docker for Mac
 
 (TBD: Looking for a writer)
 
-#### For Docker for Windows
+##### For Docker for Windows
 
 (TBD: Looking for a writer)
 
-## How to Backup
+### How to Backup
 
 1. Run [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) container with \(`--rm`\) flag
     ```bash
@@ -64,7 +66,7 @@ Add `--network host` to use the same network with the host.
 See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options
 :::
 
-## How to Restore
+### How to Restore
 
 1. Run [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) container with \(`--rm`\) flag
     ```bash
@@ -82,3 +84,7 @@ See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-ba
 ::: tip
 See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options
 :::
+
+## Using Google Cloud Platform
+
+(TBD: Looking for a writer)

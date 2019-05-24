@@ -12,15 +12,17 @@
 * バックアップファイルをアップロードするための AWS S3 バケット
   * S3 バケットへのアクセス権を持った IAM ユーザーのアクセスキーおよびシークレットキー
 
-## 事前作業
+## AWS S3 を利用する方法
+
+### 事前作業
 
 [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) は、シェルスクリプトを実行するテンポラリなコンテナを作成してバックアップ/リストアを行いますが、そのコンテナ内から MongoDB サーバーへの疎通が可能になるように、以下に示す docker コマンドオプションを追加する必要があります。
 
-### MongoDB が docker コンテナで動作している場合
+#### MongoDB が docker コンテナで動作している場合
 
 コンテナ名を調べる下記コマンドを実行し、コンテナ名\(`${container}`\)を使って`--link ${container}:mongo` オプションを追加してください。
 
-#### e.g.
+##### e.g.
 
 `docker ps` コマンドでコンテナ名を調べます。
 
@@ -33,21 +35,21 @@ man
 
 上記コマンドの結果、コンテナ名は `serene_swartzman` と分かるので、追加するオプションは `--link serene_swartz:mongo` となります。
 
-### MongoDB が docker コンテナ以外で動作している場合
+#### MongoDB が docker コンテナ以外で動作している場合
 
-#### Docker ホストの OS が Linux の場合
+##### Docker ホストの OS が Linux の場合
 
 `--network host` オプションを追加することで、ホストと同一のネットワークを利用できます。
 
-#### Docker for Mac の場合
+##### Docker for Mac の場合
 
 (TBD: 執筆者募集)
 
-#### Docker for Windows の場合
+##### Docker for Windows の場合
 
 (TBD: 執筆者募集)
 
-## バックアップ手順
+### バックアップ手順
 
 1. [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) コンテナを、クリーンアップオプション\(`--rm`\)付きで実行します
     ```bash
@@ -64,7 +66,7 @@ man
 その他のオプションは [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を参照してください
 :::
 
-## リストア手順
+### リストア手順
 
 1. [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) コンテナを、クリーンアップオプション\(`--rm`\)付きで実行します
     ```bash
@@ -83,5 +85,6 @@ man
 その他のオプションは [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を参照してください
 :::
 
+## Google Cloud Platform を利用する方法
 
-
+(TBD: 執筆者募集)
