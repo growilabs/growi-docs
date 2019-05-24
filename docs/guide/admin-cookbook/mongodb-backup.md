@@ -1,28 +1,30 @@
-# MongoDB のバックアップ/リストア
+# Backup & Restore MongoDB
 
 [[toc]]
 
-## 前提条件
+## Overview
 
-* バックアップ/リストアは、[weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を利用します
+This chapter introduces how to backup and restore GROWI data using [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup).
 
-### 必要なもの
+### Requirements
 
-* docker
-* バックアップファイルをアップロードするための AWS S3 バケット
-  * S3 バケットへのアクセス権を持った IAM ユーザーのアクセスキーおよびシークレットキー
+* Docker
+* AWS S3 bucket to upload backup files
+  * Access key and secret key for a user authorized to access S3 bucket.
 
-## 事前作業
+## Using AWS S3
 
-[weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) は、シェルスクリプトを実行するテンポラリなコンテナを作成してバックアップ/リストアを行いますが、そのコンテナ内から MongoDB サーバーへの疎通が可能になるように、以下に示す docker コマンドオプションを追加する必要があります。
+### Before You Start
 
-### MongoDB が docker コンテナで動作している場合
+To backup/restore MongoDBs, [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) creates a temporary container that executes shell scripts. In order to access the MongoDB server from the temporary container, add the docker command option below.
 
-コンテナ名を調べる下記コマンドを実行し、コンテナ名\(`${container}`\)を使って`--link ${container}:mongo` オプションを追加してください。
+#### When MongoDB Is Running as a Docker Container
 
-#### e.g.
+Run a command to find out the container name, and add an option `--link ${container}:mongo` with the container name \(`${container}`\).
 
-`docker ps` コマンドでコンテナ名を調べます。
+##### e.g.
+
+Use `docker ps` to find out the container name.
 
 ```bash
 vagrant@ubuntu-xenial:/etc/docker-compose$ sudo docker ps
@@ -31,25 +33,25 @@ CONTAINER ID        IMAGE                           COMMAND                  CRE
 man
 ```
 
-上記コマンドの結果、コンテナ名は `serene_swartzman` と分かるので、追加するオプションは `--link serene_swartz:mongo` となります。
+The command above shows the container name is `serene_swartzman`, therefore the option is `--link serene_swartz:mongo`.
 
-### MongoDB が docker コンテナ以外で動作している場合
+#### When MongoDB Is NOT Running as a Docker Container
 
-#### Docker ホストの OS が Linux の場合
+##### When Docker Host is Linux
 
-`--network host` オプションを追加することで、ホストと同一のネットワークを利用できます。
+Add `--network host` to use the same network with the host.
 
-#### Docker for Mac の場合
+##### For Docker for Mac
 
-(TBD: 執筆者募集)
+(TBD: Looking for a writer)
 
-#### Docker for Windows の場合
+##### For Docker for Windows
 
-(TBD: 執筆者募集)
+(TBD: Looking for a writer)
 
-## バックアップ手順
+### How to Backup
 
-1. [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) コンテナを、クリーンアップオプション\(`--rm`\)付きで実行します
+1. Run [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) container with \(`--rm`\) flag
     ```bash
     docker run --rm \
       -e MONGODB_HOST=<Target MongoDB Host> \
@@ -58,15 +60,15 @@ man
       -e S3_TARGET_BUCKET_URL=<Target S3 Bucket URL (s3://...)> \
       weseek/mongodb-awesome-backup
     ```
-2. 対象となる MongoDB サーバーの全てのデータベースのデータを取得し、 `backup-YYYYMMdd.tar.bz2`として指定された S3 バケットにアップロードされます
+2. The command creates a backup for all databases in the target MongoDB server, and upload it as `backup-YYYYMMdd.tar.bz2` in the S3 bucket 
 
 ::: tip
-その他のオプションは [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を参照してください
+See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options
 :::
 
-## リストア手順
+### How to Restore
 
-1. [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) コンテナを、クリーンアップオプション\(`--rm`\)付きで実行します
+1. Run [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) container with \(`--rm`\) flag
     ```bash
     docker run --rm \
       -e MONGODB_HOST=<Target MongoDB Host> \
@@ -76,12 +78,13 @@ man
       -e S3_TARGET_FILE=backup-YYYYMMdd.tar.bz2 \
       weseek/mongodb-awesome-backup restore
     ```
-2. 指定された S3 バケット配下にある指定ファイル\(上記例では `backup-YYYYMMdd.tar.bz2` \)がリストアされます
-3. GROWI を再起動してください
+2. The command restores the specified file \(`backup-YYYYMMdd.tar.bz2` in the example above \) in the S3 bucket
+3. Restart GROWI
 
 ::: tip
-その他のオプションは [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を参照してください
+See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options
 :::
 
+## Using Google Cloud Platform
 
-
+(TBD: Looking for a writer)
