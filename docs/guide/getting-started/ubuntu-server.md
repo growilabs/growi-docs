@@ -80,7 +80,7 @@ To install the package, import the Elasticsearch repository's GPG key.
 $ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 ```
 
-To enable installation using the apt command via https, install the `apt-transport-https` package.
+To allow installation using the apt command via https, install the `apt-transport-https` package.
 
 ```text
 $ sudo apt-get install apt-transport-https
