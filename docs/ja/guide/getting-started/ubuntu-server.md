@@ -22,7 +22,7 @@ Option となっているものは必須ではありませんが、このドキ�
 
 ### NodeSource repository を利用する
 
-[https://deb.nodesource.com/](https://deb.nodesource.com/) から Node.js をインストールスクリプトを取得します。作業ディレクトリはホームディレクトリで作業します
+[https://deb.nodesource.com/](https://deb.nodesource.com/) から Node.js のインストールスクリプトを取得します。作業ディレクトリはホームディレクトリで作業します
 
 ```text
 $ cd ~
