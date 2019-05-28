@@ -21,19 +21,34 @@ Optional となっているものは必須ではありませんが、このド�
 ## node.js 10.x & npm のインストール
 
 ### nodist を利用する(for Windows)
-nodist (Node.js) インストール
+https://github.com/marcelklehr/nodist/releases からインストール用ファイル NodistSetup-vX.X.X.exe をダウンロードし、実行します。
 
-Nodeのバージョン管理ツール「nodist」 をインストール
+コマンドプロンプトにて、以下のコマンドが使用可能であることを確認できれば、インストール完了です。
 
-https://github.com/marcelklehr/nodist/releases から NodistSetup-vX.X.X.exe をダウンロードして実行
+```text
+$ nodist -v
+0.9.1
+```
 
-Node.js, npm インストール
+インストールが完了したら、node.js および npm をインストールします。
 
-nodist global 8
+```text
+$ nodeist global 10
+```
 
-Yarnインストール
+続いて、https://yarnpkg.com/ja/docs/install から Windows版の yarn インストール用ファイルをダウンロードし、実行します。
 
-https://yarnpkg.com/ja/docs/install から DL してインストール
+Node.js, npm, yarn のインストールが完了したら、インストールしたバージョンを確認しましょう。
+
+```text
+$ node -v
+v10.15.3
+$ npm -v
+6.4.1
+$ yarn -v
+1.16.1
+```
+
 
 ### nodebrew を利用する(for MacOS)
 homebrew インストール (すでにインストールしている人は一応updateはしておく))
