@@ -64,6 +64,10 @@ $ yarn -v
 
 [公式ページ](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) に従い、インストールを進めます。 ここでは Elasticsearch 5.x をインストールするために若干の修正をしています
 
+::: warning
+このドキュメントは古くなっています。現在の GROWI がサポートする Elasticsearch の最新版は 6.x 系です (2019年05月時点)
+:::
+
 まず、Elasticsearch を実行できるように JDK8 をインストールします。
 
 ```text
@@ -120,7 +124,7 @@ ii  elasticsearch                    5.6.10                                     
 $ sudo systemctl start elasticsearch
 ```
 
-elsticsearch の自動起動設定を有効化します。
+elasticsearch の自動起動設定を有効化します。
 
 ```text
 $ sudo systemctl enable elasticsearch
