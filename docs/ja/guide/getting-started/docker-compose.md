@@ -56,7 +56,7 @@ Yarn インストール
 
 brew install yarn
 
-###  NodeSource repository を利用する(for CentOS)
+###  NodeSource repository を利用する(for CentOS, Ubuntu)
 
 [https://rpm.nodesource.com/](https://rpm.nodesource.com/)からNode.js のインストールスクリプトを取得します。作業ディレクトリはホームディレクトリです。
 
