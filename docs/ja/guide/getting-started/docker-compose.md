@@ -51,25 +51,89 @@ $ yarn -v
 
 
 ### nodebrew を利用する(for MacOS)
-homebrew インストール (すでにインストールしている人は一応updateはしておく))
+まず、homebrew をインストールします。https://brew.sh/index_ja の記載の通り、以下のスプリクトをターミナルに貼り付けて実行します。
 
-https://brew.sh/index_ja の記載に従ってインストールする
+```text
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
-nodebrew をインストール
+homebrew のインストールが完了したら、以下のコマンドをターミナルにて実行し、nodebrew をインストールします。
 
-brew install nodebrew
+```text
+$ brew install nodebrew
+```
 
+以下のコマンドを実行し、help が表示されたらインストール完了です。
+```text
+$ nodebrew help
+nodebrew 1.0.0
+
+Usage:
+    nodebrew help                         Show this message
+    nodebrew install <version>            Download and install <version> (compile from source)
+    nodebrew install-binary <version>     Download and install <version> (binary file)
+    nodebrew uninstall <version>          Uninstall <version>
+    nodebrew use <version>                Use <version>
+    nodebrew list                         List installed versions
+    nodebrew ls                           Alias for `list`
+    nodebrew ls-remote                    List remote versions
+    nodebrew ls-all                       List remote and installed versions
+    nodebrew alias <key> <value>          Set alias
+    nodebrew unalias <key>                Remove alias
+    nodebrew clean <version> | all        Remove source file
+    nodebrew selfupdate                   Update nodebrew
+    nodebrew migrate-package <version>    Install global NPM packages contained in <version> to current version
+    nodebrew exec <version> -- <command>  Execute <command> using specified <version>
+
+Example:
+    # install from binary
+    nodebrew install-binary v0.10.22
+
+    # use a specific version number
+    nodebrew use v0.10.22
+
+    # io.js
+    nodebrew install-binary io@v1.0.0
+    nodebrew use io@v1.0.0
+```
+
+インストールが完了したら、以下のコマンドを実行し、セットアップを行います。
+
+```text
 nodebrew setup
+```
 
-(この辺の記事を参考にして設定する)
+続いて以下のコマンドを実行し、PATH の設定を行います。
 
-Node.js, npm インストール
+```text
+$ echo "export PATH=\$HOME/.nodebrew/current/bin:\$PATH" >> ~/.bash_profile
+$ source ~/.bash_profile
+```
 
-nodebrew install-binary v8.x
+( 上記では .bash_profile に設定を記述していますが、環境に合わせて適切なファイルを指定してください。)
 
-Yarn インストール
+nodebrew を用いて、Node.js と npm をインストールします。
 
+```text
+nodebrew install-binary v10.x
+```
+
+続いて、homebrew で Yarn をインストールします。
+
+```text
 brew install yarn
+```
+
+Node.js, npm, yarn のインストールが完了したら、インストールしたバージョンを確認しましょう。
+
+```text
+$ node -v
+v10.15.3
+$ npm -v
+6.4.1
+$ yarn -v
+1.16.1
+```
 
 ###  NodeSource repository を利用する(for CentOS, Ubuntu)
 
