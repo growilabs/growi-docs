@@ -4,19 +4,17 @@
 
 ## 概要
 
-この章ではdocker-composeをインストールする方法を紹介します。
+この章では docker-compose を用いて GROWI を立ち上げる方法を紹介します。
 
 セットアップに必要となるソフトウェアは以下の通りです。
 
 * node.js 10.x \(DO NOT USE 11.x\)
 * npm 6.x
 * yarn
-* MongoDB 3.x
-* \(Optional\) Elasticsearch 6.x
-* \(Optional\) systemd
-* \(Optional\) Apache or nginx
-
-Optional となっているものは必須ではありませんが、このドキュメントではこれら全てを利用し、全文検索可能な GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホスト起動と同時に起動させるところまでを扱います。
+* Git
+* Docker
+* growi-docker-compose
+* Elasticsearch plugin
 
 ## node.js 10.x & npm のインストール
 
@@ -176,79 +174,6 @@ $ yarn -v
 
 ## Elasticsearch
 
-### インストール
-
-[公式ページ](https://www.elastic.co/guide/en/elasticsearch/reference/current/rpm.html) に従い、インストールを進めます。 ここでは Elasticsearch 5.x をインストールするために若干の修正をしています
-
-まず、 Elasticsearch を実行できるように JDK8 をインストールします。
-
-```text
-$ sudo yum install java-1.8.0-openjdk
-```
-
-パッケージをインストールするために、Elasticsearch レポジトリの GPG キーを追加します。
-
-```text
-$ sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
-```
-
-Elasticsearch のレポジトリを追加します。以下の内容を`/etc/yum.repos.d/elasticsearch.repo` に書き込みます。
-
-```text
-[elasticsearch-5.x]
-name=Elasticsearch repository for 5.x packages
-baseurl=https://artifacts.elastic.co/packages/5.x/yum
-gpgcheck=1
-gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
-enabled=1
-autorefresh=1
-type=rpm-md
-```
-
-これで、yum 経由で Elasticsearch がインストールできるようになったため、インストールを行います。
-
-```text
-$ sudo yum install -y elasticsearch
-```
-
-インストールが完了したら、Elasticsearch に割り当てるメモリを調整します。メモリの割り当ては個人ユースであれば 256MB で十分です。チーム規模、ページの量に応じて変更してください。
-
-```text
-$ sudo vim /etc/elasticsearch/jvm.options
-# 編集前
--Xms2g
--Xmx2g
-
-# 編集後
--Xms256m
--Xmx256m
-```
-
-インストールが完了したら、 パッケージのバージョンを確認します。
-
-```text
-$ yum list installed | grep elasticsearch
-elasticsearch.noarch                 5.6.16-1                        @elasticsearch-5.x
-```
-
-`systemctl` コマンドを使って、Elasticsearch を起動します。
-
-```text
-$ sudo systemctl start elasticsearch
-```
-
-elsticsearch の自動起動設定を有効化します。
-
-```text
-$ sudo systemctl enable elasticsearch
-```
-
-正常に起動しているか確認を行います。
-
-```text
-$ sudo systemctl status elasticsearch
-```
-
 ### GROWI に必要な Elasticsearch プラグインのインストール
 
 以下の Elasticsearch plugin をインストールします
@@ -273,57 +198,39 @@ $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromo
 $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 ```
 
-## MongoDB
+## Git
 
 ### インストール
 
-[公式ページ](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-red-hat/) に従ってインストールを実施します。 バージョンは、MongoDB 3.6 です。
+#### for Windows
 
-レポジトリの追加を行います。 `/etc/yum.repos.d/mongodb-org-3.6.repo` を作成し、以下の内容を書き込みます。
+#### for Mac
 
-```text
-[mongodb-org-3.6]
-name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.6/x86_64/
-gpgcheck=1
-enabled=1
-gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc
-```
+## Docker
 
-これで、yum 経由で MongoDB がインストールできるようになったため、インストールを行います。
+### Docker ID の作成
 
-```text
-$ sudo yum install -y mongodb-org
-```
+Docker をインストールするにあたり、Docker ID を作成する必要があるので、事前に https://store.docker.com/signup にてサインアップを行いアカウントを作成してください。
 
-インストールが完了したら、 パッケージのバージョンを確認します。
+### インストール
 
-```text
-$ yum list installed | grep mongodb
-mongodb-org.x86_64                   3.6.11-1.el7               @mongodb-org-3.6
-mongodb-org-mongos.x86_64            3.6.11-1.el7               @mongodb-org-3.6
-mongodb-org-server.x86_64            3.6.11-1.el7               @mongodb-org-3.6
-mongodb-org-shell.x86_64             3.6.11-1.el7               @mongodb-org-3.6
-mongodb-org-tools.x86_64             3.6.11-1.el7               @mongodb-org-3.6
-```
+#### for Windows
 
-`systemctl` コマンドを使って、MongoDB を起動します。
+Docker for Windows を使用します。https://www.docker.com/docker-windows の「DOWNLOAD FROM DOCKER STORE」というボタンをクリックし、次に「Please Login Download」をクリックします。ログイン画面に遷移するので事前に作成した Docker ID にてログインします。すると「Get Docker」ボタンからインストーラーをダウンロードできるのでダウンロードし、実行します。インストールが完了した後、Docker for Windows を起動すると、ログイン画面が表示されるのでログインしてください。
+
+#### for Mac
+
+Docker for Mac を使用します。https://docs.docker.com/docker-for-mac/install/ の「Download from Docker Hub」というボタンをクリックし、次に「Please Login Download」をクリックします。ログイン画面に遷移するので事前に作成した Docker ID にてログインします。すると「Get Docker」ボタンからインストーラーをダウンロードできるのでダウンロードし、実行します。以下のコマンドが実行可能であればインストール完了です。
 
 ```text
-$ sudo systemctl start mongod
+$ docker version
 ```
 
-MongoDB の自動起動設定を有効化します。
+## growi-docker-compose
 
-```text
-$ sudo systemctl enable mongod
-```
+### インストール
 
-正常に起動しているか確認を行います。
-
-```text
-$ sudo systemctl status mongod
-```
+https://github.com/weseek/growi-docker-compose からソースコードを取得します。
 
 ## GROWI
 
@@ -382,10 +289,6 @@ npm start
 ```
 
 `http://<hostname or ip address>:3000/` にアクセスし、初回セットアップ画面が表示されることを確認します。
-
-### systemd による自動起動の設定
-
-「[systemd による自動起動](../admin-cookbook/launch-with-systemd.md)」を参照して下さい。
 
 ## リバースプロキシの設定
 
