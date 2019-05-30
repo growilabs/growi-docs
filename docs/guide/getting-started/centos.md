@@ -126,7 +126,7 @@ Using the `systemctl` command, launch Elasticsearch.
 $ sudo systemctl start elasticsearch
 ```
 
-Enable the autoboot setting of elsticsearch
+Enable the autoboot setting of elasticsearch
 
 ```text
 $ sudo systemctl enable elasticsearch
@@ -164,11 +164,11 @@ $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 
 ## MongoDB
 
-### インストール
+### Installation
 
-[公式ページ](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-red-hat/) に従ってインストールを実施します。 バージョンは、MongoDB 3.6 です。
+Follow the [Official Website](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-red-hat/) to proceed installation. In this section MongoDB 3.6 is used.
 
-レポジトリの追加を行います。 `/etc/yum.repos.d/mongodb-org-3.6.repo` を作成し、以下の内容を書き込みます。
+Add the repository. Create and insert the following into `/etc/yum.repos.d/mongodb-org-3.6.repo`.
 
 ```text
 [mongodb-org-3.6]
@@ -179,13 +179,13 @@ enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc
 ```
 
-これで、yum 経由で MongoDB がインストールできるようになったため、インストールを行います。
+Now MongoDB can be installed via yum. Install.
 
 ```text
 $ sudo yum install -y mongodb-org
 ```
 
-インストールが完了したら、 パッケージのバージョンを確認します。
+Once installation is complete, check the package version.
 
 ```text
 $ yum list installed | grep mongodb
@@ -196,19 +196,19 @@ mongodb-org-shell.x86_64             3.6.11-1.el7               @mongodb-org-3.6
 mongodb-org-tools.x86_64             3.6.11-1.el7               @mongodb-org-3.6
 ```
 
-`systemctl` コマンドを使って、MongoDB を起動します。
+Using the `systemctl` command, launch MongoDB.
 
 ```text
 $ sudo systemctl start mongod
 ```
 
-MongoDB の自動起動設定を有効化します。
+Enable the autoboot setting of MongoDB.
 
 ```text
 $ sudo systemctl enable mongod
 ```
 
-正常に起動しているか確認を行います。
+Check the status to verify it is running properly.
 
 ```text
 $ sudo systemctl status mongod
