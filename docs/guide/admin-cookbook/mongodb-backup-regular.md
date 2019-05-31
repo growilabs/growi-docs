@@ -43,7 +43,7 @@ See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-ba
 ## Manage with docker-compose
 
 ::: tip
-If managing GROWI with growi-[docker-compose](../getting-started/docker-compose.md), preparing a backup container is even easier.
+If GROWI is installed with [growi-docker-compose](../getting-started/docker-compose.md), preparing a backup container is even easier.
 :::
 
 * Refer to weseek/growi-docker-compose [Example](https://github.com/weseek/growi-docker-compose/tree/master/examples/backup-mongodb-data), and follow the steps below.
@@ -71,3 +71,7 @@ If managing GROWI with growi-[docker-compose](../getting-started/docker-compose.
 4. ```bash
    docker-compose up
    ```
+
+## Manage with Google Cloud Platform
+
+* (TBD: Looking for a contributor)
