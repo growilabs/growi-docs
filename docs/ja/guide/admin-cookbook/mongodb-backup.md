@@ -43,11 +43,11 @@ man
 
 ##### Docker for Mac の場合
 
-(TBD: 執筆者募集)
+* (TBD: 執筆者募集)
 
 ##### Docker for Windows の場合
 
-(TBD: 執筆者募集)
+* (TBD: 執筆者募集)
 
 ### バックアップ手順
 
@@ -87,4 +87,4 @@ man
 
 ## Google Cloud Platform を利用する方法
 
-(TBD: 執筆者募集)
+* (TBD: 執筆者募集)
