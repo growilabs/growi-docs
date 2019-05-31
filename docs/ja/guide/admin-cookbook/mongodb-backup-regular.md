@@ -72,6 +72,3 @@ GROWI を growi-[docker-compose](../getting-started/docker-compose.md) で管理
 4. ```bash
    docker-compose up
    ```
-
-
-

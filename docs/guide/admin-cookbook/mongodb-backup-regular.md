@@ -1,24 +1,25 @@
-# MongoDB の定期バックアップ
+# MongoDB Auto Backup
 
 [[toc]]
 
-## 前提条件
+## Overview
 
-* バックアップ/リストアは、[weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を利用します
+This chapter introduces how to set up auto backup for GROWI data using [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup).
 
-#### 必要なもの
+#### Requirements
 
-* docker
-* バックアップファイルをアップロードするための AWS S3 バケット
-  * S3 バケットへのアクセス権を持った IAM ユーザーのアクセスキーおよびシークレットキー
+* Docker
+* AWS S3 bucket to upload backup files
+  * Access key and secret key for a user authorized to access S3 bucket.
 
 ::: tip
-事前に [MongoDB のバックアップ/リストア](mongodb-backup.md) ページを確認することをお勧めします
+See [MongoDB Backup & Restore](mongodb-backup.md) before you start.
+
 :::
 
-## バックアップ用コンテナの起動
+## Create a Container to Store Backups
 
-1. CRONMODE を true に設定したコンテナを起動します
+1. Start a container with CRONMODE `true`.
     ```bash
     docker run --rm \
       -e MONGODB_HOST=<Target MongoDB Host> \
@@ -29,36 +30,35 @@
       -e "CRON_EXPRESSION=0 4 * * *" \
       weseek/mongodb-awesome-backup
     ```
-2. 対象となる MongoDB サーバーの全てのデータベースを、毎日 AM 4:00 にバックアップするコンテナが起動します
+2. The container backs up all databases in the target MongoDB server at 4:00 AM everyday.
 
-#### バックアップの世代管理
+#### Backup Version Control
 
-* (執筆者・PR募集)
-
-::: tip
-その他のオプションは [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を参照してください
-:::
-
-## docker-compose による管理
+* (TBD: Looking for a contributer)
 
 ::: tip
-GROWI を growi-[docker-compose](../getting-started/docker-compose.md) で管理している場合、更に簡単にバックアップ用コンテナを起動できます
+See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options.
 :::
 
-* [weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose/tree/master/examples/backup-mongodb-data) の [Example](https://github.com/weseek/growi-docker-compose/tree/master/examples/backup-mongodb-data) を参考に、以下の手順を行います
+## Manage with docker-compose
+
+::: tip
+If managing GROWI with growi-[docker-compose](../getting-started/docker-compose.md), preparing a backup container is even easier.
+:::
+
+* Refer to weseek/growi-docker-compose [Example](https://github.com/weseek/growi-docker-compose/tree/master/examples/backup-mongodb-data), and follow the steps below.
 
 1. clone
     ```bash
     git clone https://github.com/weseek/growi-docker-compose.git growi
     cd growi
     ```
-2. `docker-compose.override.yml` をルートディレクトリにコピー
+2. Copy `docker-compose.override.yml` to the root directory.
     ```bash
     cp -p examples/backup-mongodb-data/docker-compose.override.yml .
     ```
-3. `docker-compose.override.yml` を編集し、`CRON_EXPRESSION`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `S3_TARGET_BUCKET_URL`に環境に合わせた値を入力します
+3. Edit `docker-compose.override.yml` and enter an appropriate value for `CRON_EXPRESSION`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `S3_TARGET_BUCKET_URL`.
     ```yaml
-    (略)
     ...
     environment:
       - CRONMODE=true
@@ -67,11 +67,7 @@ GROWI を growi-[docker-compose](../getting-started/docker-compose.md) で管理
       - AWS_SECRET_ACCESS_KEY=${Your IAM Secret Access Key}
       - S3_TARGET_BUCKET_URL=s3://${Your Bucket Name}/
     ...
-    (略)
     ```
 4. ```bash
    docker-compose up
    ```
-
-
-

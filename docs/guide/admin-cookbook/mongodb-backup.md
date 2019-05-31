@@ -1,4 +1,4 @@
-# Backup & Restore MongoDB
+# MongoDB Backup & Restore
 
 [[toc]]
 
@@ -43,15 +43,15 @@ Add `--network host` to use the same network with the host.
 
 ##### For Docker for Mac
 
-(TBD: Looking for a writer)
+* (TBD: Looking for a contributer)
 
 ##### For Docker for Windows
 
-(TBD: Looking for a writer)
+* (TBD: Looking for a contributer)
 
 ### How to Backup
 
-1. Run [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) container with \(`--rm`\) flag
+1. Run [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) container with \(`--rm`\) flag.
     ```bash
     docker run --rm \
       -e MONGODB_HOST=<Target MongoDB Host> \
@@ -60,15 +60,15 @@ Add `--network host` to use the same network with the host.
       -e S3_TARGET_BUCKET_URL=<Target S3 Bucket URL (s3://...)> \
       weseek/mongodb-awesome-backup
     ```
-2. The command creates a backup for all databases in the target MongoDB server, and upload it as `backup-YYYYMMdd.tar.bz2` in the S3 bucket 
+2. The command creates a backup for all databases in the target MongoDB server, and upload it as `backup-YYYYMMdd.tar.bz2` in the S3 bucket.
 
 ::: tip
-See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options
+See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options.
 :::
 
 ### How to Restore
 
-1. Run [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) container with \(`--rm`\) flag
+1. Run [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) container with \(`--rm`\) flag.
     ```bash
     docker run --rm \
       -e MONGODB_HOST=<Target MongoDB Host> \
@@ -78,13 +78,13 @@ See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-ba
       -e S3_TARGET_FILE=backup-YYYYMMdd.tar.bz2 \
       weseek/mongodb-awesome-backup restore
     ```
-2. The command restores the specified file \(`backup-YYYYMMdd.tar.bz2` in the example above \) in the S3 bucket
-3. Restart GROWI
+2. The command restores the specified file \(`backup-YYYYMMdd.tar.bz2` in the example above \) in the S3 bucket.
+3. Restart GROWI.
 
 ::: tip
-See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options
+See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options.
 :::
 
 ## Using Google Cloud Platform
 
-(TBD: Looking for a writer)
+* (TBD: Looking for a contributer)
