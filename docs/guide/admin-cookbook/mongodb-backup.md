@@ -43,11 +43,11 @@ Add `--network host` to use the same network with the host.
 
 ##### For Docker for Mac
 
-* (TBD: Looking for a contributer)
+* (TBD: Looking for a contributor)
 
 ##### For Docker for Windows
 
-* (TBD: Looking for a contributer)
+* (TBD: Looking for a contributor)
 
 ### How to Backup
 
@@ -87,4 +87,4 @@ See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-ba
 
 ## Using Google Cloud Platform
 
-* (TBD: Looking for a contributer)
+* (TBD: Looking for a contributor)

@@ -17,7 +17,7 @@ See [MongoDB Backup & Restore](mongodb-backup.md) before you start.
 
 :::
 
-## Create a Container to Store Backups
+## Manage with a Container
 
 1. Start a container with CRONMODE `true`.
     ```bash
@@ -34,7 +34,7 @@ See [MongoDB Backup & Restore](mongodb-backup.md) before you start.
 
 #### Backup Version Control
 
-* (TBD: Looking for a contributer)
+* (TBD: Looking for a contributor)
 
 ::: tip
 See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options.
