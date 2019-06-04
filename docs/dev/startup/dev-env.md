@@ -1,75 +1,75 @@
-# 開発環境の構築
+# Getting Started
 
 ::: tip
-以下は WESEEK, Inc. での統一開発環境の紹介です。
-そのため、開発にあたって必須ではない設定やツールの指定が含まれています。
+This chapter introduces development enviroment **specifically used in WESEEK, Inc**.
+Generally, some of the tools and configurations are not required for developing GROWI.
 :::
 
-## マージツールの準備
+## Set up Merge Tool
 
-1. P4Merge (Helix Visual Client (P4V)) インストール
-    * [https://www.perforce.com/downloads/helix-visual-client-p4v](https://www.perforce.com/downloads/helix-visual-client-p4v) からDLしてインストールする
-    * ユーザ登録は適宜実施する
-2. P4Merge 設定
-    * Diff タブで適当にファイルを2つ選択して OK
-    * Edit -&gt; Preferences...
-        * 「Character encoding」で「Unicode (UTF-8, no BOM)」または BOM 表記のない「Unicode(UTF-8)」を選択
-        * 「Line ending type」で「UNIX (LF)」を選択
+1. Install P4Merge (Helix Visual Client (P4V))
+    * Download and install P4Merge from [https://www.perforce.com/downloads/helix-visual-client-p4v](https://www.perforce.com/downloads/helix-visual-client-p4v)
+    * Sign up if you don't have an account.
+2. Set up P4Merge
+    * On Diff tab, select any 2 files and press "OK".
+    * Edit -&gt; Preferences
+        * For "Character encoding", select either "Unicode (UTF-8, no BOM)" or "Unicode(UTF-8)".
+        * For "Line ending type", select "UNIX (LF).
 
-## Gitクライアントの準備
+## Set up Git Client
 
-1. SourceTreeインストール
-    * [https://ja.atlassian.com/software/sourcetree](https://ja.atlassian.com/software/sourcetree) からDLしてインストールする
-    * 「Git が見つかりませんでした」というダイアログが表示された場合は、「システム全体でなく、SourceTree 単独で使うためだけの内蔵用の Git をダウンロードする。」を選択
-2. SourceTree設定
-    1. SourceTree からターミナルを開く
-    2. autoCRLF を無効化する
-        * 以下をコピペして実行 `git config --global core.autoCRLF false`
-    3. 自身のアカウント情報を設定
-        * 「オプション &gt; 全般」...
-        * 「デフォルトのユーザ情報」を適宜設定
-    4. P4Merge を設定
-        * 「オプション &gt; Diff」...
-        * 「外部Diffツール」「マージツール」で「P4Merge」を選択
-    5. デフォルトの文字コード設定
-        * 「オプション &gt; 全般」...
-        * 「デフォルトの文字コード」で「utf-8」を選択
+1. Install SourceTree
+    * Download and install SourceTree from [https://www.atlassian.com/software/sourcetree](https://www.atlassian.com/software/sourcetree)
+    * If SourceTree shows a dialog, "We were not able to locate a Git install on our system already", select "Download an embedded version of Git for SourceTree alone to use".
+2. Set up SourceTree
+    1. Open a terminal from SourceTree.
+    2. Disable autoCRLF.
+        * Execute the following command `git config --global core.autoCRLF false`.
+    3. Set up your account.
+        * Tool &gt; Options &gt; General
+        * Set "Default user information".
+    4. Set P4Merge for Merge Tool
+        * Tool &gt; Options &gt; Diff
+        * In "External Diff / Merge" section, select "P4Merge" for "Merge Tool".
+    5. Set Default Encoding
+        * Tool &gt; Options &gt; General
+        * In "Repo Settings" section, select "utf-8" for "Default text encoding".
 
-## Node.js 実行環境のインストール
+## Set up Node.js Environment
 
-Node.js, npm, Yarn 共に、CI 環境で利用する `node:10` のバージョンに合わせる
+Test environment (CI) uses `node:10`. Use the version Node.js, npm, and Yarn compatible with `node:10`.
 
 :::: tabs
 
 ::: tab Windows
 
-1. Node.js, npm のバージョン管理ツール「nodist」 をインストール
-    * [https://github.com/marcelklehr/nodist/releases](https://github.com/marcelklehr/nodist/releases) から NodistSetup-vX.X.X.exe をダウンロードして実行
-1. Node.js, npm インストール
+1. Install "nodist" (version manager for Node.js, npm)
+    * Download `NodistSetup-vX.X.X.exe` from [https://github.com/marcelklehr/nodist/releases](https://github.com/marcelklehr/nodist/releases) and execute
+1. Install Node.js and npm
     ``` cmd
     nodist global 10
     ```
 
-1. Yarn インストール
+1. Install Yarn
 
-    * [https://yarnpkg.com/ja/docs/install](https://yarnpkg.com/ja/docs/install) から DL してインストール
+    * Download and install Yarn from [https://yarnpkg.com/ja/docs/install](https://yarnpkg.com/ja/docs/install)
 
 :::
 
 ::: tab Mac
 
-1. homebrew インストール
-    * [https://brew.sh/index\_ja](https://brew.sh/index_ja) の記載に従ってインストールする
-1. Node.js, npm のバージョン管理ツール「nodebrew」をインストール
+1. Install homebrew
+    * Follow [https://brew.sh/index](https://brew.sh/index) and install homebrew.
+1. Install "nodebrew" (version manager for Node.js, npm)
     ```bash
     brew install nodebrew
     nodebrew setup
     ```
-1. Node.js, npm インストール
+1. Install Node.js, npm
     ```bash
     nodebrew install-binary v10.x
     ```
-* Yarn インストール
+* Install Yarn
     ```bash
     brew install yarn
     ```
@@ -88,26 +88,26 @@ $ yarn -v
 1.13.0
 ```
 
-## エディタの準備
+## Set up Source Code Editor
 
-1. Visual Studio Code インストール
-2. 拡張機能をインストール
-   * インストール方法
-     * `Ctrl + Shift + P` -> 「Extensions: Show Recommended Extensions」を選択して全てインストール
+1. Install Visual Studio Code.
+2. Install extensions.
+   * How to install extensions
+     * `Ctrl + Shift + P` -> select "Extensions: Show Recommended Extensions"
 
-## 開発環境の依存インフラの準備
+## Set up Dependent Middlewares
 
 ::: warning
-Docker 環境をネイティブで準備できない場合のみ、以下の手順が必要
+Only if your environment does not support Docker, go through the following steps.
 :::
 
-1. VirtualBox インストール
-    * [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads) から DL してインストールする
-        * バージョンは `5.1.30` とする。
-    * Extension Pack の中で利用する機能はないのでインストール不要
-2. Vagrant インストール
-    * [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html) からDLしてインストールする
-    * Vagrantfile を作成
+1. Install VirtualBox
+    * Download and install VirtualBox from [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads).
+        * Version `5.1.30`
+    * No Extension Packs are required.
+2. Install Vagrant
+    * nload and install Vagrant from [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html).
+    * Create Vagrantfile
         ```ruby
         Vagrant.configure(2) do |config|
           config.vm.box = "envimation/ubuntu-xenial-docker"
