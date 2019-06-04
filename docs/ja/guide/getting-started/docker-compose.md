@@ -19,7 +19,7 @@
 ## node.js 10.x & npm のインストール
 
 ### nodist を利用する(for Windows)
-https://github.com/marcelklehr/nodist/releases からインストール用ファイル NodistSetup-vX.X.X.exe をダウンロードし、実行します。
+[https://github.com/marcelklehr/nodist/releases](https://github.com/marcelklehr/nodist/releases) からインストール用ファイル NodistSetup-vX.X.X.exe をダウンロードし、実行します。
 
 コマンドプロンプトにて、以下のコマンドが使用可能であることを確認できれば、インストール完了です。
 
@@ -34,7 +34,7 @@ $ nodist -v
 $ nodeist global 10
 ```
 
-続いて、https://yarnpkg.com/ja/docs/install から Windows版の yarn インストール用ファイルをダウンロードし、実行します。
+続いて、[https://yarnpkg.com/ja/docs/install](https://yarnpkg.com/ja/docs/install) から Windows版の yarn インストール用ファイルをダウンロードし、実行します。
 
 Node.js, npm, yarn のインストールが完了したら、インストールしたバージョンを確認しましょう。
 
@@ -49,7 +49,7 @@ $ yarn -v
 
 
 ### nodebrew を利用する(for MacOS)
-まず、homebrew をインストールします。https://brew.sh/index_ja の記載の通り、以下のスプリクトをターミナルに貼り付けて実行します。
+まず、homebrew をインストールします。[https://brew.sh/index_ja](https://brew.sh/index_ja) の記載の通り、以下のスプリクトをターミナルに貼り付けて実行します。
 
 ```text
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -210,17 +210,17 @@ $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 
 ### Docker ID の作成
 
-Docker をインストールするにあたり、Docker ID を作成する必要があるので、事前に https://store.docker.com/signup にてサインアップを行いアカウントを作成してください。
+Docker をインストールするにあたり、Docker ID を作成する必要があるので、事前に [https://store.docker.com/signup](https://store.docker.com/signup) にてサインアップを行いアカウントを作成してください。
 
 ### インストール
 
 #### for Windows
 
-Docker for Windows を使用します。https://www.docker.com/docker-windows の「DOWNLOAD FROM DOCKER STORE」というボタンをクリックし、次に「Please Login Download」をクリックします。ログイン画面に遷移するので事前に作成した Docker ID にてログインします。すると「Get Docker」ボタンからインストーラーをダウンロードできるのでダウンロードし、実行します。インストールが完了した後、Docker for Windows を起動すると、ログイン画面が表示されるのでログインしてください。
+Docker for Windows を使用します。[https://www.docker.com/docker-windows](https://www.docker.com/docker-windows)の「DOWNLOAD FROM DOCKER STORE」というボタンをクリックし、次に「Please Login Download」をクリックします。ログイン画面に遷移するので事前に作成した Docker ID にてログインします。すると「Get Docker」ボタンからインストーラーをダウンロードできるのでダウンロードし、実行します。インストールが完了した後、Docker for Windows を起動すると、ログイン画面が表示されるのでログインしてください。
 
 #### for Mac
 
-Docker for Mac を使用します。https://docs.docker.com/docker-for-mac/install/ の「Download from Docker Hub」というボタンをクリックし、次に「Please Login Download」をクリックします。ログイン画面に遷移するので事前に作成した Docker ID にてログインします。すると「Get Docker」ボタンからインストーラーをダウンロードできるのでダウンロードし、実行します。以下のコマンドが実行可能であればインストール完了です。
+Docker for Mac を使用します。[https://docs.docker.com/docker-for-mac/install/](https://docs.docker.com/docker-for-mac/install/) の「Download from Docker Hub」というボタンをクリックし、次に「Please Login Download」をクリックします。ログイン画面に遷移するので事前に作成した Docker ID にてログインします。すると「Get Docker」ボタンからインストーラーをダウンロードできるのでダウンロードし、実行します。以下のコマンドが実行可能であればインストール完了です。
 
 ```text
 $ docker version
@@ -230,7 +230,7 @@ $ docker version
 
 ### インストール
 
-https://github.com/weseek/growi-docker-compose からソースコードを取得します。
+[https://github.com/weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose) からソースコードを取得します。
 
 ## GROWI
 
