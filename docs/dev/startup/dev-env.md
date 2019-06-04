@@ -101,7 +101,7 @@ $ yarn -v
 Only if your environment does not support Docker, go through the following steps.
 :::
 
-1.Install  VirtualBox
+1. Install  VirtualBox
     * Download and install VirtualBox from [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads).
         * Version `5.1.30`
     * No Extension Packs are required.
