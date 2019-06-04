@@ -1,8 +1,8 @@
 # Getting Started
 
 ::: tip
-This chapter introduces development enviroment used in WESEEK, Inc.
-Some tools and configurations are not required for developing GROWI.
+This chapter introduces development enviroment **specifically used in WESEEK, Inc**.
+Generally, some of the tools and configurations are not required for developing GROWI.
 :::
 
 ## Set up Merge Tool
@@ -88,20 +88,20 @@ $ yarn -v
 1.13.0
 ```
 
-## Set up Text Editor
+## Set up Source Code Editor
 
 1. Install Visual Studio Code.
 2. Install extensions.
    * How to install extensions
      * `Ctrl + Shift + P` -> select "Extensions: Show Recommended Extensions"
 
-## Set up Dev Environment
+## Set up Dependent Middlewares
 
 ::: warning
 Only if your environment does not support Docker, go through the following steps.
 :::
 
-1. Install  VirtualBox
+1. Install VirtualBox
     * Download and install VirtualBox from [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads).
         * Version `5.1.30`
     * No Extension Packs are required.
