@@ -10,9 +10,6 @@
 
 * Docker
 * growi-docker-compose
-* Elasticsearch plugin (任意)
-
-Elasticsearch plugin は全文検索機能を利用する場合に必要となります。
 
 ## Docker
 
@@ -49,30 +46,3 @@ docker-compose up
 ```
 
 `http://<hostname or ip address>:3000/` にアクセスし、初回セットアップ画面が表示されることを確認します。
-
-## Elasticsearch plugin
-
-### GROWI の全文探索機能に必要な Elasticsearch プラグインのインストール
-
-以下の Elasticsearch plugin をインストールします
-
-* [Japanese \(kuromoji\) Analysis plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-kuromoji.html)
-* [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-icu.html)
-
-まずは、Elasticsearch plugin をインストールするために利用するコマンドを検索します
-
-```text
-$ rpm -ql elasticsearch | grep bin | grep plugin
-/usr/share/elasticsearch/bin/elasticsearch-plugin
-```
-
-上記で出力されたコマンドを利用して、 analysis-kuromoji plugin と analysis-icu plugin をインストールします
-
-```text
-# analysis-kuromoji のインストール
-$ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromoji
-
-# analysis-icu plugin のインストール
-$ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
-```
-
