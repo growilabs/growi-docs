@@ -77,7 +77,7 @@ Test environment (CI) uses `node:10`. Use the version Node.js, npm, and Yarn com
 
 ::::
 
-### Versions confirmed to work
+### Confirm Versions
 
 ```bash
 $ node -v
