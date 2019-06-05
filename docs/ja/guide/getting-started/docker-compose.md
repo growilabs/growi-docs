@@ -8,203 +8,11 @@
 
 セットアップに必要となるソフトウェアは以下の通りです。
 
-* node.js 10.x \(DO NOT USE 11.x\)
-* npm 6.x
-* yarn
-* Git
 * Docker
 * growi-docker-compose
-* Elasticsearch plugin
+* Elasticsearch plugin (任意)
 
-## node.js 10.x & npm のインストール
-
-### nodist を利用する(for Windows)
-[https://github.com/marcelklehr/nodist/releases](https://github.com/marcelklehr/nodist/releases) からインストール用ファイル NodistSetup-vX.X.X.exe をダウンロードし、実行します。
-
-コマンドプロンプトにて、以下のコマンドが使用可能であることを確認できれば、インストール完了です。
-
-```text
-$ nodist -v
-0.9.1
-```
-
-インストールが完了したら、node.js および npm をインストールします。
-
-```text
-$ nodeist global 10
-```
-
-続いて、[https://yarnpkg.com/ja/docs/install](https://yarnpkg.com/ja/docs/install) から Windows版の yarn インストール用ファイルをダウンロードし、実行します。
-
-Node.js, npm, yarn のインストールが完了したら、インストールしたバージョンを確認しましょう。
-
-```text
-$ node -v
-v10.15.3
-$ npm -v
-6.4.1
-$ yarn -v
-1.16.1
-```
-
-
-### nodebrew を利用する(for MacOS)
-まず、homebrew をインストールします。[https://brew.sh/index_ja](https://brew.sh/index_ja) の記載の通り、以下のスプリクトをターミナルに貼り付けて実行します。
-
-```text
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-homebrew のインストールが完了したら、以下のコマンドをターミナルにて実行し、nodebrew をインストールします。
-
-```text
-$ brew install nodebrew
-```
-
-以下のコマンドを実行し、help が表示されたらインストール完了です。
-```text
-$ nodebrew help
-nodebrew 1.0.0
-
-Usage:
-    nodebrew help                         Show this message
-    nodebrew install <version>            Download and install <version> (compile from source)
-    nodebrew install-binary <version>     Download and install <version> (binary file)
-    nodebrew uninstall <version>          Uninstall <version>
-    nodebrew use <version>                Use <version>
-    nodebrew list                         List installed versions
-    nodebrew ls                           Alias for `list`
-    nodebrew ls-remote                    List remote versions
-    nodebrew ls-all                       List remote and installed versions
-    nodebrew alias <key> <value>          Set alias
-    nodebrew unalias <key>                Remove alias
-    nodebrew clean <version> | all        Remove source file
-    nodebrew selfupdate                   Update nodebrew
-    nodebrew migrate-package <version>    Install global NPM packages contained in <version> to current version
-    nodebrew exec <version> -- <command>  Execute <command> using specified <version>
-
-Example:
-    # install from binary
-    nodebrew install-binary v0.10.22
-
-    # use a specific version number
-    nodebrew use v0.10.22
-
-    # io.js
-    nodebrew install-binary io@v1.0.0
-    nodebrew use io@v1.0.0
-```
-
-インストールが完了したら、以下のコマンドを実行し、セットアップを行います。
-
-```text
-nodebrew setup
-```
-
-続いて以下のコマンドを実行し、PATH の設定を行います。
-
-```text
-$ echo "export PATH=\$HOME/.nodebrew/current/bin:\$PATH" >> ~/.bash_profile
-$ source ~/.bash_profile
-```
-
-( 上記では .bash_profile に設定を記述していますが、環境に合わせて適切なファイルを指定してください。)
-
-nodebrew を用いて、Node.js と npm をインストールします。
-
-```text
-nodebrew install-binary v10.x
-```
-
-続いて、homebrew で Yarn をインストールします。
-
-```text
-brew install yarn
-```
-
-Node.js, npm, yarn のインストールが完了したら、インストールしたバージョンを確認しましょう。
-
-```text
-$ node -v
-v10.15.3
-$ npm -v
-6.4.1
-$ yarn -v
-1.16.1
-```
-
-###  NodeSource repository を利用する(for CentOS, Ubuntu)
-
-[https://rpm.nodesource.com/](https://rpm.nodesource.com/)からNode.js のインストールスクリプトを取得します。作業ディレクトリはホームディレクトリです。
-
-```text
-$ cd ~
-$ curl -sL https://rpm.nodesource.com/setup_8.x -o nodesource_setup.sh
-```
-
-取得したスクリプトを実行します。
-
-```text
-$ sudo bash nodesource_setup.sh
-```
-
-これで `yum` 経由で node.js が取得できるようになったので、 `yum` コマンドでインストールを行います。
-
-```text
-$ sudo yum install -y nodejs
-```
-
-GROWI では yarn を用いたパッケージインストールを利用するため、ここで `yarn` コマンドをインストールしておきます。
-
-```text
-$ curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
-$ sudo yum install -y yarn
-```
-
-Node.js, npm, yarn のインストールが完了したら、インストールしたバージョンを確認しましょう。
-
-```text
-$ node -v
-v8.15.1
-$ npm -v
-6.4.1
-$ yarn -v
-1.15.2
-```
-
-## Elasticsearch
-
-### GROWI に必要な Elasticsearch プラグインのインストール
-
-以下の Elasticsearch plugin をインストールします
-
-* [Japanese \(kuromoji\) Analysis plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-kuromoji.html)
-* [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-icu.html)
-
-まずは、Elasticsearch plugin をインストールするために利用するコマンドを検索します
-
-```text
-$ rpm -ql elasticsearch | grep bin | grep plugin
-/usr/share/elasticsearch/bin/elasticsearch-plugin
-```
-
-上記で出力されたコマンドを利用して、 analysis-kuromoji plugin と analysis-icu plugin をインストールします
-
-```text
-# analysis-kuromoji のインストール
-$ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromoji
-
-# analysis-icu plugin のインストール
-$ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
-```
-
-## Git
-
-### インストール
-
-#### for Windows
-
-#### for Mac
+Elasticsearch plugin は全文検索機能を利用する場合に必要となります。
 
 ## Docker
 
@@ -290,120 +98,30 @@ npm start
 
 `http://<hostname or ip address>:3000/` にアクセスし、初回セットアップ画面が表示されることを確認します。
 
-## リバースプロキシの設定
 
-ここでは、起動した GROWI に対してリバースプロキシを行うための設定例を記載します。
+## Elasticsearch
 
-### Apache
+### GROWI に必要な Elasticsearch プラグインのインストール
 
-#### インストール
+以下の Elasticsearch plugin をインストールします
 
-```text
-$ sudo yum install httpd
-```
+* [Japanese \(kuromoji\) Analysis plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-kuromoji.html)
+* [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-icu.html)
 
-#### リバースプロキシの設定例
-
-ここではリバースプロキシに関する箇所を抜粋して記載しています。
+まずは、Elasticsearch plugin をインストールするために利用するコマンドを検索します
 
 ```text
-<IfModule mod_ssl.c>
-  <VirtualHost _default_:443>
-    ...
-    ###
-    # reverse proxy to crowi
-    # Header に Host: example.com を追加するため
-    ProxyPreserveHost On
-    # HTTPS利用時: Header に x-forwarded-proto: https を追加するため
-    RequestHeader set x-forwarded-proto 'https'
-    # Apache では static assets で 304 が返らないことがあるので ETag を無効化する
-    <ifModule mod_headers.c>
-            Header unset ETag
-    </ifModule>
-    FileETag None
-
-    # socket.io の path を rewrite する
-    RewriteEngine On
-    RewriteCond %{REQUEST_URI}  ^/socket.io            [NC]
-    RewriteCond %{QUERY_STRING} transport=websocket    [NC]
-    RewriteRule /(.*) ws://localhost:3000/$1 [P,L]
-
-    ProxyPass / http://localhost:3000/
-    ProxyPassReverse / http://localhost:3000/
-    ...
-  </VirtualHost>
-</IfModule>
+$ rpm -ql elasticsearch | grep bin | grep plugin
+/usr/share/elasticsearch/bin/elasticsearch-plugin
 ```
 
-#### 自動起動の設定
+上記で出力されたコマンドを利用して、 analysis-kuromoji plugin と analysis-icu plugin をインストールします
 
 ```text
-$ sudo systemctl enable httpd
+# analysis-kuromoji のインストール
+$ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromoji
+
+# analysis-icu plugin のインストール
+$ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 ```
 
-### Nginx のインストールと設定
-
-#### インストール
-
-nginx のレポジトリを追加します。`/etc/yum.repos.d/nginx.repo`を作成し、以下の内容を書き込みます。
-
-```text
-[nginx]
-name=nginx repo
-baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
-gpgcheck=0
-enabled=1
-```
-
-これで、yum 経由で nginx がインストールできるようになったため、インストールを行います。
-
-```text
-$ sudo yum install -y nginx
-```
-
-#### リバースプロキシの設定例
-
-`/etc/nginx/conf.d/growi.conf` のようなファイルを作成し、設定を書き込みます。  
-ここでは HTTPS を利用する設定例を記載しています。 &lt;server&gt; など&lt;&gt;で囲まれている箇所は、適宜環境に合わせて設定してください。
-
-```text
-upstream growi {
-    server localhost:3000;
-}
-
-map $http_upgrade $connection_upgrade {
-    default Upgrade;
-    ''      close;
-}
-
-server {
-    listen 443 ssl spdy;
-    server_name <server>;
-    ssl_certificate <cert_file>;
-    ssl_certificate_key <key_file>;
-
-    location / {
-        proxy_set_header Host $host;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_set_header X-Forwarded-Port $server_port;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_pass http://growi;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection $connection_upgrade;
-        proxy_read_timeout 900s;
-    }
-}
-
-server {
-    listen 80;
-    server_name <server>;
-    return 301 https://$server_name$request_uri;
-}
-```
-
-#### 自動起動の設定
-
-```text
-$ sudo systemctl enable nginx
-```
