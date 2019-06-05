@@ -1,23 +1,23 @@
-# 起動
+# Launch
 
-## 初回起動
+## First Time
 
-### リポジトリの clone
+### Clone the Repository
 
 ``` bash
 git clone https://github.com/weseek/growi.git
 ```
 
-### 実行環境のバージョンの確認
+### Confirm Versions
 
-[開発環境の構築#バージョンの確認](dev-env.md#バージョンの確認) を参照
+See [Getting Started#Confirm Versions](dev-env.md#confirm-versions) 
 
-### 開発用データストアの準備
+### Set up Datastore for Development
 
-Docker 利用可能な環境で以下を実行
+Execute the following command in Docker environment.
 
 ::: tip
-Windows の場合は [開発環境の構築#開発環境の依存インフラの準備](dev-env.md#開発環境の依存インフラの準備) で準備した Linux マシンの中で実行する
+For Windows, execute the command in the Linux VM set up in [Getting Started#Set up Dependent Middlewares](dev-env.md#set-up-dependent-middlewares).
 :::
 
 ``` bash
@@ -26,7 +26,7 @@ cd growi-docker-compose
 docker-compose -f docker-compose.dev.yml up
 ```
 
-以下のコンテナ群が起動します
+The following containers should be launched.
 
 | Product | Port | Desc |
 | :--- | :--- | :--- |
@@ -34,53 +34,53 @@ docker-compose -f docker-compose.dev.yml up
 | ElasticSearch | 9200 |  |
 | [elasticsearch-head](https://github.com/mobz/elasticsearch-head) | 9100 | A web front end for an Elasticsearch cluster |
 
-### 依存ライブラリの取得
+### Install Dependencies
 
 ``` bash
 yarn
 ```
 
 ::: danger
-`npm install` は利用しないでください
+DO NOT USE `npm install`
 :::
 
-### データマイグレーション
+### Migration
 
 ``` bash
 npm run migrate
 ```
 
-### フロントエンド・バックエンドサーバーの起動
+### Lauch Front-end and Back-end Server
 
-1. `yarn build`
-   1. クライアントをビルドし、webpack-dev-server を起動します
-   2. クライアント用ファイル群の変更を検知し、リビルドします
-2. `yarn server`
-   1. Express サーバーを起動します
-   2. サーバー用ファイル群の変更を検知し、Express サーバーをリスタートします
+1. `yarn build` does the following.
+   1. Build clients assets and launch webpack-dev-server.
+   2. Detect changes in client-side files and auto-rebuild the client assets.
+2. `yarn server` does the following.
+   1. Launch Express server.
+   2. Detect changes in server-side files and auto-restart the Express server.
 
-それぞれ、`Ctrl-C`で終了します
+Each process can be ended with `Ctrl-C`.
 
-## 2回目以降の起動
+## Second Time On
 
-上記の [初回起動](launch.md#初回起動) のセクションを参考に、以下を実行
+See [First Time](#first-time), and follow the step below.
 
-1. 実行環境のバージョンの確認
-2. コンテナ群の起動
-3. 依存ライブラリの取得
-4. データマイグレーション
-5. フロントエンド・バックエンドサーバーの起動
+1. Confirm Versions
+2. Set up Datastore for Development
+3. Install Dependencies
+4. Migration
+5. Lauch Front-end and Back-end Server
 
-## npm コマンドリスト
+## List of npm Commands
 
 |command|desc|
 |--|--|
-|`build`|Same to `build:dev:watch`|
-|`build:dev`|Build the client without watching file changes|
-|`build:dev:watch`|Watch and Re-build the client|
-|`build:prod`|Build the client for production|
-|`server`|Same to `server:dev:watch`|
-|`server:dev`|Launch the server|
-|`server:dev:watch`|Watch and Re-start the server|
-|`server:prod`|Launch the server for production|
-|`start`|Run `build:prod` and `server:prod`|
+|`build`|Runs `build:dev:watch`|
+|`build:dev`|Builds client assets without watching file changes|
+|`build:dev:watch`|Watches file changes and re-builds the client assets|
+|`build:prod`|Builds the client assets for production|
+|`server`|Runs `server:dev:watch`|
+|`server:dev`|Launches the server|
+|`server:dev:watch`|Watches file changes and restarts the server|
+|`server:prod`|Launches the server for production|
+|`start`|Runs `build:prod` and `server:prod`|
