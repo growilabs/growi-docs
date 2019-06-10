@@ -1,41 +1,40 @@
 # Logger
 
 ::: tip
-GROWI は [Bunyan](https://github.com/trentm/node-bunyan) および [browser-bunyan](https://github.com/philmander/browser-bunyan) を利用しています。
-
-また、古いコードでは [debug](https://www.npmjs.com/package/debug) を利用してログを出力していますが、 `debug()` は Bunyan の `logger.debug()` に置き換えられます。
+GROWI uses [Bunyan](https://github.com/trentm/node-bunyan) and [browser-bunyan](https://github.com/philmander/browser-bunyan).
+Older code uses [debug](https://www.npmjs.com/package/debug) for logging, but `debug()` can be replaced with Bunyan's `logger.debug()`.
 :::
 
 [[toc]]
 
-## ログレベル
+## Log Levels
 
-* ログレベルの定義は [Bunyan#Levels](https://github.com/trentm/node-bunyan#levels) を参照してください
+See [Bunyan#Levels](https://github.com/trentm/node-bunyan#levels) for more about log levels.
 
-デフォルトでは環境毎に以下のログレベルが設定されています。
+By default, log levels are set as below.
 
 * Development
   * `info`
 * Production
   * `info`
 
-## ログの記録
+## Log Method
 
-[Bunyan#Log Method API](https://github.com/trentm/node-bunyan#log-method-api) を参照してください。
+See [Bunyan#Log Method API](https://github.com/trentm/node-bunyan#log-method-api).
 
-## ログの出力設定の変更
+## Edit Log Setting
 
-以下の2つの方法でログの出力設定を行う事ができます。
+There are 2 ways to edit the log setting.
 
-### 環境毎の設定ファイルを編集する
+### Edit Log Setting for Indivisual Environments
 
 * Development
   * `config/logger/config.dev.js`
 * Production
   * `config/logger/config.prod.js`
 
-#### 設定ルール
-* `${ログネームスペース}: '${ログレベル}',` の形式で列挙してください  
+#### Format
+* Format as `${namespace}: '${level}',`.  
     e.g.
     ```javascript{4,5}
     module.exports = {
@@ -45,17 +44,17 @@ GROWI は [Bunyan](https://github.com/trentm/node-bunyan) および [browser-bun
       'growi:routes:login-passport': 'debug',
     }
     ```
-* デフォルトのログレベルは、キー `default` で変更することができます
+* The default log level can be set with `default` key.
 
-### 環境変数で設定する
+### Edit Log Setting with Environmental Variables
 
 ::: warning
-環境変数による設定は、上記の設定ファイルの設定を上書きします
+Enviroment variables override the setting files.
 :::
 
-#### 設定ルール
+#### Format
 
-* `${ログレベルの大文字表現}=${ログネームスペース1},${ログネームスペース2}, ...`
+* `${LEVEL}=${namespace1},${namespace2}, ...`
 
 e.g.
 ```bash
