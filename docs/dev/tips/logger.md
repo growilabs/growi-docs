@@ -2,7 +2,7 @@
 
 ::: tip
 GROWI uses [Bunyan](https://github.com/trentm/node-bunyan) and [browser-bunyan](https://github.com/philmander/browser-bunyan).
-Older code uses [debug](https://www.npmjs.com/package/debug) for logging, but `debug()` can be replaced with `logger.debug()`.
+Older code uses [debug](https://www.npmjs.com/package/debug) for logging, but `debug()` can be replaced with Bunyan's `logger.debug()`.
 :::
 
 [[toc]]
