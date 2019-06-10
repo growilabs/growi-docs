@@ -16,7 +16,7 @@
 事前に [MongoDB のバックアップ/リストア](mongodb-backup.md) ページを確認することをお勧めします
 :::
 
-## バックアップ用コンテナの起動
+## バックアップ用コンテナによる管理
 
 1. CRONMODE を true に設定したコンテナを起動します
     ```bash
@@ -42,7 +42,7 @@
 ## docker-compose による管理
 
 ::: tip
-GROWI を growi-[docker-compose](../getting-started/docker-compose.md) で管理している場合、更に簡単にバックアップ用コンテナを起動できます
+GROWI を [growi-docker-compose](../getting-started/docker-compose.md) で管理している場合、更に簡単にバックアップ用コンテナを起動できます
 :::
 
 * [weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose/tree/master/examples/backup-mongodb-data) の [Example](https://github.com/weseek/growi-docker-compose/tree/master/examples/backup-mongodb-data) を参考に、以下の手順を行います
@@ -73,5 +73,6 @@ GROWI を growi-[docker-compose](../getting-started/docker-compose.md) で管理
    docker-compose up
    ```
 
+##  Google Cloud Platform による管理
 
-
+* (執筆者・PR募集)

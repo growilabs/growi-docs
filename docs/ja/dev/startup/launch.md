@@ -59,28 +59,28 @@ npm run migrate
    1. Express サーバーを起動します
    2. サーバー用ファイル群の変更を検知し、Express サーバーをリスタートします
 
-それぞれ、`Ctrl-C`で終了します
+それぞれ、`Ctrl-C`で終了することが出来ます。
 
 ## 2回目以降の起動
 
-上記の [初回起動](launch.md#初回起動) のセクションを参考に、以下を実行
+上記の [初回起動](#初回起動) のセクションを参考に、以下を実行
 
 1. 実行環境のバージョンの確認
-2. コンテナ群の起動
+2. 開発用データストアの準備
 3. 依存ライブラリの取得
 4. データマイグレーション
 5. フロントエンド・バックエンドサーバーの起動
 
 ## npm コマンドリスト
 
-|command|desc|
+|command|詳細|
 |--|--|
-|`build`|Same to `build:dev:watch`|
-|`build:dev`|Build the client without watching file changes|
-|`build:dev:watch`|Watch and Re-build the client|
-|`build:prod`|Build the client for production|
-|`server`|Same to `server:dev:watch`|
-|`server:dev`|Launch the server|
-|`server:dev:watch`|Watch and Re-start the server|
-|`server:prod`|Launch the server for production|
-|`start`|Run `build:prod` and `server:prod`|
+|`build`|`build:dev:watch` を実行します|
+|`build:dev`|開発用にクライアントのビルドを行います（自動で再ビルドしない）|
+|`build:dev:watch`|開発用にクライアントのビルドを行います（変更時に自動で再ビルドします）|
+|`build:prod`|プロダクション用にクライアントのビルドを行います|
+|`server`|`server:dev:watch` を実行します|
+|`server:dev`|開発用にサーバーを起動します|
+|`server:dev:watch`|ファイルを監視して変更時に自動で再起動します|
+|`server:prod`|プロダクション用にサーバーを起動します|
+|`start`|`build:prod` と `server:prod` を実行します|
