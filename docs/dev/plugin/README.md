@@ -1,3 +1,3 @@
-# アーキテクチャ
+# Architecture
 
 (TBD)
