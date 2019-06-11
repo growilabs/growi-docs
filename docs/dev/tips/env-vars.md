@@ -1,4 +1,4 @@
-# Set Environment Variables
+# Environment Variables
 
 ## Setting File
 
