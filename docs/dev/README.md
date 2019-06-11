@@ -2,12 +2,12 @@
 sidebarDepth: 0
 ---
 
-# イントロダクション
+# Introduction
 
-## アーキテクチャ
+## Architecture
 
 (TBD)
 
-## ディレクトリ構成
+## Directory Structure
 
 (TBD)
