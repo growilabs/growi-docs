@@ -1,12 +1,13 @@
-# crowi-plus-docker-compose からの移行
+# Migrate from crowi-plus-docker-compose
 
 ::: danger
-`docker-compose.yml`は編集せず、`Dockerfile` のみ編集してください
+DO NOT EDIT `docker-compose.yml`. Only edit `Dockerfile`.
+
 :::
 
 ## Dockerfile
 
-1. `FROM` と`ENV APP_DIR` 行を以下のように書き換えます
+1. Edit the line of `FROM` and `ENV APP_DIR`.
    * **Before**
 
      ```docker
@@ -20,7 +21,7 @@
        FROM weseek/growi:3
        ENV APP_DIR /opt/growi
      ```
-2. GROWI では、lsx プラグインと pukiwiki-like-linker プラグインはオフィシャルイメージに含まれるようになりました。そのため、以下の行をコメントアウトするか、削除してください。
+2. Because GROWI includes lsx plugin and pukiwiki-like-linker plugin in GROWI official image by default, comment out or delete the lines below.
    * **Before**
 
      ```docker
@@ -56,6 +57,3 @@
 ## Start
 
 1. `docker-compose up`
-
-
-
