@@ -1,4 +1,3 @@
-# crowi-plus (オンプレミス) からの移行
+# Migrate from crowi-plus (On-Premises)
 
-(執筆者、PR募集)
-
+(TBD)
