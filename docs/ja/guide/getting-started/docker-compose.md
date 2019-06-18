@@ -32,7 +32,7 @@ docker-compose up
 
 ## localhost 以外からのアクセス
 
-`docker-compose.yml` ファイル内の `ports` を変更することで `localhost` 以外からアクセスすることができます。
+`docker-compose.yml` ファイル内の `ports` を変更することで `localhost` 以外からのアクセスを許可することができます。
 
 変更前
 
