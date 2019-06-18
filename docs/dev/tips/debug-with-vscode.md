@@ -1,4 +1,3 @@
-# VSCode によるリモートデバッグ
+# Remote Debugging with VSCode
 
-(執筆中)
-
+(TBD)
