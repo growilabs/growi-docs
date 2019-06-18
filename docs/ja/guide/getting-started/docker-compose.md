@@ -30,18 +30,9 @@ docker-compose up
 
 `http://localhost:3000/` にアクセスし、初回セットアップ画面が表示されることを確認します。
 
-## localhost 以外からのアクセス
-
-
-## Elasticsearch のメモリ容量を変更
-
-## 関連ページ
-
-- GROWI をアップグレードする
+## GROWI をアップグレードする
 
 ### v3.4.x へのアップグレード
-
-[Upgrading to GROWI v3.4.x](https://docs.growi.org/guide/upgrading/34x.html) を参照してください。
 
 ### app コンテナのアップグレード
 
@@ -64,7 +55,11 @@ docker-compose build
 docker-compose up
 ```
 
-<!-- [docker-compose 上で立ち上がっている GROWI のアップグレード手順](https://docs.growi.org/guide/upgrading/upgrade-GROWI-on-docker-compose.html)  -->
+## localhost 以外からのアクセス
+
+## Elasticsearch のメモリ容量を変更
+
+## 関連ページ
 
 - 複数の GROWI を立ち上げる
 
