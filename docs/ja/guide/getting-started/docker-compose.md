@@ -28,47 +28,108 @@ cd growi
 docker-compose up
 ```
 
-`http://localhost:3000/` にアクセスし、初回セットアップ画面が表示されることを確認します。
-
-## GROWI をアップグレードする
-
-### v3.4.x へのアップグレード
-
-### app コンテナのアップグレード
-
-```text
-# go to growi-docker-compose workdir
-cd growi
-
-# stop
-docker-compose stop
-
-# remove current container and images
-docker-compose rm app
-docker rmi weseek/growi:3
-
-# rebuild app container image
-git pull
-docker-compose build
-
-# start
-docker-compose up
-```
+`http://localhost:3000/` にアクセスし、初回セットアップ画面(`/installer`)の表示が確認できれば GROWI 起動完了です。
 
 ## localhost 以外からのアクセス
 
+`docker-compose.yml` ファイル内の `ports` を変更することで `localhost` 以外からアクセスすることができます。
+
+変更前
+
+```text
+services:
+  app:
+    ports:
+      - 127.0.0.1:3000:3000
+```
+
+変更後
+
+```text
+services:
+  app:
+    ports:
+      - 3000:3000
+```
+
 ## Elasticsearch のメモリ容量を変更
+
+メモリに十分な空き容量がある場合、`docker-compose.yml` ファイル内の `ES_JAVA_OPTS` の値を変更することで、Elasticsearch のヒープ領域を増やすことができます。
+
+```text
+environment:
+  - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
+```
+
+## GROWI を v3.4.x にアップグレードする
+
+v3.4 とそれ以前では、動作対象環境およびミドルウェアのバージョンが変更されました。
+
+| GROWI | <= v3.3.x | v3.4.x |
+| :---: | :---: | :---: |
+| Node.js | v8 | v10 |
+| MongoDB | 3.4 | 3.6 |
+| Elasticsearch | 5.3 | 6.6 |
+
+また、[growi-docker-compose](https://github.com/weseek/growi-docker-compose) 利用時に起動する Elasticsearch の Docker イメージは、
+従来の [docker-library/elasticsearch](https://github.com/docker-library/elasticsearch/blob/6854914f0b890840c75b6db9eeaefbc26177df9c/5/Dockerfile) から、
+[docker.elastic.co](https://www.docker.elastic.co/) 公式が提供するイメージに変更されました。
+
+### コンテナのアップグレード
+
+`growi-docker-compose` をダウンロードしたフォルダにて、コンテナを停止します。
+
+```text
+cd growi
+docker-compose stop
+```
+
+既存の Docker コンテナと Docker イメージを削除します。
+
+```text
+docker-compose rm app　mongodb elasticseach
+docker rmi weseek/growi:3
+```
+
+`Elasticsearch` のボリューム名を確認し、削除します。
+
+```text
+docker volume ls
+// local  growi_es_data
+// local growi_es_plugin
+// local growi_growi_data
+// local growi_mongo_db
+// ...
+
+docker volume rm growi_es_data
+docker volime rm growi_es_plugins
+```
+
+```
+
+最新版を pull し、Docker イメージを作成した後、コンテナを立ち上げます。
+```text
+git pull
+docker-compose build
+docker-compose up
+```
+
+起動後、GROWI App の管理画面の全文検索管理ページ( `/admin/search` )で、インデックスを再構築してください。
 
 ## 関連ページ
 
 - 複数の GROWI を立ち上げる
 
-[growi-docker-compose Multiple Sites Example を利用した複数 app の起動手順](https://docs.growi.org/guide/admin-cookbook/multi-app.html)
+[growi-docker-compose Multiple Sites Example を利用した複数 app の起動手順](../admin-cookbook/multi-app.html)
 
 - HTTPS プロキシを利用する
 
-[growi-docker-compose with HTTPS proxy Example を利用した HTTPS プロキシの利用手順](https://docs.growi.org/guide/admin-cookbook/lets-encrypt.html)
+[growi-docker-compose with HTTPS proxy Example を利用した HTTPS プロキシの利用手順](../admin-cookbook/lets-encrypt.html)
 
 - MongoDB にページデータとユーザーデータのバックアップをとる
 
-[growi-docker-compose with backup MongoDB container example を利用した MongoDB へのバックアップ作成手順](https://docs.growi.org/guide/admin-cookbook/mongodb-backup-regular.html#manage-with-docker-compose)
+[growi-docker-compose with backup MongoDB container example を利用した MongoDB へのバックアップ作成手順](../admin-cookbook/mongodb-backup-regular.html#manage-with-docker-compose)
+
+- HackMD による複数人同時編集機能を利用する
+
+[HackMD(CodiMD) Integration Example を利用した HackMD 統合](https://github.com/weseek/growi-docker-compose/tree/master/examples/integrate-with-hackmd)
