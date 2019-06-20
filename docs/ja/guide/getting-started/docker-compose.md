@@ -61,19 +61,13 @@ environment:
   - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
 ```
 
-## GROWI を v3.4.x にアップグレードする
+## GROWI のアップグレード
 
-v3.4 とそれ以前では、動作対象環境およびミドルウェアのバージョンが変更されました。
+### GROWI を v3.4.x にアップグレードする
 
-| GROWI | <= v3.3.x | v3.4.x |
-| :---: | :---: | :---: |
-| Node.js | v8 | v10 |
-| MongoDB | 3.4 | 3.6 |
-| Elasticsearch | 5.3 | 6.6 |
+以下のページで、v3.3.x 以下の GROWI を利用してる人向けに v3.4.x へのアップグレードの手順を説明しています。
 
-また、[growi-docker-compose](https://github.com/weseek/growi-docker-compose) 利用時に起動する Elasticsearch の Docker イメージは、
-従来の [docker-library/elasticsearch](https://github.com/docker-library/elasticsearch/blob/6854914f0b890840c75b6db9eeaefbc26177df9c/5/Dockerfile) から、
-[docker.elastic.co](https://www.docker.elastic.co/) 公式が提供するイメージに変更されました。
+[GROWI v3.4.x へのアップグレード](../upgrading/34x.html)
 
 ### コンテナのアップグレード
 
@@ -89,22 +83,6 @@ docker-compose stop
 ```text
 docker-compose rm app　mongodb elasticseach
 docker rmi weseek/growi:3
-```
-
-`Elasticsearch` のボリューム名を確認し、削除します。
-
-```text
-docker volume ls
-// local  growi_es_data
-// local growi_es_plugin
-// local growi_growi_data
-// local growi_mongo_db
-// ...
-
-docker volume rm growi_es_data
-docker volime rm growi_es_plugins
-```
-
 ```
 
 最新版を pull し、Docker イメージを作成した後、コンテナを立ち上げます。
@@ -132,4 +110,4 @@ docker-compose up
 
 - HackMD による複数人同時編集機能を利用する
 
-[HackMD(CodiMD) Integration Example を利用した HackMD 統合](https://github.com/weseek/growi-docker-compose/tree/master/examples/integrate-with-hackmd)
+[HackMD(CodiMD) Integration Example を利用した HackMD 統合](../admin-cookbook/integrate-with-hackmd.html#%E6%97%A2%E5%AD%98%E3%81%AE-hackmd-codimd-%E3%81%A8%E9%80%A3%E6%90%BA%E3%81%99%E3%82%8B)
