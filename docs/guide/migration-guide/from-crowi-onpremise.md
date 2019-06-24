@@ -11,7 +11,7 @@
 :::
 
 ::: warning
-- The specified version of ElasticSearch and plugins are required.
+- The specified version of ElasticSearch (v6.6 or later) and [the specified plugins](#upgrade-elasticsearch-and-add-plugins) are required.
 :::
 
 ## Set up Node.js Environment
