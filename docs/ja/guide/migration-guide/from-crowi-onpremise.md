@@ -14,10 +14,10 @@
 - ElasticSearch サーバーは指定バージョンの利用とプラグイン追加が必要
 :::
 
-## node 実行環境の準備
+## Node.js 実行環境の準備
 
-- [README.md#dependencies](https://github.com/weseek/growi/blob/master/README.md#dependencies) を参考に、node.js, npm, yarn をセットアップする
-  - node.js は 10.x にアップグレード
+- [README.md#dependencies](https://github.com/weseek/growi/blob/master/README.md#dependencies) を参考に、Node.js, npm, yarn をセットアップする
+  - Node.js は 10.x にアップグレード
   - yarn は新規インストール
 
 ## ElasticSearch のバージョンアップ及びプラグイン追加
