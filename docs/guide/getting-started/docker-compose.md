@@ -6,31 +6,29 @@
 
 This chapter introduces the installation process for GROWI with docker-compose.
 
-この章では docker-compose を用いて GROWI を立ち上げる方法を紹介します。
-
-セットアップには以下のソフトウェアが必要となるため、事前にインストールしてください。
+Software needed for Setup are listed below.
 
 * Docker
 * docker-compose
 
-## growi-docker-compose　のダウンロード
+## Download growi-docker-compose
 
-[https://github.com/weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose) の「Clone or download」ボタンから、ソースコードをダウンロードもしくは git コマンドにより clone します。
+Download or clone source code files from [https://github.com/weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose) 
 
 ```text
 git clone https://github.com/weseek/growi-docker-compose.git growi
 ```
 
-## GROWI の起動確認
+## build GROWI
 
-ダウンロードしたフォルダ内にて以下のコマンドを実行します。
+Excute these commands in downloaded directory
 
 ```text
 cd growi
 docker-compose up
 ```
 
-`http://localhost:3000/` にアクセスし、初回セットアップ画面(`/installer`)の表示が確認できれば GROWI 起動完了です。
+Access to `http://localhost:3000/` , if you visit the first setting step (`/installer`), GROWI is starting.
 
 ## localhost 以外からのアクセス
 
