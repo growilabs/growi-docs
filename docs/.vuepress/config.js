@@ -60,6 +60,7 @@ module.exports = {
             },
             {
               title: 'Upgrading',
+              collapsable: false,
               children: [
                 '/guide/upgrading/35x.md',
                 '/guide/upgrading/34x.md',
@@ -186,6 +187,7 @@ module.exports = {
             },
             {
               title: 'アップグレード',
+              collapsable: false,
               children: [
                 '/ja/guide/upgrading/35x.md',
                 '/ja/guide/upgrading/34x.md',
