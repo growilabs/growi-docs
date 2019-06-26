@@ -30,11 +30,11 @@ docker-compose up
 
 Access to `http://localhost:3000/` , if you visit the first setting step (`/installer`), GROWI is starting.
 
-## localhost 以外からのアクセス
+## allow to access GROWI from other hosts
 
-`docker-compose.yml` ファイル内の `ports` を変更することで `localhost` 以外からのアクセスを許可することができます。
+you can allow to access GROWI from other hosts with changing `ports` in `docker-compose.yml`.
 
-変更前
+**Before**
 
 ```text
 services:
@@ -43,7 +43,7 @@ services:
       - 127.0.0.1:3000:3000
 ```
 
-変更後
+**After**
 
 ```text
 services:
