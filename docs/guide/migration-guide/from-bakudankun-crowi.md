@@ -1,71 +1,70 @@
-# bakudankun/crowi からの移行
+# Migrate from bakudankun/crowi
 
-## 概要
+## Overview
 
-- Crowi の docker image、[bakudankun/crowi](https://github.com/crowi/docker-crowi) を利用している環境から、  
-GROWI 公式の docker-compose を用いたディプロイ方法である [weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose) への切り替えを想定
-- その際、以下のデータ移行を伴うことになる
-    - MongoDB コンテナのデータボリュームからデータを吸い出し、リストアする
-    - アプリケーションコンテナのデータボリュームからアップロードファイルデータを吸い出し、リストアする
+- Assuming to migrate from [Crowi docker image + [bakudankun/crowi](https://github.com/crowi/docker-crowi)] to [weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose).
+- Migrate the following data.
+    - MongoDB container's data volume
+    - Uploaded file data from the App container
 
-## 前準備
+## Preparation
 
-1. Crowi と GROWI のコンテナを起動しておく
-    * 仮に、それぞれで利用しているコンテナ名、データボリューム名を以下とする(必要に応じて置き換える)
+1. Have Crowi and GROWI contaienr running.
+    * Hypothetically, each app container and data volume is called as below (change the name according to your environment).
 
-        |項目|Crowi|GROWI|
+        ||Crowi|GROWI|
         |---|---|---|
-        |アプリケーションコンテナ|crowi_crowi_1|growi_app_1|
-        |アプリケーションコンテナ用データボリューム|crowi_crowi_data|growi_growi_data|
-        |MongoDB コンテナ|crowi_mongo_1|growi_mongo_1|
+        |App Container|crowi_crowi_1|growi_app_1|
+        |App Container Data Volume|crowi_crowi_data|growi_growi_data|
+        |MongoDB Container|crowi_mongo_1|growi_mongo_1|
 
-## PASSWORD_SEED の抽出
+## Extract PASSWORD_SEED
 
-- bakudankun/crowi 利用時に、環境変数で PASSWORD_SEED を明示的に指定していた場合は、 GROWI でもそれを引き続き利用する
-- 明示的に指定していなかった場合、自動生成された値がデータボリュームに保存されているので、それを抽出する
+- If PASSWORD_SEED was set in [bakudankun/crowi](https://github.com/crowi/docker-crowi) environment variables, the seed will be extracted and reused in GROWI.
+- If not, the auto-generated seed in the data volume will be extracted and reused in GROWI.
 
     ```bash
     (TBD)
     ```
 
-## DB のデータ移行
+## Migrate DB
 
-1. Crowi から mongodump を使い DB のデータのバックアップを取る
+1. Backup DB data from Crowi with mongodump.
 
     ```bash
     docker run -it --rm --link crowi_mongo_1 --network crowi_default --volume $(pwd):/backup mongo bash
     mongodump --host crowi_mongo_1 --db crowi --out /backup
     ```
 
-2. crowi-plus へバックアップデータをリストアする
+2. Restore the backup to GROWI.
 
     ```bash
     docker run -it --rm --link growi_mongo_1 --network growi_default  --volume $(pwd):/backup mongo bash
     mongorestore -v --host growi_mongo_1 --db growi backup/crowi
     ```
 
-    [要調査] ユニーク制約に引っかかるかもしれない
+    [TBC] Unique Constraint might fail.
 
-3. `PASSWORD_SEED` のセット
-    - 抽出した`PASSWORD_SEED`を GROWI 側の起動時の環境変数(`docker-compose.yml` で指定)に設定する
+3. Set `PASSWORD_SEED`
+    - In `docker-compose.yml`, set `PASSWORD_SEED` to the extracted `PASSWORD_SEED`.
 
-3. GROWI を再起動
+3. Restart GROWI.
 
 
-## アップロードファイルのデータ移行
+## Migrate Uploaded File Data
 
-**アップロードファイルの保存先に AWS S3 を使う場合は、以下の作業は不要**
+**If files are to be uploaded to AWS S3, skipped the following steps.**
 
-- bakudankun/crowi はデフォルトでアップロードファイルをファイルシステムに保存する設定(`FILE_UPLOAD=local`)になっている
-- 同様の環境で動かすには、データを移した上で GROWI 側の起動時の環境変数(`docker-compose.yml` で指定)に `FILE_UPLOAD=local` を入れる
+- By default, [bakudankun/crowi](https://github.com/crowi/docker-crowi) saves uploaded files to local file system(`FILE_UPLOAD=local`).
+- In order to save uploaded files to local file system set `FILE_UPLOAD=local` (in `docker-compose.yml`).
 
-1. Crowi から uploads のバックアップを取る
+1. Backup uploaded files from Crowi.
 
     ```bash
     docker run --rm -v crowi_crowi_data:/data -v $(pwd):/backup bakudankun/crowi cp -rp /data /backup
     ```
 
-2. GROWI へバックアップデータをリストアする
+2. Restore the backup to GROWI.
 
     ```bash
     docker run --rm -v crowiplus_crowi_data:/data -v $(pwd):/backup growi_app_1 cp -rp /backup/uploads /data/
