@@ -20,8 +20,8 @@
 
 ## Extract PASSWORD_SEED
 
-- If PASSWORD_SEED was set in [bakudankun/crowi](https://github.com/crowi/docker-crowi) environment variables, the seed will be extracted and reused in GROWI.
-- If not, the auto-generated seed in the data volume will be extracted and reused in GROWI.
+- If PASSWORD_SEED was set in [bakudankun/crowi](https://github.com/crowi/docker-crowi) environment variables, extract and reuse the seed in GROWI.
+- If not, extract and reuse the auto-generated seed in the data volume.
 
     ```bash
     (TBD)
