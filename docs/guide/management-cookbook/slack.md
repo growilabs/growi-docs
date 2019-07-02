@@ -1,4 +1,3 @@
-# Slack/Mattermost への通知
+# Slack/Mattermost Integration
 
-(執筆者、PR募集)
-
+(TBD)

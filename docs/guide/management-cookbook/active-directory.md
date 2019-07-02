@@ -1,5 +1,3 @@
-# Active Directory 連携
+# Active Directory Integration
 
-
-(執筆者、PR募集)
-
+(TBD)

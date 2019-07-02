@@ -1,5 +1,5 @@
-# Line Breaks の ON/OFF
+# Line Breaks Settings
 
-* Markdown に疎い人達向けの Wiki をセットアップする場合は Line Breaks OFF での運用がいいみたい\(みんな改行の入れ方がわからなかったり…\)
-* \(執筆者、PR募集\)
+* Markdown beginners prefer to have Line Breaks OFF?
+* \(TBD\)
 
