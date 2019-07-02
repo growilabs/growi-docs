@@ -52,9 +52,9 @@ services:
       - 3000:3000
 ```
 
-## Elasticsearch のメモリ容量を変更
+## change heap size of Elasticsearch
 
-メモリに十分な空き容量がある場合、`docker-compose.yml` ファイル内の `ES_JAVA_OPTS` の値を変更することで、Elasticsearch のヒープ領域を増やすことができます。
+If you have enough memory capacity, you can expand heap size of Elasticsearch with changing value of `ES_JAVA_OPTS` in `docker-compose.yml`.
 
 ```text
 environment:
