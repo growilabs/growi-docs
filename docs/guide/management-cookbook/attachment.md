@@ -1,17 +1,17 @@
-# ファイルのアップロード設定
+# File Upload Settings
 
 [[toc]]
 
-## MongoDB GridFS へのアップロード
+## Upload to MongoDB GridFS
 
-* (執筆者、PR募集)
+* (TBD)
 
-## AWS S3 へのアップロード
+## Upload to AWS S3
 
-* S3 Bucket のセットアップ手順を載せる
-* (執筆者、PR募集)
+* Write the procedure for setting up S3 Bucket.
+* (TBD)
 
-## ファイルシステムへのアップロード
+## Upload to File System
 
-* (執筆者、PR募集)
+* (TBD)
 
