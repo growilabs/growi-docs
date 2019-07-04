@@ -1,29 +1,29 @@
-# Crowi (オンプレミス) からの移行
+# Migrate from Crowi On-premises
 
-## 概要
+## Overview
 
-- Crowi オンプレミス **v1.6.x** から、GROWI オンプレミス **v3.x** への移行を想定
-- MongoDB は既存のものをそのまま利用することを想定
+- Migrating from Crowi on-premises **v1.6.x** to GROWI on-premises **v3.x**
+- Assuming to use the existing MongoDB
 
 ::: tip
-- Redis は既存のものをそのまま利用することを想定、もしくは利用しなくても構わない
-- GROWI v3.0.7 以降では、`REDIS_URL` が設定されていない場合は MongoDB をセッションストアとして利用するため
+- Assuming to use the existing Redis or not to use Redis at all.
+- GROWI v3.0.7 or later uses MongoDB for the session store if `REDIS_URL` is not set.
 :::
 
 ::: warning
-- ElasticSearch サーバーは指定バージョンの利用とプラグイン追加が必要
+- The specified version of ElasticSearch (v6.6 or later) and [the specified plugins](#upgrade-elasticsearch-and-add-plugins) are required.
 :::
 
-## node 実行環境の準備
+## Set up Node.js Environment
 
-- [README.md#dependencies](https://github.com/weseek/growi/blob/master/README.md#dependencies) を参考に、node.js, npm, yarn をセットアップする
-  - node.js は 10.x にアップグレード
-  - yarn は新規インストール
+- Set up Node.js, npm, and yarn. See [README.md#dependencies](https://github.com/weseek/growi/blob/master/README.md#dependencies).
+  - Upgrade Node.js to 10.x
+  - Install yarn
 
-## ElasticSearch のバージョンアップ及びプラグイン追加
+## Upgrade ElasticSearch and Add Plugins
 
-1. バージョン 6.6 以上を利用する  
-1. 以下のプラグインをインストールする
+1. Use v6.6 or later.
+1. Install the plugins below.
     - [Japanese (kuromoji) Analysis plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-kuromoji.html)
         ```bash
         sudo bin/elasticsearch-plugin install analysis-kuromoji
@@ -33,11 +33,11 @@
         sudo bin/elasticsearch-plugin install analysis-icu
         ```
 
-## 起動手順の変更
+## Change the Launch Process
 
 ### Before
 
-#### 事前準備
+#### Preparation
 
 ```bash
 # clone
@@ -47,7 +47,7 @@ cd crowi
 npm install
 ```
 
-#### 起動スクリプト例
+#### Example Launch Script
 
 ```bash
 export PASSWORD_SEED=somesecretstring
@@ -59,7 +59,7 @@ node app.js
 
 ### After
 
-#### 事前準備
+#### Preparation
 
 ```bash
 # clone
@@ -70,12 +70,12 @@ yarn
 npm run build:prod
 ```
 
-#### 起動スクリプト変更例
+#### Example Launch Script
 
 ```bash
-export PASSWORD_SEED=somesecretstring                   # 変更無し
-export MONGO_URI=mongodb://MONGO_HOST:MONGO_PORT/crowi  # 変更無し
-export REDIS_URL=redis://REDIS_HOST:REDIS_PORT/crowi    # 変更無しまたは削除
-export ELASTICSEARCH_URI=http://ES_HOST:ES_PORT/crowi   # 変更無し
+export PASSWORD_SEED=somesecretstring                   # no changes
+export MONGO_URI=mongodb://MONGO_HOST:MONGO_PORT/crowi  # no changes
+export REDIS_URL=redis://REDIS_HOST:REDIS_PORT/crowi    # no changes / remove this line
+export ELASTICSEARCH_URI=http://ES_HOST:ES_PORT/crowi   # no changes
 npm run server:prod
 ```

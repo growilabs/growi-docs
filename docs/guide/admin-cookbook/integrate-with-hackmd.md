@@ -1,15 +1,15 @@
-# HackMD(CodiMD)連携
+# HackMD(CodiMD) Integration
 
-## 既存の HackMD(CodiMD) と連携する
+## Integrate with an existing HackMD(CodiMD)
 
-* 執筆中
-* [https://github.com/weseek/growi-docker-compose/blob/master/hackmd/apply-growi-agent.sh](https://github.com/weseek/growi-docker-compose/blob/master/hackmd/apply-growi-agent.sh) の処理を手動でやる
-  * スタイルの読み込み at `head.ejs`
-  * スクリプトの読み込み \(defer\) at `foot.ejs`
+* TBD
+* Manually do the procedure on [https://github.com/weseek/growi-docker-compose/blob/master/hackmd/apply-growi-agent.sh](https://github.com/weseek/growi-docker-compose/blob/master/hackmd/apply-growi-agent.sh)
+  * Read styles at `head.ejs`
+  * Read scripts \(defer\) at `foot.ejs`
 
-## growi-docker-compose で新しく HackMD(CodiMD) コンテナを立てる
+## Create a new HackMD(CodiMD) container with growi-docker-compose
 
-* 執筆中
+* TBD
 * [https://github.com/weseek/growi-docker-compose/tree/master/examples/integrate-with-hackmd](https://github.com/weseek/growi-docker-compose/tree/master/examples/integrate-with-hackmd)
 
 

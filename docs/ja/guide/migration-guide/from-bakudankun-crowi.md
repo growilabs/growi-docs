@@ -13,7 +13,7 @@ GROWI 公式の docker-compose を用いたディプロイ方法である [wesee
 1. Crowi と GROWI のコンテナを起動しておく
     * 仮に、それぞれで利用しているコンテナ名、データボリューム名を以下とする(必要に応じて置き換える)
 
-        |項目|Crowi|GROWI|
+        ||Crowi|GROWI|
         |---|---|---|
         |アプリケーションコンテナ|crowi_crowi_1|growi_app_1|
         |アプリケーションコンテナ用データボリューム|crowi_crowi_data|growi_growi_data|
@@ -21,7 +21,7 @@ GROWI 公式の docker-compose を用いたディプロイ方法である [wesee
 
 ## PASSWORD_SEED の抽出
 
-- bakudankun/crowi 利用時に、環境変数で PASSWORD_SEED を明示的に指定していた場合は、 GROWI でもそれを引き続き利用する
+- [bakudankun/crowi](https://github.com/crowi/docker-crowi) 利用時に、環境変数で PASSWORD_SEED を明示的に指定していた場合は、 GROWI でもそれを引き続き利用する
 - 明示的に指定していなかった場合、自動生成された値がデータボリュームに保存されているので、それを抽出する
 
     ```bash
@@ -37,7 +37,7 @@ GROWI 公式の docker-compose を用いたディプロイ方法である [wesee
     mongodump --host crowi_mongo_1 --db crowi --out /backup
     ```
 
-2. crowi-plus へバックアップデータをリストアする
+2. GROWI へバックアップデータをリストアする
 
     ```bash
     docker run -it --rm --link growi_mongo_1 --network growi_default  --volume $(pwd):/backup mongo bash
@@ -56,7 +56,7 @@ GROWI 公式の docker-compose を用いたディプロイ方法である [wesee
 
 **アップロードファイルの保存先に AWS S3 を使う場合は、以下の作業は不要**
 
-- bakudankun/crowi はデフォルトでアップロードファイルをファイルシステムに保存する設定(`FILE_UPLOAD=local`)になっている
+- [bakudankun/crowi](https://github.com/crowi/docker-crowi) はデフォルトでアップロードファイルをファイルシステムに保存する設定(`FILE_UPLOAD=local`)になっている
 - 同様の環境で動かすには、データを移した上で GROWI 側の起動時の環境変数(`docker-compose.yml` で指定)に `FILE_UPLOAD=local` を入れる
 
 1. Crowi から uploads のバックアップを取る

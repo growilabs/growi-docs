@@ -6,6 +6,9 @@ module.exports = {
   plugins: [ 'tabs' ],
   markdown: {
     toc: { includeLevel: [2] },
+    extendMarkdown: md => {
+      md.use(require('markdown-it-task-lists'))
+    },
   },
   locales: {
     '/': {
@@ -57,10 +60,10 @@ module.exports = {
             },
             {
               title: 'Upgrading',
-              collapsable: true,
+              collapsable: false,
               children: [
+                '/guide/upgrading/35x.md',
                 '/guide/upgrading/34x.md',
-                '/guide/upgrading/upgrade-growi-in-heroku.md',
               ]
             },
             {
@@ -184,10 +187,10 @@ module.exports = {
             },
             {
               title: 'アップグレード',
-              collapsable: true,
+              collapsable: false,
               children: [
+                '/ja/guide/upgrading/35x.md',
                 '/ja/guide/upgrading/34x.md',
-                '/ja/guide/upgrading/upgrade-growi-in-heroku.md'
               ]
             },
             {
