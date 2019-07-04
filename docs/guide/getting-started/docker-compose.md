@@ -19,7 +19,7 @@ Download or clone source code files from [https://github.com/weseek/growi-docker
 git clone https://github.com/weseek/growi-docker-compose.git growi
 ```
 
-## build GROWI
+## Build GROWI
 
 Excute these commands in downloaded directory
 
@@ -30,7 +30,7 @@ docker-compose up
 
 Access to `http://localhost:3000/` , if you visit the first setting step (`/installer`), GROWI is starting.
 
-## allow to access GROWI from other hosts
+## Allow to access GROWI from other hosts
 
 you can allow to access GROWI from other hosts with changing `ports` in `docker-compose.yml`.
 
@@ -52,7 +52,7 @@ services:
       - 3000:3000
 ```
 
-## change heap size of Elasticsearch
+## Change heap size of Elasticsearch
 
 If you have enough memory capacity, you can expand heap size of Elasticsearch with changing value of `ES_JAVA_OPTS` in `docker-compose.yml`.
 
@@ -61,53 +61,52 @@ environment:
   - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
 ```
 
-## GROWI のアップグレード
+## Upgrading
 
-### GROWI を v3.4.x にアップグレードする
+### Upgrading to GROWI v3.4.x(for user use older version than v3.3.x)
 
-以下のページで、v3.3.x 以下の GROWI を利用してる人向けに v3.4.x へのアップグレードの手順を説明しています。
+access to [Upgrading to GROWI v3.4.x](../upgrading/34x.html).
 
-[GROWI v3.4.x へのアップグレード](../upgrading/34x.html)
+### Upgrading container
 
-### コンテナのアップグレード
-
-`growi-docker-compose` をダウンロードしたフォルダにて、コンテナを停止します。
+stop containers in a folder installed `growi-docker-compose`.
 
 ```text
 cd growi
 docker-compose stop
 ```
 
-既存の Docker コンテナと Docker イメージを削除します。
+remove Docker containers and a Docker image.
 
 ```text
 docker-compose rm app　mongodb elasticseach
 docker rmi weseek/growi:3
 ```
 
-最新版を pull し、Docker イメージを作成した後、コンテナを立ち上げます。
+pull GROWI latest edition, create a fresh Docker image and build up containers.
+
 ```text
 git pull
 docker-compose build
 docker-compose up
 ```
 
-起動後、GROWI App の管理画面の全文検索管理ページ( `/admin/search` )で、インデックスを再構築してください。
+after build up containers, access to admin page and rebuild ES index on full text search page全文検索管理ページ( `/admin/search` )で、インデックスを再構築してください。
 
-## 関連ページ
+## Related pages
 
-- 複数の GROWI を立ち上げる
+- use many GROWIs
 
-[growi-docker-compose Multiple Sites Example を利用した複数 app の起動手順](../admin-cookbook/multi-app.html)
+[Multiple Sites](../admin-cookbook/multi-app.html)
 
-- HTTPS プロキシを利用する
+- use HTTPS proxy
 
-[growi-docker-compose with HTTPS proxy Example を利用した HTTPS プロキシの利用手順](../admin-cookbook/lets-encrypt.html)
+[HTTPS with Let's Encript](../admin-cookbook/lets-encrypt.html)
 
-- MongoDB にページデータとユーザーデータのバックアップをとる
+- backup data about page and user in MongoDB
 
-[growi-docker-compose with backup MongoDB container example を利用した MongoDB へのバックアップ作成手順](../admin-cookbook/mongodb-backup-regular.html#manage-with-docker-compose)
+[MongoDB Auto Backup](../admin-cookbook/mongodb-backup-regular.html#manage-with-docker-compose)
 
-- HackMD による複数人同時編集機能を利用する
+- use HackMD(CodiMD) to simultaneous edit 
 
-[HackMD(CodiMD) Integration Example を利用した HackMD 統合](../admin-cookbook/integrate-with-hackmd.html#%E6%97%A2%E5%AD%98%E3%81%AE-hackmd-codimd-%E3%81%A8%E9%80%A3%E6%90%BA%E3%81%99%E3%82%8B)
+[HackMD(CodiMD) Integration](../admin-cookbook/integrate-with-hackmd.html#%E6%97%A2%E5%AD%98%E3%81%AE-hackmd-codimd-%E3%81%A8%E9%80%A3%E6%90%BA%E3%81%99%E3%82%8B)
