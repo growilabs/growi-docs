@@ -162,17 +162,17 @@ $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 
 ## MongoDB
 
-### インストール
+### Installation
 
-[公式ページ](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-ubuntu/) に従ってインストールを実施します。 バージョンは、MongoDB 3.6 です。
+Follow the [Official Website](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-ubuntu/) to proceed installation. In this section MongoDB 3.6 is used.
 
-まずは、`apt` のために public key をインポートします。
+To start off, import the public key used by `apt`.
 
 ```text
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
 ```
 
-レポジトリの追加を行います。 ここでは Ubuntu 14.04 と Ubuntu 16.04 の例を記載しています。
+Add the repository. Listed below are examples for Ubuntu 14.04 and Ubuntu 16.04.
 
 **Ubuntu 14.04**
 
@@ -186,13 +186,13 @@ $ echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-or
 $ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
 ```
 
-レポジトリの追加まで完了したため、MongoDB のインストールを行います。
+Now that the repository has been added, install MongoDB.
 
 ```text
 $ sudo apt-get update && sudo apt-get install mongodb-server
 ```
 
-インストールが完了したら、 パッケージのバージョンを確認します。
+Once installation is complete, check the package versions.
 
 ```text
 ii  mongodb-org                      3.6.6                                      amd64        MongoDB open source document-oriented database system (metapackage)
@@ -202,19 +202,19 @@ ii  mongodb-org-shell                3.6.6                                      
 ii  mongodb-org-tools                3.6.6                                      amd64        MongoDB tools
 ```
 
-`systemctl` コマンドを使って、MongoDB を起動します。
+Using the `systemctl` command, launch MongoDB.
 
 ```text
 $ sudo systemctl start mongod
 ```
 
-MongoDB の自動起動設定を有効化します。
+Enable the autoboot setting of MongoDB.
 
 ```text
 $ sudo systemctl enable mongod
 ```
 
-正常に起動しているか確認を行います。
+Check the status to verify it is running properly.
 
 ```text
 $ sudo systemctl status mongod
