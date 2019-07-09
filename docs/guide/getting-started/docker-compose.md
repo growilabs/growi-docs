@@ -91,7 +91,7 @@ docker-compose build
 docker-compose up
 ```
 
-after build up containers, access to admin page and rebuild ES index on full text search page全文検索管理ページ( `/admin/search` )で、インデックスを再構築してください。
+after build up containers, access to admin page and build ES index again on full text search management( `/admin/search` ).
 
 ## Related pages
 
