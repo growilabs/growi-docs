@@ -19,6 +19,25 @@ const { pathUtils } = require('growi-commons);
 </div>
 
 
+## [env-utils](util/env-utils.html)
+
+An utility object provides functions for environment variables.
+
+Usage:
+```javascript
+// import
+import { envUtils } from 'growi-commons`;
+// require
+const { envUtils } = require('growi-commons);
+```
+
+<div style="text-align: right">
+
+[> show detail](util/env-utils.html)
+
+</div>
+
+
 ## [custom-tag-utils](plugin/util/custom-tag-utils.html)
 
 An utility object provides functions and classes for custom tags with syntax like `$lsx(/)`.
