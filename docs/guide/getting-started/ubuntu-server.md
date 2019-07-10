@@ -224,7 +224,7 @@ $ sudo systemctl status mongod
 
 ### Installation
 
-Retrieve the source code from [https://github.com/weseek/growi](https://github.com/weseek/growi), and check the latest stable version at [https://github.com/weseek/growi/releases](https://github.com/weseek/growi/releases).
+Download the source code from [https://github.com/weseek/growi](https://github.com/weseek/growi), and check the latest stable version at [https://github.com/weseek/growi/releases](https://github.com/weseek/growi/releases).
 
 The installation procedure shown below will be carried out under `/opt/growi`.
 
