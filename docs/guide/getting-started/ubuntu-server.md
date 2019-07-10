@@ -222,11 +222,11 @@ $ sudo systemctl status mongod
 
 ## GROWI
 
-### インストール
+### Installation
 
-[https://github.com/weseek/growi](https://github.com/weseek/growi) からソースコードを取得し、[https://github.com/weseek/growi/releases](https://github.com/weseek/growi/releases) にて、最新の安定版のバージョンを確認します。
+Retrieve the source code from [https://github.com/weseek/growi](https://github.com/weseek/growi), and check the latest stable version at [https://github.com/weseek/growi/releases](https://github.com/weseek/growi/releases).
 
-ここでは `/opt/growi` 配下にインストールする手順を記載しています。
+The installation procedure shown below will be carried out under `/opt/growi`.
 
 ```text
 $ sudo mkdir -p /opt/
@@ -234,7 +234,7 @@ $ cd /opt/
 $ sudo git clone https://github.com/weseek/growi /opt/growi
 $ cd /opt/growi
 
-# タグの確認
+# Check the tags
 $ sudo git tag -l
 ...
 v3.1.7
@@ -245,24 +245,24 @@ v3.1.9
 v3.2.0-RC4
 ...
 
-# RC がついていない最新版を利用
+# Use the latest version that doesn't have RC
 $ sudo git checkout -b v3.1.9 refs/tags/v3.1.9
 ```
 
-ソースコードを clone した後に、`yarn` コマンドを利用して、 GROWI に必要なパッケージをインストールします。
+After cloning the source code, use the `yarn` command to install packages needed for GROWI.
 
 ```text
 $ cd /opt/growi
 $ sudo yarn
 ```
 
-### 起動確認
+### Check Startup
 
-パッケージのインストールが完了したら、起動確認を行います。
+Once installation for packages is completed, check the startup.
 
-ここでは MongoDB と Elasticsearch が同一ホストで稼働していることを前提としています。
+Here it is a requirement that MongoDB and Elasticsearch are running under the same hostname.
 
-`MONGO_URI` と `ELASTICSEARCH_URI` は環境に合わせて適宜書き換えてください。
+Rewrite `MONGO_URI` and `ELASTICSEARCH_URI` appropriate to the environment.
 
 ```text
 $ sudo \
@@ -271,16 +271,16 @@ ELASTICSEARCH_URI=http://localhost:9200/growi \
 npm start
 
 ...
-# 以下のメッセージが表示されるまでしばらく待つ
+# Wait for the message below to appear
 > growi@3.1.9 server:prod /opt/growi
 > env-cmd config/env.prod.js node app.js
 ```
 
-`http://<hostname or ip address>:3000/` にアクセスし、初回セットアップ画面が表示されることを確認します。
+Access `http://<hostname or ip address>:3000/` and check whether the initial setup page appears.
 
-### systemd による自動起動の設定
+### Setting autoboot using systemd
 
-「[systemd による自動起動](../admin-cookbook/launch-with-systemd.md)」を参照して下さい。
+See "[Autostart using systemd](../admin-cookbook/launch-with-systemd.md)".
 
 ## リバースプロキシの設定
 
