@@ -6,7 +6,7 @@
 
 This chapter introduces the installation process for GROWI with docker-compose.
 
-Software needed for Setup are listed below.
+Software needed for setup are listed below.
 
 * Docker
 * docker-compose
@@ -67,7 +67,7 @@ environment:
 
 See [Upgrading to GROWI v3.4.x](../upgrading/34x.html).
 
-### Upgrading container
+### Upgrading Container
 
 Stop containers in the directory where `growi-docker-compose` exists.
 
@@ -83,7 +83,7 @@ docker-compose rm app　mongodb elasticseach
 docker rmi weseek/growi:3
 ```
 
-Pull GROWI latest edition, create a fresh Docker image and build up containers.
+Pull latest GROWI, create a fresh Docker image and build up containers.
 
 ```text
 git pull
@@ -91,7 +91,7 @@ docker-compose build
 docker-compose up
 ```
 
-After build up containers, access to the admin page and build ES index again on full text search management( `/admin/search` ).
+After containers are built, access to the admin page and build ES index again on full text search management( `/admin/search` ).
 
 ## Related Pages
 
