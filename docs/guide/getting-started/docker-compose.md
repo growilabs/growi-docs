@@ -83,7 +83,7 @@ docker-compose rm app　mongodb elasticseach
 docker rmi weseek/growi:3
 ```
 
-Pull latest GROWI, create a fresh Docker image and build up containers.
+Pull latest GROWI, and create a fresh Docker image and build up containers.
 
 ```text
 git pull
