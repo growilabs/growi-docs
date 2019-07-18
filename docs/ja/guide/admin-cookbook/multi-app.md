@@ -81,7 +81,7 @@ volumes:
 ...
 ```
 
-### Start
+## 起動
 
 ```bash
 docker-compose up
@@ -94,9 +94,7 @@ and access to:
 * http://localhost:3003 (app-3)
 
 
-Upgrade
--------
-
+## アップグレード
 ### Prepare
 ```bash
 # go to growi-docker-compose workdir
@@ -130,6 +128,6 @@ docker build -t growimulti_app .
 docker-compose up
 ```
 
-### app 数の上限
+## app 数の上限
 
-### 共通のDB(mongo, ES) を使わない方法
+## 共通のDB(mongo, ES) を使わない方法
