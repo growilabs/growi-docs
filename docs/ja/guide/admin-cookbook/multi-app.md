@@ -12,7 +12,7 @@
 
 ### イメージのビルド
 
-複数立ち上げのために任意のイメージ名をつけて Docker イメージをビルドします。growi-docker-compose がインストールされているフォルダにて、以下のコマンドを実行してください。
+Docker イメージをビルドします。growi-docker-compose がインストールされているフォルダにて、以下のコマンドを実行してください。
 
 ```bash
 $ docker build -t growimulti_app .
@@ -27,7 +27,7 @@ $ docker build -t growimulti_app .
 
 services:
   app-1:
-    image: "growimulti_app:latest" // 上記で設定したタグ名
+    image: "growimulti_app:latest"
     ports:
       - 127.0.0.1:3001:3000
     links:
@@ -50,7 +50,7 @@ services:
       - growi_data_1:/data
 
   app-2:
-    image: "growimulti_app:latest" // 上記で設定したタグ名
+    image: "growimulti_app:latest"
     ports:
       - 127.0.0.1:3002:3000
     links:

@@ -6,9 +6,7 @@ This cookbook supposes the usage of [docker-compose](../getting-started/docker-c
 
 ## Overview
 
-This example enables the execution of three GROWI sites.
-
-Install and Start
+This chapter introduces how to launch multiple GROWI sites. And the following site introduces an example that enables the execution of three GROWI sites.
 
 ### Build Image
 
@@ -19,8 +17,66 @@ docker build -t growimulti_app .
 ```
 
 ### Replace docker-compose.yml
-```bash
-cp examples/multi-app/docker-compose.yml .
+
+Edit `./docker-compose.yml` and duplicate `service:app`.
+
+```text:docker-compose.yml
+...
+
+services:
+  app-1:
+    image: "growimulti_app:latest"
+    ports:
+      - 127.0.0.1:3001:3000
+    links:
+      - mongo:mongo
+      - elasticsearch:elasticsearch
+    depends_on:
+      - mongo
+      - elasticsearch
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/growi-1
+      - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-1
+      - PASSWORD_SEED=changeme
+    command: "dockerize
+              -wait tcp://mongo:27017
+              -wait tcp://elasticsearch:9200
+              -timeout 60s
+              npm run server:prod"
+    restart: unless-stopped
+    volumes:
+      - growi_data_1:/data
+
+  app-2:
+    image: "growimulti_app:latest"
+    ports:
+      - 127.0.0.1:3002:3000
+    links:
+      - mongo:mongo
+      - elasticsearch:elasticsearch
+    depends_on:
+      - mongo
+      - elasticsearch
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/growi-2
+      - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-2
+      - PASSWORD_SEED=changeme
+    command: "dockerize
+              -wait tcp://mongo:27017
+              -wait tcp://elasticsearch:9200
+              -timeout 60s
+              npm run server:prod"
+    restart: unless-stopped
+    volumes:
+      - growi_data_2:/data
+
+...
+
+volumes:
+  growi_data_1:
+  growi_data_2:
+
+...
 ```
 
 ### Start
@@ -36,8 +92,7 @@ and access to:
 * http://localhost:3003 (app-3)
 
 
-Upgrade
--------
+### Upgrade
 
 ### Prepare
 ```bash
@@ -52,6 +107,7 @@ docker-compose stop
 ```
 
 ### Remove app containers and images
+
 ```bash
 docker-compose rm app-1
 docker-compose rm app-2
@@ -61,6 +117,7 @@ docker rmi weseek/growi:3
 ```
 
 ### Rebuild Image
+
 ```bash
 git pull
 docker build -t growimulti_app .
