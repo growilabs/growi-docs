@@ -6,9 +6,7 @@ This cookbook supposes the usage of [docker-compose](../getting-started/docker-c
 
 ## Overview
 
-This chapter introduces how to launch multiple GROWI sites. And the following site introduces an example that enables the execution of three GROWI sites.
-
-[growi-docker-compose Multiple Sites Example](https://github.com/weseek/growi-docker-compose/tree/master/examples/multi-app)
+This chapter introduces how to launch multiple GROWI sites.
 
 ### Build Image
 
@@ -20,7 +18,7 @@ docker build -t growimulti_app .
 
 ### Replace docker-compose.yml
 
-Edit `./docker-compose.yml` and duplicate `service:app`.
+Edit `./docker-compose.yml` and duplicate the app container and volumes.
 
 ```text:docker-compose.yml
 ...
@@ -72,16 +70,40 @@ services:
     volumes:
       - growi_data_2:/data
 
+  app-3:
+    image: "growimulti_app:latest"
+    ports:
+      - 127.0.0.1:3003:3000
+    links:
+      - mongo:mongo
+      - elasticsearch:elasticsearch
+    depends_on:
+      - mongo
+      - elasticsearch
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/growi-3
+      - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-3
+      - PASSWORD_SEED=changeme
+    command: "dockerize
+              -wait tcp://mongo:27017
+              -wait tcp://elasticsearch:9200
+              -timeout 60s
+              npm run server:prod"
+    restart: unless-stopped
+    volumes:
+      - growi_data_3:/data
 ...
 
 volumes:
   growi_data_1:
   growi_data_2:
+  growi_data_3:
 
 ...
 ```
 
 ### Start
+Excute this command and access to each sites.
 
 ```bash
 docker-compose up
@@ -89,18 +111,14 @@ docker-compose up
 
 and access to:
 
-* http://localhost:3001 (app-1)
-* http://localhost:3002 (app-2)
-* http://localhost:3003 (app-3)
+[http://localhost:3001](http://localhost:3001) (app-1)
+
+[http://localhost:3002](http://localhost:3002) (app-2)
+
+[http://localhost:3003](http://localhost:3003) (app-3)
 
 
-### Upgrade
-
-### Prepare
-```bash
-# go to growi-docker-compose workdir
-cd growi
-```
+## Upgrade
 
 ### Stop
 
