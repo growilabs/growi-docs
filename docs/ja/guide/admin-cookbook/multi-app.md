@@ -6,9 +6,7 @@
 
 ## 概要
 
-この章では1つのマシン上に複数の GROWI を立ち上げる手順を紹介します。以下の Example では3つの GROWI を立ち上げる例を紹介しています。
-
-[growi-docker-compose Multiple Sites Example](https://github.com/weseek/growi-docker-compose/tree/master/examples/multi-app)
+この章では1つのマシン上に複数の GROWI を立ち上げる手順を紹介します。
 
 ### イメージのビルド
 
@@ -72,11 +70,35 @@ services:
     volumes:
       - growi_data_2:/data
 
+  app-3:
+    image: "growimulti_app:latest"
+    ports:
+      - 127.0.0.1:3003:3000
+    links:
+      - mongo:mongo
+      - elasticsearch:elasticsearch
+    depends_on:
+      - mongo
+      - elasticsearch
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/growi-3
+      - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-3
+      - PASSWORD_SEED=changeme
+    command: "dockerize
+              -wait tcp://mongo:27017
+              -wait tcp://elasticsearch:9200
+              -timeout 60s
+              npm run server:prod"
+    restart: unless-stopped
+    volumes:
+      - growi_data_3:/data
+
 ...
 
 volumes:
   growi_data_1:
   growi_data_2:
+  growi_data_3:
 
 ...
 ```
@@ -93,6 +115,8 @@ $ docker-compose up
 
 [http://localhost:3002](http://localhost:3002) (app-2)
 
+[http://localhost:3003](http://localhost:3003) (app-3)
+
 
 ## アップグレード
 
@@ -107,6 +131,7 @@ docker-compose stop
 ```bash
 docker-compose rm app-1
 docker-compose rm app-2
+docker-compose rm app-3
 docker rmi growimulti_app
 docker rmi weseek/growi:3
 ```
