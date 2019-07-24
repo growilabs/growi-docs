@@ -18,7 +18,7 @@ $ docker build -t growimulti_app .
 
 ### docker-compose.yml の編集
 
-`./docker-compose.yml` ファイルの `services:app` を以下のように複製してください。
+`./docker-compose.yml` ファイルの `services:app` およびボリュームを以下のように複製してください。
 
 ```text:docker-compose.yml
 ...
