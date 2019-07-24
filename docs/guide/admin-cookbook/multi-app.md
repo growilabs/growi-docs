@@ -8,6 +8,8 @@ This cookbook supposes the usage of [docker-compose](../getting-started/docker-c
 
 This chapter introduces how to launch multiple GROWI sites. And the following site introduces an example that enables the execution of three GROWI sites.
 
+[growi-docker-compose Multiple Sites Example](https://github.com/weseek/growi-docker-compose/tree/master/examples/multi-app)
+
 ### Build Image
 
 ```bash

@@ -1,4 +1,4 @@
-# Multiple Sites
+# 複数の GROWI を起動
 
 ::: tip
 この Cookbook は [docker-compose](../getting-started/docker-compose.md) による管理を前提としています
@@ -20,7 +20,7 @@ $ docker build -t growimulti_app .
 
 ### docker-compose.yml の編集
 
-`./docker-compose.yml` ファイルの `services:app` を以下のように複製する。
+`./docker-compose.yml` ファイルの `services:app` を以下のように複製してください。
 
 ```text:docker-compose.yml
 ...
@@ -89,8 +89,9 @@ volumes:
 $ docker-compose up
 ```
 
-* http://localhost:3001 (app-1)
-* http://localhost:3002 (app-2)
+[http://localhost:3001](http://localhost:3001) (app-1)
+
+[http://localhost:3002](http://localhost:3002) (app-2)
 
 
 ## アップグレード
