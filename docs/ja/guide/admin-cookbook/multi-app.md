@@ -6,7 +6,7 @@
 
 ## 概要
 
-この章では1つのマシン上に複数の GROWI を立ち上げる手順を紹介します。
+この章では1つのマシン上に3つの GROWI を立ち上げる手順を紹介します。
 
 ### イメージのビルド
 
@@ -18,7 +18,7 @@ $ docker build -t growimulti_app .
 
 ### docker-compose.yml の編集
 
-`./docker-compose.yml` ファイルの `services:app` およびボリュームを以下のように複製してください。
+`./docker-compose.yml` ファイルの `services:app` およびボリュームを以下のように複製してください。なお、今回はリソース節約のために Mongo DB と Elasticsearch はそれぞれ1つだけで運用します。
 
 ```text:docker-compose.yml
 ...
@@ -35,6 +35,7 @@ services:
       - mongo
       - elasticsearch
     environment:
+      # この MONGO_URI と ELASTICSEARCH のパス名は app-1 用のものに揃えてください
       - MONGO_URI=mongodb://mongo:27017/growi-1
       - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-1
       - PASSWORD_SEED=changeme
@@ -58,6 +59,7 @@ services:
       - mongo
       - elasticsearch
     environment:
+      # この MONGO_URI と ELASTICSEARCH のパス名は app-2 用のものに揃えてください
       - MONGO_URI=mongodb://mongo:27017/growi-2
       - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-2
       - PASSWORD_SEED=changeme
@@ -81,6 +83,7 @@ services:
       - mongo
       - elasticsearch
     environment:
+      # この MONGO_URI と ELASTICSEARCH のパス名は app-3 用のものに揃えてください
       - MONGO_URI=mongodb://mongo:27017/growi-3
       - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-3
       - PASSWORD_SEED=changeme
@@ -96,6 +99,7 @@ services:
 ...
 
 volumes:
+  # それぞれの GROWI で使用しているボリューム名に合わせてください
   growi_data_1:
   growi_data_2:
   growi_data_3:
