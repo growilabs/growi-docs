@@ -25,6 +25,7 @@ $ docker build -t growimulti_app .
 
 services:
   app-1:
+    // 上記でビルドしたイメージ名に合わせます
     image: "growimulti_app:latest"
     ports:
       - 127.0.0.1:3001:3000
@@ -49,6 +50,7 @@ services:
       - growi_data_1:/data
 
   app-2:
+    // 上記でビルドしたイメージ名に合わせます
     image: "growimulti_app:latest"
     ports:
       - 127.0.0.1:3002:3000
@@ -73,6 +75,7 @@ services:
       - growi_data_2:/data
 
   app-3:
+    // 上記でビルドしたイメージ名に合わせます
     image: "growimulti_app:latest"
     ports:
       - 127.0.0.1:3003:3000
