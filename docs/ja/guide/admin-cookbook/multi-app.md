@@ -36,7 +36,7 @@ services:
       - mongo
       - elasticsearch
     environment:
-      # この MONGO_URI と ELASTICSEARCH のパス名は app-1 用のものに揃えてください
+      # この MONGO_URI と ELASTICSEARCH_URI のパス名は app-1 用のものに揃えてください
       - MONGO_URI=mongodb://mongo:27017/growi-1
       - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-1
       - PASSWORD_SEED=changeme
@@ -61,7 +61,7 @@ services:
       - mongo
       - elasticsearch
     environment:
-      # この MONGO_URI と ELASTICSEARCH のパス名は app-2 用のものに揃えてください
+      # この MONGO_URI と ELASTICSEARCH_URL のパス名は app-2 用のものに揃えてください
       - MONGO_URI=mongodb://mongo:27017/growi-2
       - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-2
       - PASSWORD_SEED=changeme
@@ -86,7 +86,7 @@ services:
       - mongo
       - elasticsearch
     environment:
-      # この MONGO_URI と ELASTICSEARCH のパス名は app-3 用のものに揃えてください
+      # この MONGO_URI と ELASTICSEARCH_URI のパス名は app-3 用のものに揃えてください
       - MONGO_URI=mongodb://mongo:27017/growi-3
       - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-3
       - PASSWORD_SEED=changeme
