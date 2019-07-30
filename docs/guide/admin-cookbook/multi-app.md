@@ -17,14 +17,14 @@ docker build -t growimulti_app .
 ```
 ### Replace docker-compose.yml
 
-Edit `./docker-compose.yml` and duplicate the app container and volumes. On this example, these GROWI apps share the use of one Mongo DB contatiner and one Elasticsearch container for saving resource.
+Edit `./docker-compose.yml` and duplicate the app container and volumes. On this example, these GROWI apps share the use of one Mongo DB contatiner and one Elasticsearch container for saving of resources.
 
 ```text:docker-compose.yml
 ...
 
 services:
   app-1:
-    # Specify the image was built in the previous step
+    # Specify the image built in the previous step
     image: "growimulti_app:latest"
     ports:
       - 127.0.0.1:3001:3000
@@ -35,7 +35,7 @@ services:
       - mongo
       - elasticsearch
     environment:
-      # Use same paths for app-1 in MONGO_URI and ELASTICSEARCH_URI
+      # Use the same paths for app-1 in MONGO_URI and ELASTICSEARCH_URI
       - MONGO_URI=mongodb://mongo:27017/growi-1
       - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-1
       - PASSWORD_SEED=changeme
@@ -49,7 +49,7 @@ services:
       - growi_data_1:/data
 
   app-2:
-    # Specify the image was built in the previous step
+    # Specify the image built in the previous step
     image: "growimulti_app:latest"
     ports:
       - 127.0.0.1:3002:3000
@@ -60,7 +60,7 @@ services:
       - mongo
       - elasticsearch
     environment:
-      # Use same paths for app-2 in MONGO_URI and ELASTICSEARCH_URI
+      # Use the same paths for app-2 in MONGO_URI and ELASTICSEARCH_URI
       - MONGO_URI=mongodb://mongo:27017/growi-2
       - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-2
       - PASSWORD_SEED=changeme
@@ -74,7 +74,7 @@ services:
       - growi_data_2:/data
 
   app-3:
-    # Specify the image was built in the previous step
+    # Specify the image built in the previous step
     image: "growimulti_app:latest"
     ports:
       - 127.0.0.1:3003:3000
@@ -85,7 +85,7 @@ services:
       - mongo
       - elasticsearch
     environment:
-      # Use same paths for app-3 in MONGO_URI and ELASTICSEARCH_URI
+      # Use the same paths for app-3 in MONGO_URI and ELASTICSEARCH_URI
       - MONGO_URI=mongodb://mongo:27017/growi-3
       - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-3
       - PASSWORD_SEED=changeme
@@ -109,7 +109,7 @@ volumes:
 ```
 
 ### Start
-Excute this command and access to each sites.
+Execute this command and access to each sites.
 
 ```bash
 docker-compose up
