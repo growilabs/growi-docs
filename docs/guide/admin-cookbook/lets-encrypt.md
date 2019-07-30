@@ -6,7 +6,7 @@ This cookbook supposes the usage of [docker-compose](../getting-started/docker-c
 
 ## Overview
 
-`./docker-compose.yml` ファイルに以下のように HTTPS サーバーに関する記述を追加してください。ここでは [HTTPS-PORTSL](https://github.com/SteveLTN/https-portal) を利用しています。
+`./docker-compose.yml` ファイルに以下のように HTTPS サーバーに関する記述を追加してください。ここでは [HTTPS-PORTAL](https://github.com/SteveLTN/https-portal) を利用しています。
 
 ```text:docker-compose.yml
 version: '3'

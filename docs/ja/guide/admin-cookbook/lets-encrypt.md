@@ -6,11 +6,11 @@
 
 ## 概要
 
-この章では Let's Encript および nginx プロキシを用いた HTTPS 通信の利用手順を紹介します。
+この章では Let's Encript および nginx プロキシを用いた HTTPS サーバーの利用手順を紹介します。
 
 ## docker-compose.yml ファイルの編集
 
-`./docker-compose.yml` ファイルに以下のように HTTPS サーバーに関する記述を追加してください。ここでは [HTTPS-PORTSL](https://github.com/SteveLTN/https-portal) を利用しています。
+`./docker-compose.yml` ファイルに以下のように HTTPS サーバーに関する記述を追加してください。ここでは [HTTPS-PORTAL](https://github.com/SteveLTN/https-portal) を利用しています。
 
 ```text:docker-compose.yml
 ...
