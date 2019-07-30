@@ -21,7 +21,7 @@ git clone https://github.com/weseek/growi-docker-compose.git growi
 
 ## Build GROWI
 
-Excute these commands in the directory where `growi-docker-compose` exists.
+Execute these commands in the directory where `growi-docker-compose` exists.
 
 ```text
 cd growi
