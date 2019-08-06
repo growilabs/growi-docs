@@ -26,7 +26,7 @@ services:
     links:
       - app:app
     environment:
-      DOMAINS: 'example.com -> http://app:3000'
+      DOMAINS: 'example.com -> http://localhost:3000'
       STAGE: 'production'
       FORCE_RENEW: 'false'
       WEBSOCKET: 'true'

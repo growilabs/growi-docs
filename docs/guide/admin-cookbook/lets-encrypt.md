@@ -6,7 +6,11 @@ This cookbook supposes the usage of [docker-compose](../getting-started/docker-c
 
 ## Overview
 
-`./docker-compose.yml` ファイルに以下のように HTTPS サーバーに関する記述を追加してください。ここでは [HTTPS-PORTAL](https://github.com/SteveLTN/https-portal) を利用しています。
+This chapter introduces how to launch GROWI with the HTTPS server prepared by Let's Encript and ginx proxy.
+
+## Edit docker-compose.yml
+
+Add describe about the HTTPS server in `./docker-compose.yml`. In this example, use [HTTPS-PORTAL](https://github.com/SteveLTN/https-portal).
 
 ```text:docker-compose.yml
 version: '3'
@@ -24,7 +28,7 @@ services:
     links:
       - app:app
     environment:
-      DOMAINS: 'example.com -> http://app:3000'
+      DOMAINS: 'example.com -> http://localhost:3000'
       STAGE: 'production'
       FORCE_RENEW: 'false'
       WEBSOCKET: 'true'
