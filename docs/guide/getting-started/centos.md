@@ -276,21 +276,21 @@ Access `http://<hostname or ip address>:3000/` and check whether the initial set
 
 See "[Autostart using systemd](../admin-cookbook/launch-with-systemd.md)".
 
-## リバースプロキシの設定
+## Reverse Proxy Settings
 
-ここでは、起動した GROWI に対してリバースプロキシを行うための設定例を記載します。
+Shown below is an example to setting up a reverse proxy to an activated GROWI.
 
 ### Apache
 
-#### インストール
+#### Installation
 
 ```text
 $ sudo yum install httpd
 ```
 
-#### リバースプロキシの設定例
+#### Reverse Proxy Settings Example
 
-ここではリバースプロキシに関する箇所を抜粋して記載しています。
+Shown below is a part related to reverse proxy
 
 ```text
 <IfModule mod_ssl.c>
@@ -298,17 +298,17 @@ $ sudo yum install httpd
     ...
     ###
     # reverse proxy to crowi
-    # Header に Host: example.com を追加するため
+    # To add Host: example.com to the Header
     ProxyPreserveHost On
-    # HTTPS利用時: Header に x-forwarded-proto: https を追加するため
+    # Using HTTPS: To add x-forwarded-proto: https to the Header
     RequestHeader set x-forwarded-proto 'https'
-    # Apache では static assets で 304 が返らないことがあるので ETag を無効化する
+    # With Apache, sometimes a 304 isn't returned from static assets, so unset ETag
     <ifModule mod_headers.c>
             Header unset ETag
     </ifModule>
     FileETag None
 
-    # socket.io の path を rewrite する
+    # Rewrite the path of socket.io
     RewriteEngine On
     RewriteCond %{REQUEST_URI}  ^/socket.io            [NC]
     RewriteCond %{QUERY_STRING} transport=websocket    [NC]
@@ -321,17 +321,17 @@ $ sudo yum install httpd
 </IfModule>
 ```
 
-#### 自動起動の設定
+#### Autoboot Settings
 
 ```text
 $ sudo systemctl enable httpd
 ```
 
-### Nginx のインストールと設定
+### Nginx Installation and Settings
 
-#### インストール
+#### Installation
 
-nginx のレポジトリを追加します。`/etc/yum.repos.d/nginx.repo`を作成し、以下の内容を書き込みます。
+Add the nginx repository. Insert the following into `/etc/yum.repos.d/nginx.repo`.
 
 ```text
 [nginx]
@@ -341,16 +341,16 @@ gpgcheck=0
 enabled=1
 ```
 
-これで、yum 経由で nginx がインストールできるようになったため、インストールを行います。
+Now nginx can be installed via yum. Install.
 
 ```text
 $ sudo yum install -y nginx
 ```
 
-#### リバースプロキシの設定例
+#### Reverse Proxy Settings Example
 
-`/etc/nginx/conf.d/growi.conf` のようなファイルを作成し、設定を書き込みます。  
-ここでは HTTPS を利用する設定例を記載しています。 &lt;server&gt; など&lt;&gt;で囲まれている箇所は、適宜環境に合わせて設定してください。
+Create a file `/etc/nginx/conf.d/growi.conf` to insert settings.
+Shown here is an example using HTTPS. Sections surrounded by &lt;server&gt; or &lt;&gt; should be set accordingly to the appropriate environment.
 
 ```text
 upstream growi {
@@ -388,7 +388,7 @@ server {
 }
 ```
 
-#### 自動起動の設定
+#### Autoboot Settings
 
 ```text
 $ sudo systemctl enable nginx
