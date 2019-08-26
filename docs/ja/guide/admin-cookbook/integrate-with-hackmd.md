@@ -25,7 +25,7 @@
     - `HACKMD_URI`: GROWI のクライアントを実行するブラウザからアクセス可能な CodiMD の URI
     - `HACKMD_URI_FOR_SERVER`: GROWI サーバーからアクセス可能な CodiMD の URI
         - 設定されなかった場合は `HACKMD_URI` を利用します
-3．CodiMD コンテナに環境変数を設定
+3. CodiMD コンテナに環境変数を設定
     - `GROWI_URI`: GROWI のクライアントを実行するブラウザからアクセス可能な GROWI の URI
 4. コンテナの起動
 5. GROWI の管理画面の「アプリ設定」から、サイトURL設定を行う
