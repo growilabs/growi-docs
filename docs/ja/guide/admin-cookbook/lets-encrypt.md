@@ -6,40 +6,20 @@
 
 ## 概要
 
-この章では Let's Encript および nginx プロキシを用いた HTTPS サーバーの利用手順を紹介します。
+この章では [HTTPS-PORTAL](https://github.com/SteveLTN/https-portal) をもとにした Let's Encript および nginx プロキシを用いた HTTPS サーバーの利用手順を紹介します。
 
-## docker-compose.yml ファイルの編集
+## 手順
 
-`./docker-compose.yml` ファイルに以下のように HTTPS サーバーに関する記述を追加してください。ここでは [HTTPS-PORTAL](https://github.com/SteveLTN/https-portal) を利用しています。環境変数 `DOMAIN` の `example.com` は利用者が管理可能なドメイン名に設定してください。検証用にローカル環境で `example.com` を利用する場合、変更不要です。
+### docker-compose.override.yml ファイルのコピー
 
-```text:docker-compose.yml
-...
+以下のコマンドを実行し、GROWI のあるディレクトリの直下に `./exmaples/https-portal` の `docker-compose.override.yml` ファイルをコピーしてきます。
 
-services:
-  # a fully automated HTTPS server powered by Nginx, Let's Encrypt
-  # see https://github.com/SteveLTN/https-portal
-  https-portal:
-    image: steveltn/https-portal:1
-    ports:
-      - '80:80'
-      - '443:443'
-    links:
-      - app:app
-    environment:
-      DOMAINS: 'example.com -> http://app:3000'
-      STAGE: 'production'
-      FORCE_RENEW: 'false'
-      WEBSOCKET: 'true'
-      CLIENT_MAX_BODY_SIZE: 0
-    restart: unless-stopped
-    volumes:
-      - https-portal_data:/var/lib/https-portal
-
-volumes:
-  https-portal_data:
+```text
+$ cd growi // growi-docker-compose をインストールしたディレクトリ
+$ cp examples/https-portal/docker-compose.override.yml .
 ```
 
-## 起動
+### 起動
 
 GROWI を起動し、サイトにアクセスしてください。
 
@@ -52,3 +32,15 @@ example.com を利用する場合、ローカル環境における example.com �
 :::
 
 [https://example.com](https://example.com)
+
+
+### ドメイン名の設定
+`./docker-compose.override.yml` の `DOMAINS` の値に、利用者が管理可能なドメイン名を設定してください。
+
+```text:docker-compose.override.yml
+services:
+  https-portal:
+    environment:
+      // example.com の部分を利用可能なドメイン名に変更
+      DOMAINS: 'example.com -> http://app:3000' 
+```
