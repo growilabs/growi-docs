@@ -12,7 +12,7 @@
 
 ### docker-compose.override.yml ファイルのコピー
 
-以下のコマンドを実行し、GROWI のあるディレクトリの直下に `./exmaples/https-portal` の `docker-compose.override.yml` ファイルをコピーしてきます。
+以下のコマンドを実行し、GROWI のあるディレクトリの直下に `./exmaples/https-portal` の `docker-compose.override.yml` ファイルをコピーします。
 
 ```text
 $ cd growi // growi-docker-compose をインストールしたディレクトリ
@@ -26,10 +26,6 @@ GROWI を起動し、サイトにアクセスしてください。
 ```bash
 docker-compose up
 ```
-
-::: tip
-example.com を利用する場合、ローカル環境における example.com の IP アドレス設定を行う必要があります
-:::
 
 [https://example.com](https://example.com)
 
