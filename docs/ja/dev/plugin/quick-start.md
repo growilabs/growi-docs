@@ -23,9 +23,9 @@ GROWI は、[Node.js のモジュール解決](https://nodejs.org/dist/latest-v1
 
 ```
 - somewhere
-  - growi                     <-- GROWI
-  - node_modules
-    - growi-plugin-my-plugin  <-- Your Plugin to develop
+    - growi                         <-- GROWI
+    - node_modules
+        - growi-plugin-my-plugin    <-- Your Plugin to develop
 ```
 
 次に、`package.json` を書き換えます。最低限必要なのは `name` の値です。
@@ -52,48 +52,46 @@ yarn
 :::
 
 
-開発環境でのプラグインの疑似インストール
------------------------------------
+開発環境の起動
+--------------
 
 本番環境でプラグインを利用する場合は、予め npm パッケージとして公開された GROWI プラグインを `yarn` を用いてインストールしますが、開発時はその手順は不要です。
 
 代わりに設定ファイルにリストされたプラグインを擬似的にインストールされた状態として扱うことで、`npm link` による設定を行う事無くシームレスな開発を実現しています。
 
 
-本体の設定
----------
+### 本体の設定
 
-- GROWI のフロントエンドサーバー・バックエンドサーバーが起動している場合は両方とも終了させる
-- GROWI 本体側の設定ファイル `config/env.dev.js` を編集
+1. GROWI のフロントエンドサーバー・バックエンドサーバーが起動している場合は両方とも終了させる
+1. GROWI 本体側の設定ファイル `config/env.dev.js` を編集
 
-```
-module.exports = {
-  ...
+    ```
+    module.exports = {
+      ...
 
-  PLUGIN_NAMES_TOBE_LOADED: [
-    'growi-plugin-myplugin',
-  ],
+      PLUGIN_NAMES_TOBE_LOADED: [
+        'growi-plugin-myplugin',
+      ],
 
-  ...
-};
-```
+      ...
+    };
+    ```
 
-本体の起動
----------
+### 本体の起動
 
 - フロントエンドサーバーの起動
     - [起動](/ja/dev/startup/launch.html) ページの内容に従って起動
     - クライアントビルド時に以下のログを確認
-      ```
-      ...
+        ```
+        ...
 
-      > node bin/generate-plugin-definitions-source.js
-      
-      12:52:55.765Z  INFO growi:bin:generate-plugin-definitions-source: Detected plugins:  []
-      12:52:55.770Z  INFO growi:bin:generate-plugin-definitions-source: Detected plugins from PLUGIN_NAMES_TOBE_LOADED:  [ 'growi-plugin-myplugin' ]
+        > node bin/generate-plugin-definitions-source.js
+        
+        12:52:55.765Z  INFO growi:bin:generate-plugin-definitions-source: Detected plugins:  []
+        12:52:55.770Z  INFO growi:bin:generate-plugin-definitions-source: Detected plugins from PLUGIN_NAMES_TOBE_LOADED:  [ 'growi-plugin-myplugin' ]
 
-      ...
-      ```
+        ...
+        ```
 - サーバー
     - [起動](/ja/dev/startup/launch.html) ページの内容に従って起動
     - サーバー起動時に以下のログを確認
