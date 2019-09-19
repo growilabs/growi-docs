@@ -7,7 +7,8 @@ module.exports = {
   markdown: {
     toc: { includeLevel: [2] },
     extendMarkdown: md => {
-      md.use(require('markdown-it-task-lists'))
+      md.use(require('markdown-it-task-lists'));
+      md.use(require('markdown-it-footnote'));
     },
   },
   locales: {
