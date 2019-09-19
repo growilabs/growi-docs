@@ -135,6 +135,7 @@ module.exports = {
               children: [
                 '/dev/plugin/architecture.md',
                 '/dev/plugin/quick-start.md',
+                '/dev/plugin/publish.md',
                 '/dev/plugin/walk-through-boilerplate.md',
                 '/dev/plugin/metadata.md',
                 '/dev/plugin/custom-tag.md',
@@ -267,6 +268,7 @@ module.exports = {
               children: [
                 '/ja/dev/plugin/architecture.md',
                 '/ja/dev/plugin/quick-start.md',
+                '/ja/dev/plugin/publish.md',
                 '/ja/dev/plugin/walk-through-boilerplate.md',
                 '/ja/dev/plugin/metadata.md',
                 '/ja/dev/plugin/custom-tag.md',
