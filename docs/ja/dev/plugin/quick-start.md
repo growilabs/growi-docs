@@ -1,7 +1,7 @@
 # クイックスタート
 
 ::: tip
-以下の説明は、[開発環境の構築](/ja/dev/startup/dev-env.html) および [起動](/ja/dev/startup/launch.html) ページで紹介されている環境が構築されている前提で記述されています
+以下の説明は、[開発環境の構築](../startup/dev-env.md) および [起動](../startup/launch.md) ページで紹介されている環境が構築されている前提で記述されています
 :::
 
 プラグインを開発するのに最も簡単な方法は、ボイラープレートである [growi-plugin-boilerplate](https://github.com/weseek/growi-plugin-boilerplate) をコピーし、それを元にオリジナルのリポジトリを作ることです。
@@ -80,7 +80,7 @@ yarn
 ### 本体の起動
 
 - フロントエンドサーバーの起動
-    - [起動](/ja/dev/startup/launch.html) ページの内容に従って起動
+    - [起動](../startup/launch.html) ページの内容に従って起動
     - クライアントビルド時に以下のログを確認
         ```
         ...
@@ -93,7 +93,7 @@ yarn
         ...
         ```
 - サーバー
-    - [起動](/ja/dev/startup/launch.html) ページの内容に従って起動
+    - [起動](../startup/launch.html) ページの内容に従って起動
     - サーバー起動時に以下のログを確認
         ```
         ...
