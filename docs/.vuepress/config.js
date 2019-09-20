@@ -7,7 +7,8 @@ module.exports = {
   markdown: {
     toc: { includeLevel: [2] },
     extendMarkdown: md => {
-      md.use(require('markdown-it-task-lists'))
+      md.use(require('markdown-it-task-lists'));
+      md.use(require('markdown-it-footnote'));
     },
   },
   locales: {
@@ -133,7 +134,13 @@ module.exports = {
               title: 'Plugin',
               collapsable: false,
               children: [
-                '/dev/plugin/',
+                '/dev/plugin/architecture.md',
+                '/dev/plugin/quick-start.md',
+                '/dev/plugin/publish.md',
+                '/dev/plugin/walk-through-boilerplate.md',
+                '/dev/plugin/metadata.md',
+                '/dev/plugin/custom-tag.md',
+                '/dev/plugin/custom-route.md',
               ],
             },
             {
@@ -260,7 +267,13 @@ module.exports = {
               title: 'プラグイン',
               collapsable: false,
               children: [
-                '/ja/dev/plugin/',
+                '/ja/dev/plugin/architecture.md',
+                '/ja/dev/plugin/quick-start.md',
+                '/ja/dev/plugin/publish.md',
+                '/ja/dev/plugin/walk-through-boilerplate.md',
+                '/ja/dev/plugin/metadata.md',
+                '/ja/dev/plugin/custom-tag.md',
+                '/ja/dev/plugin/custom-route.md',
               ],
             },
             {
