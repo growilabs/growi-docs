@@ -6,22 +6,22 @@ This cookbook supposes the usage of [docker-compose](../getting-started/docker-c
 
 ## Overview
 
-This chapter introduces how to launch GROWI with the HTTPS server prepared by Let's Encript and ginx proxy.
+This chapter introduces how to launch GROWI with the HTTPS server with Let's Encript and nginx proxy.
 
-## Procedure
+## How to Configure
 
 ### Copy docker-compose.override.yml
 
-Excuse the follow command for copying `./exmaples/https-portal/docker-compose.override.yml` into the directory where `growi-docker-compose` exists.
+Execute the follow command to copy `./exmaples/https-portal/docker-compose.override.yml` into the base directory of GROWI.
 
 ```text
-$ cd growi // the directory where `growi-docker-compose` exists.
+$ cd growi // the base directory of GROWI.
 $ cp examples/https-portal/docker-compose.override.yml .
 ```
 
-### Start
+### Launch GROWI
 
-Build GROWI and access to the site.
+Launch GROWI and acess to the site.
 
 ```bash
 docker-compose up
@@ -29,13 +29,13 @@ docker-compose up
 
 [https://example.com](https://example.com)
 
-### Set your domain name
-Set `DOMAINS` of `./docker-compose.override.yml` in your domain.
+### Set Custom Domain
+In `./docker-compose.override.yml`, set `DOMAINS` to a domain of your choice.
 
 ```text:docker-compose.override.yml
 services:
   https-portal:
     environment:
-      // replace 'example.com' for your domain
+      // replace 'example.com' for a domain of your choice.
       DOMAINS: 'example.com -> http://app:3000' 
 ```
