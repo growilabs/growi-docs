@@ -36,6 +36,6 @@ In `./docker-compose.override.yml`, set `DOMAINS` to a domain of your choice.
 services:
   https-portal:
     environment:
-      // replace 'example.com' for a domain of your choice.
+      // replace 'example.com' with a domain of your choice.
       DOMAINS: 'example.com -> http://app:3000' 
 ```
