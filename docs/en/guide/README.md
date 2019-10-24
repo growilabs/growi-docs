@@ -2,40 +2,30 @@
 sidebarDepth: 0
 ---
 
-# Welcome
+# About GROWI
 
-Welcome to GROWI Docs.
-This site consists of the following sections.
+Here is a brief introduction to GROWI.
+If you want to start anyway, please go to [5 Minutes GROWI Tutorial](/en/guide/getting-started/five_minutes.md)
 
-## User's Guide
-### [Installation](getting-started/docker-compose.md)
+## A wiki that can be written in Markdown
 
-Introducing various ways to install GROWI.
+You can write a document with markdown while previewing in real time on the left and right screens.
 
-If you are just trying out, [Heroku](getting-started/heroku.md) might be your fit.
-If you are committed to GROWI, [docker-compose](getting-started/docker-compose.md) is the best fit.
+Code highlights, pictograms, annotations (footnotes), task lists, and HTML codes by Bootstrap for each programming language are also supported.
 
-### [Upgrade](upgrading/34x.md)
+In addition, the page can have a hierarchy, and when you want to divide the page by category, you can organize the pages according to the purpose.
 
-Upgrade guide from old versions of GROWI.
-About data integrity and other things to note.
+## Fast fulltext search
 
-### [Migration](migration-guide/from-crowi-plus-onpremise.md)
+Incremental search of page titles using ElasticSearch and full text search of page contents are possible. Friendly to Japanese users, alphanumeric characters can be hit in either half-width or half-width.
 
-Migration guide from crowi-plus or [Crowi](http://site.crowi.wiki/)
+The page name is supplemented when creating the page, and the page hierarchy can be organized efficiently.
 
-### [System Admin Cookbook](admin-cookbook/launch-with-systemd.md)
+## Energize communication with comment function
 
-Cookbook for the server, container clusters, and network. For system admininistrators.
+Comments can be threaded for each page. Of course, comments can also be written and previewed by Markdown and attached to files.
 
-### [GROWI Admin Cookbook](management-cookbook/line-breaks.md)
+## Other features
 
-Cookbook for GROWI itself. For GROWI administrators.
-
-## [Development Guide](/en/dev/)
-
-Documentation for developers.
-
-## [(TBD) API Reference](/en/api/)
-
-Documentation for developers.
+There are many features that cannot be introduced here.
+For details, refer to "Features”.

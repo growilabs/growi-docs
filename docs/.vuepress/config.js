@@ -71,9 +71,42 @@ module.exports = {
           '/en/guide/': [
             '/en/guide/',
             {
+              title: 'Getting started',
+              collapsable: false,
+              children: [
+                '/en/guide/getting-started/five_minutes.md',
+                '/en/guide/getting-started/markdown.md',
+              ]
+            },
+            {
+              title: 'Features',
+              collapsable: false,
+              children: [
+                '/en/guide/features/page_layout.md',
+                '/en/guide/features/copy_to_clipboard.md',
+                '/en/guide/features/table.md',
+                '/en/guide/features/bookmark.md',
+                '/en/guide/features/page_operation.md',
+                '/en/guide/features/emoji.md',
+                '/en/guide/features/history.md',
+                '/en/guide/features/blockdiag.md',
+                '/en/guide/features/bootstrap.md',
+                '/en/guide/features/uml_diagrams.md'
+              ]
+            },
+            {
+              title: 'Tips',
+              collapsable: false,
+              children: [
+                '/en/guide/tips/hierarchical.md',
+                '/en/guide/tips/template.md'
+              ]
+            },
+            {
               title: 'Other Documents',
               collapsable: false,
               children: [
+                ['/en/admin_guide/', 'Admin Guide'],
                 ['/en/dev/', 'Developers Guide'],
                 ['/en/api/', 'API Reference'],
               ]
@@ -86,7 +119,9 @@ module.exports = {
               collapsable: false,
               children: [
                 '/en/admin_guide/getting-started/docker-compose.md',
-                '/en/admin_guide/getting-started/heroku.md'
+                '/en/admin_guide/getting-started/heroku.md',
+                '/en/admin_guide/getting-started/ubuntu-server.md',
+                '/en/admin_guide/getting-started/centos.md'
               ]
             },
             {
@@ -254,6 +289,8 @@ module.exports = {
               children: [
                 '/ja/admin_guide/getting-started/docker-compose.md',
                 '/ja/admin_guide/getting-started/heroku.md',
+                '/ja/admin_guide/getting-started/ubuntu-server.md',
+                '/ja/admin_guide/getting-started/centos.md'
               ]
             },
             {

@@ -4,8 +4,7 @@
 
 GROWI では [PlantUML](http://plantuml.com/) を利用して、UML 図を書くことができます。
 
-具体的な記述例は [Real World UML](https://real-world-plantuml.com/
-) を参考にすると便利です。
+具体的な記述例は [Real World UML](https://real-world-plantuml.com/) を参考にすると便利です。
 
 **例:**
 
