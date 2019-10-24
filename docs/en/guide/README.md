@@ -12,12 +12,12 @@ This site consists of the following sections.
 
 Introducing various ways to install GROWI.
 
-If you are just trying out, [Heroku](getting-started/heroku.md) might be your fit.  
+If you are just trying out, [Heroku](getting-started/heroku.md) might be your fit.
 If you are committed to GROWI, [docker-compose](getting-started/docker-compose.md) is the best fit.
 
 ### [Upgrade](upgrading/34x.md)
 
-Upgrade guide from old versions of GROWI.  
+Upgrade guide from old versions of GROWI.
 About data integrity and other things to note.
 
 ### [Migration](migration-guide/from-crowi-plus-onpremise.md)
@@ -32,10 +32,10 @@ Cookbook for the server, container clusters, and network. For system admininistr
 
 Cookbook for GROWI itself. For GROWI administrators.
 
-## [Development Guide](/dev/)
+## [Development Guide](/en/dev/)
 
 Documentation for developers.
 
-## [(TBD) API Reference](/api/)
+## [(TBD) API Reference](/en/api/)
 
 Documentation for developers.

@@ -26,8 +26,8 @@ DEBUG=growi:routes:page,growi:routes:login-passport
 |full-text search|`growi:lib:search`|
 |send mails|`growi:lib:mailer`|
 
-### 
+###
 
 ## More
 
-Refer to [Logger](/dev/tips/logger.html) in [Developers Guide](/dev/).
+Refer to [Logger](/en/dev/tips/logger.html) in [Developers Guide](/en/dev/).

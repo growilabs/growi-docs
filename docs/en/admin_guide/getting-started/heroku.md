@@ -22,7 +22,7 @@ Please install Heroku CLI according to the [Official Heroku page](https://devcen
 At first, login to Heroku with following command:
 
 ```
-$ heroku login 
+$ heroku login
 ```
 
 Then, clone the app's repository from your Heroku account. Note that \[App Name\] should be replaced by your App's name. When you execute these comannds, you may see a message like `warning: You appear to have cloned an empty repository.`, it can be ignored safely.
@@ -44,7 +44,7 @@ $ git remote add origin https://github.com/weseek/growi.git
 
 Get the tag list from GROWI repository.
 ```
-$ git pull origin --tags 
+$ git pull origin --tags
 ```
 
 Create a **branch** which is the version you want to use and checkout.
