@@ -6,6 +6,17 @@ module.exports = {
   plugins: [
     'tabs',
     [
+      'vuepress-plugin-medium-zoom',
+      {
+        selector: '.content img',
+        delay: 1000,
+        options: {
+          margin: 24,
+          scrollOffset: 0,
+        },
+      },
+    ],
+    [
       'vuepress-plugin-redirect',
       {
         // provide i18n redirection
@@ -205,27 +216,31 @@ module.exports = {
               title: '機能紹介',
               collapsable: false,
               children: [
-                '/ja/guide/features/hierarchical.md',
+                '/ja/guide/features/page_layout.md',
                 '/ja/guide/features/copy_to_clipboard.md',
                 '/ja/guide/features/table.md',
+                '/ja/guide/features/bookmark.md',
+                '/ja/guide/features/page_operation.md',
+                '/ja/guide/features/emoji.md',
+                '/ja/guide/features/history.md',
                 '/ja/guide/features/blockdiag.md',
                 '/ja/guide/features/bootstrap.md',
-                '/ja/guide/features/history.md',
-                '/ja/guide/features/template.md',
-                '/ja/guide/features/uml_diagrams.md',
+                '/ja/guide/features/uml_diagrams.md'
               ]
             },
             {
               title: 'Tips (活用例)',
               collapsable: false,
               children: [
-                '/ja/guide/features/hierarchical.md',
+                '/ja/guide/tips/hierarchical.md',
+                '/ja/guide/tips/template.md'
               ]
             },
             {
               title: 'その他のドキュメント',
               collapsable: false,
               children: [
+                ['/ja/admin_guide/', '管理者ガイド'],
                 ['/ja/dev/', '開発ガイド'],
                 ['/en/api/', 'API リファレンス (英語)'],
               ]

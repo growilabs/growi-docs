@@ -4,7 +4,6 @@ sidebarDepth: 0
 
 # GROWI について
 
-GROWI Docs へようこそ。
 ここでは GROWI について簡単に紹介します。
 とにかく始めたい方は [5分で始める GROWI](/ja/guide/getting-started/five_minutes.md) へどうぞ
 
@@ -29,5 +28,5 @@ ElasticSearch を利用したページタイトルのインクリメンタルサ
 ## その他の機能
 
 ここでは紹介しきれない機能がたくさんあります。
-詳細は [機能紹介](../features/) を参考にしてください。
+詳細は「機能紹介」を参考にしてください。
 

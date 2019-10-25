@@ -69,6 +69,7 @@
     "yarn": ">=1.12"
   },
   "dependencies": {
+    "vuepress-plugin-medium-zoom": "^1.1.6",
     "vuepress-plugin-redirect": "^1.1.2"
   }
 }
