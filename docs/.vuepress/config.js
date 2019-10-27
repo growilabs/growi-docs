@@ -54,7 +54,7 @@ module.exports = {
         nav: [
           { text: 'Home', link: '/en/' },
           { text: 'Users Guide', link: '/en/guide/' },
-          { text: 'Admin Guide', link: '/en/admin_guide/' },
+          { text: 'Admin Guide', link: '/en/admin-guide/' },
           { text: 'Developers Guide', link: '/en/dev/' },
           { text: 'API Reference', link: '/en/api/' },
           { text: 'Release Note', link: 'https://github.com/weseek/growi/releases' },
@@ -106,65 +106,65 @@ module.exports = {
               title: 'Other Documents',
               collapsable: false,
               children: [
-                ['/en/admin_guide/', 'Admin Guide'],
+                ['/en/admin-guide/', 'Admin Guide'],
                 ['/en/dev/', 'Developers Guide'],
                 ['/en/api/', 'API Reference'],
               ]
             },
           ],
-          '/en/admin_guide/': [
-            '/en/admin_guide/',
+          '/en/admin-guide/': [
+            '/en/admin-guide/',
             {
               title: 'Install',
               collapsable: false,
               children: [
-                '/en/admin_guide/getting-started/docker-compose.md',
-                '/en/admin_guide/getting-started/heroku.md',
-                '/en/admin_guide/getting-started/ubuntu-server.md',
-                '/en/admin_guide/getting-started/centos.md'
+                '/en/admin-guide/getting-started/docker-compose.md',
+                '/en/admin-guide/getting-started/heroku.md',
+                '/en/admin-guide/getting-started/ubuntu-server.md',
+                '/en/admin-guide/getting-started/centos.md'
               ]
             },
             {
               title: 'Upgrading',
               collapsable: false,
               children: [
-                '/en/admin_guide/upgrading/35x.md',
-                '/en/admin_guide/upgrading/34x.md',
+                '/en/admin-guide/upgrading/35x.md',
+                '/en/admin-guide/upgrading/34x.md',
               ]
             },
             {
               title: 'Migration form other system',
               collapsable: true,
               children: [
-                '/en/admin_guide/migration-guide/from-crowi-plus-onpremise.md',
-                '/en/admin_guide/migration-guide/from-crowi-plus-docker-compose.md',
-                '/en/admin_guide/migration-guide/from-crowi-onpremise.md',
-                '/en/admin_guide/migration-guide/from-bakudankun-crowi.md',
+                '/en/admin-guide/migration-guide/from-crowi-plus-onpremise.md',
+                '/en/admin-guide/migration-guide/from-crowi-plus-docker-compose.md',
+                '/en/admin-guide/migration-guide/from-crowi-onpremise.md',
+                '/en/admin-guide/migration-guide/from-bakudankun-crowi.md',
               ]
             },
             {
               title: 'System Admin Cookbook',
               collapsable: false,
               children: [
-                '/en/admin_guide/admin-cookbook/logging.md',
-                '/en/admin_guide/admin-cookbook/launch-with-systemd.md',
-                '/en/admin_guide/admin-cookbook/multi-app.md',
-                '/en/admin_guide/admin-cookbook/lets-encrypt.md',
-                '/en/admin_guide/admin-cookbook/mongodb-backup.md',
-                '/en/admin_guide/admin-cookbook/mongodb-backup-regular.md',
-                '/en/admin_guide/admin-cookbook/integrate-with-hackmd.md',
+                '/en/admin-guide/admin-cookbook/logging.md',
+                '/en/admin-guide/admin-cookbook/launch-with-systemd.md',
+                '/en/admin-guide/admin-cookbook/multi-app.md',
+                '/en/admin-guide/admin-cookbook/lets-encrypt.md',
+                '/en/admin-guide/admin-cookbook/mongodb-backup.md',
+                '/en/admin-guide/admin-cookbook/mongodb-backup-regular.md',
+                '/en/admin-guide/admin-cookbook/integrate-with-hackmd.md',
               ]
             },
             {
               title: 'GROWI App Admin Cookbook',
               collapsable: false,
               children: [
-                '/en/admin_guide/management-cookbook/line-breaks.md',
-                '/en/admin_guide/management-cookbook/attachment.md',
-                '/en/admin_guide/management-cookbook/ldap.md',
-                '/en/admin_guide/management-cookbook/active-directory.md',
-                '/en/admin_guide/management-cookbook/google-analytics.md',
-                '/en/admin_guide/management-cookbook/slack.md',
+                '/en/admin-guide/management-cookbook/line-breaks.md',
+                '/en/admin-guide/management-cookbook/attachment.md',
+                '/en/admin-guide/management-cookbook/ldap.md',
+                '/en/admin-guide/management-cookbook/active-directory.md',
+                '/en/admin-guide/management-cookbook/google-analytics.md',
+                '/en/admin-guide/management-cookbook/slack.md',
               ]
             },
           ],
@@ -223,7 +223,7 @@ module.exports = {
         nav: [
           { text: 'ホーム', link: '/ja/' },
           { text: 'ユーザーズガイド', link: '/ja/guide/' },
-          { text: '管理者ガイド', link: '/ja/admin_guide/' },
+          { text: '管理者ガイド', link: '/ja/admin-guide/' },
           { text: '開発ガイド', link: '/ja/dev/' },
           { text: 'API リファレンス (英語)', link: '/en/api/' },
           { text: 'リリースノート', link: 'https://github.com/weseek/growi/releases' },
@@ -275,65 +275,65 @@ module.exports = {
               title: 'その他のドキュメント',
               collapsable: false,
               children: [
-                ['/ja/admin_guide/', '管理者ガイド'],
+                ['/ja/admin-guide/', '管理者ガイド'],
                 ['/ja/dev/', '開発ガイド'],
                 ['/en/api/', 'API リファレンス (英語)'],
               ]
             },
           ],
-          '/ja/admin_guide/': [
-            '/ja/admin_guide/',
+          '/ja/admin-guide/': [
+            '/ja/admin-guide/',
             {
               title: 'インストール',
               collapsable: false,
               children: [
-                '/ja/admin_guide/getting-started/docker-compose.md',
-                '/ja/admin_guide/getting-started/heroku.md',
-                '/ja/admin_guide/getting-started/ubuntu-server.md',
-                '/ja/admin_guide/getting-started/centos.md'
+                '/ja/admin-guide/getting-started/docker-compose.md',
+                '/ja/admin-guide/getting-started/heroku.md',
+                '/ja/admin-guide/getting-started/ubuntu-server.md',
+                '/ja/admin-guide/getting-started/centos.md'
               ]
             },
             {
               title: 'アップグレード',
               collapsable: false,
               children: [
-                '/ja/admin_guide/upgrading/35x.md',
-                '/ja/admin_guide/upgrading/34x.md',
+                '/ja/admin-guide/upgrading/35x.md',
+                '/ja/admin-guide/upgrading/34x.md',
               ]
             },
             {
               title: '他システムからの移行',
               collapsable: true,
               children: [
-                '/ja/admin_guide/migration-guide/from-crowi-plus-onpremise.md',
-                '/ja/admin_guide/migration-guide/from-crowi-plus-docker-compose.md',
-                '/ja/admin_guide/migration-guide/from-crowi-onpremise.md',
-                '/ja/admin_guide/migration-guide/from-bakudankun-crowi.md',
+                '/ja/admin-guide/migration-guide/from-crowi-plus-onpremise.md',
+                '/ja/admin-guide/migration-guide/from-crowi-plus-docker-compose.md',
+                '/ja/admin-guide/migration-guide/from-crowi-onpremise.md',
+                '/ja/admin-guide/migration-guide/from-bakudankun-crowi.md',
               ]
             },
             {
               title: 'システム管理者のクックブック',
               collapsable: false,
               children: [
-                '/ja/admin_guide/admin-cookbook/logging.md',
-                '/ja/admin_guide/admin-cookbook/launch-with-systemd.md',
-                '/ja/admin_guide/admin-cookbook/multi-app.md',
-                '/ja/admin_guide/admin-cookbook/lets-encrypt.md',
-                '/ja/admin_guide/admin-cookbook/mongodb-backup.md',
-                '/ja/admin_guide/admin-cookbook/mongodb-backup-regular.md',
-                '/ja/admin_guide/admin-cookbook/integrate-with-hackmd.md',
+                '/ja/admin-guide/admin-cookbook/logging.md',
+                '/ja/admin-guide/admin-cookbook/launch-with-systemd.md',
+                '/ja/admin-guide/admin-cookbook/multi-app.md',
+                '/ja/admin-guide/admin-cookbook/lets-encrypt.md',
+                '/ja/admin-guide/admin-cookbook/mongodb-backup.md',
+                '/ja/admin-guide/admin-cookbook/mongodb-backup-regular.md',
+                '/ja/admin-guide/admin-cookbook/integrate-with-hackmd.md',
               ]
             },
             {
               title: 'GROWI 管理者のクックブック',
               collapsable: false,
               children: [
-                '/ja/admin_guide/management-cookbook/line-breaks.md',
-                '/ja/admin_guide/management-cookbook/attachment.md',
-                '/ja/admin_guide/management-cookbook/ldap.md',
-                '/ja/admin_guide/management-cookbook/active-directory.md',
-                '/ja/admin_guide/management-cookbook/google-analytics.md',
-                '/ja/admin_guide/management-cookbook/slack.md',
+                '/ja/admin-guide/management-cookbook/line-breaks.md',
+                '/ja/admin-guide/management-cookbook/attachment.md',
+                '/ja/admin-guide/management-cookbook/ldap.md',
+                '/ja/admin-guide/management-cookbook/active-directory.md',
+                '/ja/admin-guide/management-cookbook/google-analytics.md',
+                '/ja/admin-guide/management-cookbook/slack.md',
               ]
             },
           ],
