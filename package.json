@@ -37,7 +37,7 @@
     "apiv3:build": "run-s apiv3:jsdoc:build apiv3:redoc",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "commons:base": "vuepress-jsdoc --dist docs --folder api/commons --exclude test,*.test.js",
+    "commons:base": "vuepress-jsdoc --jsDocConfigPath jsdoc.config.json --dist docs/en --folder api/commons --exclude test,*.test.js",
     "commons:dev": "npm run commons:base -- --source ../growi-commons/src",
     "commons:build": "npm run commons:base -- --source ./node_modules/growi-commons/src",
     "start": "npm run docs:dev",
@@ -50,8 +50,8 @@
     "eslint-config-weseek": "^1.0.1",
     "eslint-plugin-import": "^2.16.0",
     "growi-commons": "weseek/growi-commons#master",
-    "markdown-it-task-lists": "^2.1.1",
     "markdown-it-footnote": "^3.0.2",
+    "markdown-it-task-lists": "^2.1.1",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.6.0",
     "prettier-stylelint": "^0.4.2",
@@ -67,5 +67,9 @@
     "node": ">=10.14 <11",
     "npm": ">=6.1.0 <7",
     "yarn": ">=1.12"
+  },
+  "dependencies": {
+    "vuepress-plugin-medium-zoom": "^1.1.6",
+    "vuepress-plugin-redirect": "^1.1.2"
   }
 }
