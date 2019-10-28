@@ -23,6 +23,12 @@ module.exports = {
         // it will automatically redirect `/foo/bar/` to `/:locale/foo/bar/` if exists
         locales: true
       },
+    ],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-55480073-15' // UA-00000000-0
+      }
     ]
   ],
   markdown: {
