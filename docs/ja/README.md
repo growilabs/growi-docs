@@ -3,12 +3,31 @@ home: true
 heroImage: https://user-images.githubusercontent.com/1638767/38254268-d4476bbe-3793-11e8-964c-8865d690baff.png
 actionText: ガイドを見る
 actionLink: /ja/guide/
-features:
-  - title: Markdown x Wiki
-    details: 左右2画面でのリアルタイムプレビューが可能。言語ごとのコードハイライトや絵文字や注釈(footnotes)、タスクリスト、Bootstrap による HTML コードにも対応しています。
-  - title: 高いカスタマイズ性
-    details: テーマ選択、認証機構の変更、ユーザーごとに Vim/Emacs/Sublime Text のキーマップを選択できたりと、管理者とユーザー両方に合わせた柔軟なカスタマイズが可能です。
-  - title: 育ち続けるプロジェクト
-    details: WESEEK, Inc. のエンジニアを中心とした活発なコミュニティが、システムを常に成長させ、ユーザーのみなさまと一緒により良いコミュニケーションツールの在り方を模索します。
 footer: © 2018 WESEEK, Inc.
 ---
+
+<div align="center">
+  <a href="https://github.com/weseek/growi/" target="_blank"><img src="https://img.shields.io/github/stars/weseek/growi.svg?style=social&label=Stars"></a>
+  <a href="https://github.com/weseek/growi/" target="_blank"><img src="https://img.shields.io/github/forks/weseek/growi.svg?style=social&label=Fork"></a>
+</div>
+
+<div align="center">
+  <a href="https://github.com/weseek/growi/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/weseek/growi.svg"></a>
+  <a href="https://growi-slackin.weseek.co.jp/" target="_blank"><img src="https://growi-slackin.weseek.co.jp/badge.svg"></a>
+  <a href="https://hub.docker.com/r/weseek/growi/" target="_blank"><img src="https://img.shields.io/docker/pulls/weseek/growi.svg" /></a>
+</div>
+
+<div class="features">
+  <div class="feature">
+    <h2>Markdown x Wiki</h2>
+    <p>左右2画面でのリアルタイムプレビューが可能。言語ごとのコードハイライトや絵文字や注釈(footnotes)、タスクリスト、Bootstrap による HTML コードにも対応しています。</p>
+  </div>
+  <div class="feature">
+    <h2>高いカスタマイズ性</h2>
+    <p>テーマ選択、認証機構の変更、ユーザーごとに Vim/Emacs/Sublime Text のキーマップを選択できたりと、管理者とユーザー両方に合わせた柔軟なカスタマイズが可能です。</p>
+  </div>
+  <div class="feature">
+    <h2>育ち続けるプロジェクト</h2>
+    <p>WESEEK, Inc. のエンジニアを中心とした活発なコミュニティが、システムを常に成長させ、ユーザーのみなさまと一緒により良いコミュニケーションツールの在り方を模索します。</p>
+  </div>
+</div>

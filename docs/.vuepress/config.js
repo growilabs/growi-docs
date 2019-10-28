@@ -91,15 +91,15 @@ module.exports = {
                 '/en/guide/features/history.md',
                 '/en/guide/features/blockdiag.md',
                 '/en/guide/features/bootstrap.md',
-                '/en/guide/features/uml_diagrams.md'
+                '/en/guide/features/uml_diagrams.md',
+                '/en/guide/features/template.md'
               ]
             },
             {
               title: 'Tips',
               collapsable: false,
               children: [
-                '/en/guide/tips/hierarchical.md',
-                '/en/guide/tips/template.md'
+                '/en/guide/tips/hierarchical.md'
               ]
             },
             {
@@ -260,15 +260,15 @@ module.exports = {
                 '/ja/guide/features/history.md',
                 '/ja/guide/features/blockdiag.md',
                 '/ja/guide/features/bootstrap.md',
-                '/ja/guide/features/uml_diagrams.md'
+                '/ja/guide/features/uml_diagrams.md',
+                '/ja/guide/features/template.md'
               ]
             },
             {
               title: 'Tips (活用例)',
               collapsable: false,
               children: [
-                '/ja/guide/tips/hierarchical.md',
-                '/ja/guide/tips/template.md'
+                '/ja/guide/tips/hierarchical.md'
               ]
             },
             {
