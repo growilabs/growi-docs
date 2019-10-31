@@ -30,8 +30,8 @@
   },
   "scripts": {
     "apiv3:jsdoc:base": "swagger-jsdoc -o tmp/swagger.json",
-    "apiv3:jsdoc:dev": "npm run apiv3:jsdoc:base -- -d ../growi/config/swagger-definition.js ../growi/src/server/**/*.js",
-    "apiv3:jsdoc:build": "npm run apiv3:jsdoc:base -- -d tmp/growi/config/swagger-definition.js tmp/growi/src/server/**/*.js",
+    "apiv3:jsdoc:dev": "npm run apiv3:jsdoc:base -- -d ../growi/config/swagger-definition.js \"../growi/src/server/**/*.js\"",
+    "apiv3:jsdoc:build": "npm run apiv3:jsdoc:base -- -d tmp/growi/config/swagger-definition.js \"tmp/growi/src/server/**/*.js\"",
     "apiv3:redoc": "redoc-cli bundle -o docs/.vuepress/public/redoc.html tmp/swagger.json",
     "apiv3:dev": "run-s apiv3:jsdoc:dev apiv3:redoc",
     "apiv3:build": "run-s apiv3:jsdoc:build apiv3:redoc",
