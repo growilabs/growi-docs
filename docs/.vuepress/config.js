@@ -29,6 +29,12 @@ module.exports = {
       {
         'ga': 'UA-55480073-15' // UA-00000000-0
       }
+    ],
+    [
+      'sitemap',
+      {
+        'hostname': 'https://docs.growi.org'
+      }
     ]
   ],
   markdown: {
