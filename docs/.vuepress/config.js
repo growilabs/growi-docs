@@ -1,9 +1,42 @@
-const growiCommonsConfig = require('../api/commons/config');
+const growiCommonsConfig = require('../en/api/commons/config');
 
 module.exports = {
   title: 'GROWI Docs',
   serviceWorker: true,
-  plugins: [ 'tabs' ],
+  plugins: [
+    'tabs',
+    [
+      'vuepress-plugin-medium-zoom',
+      {
+        selector: '.content img',
+        delay: 1000,
+        options: {
+          margin: 24,
+          scrollOffset: 0,
+        },
+      },
+    ],
+    [
+      'vuepress-plugin-redirect',
+      {
+        // provide i18n redirection
+        // it will automatically redirect `/foo/bar/` to `/:locale/foo/bar/` if exists
+        locales: true
+      },
+    ],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-55480073-15' // UA-00000000-0
+      }
+    ],
+    [
+      'sitemap',
+      {
+        'hostname': 'https://docs.growi.org'
+      }
+    ]
+  ],
   markdown: {
     toc: { includeLevel: [2] },
     extendMarkdown: md => {
@@ -12,7 +45,7 @@ module.exports = {
     },
   },
   locales: {
-    '/': {
+    '/en/': {
       lang: 'en-US',
       description: 'GROWI Documentation Site',
     },
@@ -28,13 +61,14 @@ module.exports = {
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
     locales: {
-      '/': {
+      '/en/': {
         label: 'English',
         nav: [
-          { text: 'Home', link: '/' },
-          { text: 'Users Guide', link: '/guide/' },
-          { text: 'Developers Guide', link: '/dev/' },
-          { text: 'API Reference', link: '/api/' },
+          { text: 'Home', link: '/en/' },
+          { text: 'Users Guide', link: '/en/guide/' },
+          { text: 'Admin Guide', link: '/en/admin-guide/' },
+          { text: 'Developers Guide', link: '/en/dev/' },
+          { text: 'API Reference', link: '/en/api/' },
           { text: 'Release Note', link: 'https://github.com/weseek/growi/releases' },
           {
             text: 'External Sites',
@@ -46,117 +80,152 @@ module.exports = {
           }
         ],
         sidebar: Object.assign(growiCommonsConfig.sidebarTree('Overview'), {
-          '/guide/': [
-            '/guide/',
+          '/en/guide/': [
+            '/en/guide/',
+            {
+              title: 'Getting started',
+              collapsable: false,
+              children: [
+                '/en/guide/getting-started/five_minutes.md',
+                '/en/guide/getting-started/markdown.md',
+              ]
+            },
+            {
+              title: 'Features',
+              collapsable: false,
+              children: [
+                '/en/guide/features/page_layout.md',
+                '/en/guide/features/copy_to_clipboard.md',
+                '/en/guide/features/table.md',
+                '/en/guide/features/bookmark.md',
+                '/en/guide/features/page_operation.md',
+                '/en/guide/features/emoji.md',
+                '/en/guide/features/history.md',
+                '/en/guide/features/blockdiag.md',
+                '/en/guide/features/bootstrap.md',
+                '/en/guide/features/uml_diagrams.md',
+                '/en/guide/features/template.md'
+              ]
+            },
+            {
+              title: 'Tips',
+              collapsable: false,
+              children: [
+                '/en/guide/tips/hierarchical.md'
+              ]
+            },
+            {
+              title: 'Other Documents',
+              collapsable: false,
+              children: [
+                ['/en/admin-guide/', 'Admin Guide'],
+                ['/en/dev/', 'Developers Guide'],
+                ['/en/api/', 'API Reference'],
+              ]
+            },
+          ],
+          '/en/admin-guide/': [
+            '/en/admin-guide/',
             {
               title: 'Install',
               collapsable: false,
               children: [
-                '/guide/getting-started/docker-compose.md',
-                '/guide/getting-started/heroku.md',
-                '/guide/getting-started/ubuntu-server.md',
-                '/guide/getting-started/centos.md',
-                '/guide/getting-started/raspberry-pi.md',
+                '/en/admin-guide/getting-started/docker-compose.md',
+                '/en/admin-guide/getting-started/heroku.md',
+                '/en/admin-guide/getting-started/ubuntu-server.md',
+                '/en/admin-guide/getting-started/centos.md'
               ]
             },
             {
               title: 'Upgrading',
               collapsable: false,
               children: [
-                '/guide/upgrading/35x.md',
-                '/guide/upgrading/34x.md',
+                '/en/admin-guide/upgrading/35x.md',
+                '/en/admin-guide/upgrading/34x.md',
               ]
             },
             {
               title: 'Migration form other system',
               collapsable: true,
               children: [
-                '/guide/migration-guide/from-crowi-plus-onpremise.md',
-                '/guide/migration-guide/from-crowi-plus-docker-compose.md',
-                '/guide/migration-guide/from-crowi-onpremise.md',
-                '/guide/migration-guide/from-bakudankun-crowi.md',
+                '/en/admin-guide/migration-guide/from-crowi-plus-onpremise.md',
+                '/en/admin-guide/migration-guide/from-crowi-plus-docker-compose.md',
+                '/en/admin-guide/migration-guide/from-crowi-onpremise.md',
+                '/en/admin-guide/migration-guide/from-bakudankun-crowi.md',
               ]
             },
             {
               title: 'System Admin Cookbook',
               collapsable: false,
               children: [
-                '/guide/admin-cookbook/logging.md',
-                '/guide/admin-cookbook/launch-with-systemd.md',
-                '/guide/admin-cookbook/multi-app.md',
-                '/guide/admin-cookbook/lets-encrypt.md',
-                '/guide/admin-cookbook/mongodb-backup.md',
-                '/guide/admin-cookbook/mongodb-backup-regular.md',
-                '/guide/admin-cookbook/integrate-with-hackmd.md',
+                '/en/admin-guide/admin-cookbook/logging.md',
+                '/en/admin-guide/admin-cookbook/launch-with-systemd.md',
+                '/en/admin-guide/admin-cookbook/multi-app.md',
+                '/en/admin-guide/admin-cookbook/lets-encrypt.md',
+                '/en/admin-guide/admin-cookbook/mongodb-backup.md',
+                '/en/admin-guide/admin-cookbook/mongodb-backup-regular.md',
+                '/en/admin-guide/admin-cookbook/integrate-with-hackmd.md',
               ]
             },
             {
               title: 'GROWI App Admin Cookbook',
               collapsable: false,
               children: [
-                '/guide/management-cookbook/line-breaks.md',
-                '/guide/management-cookbook/attachment.md',
-                '/guide/management-cookbook/ldap.md',
-                '/guide/management-cookbook/active-directory.md',
-                '/guide/management-cookbook/google-analytics.md',
-                '/guide/management-cookbook/slack.md',
-              ]
-            },
-            {
-              title: 'Other Documents',
-              collapsable: false,
-              children: [
-                ['/dev/', 'Developers Guide'],
-                ['/api/', 'API Reference'],
+                '/en/admin-guide/management-cookbook/line-breaks.md',
+                '/en/admin-guide/management-cookbook/attachment.md',
+                '/en/admin-guide/management-cookbook/ldap.md',
+                '/en/admin-guide/management-cookbook/active-directory.md',
+                '/en/admin-guide/management-cookbook/google-analytics.md',
+                '/en/admin-guide/management-cookbook/slack.md',
               ]
             },
           ],
-          '/dev/': [
-            '/dev/',
+          '/en/dev/': [
+            '/en/dev/',
             {
               title: 'Getting Started',
               collapsable: false,
               children: [
-                '/dev/startup/dev-env.md',
-                '/dev/startup/launch.md',
+                '/en/dev/startup/dev-env.md',
+                '/en/dev/startup/launch.md',
               ],
             },
             {
               title: 'Tips',
               collapsable: false,
               children: [
-                '/dev/tips/env-vars.md',
-                '/dev/tips/logger.md',
-                '/dev/tips/debug-with-vscode.md',
+                '/en/dev/tips/env-vars.md',
+                '/en/dev/tips/logger.md',
+                '/en/dev/tips/debug-with-vscode.md',
               ],
             },
             {
               title: 'Plugin',
               collapsable: false,
               children: [
-                '/dev/plugin/architecture.md',
-                '/dev/plugin/quick-start.md',
-                '/dev/plugin/publish.md',
-                '/dev/plugin/walk-through-boilerplate.md',
-                '/dev/plugin/metadata.md',
-                '/dev/plugin/custom-tag.md',
-                '/dev/plugin/custom-route.md',
+                '/en/dev/plugin/architecture.md',
+                '/en/dev/plugin/quick-start.md',
+                '/en/dev/plugin/publish.md',
+                '/en/dev/plugin/walk-through-boilerplate.md',
+                '/en/dev/plugin/metadata.md',
+                '/en/dev/plugin/custom-tag.md',
+                '/en/dev/plugin/custom-route.md',
               ],
             },
             {
               title: 'Other Documents',
               collapsable: false,
               children: [
-                ['/guide/', 'Users Guide'],
-                ['/api/', 'API Reference'],
+                ['/en/guide/', 'Users Guide'],
+                ['/en/api/', 'API Reference'],
               ]
             },
           ],
-          '/api/': [
-            ['/api/', 'Introduction'],
-            '/api/commons/',
-            '/api/rest-v3.md',
-            '/api/rest-v1.md',
+          '/en/api/': [
+            ['/en/api/', 'Introduction'],
+            '/en/api/commons/',
+            '/en/api/rest-v3.md',
+            '/en/api/rest-v1.md',
           ]
         }),
       },
@@ -166,8 +235,9 @@ module.exports = {
         nav: [
           { text: 'ホーム', link: '/ja/' },
           { text: 'ユーザーズガイド', link: '/ja/guide/' },
+          { text: '管理者ガイド', link: '/ja/admin-guide/' },
           { text: '開発ガイド', link: '/ja/dev/' },
-          { text: 'API リファレンス (英語)', link: '/api/' },
+          { text: 'API リファレンス (英語)', link: '/en/api/' },
           { text: 'リリースノート', link: 'https://github.com/weseek/growi/releases' },
           {
             text: '外部サイト',
@@ -182,65 +252,100 @@ module.exports = {
           '/ja/guide/': [
             '/ja/guide/',
             {
-              title: 'インストール',
+              title: 'GROWI を始めよう',
               collapsable: false,
               children: [
-                '/ja/guide/getting-started/docker-compose.md',
-                '/ja/guide/getting-started/heroku.md',
-                '/ja/guide/getting-started/ubuntu-server.md',
-                '/ja/guide/getting-started/centos.md',
-                '/ja/guide/getting-started/raspberry-pi.md',
+                '/ja/guide/getting-started/five_minutes.md',
+                '/ja/guide/getting-started/markdown.md',
               ]
             },
             {
-              title: 'アップグレード',
+              title: '機能紹介',
               collapsable: false,
               children: [
-                '/ja/guide/upgrading/35x.md',
-                '/ja/guide/upgrading/34x.md',
+                '/ja/guide/features/page_layout.md',
+                '/ja/guide/features/copy_to_clipboard.md',
+                '/ja/guide/features/table.md',
+                '/ja/guide/features/bookmark.md',
+                '/ja/guide/features/page_operation.md',
+                '/ja/guide/features/emoji.md',
+                '/ja/guide/features/history.md',
+                '/ja/guide/features/blockdiag.md',
+                '/ja/guide/features/bootstrap.md',
+                '/ja/guide/features/uml_diagrams.md',
+                '/ja/guide/features/template.md'
               ]
             },
             {
-              title: '他システムからの移行',
-              collapsable: true,
-              children: [
-                '/ja/guide/migration-guide/from-crowi-plus-onpremise.md',
-                '/ja/guide/migration-guide/from-crowi-plus-docker-compose.md',
-                '/ja/guide/migration-guide/from-crowi-onpremise.md',
-                '/ja/guide/migration-guide/from-bakudankun-crowi.md',
-              ]
-            },
-            {
-              title: 'システム管理者のクックブック',
+              title: 'Tips (活用例)',
               collapsable: false,
               children: [
-                '/ja/guide/admin-cookbook/logging.md',
-                '/ja/guide/admin-cookbook/launch-with-systemd.md',
-                '/ja/guide/admin-cookbook/multi-app.md',
-                '/ja/guide/admin-cookbook/lets-encrypt.md',
-                '/ja/guide/admin-cookbook/mongodb-backup.md',
-                '/ja/guide/admin-cookbook/mongodb-backup-regular.md',
-                '/ja/guide/admin-cookbook/integrate-with-hackmd.md',
-              ]
-            },
-            {
-              title: 'GROWI 管理者のクックブック',
-              collapsable: false,
-              children: [
-                '/ja/guide/management-cookbook/line-breaks.md',
-                '/ja/guide/management-cookbook/attachment.md',
-                '/ja/guide/management-cookbook/ldap.md',
-                '/ja/guide/management-cookbook/active-directory.md',
-                '/ja/guide/management-cookbook/google-analytics.md',
-                '/ja/guide/management-cookbook/slack.md',
+                '/ja/guide/tips/hierarchical.md'
               ]
             },
             {
               title: 'その他のドキュメント',
               collapsable: false,
               children: [
+                ['/ja/admin-guide/', '管理者ガイド'],
                 ['/ja/dev/', '開発ガイド'],
-                ['/api/', 'API リファレンス (英語)'],
+                ['/en/api/', 'API リファレンス (英語)'],
+              ]
+            },
+          ],
+          '/ja/admin-guide/': [
+            '/ja/admin-guide/',
+            {
+              title: 'インストール',
+              collapsable: false,
+              children: [
+                '/ja/admin-guide/getting-started/docker-compose.md',
+                '/ja/admin-guide/getting-started/heroku.md',
+                '/ja/admin-guide/getting-started/ubuntu-server.md',
+                '/ja/admin-guide/getting-started/centos.md'
+              ]
+            },
+            {
+              title: 'アップグレード',
+              collapsable: false,
+              children: [
+                '/ja/admin-guide/upgrading/35x.md',
+                '/ja/admin-guide/upgrading/34x.md',
+              ]
+            },
+            {
+              title: '他システムからの移行',
+              collapsable: true,
+              children: [
+                '/ja/admin-guide/migration-guide/from-crowi-plus-onpremise.md',
+                '/ja/admin-guide/migration-guide/from-crowi-plus-docker-compose.md',
+                '/ja/admin-guide/migration-guide/from-crowi-onpremise.md',
+                '/ja/admin-guide/migration-guide/from-bakudankun-crowi.md',
+              ]
+            },
+            {
+              title: 'システム管理者のクックブック',
+              collapsable: false,
+              children: [
+                '/ja/admin-guide/admin-cookbook/logging.md',
+                '/ja/admin-guide/admin-cookbook/launch-with-systemd.md',
+                '/ja/admin-guide/admin-cookbook/multi-app.md',
+                '/ja/admin-guide/admin-cookbook/lets-encrypt.md',
+                '/ja/admin-guide/admin-cookbook/mongodb-backup.md',
+                '/ja/admin-guide/admin-cookbook/mongodb-backup-regular.md',
+                '/ja/admin-guide/admin-cookbook/integrate-with-hackmd.md',
+              ]
+            },
+            {
+              title: 'GROWI 管理者のクックブック',
+              collapsable: false,
+              children: [
+                '/ja/admin-guide/management-cookbook/line-breaks.md',
+                '/ja/admin-guide/management-cookbook/attachment.md',
+                '/ja/admin-guide/management-cookbook/ldap.md',
+                '/ja/admin-guide/management-cookbook/active-directory.md',
+                '/ja/admin-guide/management-cookbook/google-analytics.md',
+                '/ja/admin-guide/management-cookbook/slack.md',
               ]
             },
           ],
@@ -281,10 +386,16 @@ module.exports = {
               collapsable: false,
               children: [
                 ['/ja/guide/', 'ユーザーズガイド'],
-                ['/api/', 'API リファレンス (英語)'],
+                ['/en/api/', 'API リファレンス (英語)'],
               ]
             },
           ],
+          '/en/api/': [
+            ['/en/api/', 'Introduction'],
+            '/en/api/commons/',
+            '/en/api/rest-v3.md',
+            '/en/api/rest-v1.md',
+          ]
         }
       },
     },

@@ -16,6 +16,7 @@ deploy:
       code: |
         echo -n "node " && node -v
         echo -n "npm " && npm -v
+        echo -n "yarn " && yarn -v
         yarn list --depth=0
 
     - script:

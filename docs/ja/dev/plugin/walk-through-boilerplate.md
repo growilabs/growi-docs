@@ -10,7 +10,7 @@ growi-plugin-boilerplate をインストールすると、`$foo` タグおよび
 利用時の全体の流れは以下のようになります。
 
 1. ユーザーが Markdown 入力中、`$foo` タグおよび `$bar` タグを利用する
-1. Markdown レンダラーに登録された [BasicInterceptor](/api/commons/util/basic-interceptor.md) 拡張が上記タグの利用を検出し、React Component を描画
+1. Markdown レンダラーに登録された [BasicInterceptor](/en/api/commons/util/basic-interceptor.md) 拡張が上記タグの利用を検出し、React Component を描画
     - `$foo` タグの場合は `Foo` コンポーネント、`$bar` タグの場合は `Bar` コンポーネントを描画する
 1. `Bar` コンポーネントは、初期化後に REST によるサーバーサイド API アクセスを行い、取得した情報を描画
 
@@ -24,10 +24,10 @@ growi-plugin-boilerplate をインストールすると、`$foo` タグおよび
     ::: tip
     エントリーポイントの概要については、[アーキテクチャ](./architecture.md) のページを確認してください
     :::
-- `interceptorManager` に対し、2つの [BasicInterceptor](/api/commons/util/basic-interceptor.md) 拡張クラスのインスタンスを登録しています
+- `interceptorManager` に対し、2つの [BasicInterceptor](/en/api/commons/util/basic-interceptor.md) 拡張クラスのインスタンスを登録しています
 
 
-### 2つの [BasicInterceptor](/api/commons/util/basic-interceptor.md) 拡張
+### 2つの [BasicInterceptor](/en/api/commons/util/basic-interceptor.md) 拡張
 
 - `FooBarPreRenderInterceptor`
     - このクラスは、本体側が Markdown の解析段階で発火するイベントに反応するような設計になっています

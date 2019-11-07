@@ -18,7 +18,7 @@ package-lock.json
 # Dist #
 docs/.vuepress/dist
 docs/.vuepress/public/redoc.html
-docs/api/commons
+docs/en/api/commons
 tmp
 
 # Doc #
