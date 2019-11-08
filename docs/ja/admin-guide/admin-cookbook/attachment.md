@@ -4,7 +4,7 @@
 
 ## 概要
 
-- GROWI ページの添付ファイルの保存先は、環境変数によりMongoDB GridFS、AWS S3、Google Cloud Storage、ローカルファイルシステムから選択できます。
+- GROWI ページの添付ファイルの保存先は、環境変数によりMongoDB GridFS、AWS S3、Google Cloud Storage、ローカルファイルシステムから選択できます。デフォルトでは AWS S3 が選択されています。
 - ファイル保存先を途中で変更すると、これまでにアップロードしたファイル等へのアクセスができなくなりますのでご注意ください。
 
 ## MongoDB GridFS へのアップロード
