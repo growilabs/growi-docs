@@ -1,35 +1,61 @@
-# ファイルのアップロード設定
+# ファイルアップロード設定
 
 [[toc]]
 
 ## 概要
 
+GROWI ページへのファイルアップロードに関する設定について紹介します。
+
+## アップロード先の指定
+
 GROWI ページの添付ファイルの保存先は、環境変数によりMongoDB GridFS、AWS S3、Google Cloud Storage、ローカルファイルシステムから選択できます。デフォルトでは AWS S3 が選択されています。
 
+::: danger
 ファイル保存先を途中で変更すると、これまでにアップロードしたファイル等へのアクセスができなくなりますのでご注意ください。
+:::
 
-## MongoDB GridFS へのアップロード
+### MongoDB GridFS へのアップロード
 
-GROWI データの保存先に指定している MongoDB に [GridFS](https://docs.mongodb.com/manual/core/gridfs/) を利用し、ファイルが保存されます。
+GROWI データの保存先に指定している MongoDB に [GridFS](https://docs.mongodb.com/manual/core/gridfs/) を利用し、ファイルを保存します。
 
-環境変数 `FILE_UPLOAD` に `mongodb` を設定し、GROWI を起動することで MongoDB にファイルがアップロードされるようになります。
+利用するには以下のように環境変数を設定し、GROWI を再起動してください。
 
-## AWS S3 へのアップロード
+- `FILE_UPLOAD` : 'mongodb'
+- `MONGO_GRIDFS_TOTAL_LIMIT` (Optional): [MongoDB GridFS によりアップロードされたファイルの累計サイズの上限(bytes)] 
 
-App 設定画面の AWS 設定にて登録されている AWS S3 Bucketにファイルが保存されます。
+`MONGO_GRIDFS_TOTAL_LIMIT` を設定することで、MongoDB GridFS によりアップロードされたファイルの累計サイズを制限することができます。ここで設定した上限値は、 後述の `FILE_UPLOAD_TOTAL_LIMIT` で設定した値よりも優先されます。
 
-環境変数 `FILE_UPLOAD` に `aws` を設定し、GROWI を起動することで GROWI に登録してある AWS S3 Bucket の `attachment` フォルダ配下にファイルがアップロードされるようになります。
+### AWS S3 へのアップロード
+
+App 設定画面の AWS 設定にて登録されている AWS S3 Bucketにファイルを保存します。
+
+利用するには以下のように環境変数を設定し、GROWI を再起動してください。`FILE_UPLOAD` が未設定の場合も AWS S3 へのファイルアップロードが採用されます。
+
+- `FILE_UPLOAD` : 'aws' (Default)
 
 AWS S3 Bucket のセットアップが未完了の場合は、[こちら](../management-cookbook/aws-s3-bucket-setting.md)を参考にセットアップしてください。
 
-## Google Cloud Storage へのアップロード
+### Google Cloud Storage へのアップロード
 
-環境変数で指定された Google Cloud Storage にファイルが保存されます。
+環境変数で指定された Google Cloud Storage にファイルを保存します。
 
-環境変数 `FILE_UPLOAD` に `gcs`、 `GCS_API_KEY_JSON_PATH` に GCP API の json パス、`GCS_BUCKET` に GCS Bucket 名を設定し、GROWI を起動することで MongoDB にファイルがアップロードされるようになります。
+利用するには、以下のように環境変数を設定し、GROWI を再起動してください。
 
-## ファイルシステムへのアップロード
+- `FILE_UPLOAD` : 'gcs' 
+- `GCS_API_KEY_JSON_PATH` : [GCP API の json パス]
+- `GCS_BUCKET` : [GCS Bucket 名] 
 
-GROWI が立ち上がっているPCのファイルシステムにファイルが保存されます。
+### ファイルシステムへのアップロード
 
-環境変数 `FILE_UPLOAD` に `local` を設定し、GROWI を起動することでPCのファイルシステムの `public/uploads/attachment` ディレクトリ配下にファイルがアップロードされるようになります。
+GROWI が立ち上がっている PC のファイルシステムにファイルを保存します。
+
+利用するには以下のように環境変数を設定し、GROWI を再起動してください。
+
+- `FILE_UPLOAD` : 'local' 
+
+##  添付ファイルのサイズ制限
+
+以下の環境変数により、一度にアップロードできるファイルのサイズ上限と全ページに添付されているファイルの累計サイズの上限を設定することができます。いずれも単位は `bytes` です。デフォルトではいずれの値も `Infinity` となっており、ファイルサイズは制限されません。
+
+- `MAX_FILE_SIZE` : [アップロード可能なファイルのサイズ上限(bytes)]
+- `FILE_UPLOAD_TOTAL_LIMIT` : [アップロードされたファイルの累計サイズ上限(bytes)]
