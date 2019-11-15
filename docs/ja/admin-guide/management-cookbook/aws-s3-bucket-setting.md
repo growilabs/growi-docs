@@ -12,7 +12,7 @@ AWS S3 への接続設定の手順を紹介します。
 
 ### AWS アカウント情報の取得
 
-1. [AWS マネジメントコンソール](https://aws.amazon.com/jp/console/) にサインインし、ナビバー右上のアカウント名をクリックすると表示されるドロップダウンから、 [AWS IAM のセキュリティ認証情報ページ](https://console.aws.amazon.com/iam/home?#/security_credentials) を選択します。
+1. [AWS マネジメントコンソール](https://aws.amazon.com/jp/console/) にサインインし、ナビバー右上のアカウント名をクリックすると表示されるドロップダウンから、 [マイセキュリティ資格情報]](https://console.aws.amazon.com/iam/home?#/security_credentials) を選択します。
 2. 「アクセスキー(アクセスキー ID とシークレットアクセスキー)」を展開し、AWS アカウントのAccess Key ID および Secret Access Key を作成、保管します。
 3. 「アカウント ID」を展開し、正規ユーザー ID を確認します。
 
