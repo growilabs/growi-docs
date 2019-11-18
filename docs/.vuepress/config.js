@@ -113,7 +113,8 @@ module.exports = {
               children: [
                 '/en/guide/tips/hierarchical.md',
                 '/en/guide/tips/include_html.md',
-                '/en/guide/tips/checkbox.md'
+                '/en/guide/tips/checkbox.md',
+                '/en/guide/tips/page_linker.md'
               ]
             },
             {
@@ -284,7 +285,8 @@ module.exports = {
               children: [
                 '/ja/guide/tips/hierarchical.md',
                 '/ja/guide/tips/include_html.md',
-                '/ja/guide/tips/checkbox.md'
+                '/ja/guide/tips/checkbox.md',
+                '/ja/guide/tips/page_linker.md'
               ]
             },
             {
