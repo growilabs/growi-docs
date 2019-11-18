@@ -26,10 +26,10 @@ GROWI では、注釈（脚注）を記述することが出来ます。
 
 ### 参考
 
-![](./images/footnote.png)
+![footnote](./images/footnote.png)
 
 
-```
+```markdown
 ## 注釈
 注釈を設定すると、ページ最下部にその内容が展開されます。
 

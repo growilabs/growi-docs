@@ -2,9 +2,9 @@
 
 GROWI では、マークダウン記法でチェックボックスを記述する事が出来ます。
 
-![](./images/checkbox_sample.png)
+![checkbox](./images/checkbox.png)
 
-```
+```markdown
 
 # 実績確認
 - TODO リスト
