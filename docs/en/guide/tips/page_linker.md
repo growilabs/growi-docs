@@ -25,7 +25,7 @@ a link will be generated like an image.
 The format is the title and path between `[[` and `]]`.
 
 `Title` and`Reference page` are separated by `>` symbol
-and written like `Title>Reference page`
+and written like `Title>Reference page`.
 
 The title is optional.
 The reference page can be described as a relative link based on the page being described.

@@ -16,4 +16,4 @@ In GROWI, you can describe check boxes using markdown notation.
 ```
 
 When the above Markdown description is pasted into a GROWI article,
-it will be reflected on the page like an image
+it will be reflected on the page like an image.
