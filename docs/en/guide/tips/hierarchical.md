@@ -48,7 +48,8 @@ specify them as follows, separated by a comma.
 You can specify the number of output pages.
 
 You can specify the number of displays as `$lsx(num=5)`.
-Displays the specified number of pages from the first to the Specified number of pages.
+Displays the specified number of pages
+from the first to the Specified number of pages.
 
 
 Specify with numbers and colons or plus signs,
