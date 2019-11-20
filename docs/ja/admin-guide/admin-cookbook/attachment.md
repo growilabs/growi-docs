@@ -21,9 +21,6 @@ GROWI データの保存先に指定している MongoDB に [GridFS](https://do
 利用するには以下のように環境変数を設定し、GROWI を再起動してください。
 
 - `FILE_UPLOAD` : 'mongodb'
-- `MONGO_GRIDFS_TOTAL_LIMIT` (Optional): [MongoDB GridFS によりアップロードされたファイルの累計サイズの上限(bytes)] 
-
-`MONGO_GRIDFS_TOTAL_LIMIT` を設定することで、MongoDB GridFS によりアップロードされたファイルの累計サイズを制限することができます。ここで設定した上限値は、 後述の `FILE_UPLOAD_TOTAL_LIMIT` で設定した値よりも優先されます。
 
 ### AWS S3 へのアップロード
 
@@ -39,7 +36,7 @@ AWS S3 Bucket のセットアップが未完了の場合は、[こちら](../man
 
 環境変数で指定された Google Cloud Storage にファイルを保存します。
 
-利用するには、以下のように環境変数を設定し、GROWI を再起動してください。
+利用するには、GROWI のルートディレクトリ配下に GCP API KEY の json ファイルを配置した後、ファイルシステム以下のように環境変数を設定し、GROWI を再起動してください。
 
 - `FILE_UPLOAD` : 'gcs' 
 - `GCS_API_KEY_JSON_PATH` : [GCP API の json パス]
@@ -47,7 +44,7 @@ AWS S3 Bucket のセットアップが未完了の場合は、[こちら](../man
 
 ### ファイルシステムへのアップロード
 
-GROWI が立ち上がっている PC のファイルシステムにファイルを保存します。
+GROWI が立ち上がっているコンピュータのファイルシステムにファイルを保存します。
 
 利用するには以下のように環境変数を設定し、GROWI を再起動してください。
 
