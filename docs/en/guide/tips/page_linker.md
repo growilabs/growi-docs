@@ -1,12 +1,11 @@
 # Write a page link
 
+![page_linker](./images/page_linker.png)
 
 In GROWI, it is possible to describe in the reference form
 as follows how to write a link to each page.
 
 ## How to write page links
-
-![page_linker](./images/page_linker.png)
 
 ```markdown
 ## How to write page links

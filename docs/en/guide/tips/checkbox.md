@@ -1,9 +1,8 @@
 # Use checkbox
 
-In GROWI, you can describe check boxes using markdown notation.
-
-
 ![checkbox](./images/checkbox.png)
+
+In GROWI, you can describe check boxes using markdown notation.
 
 ```markdown
 
