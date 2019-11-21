@@ -22,7 +22,7 @@ GROWI では、記事の編集画面に直接 HTML を埋め込む事も可能�
 ![iframe](./images/include_iframe.png)
 
 ```markdown
-<iframe width="30%" height="30%" src="https://www.youtube.com/embed/YE7VzlLtp-4https://www.youtube.com/embed/9cKsq14Kfsw"
+<iframe width="30%" height="30%" src="https://www.youtube.com/embed/YE7VzlLtp-4"
 frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

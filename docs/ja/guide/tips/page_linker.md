@@ -1,10 +1,10 @@
 # ページリンクを記述する
 
+![page_linker](./images/page_linker.png)
+
 GROWI では、各ページへのリンクの書き方として、以下のように参照形式で記述することが出来ます。
 
 ## ページリンクの書き方
-
-![page_linker](./images/page_linker.png)
 
 ```markdown
 ## リンクの書き方
