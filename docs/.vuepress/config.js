@@ -111,7 +111,11 @@ module.exports = {
               title: 'Tips',
               collapsable: false,
               children: [
-                '/en/guide/tips/hierarchical.md'
+                '/en/guide/tips/hierarchical.md',
+                '/en/guide/tips/include_html.md',
+                '/en/guide/tips/checkbox.md',
+                '/en/guide/tips/page_linker.md',
+                '/en/guide/tips/footnote.md'
               ]
             },
             {
@@ -280,7 +284,11 @@ module.exports = {
               title: 'Tips (活用例)',
               collapsable: false,
               children: [
-                '/ja/guide/tips/hierarchical.md'
+                '/ja/guide/tips/hierarchical.md',
+                '/ja/guide/tips/include_html.md',
+                '/ja/guide/tips/checkbox.md',
+                '/ja/guide/tips/page_linker.md',
+                '/ja/guide/tips/footnote.md'
               ]
             },
             {
