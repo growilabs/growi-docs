@@ -264,6 +264,13 @@ module.exports = {
               ]
             },
             {
+              title: 'チュートリアル',
+              collapsable: false,
+              children: [
+                '/ja/guide/tutorial/create_page.md',
+              ]
+            },
+            {
               title: '機能紹介',
               collapsable: false,
               children: [
