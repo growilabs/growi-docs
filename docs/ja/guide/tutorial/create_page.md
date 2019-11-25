@@ -48,7 +48,7 @@ GROWI は、wiki ページを作成するシステムです。
 
 ```
 
-![create](./images/tutorial_page1.png)
+![page](./images/tutorial_page1.png)
 
 貼り付けると下記のように内容がリアルタイムに反映されたプレビューが画面右側に表示されます。
 
@@ -56,7 +56,7 @@ GROWI は、wiki ページを作成するシステムです。
 
 編集したら、「作成」ボタンをクリックします。
 
-![create](./images/tutorial_page2.png)
+![page](./images/tutorial_page2.png)
 
 クリックすると、記事が作成され、画像のようにページが参照出来るようになります。
 
@@ -70,7 +70,7 @@ GROWI は、wiki ページを作成するシステムです。
 
 半角シャープは 2つ、3つと増やすごとに、階層化されます。
 
-![create](./images/tutorial_page2.png)
+![page](./images/tutorial_page2.png)
 
 見出しを作成すると、ページ左側に索引が自動的に作成されるので、積極的に活用しましょう。
 
@@ -112,13 +112,13 @@ GROWI は、wiki ページを作成するシステムです。
 一つ目の段落の次の行を開始する時に、半角スペースを2つまたは Tab キーを入力してインデントして文章を書いてください。
 
 
-![create](./images/edit_text.png)
+![text](./images/edit_text.png)
 
 段落として文書が階層化されるのがプレビュー画面で確認できます。
 
 本文の階層化で、文書の内容を整理しましょう。
 
-![create](./images/view_text.png)
+![text](./images/view_text.png)
 
 文章が長くなったら、積極的に階層化するのも読みやすい wiki 作成のポイントです。
 
@@ -138,7 +138,7 @@ GROWI は、wiki ページを作成するシステムです。
   [GROWI Docs](https://docs.growi.org/)
   ```
 
-![create](./images/add_link.png)
+![link](./images/add_link.png)
 
 
 - 手書きで文字とリンクを作成
@@ -157,19 +157,25 @@ GROWI は、wiki ページを作成するシステムです。
 
 ``` 
 
-![]()
+### 画像の挿入
+
+  ![]()
+
+  ![growi](https://growi.org/assets/images/logo.png)
 
 ```
 
-![create](./images/add_image.png)
+![image](./images/add_image.png)
 
 - 編集画面下部の Attach 機能を利用する
 
-![create](./images/add_attach.png)
 
-  ファイルアップロードの機能が有効な場合に利用出来ます。管理画面での設定については[こちら](https://docs.growi.org/ja/admin-guide/management-cookbook/attachment.html)。
+![attach](./images/attach.png)
 
   Attach 機能では、ファイルをアップロードし、AWS や GCS へ保存する事が出来ます。
+  Attache 機能でファイルをアップロードするには管理画面で設定が必要です。
+
+  設定方法については[こちら](http://localhost:8080/ja/admin-guide/management-cookbook/attachment.html#mongodb-gridfs-%E3%81%B8%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89)をご覧ください。
 
 
 ### 絵文字(emoji) を使う
@@ -178,7 +184,17 @@ GROWI では、絵文字を利用することが出来ます。
 
 - 使い方
 
-- 対象の絵文字一覧
+```
+
+## 絵文字を使う　:beginner:
+
+```
+
+![emoji](./images/emoji.png)
+
+上記のように、特定の絵文字を `:` で囲い利用することが出来ます。
+
+対象の絵文字一覧は[こちら](http://localhost:8080/ja/guide/features/emoji.html)を参照してください。
 
 ### 便利な本文の使い方
 
@@ -232,23 +248,34 @@ GROWI では、本文の編集時に多数のテクニックで文章を読み�
   バッククオート3つで囲います。
 ```
 
+![emoji](./images/edit_text2.png)
+
 ### テーブルを作成する
 
 半角パイプライン`|` を2つ続けて入力し、Enter キーを押すと、テーブルが作成されます。
 
 また、編集画面のバーにあるテーブルボタンをクリックする事でも、テーブルが作成できます。
 
+![table1](./images/edit_table1.png)
+
+![table2](./images/edit_table2.png)
+
 作成したテーブルを、View モードの画面から編集する事も出来ます。
+
 
 View モードでテーブルにカーソルを当てると、下記のようにアイコンが表示されます。
 
+![table3](./images/edit_table3.png)
+
 クリックすると、下記のようにテーブルを編集することが出来ます。
+
+![table4](./images/edit_table4.png)
 
 ### ページ一覧を出力する
 
 GROWI では、作成したページを一覧出力する便利な機能があります。
 
-詳細はこちらに記載します。
+詳細は[こちら](https://docs.growi.org/ja/guide/tips/hierarchical.html)に記載されています。
 
 簡単な使い方だけ覚えましょう。
 
@@ -258,11 +285,13 @@ GROWI では、作成したページを一覧出力する便利な機能があ�
 $lsx()
 ```
 
+![lsx](./images/lsx_sample.png)
+
 すると、編集中の記事の配下のページ一覧が出力されます。
 
 一覧出力してみると、ページを移動して階層をもっとカスタマイズしたくなります。
 
-階層の修正やページの移動についてはこちらを参照して下さい。
+階層の修正やページの移動については[こちら](https://docs.growi.org/ja/guide/features/page_operation.html)を参照して下さい。
 
 さまざまな階層を整理して、GROWI での情報共有がもっと手軽になるように自由に編集できます。
 
