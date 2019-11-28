@@ -175,7 +175,7 @@ GROWI は、wiki ページを作成するシステムです。
   Attach 機能では、ファイルをアップロードし、AWS や GCS へ保存する事が出来ます。
   Attache 機能でファイルをアップロードするには管理画面で設定が必要です。
 
-  設定方法については[こちら](http://localhost:8080/ja/admin-guide/management-cookbook/attachment.html#mongodb-gridfs-%E3%81%B8%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89)をご覧ください。
+  設定方法については[こちら](/ja/admin-guide/management-cookbook/attachment.html#mongodb-gridfs-%E3%81%B8%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89)をご覧ください。
 
 
 ## 絵文字(emoji) を使う
@@ -194,7 +194,7 @@ GROWI では、絵文字を利用することが出来ます。
 
 上記のように、特定の絵文字を `:` で囲い利用することが出来ます。
 
-対象の絵文字一覧は[こちら](http://localhost:8080/ja/guide/features/emoji.html)を参照してください。
+対象の絵文字一覧は[こちら](/ja/guide/features/emoji.html)を参照してください。
 
 ## 便利な本文の使い方
 
@@ -275,7 +275,7 @@ View モードでテーブルにカーソルを当てると、下記のように
 
 GROWI では、作成したページを一覧出力する便利な機能があります。
 
-詳細は[こちら](https://docs.growi.org/ja/guide/tips/hierarchical.html)に記載されています。
+詳細は[こちら](/ja/guide/tips/hierarchical.html)に記載されています。
 
 簡単な使い方だけ覚えましょう。
 
@@ -293,7 +293,7 @@ $lsx()
 
 一覧出力してみると、ページを移動して階層をもっとカスタマイズしたくなります。
 
-階層の修正やページの移動については[こちら](https://docs.growi.org/ja/guide/features/page_operation.html)を参照して下さい。
+階層の修正やページの移動については[こちら](/ja/guide/features/page_operation.html)を参照して下さい。
 
 さまざまな階層を整理して、GROWI での情報共有がもっと手軽になるように自由に編集できます。
 
