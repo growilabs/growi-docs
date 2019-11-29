@@ -98,118 +98,117 @@ You can create a paragraph with any of the following symbols and spaces.
 When you start the next line of the first paragraph,
 type two spaces or press the Tab key to indent and write the text.
 
-段落として文書が階層化されるのがプレビュー画面で確認できます。
+You can check that the document is hierarchized as paragraphs on the preview screen.
 
-本文の階層化で、文書の内容を整理しましょう。
+Organize the content of the document by layering the text.
+
+It is also a point of creating a wiki that is easy to read if the text becomes longer,
+and that it is hierarchized actively.
 
 
-文章が長くなったら、積極的に階層化するのも読みやすい wiki 作成のポイントです。
+## Create a link to a web page
 
-## Web ページへのリンクを作成
+- Create a link to a web page
 
-- Wiki ページへのリンクを作成
+  The input field for the link is inserted with the button at the top of the edit screen.
+  You can create a link by connecting `[]` brackets and `()` brackets.
 
-  編集画面上部のボタンで、リンク用の入力欄が挿入されます。 `[]` 括弧と `()` 括弧をつなげるとリンクが作成出来ます。
-
-  `[]` の中にタイトルを、`()` の中にページ URL を作成します。
+  Create a title in `[]` and a page URL in `()`.
 
   ```
-  入力欄
   []()
   [GROWI Docs](https://docs.growi.org/)
   ```
+## Insert an image
 
+- The image insertion field is inserted with the image browse button.
+You can insert an image by connecting the excursion
+with the `[]` bracket and the `()` bracket.
 
-
-- 手書きで文字とリンクを作成
-
-  手書きで `[]` と `()` 記号を組み合わせてリンクを作成することも出来ます。
-
-```
-  [タイトル](http://growi.org)
-```
-
-## 画像を挿入する
-
-- 画像参照ボタンで画像挿入欄が挿入されます。エクス蔵メーションと `[]` 括弧と `()` 括弧をつなげると画像挿入が出来ます。
 
 ``` 
-### 画像の挿入
+### Insert an image
   ![]()
   ![growi](https://growi.org/assets/images/logo.png)
 ```
 
 
-- 編集画面下部の Attach 機能を利用する
+- Using the Attach function at the bottom of the edit screen.
 
 
 
-  Attach 機能では、ファイルをアップロードし、AWS や GCS へ保存する事が出来ます。
-  Attache 機能でファイルをアップロードするには管理画面で設定が必要です。
 
-  設定方法については[こちら](/en/admin-guide/management-cookbook/attachment.html#mongodb-gridfs-%E3%81%B8%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89)をご覧ください。
+  The Attach function allows you to upload files and save them to AWS or GCS.
 
+  To upload files with the Attache function,
+  settings are required on the management screen.
 
-## 絵文字(emoji) を使う
-
-GROWI では、絵文字を利用することが出来ます。
-
-- 使い方
-
-```
-## 絵文字を使う　:beginner:
-```
+  Click [here](/en/admin-guide/management-cookbook/attachment.html#mongodb-gridfs-%E3%81%B8%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89)
+  for how to set.
 
 
-上記のように、特定の絵文字を `:` で囲い利用することが出来ます。
+## Use emoji
 
-対象の絵文字一覧は[こちら](/en/guide/features/emoji.html)を参照してください。
+In GROWI, you can use emoji.
 
-## 便利な本文の使い方
 
-GROWI では、本文の編集時に多数のテクニックで文章を読みやすくすることが出来ます。
-
-- 強調
-- 強調太字
-- 強調赤字背景反転
-- 水平線
-- 取り消し線
-- 段落強調
-
-それぞれ、以下の Mackdown 記述をそのまま記事へ貼り付けて、実際にプレビューを確認してみましょう。
-
+- How to use
 
 ```
-### 便利な本文の使い方
-いろいろな文章や段落の便利な書き方を紹介します。
-- 強調
-  **強調** したい箇所を半角アスタリスク2つで囲います。
+## use emoji　:beginner:
+```
+
+As mentioned above, you can enclose specific emojis in `:`.
+
+Please refer [here](/en/guide/features/emoji.html) for the list of target emoji.
+
+## Useful text usage
+
+GROWI makes it easy to read texts using a number of techniques when editing text.
+
+
+- Emphasis
+- Highlighted red background inversion
+- Horizon
+- Strikethrough
+- Paragraph emphasis
+
+Let's paste the following Mackdown description into the article and check the preview.
+
+
+```
+### Useful text usage
+Here are some useful ways to write various sentences and paragraphs.
+- Emphasis
+  Surround the point you want to **emphasize** with two asterisks.
   
     ```
-    **強調**
+    **Emphasis**
     ```
   
   
-- 強調赤字背景反転
-  `強調` したい箇所をバッククォートで囲います。
+- Highlighted red background inversion
+  Enclose the point you want to emphasize with `backticks`.
   
     ```
-    `強調`
+    `backticks`
     ```
   
-- 水平線
+- Horizon
   
-  半角ハイフンを3つ連続して書くと、水平線となります。
+  Write three consecutive hyphens to create a horizontal line.
   
   ---
   
-- 取り消し線
+- Strikethrough
   
-  文章の中で~~消したい~~取り消し線を付けたい箇所を半角チルダ2つで囲います。
+  In the sentence,
+  ~~ I want to erase ~~ I enclose the part that I want to strike out with two tildes.
+
   
-- 段落強調
-  段落として背景反転して協調させる事が出来ます。
-  バッククオート3つで囲います。
+- Paragraph emphasis
+  The background can be reversed and coordinated as a paragraph.
+  Surround with three back quotes.
 ```
 
 
