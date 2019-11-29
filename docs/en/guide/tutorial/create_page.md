@@ -28,66 +28,75 @@ Copy the contents of the following markdown description
 and paste it into the GROWI editing screen.
 
 ```
-# はじめてのページ
-## 見出し1
-* 箇条書き1
-* 箇条書き2
-## 見出し2
-1. 番号リスト  
-2. 番号リスト
+# First page
+## Header1
+* List1
+* List2
+## Header2
+1. Number list
+2. Number list
 ```
 
-
-貼り付けると下記のように内容がリアルタイムに反映されたプレビューが画面右側に表示されます。
-
-実際に編集画面で文字を入力し、右側のプレビュー画面への反映を確認しましょう。
-
-編集したら、「作成」ボタンをクリックします。
+When pasting,
+a preview reflecting the contents in real time as shown below is displayed
+on the right side of the screen.
 
 
-クリックすると、記事が作成され、画像のようにページが参照出来るようになります。
+Let's actually enter characters on the edit screen
+and check the reflection on the preview screen on the right.
 
-「編集」タブと「View」タブを切り替えて、編集モードと View モードに出来ます。
+After editing, click the "Create" button.
 
-早速作成したページを編集しましょう。
+Click to create an article,
+and the page can be referenced as shown in the image below.
 
-## 見出しと階層化
+You can switch to “Edit” tab and “View” tab to edit mode and view mode.
 
-ページには半角シャープを使って見出しを付ける事が出来ます。
-
-半角シャープは 2つ、3つと増やすごとに、階層化されます。
+Let's edit the created page.
 
 
-見出しを作成すると、ページ左側に索引が自動的に作成されるので、積極的に活用しましょう。
+## Headline and hierarchy
 
-## 文書と階層化
+You can add headline to the pages using a pound sign.
+A space is required immediately after the `#`.
 
-ページにはテキスト文書を記載出来ます。また、その文書は階層化が出来ます。
+Each time you increase the number of pound signs by two or three, it will be hierarchized.
 
-半角ハイフン、半角アスタリスクのいずれかを利用して、段落を利用してみましょう。
+When you create a headline,
+an index is automatically created on the right side of the page.
+
+## Documents and hierarchy
+
+You can write a text document on the page. The document can be hierarchized.
+
+Let's use paragraphs using either hyphens or asterisks.
 
 ```
-# GROWI の使い方を学ぶ
-このページでは、GROWI Docs のチュートリアルに沿って GROWI の使い方を学びます。
-## ページの作成と編集
-ページを作成して編集します。
-## 見出しと本文の使い方
-見出しと本文の使い方を学びます。
-### 見出し
-見出しを作成すると、ページ右側に索引が作成されます。
-### 本文
-本文として、文章をページへ記載します。文章は段落にすることが出来ます。
-以下のいずれかの記号と半角スペースで、段落を作成できます。
-- 半角ハイフン`-`
-- 半角アスタリスク`*`
-    - さらに階層化
-        - そのまた更に階層化
-    - 階層をひとつ戻す
+# Learn how to use GROWI
+On this page, you will learn how to use GROWI by following the GROWI Docs tutorial.
+
+## Creating and editing pages
+Create and edit pages.
+
+## Using headline and text
+Learn how to use headline and text.
+
+### Header
+When you create a headline, an index is created on the right side of the page.
+
+### Documents
+Write the text on the page as Documents. The sentence can be a paragraph.
+
+You can create a paragraph with any of the following symbols and spaces.
+- hyphen`-`
+- asterisk`*`
+    - Further hierarchies
+        - It is further hierarchized
+    - Move back one level
 ```
 
-一つ目の段落の次の行を開始する時に、半角スペースを2つまたは Tab キーを入力してインデントして文章を書いてください。
-
-
+When you start the next line of the first paragraph,
+type two spaces or press the Tab key to indent and write the text.
 
 段落として文書が階層化されるのがプレビュー画面で確認できます。
 
