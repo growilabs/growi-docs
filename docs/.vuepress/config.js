@@ -91,6 +91,15 @@ module.exports = {
               ]
             },
             {
+              title: 'tutorial',
+              collapsable: false,
+              children: [
+                '/en/guide/tutorial/create_page.md',
+                '/en/guide/tutorial/duplicate_page.md',
+                '/en/guide/tutorial/delete_page.md',
+              ]
+            },
+            {
               title: 'Features',
               collapsable: false,
               children: [
