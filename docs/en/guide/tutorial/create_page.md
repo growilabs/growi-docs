@@ -7,6 +7,8 @@ when you visit the GROWI URL it will be a screen to set the administrator ID.
 
 After logging in to GROWI, the following screen will appear.
 
+![start](./images/install.png)
+
 Start the tutorial here.
 
 ## Create new page
@@ -15,12 +17,18 @@ GROWI is a system for creating wiki pages.
 
 Let's start with creating a new page.
 
-Click the “Create” button
+![create](./images/create.png)
+
+Click the “New” button
 at the top right of the screen to display the page creation modal.
+
+![create](./images/create_page1.png)
 
 There are multiple buttons. Enter the tutorial and page name in the image position.
 
 Click the create button.
+
+![create](./images/create_page2.png)
 
 Moves to the page edit screen.
 
@@ -41,6 +49,8 @@ When pasting,
 a preview reflecting the contents in real time as shown below is displayed
 on the right side of the screen.
 
+![create](./images/tutorial_page1.png)
+
 
 Let's actually enter characters on the edit screen
 and check the reflection on the preview screen on the right.
@@ -49,6 +59,8 @@ After editing, click the "Create" button.
 
 Click to create an article,
 and the page can be referenced as shown in the image below.
+
+![create](./images/tutorial_page2.png)
 
 You can switch to “Edit” tab and “View” tab to edit mode and view mode.
 
@@ -61,6 +73,8 @@ You can add headline to the pages using a pound sign.
 A space is required immediately after the `#`.
 
 Each time you increase the number of pound signs by two or three, it will be hierarchized.
+
+![create](./images/tutorial_page2.png)
 
 When you create a headline,
 an index is automatically created on the right side of the page.
@@ -98,9 +112,13 @@ You can create a paragraph with any of the following symbols and spaces.
 When you start the next line of the first paragraph,
 type two spaces or press the Tab key to indent and write the text.
 
+![create](./images/edit_text.png)
+
 You can check that the document is hierarchized as paragraphs on the preview screen.
 
 Organize the content of the document by layering the text.
+
+![create](./images/view_text.png)
 
 It is also a point of creating a wiki that is easy to read if the text becomes longer,
 and that it is hierarchized actively.
@@ -120,6 +138,8 @@ and that it is hierarchized actively.
   [GROWI Docs](https://docs.growi.org/)
   ```
 
+![create](./images/add_link.png)
+
 ## Insert an image
 
 - The image insertion field is inserted with the image browse button.
@@ -133,10 +153,11 @@ with the `[]` bracket and the `()` bracket.
   ![growi](https://growi.org/assets/images/logo.png)
 ```
 
+![create](./images/add_image.png)
 
 - Using the Attach function at the bottom of the edit screen.
 
-
+![attach](./images/attach.png)
 
 
   The Attach function allows you to upload files and save them to AWS or GCS.
@@ -158,6 +179,8 @@ In GROWI, you can use emoji.
 ```
 ## use emoji　:beginner:
 ```
+
+![emoji](./images/emoji.png)
 
 As mentioned above, you can enclose specific emojis in `:`.
 
@@ -212,6 +235,7 @@ Here are some useful ways to write various sentences and paragraphs.
   Surround with three back quotes.
 ```
 
+![emoji](./images/emoji.png)
 
 ## create table
 
@@ -219,13 +243,19 @@ Enter two or more pipelines `|` and press Enter to create the table.
 
 You can also create a table by clicking the table button in the edit screen bar.
 
+![emoji](./images/edit_table1.png)
+
+![emoji](./images/edit_table2.png)
+
 You can edit the created table from the View mode screen.
 
 When you place the cursor on the table in View mode, the following icons are displayed.
 
+![emoji](./images/edit_table3.png)
+
 Click to edit the table as shown below.
 
-
+![emoji](./images/edit_table4.png)
 
 ## Output page list
 
@@ -242,6 +272,8 @@ $lsx()
 ```
 
 Then, the subordinate page list is output.
+
+![emoji](./images/lsx_sample.png)
 
 If you try to output the page list,
 you will want to move the page and customize the hierarchy more.
