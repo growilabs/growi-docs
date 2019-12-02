@@ -119,6 +119,7 @@ and that it is hierarchized actively.
   []()
   [GROWI Docs](https://docs.growi.org/)
   ```
+
 ## Insert an image
 
 - The image insertion field is inserted with the image browse button.
@@ -212,44 +213,44 @@ Here are some useful ways to write various sentences and paragraphs.
 ```
 
 
-## テーブルを作成する
+## create table
 
-半角パイプライン`|` を2つ続けて入力し、Enter キーを押すと、テーブルが作成されます。
+Enter two or more pipelines `|` and press Enter to create the table.
 
-また、編集画面のバーにあるテーブルボタンをクリックする事でも、テーブルが作成できます。
+You can also create a table by clicking the table button in the edit screen bar.
 
+You can edit the created table from the View mode screen.
 
+When you place the cursor on the table in View mode, the following icons are displayed.
 
-作成したテーブルを、View モードの画面から編集する事も出来ます。
-
-
-View モードでテーブルにカーソルを当てると、下記のようにアイコンが表示されます。
-
-
-クリックすると、下記のようにテーブルを編集することが出来ます。
+Click to edit the table as shown below.
 
 
-## ページ一覧を出力する
 
-GROWI では、作成したページを一覧出力する便利な機能があります。
+## Output page list
 
-詳細は[こちら](/en/guide/tips/hierarchical.html)に記載されています。
+GROWI has a convenient function to output a list of created pages.
 
-簡単な使い方だけ覚えましょう。
+Details can be found here [here](/en/guide/tips/hierarchical.html).
 
-トップページへ移動し、下記のように lsx を記載しましょう。
+Learn only simple usage.
+
+Go to the top page and add lsx as shown below.
 
 ```
 $lsx()
 ```
 
+Then, the subordinate page list is output.
 
-すると、編集中の記事の配下のページ一覧が出力されます。
+If you try to output the page list,
+you will want to move the page and customize the hierarchy more.
 
-一覧出力してみると、ページを移動して階層をもっとカスタマイズしたくなります。
+Please refer to [here](/en/guide/features/page_operation.html)
+for information on modifying the hierarchy and moving pages.
 
-階層の修正やページの移動については[こちら](/en/guide/features/page_operation.html)を参照して下さい。
+Organize the various hierarchies and edit them
+to make sharing information on GROWI easier.
 
-さまざまな階層を整理して、GROWI での情報共有がもっと手軽になるように自由に編集できます。
-
-ここまでチュートリアルに沿って進めたら、どんどんページを作成して Wiki を育てていきましょう。
+Now that you have followed the tutorial,
+you can create more pages and grow your wiki.
