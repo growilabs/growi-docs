@@ -91,6 +91,15 @@ module.exports = {
               ]
             },
             {
+              title: 'tutorial',
+              collapsable: false,
+              children: [
+                '/en/guide/tutorial/create_page.md',
+                '/en/guide/tutorial/duplicate_page.md',
+                '/en/guide/tutorial/delete_page.md',
+              ]
+            },
+            {
               title: 'Features',
               collapsable: false,
               children: [
@@ -111,7 +120,11 @@ module.exports = {
               title: 'Tips',
               collapsable: false,
               children: [
-                '/en/guide/tips/hierarchical.md'
+                '/en/guide/tips/hierarchical.md',
+                '/en/guide/tips/include_html.md',
+                '/en/guide/tips/checkbox.md',
+                '/en/guide/tips/page_linker.md',
+                '/en/guide/tips/footnote.md'
               ]
             },
             {
@@ -260,6 +273,13 @@ module.exports = {
               ]
             },
             {
+              title: 'チュートリアル',
+              collapsable: false,
+              children: [
+                '/ja/guide/tutorial/create_page.md',
+              ]
+            },
+            {
               title: '機能紹介',
               collapsable: false,
               children: [
@@ -280,7 +300,11 @@ module.exports = {
               title: 'Tips (活用例)',
               collapsable: false,
               children: [
-                '/ja/guide/tips/hierarchical.md'
+                '/ja/guide/tips/hierarchical.md',
+                '/ja/guide/tips/include_html.md',
+                '/ja/guide/tips/checkbox.md',
+                '/ja/guide/tips/page_linker.md',
+                '/ja/guide/tips/footnote.md'
               ]
             },
             {
