@@ -1,17 +1,17 @@
-# ファイルアップロード設定
+# File Upload Settings
 
 [[toc]]
 
-## 概要
+## Overview
 
-GROWI ページへのファイルアップロードに関する設定について紹介します。
+This chapter introduces how to chenge the destination to upload attachment files. 
 
-## アップロード先の指定
+## File Upload Destination
 
-GROWI ページの添付ファイルの保存先は、環境変数によりMongoDB GridFS、AWS S3、Google Cloud Storage、ローカルファイルシステムから選択できます。デフォルトでは AWS S3 が選択されています。
+Save files to MongoDB GridFS, AWS S3, Google Cloud Storage or local file system when upload attachment files to GROWI pages. This depends on environment variables.
 
 ::: danger
-ファイル保存先を途中で変更すると、これまでにアップロードしたファイル等へのアクセスができなくなりますのでご注意ください。
+Warning: Change file upload destination, disable to access uploaded files.
 :::
 
 ### MongoDB GridFS へのアップロード
