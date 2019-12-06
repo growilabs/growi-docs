@@ -14,7 +14,7 @@ Save files to MongoDB GridFS, AWS S3, Google Cloud Storage or local file system 
 Warning: Change file upload destination, disable to access uploaded files.
 :::
 
-### MongoDB GridFS へのアップロード
+### Upload Files to MongoDB GridFS
 
 GROWI データの保存先に指定している MongoDB に [GridFS](https://docs.mongodb.com/manual/core/gridfs/) を利用し、ファイルを保存します。
 
@@ -22,7 +22,7 @@ GROWI データの保存先に指定している MongoDB に [GridFS](https://do
 
 - `FILE_UPLOAD` : 'mongodb'
 
-### AWS S3 へのアップロード
+### Upload Files to AWS S3
 
 App 設定画面の AWS 設定にて登録されている AWS S3 Bucketにファイルを保存します。
 
@@ -32,7 +32,7 @@ App 設定画面の AWS 設定にて登録されている AWS S3 Bucketにファ
 
 AWS S3 Bucket のセットアップが未完了の場合は、[こちら](../management-cookbook/aws-s3-bucket-setting.md)を参考にセットアップしてください。
 
-### Google Cloud Storage へのアップロード
+### Upload Files to Google Cloud Storage
 
 環境変数で指定された Google Cloud Storage にファイルを保存します。
 
@@ -42,7 +42,7 @@ AWS S3 Bucket のセットアップが未完了の場合は、[こちら](../man
 - `GCS_API_KEY_JSON_PATH` : [(GROWIのルートディレクトリから見た) GCP サービスアカウントキー の jsonファイルのパス]
 - `GCS_BUCKET` : [GCS のバケット名] 
 
-### ファイルシステムへのアップロード
+### Upload Files to Local File System
 
 GROWI サーバーから見たローカルファイルシステムにファイルを保存します。
 
@@ -50,7 +50,7 @@ GROWI サーバーから見たローカルファイルシステムにファイ�
 
 - `FILE_UPLOAD` : 'local' 
 
-##  添付ファイルのサイズ制限
+##  Limit File Size 
 
 以下の環境変数により、一度にアップロードできるファイルのサイズ上限と全ページに添付されているファイルの累計サイズの上限を設定することができます。いずれも単位は `bytes` です。デフォルトではいずれの値も `Infinity` となっており、ファイルサイズは制限されません。
 
