@@ -4493,9 +4493,10 @@ gray-matter@^4.0.1:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-growi-commons@weseek/growi-commons#master:
-  version "4.0.1"
-  resolved "https://codeload.github.com/weseek/growi-commons/tar.gz/c554dc565202e374a0434988b4bef0e3921a80c7"
+growi-commons@4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/growi-commons/-/growi-commons-4.0.8.tgz#3040f2759f5eb13084b101e303c11028af2a8faf"
+  integrity sha512-AL/vm3R3LqiWwCbuEHPsDP8hapiz7ulKZXyW4399WHorx/7oEkSWb6sGdkvJiqSnRWxEcdPkfw6K0kgzilMpig==
 
 handlebars@^4.0.11:
   version "4.1.2"
