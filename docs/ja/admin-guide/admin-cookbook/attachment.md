@@ -36,7 +36,7 @@ AWS S3 Bucket のセットアップが未完了の場合は、[こちら](../man
 
 環境変数で指定された Google Cloud Storage にファイルを保存します。
 
-利用するには、[こちら](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) を参考に、GCP のサービスアカウントキー の json ファイルを用意した後、ファイルシステム以下のように環境変数を設定し、GROWI を再起動してください。
+利用するには、[こちら](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) を参考に、GCP のサービスアカウントキー の json ファイルを用意した後、以下のように環境変数を設定し、GROWI を再起動してください。
 
 - `FILE_UPLOAD` : 'gcs' 
 - `GCS_API_KEY_JSON_PATH` : [(GROWIのルートディレクトリから見た) GCP サービスアカウントキー の jsonファイルのパス]
