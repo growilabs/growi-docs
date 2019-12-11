@@ -278,6 +278,8 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/guide/tutorial/create_page.md',
+                '/ja/guide/tutorial/duplicate_page.md',
+                '/ja/guide/tutorial/delete_page.md',
               ]
             },
             {
