@@ -40,6 +40,8 @@ on unsupported browsers and cannot be used.
 
 Be sure to use the recommended browser.
 
+GROWI is available on PCs, smartphones and tablets.
+
 ## Other features
 
 There are many features that cannot be introduced here.
