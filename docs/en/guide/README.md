@@ -25,6 +25,23 @@ The page name is supplemented when creating the page, and the page hierarchy can
 
 Comments can be threaded for each page. Of course, comments can also be written and previewed by Markdown and attached to files.
 
+## Recommended environment
+
+|browser|Description|
+|---|---|
+|Chrome| Recommendation（latest version）|
+|FireFox| Recommendation（latest version）|
+|Safari| Recommendation（latest version）|
+|InternetExploler|Excluded|
+|Edge|Excluded|
+
+GROWI screens will not be displayed properly
+on unsupported browsers and cannot be used.
+
+Be sure to use the recommended browser.
+
+GROWI is available on PCs, smartphones and tablets.
+
 ## Other features
 
 There are many features that cannot be introduced here.
