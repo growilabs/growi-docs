@@ -32,7 +32,7 @@ ElasticSearch を利用したページタイトルのインクリメンタルサ
 |Chrome| 推奨（最新version）|
 |FireFox|推奨（最新version）|
 |Safari|推奨（最新version）|
-|InternetExploler|対象外|
+|InternetExplorer|対象外|
 |Edge|対象外|
 
 対象外のブラウザでは GROWI の各画面は正常に表示されず、ご利用いただけません。
