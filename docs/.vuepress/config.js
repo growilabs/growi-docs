@@ -153,6 +153,7 @@ module.exports = {
               title: 'Upgrading',
               collapsable: false,
               children: [
+                '/en/admin-guide/upgrading/36x.md',
                 '/en/admin-guide/upgrading/35x.md',
                 '/en/admin-guide/upgrading/34x.md',
               ]
@@ -273,6 +274,15 @@ module.exports = {
               ]
             },
             {
+              title: 'チュートリアル',
+              collapsable: false,
+              children: [
+                '/ja/guide/tutorial/create_page.md',
+                '/ja/guide/tutorial/duplicate_page.md',
+                '/ja/guide/tutorial/delete_page.md',
+              ]
+            },
+            {
               title: '機能紹介',
               collapsable: false,
               children: [
@@ -326,6 +336,7 @@ module.exports = {
               title: 'アップグレード',
               collapsable: false,
               children: [
+                '/ja/admin-guide/upgrading/36x.md',
                 '/ja/admin-guide/upgrading/35x.md',
                 '/ja/admin-guide/upgrading/34x.md',
               ]
@@ -348,6 +359,7 @@ module.exports = {
                 '/ja/admin-guide/admin-cookbook/launch-with-systemd.md',
                 '/ja/admin-guide/admin-cookbook/multi-app.md',
                 '/ja/admin-guide/admin-cookbook/lets-encrypt.md',
+                '/ja/admin-guide/admin-cookbook/attachment.md',
                 '/ja/admin-guide/admin-cookbook/mongodb-backup.md',
                 '/ja/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/ja/admin-guide/admin-cookbook/integrate-with-hackmd.md',
@@ -358,7 +370,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/admin-guide/management-cookbook/line-breaks.md',
-                '/ja/admin-guide/management-cookbook/attachment.md',
+                '/ja/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
                 '/ja/admin-guide/management-cookbook/ldap.md',
                 '/ja/admin-guide/management-cookbook/active-directory.md',
                 '/ja/admin-guide/management-cookbook/google-analytics.md',
