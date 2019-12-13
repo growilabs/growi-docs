@@ -1,24 +1,26 @@
 # duplicate page
 
-ページ作成が出来るようになったら、ページの複製の使い方を覚えましょう。
+When you can create a page, learn how to duplicate a page.
 
-繰り返し利用するページがある場合、複製やテンプレートの仕組みを把握しているととても便利に活用出来ます。
+If you have a page that you use repeatedly,
+Knowing the mechanism of replication and templates can be very useful.
 
-## ページ作成チュートリアル後
+## After create page tutorial
 
-まず、ページ複製をするために、階層作成のためのページを作成します。
+First, in order to duplicate the page, create a page for creating the hierarchy.
 
-チュートリアルのページなど、目安となるページで「作成」ボタンを押して、
+Press the "Create" button on a guide page, such as a tutorial page,
+Let's create a duplicate page.
 
-複製ページを作成しましょう。
 
 `![duplicate1](./images/duplicate1.png)`
 
 `![duplicate2](./images/duplicate2.png)`
 
-## ページを複製する
+## Duplicate page
 
-複製ページ配下に、複製元となる「20191101」のページを作成します。
+Under the duplicate page, create a page for "20191101" that will be the copy source.
+
 
 ページ作成し、以下の markdown 記述を貼り付けて、ページを作成してください。
 
