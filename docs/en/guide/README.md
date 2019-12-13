@@ -32,7 +32,7 @@ Comments can be threaded for each page. Of course, comments can also be written 
 |Chrome| Recommendation（latest version）|
 |FireFox| Recommendation（latest version）|
 |Safari| Recommendation（latest version）|
-|InternetExploler|Excluded|
+|InternetExplorer|Excluded|
 |Edge|Excluded|
 
 GROWI screens will not be displayed properly
