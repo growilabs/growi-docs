@@ -21,8 +21,8 @@ Let's create a duplicate page.
 
 Under the duplicate page, create a page for "20191101" that will be the copy source.
 
+Create a page and paste the following markdown description to create the page.
 
-ページ作成し、以下の markdown 記述を貼り付けて、ページを作成してください。
 
 ```
 $lsx()
