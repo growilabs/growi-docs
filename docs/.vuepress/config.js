@@ -172,6 +172,7 @@ module.exports = {
               title: 'System Admin Cookbook',
               collapsable: false,
               children: [
+                '/en/admin-guide/admin-cookbook/env-vars.md',
                 '/en/admin-guide/admin-cookbook/logging.md',
                 '/en/admin-guide/admin-cookbook/launch-with-systemd.md',
                 '/en/admin-guide/admin-cookbook/multi-app.md',
@@ -278,6 +279,8 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/guide/tutorial/create_page.md',
+                '/ja/guide/tutorial/duplicate_page.md',
+                '/ja/guide/tutorial/delete_page.md',
               ]
             },
             {
