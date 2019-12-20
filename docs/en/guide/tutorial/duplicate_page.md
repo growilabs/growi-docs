@@ -28,47 +28,58 @@ Create a page and paste the following markdown description to create the page.
 $lsx()
 ```
 
-その後、作成した「20191101」のページの画面で、画像のメニューにある「複製」をクリックして下さい。
+After that, click “Duplicate” in the image menu on the “20191101” page.
+
 
 `![duplicate3](./images/duplicate3.png)`
 
 `![duplicate4](./images/duplicate4.png)`
 
-ページ名を「20191102」と入力して、「Duplicate page」ボタンを押しましょう。
+Enter the page name “20191102” and click the “Duplicate page” button.
+
 
 `![duplicate5](./images/duplicate5.png)`
 
-画像のように、ページが複製されます。
+The page is duplicated like an image.
 
 `![duplicate6](./images/duplicate6.png)`
 
-このように、ページを複製することで、記述内容をコピーした wiki ページを簡単に作成する事が出来ます。
+By duplicating the page this way,
+You can easily create a wiki page with copied contents.
 
-続いて、似た機能としてテンプレートの機能を利用してみましょう。
+Next, let's use the template function as a similar function.
+
+## Create a template
+
+Template is a function
+that allows you to assign a fixed description when creating a new page.
 
 
+There are two types of templates: Template for children and Template for descendants.
 
-## テンプレートを作成する
 
-テンプレートは、ページを新規作成するときに、固定した記述内容を割り当てる事が出来る機能です。
+When you create "Template for children",
+it applies only to the hierarchy where the template page exists.
 
-テンプレートには、同一階層テンプレートと階層テンプレートがあります。
 
-同一階層テンプレートを作成すると、テンプレートページが存在する階層にのみ適用されます。
+When you create "Template for descendants",
+it applies to all lower-level pages that have template pages.
 
-下位層テンプレートを作成すると、テンプレートページが存在する下位層のすべてのページに適用されます
 
-ここでは同一階層テンプレートを利用します。
+Here we use "Template for children".
+
 
 `![template1](./images/template1.png)`
 
-画像のように、テンプレートを作成のボタンをクリックすると、テンプレート選択欄になります。
+Click on the Create Template button as shown in the image
+to enter the template selection field.
 
-同一階層テンプレートの編集ボタンをクリックします。すると、「_template」というページ名のページ作成画面になります。
+Click the Edit button on "Template for children".
+Then, the page creation screen with the page name “_template” will appear.
 
 `![template2](./images/template2.png)`
 
-この画面で、以下の markdown 記述を貼り付けて、ページを保存しましょう。
+On this screen, paste the following markdown description and save the page.
 
 ```
 # タイトル
