@@ -25,7 +25,9 @@ Create a page and paste the following markdown description to create the page.
 
 
 ```
-$lsx()
+# 20191101
+
+Duplicate page
 ```
 
 After that, click “Duplicate” in the image menu on the “20191101” page.
@@ -82,31 +84,34 @@ Then, the page creation screen with the page name “_template” will appear.
 On this screen, paste the following markdown description and save the page.
 
 ```
-# タイトル
-## サブタイトル
-### 見出し1
-### 見出し2
-## 備考
+# title
+## subtitle
+### Heading1
+### Heading2
+## remarks
 ```
 
 `![template3](./images/template3.png)`
 
-これでテンプレート作成は完了です。
+This completes the template creation.
 
-続いて、作成したテンプレートを実際に活用する方法を紹介します。
+Next, we will introduce how to actually use the created template.
 
-## テンプレートがあるページ配下にページを作成する
+## Create a page under a page with a template
 
-テンプレート作成をしたページにて、「作成」をクリックしてページを作成します。
+On the page where the template was created,
+click “Create” to create the page.
+
 
 `![template4](./images/template4.png)`
 
-すると、ページ作成直後に既にテンプレートで設定した内容が反映されています。
+Then, the settings already made in the template are reflected
+immediately after creating the page.
 
 `![template5](./images/template5.png)`
 
 `![template6](./images/template6.png)`
 
-繰り返しページ作成する時にとても便利に活用できます。
+This can be very useful when creating repeated pages.
 
-是非積極的にテンプレート化する運用を考えて、効率的に wiki を構築しましょう。
+Let's think about the operation of templating by all means and build a wiki efficiently.
