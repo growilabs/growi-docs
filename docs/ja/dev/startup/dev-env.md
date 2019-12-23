@@ -44,10 +44,11 @@ Node.js, npm, Yarn 共に、CI 環境で利用する `node:10` のバージョ�
 ::: tab Windows
 
 1. Node.js, npm のバージョン管理ツール「nodist」 をインストール
-    * [https://github.com/marcelklehr/nodist/releases](https://github.com/marcelklehr/nodist/releases) から NodistSetup-vX.X.X.exe をダウンロードして実行
-1. Node.js, npm インストール
+    * [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows) から `nvm-setup.zip` をダウンロードして実行
+1. Node.js, npm インストール (12.x の最新バージョンは https://nodejs.org/ja/download/releases/ から探してください)
     ``` cmd
-    nodist global 10
+    nvm install 12.x.x
+    nvm use 12.x.x
     ```
 
 1. Yarn インストール
@@ -67,7 +68,7 @@ Node.js, npm, Yarn 共に、CI 環境で利用する `node:10` のバージョ�
     ```
 1. Node.js, npm インストール
     ```bash
-    nodebrew install-binary v10.x
+    nodebrew install-binary v12.x
     ```
 * Yarn インストール
     ```bash
@@ -81,11 +82,11 @@ Node.js, npm, Yarn 共に、CI 環境で利用する `node:10` のバージョ�
 
 ```bash
 $ node -v
-v10.15.1
+v12.14.0
 $ npm -v
-6.4.1
+6.13.4
 $ yarn -v
-1.13.0
+1.19.1
 ```
 
 ## エディタの準備
@@ -103,31 +104,45 @@ Docker 環境をネイティブで準備できない場合のみ、以下の手�
 
 1. VirtualBox インストール
     * [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads) から DL してインストールする
-        * バージョンは `5.1.30` とする。
+        * バージョンは `6.0.8` とする。
     * Extension Pack の中で利用する機能はないのでインストール不要
 2. Vagrant インストール
     * [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html) からDLしてインストールする
     * Vagrantfile を作成
         ```ruby
         Vagrant.configure(2) do |config|
-          config.vm.box = "envimation/ubuntu-xenial-docker"
+          config.vm.box = "chaifeng/ubuntu-18.04-docker-19.03"
 
           ### provision
-          ### change mirror
+          ### change mirror to Japanese location
           config.vm.provision "shell", inline: <<-SHELL
             sed -i.bak -e "s%http://archive.ubuntu.com/ubuntu/%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list
+          #SHELL
+
+          ### install apt packages
+          config.vm.provision "shell", preserve_order: true, inline: <<-SHELL
+            apt-get update && apt-get install -q -y tmux git nano less
           SHELL
 
-          ### install packages
-          config.vm.provision :shell, :inline => "apt-get update && apt-get install -q -y tmux git nano less"
-            ### clone growi-docker-compose for development
-            config.vm.provision :shell, privileged: false, inline: <<-SHELL
-            git clone -q https://github.com/weseek/growi-docker-compose.git growi
+          ### install docker-compose
+          config.vm.provision "shell", preserve_order: true, inline: <<-SHELL
+            curl -sL "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+            chmod +x /usr/local/bin/docker-compose
+          SHELL
+
+          ### clone git repos
+          config.vm.provision "shell", privileged: false, inline: <<-SHELL
+            git -C growi-docker-compose pull || git clone https://github.com/weseek/growi-docker-compose
           SHELL
 
           ## port forwarding
-          # HackMD
-          config.vm.network "forwarded_port", guest: 3010, host: 3010, host_ip: "empty"
+          # Proxy
+          config.vm.network "forwarded_port", guest: 80, host: 80, host_ip: "127.0.0.1"
+          config.vm.network "forwarded_port", guest: 443, host: 443, host_ip: "127.0.0.1"
+          # App
+          #config.vm.network "forwarded_port", guest: 3000, host: 3000, host_ip: "127.0.0.1"
+          # App2
+          config.vm.network "forwarded_port", guest: 3010, host: 3010, host_ip: "127.0.0.1"
           # MongoDB
           config.vm.network "forwarded_port", guest: 27017, host: 27017, host_ip: "127.0.0.1"
           # Redis
