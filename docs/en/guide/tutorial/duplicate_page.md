@@ -13,9 +13,9 @@ Press the "Create" button on a guide page, such as a tutorial page,
 Let's create a duplicate page.
 
 
-`![duplicate1](./images/duplicate1.png)`
+![duplicate1](./images/duplicate1.png)
 
-`![duplicate2](./images/duplicate2.png)`
+![duplicate2](./images/duplicate2.png)
 
 ## Duplicate page
 
@@ -33,18 +33,18 @@ Duplicate page
 After that, click “Duplicate” in the image menu on the “20191101” page.
 
 
-`![duplicate3](./images/duplicate3.png)`
+![duplicate3](./images/duplicate3.png)
 
-`![duplicate4](./images/duplicate4.png)`
+![duplicate4](./images/duplicate4.png)
 
 Enter the page name “20191102” and click the “Duplicate page” button.
 
 
-`![duplicate5](./images/duplicate5.png)`
+![duplicate5](./images/duplicate5.png)
 
 The page is duplicated like an image.
 
-`![duplicate6](./images/duplicate6.png)`
+![duplicate6](./images/duplicate6.png)
 
 By duplicating the page this way,
 You can easily create a wiki page with copied contents.
@@ -71,7 +71,7 @@ it applies to all lower-level pages that have template pages.
 Here we use "Template for children".
 
 
-`![template1](./images/template1.png)`
+![template1](./images/template1.png)
 
 Click on the Create Template button as shown in the image
 to enter the template selection field.
@@ -79,7 +79,7 @@ to enter the template selection field.
 Click the Edit button on "Template for children".
 Then, the page creation screen with the page name “_template” will appear.
 
-`![template2](./images/template2.png)`
+![template2](./images/template2.png)
 
 On this screen, paste the following markdown description and save the page.
 
@@ -91,7 +91,7 @@ On this screen, paste the following markdown description and save the page.
 ## remarks
 ```
 
-`![template3](./images/template3.png)`
+![template3](./images/template3.png)
 
 This completes the template creation.
 
@@ -103,14 +103,14 @@ On the page where the template was created,
 click “Create” to create the page.
 
 
-`![template4](./images/template4.png)`
+![template4](./images/template4.png)
 
 Then, the settings already made in the template are reflected
 immediately after creating the page.
 
-`![template5](./images/template5.png)`
+![template5](./images/template5.png)
 
-`![template6](./images/template6.png)`
+![template6](./images/template6.png)
 
 This can be very useful when creating repeated pages.
 
