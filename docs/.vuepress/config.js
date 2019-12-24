@@ -294,6 +294,7 @@ module.exports = {
                 '/ja/guide/features/page_operation.md',
                 '/ja/guide/features/emoji.md',
                 '/ja/guide/features/history.md',
+                '/ja/guide/features/group.md',
                 '/ja/guide/features/blockdiag.md',
                 '/ja/guide/features/bootstrap.md',
                 '/ja/guide/features/uml_diagrams.md',
@@ -305,6 +306,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/guide/tips/hierarchical.md',
+                '/ja/guide/tips/authority.md',
                 '/ja/guide/tips/include_html.md',
                 '/ja/guide/tips/checkbox.md',
                 '/ja/guide/tips/page_linker.md',
