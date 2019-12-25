@@ -42,7 +42,7 @@ Enter the page name “20191102” and click the “Duplicate page” button.
 
 ![duplicate5](./images/duplicate5.png)
 
-The page is duplicated like an image.
+The page will be duplicated like the image below.
 
 ![duplicate6](./images/duplicate6.png)
 
