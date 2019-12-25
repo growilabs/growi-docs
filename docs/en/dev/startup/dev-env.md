@@ -43,11 +43,12 @@ Test environment (CI) uses `node:10`. Use the version Node.js, npm, and Yarn com
 
 ::: tab Windows
 
-1. Install "nodist" (version manager for Node.js, npm)
-    * Download `NodistSetup-vX.X.X.exe` from [https://github.com/marcelklehr/nodist/releases](https://github.com/marcelklehr/nodist/releases) and execute
-1. Install Node.js and npm
+1. Install "nvm-windows" (version manager for Node.js, npm)
+    * Download `nvm-setup.zip` from [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows) and execute
+1. Install Node.js and npm (lookup latest version of 12.x from https://nodejs.org/en/download/releases/)
     ``` cmd
-    nodist global 10
+    nvm install 12.x.x
+    nvm use 12.x.x
     ```
 
 1. Install Yarn
@@ -67,7 +68,7 @@ Test environment (CI) uses `node:10`. Use the version Node.js, npm, and Yarn com
     ```
 1. Install Node.js, npm
     ```bash
-    nodebrew install-binary v10.x
+    nodebrew install-binary v12.x
     ```
 * Install Yarn
     ```bash
@@ -81,11 +82,11 @@ Test environment (CI) uses `node:10`. Use the version Node.js, npm, and Yarn com
 
 ```bash
 $ node -v
-v10.15.1
+v12.14.0
 $ npm -v
-6.4.1
+6.13.4
 $ yarn -v
-1.13.0
+1.19.1
 ```
 
 ## Set up Source Code Editor
@@ -103,31 +104,45 @@ Only if your environment does not support Docker, go through the following steps
 
 1. Install VirtualBox
     * Download and install VirtualBox from [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads).
-        * Version `5.1.30`
+        * Version `6.0.8`
     * No Extension Packs are required.
 2. Install Vagrant
     * nload and install Vagrant from [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html).
     * Create Vagrantfile
         ```ruby
         Vagrant.configure(2) do |config|
-          config.vm.box = "envimation/ubuntu-xenial-docker"
+          config.vm.box = "chaifeng/ubuntu-18.04-docker-19.03"
 
           ### provision
-          ### change mirror
-          config.vm.provision "shell", inline: <<-SHELL
-            sed -i.bak -e "s%http://archive.ubuntu.com/ubuntu/%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list
+          ### change mirror to Japanese location
+          #config.vm.provision "shell", inline: <<-SHELL
+          #  sed -i.bak -e "s%http://archive.ubuntu.com/ubuntu/%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list
+          #SHELL
+
+          ### install apt packages
+          config.vm.provision "shell", preserve_order: true, inline: <<-SHELL
+            apt-get update && apt-get install -q -y tmux git nano less
           SHELL
 
-          ### install packages
-          config.vm.provision :shell, :inline => "apt-get update && apt-get install -q -y tmux git nano less"
-            ### clone growi-docker-compose for development
-            config.vm.provision :shell, privileged: false, inline: <<-SHELL
-            git clone -q https://github.com/weseek/growi-docker-compose.git growi
+          ### install docker-compose
+          config.vm.provision "shell", preserve_order: true, inline: <<-SHELL
+            curl -sL "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+            chmod +x /usr/local/bin/docker-compose
+          SHELL
+
+          ### clone git repos
+          config.vm.provision "shell", privileged: false, inline: <<-SHELL
+            git -C growi-docker-compose pull || git clone https://github.com/weseek/growi-docker-compose
           SHELL
 
           ## port forwarding
-          # HackMD
-          config.vm.network "forwarded_port", guest: 3010, host: 3010, host_ip: "empty"
+          # Proxy
+          config.vm.network "forwarded_port", guest: 80, host: 80, host_ip: "127.0.0.1"
+          config.vm.network "forwarded_port", guest: 443, host: 443, host_ip: "127.0.0.1"
+          # App
+          #config.vm.network "forwarded_port", guest: 3000, host: 3000, host_ip: "127.0.0.1"
+          # App2
+          config.vm.network "forwarded_port", guest: 3010, host: 3010, host_ip: "127.0.0.1"
           # MongoDB
           config.vm.network "forwarded_port", guest: 27017, host: 27017, host_ip: "127.0.0.1"
           # Redis
