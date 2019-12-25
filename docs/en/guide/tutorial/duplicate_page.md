@@ -9,9 +9,8 @@ understanding the mechanism of replication and templates can be very useful.
 
 First, create a page for creating a hierarchy in order to duplicate the page.
 
-Press the "Create" button on a guide page, such as a tutorial page,
-let's create a duplicate page.
-
+Press the "create" button to create a duplicate page on a guide page,
+such as the tutorial page.
 
 ![duplicate1](./images/duplicate1.png)
 
@@ -21,8 +20,7 @@ let's create a duplicate page.
 
 Under the duplicate page, create a page for "20191101" that will be the copy source.
 
-Create a page and paste the following markdown description.
-
+Create the source page with following name "20191101" under the duplicate page.
 
 ```
 # 20191101
