@@ -3,14 +3,14 @@
 When you can create a page, learn how to duplicate a page.
 
 If you have a page that you use repeatedly,
-Knowing the mechanism of replication and templates can be very useful.
+understanding the mechanism of replication and templates can be very useful.
 
-## After create page tutorial
+## After the tutorial of creating a page
 
-First, in order to duplicate the page, create a page for creating the hierarchy.
+First, create a page for creating a hierarchy in order to duplicate the page.
 
 Press the "Create" button on a guide page, such as a tutorial page,
-Let's create a duplicate page.
+let's create a duplicate page.
 
 
 ![duplicate1](./images/duplicate1.png)
@@ -21,7 +21,7 @@ Let's create a duplicate page.
 
 Under the duplicate page, create a page for "20191101" that will be the copy source.
 
-Create a page and paste the following markdown description to create the page.
+Create a page and paste the following markdown description.
 
 
 ```
@@ -47,9 +47,9 @@ The page is duplicated like an image.
 ![duplicate6](./images/duplicate6.png)
 
 By duplicating the page this way,
-You can easily create a wiki page with copied contents.
+you can easily create a wiki page with copied contents.
 
-Next, let's use the template function as a similar function.
+Next, let's use a template function similar to the one described above.
 
 ## Create a template
 
@@ -68,12 +68,12 @@ When you create "Template for descendants",
 it applies to all lower-level pages that have template pages.
 
 
-Here we use "Template for children".
+Here, we use "Template for children".
 
 
 ![template1](./images/template1.png)
 
-Click on the Create Template button as shown in the image
+Click the create template button as shown in the image
 to enter the template selection field.
 
 Click the Edit button on "Template for children".
