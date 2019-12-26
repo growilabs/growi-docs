@@ -36,9 +36,9 @@ If the AWS S3 bucket setup has not been completed, refer to [AWS S3 Bucket Setti
 
 Upload attached files to Google Cloud Storage specified in environment variables. The setting procedure is as follows.
 
-1. Refer to [GCP Docs](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and get JSON file of GCP service account.
+1. Refer to [GCP Docs](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and get the JSON file of GCP service account.
 
-2. Set the following environment as below variables and rebuild app.
+2. Set the following environment variables as below and rebuild the app.
 
 - `FILE_UPLOAD` : 'gcs' 
 - `GCS_API_KEY_JSON_PATH` : [Path of the JSON file of GCP service account key (as seen from the root directory of GROWI server)]
@@ -56,7 +56,7 @@ Set the following environment variable as below and rebuild the app.
 
 In the default setting, both the total file size attached to all pages and the maximum file size that can be uploaded at once are unlimited.
 
-In order to limit these sizes, set the following environment variables and rebuild the app.
+In order to limit these sizes, set the following environment variables as below and rebuild the app.
 
 - `MAX_FILE_SIZE` : [The upper limit of uploadable file size (bytes)]
 - `FILE_UPLOAD_TOTAL_LIMIT` : [The upper limit of the total size of attached files in DB (bytes)]
