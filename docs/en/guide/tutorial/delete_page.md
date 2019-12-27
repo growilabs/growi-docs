@@ -56,41 +56,50 @@ You can refer to the page, "Put Back" operation, "Delete Completely" operation.
 
 `![delete3](./images/delete3.png)`
 
-削除済みのページは編集が出来ませんので、編集する場合は元に戻して下さい。
+Deleted pages cannot be edited.
+Please click "Put Back" if you want to edit.
 
-## 完全削除する
 
-「/trash」配下にあるページの「完全削除」ボタン
+## Delete completely
+
+"Delete completely" button for pages under "/trash"
 
 `![delete3](./images/delete3.png)`
 
-またはページ削除時の完全削除のチェックボックスにチェックをした状態での削除によって、
-ページは完全に削除する事が出来ます。
+Or, if you delete the page with the check box for "Delete Completely",
+pages can be permanently deleted.
 
 `![delete7](./images/delete7.png)`
 
-## 子ページも削除する
+## Delete child pages recursively
 
-あるページの配下の全てのページを一括で削除出来ます。
+All pages under a certain page can be deleted at once.
 
-削除実行前のページ一覧を確認してみましょう。
+Let's check the page list before deleting.
+
 
 `![delete8](./images/delete8.png)`
 
-「チュートリアル」ページを選択し、削除時に「全ての子ページも削除」のチェックをした状態で削除を実行します。
+Select the "Tutorial" page,
+when deleting, execute the deletion with "Delete child pages recursively" checked.
+
 
 `![delete9](./images/delete9.png)`
 
 `![delete10](./images/delete10.png)`
 
-すると、チュートリアルページ配下の全てが削除されます。
+Then everything under the tutorial page will be deleted.
 
-完全削除実行後は、「/チュートリアル」ページを参照しようとして、「 Page is not found」が表示されます。
+After Delete Completely, if you try to browse the "/ tutorial" page,
+"Page is not found" is displayed.
+
 
 `![delete11](./images/delete11.png)`
 
-トップページのページ一覧表示でも分かる通り、削除すると対象ページ配下も一括で削除できます。
+As you can see from the list of pages on the top page,
+if you delete it, you can delete it under the target page as well.
+
 
 `![delete12](./images/delete12.png)`
 
-削除機能も使いこなして、GROWI をより発展させましょう。
+Make use of the delete function to further develop GROWI.
