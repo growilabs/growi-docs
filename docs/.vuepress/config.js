@@ -295,6 +295,7 @@ module.exports = {
                 '/ja/guide/features/page_operation.md',
                 '/ja/guide/features/emoji.md',
                 '/ja/guide/features/history.md',
+                '/ja/guide/features/authority.md',
                 '/ja/guide/features/blockdiag.md',
                 '/ja/guide/features/bootstrap.md',
                 '/ja/guide/features/uml_diagrams.md',
@@ -372,6 +373,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/admin-guide/management-cookbook/line-breaks.md',
+                '/ja/admin-guide/management-cookbook/group.md',
                 '/ja/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
                 '/ja/admin-guide/management-cookbook/ldap.md',
                 '/ja/admin-guide/management-cookbook/active-directory.md',
