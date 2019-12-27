@@ -1,4 +1,4 @@
-# Environment Variables
+# 環境変数
 
 | Enviroment Variable | Description | Default Value |
 | ------------------- | ----------: | ------------- |

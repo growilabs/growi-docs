@@ -358,6 +358,7 @@ module.exports = {
               title: 'システム管理者のクックブック',
               collapsable: false,
               children: [
+                '/ja/admin-guide/admin-cookbook/env-vars.md',
                 '/ja/admin-guide/admin-cookbook/logging.md',
                 '/ja/admin-guide/admin-cookbook/launch-with-systemd.md',
                 '/ja/admin-guide/admin-cookbook/multi-app.md',
