@@ -12,7 +12,8 @@
 		"hbenl.vscode-firefox-debug",
 		"davidanson.vscode-markdownlint",
 		"octref.vetur",
-		"sysoev.language-stylus"
+    "sysoev.language-stylus",
+    "hex-ci.stylelint-plus",
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [
