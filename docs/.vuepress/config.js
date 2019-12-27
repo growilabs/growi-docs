@@ -177,6 +177,7 @@ module.exports = {
                 '/en/admin-guide/admin-cookbook/launch-with-systemd.md',
                 '/en/admin-guide/admin-cookbook/multi-app.md',
                 '/en/admin-guide/admin-cookbook/lets-encrypt.md',
+                '/en/admin-guide/admin-cookbook/attachment.md',
                 '/en/admin-guide/admin-cookbook/mongodb-backup.md',
                 '/en/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/en/admin-guide/admin-cookbook/integrate-with-hackmd.md',
@@ -187,8 +188,8 @@ module.exports = {
               collapsable: false,
               children: [
                 '/en/admin-guide/management-cookbook/line-breaks.md',
-                '/en/admin-guide/management-cookbook/attachment.md',
                 '/en/admin-guide/management-cookbook/ldap.md',
+                '/en/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
                 '/en/admin-guide/management-cookbook/active-directory.md',
                 '/en/admin-guide/management-cookbook/google-analytics.md',
                 '/en/admin-guide/management-cookbook/slack.md',
