@@ -1,15 +1,15 @@
-# Group management
+# UserGroup Management
 
-By using the group management function,
+By using the UserGroup Management function,
 you can set the authority
 that only specific users can view and edit the contents on a page basis.
 
 To set a group,
 you need to operate from the administration menu as a user with administrator authority.
 
-## グループの作成
+## Create group
 
-管理メニューの「グループ管理」に移動します。
+Go to "UserGroup Management" in the administration menu.
 
 `![group1](./images/group1.png)`
 
