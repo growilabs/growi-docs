@@ -188,8 +188,9 @@ module.exports = {
               collapsable: false,
               children: [
                 '/en/admin-guide/management-cookbook/line-breaks.md',
-                '/en/admin-guide/management-cookbook/ldap.md',
+                '/en/admin-guide/management-cookbook/group.md',
                 '/en/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
+                '/en/admin-guide/management-cookbook/ldap.md',
                 '/en/admin-guide/management-cookbook/active-directory.md',
                 '/en/admin-guide/management-cookbook/google-analytics.md',
                 '/en/admin-guide/management-cookbook/slack.md',
