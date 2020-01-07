@@ -49,17 +49,20 @@ that can be set as page view / edit restrictions.
 
   Pages with this setting cannot be viewed or edited by anyone other than yourself.
 
-  自分以外のユーザーのページリストやページ検索結果に表示されるかどうかは、管理画面の ON/OFF で設定出来ます。(後述)
+  Whether it is displayed in page list and page search results of other users
+  can be set by ON / OFF of the management page.
 
-  デフォルトの管理設定では、ページリストやページ検索結果には表示されます。
+  By default, it appears in the page list and page search results.
 
 ### Only inside the group
 
-  この設定をしたページは、設定したグループに所属するユーザーしか閲覧・編集できなくなります。
+  Pages with this setting can only be viewed and edited by users
+  belonging to the set group.
 
-  グループに所属していないユーザーのページリストやページ検索結果に表示されるかどうかは、管理画面の ON/OFF で設定できます。(後述)
+  Whether it is displayed in page list and page search results of a user not in group
+  can be set by ON / OFF of the management page.
 
-  デフォルトの管理設定では、ページリストやページ検索結果には表示されます。
+  By default, it appears in the page list and page search results.
 
 ## グループ管理機能について
 
