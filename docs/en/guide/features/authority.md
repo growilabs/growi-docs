@@ -6,17 +6,19 @@ This section describes the authority that can be set for pages.
 
 ## How to set view / edit authority for pages
 
-ページの編集モードにて、画面右下に表示される「作成/更新」ボタンの左側の「公開」と表示されている部分の「▲」をクリックすると
-
-以下の画像のように選択肢が表示されます。
+In the edit mode of the page,
+click the "▲" enclosed in red line of the below image first,
+then the options are displayed as shown in the image below.
 
 `![authority1](./images/authority1.png)`
 
-この選択肢を選択後、「作成/更新」ボタンを押下する事で、閲覧・編集権限の設定がページへ適用されます。
+After selecting this option,
+click the "Create / Update" button view / edit authority for the page apply.
 
-## 閲覧・編集権限として設定できる種類
+## Types that can be set as view / edit authority
 
-ページの閲覧・編集制限として設定できる内容は、以下のいずれかを選択可能です。
+You can select any of the following for the contents
+that can be set as page view / edit restrictions.
 
 ### 公開
 
