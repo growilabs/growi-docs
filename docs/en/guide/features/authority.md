@@ -20,34 +20,40 @@ click the "Create / Update" button view / edit authority for the page apply.
 You can select any of the following for the contents
 that can be set as page view / edit restrictions.
 
-### 公開
+### Public
 
-  この設定のページに対しては閲覧・編集の制限がありません。誰でも閲覧・編集できます。デフォルトはこの設定です。
+  There is no viewing or editing restriction for pages with this setting.
+  Anyone can view and edit. This is the default.
 
-  GROWI 全体が `ログインしないと閲覧できない設定` の場合、
+  If the entire GROWI is `settings that cannot be viewed without logging in`,
+
+  Even if the page is public,
+  you will not be able to view or edit it unless you log in,
+  and if you access the page, you will be redirected to the login page.
+
+  Anyone who is logged in can view and edit.
+
+### Anyone with the link
   
-  ページが公開の設定でもログインしないと閲覧・編集できず、ページへアクセスしてもログイン画面へリダイレクトされます。
-  ログインしているユーザーであれば誰でも閲覧・編集できます。
+  Pages with this setting will not be output to the page list or page search results.
 
-### リンクを知っている人のみ
-  
-  この設定をしたページは、ページリストやページ検索結果には出力されなくなります。
+  Only users who know the URL of the page will be able to view and edit it.
 
-  ページの URL が分かるユーザーのみが閲覧・編集できるようになります。
 
-  自分でもページ配置場所が分からなくなった場合は、ホーム画面の「Recently Created」からページを辿りましょう。
-  
-  自分が作成したページであれば、こちらのページ一覧には出力されます。
+  If you do not know where to place the page,
+  follow the page from "Recently Created" on the home page.
 
-### 自分のみ
+  If it is a page you created, it will be output to this page list.
 
-  この設定をしたページは、自分以外のユーザーは閲覧・編集できなくなります。
+### Just me
+
+  Pages with this setting cannot be viewed or edited by anyone other than yourself.
 
   自分以外のユーザーのページリストやページ検索結果に表示されるかどうかは、管理画面の ON/OFF で設定出来ます。(後述)
 
   デフォルトの管理設定では、ページリストやページ検索結果には表示されます。
 
-### 特定のグループのみ
+### Only inside the group
 
   この設定をしたページは、設定したグループに所属するユーザーしか閲覧・編集できなくなります。
 
