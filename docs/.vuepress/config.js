@@ -110,6 +110,7 @@ module.exports = {
                 '/en/guide/features/page_operation.md',
                 '/en/guide/features/emoji.md',
                 '/en/guide/features/history.md',
+                '/en/guide/features/authority.md',
                 '/en/guide/features/blockdiag.md',
                 '/en/guide/features/bootstrap.md',
                 '/en/guide/features/uml_diagrams.md',
