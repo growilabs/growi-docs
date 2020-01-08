@@ -64,55 +64,72 @@ that can be set as page view / edit restrictions.
 
   By default, it appears in the page list and page search results.
 
-## グループ管理機能について
+## About group management function
 
-詳細は [こちら](/ja/admin-guide/management-cookbook/group.md)に記載しています。
+Click [here](/en/admin-guide/management-cookbook/group.md) for details
 
-## 権限が付いたページに対しての検索結果表示やリスト表示の制御
+## Control search results and list display for authorized pages
 
-GROWI の検索結果やページリスト表示時に、閲覧・編集権限がない人にはページを表示したくないという場合は、
-
-管理メニューの`セキュリティ設定`で該当の設定のオン・オフ機能を切り替えましょう。
+If you don't want to show a page to someone
+who doesn't have view / edit authority when viewing search results or page list,
+let's switch on / off function of the corresponding setting
+in `Security setting` of management menu.
 
 `![security](./images/security.png)`
 
-### ページのリスト表示と検索　'自分のみ'に閲覧制限しているページ
+### Page listing/searching restricted by 'Just Me'
 
-- ON の場合
 
-  自分以外のユーザーのページのリスト表示や検索結果として、該当の制限をしているページが表示されます。
+- Case with ON
 
-- OFF の場合
+  The list of pages of other users and search results
+  will show the pages that have the restriction.
 
-  自分以外のユーザーのページのリスト表示や検索結果として、該当の制限をしているページが表示されません。
 
-### ページのリスト表示と検索　特定グループに閲覧制限しているページ
+- Case with OFF
 
-- ON の場合
+  The page with the restriction
+  is not displayed in the list display or search results of the pages of other users.
 
-  グループに所属していないユーザーのページのリスト表示や検索結果として、該当の制限をしているページが表示されます。
 
-- OFF の場合
+### Page listing/searching restricted by User Group
 
-  グループに所属していないユーザーのページのリスト表示や検索結果として、該当の制限をしているページが表示されません。
+- Case with ON
 
-## 閲覧・編集権限をページ配下に一括で設定
+  The list of pages of users who do not belong to the group and search results
+  will show the pages that have the restriction.
 
-ページは階層構造になっており、特定ページ配下のページ全てに対して、一括で権限管理したい場合があります。
+- Case with OFF
 
-その際には、ページの作成/更新時に画面右下に表示される「作成/更新」ボタンの「▲」をクリックし、
+  Pages that have the restriction
+  are not displayed in the list display or search results
+  of users who do not belong to the group.
 
-「作成/更新と同時に全ての配下ページのスコープを上書き」をクリックして下さい。
+
+## Set viewing and editing authority at once under the page
+
+Pages have a hierarchical structure,
+and you may want to manage permissions for all pages under a specific page at once.
+
+In that case, please click "▲" of "Create / Update" button
+Appears in the lower right corner of the screen when in edit mode.
+
+Click "Update and Overwrite scopes of all descendants".
 
 `![authority2](./images/authority2.png)`
 
-この操作で、該当ページ配下の全てのページに対して、同じ権限設定を適用できます。
+By this operation,the same authority settings can be applied
+to all pages under the corresponding page.
 
-## 権限の設定例
 
-基本的には、閲覧・編集権限が必要なページはまとめて整理して、ページ配下を一括で権限更新すると管理が簡単になります。
+## Setting example of authority
 
-もしページ構成の変更に問題がなければ、権限が必要なページは以下の例のように移動しましょう。
+Pages that require viewing / editing authority
+can be easily managed by putting them together.
+
+Move the pages that need permission as shown in the following example,
+if there is no problem with changing the page structure.
+
 
 - グループ名のページを作成する
 
