@@ -10,7 +10,7 @@ In the edit mode of the page,
 click the "▲" enclosed in red line of the below image first,
 then the options are displayed as shown in the image below.
 
-`![authority1](./images/authority1.png)`
+![authority1](./images/authority1.png)
 
 After selecting this option,
 click the "Create / Update" button view / edit authority for the page apply.
@@ -75,7 +75,7 @@ who doesn't have view / edit authority when viewing search results or page list,
 let's switch on / off function of the corresponding setting
 in `Security setting` of management menu.
 
-`![security](./images/security.png)`
+![security](./images/security.png)
 
 ### Page listing/searching restricted by 'Just Me'
 
@@ -116,7 +116,7 @@ Appears in the lower right corner of the screen when in edit mode.
 
 Click "Update and Overwrite scopes of all descendants".
 
-`![authority2](./images/authority2.png)`
+![authority2](./images/authority2.png)
 
 By this operation,the same authority settings can be applied
 to all pages under the corresponding page.
