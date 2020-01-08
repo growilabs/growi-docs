@@ -127,14 +127,16 @@ to all pages under the corresponding page.
 Pages that require viewing / editing authority
 can be easily managed by putting them together.
 
-Move the pages that need permission as shown in the following example,
+Move the pages that need authority as shown in the following example,
 if there is no problem with changing the page structure.
 
 
-- グループ名のページを作成する
+- Create a group name page
 
-- 該当グループのみ閲覧・編集権限を持たせたいページを、そのページ配下へ移動する
+- Move the page that you want to have view / edit authority
+  only for that group under that page
 
-  ページの移動については [こちら](/ja/guide/features/page_operation.md)
+  Click [here](/en/guide/features/page_operation.md) for page move
 
-- グループ名のページを一括で権限設定する
+
+- Set authority for group name pages at once
