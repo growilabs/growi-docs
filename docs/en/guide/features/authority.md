@@ -64,4 +64,79 @@ that can be set as page view / edit restrictions.
 
   By default, it appears in the page list and page search results.
 
-TBD
+## About group management function
+
+Click [here](/en/admin-guide/management-cookbook/group.md) for details
+
+## Control search results and list display for authorized pages
+
+If you don't want to show a page to someone
+who doesn't have view / edit authority when viewing search results or page list,
+let's switch on / off function of the corresponding setting
+in `Security setting` of management menu.
+
+![security](./images/security.png)
+
+### Page listing/searching restricted by 'Just Me'
+
+
+- Case with ON
+
+  The list of pages of other users and search results
+  will show the pages that have the restriction.
+
+
+- Case with OFF
+
+  The page with the restriction
+  is not displayed in the list display or search results of the pages of other users.
+
+
+### Page listing/searching restricted by User Group
+
+- Case with ON
+
+  The list of pages of users who do not belong to the group and search results
+  will show the pages that have the restriction.
+
+- Case with OFF
+
+  Pages that have the restriction
+  are not displayed in the list display or search results
+  of users who do not belong to the group.
+
+
+## Set viewing and editing authority at once under the page
+
+Pages have a hierarchical structure,
+and you may want to manage permissions for all pages under a specific page at once.
+
+In that case, please click "▲" of "Create / Update" button
+Appears in the lower right corner of the screen when in edit mode.
+
+Click "Update and Overwrite scopes of all descendants".
+
+![authority2](./images/authority2.png)
+
+By this operation,the same authority settings can be applied
+to all pages under the corresponding page.
+
+
+## Setting example of authority
+
+Pages that require viewing / editing authority
+can be easily managed by putting them together.
+
+Move the pages that need authority as shown in the following example,
+if there is no problem with changing the page structure.
+
+
+- Create a group name page
+
+- Move the page that you want to have view / edit authority
+  only for that group under that page
+
+  Click [here](/en/guide/features/page_operation.md) for page move
+
+
+- Set authority for group name pages at once
