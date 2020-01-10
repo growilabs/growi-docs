@@ -11,18 +11,21 @@ and select the delete menu shown in the image below.
 
 ![delete1](./images/delete1.png)
 
-In the delete menu,
+In the delete menu, you will see
 
 - Delete child pages recursively.
 
 - Delete Completely
 
-each of them. By default, the first one is selected.
+and each of them has a check box and the first one is checked by default.
 
 ![delete2](./images/delete2.png)
 
-Let's press the "Delete" button on the page that has no child pages
-move to the page with the trash can mark at the top of the hierarchy with the message.
+Let's press the "Delete" button on the page that has no child pages.
+It will delete the page and the page will be moved into trash.
+
+Now,
+you see the page with the trash can mark at the top of the hierarchy with the message.
 
 `This page is in the trash.`
 
@@ -39,12 +42,12 @@ Go to the deleted page from
 
 ![delete5](./images/delete5.png)
 
-The page will be moved under the "/trash", keeping the original page hierarchy.
+And you will see the page that is in "/trash" show in the image below.
 
 ![delete6](./images/delete6.png)
 
-If you select the deleted page,
-in this page, you will see "Put Back" button & "Delete Completely" button.
+Clicking on a deleted page in the list will open the deleted page
+with a "Put Back" button & "Delete Completely" button.
 
 ![delete3](./images/delete3.png)
 
@@ -64,7 +67,7 @@ the page will be permanently deleted as well.
 
 ## Delete child pages recursively
 
-All child pages under the certain page can be deleted at once.
+All child pages under a certain page can be deleted at once.
 
 Let's check the page list before deleting.
 
@@ -77,7 +80,7 @@ then delete it with "Delete child pages recursively" checked.
 
 ![delete10](./images/delete10.png)
 
-Then all child pages under the tutorial page will be deleted.
+Then all child pages under the "/tutorial" page will be deleted.
 
 "Page is not found" will be displayed, if you try to browse the "/tutorial" page,
 after deleting completely.
@@ -85,7 +88,7 @@ after deleting completely.
 ![delete11](./images/delete11.png)
 
 As you can see from the list of pages in the top page,
-if you delete the "/tutorial" page, the pages below the tutorial page are also deleted.
+if you delete the "/tutorial" page, the pages below the "/tutorial" page are also deleted.
 
 ![delete12](./images/delete12.png)
 
