@@ -42,12 +42,12 @@ Go to the deleted page from
 
 ![delete5](./images/delete5.png)
 
-And you will see the page that is in "/trash" show in the image below.
+And you will see the page that is in "/trash" as shown the image below.
 
 ![delete6](./images/delete6.png)
 
 Clicking on a deleted page in the list will open the deleted page
-with a "Put Back" button & "Delete Completely" button.
+with a "Put Back" button and "Delete Completely" button.
 
 ![delete3](./images/delete3.png)
 
@@ -88,7 +88,7 @@ after deleting completely.
 ![delete11](./images/delete11.png)
 
 As you can see from the list of pages in the top page,
-if you delete the "/tutorial" page, the pages below the "/tutorial" page are also deleted.
+if you delete the "/tutorial" page, the pages under the "/tutorial" page are also deleted.
 
 ![delete12](./images/delete12.png)
 
