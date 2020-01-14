@@ -6,14 +6,17 @@
 
 This chapter introduces how to register AWS S3 Bucket to GROWI.
 
-This setting makes uploading attachment files and profile images to AWS S3 Bucket available. If you do not have SMTP settings, e-mails will be sent via SES. You need to verify from e-mail address and production settings.
- 
+This setting makes uploading attachment files and profile images to AWS S3 Bucket available. If SMTP settings are not completed, e-mails will be sent via SES. You need to verify From E-mail Address and production settings.
+  
 ## How to Configure
 
 ### Get AWS Account Information
 
-1. Sign-in [AWS Management Console](https://aws.amazon.com/console/), and click [My Security Credentials](https://console.aws.amazon.com/iam/home?#/security_credentials) in dropdown of account information.
-2. In the Access keys (access key ID and secret access key) tab, create new access key
+1. Sign-in [AWS Management Console](https://aws.amazon.com/console/), and click [My Security Credentials](https://console.aws.amazon.com/iam/home?#/security_credentials) in drop-down list of account information on the left side of the top bar.
+
+![aws-setting-1](./images/aws-setting-1.png)
+
+2. In the Access keys (access key ID and secret access key) tab, create new access key.
 3. In the Account identifiers tab, check your canonical user ID.
 
 ### Get AWS S3 Bucket Information 
