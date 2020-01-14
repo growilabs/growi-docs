@@ -17,15 +17,16 @@ This setting makes uploading attachment files and profile images to AWS S3 Bucke
 ![aws-setting-1](./images/aws-setting-1.png)
 
 2. In the Access keys (access key ID and secret access key) tab, create new access key.
-3. In the Account identifiers tab, check your canonical user ID.
+3. In the Account identifiers tab, check your Canonical User ID.
 
 ### Get AWS S3 Bucket Information 
 
 1. Access to [AWS S3 dashboard](https://s3.console.aws.amazon.com/s3).
-2. Open Permissions page of S3 Bucket.
-3. In the Block public access tab, turn off "Block public access to buckets and objects granted through new access control lists (ACLs)".
-4. In the Access Control List tab, add your canonical user ID is in access control list with full permissions.
+2. Check region and name of S3 Bucket that you will register to GROWI.
+3. Open Permissions page of S3 Bucket.
+4. In the Block public access tab, click Edit button and turn off "Block public access to buckets and objects granted through new access control lists (ACLs)". Then, save changes.
+5. In the Access Control List tab, if the Canonical User ID that you checked in Step 3 of [Get AWS Account Information](#get-aws-account-information) doesn't match Acceess for Bucket Owner, add the ID to the Access for Other AWS Account list with full permissions.
 
 ### Register your Bucket to GROWI
-1. In App settings page (`/admin/app`), Input information of your Backet.
-2. Input the URL of the endpoint of an object storage service like MinIO that has a S3-compatible API. Amazon S3 is used if empty.
+1. In App settings page (`/admin/app`), Input information of S3 Backet that you checked in Step 2 of [Get AWS S3 Bucket Information](#get-aws-s3-bucket-information).
+2. If you use an object storage service like MinIO that has a S3-compatible API, input the endpoint URL in the Custom Endpoint form. If this form is empty, GROWI uses Amazon S3.
