@@ -6,7 +6,7 @@
 
 This chapter introduces how to register AWS S3 Bucket to GROWI.
 
-This setting makes uploading attachment files and profile images to AWS S3 Bucket available. If SMTP settings are not completed, e-mails will be sent via SES. You need to verify From E-mail Address and production settings.
+This setting makes uploading attachment files and profile images to AWS S3 Bucket available. If SMTP settings are not completed, e-mails will be sent via SES. You need to verify From e-mail address and production settings.
   
 ## How to Configure
 
