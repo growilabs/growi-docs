@@ -37,12 +37,12 @@ After deletion, the page can no longer be referenced from the previous hierarchy
 
 ## Check deleted pages in Trash
 
-Go to the deleted page from
-"Deleted pages" in the menu that appears by clicking the user name in the header.
+Click the "Deleted pages"
+in the menu that appears by clicking the user name in the header.
 
 ![delete5](./images/delete5.png)
 
-And you will see the page that is in "/trash" as shown in the image below.
+And you will see the list of deleted pages under "/trash" as shown in the image below.
 
 ![delete6](./images/delete6.png)
 
@@ -60,7 +60,7 @@ You can permanently delete the page by clicking "Delete completely" under "/tras
 
 ![delete3](./images/delete3.png)
 
-or, if you delete a page with "Delete completely" checked,
+Or if you delete a page with "Delete completely" checked,
 the page will be permanently deleted as well.
 
 ![delete7](./images/delete7.png)
