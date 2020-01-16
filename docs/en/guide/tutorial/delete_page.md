@@ -1,4 +1,4 @@
-# delete page
+# Delete page
 
 As the page creation progresses, you also want to delete the page.
 
