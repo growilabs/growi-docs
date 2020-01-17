@@ -1,4 +1,4 @@
-# duplicate page
+# Duplicate page
 
 When you can create a page, learn how to duplicate a page.
 

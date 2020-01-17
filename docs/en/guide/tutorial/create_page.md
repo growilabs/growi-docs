@@ -1,4 +1,4 @@
-# create page
+# Create page
 
 ## After installation
 
