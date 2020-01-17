@@ -4,7 +4,7 @@
 
 ## Overview
 
-This chapter introduces how to register AWS S3 Bucket to GROWI.
+This chapter introduces how to register AWS S3 Bucket with GROWI.
 
 This setting makes uploading attachment files and profile images to AWS S3 Bucket available. If SMTP settings are not completed, e-mails will be sent via SES. You need to verify From e-mail address and production settings.
   
@@ -22,11 +22,11 @@ This setting makes uploading attachment files and profile images to AWS S3 Bucke
 ### Get AWS S3 Bucket Information 
 
 1. Access to [AWS S3 dashboard](https://s3.console.aws.amazon.com/s3).
-2. Check the region and name of S3 Bucket that you will register to GROWI.
+2. Check the region and name of S3 Bucket that you will register with GROWI.
 3. Open Permissions page of S3 Bucket.
 4. In the Block public access tab, click Edit button and uncheck the "Block public access to buckets and objects granted through new access control lists (ACLs)" checkbox. Then, save changes.
 5. In the Access Control List tab, if the Canonical User ID that you checked in Step 3 of [Get AWS Account Information](#get-aws-account-information) doesn't match the Canonical ID added to the Acceess for Bucket Owner table, add the ID to the Access for Other AWS Account list with full permissions.
 
-### Register your Bucket to GROWI
+### Register Your Bucket With GROWI
 1. In App settings page (`/admin/app`), Input information of S3 Bucket that you checked in Step 2 of [Get AWS S3 Bucket Information](#get-aws-s3-bucket-information).
 2. If you use an object storage service like MinIO that has a S3-compatible API, input the endpoint URL in the Custom Endpoint form. If this form is empty, GROWI uses Amazon S3 by default.
