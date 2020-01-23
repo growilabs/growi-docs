@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '~@vuepress/core/lib/app/style/config.styl';
+@import '~@vuepress/core/lib/client/style/config.styl';
 
 .no-scroll {
   overflow-y: hidden;
