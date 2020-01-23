@@ -25,7 +25,7 @@ This setting makes uploading attachment files and profile images to AWS S3 Bucke
 2. Check the region and name of S3 Bucket that you will register with GROWI.
 3. Open Permissions page of S3 Bucket.
 4. In the "Block public access" tab, click Edit button and uncheck the "Block public access to buckets and objects granted through new access control lists (ACLs)" checkbox. Then, save changes.
-5. In the "Access Control List" tab, if the Canonical User ID that you checked in Step 3 of [Get AWS Account Information](#get-aws-account-information) doesn't match the Canonical ID added to the "Acceess for Bucket Owner" table, add the ID to the "Access for Other AWS Accounts" list with full permissions.
+5. In the "Access Control List" tab, if the Canonical User ID that you checked in Step 3 of [Get AWS Account Information](#get-aws-account-information) doesn't match the Canonical ID added to the "Acceess for bucket owner" table, add the ID to the "Access for other AWS accounts" list with full permissions.
 
 ### Register Your Bucket With GROWI
 1. In App settings page (`/admin/app`), Input information of S3 Bucket that you checked in Step 2 of [Get AWS S3 Bucket Information](#get-aws-s3-bucket-information).
