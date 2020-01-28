@@ -6,7 +6,7 @@ sidebarDepth: 0
 
 ## Architecture
 
-(TBD)
+[Architecture](./plugin/architecture.md)
 
 ## Directory Structure
 
