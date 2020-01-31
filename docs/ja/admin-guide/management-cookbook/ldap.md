@@ -4,5 +4,11 @@
 
 * [https://qiita.com/yuki-takei/items/a707233b47cd03338605](https://qiita.com/yuki-takei/items/a707233b47cd03338605) の移植
 * グループフィルタの説明の追加
-* (執筆者、PR募集)
 
+## 概要
+
+## LDAP サーバー設定
+
+## Attribute Mapping (オプション)
+
+## グループ検索フィルター
