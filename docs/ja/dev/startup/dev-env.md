@@ -37,7 +37,7 @@
 
 ## Node.js 実行環境のインストール
 
-Node.js, npm, Yarn 共に、CI 環境で利用する `node:10` のバージョンに合わせる
+Node.js, npm, Yarn 共に、CI 環境で利用する `node:12` のバージョンに合わせる
 
 :::: tabs
 
@@ -45,7 +45,8 @@ Node.js, npm, Yarn 共に、CI 環境で利用する `node:10` のバージョ�
 
 1. Node.js, npm のバージョン管理ツール「nodist」 をインストール
     * [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows) から `nvm-setup.zip` をダウンロードして実行
-1. Node.js, npm インストール (12.x の最新バージョンは https://nodejs.org/ja/download/releases/ から探してください)
+1. Node.js, npm インストール (12.x の最新バージョンは <https://nodejs.org/ja/download/releases/> から探してください)
+
     ``` cmd
     nvm install 12.x.x
     nvm use 12.x.x
@@ -62,18 +63,24 @@ Node.js, npm, Yarn 共に、CI 環境で利用する `node:10` のバージョ�
 1. homebrew インストール
     * [https://brew.sh/index\_ja](https://brew.sh/index_ja) の記載に従ってインストールする
 1. Node.js, npm のバージョン管理ツール「nodebrew」をインストール
+
     ```bash
     brew install nodebrew
     nodebrew setup
     ```
+
 1. Node.js, npm インストール
+
     ```bash
     nodebrew install-binary v12.x
     ```
+
 * Yarn インストール
+
     ```bash
     brew install yarn
     ```
+
 :::
 
 ::::
@@ -109,6 +116,7 @@ Docker 環境をネイティブで準備できない場合のみ、以下の手�
 2. Vagrant インストール
     * [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html) からDLしてインストールする
     * Vagrantfile を作成
+
         ```ruby
         Vagrant.configure(2) do |config|
           config.vm.box = "chaifeng/ubuntu-18.04-docker-19.03"
