@@ -1,11 +1,10 @@
 # UserGroup Management
 
-By using the UserGroup Management function,
+By using UserGroup Management function,
 you can set the authority
-that only specific users can view and edit the contents on a page basis.
+on a page basis that only specific users can view and edit the contents.
 
-To set a group,
-you need to operate from the administration menu as a user with administrator authority.
+Only authorized users can set groups from the administration menu.
 
 ## Create group
 
@@ -14,7 +13,7 @@ Go to "UserGroup Management" in the administration menu.
 ![group1](./images/group1.png)
 
 Click the "Create New Group" button first,
-then enter the group name and click the "Create" button.
+then enter group name and click the "Create" button.
 
 ![group2](./images/group2.png)
 
@@ -24,7 +23,7 @@ Success is displayed and the group is added to the Group List.
 
 ## Adding users to groups
 
-Select a group displayed in the Group List.
+Select a group in the Group List.
 
 ![group4](./images/group4.png)
 
@@ -43,9 +42,8 @@ Enter the user name registered as a user in GROWI.
 
 ![group8](./images/group8.png)
 
-An error will occur as shown in the below image
-and the user cannot be added to the group,
-if the user name is not a registered user name.
+if the user name has not been registered yet, an error will occur
+and the user cannot be added to the group.
 
 ![group9](./images/group9.png)
 
@@ -61,12 +59,13 @@ Then, the group selection menu is displayed and you can select the created group
 
 ![group11](./images/group11.png)
 
-Select the target group and click the Create / Update button.
+Select the group and click the Create / Update button.
 
 ![group12](./images/group12.png)
 
-The authority setting is completed, if you see the notation
-that the authority is added at the top of the page like the image.
+
+If you see the notation that "Browsing of this page is restricted",
+the authority setting is completed.
 
 ![group13](./images/group13.png)
 
@@ -77,7 +76,7 @@ you will not be able to view or edit the contents of the page.
 
 ## Refer to the list of authorization pages on the group management page
 
-When you set read / edit authority for a page,
-you can see a list of pages for which authority have been set for the target group.
+If you set read / edit authority for a page,
+you can see a list of pages for which authority has been set for the group.
 
 ![group15](./images/group15.png)
