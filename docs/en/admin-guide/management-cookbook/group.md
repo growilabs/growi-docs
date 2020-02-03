@@ -27,16 +27,19 @@ Select a group in the Group List.
 
 ![group4](./images/group4.png)
 
-Users can be added to the group by operating the user list on the group settings.
+
+How to add a user to the group you selected is as follows.
+Click the "+" button as shown in bellow image.
+
 
 ![group5](./images/group5.png)
 
-Click the "+" in the Username field
-to display the entry field for adding a user to the group.
+
+An input box for adding a user to the group is displayed.
 
 ![group6](./images/group6.png)
 
-Enter the user name registered as a user in GROWI.
+Enter the user name registered with GROWI.
 
 ![group7](./images/group7.png)
 
