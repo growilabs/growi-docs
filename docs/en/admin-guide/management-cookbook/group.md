@@ -1,6 +1,6 @@
 # UserGroup Management
 
-By using UserGroup Management function,
+By using the UserGroup Management function,
 you can set the authority
 on a page basis that only specific users can view and edit the contents.
 
@@ -13,7 +13,7 @@ Go to "UserGroup Management" in the administration menu.
 ![group1](./images/group1.png)
 
 Click the "Create New Group" button first,
-then enter group name and click the "Create" button.
+then enter a group name and click the "Create" button.
 
 ![group2](./images/group2.png)
 
@@ -29,7 +29,7 @@ Select a group in the Group List.
 
 
 How to add a user to the group you selected is as follows.
-Click the "+" button as shown in bellow image.
+Click the "+" button as shown in the image below.
 
 
 ![group5](./images/group5.png)
@@ -39,7 +39,7 @@ An input box for adding a user to the group is displayed.
 
 ![group6](./images/group6.png)
 
-Enter the user name registered with GROWI.
+Enter the user name registered as a user with your GROWI.
 
 ![group7](./images/group7.png)
 
@@ -52,7 +52,7 @@ and the user cannot be added to the group.
 
 ## Set browsing permissions for pages
 
-After the group is created, set the view / edit authority on the page.
+After the group is created, set the view / edit authority to the page.
 
 In the page edit mode, set "Only inside the group" as shown in the image below.
 
@@ -72,14 +72,14 @@ the authority setting is completed.
 
 ![group13](./images/group13.png)
 
-If you refer to the page with an account that does not belong to the group,
+If you browse the page with an account that does not belong to the group,
 you will not be able to view or edit the contents of the page.
 
 ![group14](./images/group14.png)
 
 ## Refer to the list of authorization pages on the group management page
 
-If you set read / edit authority for a page,
-you can see a list of pages for which authority has been set for the group.
+If you set view / edit authority to a page,
+you can see a list of autholized pages on the UserGroup Managemet screen.
 
 ![group15](./images/group15.png)
