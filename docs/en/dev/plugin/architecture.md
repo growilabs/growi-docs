@@ -4,7 +4,7 @@
 
 ## Entry Point
 
-When GROWI detects[^detect] a plug-in package, GROWI parses [metadata](./metadata.md) of each plugins then collects methods that serve as the entry point for client side and server side.
+When GROWI detects[^detect] a plug-in package, first GROWI parses [metadata](./metadata.md) of each plugins then collects and stores methods that serve as the entry point for client side and server side.
 
 [^detect]: The detection timing for the client side is when the client is built by webpack and for the server side is when the server starts.
 
