@@ -4,7 +4,7 @@
 
 ## Entry Point
 
-When GROWI detects[^detect] plug-in packages, first GROWI parses [metadata](./metadata.md) of each plugins, and then GROWI collects and stores methods that serve as the entry point for client side and server side.
+When GROWI detects[^detect] plug-in packages, first parses [metadata](./metadata.md) of each plugins, and then GROWI collects and stores methods that serve as the entry point for client side and server side.
 
 [^detect]: The detection timing for the client side is when the client is built by webpack and for the server side is when the server starts.
 
@@ -17,6 +17,6 @@ When GROWI detects[^detect] plug-in packages, first GROWI parses [metadata](./me
 ### Calling on The Server Side
 
 - When the server starts, it calls entry point methods of plugins.
-  - At this time, two arguments is passed.
+  - At this time, two arguments are passed.
     1. [Crowi](https://github.com/weseek/growi/blob/master/src/server/crowi/index.js) instance.
     1. [Application](https://expressjs.com/ja/4x/api.html#app) instance that comes from [Express](https://expressjs.com).
