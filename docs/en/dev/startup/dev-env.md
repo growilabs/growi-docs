@@ -37,7 +37,7 @@ Generally, some of the tools and configurations are not required for developing 
 
 ## Set up Node.js Environment
 
-Test environment (CI) uses `node:10`. Use the version Node.js, npm, and Yarn compatible with `node:10`.
+Test environment (CI) uses `node:12`. Use the version Node.js, npm, and Yarn compatible with `node:12`.
 
 :::: tabs
 
@@ -45,7 +45,8 @@ Test environment (CI) uses `node:10`. Use the version Node.js, npm, and Yarn com
 
 1. Install "nvm-windows" (version manager for Node.js, npm)
     * Download `nvm-setup.zip` from [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows) and execute
-1. Install Node.js and npm (lookup latest version of 12.x from https://nodejs.org/en/download/releases/)
+1. Install Node.js and npm (lookup latest version of 12.x from <https://nodejs.org/en/download/releases/)>
+
     ``` cmd
     nvm install 12.x.x
     nvm use 12.x.x
@@ -62,18 +63,24 @@ Test environment (CI) uses `node:10`. Use the version Node.js, npm, and Yarn com
 1. Install homebrew
     * Follow [https://brew.sh/index](https://brew.sh/index) and install homebrew.
 1. Install "nodebrew" (version manager for Node.js, npm)
+
     ```bash
     brew install nodebrew
     nodebrew setup
     ```
+
 1. Install Node.js, npm
+
     ```bash
     nodebrew install-binary v12.x
     ```
+
 * Install Yarn
+
     ```bash
     brew install yarn
     ```
+
 :::
 
 ::::
@@ -109,6 +116,7 @@ Only if your environment does not support Docker, go through the following steps
 2. Install Vagrant
     * nload and install Vagrant from [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html).
     * Create Vagrantfile
+
         ```ruby
         Vagrant.configure(2) do |config|
           config.vm.box = "chaifeng/ubuntu-18.04-docker-19.03"

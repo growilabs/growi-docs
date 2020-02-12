@@ -10,4 +10,22 @@ sidebarDepth: 0
 
 ## Directory Structure
 
-(TBD)
+```
+├── bin  
+├── config  
+├── docker  
+├── node_modules  
+├── public  
+├── resource  
+│ └── locales
+│  ├── en-US  
+│  └── ja 　
+└──  src  
+ ├── lib  
+ ├── linter-checker  
+ ├── migrations  
+ ├── server
+ ├── client
+ └── test  
+
+```
