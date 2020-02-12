@@ -1,3 +1,1 @@
-# HackMD で同時多人数編集を利用する
-
-
+# HackMD TBD
