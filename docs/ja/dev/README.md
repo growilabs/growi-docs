@@ -6,7 +6,7 @@ sidebarDepth: 0
 
 ## アーキテクチャ
 
-(TBD)
+[アーキテクチャ](./plugin/architecture.md)
 
 ## ディレクトリ構成
 
