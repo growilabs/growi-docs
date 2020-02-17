@@ -64,79 +64,67 @@ that can be set as page view / edit restrictions.
 
   By default, it appears in the page list and page search results.
 
-## About group management function
+## About group management feature
 
 Click [here](/en/admin-guide/management-cookbook/group.md) for details
 
-## Control search results and list display for authorized pages
+## Control showing list and search result for privilege pages
 
-If you don't want to show a page to someone
-who doesn't have view / edit authority when viewing search results or page list,
-let's switch on / off function of the corresponding setting
-in `Security setting` of management menu.
+If you don't want to show a page to someone who doesn't have vieing and editing privileges when viewing GROWI's search results or page list, switching on / off function of the corresponding setting in `Security setting` of management menu.
 
 ![security](./images/security.png)
 
-### Page listing/searching restricted by 'Just Me'
+### Show page list and restricted pages as 'Only me'
 
 
-- Case with ON
+- Case of switching "ON"
 
-  The list of pages of other users and search results
-  will show the pages that have the restriction.
-
-
-- Case with OFF
-
-  The page with the restriction
-  is not displayed in the list display or search results of the pages of other users.
+  It will show restricted pages that applied
+  as search result or page list for the users except you.
 
 
-### Page listing/searching restricted by User Group
+- Case of switching "off"
 
-- Case with ON
+  It will not show restricted pages that applied
+  as search result or page list for the users except you.
+  
 
-  The list of pages of users who do not belong to the group and search results
-  will show the pages that have the restriction.
+### Show page list and restricted pages for specific groups
 
-- Case with OFF
+- Case of switching "ON"
 
-  Pages that have the restriction
-  are not displayed in the list display or search results
-  of users who do not belong to the group.
+  It will show restricted pages that applied
+  as search result or page list for the users who do not belong to any groups.
+
+- Case of switching "off"
+
+  It will not show restricted pages that applied
+  as search result or page list for the users who do not belong to any groups.
 
 
-## Set viewing and editing authority at once under the page
+## Set viewing and editing privileges to be under the page at once
 
-Pages have a hierarchical structure,
-and you may want to manage permissions for all pages under a specific page at once.
+There are the case that you want to manage all privileges at once, cause page is hierarchical structure.
 
-In that case, please click "▲" of "Create / Update" button
-Appears in the lower right corner of the screen when in edit mode.
+In this case, please click "▲" of "Create / Update" button which appears in the lower right corner of the screen when in create/edit.
 
-Click "Update and Overwrite scopes of all descendants".
+then, click "Update and Overwrite scopes of all descendants".
 
 ![authority2](./images/authority2.png)
 
-By this operation,the same authority settings can be applied
-to all pages under the corresponding page.
+By this operation, be able to apply same privilege settings to all pages under the corresponding page.
 
+## Example of setting privileges
 
-## Setting example of authority
+Basically, you can be easy to manage if you organize pages together which needs viewing and editing privileges and then update at once under the corresponding pages.
 
-Pages that require viewing / editing authority
-can be easily managed by putting them together.
-
-Move the pages that need authority as shown in the following example,
-if there is no problem with changing the page structure.
-
+Move the pages that need privileges like as shown example below, if Updating the studctures of the page has no problem.
 
 - Create a group name page
 
-- Move the page that you want to have view / edit authority
-  only for that group under that page
+- Move the page that you want to set viewing or editing privileges for only applicable group, to the under the page.
 
-  Click [here](/en/guide/features/page_operation.md) for page move
+  Click [here](/en/guide/features/page_operation.md) for how to move pages
 
 
-- Set authority for group name pages at once
+- Set privilege for group name pages at once
