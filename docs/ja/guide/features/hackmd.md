@@ -131,7 +131,8 @@ HackMD 編集モードで windows なら Ctrl + S キー、Mac なら command + 
 
 ![](./images/HackMD9.png)
 
-HackMD モードでの編集より通常の編集モードでの更新（保存）が優先されてしまいますので、この表示が出た時には `Discard it` のリンクをクリックし、
-ページの最新versionから新たに編集を開始するようにしてください。
+HackMD モードでの編集より通常の編集モードでの更新（保存）が優先されてしまいますので、この表示が出た時には
+ `Discard it` のリンク や `Discard changes of HackMD` のグレーのボタンをクリックし、
+ページの最新 version から新たに編集を開始するようにしてください。
 
 ※ その時、HackMD 上で編集していた内容は破棄されてしまいます。
