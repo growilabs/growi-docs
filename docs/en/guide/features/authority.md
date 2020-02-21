@@ -43,7 +43,7 @@
 
   Pages with this setting will not be viewed or edited by anyone except you.
     
-  Either it's displayed or not on the page list and page search results of users who don't belong to the group
+  Whether it's displayed or not on the page list and page search results of users who don't belong to the group
   depends on ON / Off buttons on management screen.(describe later)
 
   By default, the page you created appears in the page list and page search results.
@@ -53,7 +53,7 @@
   Pages with this setting can only be viewed and edited by users
   belonging to the group.
 
-  Either it's displayed or not on the page list and page search results of users who don't belong to the group
+  Whether it's displayed or not on the page list and page search results of users who don't belong to the group
   depends on ON / Off buttons on management screen.(describe later)
 
 
