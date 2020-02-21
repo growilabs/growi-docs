@@ -4,7 +4,7 @@
 
   This section describes authorization that can be set for pages.
 
-## How to set view / edit authority for Pages
+## How to set view / edit authority for pages
 
   In the edit mode, click the "Public" on the lower-right button,
   then you can see options as shown in the image below.
