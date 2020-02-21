@@ -1,22 +1,22 @@
 # Set Page View / Edit Authority
 
-GROWI has a function that only autholized users can view and edit for pages.
+  GROWI has a function that only autholized users can view and edit for pages.
 
-This section describes authorization that can be set for pages.
+  This section describes authorization that can be set for pages.
 
 ## How to set view / edit authority for Pages
 
-In the edit mode, click the "Public" on the lower-right button,
-then you can see options as shown in the image below.
+  In the edit mode, click the "Public" on the lower-right button,
+  then you can see options as shown in the image below.
 
-![authority1](./images/authority1.png)
+  ![authority1](./images/authority1.png)
 
-After selecting this option,
-click the "Create / Update" button to apply view / edit authority for the page.
+  After selecting this option,
+  click the "Create / Update" button to apply view / edit authority for the page.
 
 ## Types that can be set as view / edit authority
 
-You can select one of the following options to set page restrictions.
+  You can select one of the following options to set page restrictions.
 
 ### Public
 
@@ -42,8 +42,8 @@ You can select one of the following options to set page restrictions.
 ### Just Me
 
   Pages with this setting will not be viewed or edited by anyone except you.
-
-　Whether it's displayed or not on the page list and page 　search results of users who don't belong to the group
+    
+  Either it's displayed or not on the page list and page search results of users who don't belong to the group
   depends on ON / Off buttons on management screen.(describe later)
 
   By default, the page you created appears in the page list and page search results.
@@ -53,7 +53,7 @@ You can select one of the following options to set page restrictions.
   Pages with this setting can only be viewed and edited by users
   belonging to the group.
 
-　whether it's displayed or not on the page list and page　search results of users who don't belong to the group
+  Either it's displayed or not on the page list and page search results of users who don't belong to the group
   depends on ON / Off buttons on management screen.(describe later)
 
 
