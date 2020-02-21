@@ -114,7 +114,8 @@ module.exports = {
                 '/en/guide/features/blockdiag.md',
                 '/en/guide/features/bootstrap.md',
                 '/en/guide/features/uml_diagrams.md',
-                '/en/guide/features/template.md'
+                '/en/guide/features/template.md',
+                '/en/guide/features/hackmd.md'
               ]
             },
             {
@@ -301,7 +302,8 @@ module.exports = {
                 '/ja/guide/features/blockdiag.md',
                 '/ja/guide/features/bootstrap.md',
                 '/ja/guide/features/uml_diagrams.md',
-                '/ja/guide/features/template.md'
+                '/ja/guide/features/template.md',
+                '/ja/guide/features/hackmd.md'
               ]
             },
             {
