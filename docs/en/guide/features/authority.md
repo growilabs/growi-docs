@@ -4,7 +4,7 @@
 
   This section describes authorization that can be set for pages.
 
-## How to Set View / Edit Authority for Pages
+## How to set view / edit authority for pages
 
   In the edit mode,
   click the "Public" on the lower-right button,
@@ -15,7 +15,7 @@
   After selecting this option,
   click the "Create / Update" button to apply view / edit authority for the page.
 
-## Types That Can Be Set as View / Edit Authority
+## Types that can be set as view / edit Authority
 
   You can select one of the following options to set page restrictions.
 
@@ -47,8 +47,8 @@ Pages with this setting will not be viewed or edited by anyone except you.
 
 Whether it's displayed or not in the page list
 and page search results of users who don't belong to the group
-depends on the settings on the security settings page
-of the management page.(describe later)
+depends on the settings on the security settings
+of the management page.(described later)
 
 By default, the page you created appears in the page list and page search results.
 
@@ -59,8 +59,8 @@ belonging to the group.
 
 Whether it's displayed or not on the page list
 and page search results of users who don't belong to the group
-depends on the settings on the security settings page
-of the management page.(describe later)
+depends on the settings on the security settings
+of the management page.(described later)
 
 By default, the page you created appears in the page list and page search results.
 
