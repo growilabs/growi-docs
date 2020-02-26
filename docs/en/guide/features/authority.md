@@ -15,7 +15,7 @@
   After selecting this option,
   click the "Create / Update" button to apply view / edit authority for the page.
 
-## Types that can be set as view / edit Authority
+## Types that can be set as view / edit authority
 
   You can select one of the following options to set page restrictions.
 
