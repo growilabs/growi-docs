@@ -44,7 +44,7 @@ Test environment (CI) uses `node:12`. Use the version Node.js, npm, and Yarn com
 ::: tab Windows
 
 1. Install "nvm-windows" (version manager for Node.js, npm)
-    * Download `nvm-setup.zip` from [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows) and execute
+    * Download `nvm-setup.zip` from [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases) and execute
 1. Install Node.js and npm (lookup latest version of 12.x from <https://nodejs.org/en/download/releases/)>
 
     ``` cmd
