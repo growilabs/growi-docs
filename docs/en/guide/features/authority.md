@@ -4,9 +4,9 @@
 
   This section describes authorization that can be set for pages.
 
-## How to set view / edit authority for pages
+## How to Set View / Edit Authority for Pages
 
-  In the edit mode, 
+  In the edit mode,
   click the "Public" on the lower-right button,
   then you can see options as shown in the image below.
 
@@ -15,14 +15,14 @@
   After selecting this option,
   click the "Create / Update" button to apply view / edit authority for the page.
 
-## Types that can be set as view / edit authority
+## Types That Can Be Set as View / Edit Authority
 
   You can select one of the following options to set page restrictions.
 
 ### Public
 
 There is no restriction for pages with this setting.
-Anyone can view and edit.   
+Anyone can view and edit.
 This is selected by default.
 
 `When GROWI is set up as only logged in users can view`
@@ -44,9 +44,11 @@ If it's the page you created, it will be displayed in the page list.
 ### Just Me
 
 Pages with this setting will not be viewed or edited by anyone except you.
-    
-Whether it's displayed or not on the page list and page search results of users who don't belong to the group
-depends on ON / Off buttons on management screen.(describe later)
+
+Whether it's displayed or not in the page list
+and page search results of users who don't belong to the group
+depends on the settings on the security settings page
+of the management page.(describe later)
 
 By default, the page you created appears in the page list and page search results.
 
@@ -55,9 +57,10 @@ By default, the page you created appears in the page list and page search result
 Pages with this setting can only be viewed and edited by users
 belonging to the group.
 
-Whether it's displayed or not on the page list and page search results of users who don't belong to the group
-depends on ON / Off buttons on management screen.(describe later)
-
+Whether it's displayed or not on the page list
+and page search results of users who don't belong to the group
+depends on the settings on the security settings page
+of the management page.(describe later)
 
 By default, the page you created appears in the page list and page search results.
 
