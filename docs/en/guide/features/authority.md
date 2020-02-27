@@ -2,7 +2,7 @@
 
   GROWI has a function that only autholized users can view and edit for pages.
 
-  This section describes authorization that can be set for pages.
+  This section describes access control method that can be set for pages.
 
 ## How to set view / edit authority for pages
 
@@ -13,7 +13,8 @@
   ![authority1](./images/authority1.png)
 
   After selecting this option,
-  click the "Create / Update" button to apply view / edit authority for the page.
+  click the "Create / Update" button to apply view / edit
+  access control for the page.
 
 ## Types that can be set as view / edit authority
 
@@ -46,7 +47,7 @@ If it's the page you created, it will be displayed in the page list.
 Pages with this setting will not be viewed or edited by anyone except you.
 
 Whether it's displayed or not in the page list
-and page search results of users who don't belong to the group
+and page search results of users except you
 depends on the settings on the security settings
 of the management page.(described later)
 
