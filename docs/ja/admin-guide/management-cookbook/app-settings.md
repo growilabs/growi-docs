@@ -1,10 +1,45 @@
 # アプリ設定 AppSettings
 
+## サイトURL設定
+
+この欄では、GROWI に URL を設定します。
+
+GROWI の **サイト URL 設定は必ず行ってください**。
+
+:::warning
+サイト URL が未設定の場合は、GROWI の機能が一部正常に動作しなくなります。
+:::
+
+保有するドメインの向き先として `growi.hogehoge.com` などに DNS レコードを指定している場合は、ここに設定します。  
+ドメインを DNS 設定していない場合は、任意のURLで良いので値を設定してください。
+
+![appsettings10](./images/appsettings10.png)
+
+環境変数 `APP_SITE_URL` に値が設定されていると、右側の `Environment variables` の欄に設定値が表示されます。  
+
+
+![appsettings11](./images/appsettings11.png)
+
+管理画面で編集する `Database` の欄に値が入力されていると、
+`Database` の欄に設定した値が`Environment variables` の欄より優先されます。  
+
+:::warning
+サイト URL が未設定の場合は、GROWI の機能が一部正常に動作しなくなるため、エラーメッセージが表示されます。
+
+管理画面の設定欄、ページのヘッダ部に以下のようにエラーメッセージが表示されます。  
+GROWI の **サイト URL 設定は必ず行ってください**。
+
+![appsettings12](./images/appsettings12.png)
+
+![appsettings13](./images/appsettings13.png)
+:::
+
+
 ## App settings
 
 ### サイト名
 
-こちらに設定をした内容は、GROWI のログイン画面及びタイトルとして表示されます。
+サイト名に設定をした内容は、GROWI のログイン画面及びタイトルとして表示されます。
 
 ![appsettings1](./images/appsettings1.png)
 
@@ -47,31 +82,6 @@ GROWI では、ページへの画像以外のファイルのアップロード�
 以下の表示となっている場合は、ファイルアップロードは機能していません。
 
 ![appsettings9](./images/appsettings9.png)
-
-## サイトURL設定
-
-この欄では、GROWI に URL を設定します。
-
-保有するドメインの向き先として `growi.hogehoge.com` などに DNSレコードを指定している場合は、ここに設定します。
-
-![appsettings10](./images/appsettings10.png)
-
-環境変数 `APP_SITE_URL` に値が設定されていると、右側の `Environment variables` の欄に設定値が表示されます。  
-
-
-![appsettings11](./images/appsettings11.png)
-
-管理画面で編集する `Database` の欄に値が入力されていると、
-`Database` の欄に設定した値が`Environment variables` の欄より優先されます。  
-
-サイト URL が未設定の場合は、GROWI の機能が一部機能しなくなるため、エラーメッセージが表示されます。
-
-管理画面の設定欄、ページのヘッダ部に以下のようにエラーメッセージが表示されます。
-
-
-![appsettings12](./images/appsettings12.png)
-
-![appsettings13](./images/appsettings13.png)
 
 
 ## メールの設定(TBD)

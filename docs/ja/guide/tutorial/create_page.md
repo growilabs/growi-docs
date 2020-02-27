@@ -10,6 +10,8 @@
 
 ここからチュートリアルを開始します。
 
+管理者設定については[こちら](/ja/admin-guide/management-cookbook/app-settings.html)をご参照ください。
+
 ## 新規ページ作成
 
 GROWI は、wiki ページを作成するシステムです。
