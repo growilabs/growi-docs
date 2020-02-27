@@ -10,7 +10,7 @@
 
 ここからチュートリアルを開始します。
 
-管理者設定については[こちら](/ja/admin-guide/management-cookbook/app-settings.html)をご参照ください。
+管理者設定については[管理者ガイド](/ja/admin-guide/management-cookbook/app-settings.html)をご参照ください。
 
 ## 新規ページ作成
 
