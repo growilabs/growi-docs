@@ -383,7 +383,6 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/app-settings.md',
                 '/ja/admin-guide/management-cookbook/line-breaks.md',
                 '/ja/admin-guide/management-cookbook/group.md',
-                '/ja/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
                 '/ja/admin-guide/management-cookbook/ldap.md',
                 '/ja/admin-guide/management-cookbook/active-directory.md',
                 '/ja/admin-guide/management-cookbook/google-analytics.md',
