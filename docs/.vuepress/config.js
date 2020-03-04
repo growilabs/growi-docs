@@ -190,6 +190,7 @@ module.exports = {
               title: 'GROWI App Admin Cookbook',
               collapsable: false,
               children: [
+                '/en/admin-guide/management-cookbook/app-settings.md',
                 '/en/admin-guide/management-cookbook/line-breaks.md',
                 '/en/admin-guide/management-cookbook/group.md',
                 '/en/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
@@ -379,9 +380,9 @@ module.exports = {
               title: 'GROWI 管理者のクックブック',
               collapsable: false,
               children: [
+                '/ja/admin-guide/management-cookbook/app-settings.md',
                 '/ja/admin-guide/management-cookbook/line-breaks.md',
                 '/ja/admin-guide/management-cookbook/group.md',
-                '/ja/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
                 '/ja/admin-guide/management-cookbook/ldap.md',
                 '/ja/admin-guide/management-cookbook/active-directory.md',
                 '/ja/admin-guide/management-cookbook/google-analytics.md',
