@@ -145,7 +145,7 @@ AWS アカウントのAccess Key ID および Secret Access Key を作成、保�
 ## プラグイン設定
 
 この欄で `プラグインを読み込む` を ON / OFF に設定することで、GROWI にインストールされたプラグインを有効化/無効化します。  
-OFF の場合、GROWI へプラグイン設定をしても内容が反映されません。
+OFF の場合、GROWI にインストールされたプラグインは反映されません。
 
 ![appsettings17](./images/appsettings17.png)
 
