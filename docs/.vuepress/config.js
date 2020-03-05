@@ -23,6 +23,18 @@ module.exports = {
         // it will automatically redirect `/foo/bar/` to `/:locale/foo/bar/` if exists
         locales: true
       },
+    ],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-55480073-15' // UA-00000000-0
+      }
+    ],
+    [
+      'sitemap',
+      {
+        'hostname': 'https://docs.growi.org'
+      }
     ]
   ],
   markdown: {
@@ -79,6 +91,15 @@ module.exports = {
               ]
             },
             {
+              title: 'tutorial',
+              collapsable: false,
+              children: [
+                '/en/guide/tutorial/create_page.md',
+                '/en/guide/tutorial/duplicate_page.md',
+                '/en/guide/tutorial/delete_page.md',
+              ]
+            },
+            {
               title: 'Features',
               collapsable: false,
               children: [
@@ -89,18 +110,25 @@ module.exports = {
                 '/en/guide/features/page_operation.md',
                 '/en/guide/features/emoji.md',
                 '/en/guide/features/history.md',
+                '/en/guide/features/authority.md',
                 '/en/guide/features/blockdiag.md',
                 '/en/guide/features/bootstrap.md',
                 '/en/guide/features/uml_diagrams.md',
                 '/en/guide/features/drawio.md',
-                '/en/guide/features/template.md'
+                '/en/guide/features/tag.md',
+                '/en/guide/features/template.md',
+                '/en/guide/features/hackmd.md'
               ]
             },
             {
               title: 'Tips',
               collapsable: false,
               children: [
-                '/en/guide/tips/hierarchical.md'
+                '/en/guide/tips/hierarchical.md',
+                '/en/guide/tips/include_html.md',
+                '/en/guide/tips/checkbox.md',
+                '/en/guide/tips/page_linker.md',
+                '/en/guide/tips/footnote.md'
               ]
             },
             {
@@ -129,6 +157,7 @@ module.exports = {
               title: 'Upgrading',
               collapsable: false,
               children: [
+                '/en/admin-guide/upgrading/36x.md',
                 '/en/admin-guide/upgrading/35x.md',
                 '/en/admin-guide/upgrading/34x.md',
               ]
@@ -147,10 +176,12 @@ module.exports = {
               title: 'System Admin Cookbook',
               collapsable: false,
               children: [
+                '/en/admin-guide/admin-cookbook/env-vars.md',
                 '/en/admin-guide/admin-cookbook/logging.md',
                 '/en/admin-guide/admin-cookbook/launch-with-systemd.md',
                 '/en/admin-guide/admin-cookbook/multi-app.md',
                 '/en/admin-guide/admin-cookbook/lets-encrypt.md',
+                '/en/admin-guide/admin-cookbook/attachment.md',
                 '/en/admin-guide/admin-cookbook/mongodb-backup.md',
                 '/en/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/en/admin-guide/admin-cookbook/integrate-with-hackmd.md',
@@ -160,8 +191,10 @@ module.exports = {
               title: 'GROWI App Admin Cookbook',
               collapsable: false,
               children: [
+                '/en/admin-guide/management-cookbook/app-settings.md',
                 '/en/admin-guide/management-cookbook/line-breaks.md',
-                '/en/admin-guide/management-cookbook/attachment.md',
+                '/en/admin-guide/management-cookbook/group.md',
+                '/en/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
                 '/en/admin-guide/management-cookbook/ldap.md',
                 '/en/admin-guide/management-cookbook/active-directory.md',
                 '/en/admin-guide/management-cookbook/google-analytics.md',
@@ -249,6 +282,15 @@ module.exports = {
               ]
             },
             {
+              title: 'チュートリアル',
+              collapsable: false,
+              children: [
+                '/ja/guide/tutorial/create_page.md',
+                '/ja/guide/tutorial/duplicate_page.md',
+                '/ja/guide/tutorial/delete_page.md',
+              ]
+            },
+            {
               title: '機能紹介',
               collapsable: false,
               children: [
@@ -259,18 +301,25 @@ module.exports = {
                 '/ja/guide/features/page_operation.md',
                 '/ja/guide/features/emoji.md',
                 '/ja/guide/features/history.md',
+                '/ja/guide/features/authority.md',
                 '/ja/guide/features/blockdiag.md',
                 '/ja/guide/features/bootstrap.md',
                 '/ja/guide/features/uml_diagrams.md',
                 '/ja/guide/features/drawio.md',
-                '/ja/guide/features/template.md'
+                '/ja/guide/features/tag.md',
+                '/ja/guide/features/template.md',
+                '/ja/guide/features/hackmd.md'
               ]
             },
             {
               title: 'Tips (活用例)',
               collapsable: false,
               children: [
-                '/ja/guide/tips/hierarchical.md'
+                '/ja/guide/tips/hierarchical.md',
+                '/ja/guide/tips/include_html.md',
+                '/ja/guide/tips/checkbox.md',
+                '/ja/guide/tips/page_linker.md',
+                '/ja/guide/tips/footnote.md'
               ]
             },
             {
@@ -299,6 +348,7 @@ module.exports = {
               title: 'アップグレード',
               collapsable: false,
               children: [
+                '/ja/admin-guide/upgrading/36x.md',
                 '/ja/admin-guide/upgrading/35x.md',
                 '/ja/admin-guide/upgrading/34x.md',
               ]
@@ -317,10 +367,12 @@ module.exports = {
               title: 'システム管理者のクックブック',
               collapsable: false,
               children: [
+                '/ja/admin-guide/admin-cookbook/env-vars.md',
                 '/ja/admin-guide/admin-cookbook/logging.md',
                 '/ja/admin-guide/admin-cookbook/launch-with-systemd.md',
                 '/ja/admin-guide/admin-cookbook/multi-app.md',
                 '/ja/admin-guide/admin-cookbook/lets-encrypt.md',
+                '/ja/admin-guide/admin-cookbook/attachment.md',
                 '/ja/admin-guide/admin-cookbook/mongodb-backup.md',
                 '/ja/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/ja/admin-guide/admin-cookbook/integrate-with-hackmd.md',
@@ -330,8 +382,9 @@ module.exports = {
               title: 'GROWI 管理者のクックブック',
               collapsable: false,
               children: [
+                '/ja/admin-guide/management-cookbook/app-settings.md',
                 '/ja/admin-guide/management-cookbook/line-breaks.md',
-                '/ja/admin-guide/management-cookbook/attachment.md',
+                '/ja/admin-guide/management-cookbook/group.md',
                 '/ja/admin-guide/management-cookbook/ldap.md',
                 '/ja/admin-guide/management-cookbook/active-directory.md',
                 '/ja/admin-guide/management-cookbook/google-analytics.md',

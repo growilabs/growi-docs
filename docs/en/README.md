@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://user-images.githubusercontent.com/1638767/38254268-d4476bbe-3793-11e8-964c-8865d690baff.png
+heroImage: https://user-images.githubusercontent.com/1638767/68901318-100dd280-0779-11ea-83ab-51f111972ab1.png
 actionText: Get Started
 actionLink: /guide/
 footer: © 2018 WESEEK, Inc.

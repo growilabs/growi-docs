@@ -6,8 +6,25 @@ sidebarDepth: 0
 
 ## アーキテクチャ
 
-(TBD)
+[アーキテクチャ](./plugin/architecture.md)
 
 ## ディレクトリ構成
 
-(TBD)
+```
+├── bin  
+├── config  
+├── docker  
+├── node_modules  
+├── public  
+├── resource  
+│ └── locales
+│  ├── en-US  
+│  └── ja 　
+└──  src  
+ ├── lib  
+ ├── linter-checker  
+ ├── migrations  
+ ├── server
+ ├── client
+ └── test  
+```

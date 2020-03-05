@@ -59,14 +59,13 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '~@vuepress/core/lib/app/style/config.styl';
-@import '~@vuepress/theme-default/styles/theme.styl';
+@import '~@vuepress/core/lib/client/style/config.styl';
 
 .fluid {
   .page {
     padding: 0;
 
-    .content {
+    .theme-default-content {
       max-width: unset;
       padding: $navbarHeight 0 0;
 

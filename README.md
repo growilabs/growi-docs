@@ -4,11 +4,11 @@
 
 ## Requirements
 
-- Node.js 10.x
+- Node.js 12.x
 - npm 6.x
 - Yarn 1.12 or above
 
-## How to start?
+## How to start
 
 ``` bash
 yarn
@@ -21,7 +21,7 @@ Then, access to the url that VuePress will print like below.
 > VuePress dev server listening at http://localhost:8080/
 ```
 
-## How to write docs?
+## How to write docs
 
 Add markdown file to `docs` dir.
 
