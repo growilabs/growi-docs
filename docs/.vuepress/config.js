@@ -92,6 +92,7 @@ module.exports = {
                 '/en/guide/features/blockdiag.md',
                 '/en/guide/features/bootstrap.md',
                 '/en/guide/features/uml_diagrams.md',
+                '/en/guide/features/drawio.md',
                 '/en/guide/features/template.md'
               ]
             },
@@ -261,6 +262,7 @@ module.exports = {
                 '/ja/guide/features/blockdiag.md',
                 '/ja/guide/features/bootstrap.md',
                 '/ja/guide/features/uml_diagrams.md',
+                '/ja/guide/features/drawio.md',
                 '/ja/guide/features/template.md'
               ]
             },
