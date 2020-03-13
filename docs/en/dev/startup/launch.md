@@ -10,7 +10,7 @@ git clone https://github.com/weseek/growi.git
 
 ### Confirm Versions
 
-See [Getting Started#Confirm Versions](dev-env.md#confirm-versions) 
+See [Getting Started#Confirm Versions](dev-env.md#confirm-versions)
 
 ### Set up Datastore for Development
 
@@ -18,6 +18,9 @@ Execute the following command in Docker environment.
 
 ::: tip
 For Windows, execute the command in the Linux VM set up in [Getting Started#Set up Dependent Middlewares](dev-env.md#set-up-dependent-middlewares).
+
+Install if there is no docker-compose command.  
+[docker docs Install Docker Compose](https://docs.docker.com/compose/install/)
 :::
 
 ``` bash
