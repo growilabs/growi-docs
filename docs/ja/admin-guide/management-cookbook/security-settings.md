@@ -1,8 +1,10 @@
 # セキュリティ設定
 
+この欄では、ログインや表示制御に関する各種セキュリティ設定を行います。
+
 ## セキュリティ設定
 
-この欄では、主にログインに関する各種セキュリティ設定を行います。
+それぞれの設定項目について説明します。
 
 ### ゲストユーザーのアクセス
 
@@ -12,7 +14,7 @@
 
    GROWI 全体に対して、閲覧するにはログイン必須となる設定です。プライベートwiki とも呼びます。  
    この設定の場合は、ログインしていないユーザーは以下のようなログイン画面へリダイレクトされ、
-   ログインしないとページの閲覧・編集が出来なくなります。
+   ログインしないと GROWI の各ページの閲覧・編集が出来なくなります。
 
   ![securitysettings1](./images/securitysettings1.png)
 
@@ -40,6 +42,8 @@
 ページを完全に削除できるユーザーを制限します。  
 ここで設定するのは `完全削除` に関する制限です。ページを削除しゴミ箱(trash)へ移動する事は制限しません。
 
+制限は以下のいずれかを選択して設定します。
+
 - 誰でも可能
 - 管理者のみ可能
 - 管理者とページ作成者が可能
@@ -51,15 +55,83 @@
 
 ## XSS(Cross Site Scripting)対策設定
 
+XSS 対策設定は管理メニューのセキュリティ設定の画面ではなく、マークダウン設定の画面で行います。
 
+説明についても、マークダウン設定のページを参照してください。
 
 ## 認証機構設定
 
+GROWI の認証機構設定では、様々な認証機構との連携が可能です。以下に列挙します。
+
+- ID/Pass (後述)
+- [LDAP](/ja/admin-guide/management-cookbook/ldap.html)
+- SAML
+- OIDC (OpenID Connect)
+- Basic 認証
+- Google OAuth
+- GitHub OAuth
+- Twitter OAuth
+- (TBD)Facebook OAuth
+
+いずれかの認証を有効にして、かつ正しくセットアップしないと、他の認証の `有効にする` チェックボックスは Off に出来ません。  
+デフォルト設定では、IDとパスワードによるログイン管理設定が有効になっています。
+
+それぞれの連携設定は別途 専用の Docs ページを参照してください。
+
+本ページでは ID/Password の設定についてのみ説明します。
 
 ## ID/Password 設定
 
 ### ID/Password
 
+GROWI へのログインに、GROWI ログイン画面と Sign Up 画面を利用する設定です。  
+以下の画像の通り、ID/Password でログインできます。
+
+  ![securitysettings3](./images/securitysettings3.png)
+
 ### 登録の制限
 
+新しいユーザーを登録する方法を制限します。
+
+- 公開（だれでも登録可能）
+
+   GROWI へのユーザー登録は、以下の画像の Sign up リンクから誰でも登録できます。
+
+  ![securitysettings3](./images/securitysettings3.png)
+
+   Sign up 画面で、User ID, Name(表示名), Email アドレス, パスワード を設定してユーザー登録となります。
+
+  ![securitysettings4](./images/securitysettings4.png)
+
+
+- 制限（登録完了には管理者の承認が必要）
+
+   GROWI へのユーザー登録は、ログイン画面の Sign up リンクから誰でも登録できますが、  
+   登録後に管理者の承認がないと有効化されません。  
+
+   この選択肢で設定した場合、以下の画像のように注意書きが表示されます。
+
+  ![securitysettings5](./images/securitysettings5.png)
+
+- 非公開（登録には管理者による招待が必要）
+
+   GROWI へのユーザー登録には管理者による招待が必要となり、ログイン画面に `Sign up` リンクが表示されなくなります。  
+   招待はユーザー管理の画面から行います。
+
+  ![securitysettings6](./images/securitysettings6.png)
+
 ### 登録許可メールアドレスのホワイトリスト
+
+登録可能なメールアドレスを制限することができます。
+
+例えば、@growi.org と記載することで、そのドメインのメールアドレスを持っている人のみ登録可能になります。
+
+1行に 1メールアドレス入力してください。
+
+ここでホワイトリスト登録した内容は、Sign up 画面で以下の画像のように表示されます。
+
+  ![securitysettings7](./images/securitysettings7.png)
+
+ホワイトリスト設定した場合、設定した内容以外のメールアドレスで Sign up しようとすると、以下のようにエラーとなります。
+
+  ![securitysettings8](./images/securitysettings8.png)
