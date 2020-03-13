@@ -18,6 +18,10 @@ Docker 利用可能な環境で以下を実行
 
 ::: tip
 Windows の場合は [開発環境の構築#開発環境の依存インフラの準備](dev-env.md#開発環境の依存インフラの準備) で準備した Linux マシンの中で実行する
+
+docker-compose コマンドがない場合はインストールしよう  
+[docker docs公式ページ　Install Docker Compose](https://docs.docker.com/compose/install/)
+
 :::
 
 ``` bash
