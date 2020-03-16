@@ -43,7 +43,7 @@ Node.js, npm, Yarn 共に、CI 環境で利用する `node:12` のバージョ�
 
 ::: tab Windows
 
-1. Node.js, npm のバージョン管理ツール「nodist」 をインストール
+1. Node.js, npm のバージョン管理ツール `nvm-windows` をインストール
     * [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases) から `nvm-setup.zip` をダウンロードして実行
 1. Node.js, npm インストール (12.x の最新バージョンは <https://nodejs.org/ja/download/releases/> から探してください)
 
