@@ -15,7 +15,7 @@ LDAP サーバーを登録することで、LDAP によるログインが可能�
   - Bind DN
     - ディレクトリサービスに認証する際のアカウント DN を入力してください。
     - User Bind にて、ログイン時に入力されるユーザー名を使用するには `{{username}}` の形式を使用してください。
-      - 例: `uid={{ username }},dc=domain,dc=com`
+      - 例: `uid={{username}},dc=domain,dc=com`
   - Bind DN パスワード
     - Manager Bind の場合のみ、使用するパスワードを入力してください。（注: MongoDB 内には当該 DN の平文パスワードが保存されます）
     - User Bind の場合は、ログイン時のパスワードが使用されます。
