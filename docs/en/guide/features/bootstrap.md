@@ -1,9 +1,7 @@
 # Decorate your page with Bootstrap
 
+GROWI allows you to decorate your pages using Bootstrap.  You can also combine HTML with Bootstrap classes to create more engaging pages.
+
 ![](./images/bootstrap.png)
 
-GROWI allows you to decorate pages using bootstrap.
-
-You can also write HTML, so you can create colorful pages by combining with bootstrap class.
-
-For details, refer to the bootstrap page and [GROWI demo site description example](https://demo.growi.org/Sandbox/Bootstrap3#edit)
+For more details, refer to the Bootstrap documentation and [GROWI Bootstrap example page](https://demo.growi.org/Sandbox/Bootstrap3#edit).
