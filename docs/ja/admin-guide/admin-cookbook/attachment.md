@@ -30,7 +30,7 @@ App 設定画面の AWS 設定にて登録されている AWS S3 Bucketにファ
 
 - `FILE_UPLOAD` : 'aws' (Default)
 
-AWS S3 Bucket のセットアップが未完了の場合は、[こちら](../management-cookbook/aws-s3-bucket-setting.md)を参考にセットアップしてください。
+AWS S3 Bucket のセットアップが未完了の場合は、[こちら](../management-cookbook/app-settings.html#aws-設定)を参考にセットアップしてください。
 
 ### Google Cloud Storage へのアップロード
 
