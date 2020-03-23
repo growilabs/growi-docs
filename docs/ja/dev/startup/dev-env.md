@@ -70,7 +70,7 @@ Node.js, npm, Yarn 共に、CI 環境で利用する `node:12` のバージョ�
     ```
 
 1. Yarn インストール
-    * [https://yarnpkg.com/ja/docs/install](https://yarnpkg.com/ja/docs/install) から DL してインストール
+    * [https://classic.yarnpkg.com/ja/docs/install/#mac-stable](https://classic.yarnpkg.com/ja/docs/install/#mac-stable) からマニュアルに従ってインストール
 
 
 :::
