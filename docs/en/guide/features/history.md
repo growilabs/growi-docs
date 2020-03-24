@@ -2,10 +2,8 @@
 
 ![](./images/history.png)
 
-GROWI allows you to check the page update history.
+Update history for a page can be viewed by selecting the “Update History” tab.
 
-It can be confirmed by clicking the “Update History” tab in the same row as View and Edit tab.
+By clicking “View this version” for a particular page version, you can view the page as it existed at that time.
 
-By clicking the “View this version” link, you can display the page edited at that time.
-
-This is useful when you want to rewind content to a past page.
+This is useful when you want to rollback content to a previous state.
