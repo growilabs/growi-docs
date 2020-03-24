@@ -60,26 +60,18 @@ Test environment (CI) uses `node:12`. Use the version Node.js, npm, and Yarn com
 
 ::: tab Mac
 
-1. Install homebrew
-    * Follow [https://brew.sh/index](https://brew.sh/index) and install homebrew.
-1. Install "nodebrew" (version manager for Node.js, npm)
-
-    ```bash
-    brew install nodebrew
-    nodebrew setup
-    ```
-
+1. Install nvm
+    * Follow [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm) and install nvm.
 1. Install Node.js, npm
 
     ```bash
-    nodebrew install-binary v12.x
+    nvm install 12.x.x
+    nvm use 12.x.x
     ```
 
 * Install Yarn
 
-    ```bash
-    brew install yarn
-    ```
+  * Install according to the manual from [https://classic.yarnpkg.com/en/docs/install/#mac-stable](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
 
 :::
 

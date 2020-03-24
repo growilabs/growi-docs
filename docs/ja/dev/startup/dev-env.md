@@ -60,26 +60,18 @@ Node.js, npm, Yarn 共に、CI 環境で利用する `node:12` のバージョ�
 
 ::: tab Mac
 
-1. homebrew インストール
-    * [https://brew.sh/index\_ja](https://brew.sh/index_ja) の記載に従ってインストールする
-1. Node.js, npm のバージョン管理ツール「nodebrew」をインストール
-
-    ```bash
-    brew install nodebrew
-    nodebrew setup
-    ```
-
+1. nvm インストール
+    * [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm) からインストールする。
 1. Node.js, npm インストール
 
     ```bash
-    nodebrew install-binary v12.x
+    nvm install 12.x.x
+    nvm use 12.x.x
     ```
 
-* Yarn インストール
+1. Yarn インストール
+    * [https://classic.yarnpkg.com/ja/docs/install/#mac-stable](https://classic.yarnpkg.com/ja/docs/install/#mac-stable) からマニュアルに従ってインストール
 
-    ```bash
-    brew install yarn
-    ```
 
 :::
 
