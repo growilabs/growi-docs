@@ -45,7 +45,7 @@ You can also save the page with **Ctrl + S**.
 
 Create a page from the “Create” (作成) button in the upper right corner of the screen.
 
-In the Create This Page (ページを以下作成) box, write the following name: `/[PARENT_PAGE]/NestedPage`, replacing [PARENT_PAGE] with the name you created in the previous section.  For example, if you named the previous page `/myPage`, then this page would be named `/myPage/NestedPage`.
+In the Create This Page (ページを以下作成) box, write the following name: `/[PARENT_PAGE]/NestedPage`, replacing [PARENT_PAGE] with the name you created in the previous section.  For example, if you named the previous page `/MyPage`, then this page would be named `/MyPage/NestedPage`.
 
 ![](./images/create_nest_page_dialog.png)
 
