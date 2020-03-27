@@ -8,12 +8,12 @@
 | `REDIS_URI` | 接続する Redis サーバーの URI (Redis を MongoDB の代わりにセッションストアとして利用する場合に設定してください） | |
 | `PASSWORD_SEED` | パスワードハッシュ生成時に使用されるパスワードシード | |
 | `SECRET_TOKEN` | 発行された cookie の正当性を検証するためのシークレットトークン | |
-| `SESSION_NAME` | Express からのレスポンス内のcookie に含まれるセッション ID 名 | `connect.sid` |
+| `SESSION_NAME` | Express からのレスポンスに含まれる cookie 内のセッション ID 名 | `connect.sid` |
 | `FORCE_WIKI_MODE` | wiki 閲覧モードの強制指定 | `undefined` |
 | | : `undefined` 閲覧権限は管理画面のセキュリティ設定に従います。 | |
 | | : `public` 全てのページを強制的にパブリックにします。 | |
 | | : `private` 全てのページを強制的に非公開にします。 | |
-| `FORMAT_NODE_LOG` |  `false`の場合、JSON としてサーバーログを出力します。(`NODE_ENV=production` の時のみ可能) | `true` |
+| `FORMAT_NODE_LOG` |  `false`の場合、サーバーログを JSON 形式で出力します。(`NODE_ENV=production` の時のみ可能) | `true` |
 | `MATHJAX` | (TBD) | |
 | `USER_UPPER_LIMIT` | (TBD) | |
 | **ファイルアップロードオプション** | | |
@@ -23,16 +23,16 @@
 | | : `mongodb` MongoDB の GridFS　機能を使用します。 (別途の設定は不要です。) | |
 | | : `local` ローカルのファイルシステムを使用します。 (別途の設定は不要です。) | |
 | | : `none` ファイルアップロードは無効になります。 | |
-| `FILE_UPLOAD_DISABLED` | `true` の場合, ファイルアップロード機能を無効にします。しかし、既にアップロードされている画像は見ることができます。 | `false` |
-| `MAX_FILE_SIZE` | アップロード可能な最大ファイルサイズ（byte）。 | `Infinity` |
+| `FILE_UPLOAD_DISABLED` | `true` の場合, ファイルアップロード機能を無効にします。既にアップロードされている画像の閲覧は可能です。 | `false` |
+| `MAX_FILE_SIZE` | アップロード可能なファイルサイズ上限（byte）。 | `Infinity` |
 | `FILE_UPLOAD_TOTAL_LIMIT` | アップロードファイルの総容量の上限（byte） | `Infinity` |
 | `GCS_API_KEY_JSON_PATH` |  [GCP API 認証用のサービスアカウントキー](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) を含む JSON ファイルのパス | |
 | `GCS_BUCKET` | 利用する GCS バケット名 | |
-| `GCS_UPLOAD_NAMESPACE` | バケット内に作成するアップロード先のディレクトリ名 | |
+| `GCS_UPLOAD_NAMESPACE` | バケット内に作成するファイルアップロード用のディレクトリ名 | |
 | **外部システム連携オプション** | | |
 | `HACKMD_URI` | 接続する [HackMD(CodiMD)](https://hackmd.io/) サーバーの URI | |
 | | このサーバーは GROWI エージェントをロードする必要があります。 準備方法は[こちら](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html)。| |
-| `HACKMD_URI_FOR_SERVER` | GROWI サーバーが参照する [HackMD(CodiMD)](https://hackmd.io/) のURI。 未設定の場合は `HACKMD_URI` が使用されます。 | |
+| `HACKMD_URI_FOR_SERVER` | GROWI Express サーバーが参照する [HackMD(CodiMD)](https://hackmd.io/) のURI。 未設定の場合は `HACKMD_URI` が使用されます。 | |
 | `PLANTUML_URI` | 接続する [PlantUML](http://plantuml.com/) サーバーの URI | |
 | `BLOCKDIAG_URI` | 接続する [blockdiag](http://http://blockdiag.com/) サーバーの URI | |
 | **管理設定を上書きする環境変数** | | |
