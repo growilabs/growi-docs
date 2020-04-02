@@ -1,5 +1,11 @@
 # ページを階層で整理する lsx 機能
 
+:::tip
+この機能は growi-plugin-lsx プラグインにより実装されている機能です。利用するためにはプラグインのインストールが必要です。インストール方法は[こちら](/ja/admin-guide/management-cookbook/app-settings.html#%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E8%A8%AD%E5%AE%9A)。
+
+GROWI.Cloud 上で立ち上げている GROWI の場合、インストールは不要です。
+:::
+
 ![lsx](./images/lsx_gif.gif)
 
 GROWI では 作成したページを一覧表示する機能があります。
