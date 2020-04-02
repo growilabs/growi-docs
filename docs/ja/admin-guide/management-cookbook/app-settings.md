@@ -162,6 +162,8 @@ GROWI では、Node.js のモジュール解決の仕組みを利用し、 `grow
   - Pukiwiki の Linker 書式を適用するプラグイン
 
 #### インストール
+`growi-plugin-xxx` の部分を使用するプラグインに書き換えてください。
+
 ```
 $ npm install --save growi-plugin-xxx
 ```
