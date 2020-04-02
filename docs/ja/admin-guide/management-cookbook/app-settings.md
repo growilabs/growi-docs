@@ -153,7 +153,7 @@ GROWI では、Node.js のモジュール解決の仕組みを利用し、 `grow
 
 詳細は[開発ガイド](/ja/dev/plugin/architecture.html) を参照してください。
 
-### 公式プラグイン
+### 公式プラグイン一覧
 - [growi-plugin-attachment-refs](https://github.com/weseek/growi-plugin-attachment-refs)
   - 添付画像のリスト表示やギャラリー表示用のプラグイン
 - [growi-plugin-lsx](https://github.com/weseek/growi-plugin-lsx)
@@ -161,7 +161,7 @@ GROWI では、Node.js のモジュール解決の仕組みを利用し、 `grow
 - [growi-plugin-pukiwiki-like-linker](https://github.com/weseek/growi-plugin-pukiwiki-like-linker)
   - Pukiwiki の Linker 書式を適用するプラグイン
 
-#### インストール
+### インストール方法
 `growi-plugin-xxx` の部分を使用するプラグインに書き換えてください。
 
 ```
