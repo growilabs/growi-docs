@@ -20,7 +20,7 @@ footer: © 2018 WESEEK, Inc.
 <div class="features">
   <div class="feature">
     <h2>Markdown x Wiki</h2>
-    <p>Using our split-screen live preview, you can see what you are writing in real-time. We support use of emojis, footnotes, to-do lists, raw HTML with Bootstrap, and we provide syntax highlighting for various languages.</p>
+    <p>Using the split-screen live preview, you can see what you are writing in real-time. You can use emojis, footnotes, create to-do lists, write raw HTML with Bootstrap, and syntax highlighting for various languages is provided.</p>
   </div>
   <div class="feature">
     <h2>Highly Customizable</h2>
@@ -28,6 +28,6 @@ footer: © 2018 WESEEK, Inc.
   </div>
   <div class="feature">
     <h2>Ever-Growing</h2>
-    <p>WESEEK, Inc. is commited to creating the most desired communication tool together with its user community.</p>
+    <p>WESEEK, Inc., together with our community of contributors, is committed to creating the most powerful and desirable communication tool.</p>
   </div>
 </div>
