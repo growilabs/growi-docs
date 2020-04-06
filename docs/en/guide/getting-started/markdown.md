@@ -1,17 +1,14 @@
-# How to write markdown
+# Introduction to Markdown
 
-GROWI allows you to write pages in Markdown format. By learning a few simple notations, you can write easy-to-read documents.
+GROWI supports Markdown for writing pages.
 
-First, learn how to write headings and list.
+## Add a header
 
-## Basic
-### Header
+Add a `#` (hash) character at the beginning of a line to make it a header. A space is required immediately after the `#`.  When a page has at least one header, a table of contents is automatically displayed in the sidebar on the right side of the page.
 
-Write a title with a `# ` (sharp and half-width space) at the beginning of the line to make it a headline. A space is required immediately after the #.
+Subheaders can also be created by adding additional hashes after the first.
 
-First, by creating a headline, the table of contents is displayed in the sidebar on the right side of the page screen.
-
-Example:
+**Example:**
 
 ```markdown
 # Header 1
@@ -21,8 +18,10 @@ Example:
 ### Header 3
 ```
 
-### List
-A `- ` (hyphen and half-width space) or `* ` (asterisk and half-width space) at the beginning of a line is recognized as a bulleted list. If you write `1.`, it will be a numbered list. You can indent bullets by inserting four spaces at the beginning of the line.
+## Add a list
+A `-` (dash) or `*` (asterisk) at the beginning of a line is recognized as a bulleted list. If you write `1.`, it will be a numbered list. You can indent bullets by inserting four spaces at the beginning of the line.
+
+As with headers, a dash, asterisk, or number must also be followed by a space.
 
 **Example:**
 
@@ -33,6 +32,6 @@ A `- ` (hyphen and half-width space) or `* ` (asterisk and half-width space) at 
 
 - List
     - nested
-       - more nested
+        - more nested
 ```
 
