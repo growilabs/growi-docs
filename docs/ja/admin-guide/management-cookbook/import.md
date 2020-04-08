@@ -22,6 +22,7 @@ esa.io が公開している [API v1](https://docs.esa.io/posts/102) を利用�
 - esa.io のページにおける以下のメタデータはインポートされません。
   - star
   - watch
+  - tag
   - comment
   - WIP/Ship it
   - revisions および change log
