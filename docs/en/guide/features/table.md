@@ -1,6 +1,6 @@
-# Using Tables
+# Managing tables with Handsontable
 
-GROWI allows you to create and edit tables directly.
+GROWI allows you to create and edit tables directly using a tool called Handsontable.
 
 ![](./images/table.png)
 
