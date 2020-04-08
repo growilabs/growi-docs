@@ -199,6 +199,7 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/active-directory.md',
                 '/en/admin-guide/management-cookbook/google-analytics.md',
                 '/en/admin-guide/management-cookbook/slack.md',
+                '/en/admin-guide/management-cookbook/import.md',
               ]
             },
           ],
@@ -389,6 +390,7 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/active-directory.md',
                 '/ja/admin-guide/management-cookbook/google-analytics.md',
                 '/ja/admin-guide/management-cookbook/slack.md',
+                '/ja/admin-guide/management-cookbook/import.md',
               ]
             },
           ],
