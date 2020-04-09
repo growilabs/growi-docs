@@ -1,9 +1,8 @@
 # Create page
 
-## After installation
+## Set up GROWI
 
-After installation,
-when you visit the GROWI URL it will be a screen to set the administrator ID.
+When you visit the GROWI URL for the first time, there will be a dialog to set the administrator ID.
 
 After logging in to GROWI, the following screen will appear.
 
@@ -13,27 +12,21 @@ Start the tutorial here.
 
 ## Create new page
 
-GROWI is a system for creating wiki pages.
-
-Let's start with creating a new page.
+Click the “New” button at the top right of the screen to display the page creation dialog.
 
 ![create](./images/create.png)
 
-Click the “New” button
-at the top right of the screen to display the page creation modal.
+Enter "tutorial" in the middle box.
 
 ![create](./images/create_page1.png)
 
-There are multiple buttons. Enter the tutorial and page name in the image position.
-
-Click the create button.
+Click the Create button.
 
 ![create](./images/create_page2.png)
 
-Moves to the page edit screen.
+You will now be moved to the Edit Page screen.
 
-Copy the contents of the following markdown description
-and paste it into the GROWI editing screen.
+Copy the following Markdown code and paste it into the editing box.
 
 ```
 # First page
@@ -45,45 +38,34 @@ and paste it into the GROWI editing screen.
 2. Number list
 ```
 
-When pasting,
-a preview reflecting the contents in real time as shown below is displayed
-on the right side of the screen.
+When pasting, a preview reflecting the contents in real time is displayed
+on the right side of the screen, as shown below.
 
 ![create](./images/tutorial_page1.png)
 
+You can also try typing into the editing box and checking the preview on the right.
 
-Let's actually enter characters on the edit screen
-and check the reflection on the preview screen on the right.
-
-After editing, click the "Create" button.
-
-Click to create an article,
-and the page can be referenced as shown in the image below.
+After editing, click the Create button and you will be taken to view your new page as shown below.
 
 ![create](./images/tutorial_page2.png)
 
-You can switch to “Edit” tab and “View” tab to edit mode and view mode.
+You can switch between the View and Edit tabs to view or edit your page.
 
-Let's edit the created page.
+## Headers
 
+You can add a header or subheader to a page by prefixing your header text with a pound (or hash, or sharp) sign (#).
+You can increase the subheader level by adding additional pounds.
+A space is required immediately after the final pound.
 
-## Headline and hierarchy
-
-You can add headline to the pages using a pound sign.
-A space is required immediately after the `#`.
-
-Each time you increase the number of pound signs by two or three, it will be hierarchized.
+When you create a header, the header is automatically added to the index on the right side of the page.
 
 ![create](./images/tutorial_page2.png)
 
-When you create a headline,
-an index is automatically created on the right side of the page.
+## Hierarchical information
 
-## Documents and hierarchy
+Information in a document can be organized hierarchically using hyphens or asterisks.
 
-You can write a text document on the page. The document can be hierarchized.
-
-Let's use paragraphs using either hyphens or asterisks.
+Copy the following Markdown code into a new page.
 
 ```
 # Learn how to use GROWI
@@ -92,89 +74,76 @@ On this page, you will learn how to use GROWI by following the GROWI Docs tutori
 ## Creating and editing pages
 Create and edit pages.
 
-## Using headline and text
-Learn how to use headline and text.
+## Using headers and text
+Learn how to use headers and text.
 
 ### Header
-When you create a headline, an index is created on the right side of the page.
+When you create a header, an index is created on the right side of the page.
 
 ### Documents
-Write the text on the page as Documents. The sentence can be a paragraph.
+Write text to create a document. Sentences can be organized into paragraphs.
 
-You can create a paragraph with any of the following symbols and spaces.
-- hyphen`-`
-- asterisk`*`
-    - Further hierarchies
-        - It is further hierarchized
-    - Move back one level
+You can create an unordered list of information using any of the following symbols and spaces.
+- hyphen `-`
+- asterisk `*`
+    - Additional hierarchies
+        - Even more additional hierarchies
+    - Move up one level
 ```
 
-When you start the next line of the first paragraph,
-type two spaces or press the Tab key to indent and write the text.
+To create a line break in a hierarchical structure,
+put two spaces or a tab at the beginning of the new line.
+
+You can confirm the hierarchy on the preview screen.
 
 ![create](./images/edit_text.png)
 
-You can check that the document is hierarchized as paragraphs on the preview screen.
-
-Organize the content of the document by layering the text.
+Organize the content of the document by adding and removing hierarchies.
 
 ![create](./images/view_text.png)
 
-It is also a point of creating a wiki that is easy to read if the text becomes longer,
-and that it is hierarchized actively.
+Using hierarchies to organize information is a good practice for creating wikis
+that are easy to read even with a lot of text.
 
+## Link to an external web page
 
-## Create a link to a web page
-
-- Create a link to a web page
-
-  The input field for the link is inserted with the button at the top of the edit screen.
-  You can create a link by connecting `[]` brackets and `()` brackets.
-
-  Create a title in `[]` and a page URL in `()`.
-
-  ```
-  []()
-  [GROWI Docs](https://docs.growi.org/)
-  ```
+A link can be inserted using the link button in the edit toolbar.
 
 ![create](./images/add_link.png)
 
+You can also create a link using square brackets (`[]`) and round brackets (`()`).
+Put the link text in the square brackets the page URL in the round brackets.
+
+  ```
+  [GROWI Docs](https://docs.growi.org/)
+  ```
+
 ## Insert an image
 
-- The image insertion field is inserted with the image browse button.
-You can insert an image by connecting the excursion
-with the `[]` bracket and the `()` bracket.
-
+An image can be inserted using the insert image button in the edit toolbar.
+You can also insert an image by prepending an exclamation mark (`!`) to the 
+link format (`[]()`) discussed above.
 
 ``` 
 ### Insert an image
-  ![]()
   ![growi](https://growi.org/assets/images/logo.png)
 ```
 
 ![create](./images/add_image.png)
 
-- Using the Attach function at the bottom of the edit screen.
+You can upload your own images using the Attach function at the bottom of the edit screen.
 
 ![attach](./images/attach.png)
 
+The Attach function allows you to upload files to AWS or GCS.
 
-  The Attach function allows you to upload files and save them to AWS or GCS.
-
-  To upload files with the Attache function,
-  settings are required on the management screen.
-
-  Click [here](/en/admin-guide/management-cookbook/attachment.html#mongodb-gridfs-%E3%81%B8%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89)
-  for how to set.
-
+To attach files to your pages, you may need to configure settings on your wiki management page.
+Click [here](/en/admin-guide/management-cookbook/attachment.html#mongodb-gridfs-%E3%81%B8%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89)
+for instructions.
 
 ## Use emoji
 
-In GROWI, you can use emoji.
-
-
-- How to use
+You can add emoji to your pages by enclosing emoji words in colons (`:`).
 
 ```
 ## use emoji　:beginner:
@@ -182,28 +151,24 @@ In GROWI, you can use emoji.
 
 ![emoji](./images/emoji.png)
 
-As mentioned above, you can enclose specific emojis in `:`.
+You can find a list of supported emoji words [here](/en/guide/features/emoji.html).
 
-Please refer [here](/en/guide/features/emoji.html) for the list of target emoji.
+## Miscellaneous formatting
 
-## Useful text usage
+You can use various types of formatting to format your document:
 
-GROWI makes it easy to read texts using a number of techniques when editing text.
-
-
-- Emphasis
-- Highlighted red background inversion
-- Horizon
+- Bold
+- Constant-width red text
+- Horizontal Line
 - Strikethrough
-- Paragraph emphasis
+- Constant width text for paragraphs
 
-Let's paste the following Mackdown description into the article and check the preview.
-
+Paste the following Markdown text into a new page and check the preview.
 
 ```
-### Useful text usage
-Here are some useful ways to write various sentences and paragraphs.
-- Emphasis
+### Formatting
+Here are some useful ways to format your sentences and paragraphs.
+- Bold
   Surround the point you want to **emphasize** with two asterisks.
   
     ```
@@ -211,78 +176,65 @@ Here are some useful ways to write various sentences and paragraphs.
     ```
   
   
-- Highlighted red background inversion
-  Enclose the point you want to emphasize with `backticks`.
+- Constant-width red text
+  Enclose the text you want to emphasize with `backticks`.
   
     ```
     `backticks`
     ```
   
-- Horizon
+- Horizontal line
   
-  Write three consecutive hyphens to create a horizontal line.
+  Write three hyphens to create a horizontal line.
   
   ---
   
 - Strikethrough
   
-  In the sentence,
-  ~~ I want to erase ~~ I enclose the part that I want to strike out with two tildes.
+  ~~ Strike out this text ~~ Enclose the text to strike out with two tildes.
 
   
-- Paragraph emphasis
-  The background can be reversed and coordinated as a paragraph.
-  Surround with three back quotes.
+- Constant-width text for paragraphs
+  Surround the paragraph with three `backticks`.
 ```
 
 ![emoji](./images/emoji.png)
 
-## create table
+## Create tables
 
-Enter two or more pipelines `|` and press Enter to create the table.
+Use two or more pipes (`|`) and press Enter to create a table.
 
-You can also create a table by clicking the table button in the edit screen bar.
+You can also create a table by clicking the table button in the edit toolbar.
 
 ![emoji](./images/edit_table1.png)
 
 ![emoji](./images/edit_table2.png)
 
-You can edit the created table from the View mode screen.
-
-When you place the cursor on the table in View mode, the following icons are displayed.
+You even can edit the created table in View mode.
+When you place the cursor on the table in View mode, the edit icon 
+is displayed.
 
 ![emoji](./images/edit_table3.png)
 
-Click to edit the table as shown below.
+Click to edit the table.
 
 ![emoji](./images/edit_table4.png)
 
-## Output page list
+## Create a page list
 
-GROWI has a convenient function to output a list of created pages.
+GROWI has a convenient function to create lists of pages.
 
-Details can be found here [here](/en/guide/tips/hierarchical.html).
-
-Learn only simple usage.
-
-Go to the top page and add lsx as shown below.
+Navigate to any parent page (a page with child pages) and add `lsx` as shown below.
 
 ```
 $lsx()
 ```
 
-Then, the subordinate page list is output.
+The child page list is generated automatically.
 
-![emoji](./images/lsx_sample.png)
+![lsx](./images/lsx_sample.png)
 
-If you try to output the page list,
-you will want to move the page and customize the hierarchy more.
+Additional details can be found [here](/en/guide/tips/hierarchical.html).
 
-Please refer to [here](/en/guide/features/page_operation.html)
-for information on modifying the hierarchy and moving pages.
-
-Organize the various hierarchies and edit them
-to make sharing information on GROWI easier.
-
-Now that you have followed the tutorial,
-you can create more pages and grow your wiki.
+Now that you have completed this tutorial,
+you can create pages and grow your wiki.
