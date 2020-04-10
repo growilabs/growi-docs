@@ -1,4 +1,4 @@
-# Import Data
+# Export GROWI Data
 
 (TBD)
 
