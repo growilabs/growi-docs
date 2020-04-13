@@ -6,20 +6,20 @@ GROWI データを別の GROWI に移行するための zip 形式の GROWI ア�
 GROWI アーカイブデータは同バージョンの GROWI のみインポート可能です。
 :::
 
-### アーカイブ可能なデータコレクション
+### アーカイブ可能な MongoDB Collection
 
-| 種類 | コレクション名 | 説明 | 
+| カテゴリー | MongoDB Collection 名 | 説明 | 
 | :--- | :--- | :--- | 
-| ページコレクション | Pages | ページ。Revisions とセットでインポートする必要があります。|            
+| ページ | Pages | ページ。Revisions とセットでインポートする必要があります。|            
 || Revisions | ページの変更履歴のデータ。<br>Pages とセットでインポートする必要があります。 |
 || Tags | ページタグ。ページに紐づいた状態のままインポートするためには以下の PageTagRelation とセットでインポートする必要があります。 |
 || PageTagRelations | ページとページタグの紐づけに関するデータ。<br>Pages と Tags とセットでインポートする必要があります。 |   
-| ユーザーコレクション | Users ||
+| ユーザー | Users ||
 || Externalaccounts ||
 || Usergroups ||
-| コンフィグコレクション | Configs ||
+| 管理設定 | Configs ||
 || Updateposts ||
-| その他のコレクション | Comments ||
+| その他 | Comments ||
 || Attachmants ||
 || Bookmark ||
 || Migrations ||
