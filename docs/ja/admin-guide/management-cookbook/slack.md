@@ -1,7 +1,7 @@
 # Slack/Mattermost への通知
 
 ## 概要
-GROWI では、 Incoming Webhook を利用した通知が可能です。
+GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 1つの GROWI につき 1つのワークスペースを登録でき、ワークスペースに属する全てのチャンネルに通知できます。
 
 ## Slack Configuration 設定
