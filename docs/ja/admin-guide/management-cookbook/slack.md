@@ -19,8 +19,10 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 ### 設定が反映されているかの確認
 上記の設定後、ページの編集モード画面に Slack 通知フォームが追加されます。  
 
-通知したいチャンネル名を入力しチェックボックスを ON にすると、ページの保存・更新時に Slack 通知が飛びます。  
-この方法で通知を行うことを GROWI では User Trigger Notification といいます。
+![slack1](./images/slack1.png)
+
+ページの保存・更新時に 入力したチャンネルにSlack 通知が飛びます。  
+この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
 
 ## User Trigger Notification 設定
 ユーザー自身が発信する Slack 通知を設定できます。
