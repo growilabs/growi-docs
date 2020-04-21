@@ -6,11 +6,13 @@
 
 (TBD)
 
+[Japanese page](../../../../ja/admin-guide/management-cookbook/import.md#growi-アーカイブデータインポート) is archived.
+
 ## From esa.io
 
 (TBD)
 
-[Japanese page](../../../../ja/admin-guide/management-cookbook/import.md) is archived.
+[Japanese page](../../../../ja/admin-guide/management-cookbook/import.md#esa-io-のデータインポート) is archived.
 
 ## From Qiita:Team
 

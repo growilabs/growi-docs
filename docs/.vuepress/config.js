@@ -83,7 +83,7 @@ module.exports = {
           '/en/guide/': [
             '/en/guide/',
             {
-              title: 'Getting started',
+              title: 'Getting Started',
               collapsable: false,
               children: [
                 '/en/guide/getting-started/five_minutes.md',
@@ -91,7 +91,7 @@ module.exports = {
               ]
             },
             {
-              title: 'tutorial',
+              title: 'Tutorial',
               collapsable: false,
               children: [
                 '/en/guide/tutorial/create_page.md',
@@ -200,6 +200,7 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/google-analytics.md',
                 '/en/admin-guide/management-cookbook/slack.md',
                 '/en/admin-guide/management-cookbook/import.md',
+                '/en/admin-guide/management-cookbook/export.md',
               ]
             },
           ],
@@ -391,6 +392,7 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/google-analytics.md',
                 '/ja/admin-guide/management-cookbook/slack.md',
                 '/ja/admin-guide/management-cookbook/import.md',
+                '/ja/admin-guide/management-cookbook/export.md',
               ]
             },
           ],
