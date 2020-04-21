@@ -17,3 +17,5 @@
 ## From Qiita:Team
 
 (TBD)
+
+[Japanese page](../../../../ja/admin-guide/management-cookbook/import.md#qiita-team-のデータインポート) is archived.
