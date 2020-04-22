@@ -14,6 +14,8 @@
 
 [Japanese page](../../../../ja/admin-guide/management-cookbook/import.md#esa-io-のデータインポート) is archived.
 
-## From Qiita:team
+## From Qiita:Team
 
 (TBD)
+
+[Japanese page](../../../../ja/admin-guide/management-cookbook/import.md#qiita-team-のデータインポート) is archived.
