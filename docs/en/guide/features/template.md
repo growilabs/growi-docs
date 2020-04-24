@@ -35,7 +35,7 @@ A page template for daily reports has now been created.
 
 ## Create a page using a page template
 
-Create a new page at the same level as the template page and select the template to apply from the Apply Template box.
+Create a new page at the same level as the template page.
 
 [//]: <> (TODO: 下のイメージは「〜にテンプレートページを作成」フィールドが入ってない。表れると使いやすい？)
 ![](./images/template_03.png)
