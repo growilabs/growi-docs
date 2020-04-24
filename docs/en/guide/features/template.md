@@ -7,12 +7,10 @@ This tutorial will walk you through creating a daily report template.
 
 ## Create a template page
 
-[//]: <> (TODO: このUIの名前を変わること)
 From the page toolbar, select Create/Edit Page Template.
 
 ![](./images/template_02.png)
 
-[//]: <> (TODO: このUIの名前を変わること)
 Select Create a Page Template at this Hierarchy Level from the displayed dialog.
 
 ![](./images/template_01.png)
