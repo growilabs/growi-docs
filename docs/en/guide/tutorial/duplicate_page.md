@@ -1,26 +1,26 @@
 # Duplicate page
 
-When you can create a page, learn how to duplicate a page.
+If you have a page style that you use often, duplicating
+pages or creating templates can be very useful.
 
-If you have a page that you use repeatedly,
-understanding the mechanism of replication and templates can be very useful.
+## Setup - Create a page
 
-## After the tutorial of creating a page
+First, create a page hierarchy that you will use to store your
+duplicated pages.
 
-First, create a page for creating a hierarchy in order to duplicate the page.
-
-Press the "create" button to create a duplicate page on a guide page,
-such as the tutorial page.
+Press the "create" button to create a new page which will serve as
+the parent page for your page hierarchy.  For this example, we will
+create our parent page under the `/tutorial` page:
 
 ![duplicate1](./images/duplicate1.png)
 
 ![duplicate2](./images/duplicate2.png)
 
-## Duplicate page
+## Duplicate a page
 
-Under the duplicate page, create a page for "20191101" that will be the copy source.
-
-Create the source page with following name "20191101" under the duplicate page.
+Under the parent page created above, create a page to use as the 
+copy source.  We will call this page "20191101".  Copy the
+following data into your new page and save the page.
 
 ```
 # 20191101
@@ -28,58 +28,52 @@ Create the source page with following name "20191101" under the duplicate page.
 Duplicate page
 ```
 
-After that, click “Duplicate” in the image menu on the “20191101” page.
-
+Next, click “Duplicate” in the menu as shown below.
 
 ![duplicate3](./images/duplicate3.png)
 
 ![duplicate4](./images/duplicate4.png)
 
-Enter the page name “20191102” and click the “Duplicate page” button.
-
+Enter the page name “20191102” and click the “Duplicate page”
+button.
 
 ![duplicate5](./images/duplicate5.png)
 
-The page will be duplicated like the image below.
+The page will be duplicated as shown below.
 
 ![duplicate6](./images/duplicate6.png)
 
-By duplicating the page this way,
-you can easily create a wiki page with copied contents.
-
-Next, let's use a template function similar to the one described above.
+By duplicating pages, you can easily populate your wiki
+with copied pages.
 
 ## Create a template
 
-Template is a function
-that allows you to assign a fixed description when creating a new page.
+Templates allow you to assign a fixed structure to a new page.
+There are two types of templates: templates for child pages and
+templates for all descendant pages.
 
+When you create a template for child pages,
+it applies only to the direct children of this page.
 
-There are two types of templates: Template for children and Template for descendants.
+When you create a template for all descendant pages,
+it applies to all lower-level pages that are descendant from this page.
 
-
-When you create "Template for children",
-it applies only to the hierarchy where the template page exists.
-
-
-When you create "Template for descendants",
-it applies to all lower-level pages that have template pages.
-
-
-Here, we use "Template for children".
-
+In this tutorial, we will use a template for child pages.
 
 ![template1](./images/template1.png)
 
-Click the create template button as shown in the image
-to enter the template selection field.
+Click the create template button as shown above
+to select your template type.
 
-Click the Edit button on "Template for children".
-Then, the page creation screen with the page name “_template” will appear.
+[//]: <> (TODO: 下のイメージでEditからSelectに変わっってください。Editはちょっと変です。)
+Click the Select button under "Template for children".
+The page creation screen will appear, with the page name 
+“_template” already created.
 
 ![template2](./images/template2.png)
 
-On this screen, paste the following markdown description and save the page.
+Paste the following markdown code into the edit box and save 
+the page.
 
 ```
 # title
@@ -91,25 +85,20 @@ On this screen, paste the following markdown description and save the page.
 
 ![template3](./images/template3.png)
 
-This completes the template creation.
+Now this template is ready to use.
 
-Next, we will introduce how to actually use the created template.
-
-## Create a page under a page with a template
+## Create a page using a template
 
 On the page where the template was created,
-click “Create” to create the page.
-
+click “Create” to create a child page.
 
 ![template4](./images/template4.png)
 
-Then, the settings already made in the template are reflected
-immediately after creating the page.
+The settings from the template are automatically imported
+into the new page.
 
 ![template5](./images/template5.png)
 
 ![template6](./images/template6.png)
 
-This can be very useful when creating repeated pages.
-
-Let's think about the operation of templating by all means and build a wiki efficiently.
+This can be very useful when creating pages with similar formatting.
