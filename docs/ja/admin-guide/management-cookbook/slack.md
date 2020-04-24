@@ -1,10 +1,12 @@
 # Slack/Mattermost への通知
 
 ## 概要
+
 GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。  
 1つの GROWI につき 1つのワークスペースを登録でき、ワークスペースに属する全てのチャンネルに通知できます。
 
 ## Slack Configuration 設定
+
 通知を行う Slack ワークスペースを設定します。
 
 1. 管理画面のセキュリティ設定ページ(/admin/notification)にアクセスします。
@@ -17,6 +19,7 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 このオプションをオンにすると、 Slack App が有効になっていても GROWI は Incoming Webhook を使用します。
 
 ### 設定が反映されているかの確認
+
 上記の設定後、ページの編集モード画面に Slack 通知フォームが追加されます。  
 
 ![slack1](./images/slack1.png)
@@ -25,13 +28,30 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
 
 ## User Trigger Notification 設定
-ユーザー自身が発信する Slack 通知を設定できます。
 
-### 設定方法
-<!-- TODO-GW-836  -->
-(TBD)
+通常、通知先のチャンネルを通知する度に入力する必要がありますが、
+デフォルトパターンを設定することで入力を省くことが可能です。
+
+### デフォルトパターンの設定方法
+
+1. 管理画面のセキュリティ設定ページ(/admin/notification)にアクセスします。
+2. User Trigger Notification のタブを開きます。
+3. パターンとチャンネル名を入力します。
+
+- パターンとは設定値を表示するパスのことで、例えば `/event/*` と設定すると event 配下のページだけに設定したデフォルトパターンを表示できます。
+- 全てのページにデフォルトパターン表示したい場合は `/*` と入力してください。
+
+### デフォルトパターン設定が反映されているかの確認
+
+パターンを `/event/*` チャンネルを `general` と設定しました。  
+`/event/忘年会のお知らせ`というパスのページを作成すると ページの編集モード画面の Slack 通知フォームに general が追加されます。
+
+![slack2](./images/slack2.png)
+
+チェックボックスを ON にしてページを更新すると slack の general チャンネルに通知が飛びます。
 
 ## Global Notification 設定
+
 Wiki 利用者が何らかのアクションをしたタイミングで発信される Slack 通知を設定できます。
 
 ### 設定方法
