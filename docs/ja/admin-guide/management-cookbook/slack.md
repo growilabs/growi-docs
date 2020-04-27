@@ -24,7 +24,7 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 
 ![slack1](./images/slack1.png)
 
-ページの保存・更新時に 入力したチャンネルにSlack 通知が飛びます。  
+ページの保存・更新時に 入力したチャンネルに Slack 通知が届きます。  
 この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
 
 ## User Trigger Notification 設定
@@ -38,17 +38,17 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 2. User Trigger Notification のタブを開きます。
 3. パターンとチャンネル名を入力します。
 
-- パターンとは設定値を表示するパスのことで、例えば `/event/*` と設定すると event 配下のページだけに設定したデフォルトパターンを表示できます。
+- 設定値を表示するパスをパターンといいます。例えば `/event/*` と設定した場合 event 配下のページのみに設定したデフォルトパターンが表示されます。
 - 全てのページにデフォルトパターン表示したい場合は `/*` と入力してください。
 
 ### デフォルトパターン設定が反映されているかの確認
 
-パターンを `/event/*` チャンネルを `general` と設定しました。  
-`/event/忘年会のお知らせ`というパスのページを作成すると ページの編集モード画面の Slack 通知フォームに general が追加されます。
+例えば、パターンを `/event/*` チャンネルを `general` と設定した場合、  
+`/event/忘年会のお知らせ`というパスのページを作成すると Slack 通知フォームに `general` が設定された状態で編集モードに遷移します。
 
 ![slack2](./images/slack2.png)
 
-チェックボックスを ON にしてページを更新すると slack の general チャンネルに通知が飛びます。
+チェックボックスを有効にした状態でページを更新した場合、 `general` チャンネルに Slack 通知が届きます。
 
 ## Global Notification 設定
 
