@@ -54,6 +54,8 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 
 Wiki 利用者が所定のアクションをしたタイミングで発信される Slack 通知を設定できます。
 
+### Global Notification の設定方法
+
 1. 管理画面のセキュリティ設定ページ(/admin/notification)にアクセスします。
 2. Global Notification のタブを開きます。
 3. 通知設定の一覧の右側にある通知設定の追加ボタンを押します。
