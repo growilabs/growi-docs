@@ -1,38 +1,37 @@
-# Write a page link
+# Create links between pages
 
-![page_linker](./images/page_linker.png)
+In GROWI, you can create links between pages.
 
-In GROWI, it is possible to describe in the reference form
-as follows how to write a link to each page.
+## How to create page links
 
-## How to write page links
+You can create a page link by writing the path enclosed
+in two square brackets (`[[ ]]`).  You can add a page
+link using a relative path or an absolute path.
+
+A relative path is a path beginning with a child page of
+the current page.  If you want to reference the parent
+page, use two periods `..`.
+
+An absolute path is a path from the wiki's root page `/`.
+You can specify an absolute path by beginning your link
+with `/`.
+
+You can specify a title for your link by adding the title
+followed by a right-arrow `>` at the beginning of your
+link.
 
 ```markdown
 ## How to write page links
-- Writing with title
-
-[[this is title>../samplepage]]
-
-- writing reference path
-
-[[../../GROWI]]
+[[This is title with a relative path>../samplepage]]
+[[This is an absolute path>/mypage]]
+This link has no title: [[../../GROWI]]
 ```
 
-If you paste the above description into a GROWI article,
-a link will be generated like an image.
-
-The format is the title and path between `[[` and `]]`.
-
-`Title` and`Reference page` are separated by `>` symbol
-and written like `Title>Reference page`.
-
-The title is optional.
-The reference page can be described as a relative link based on the page being described.
-
+![page_linker](./images/page_linker.png)
 
 ### GitHub
 
-How to write this link is a function
-that is built into GROWI as a Pukiwiki like linker.
+This functionality is based on the linker library
+Pukiwiki.  You can find it on GitHub here:
 
 [GitHub](https://github.com/weseek/growi-plugin-pukiwiki-like-linker)

@@ -1,7 +1,10 @@
 # Include HTML
 
-![html](./images/include_html.png)
+You can directly embed HTML code into your GROWI page.
+Simply type your HTML into the editing screen.
 
+Try copy-pasting the following HTML code into a new
+wiki page:
 ```markdown
 <div class="row">
     <div class="col-sm-6" style="background-color:#EEFFFF">
@@ -15,15 +18,15 @@
 Embed HTML in GROWI page
 ```
 
-GROWI can also embed HTML directly in the article editing screen.
+You should see the following page created from the above
+HTML code:
 
-If you paste the above HTML description into a GROWI article,
-the HTML will be reflected like an image.
+![html](./images/include_html.png)
 
-## iframe embedded
+## Embed YouTube videos using iframes
 
-
-![iframe](./images/include_iframe.png)
+You can embed YouTube videos into your wiki pages using
+iframes as follows:
 
 ```markdown
 <iframe width="30%" height="30%" src="https://www.youtube.com/embed/YE7VzlLtp-4h"
@@ -33,5 +36,7 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 (c) copyright 2008, Blender Foundation / www.bigbuckbunny.org
 ```
 
-If the above iframe description is pasted into a GROWI article,
-Youtube can be incorporated into the screen like an image.
+By adding the above iframe description into your wiki page,
+you can add a YouTube video as shown below.
+
+![iframe](./images/include_iframe.png)
