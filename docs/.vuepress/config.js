@@ -158,6 +158,8 @@ module.exports = {
               title: 'Upgrading',
               collapsable: false,
               children: [
+                '/en/admin-guide/upgrading/38x.md',
+                '/en/admin-guide/upgrading/37x.md',
                 '/en/admin-guide/upgrading/36x.md',
                 '/en/admin-guide/upgrading/35x.md',
                 '/en/admin-guide/upgrading/34x.md',
@@ -352,6 +354,8 @@ module.exports = {
               title: 'アップグレード',
               collapsable: false,
               children: [
+                '/ja/admin-guide/upgrading/38x.md',
+                '/ja/admin-guide/upgrading/37x.md',
                 '/ja/admin-guide/upgrading/36x.md',
                 '/ja/admin-guide/upgrading/35x.md',
                 '/ja/admin-guide/upgrading/34x.md',
