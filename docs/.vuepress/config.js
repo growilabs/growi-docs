@@ -189,6 +189,7 @@ module.exports = {
                 '/en/admin-guide/admin-cookbook/mongodb-backup.md',
                 '/en/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/en/admin-guide/admin-cookbook/integrate-with-hackmd.md',
+                '/en/admin-guide/admin-cookbook/setup-search-system.md',
               ]
             },
             {
@@ -386,6 +387,7 @@ module.exports = {
                 '/ja/admin-guide/admin-cookbook/mongodb-backup.md',
                 '/ja/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/ja/admin-guide/admin-cookbook/integrate-with-hackmd.md',
+                '/ja/admin-guide/admin-cookbook/setup-search-system.md',
               ]
             },
             {
