@@ -1,4 +1,4 @@
-# How to Set Up and Management Full Text Search System
+# How to Set Up and Manage Full Text Search System
 
 (TBD)
 
