@@ -205,6 +205,7 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/slack.md',
                 '/en/admin-guide/management-cookbook/import.md',
                 '/en/admin-guide/management-cookbook/export.md',
+                '/en/admin-guide/management-cookbook/setup-search-system.md',
               ]
             },
           ],
@@ -401,6 +402,7 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/slack.md',
                 '/ja/admin-guide/management-cookbook/import.md',
                 '/ja/admin-guide/management-cookbook/export.md',
+                '/ja/admin-guide/management-cookbook/setup-search-system.md',
               ]
             },
           ],
