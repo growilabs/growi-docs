@@ -221,6 +221,13 @@ module.exports = {
               ],
             },
             {
+              title: 'GROWI Repository',
+              collapsable: false,
+              children: [
+                '/en/dev/repository/directories.md',
+              ],
+            },
+            {
               title: 'Tips',
               collapsable: false,
               children: [
@@ -416,6 +423,13 @@ module.exports = {
               children: [
                 '/ja/dev/startup/dev-env.md',
                 '/ja/dev/startup/launch.md',
+              ],
+            },
+            {
+              title: 'GROWI リポジトリー',
+              collapsable: false,
+              children: [
+                '/ja/dev/repository/directories.md',
               ],
             },
             {
