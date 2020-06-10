@@ -1,6 +1,6 @@
 # Architecture
 
-![architecture](./images/architecuture.png)
+(TBD)
 
 ## Entry Point
 

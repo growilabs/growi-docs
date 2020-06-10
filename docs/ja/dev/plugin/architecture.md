@@ -1,6 +1,6 @@
 # アーキテクチャ
 
-![architecture](./images/architecuture.png)
+(TBD)
 
 ## エントリーポイント
 

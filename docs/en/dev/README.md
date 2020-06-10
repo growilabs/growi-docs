@@ -2,30 +2,6 @@
 sidebarDepth: 0
 ---
 
-# Introduction
+# Architecture Diagram
 
-## Architecture
-
-[Architecture](./plugin/architecture.md)
-
-## Directory Structure
-
-```
-├── bin  
-├── config  
-├── docker  
-├── node_modules  
-├── public  
-├── resource  
-│ └── locales
-│  ├── en-US  
-│  └── ja 　
-└──  src  
- ├── lib  
- ├── linter-checker  
- ├── migrations  
- ├── server
- ├── client
- └── test  
-
-```
+![architecture](./images/architecuture.png)
