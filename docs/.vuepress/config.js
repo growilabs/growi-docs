@@ -221,7 +221,7 @@ module.exports = {
               ],
             },
             {
-              title: '(Obsolete) Getting Started v1',
+              title: '(Deprecated) Getting Started v1',
               collapsable: true,
               children: [
                 '/en/dev/startup-v1/dev-env.md',

@@ -1,4 +1,10 @@
-# Getting Started
+# (Deprecated) Construct Development Environment
+
+::: warning
+This page introduces how to construct development environment with node running on host OS, has been deprecated.
+
+In order to develop with the better environment, use [Getting Started v2](../startup-v2/dev-env.md) applying "Dev in Container".
+:::
 
 ::: tip
 This chapter introduces development enviroment **specifically used in WESEEK, Inc**.
