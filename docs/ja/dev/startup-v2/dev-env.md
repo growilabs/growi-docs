@@ -5,7 +5,9 @@
 そのため、開発にあたって必須ではない設定やツールの指定が含まれています。
 :::
 
-## マージツールの準備
+## 各種ツールの準備
+
+### 3way-merge ツール
 
 ホストPCで作業します。
 
@@ -18,7 +20,7 @@
         * 「Character encoding」で「Unicode (UTF-8, no BOM)」または BOM 表記のない「Unicode(UTF-8)」を選択
         * 「Line ending type」で「UNIX (LF)」を選択
 
-## Git のための GUI クライアントの準備
+### Git のための GUI クライアント
 
 ::: tip WESEEK Rule
 ブランチ操作、reset, rebase 操作に慣れていない人は必ず GUI クライアントをセットアップし、樹形図を常に確認しながら開発を進めましょう。
@@ -42,6 +44,11 @@
     5. デフォルトの文字コード設定
         * 「ツール &gt; オプション &gt; 全般」...
         * 「デフォルトの文字コード」で「utf-8」を選択
+
+### MongoDB のための GUI クライアント
+
+1. [Robo 3T](https://robomongo.org/download) をインストール
+
 
 ## docker, docker-compose 実行環境のインストール
 
