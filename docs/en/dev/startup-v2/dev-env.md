@@ -195,3 +195,20 @@ mkdir node_modules
 1. 初回は各種コンテナイメージのダウンロードとビルドのため、5～10分待つ
 1. エラーなく起動したら、サイドバーの Docker メニューで5つのコンテナの起動を確認する
     * ![ready](./images/growi-dev-ready.png)
+
+
+## トラブルシュート
+
+### Remote WSL の接続に失敗する場合
+
+#### 症状
+
+```
+sh: 1: /scripts/wslServer.sh: not found
+```
+
+#### 対処
+
+1. VSCode のアンインストール
+1. `C:\Users\${YourAccount}\.vscode` の削除
+1. 再度 VSCode のインストールから
