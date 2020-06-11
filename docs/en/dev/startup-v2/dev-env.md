@@ -197,6 +197,34 @@ mkdir node_modules
     * ![ready](./images/growi-dev-ready.png)
 
 
+### 確認
+
+エラーなく起動したら、以下の確認を行ってください。  
+GROWI-Dev devcontainer ウィンドウ内で作業します。
+
+
+#### Git 設定
+
+* ターミナルで、Git の設定を出力し、Windows であれば WSL のグローバル設定、Mac であればホストPCのグローバル設定が反映されていることを確認する
+
+    ```bash
+    node@4a51dae04bb4:/workspace/growi-docs$ git config -l --show-origin
+    file:/home/node/.gitconfig      user.name=Your Name
+    file:/home/node/.gitconfig      user.email=yourname@example.com
+    file:/home/node/.gitconfig      credential.helper=!f() { /home/node/.vscode-server/bin/a5d1cc28bb5da32ec67e86cc50f84c67cc690321/node /tmp/vscode-remote-containers-c717012556037588bd78c4b869724bf548d49841.js $*; }; f
+    file:.git/config        core.repositoryformatversion=0
+    file:.git/config        core.filemode=true
+    file:.git/config        core.bare=false
+    file:.git/config        core.logallrefupdates=true
+    file:.git/config        remote.origin.url=https://github.com/weseek/growi.git
+    file:.git/config        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+    file:.git/config        branch.master.remote=origin
+    file:.git/config        branch.master.merge=refs/heads/master
+    ```
+
+  * `credential.helper` に関しては、上記のようなスクリプトがセットされている状態が正常
+  
+
 ## トラブルシュート
 
 ### Remote WSL の接続に失敗する場合
