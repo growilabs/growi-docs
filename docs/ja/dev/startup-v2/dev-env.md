@@ -151,7 +151,7 @@ devcontainer は 自動的に docker ホストの設定を拝借します。
 
 ## ワークスペース準備
 
-* Windows の場合は WSL 内、Mac の場合はホストPC内に、以下のような構造のディレクトリツリーを用意します
+devcontainer で開発を行うには、以下のような構造のディレクトリツリーが必要です。
 
 ```
 - GROWI
@@ -161,6 +161,8 @@ devcontainer は 自動的に docker ホストの設定を拝借します。
 ```
 
 ### 手順
+
+* Windows の場合は WSL 内、Mac の場合はホストPCで作業します
 
 ::: warning
 **事前チェック**
