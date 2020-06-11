@@ -1,164 +1,197 @@
-# Getting Started
+# 開発環境の構築
 
-::: tip
-This chapter introduces development enviroment **specifically used in WESEEK, Inc**.
-Generally, some of the tools and configurations are not required for developing GROWI.
+::: tip Note
+以下は WESEEK, Inc. での統一開発環境の紹介です。
+そのため、開発にあたって必須ではない設定やツールの指定が含まれています。
 :::
 
-## Set up Merge Tool
+## 各種ツールの準備
 
-1. Install P4Merge (Helix Visual Client (P4V))
-    * Download and install P4Merge from [https://www.perforce.com/downloads/helix-visual-client-p4v](https://www.perforce.com/downloads/helix-visual-client-p4v)
-    * Sign up if you don't have an account.
-2. Set up P4Merge
-    * On Diff tab, select any 2 files and press "OK".
-    * Edit -&gt; Preferences
-        * For "Character encoding", select either "Unicode (UTF-8, no BOM)" or "Unicode(UTF-8)".
-        * For "Line ending type", select "UNIX (LF).
+### 3way-merge ツール
 
-## Set up Git Client
+ホストPCで作業します。
 
-1. Install SourceTree
-    * Download and install SourceTree from [https://www.atlassian.com/software/sourcetree](https://www.atlassian.com/software/sourcetree)
-    * If SourceTree shows a dialog, "We were not able to locate a Git install on our system already", select "Download an embedded version of Git for SourceTree alone to use".
-2. Set up SourceTree
-    1. Open a terminal from SourceTree.
-    2. Disable autoCRLF.
-        * Execute the following command `git config --global core.autoCRLF false`.
-    3. Set up your account.
-        * Tool &gt; Options &gt; General
-        * Set "Default user information".
-    4. Set P4Merge for Merge Tool
-        * Tool &gt; Options &gt; Diff
-        * In "External Diff / Merge" section, select "P4Merge" for "Merge Tool".
-    5. Set Default Encoding
-        * Tool &gt; Options &gt; General
-        * In "Repo Settings" section, select "utf-8" for "Default text encoding".
+1. P4Merge (Helix Visual Client (P4V)) インストール
+    * [https://www.perforce.com/downloads/helix-visual-client-p4v](https://www.perforce.com/downloads/helix-visual-client-p4v) からDLしてインストールする
+    * ユーザ登録は適宜実施する
+2. P4Merge 設定
+    * Diff タブで適当にファイルを2つ選択して OK
+    * Edit -&gt; Preferences...
+        * 「Character encoding」で「Unicode (UTF-8, no BOM)」または BOM 表記のない「Unicode(UTF-8)」を選択
+        * 「Line ending type」で「UNIX (LF)」を選択
 
-## Set up Node.js Environment
+### Git のための GUI クライアント
 
-Test environment (CI) uses `node:12`. Use the version Node.js, npm, and Yarn compatible with `node:12`.
+::: tip WESEEK Rule
+ブランチ操作、reset, rebase 操作に慣れていない人は必ず GUI クライアントをセットアップし、樹形図を常に確認しながら開発を進めましょう。
+:::
+
+ホストPCで作業します。
+
+1. SourceTreeインストール
+    * [https://ja.atlassian.com/software/sourcetree](https://ja.atlassian.com/software/sourcetree) からDLしてインストールする
+    * 「Git が見つかりませんでした」というダイアログが表示された場合は、「システム全体でなく、SourceTree 単独で使うためだけの内蔵用の Git をダウンロードする。」を選択
+2. SourceTree設定
+    1. SourceTree からターミナルを開く
+    2. autoCRLF を無効化する
+        * 以下をコピペして実行 `git config --global core.autoCRLF false`
+    3. 自身のアカウント情報を設定
+        * 「ツール &gt; オプション &gt; 全般」...
+        * 「デフォルトのユーザ情報」を適宜設定
+    4. P4Merge を設定
+        * 「ツール &gt; オプション &gt; Diff」...
+        * 「外部Diffツール」「マージツール」で「P4Merge」を選択
+    5. デフォルトの文字コード設定
+        * 「ツール &gt; オプション &gt; 全般」...
+        * 「デフォルトの文字コード」で「utf-8」を選択
+
+### MongoDB のための GUI クライアント
+
+1. [Robo 3T](https://robomongo.org/download) をインストール
+
+
+## docker, docker-compose 実行環境のインストール
+
+ホストPCで作業します。
 
 :::: tabs
 
-::: tab Windows
+::: tab "Windows" id="tab-docker-win"
 
-1. Install "nvm-windows" (version manager for Node.js, npm)
-    * Download `nvm-setup.zip` from [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases) and execute
-1. Install Node.js and npm (lookup latest version of 12.x from <https://nodejs.org/en/download/releases/)>
+※下記手順は、Virtualbox との併用を行わない手順になります
 
-    ``` cmd
-    nvm install 12.x.x
-    nvm use 12.x.x
-    ```
+1. WSL2 を利用可能な状態にする
+    1. [WSL2 Linux カーネル更新プログラム パッケージ](https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-kernel) をインストール
+    1. 管理者権限で起動した PowerShell で以下を実行
 
-1. Install Yarn
+        ```bash
+        # Hyper-V の無効化
+        Disable-WindowsOptionalFeature -Online -FeatureName $("Microsoft-Hyper-V")
+        # WSL の有効化
+        Enable-WindowsOptionalFeature -Online -FeatureName $("VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux")
+        ```
 
-    * Download and install Yarn from [https://yarnpkg.com/ja/docs/install](https://yarnpkg.com/ja/docs/install)
+    1. Microsoft Store で Ubuntu をインストール
+        * アプリ名にバージョンが入っていない「Ubuntu」アプリを推奨
+            * その時点の最新版(Ubuntu 20.04 LTS 等)へのエイリアスになっている
+        * 単体で起動してユーザー作成、ログインまで済ませる
+        * 確認
+
+            ```bash
+            > wsl -l -v
+            NAME      STATE           VERSION
+            * Ubuntu    Stopped         2
+            ```
+
+        * VERSION 1 で動いている場合は、更に `wsl --set-version Ubuntu 2` を打ち込んでディストリビューションの更新を行う
+
+1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
 
 :::
 
-::: tab Mac
+::: tab "Mac" id="tab-docker-mac"
 
-1. Install nvm
-    * Follow [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm) and install nvm.
-1. Install Node.js, npm
-
-    ```bash
-    nvm install 12.x.x
-    nvm use 12.x.x
-    ```
-
-* Install Yarn
-
-  * Install according to the manual from [https://classic.yarnpkg.com/en/docs/install/#mac-stable](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
+1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
 
 :::
 
 ::::
 
-### Confirm Versions
 
-```bash
-$ node -v
-v12.14.0
-$ npm -v
-6.13.4
-$ yarn -v
-1.19.1
-```
+## Git 設定
 
-## Set up Source Code Editor
+devcontainer は 自動的に docker ホストの設定を拝借します。  
+ここではコンテナ内部から参照するためのホスト側の設定を行います。
 
-1. Install Visual Studio Code.
-2. Install extensions.
-   * How to install extensions
-     * `Ctrl + Shift + P` -> select "Extensions: Show Recommended Extensions"
+:::: tabs
 
-## Set up Dependent Middlewares
+::: tab "Windows" id="tab-git-configuration-win"
 
-::: warning
-Only if your environment does not support Docker, go through the following steps.
+1. docker ホストとなる WSL2 のターミナルで以下を実行
+
+    ```bash
+    # name, email の設定
+    git config --global user.name "Your Name"
+    git config --global user.email "yourname@example.com"
+    # Windows の場合は、WSL 内から更にホストPCの credential helper を参照する設定を行う
+    git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
+    ```
+
+1. ホスト PC で credential helper を利用するため、以下の設定を行う
+    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
+
 :::
 
-1. Install VirtualBox
-    * Download and install VirtualBox from [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads).
-        * Version `6.0.8`
-    * No Extension Packs are required.
-2. Install Vagrant
-    * nload and install Vagrant from [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html).
-    * Create Vagrantfile
+::: tab "Mac" id="tab-git-configuration-mac"
 
-        ```ruby
-        Vagrant.configure(2) do |config|
-          config.vm.box = "chaifeng/ubuntu-18.04-docker-19.03"
+1. ホストPCのターミナルで以下を実行
 
-          ### provision
-          ### change mirror to Japanese location
-          #config.vm.provision "shell", inline: <<-SHELL
-          #  sed -i.bak -e "s%http://archive.ubuntu.com/ubuntu/%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list
-          #SHELL
+    ```bash
+    # name, email の設定
+    git config --global user.name "Yuki Takei"
+    git config --global user.email "yuki@weseek.co.jp"
+    ```
 
-          ### install apt packages
-          config.vm.provision "shell", preserve_order: true, inline: <<-SHELL
-            apt-get update && apt-get install -q -y tmux git nano less
-          SHELL
+1. credential helper を利用するため、以下の設定を行う
+    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
 
-          ### install docker-compose
-          config.vm.provision "shell", preserve_order: true, inline: <<-SHELL
-            curl -sL "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-            chmod +x /usr/local/bin/docker-compose
-          SHELL
+:::
 
-          ### clone git repos
-          config.vm.provision "shell", privileged: false, inline: <<-SHELL
-            git -C growi-docker-compose pull || git clone https://github.com/weseek/growi-docker-compose
-          SHELL
+::::
 
-          ## port forwarding
-          # Proxy
-          config.vm.network "forwarded_port", guest: 80, host: 80, host_ip: "127.0.0.1"
-          config.vm.network "forwarded_port", guest: 443, host: 443, host_ip: "127.0.0.1"
-          # App
-          #config.vm.network "forwarded_port", guest: 3000, host: 3000, host_ip: "127.0.0.1"
-          # App2
-          config.vm.network "forwarded_port", guest: 3010, host: 3010, host_ip: "127.0.0.1"
-          # MongoDB
-          config.vm.network "forwarded_port", guest: 27017, host: 27017, host_ip: "127.0.0.1"
-          # Redis
-          config.vm.network "forwarded_port", guest: 6379, host: 6379, host_ip: "127.0.0.1"
-          # ElasticSearch
-          config.vm.network "forwarded_port", guest: 9200, host: 9200, host_ip: "127.0.0.1"
-          # elasticsearch-head
-          config.vm.network "forwarded_port", guest: 9100, host: 9100, host_ip: "127.0.0.1"
-          # MariaDB
-          config.vm.network "forwarded_port", guest: 3306, host: 3306, host_ip: "127.0.0.1"
-          # phpMyAdmin
-          config.vm.network "forwarded_port", guest: 8080, host: 8080, host_ip: "127.0.0.1"
 
-          # Provider Options
-          config.vm.provider "virtualbox" do |vb|
-            vb.customize ["modifyvm", :id, "--memory", "4096"]
-          end
-        end
-        ```
+## Visual Studio Code のセットアップ
+
+1. [Visual Studio Code](https://code.visualstudio.com/download) をインストール
+2. 拡張機能をインストール
+    * 「Remote - Development」extension のインストール
+    * 「Docker」extension のインストール
+
+
+
+## ワークスペース準備
+
+devcontainer で開発を行うには、以下のような構造のディレクトリツリーが必要です。
+
+```
+- GROWI
+    - growi                   <-- weseek/growi repository
+    - growi-docker-compose    <-- weseek/growi-docker-compose repository
+    - node_modules            <-- an empty directory for developing plugin
+```
+
+### 手順
+
+* Windows の場合は WSL 内、Mac の場合はホストPCで作業します
+
+::: warning
+**事前チェック**
+`git config -l --global` で、autoCRLF が false になっていることを確認しましょう
+:::
+
+```bash
+mkdir -p ~/Projects/GROWI
+cd ~/Projects/GROWI
+git clone https://github.com/weseek/growi.git
+git clone https://github.com/weseek/growi-docker-compose.git
+# プラグイン開発時に利用する空のディレクトリを作成
+mkdir node_modules
+```
+
+### SourceTree のリポジトリリストに登録
+
+* 上の手順で clone したリポジトリを登録
+  * Windows の場合は WSL のパス: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
+
+
+## GROWI-Dev devcontainer の起動
+
+1. VSCode を起動
+1. リモート接続用インジケーターから、devcontainer でリポジトリを開く
+    * ![indicator](./images/vscode-remote-button.png)
+    * Remote-Containers: Open folder in Container...
+    * weseek/growi ローカルリポジトリを選択
+        * Windows の場合は WSL のパス: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
+1. 初回は各種コンテナイメージのダウンロードとビルドのため、5～10分待つ
+1. エラーなく起動したら、サイドバーの Docker メニューで5つのコンテナの起動を確認する
+    * ![ready](./images/growi-dev-ready.png)
