@@ -139,3 +139,50 @@ devcontainer は 自動的に docker ホストの設定を拝借します。
 2. 拡張機能をインストール
     * 「Remote - Development」extension のインストール
     * 「Docker」extension のインストール
+
+
+
+## ワークスペース準備
+
+* Windows の場合は WSL 内、Mac の場合はホストPC内に、以下のような構造のディレクトリツリーを用意します
+
+```
+- GROWI
+    - growi                   <-- weseek/growi repository
+    - growi-docker-compose    <-- weseek/growi-docker-compose repository
+    - node_modules            <-- an empty directory for developing plugin
+```
+
+### 手順
+
+::: warning
+**事前チェック**
+`git config -l --global` で、autoCRLF が false になっていることを確認しましょう
+:::
+
+```bash
+mkdir -p ~/Projects/GROWI
+cd ~/Projects/GROWI
+git clone https://github.com/weseek/growi.git
+git clone https://github.com/weseek/growi-docker-compose.git
+# プラグイン開発時に利用する空のディレクトリを作成
+mkdir node_modules
+```
+
+### SourceTree のリポジトリリストに登録
+
+* 上の手順で clone したリポジトリを登録
+  * Windows の場合は WSL のパス: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
+
+
+## GROWI-Dev devcontainer の起動
+
+1. VSCode を起動
+1. リモート接続用インジケーターから、devcontainer でリポジトリを開く
+    * ![indicator](./images/vscode-remote-button.png)
+    * Remote-Containers: Open folder in Container...
+    * weseek/growi ローカルリポジトリを選択
+        * Windows の場合は WSL のパス: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
+1. 初回は各種コンテナイメージのダウンロードとビルドのため、5～10分待つ
+1. エラーなく起動したら、サイドバーの Docker メニューで5つのコンテナの起動を確認する
+    * ![ready](./images/growi-dev-ready.png)
