@@ -80,8 +80,8 @@ devcontainer は 自動的に docker ホストの設定を拝借します。
 
     ```bash
     # name, email の設定
-    git config --global user.name "Yuki Takei"
-    git config --global user.email "yuki@weseek.co.jp"
+    git config --global user.name "Your Name"
+    git config --global user.email "yourname@example.com"
     ```
 
 1. credential helper を利用するため、以下の設定を行う
