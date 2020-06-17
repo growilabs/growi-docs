@@ -26,3 +26,4 @@ tmp
 # IDE, dev #
 .idea
 *.orig
+*.code-workspace

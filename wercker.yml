@@ -1,4 +1,4 @@
-box: node:10
+box: node:14
 
 deploy:
   steps:

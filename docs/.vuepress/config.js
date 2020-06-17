@@ -1,4 +1,4 @@
-const growiCommonsConfig = require('../en/api/commons/config');
+const { sidebarTree: growiCommonsSidebarTree } = require('../en/api/commons/config');
 
 module.exports = {
   title: 'GROWI Docs',
@@ -79,7 +79,7 @@ module.exports = {
             ]
           }
         ],
-        sidebar: Object.assign(growiCommonsConfig.sidebarTree('Overview'), {
+        sidebar: Object.assign(growiCommonsSidebarTree('Overview'), {
           '/en/guide/': [
             '/en/guide/',
             {
@@ -272,7 +272,7 @@ module.exports = {
             '/en/api/commons/',
             '/en/api/rest-v3.md',
             '/en/api/rest-v1.md',
-          ]
+          ],
         }),
       },
       '/ja/': {
@@ -481,12 +481,6 @@ module.exports = {
               ]
             },
           ],
-          '/en/api/': [
-            ['/en/api/', 'Introduction'],
-            '/en/api/commons/',
-            '/en/api/rest-v3.md',
-            '/en/api/rest-v1.md',
-          ]
         }
       },
     },
