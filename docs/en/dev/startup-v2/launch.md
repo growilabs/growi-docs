@@ -2,7 +2,7 @@
 
 ## First Time
 
-GROWI-Dev devcontainer 内のターミナルで作業します。
+Perform the following steps in a terminal inside your GROWI-Dev devcontainer.
 
 ### Install Dependencies
 
@@ -20,31 +20,30 @@ DO NOT USE `npm install`
 yarn migrate
 ```
 
-### Lauch Front-end and Back-end Server
+### Launch Front-end and Back-end Server
 
-新たに2つのターミナルを作成し、それぞれフロントエンドビルドのサーバー、バックエンドのサーバーを起動します。
+In 2 separate terminals, run the front end client and back end server.
 
-1. `yarn build` does the following.
-   1. Build clients assets and launch webpack-dev-server.
-   2. Detect changes in client-side files and auto-rebuild the client assets.
-2. `yarn server` does the following.
-   1. Launch Express server.
+1. Use `yarn build` to:
+   - Build client assets and launch webpack-dev-server.
+   - Detect changes in client-side files and auto-rebuild the client assets.
+2. Use `yarn server` to:
+   1. Launch the Express server.
    2. Detect changes in server-side files and auto-restart the Express server.
 
-Each process can be ended with `Ctrl-C`.
+Either process can be terminated with `Ctrl-C`.
 
 
-## Second Time On
+## Additional Launches
 
-毎回、上記の [初回起動](#初回起動) のセクションを全て実行してください。
+Each time the application is launched, repeat the steps under [First Time](#first-time).
 
+## Production Build and Execution
 
-## production 用の成果物をビルドして起動
+Execute the following steps from the [First Time](#first-time) section.
 
-See [First Time](#first-time), and follow the step below.
-
-1. Install Dependencies
-1. production 用にフロントエンドをビルドし、バックエンドサーバーを起動
+1. Install dependencies
+1. Build the front end client for production and activate the backend server
 
     ```bash
     yarn start
@@ -54,12 +53,12 @@ See [First Time](#first-time), and follow the step below.
 
 |command|desc|
 |--|--|
-|**`build`**|Runs `build:dev:watch`|
-|`build:dev`|Builds client assets without watching file changes|
-|`build:dev:watch`|Watches file changes and re-builds the client assets|
-|`build:prod`|Builds the client assets for production|
-|**`server`**|Runs `server:dev:watch`|
-|`server:dev`|Launches the server|
-|`server:dev:watch`|Watches file changes and restarts the server|
-|`server:prod`|Launches the server for production|
-|`start`|Runs `build:prod` and `server:prod`|
+|**`build`**|Same as `build:dev:watch`|
+|`build:dev`|Build client assets without monitoring for file changes|
+|`build:dev:watch`|Monitor for file changes and rebuild the client assets|
+|`build:prod`|Build client assets for production|
+|**`server`**|Same as `server:dev:watch`|
+|`server:dev`|Launch the server|
+|`server:dev:watch`|Monitor for file changes and restart the server|
+|`server:prod`|Launch the production server|
+|`start`|Run `build:prod` and `server:prod`|
