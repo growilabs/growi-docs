@@ -5,6 +5,7 @@
 | `MONGO_URI` | URI to connect to MongoDB. | `mongodb://localhost/growi` |
 | `NO_CDN` | If `true`, system doesn't use CDN, all resources will be downloaded from CDN when build client, and served by the GROWI Express server. | `false` |
 | `ELASTICSEARCH_URI` | URI to connect to Elasticearch. | |
+| `ELASTICSEARCH_REQUEST_TIMEOUT` | Max request timeout in milliseconds for each request.(msec) | 8000 |
 | `REDIS_URI` | URI to connect to Redis (use it as a session store instead of MongoDB). | |
 | `PASSWORD_SEED` | A password seed used by password hash generator. | |
 | `SECRET_TOKEN` | A secret key for verifying the integrity of signed cookies. | |
