@@ -1,3 +1,8 @@
+---
+pageClass: admin-cookbook-env-vars
+---
+
+
 # 環境変数
 
 | 環境変数名 | 説明 | デフォルト値 |

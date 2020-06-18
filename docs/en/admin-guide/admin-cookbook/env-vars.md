@@ -1,7 +1,11 @@
+---
+pageClass: admin-cookbook-env-vars
+---
+
 # Environment Variables
 
 | Enviroment Variable | Description | Default Value |
-| ------------------- | ----------: | ------------- |
+| ------------------- | ----------  | ------------- |
 | `MONGO_URI` | URI to connect to MongoDB. | `mongodb://localhost/growi` |
 | `NO_CDN` | If `true`, system doesn't use CDN, all resources will be downloaded from CDN when build client, and served by the GROWI Express server. | `false` |
 | `ELASTICSEARCH_URI` | URI to connect to Elasticearch. | |
