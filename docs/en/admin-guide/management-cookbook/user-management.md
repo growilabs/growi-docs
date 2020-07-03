@@ -1,69 +1,80 @@
-# ユーザー管理
-管理画面のユーザ管理から、登録ユーザーの管理を行うことができます。
+# User Management
+You can manage your registered users from the User Management panel on the Management screen.
 
-## ユーザーテーブル
-ユーザーを一覧表示します。検索フィルターを用いて、username、名前、メールアドレス、ステータスにより表示するユーザーを絞ることができます。
-
-パスワードのリセット、アカウントの削除、停止、管理画面へのアクセス権限の変更等の操作もこのテーブル上で行うことができます。
+## User Table
+Lists basic details about users.  Information can be filtered by username, name, email address, and status.
+Password reset, account deletion, account suspension, management page access, etc. can also be performed from this table.
 
 ![](./images/user-management1.png)
 
-### ステータス
+### Status
 - Active
-  - 承認済みユーザー
-  - 管理画面へのアクセス権限がある場合は「管理者」ステータスがつきます
+  - Approved users
+  - Users with access to the management page will appear as "administrators"
 - Approval pending
-  - 承認待ちユーザー
-  - この状態のアカウントはログインすることはできません
-  - セキュリティ設定内の ID/Password の認証機構設定にて登録の制限を「制限」にしている場合、新規登録後のユーザーは、管理者によるアカウントの承認が行われるまでこの状態になります。
-  - アカウントを有効にするには同テーブルにて「承認する」が実行される必要があります
+  - Users waiting for approval
+  - Users with this status will be unable to login
+  - Users who passed the time limit to verify their ID/password will have the status 
+    "Limit exceeded" until their account is manually verified by an administrator
 - Suspended
-  - 管理者により利用を停止されたユーザー
-  - この状態のアカウントはログインすることはできません
-  - 管理画面のユーザー設定のテーブル上で「アカウント停止」を実行されたユーザーはこの状態になります
-  - アカウントを有効にするには同テーブルにて「承認する」が実行される必要があります
+  - Accounts which have been manually suspended by an administrator
+  - Accounts with this status will be unable to login 
+  - Accounts can be set to this status by an administrator by clicking the "suspend user" button in the user table
+  - Accounts must be unsuspended using the user table
 - Invited
-  - 管理者により招待されたユーザー
-  - 招待時に利用したメールアドレスおよびパスワードで初回ログインを行うまでこの状態になります
+  - Users who have been invited by administrators
+  - Users will have this status until their first login using the provided mail address and password
   
-### 各種操作
-#### パスワードのリセット
-ユーザーテーブル右側のドロップダウンから、ユーザーのパスワードをリセットすることができます。
+### Operations
+#### Password Reset
+You can perform a password reset for a user using the right side dropdown menu.
 
 ![](./images/user-management2.png)
 
-ドロップダウンの編集メニューから、パスワードのリセットを選択するとモーダルが表示されるので、そこに表示されるパスワードリセットの対象ユーザーを確認してください。
+Upon selecting password reset from the dropdown menu, a dialog will appear to allow you to confirm the
+user whose password is to be reset.
 
 <img src="./images/user-management3.png" width="50%">
 
-パスワードのリセットを押すと新規のパスワードが発行されるので、対象ユーザーはこのパスワードを用いてログインしたのち、ユーザー設定( `/me` )のパスワード設定からパスワードを再設定するよう伝えてください。
+After the password reset button is clicked, a new password will be displayed.  The user should be instructed
+to change their password using their own user settings menu (`/me`) once they have logged in using this password.
 
 <img src="./images/user-management4.png" width="50%">
 
 
-#### 管理者権限の付与
-管理者ステータスを持つユーザーは管理画面へのアクセスおよび各種設定を行うことができます。
+#### Add administrator permissions
+Users with administrator status can access the management screen and perform various administration operations.
+Administrator permissions can be added or removed from users using the right side drop down menu.
 
-ユーザーテーブル右側のドロップダウンからユーザーへの管理者権限の付与または削除ができます。
+#### Account confirmation and suspension
+Unconfirmed or suspended accounts can be activated by administrators.  When an account is confirmed,
+the account will be available for login.
 
-#### アカウントの承認および停止
-承認待ちや停止中のアカウントに対し、アカウントの承認を行うことができます。アカウントを承認することで、そのアカウントによるログインが可能になります。
+Active accounts can also be suspended by administrators.  Suspended accounts will keep their account information
+but cannot be logged into until an administrator reactivates the account.
 
-承認済みのアカウントに対して停止を行うことができます。停止されたアカウントはアカウント情報は残りますがログインすることができません。管理者により再度承認が行われるとログインが可能になります。
+#### Account deletion
+Accounts which are not in `Active` status can be deleted.  The delete operation cannot be reversed so
+please take care when using it.
 
-#### アカウントの削除
-Active ステータスでないアカウントのみ削除することができます。削除したユーザーは復元できないので注意してください。
+#### Invite new users
+Users can be invited using their mail address.  When the "Create new user by invitation" button is clicked,
+a dialog to input the user's email address will appear.  Multiple email addresses can be inputted on separate lines.
 
-#### 新規ユーザーの招待
-メールアドレスを指定して新たにユーザーを招待することができます。ユーザー管理画面の[新規ユーザーの招待]ボタンを押すとモーダルが開くので招待先のメールアドレスを入力してください。改行により複数のメールアドレスを指定できます。
+An invitation to the specified email address can be sent by checking "Send invitation by email" and clicking "Invite".
+(Application mail settings and/or AWS settings must be completed in order to send an invitation by email)
 
-招待をメールで送信にチェックを入れて Invite を実行すると指定したメールアドレスに招待メールが送信されます（アプリ設定にてメールの設定もしくはAWS設定を完了している必要があります。）
-
-## 外部アカウント管理
-外部アカウントの管理を行います。外部アカウントとは外部認証機構を利用して登録した時に GROWI アカウントと紐づけられる情報で、紐づくGROWIアカウントが削除されるとそれに紐づく外部アカウントも自動で削除されます。
+## Manage external accounts
+External accounts are composed of information which is stored when a user account is created using single sign-on.
+External accounts are automatically associated with their corresponding GROWI accounts, and are automatically
+deleted when the corresponding GROWI account is deleted.
 
 ![](./images/user-management5.png)
 
-GROWI アカウントのパスワードが未設定の場合、パスワードの設定ステータスが「未設定」表示されます。その状態の外部アカウントに紐づいた GROWI アカウントは ID/Pass によるログインはできません。その外部アカウントでログインし、個人設定画面からパスワードの設定を行うか、管理者がそのアカウントのパスワードのリセットを行うと「設定済み」になります。
+If a password has not been set for an account, the password settings status will display "unset".
+GROWI accounts whose connected external account is in this status will be unable to login with their ID and password.
+When the user logs in using their external account and sets their password on the password settings page
+or an administrator resets their password, the status will change to "set".
 
-外部アカウント管理内のテーブルから外部アカウントの削除ができます。外部アカウントを削除しても GROWI アカウントは削除されません。
+External accounts can be deleted from the external accounts management table.  Deleting an external account
+will not delete the associated GROWI account.
