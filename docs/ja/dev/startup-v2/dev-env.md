@@ -1,9 +1,11 @@
 # 開発環境の構築
 
 ::: tip Note
-以下は WESEEK, Inc. での統一開発環境の紹介です。
+以下は WESEEK, Inc. での統一開発環境の紹介です。adsfasdfsadf
 そのため、開発にあたって必須ではない設定やツールの指定が含まれています。
 :::
+
+
 
 ## 各種ツールの準備
 
@@ -50,6 +52,7 @@
 1. [Robo 3T](https://robomongo.org/download) をインストール
 
 
+
 ## Git 設定
 
 devcontainer は 自動的に docker ホストの設定を拝借します。  
@@ -90,6 +93,56 @@ devcontainer は 自動的に docker ホストの設定を拝借します。
 :::
 
 ::::
+
+
+
+## docker, docker-compose 実行環境のインストール
+
+ホストPCで作業します。
+
+:::: tabs
+
+::: tab "Windows" id="tab-docker-win"
+
+※下記手順は、Virtualbox との併用を行わない手順になります
+
+1. WSL2 を利用可能な状態にする
+    1. [WSL2 Linux カーネル更新プログラム パッケージ](https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-kernel) をインストール
+    1. 管理者権限で起動した PowerShell で以下を実行
+
+        ```bash
+        # Hyper-V の無効化
+        Disable-WindowsOptionalFeature -Online -FeatureName $("Microsoft-Hyper-V")
+        # WSL の有効化
+        Enable-WindowsOptionalFeature -Online -FeatureName $("VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux")
+        ```
+
+    1. Microsoft Store で Ubuntu をインストール
+        * アプリ名にバージョンが入っていない「Ubuntu」アプリを推奨
+            * その時点の最新版(Ubuntu 20.04 LTS 等)へのエイリアスになっている
+        * 単体で起動してユーザー作成、ログインまで済ませる
+        * 確認
+
+            ```bash
+            > wsl -l -v
+            NAME      STATE           VERSION
+            * Ubuntu    Stopped         2
+            ```
+
+        * VERSION 1 で動いている場合は、更に `wsl --set-version Ubuntu 2` を打ち込んでディストリビューションの更新を行う
+
+1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
+
+:::
+
+::: tab "Mac" id="tab-docker-mac"
+
+1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
+
+:::
+
+::::
+
 
 
 ## Visual Studio Code のセットアップ
@@ -135,55 +188,7 @@ mkdir node_modules
 * 上の手順で clone したリポジトリを登録
   * Windows の場合は WSL のパス: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
 
-## docker, docker-compose 実行環境のインストール
 
-ホストPCで作業します。
-
-:::: tabs
-
-::: tab "Windows" id="tab-docker-win"
-
-※下記手順は、Virtualbox との併用を行わない手順になります
-
-1. WSL2 を利用可能な状態にする
-    1. [WSL2 Linux カーネル更新プログラム パッケージ](https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-kernel) をインストール
-    1. 管理者権限で起動した PowerShell で以下を実行
-
-        ```bash
-        # Hyper-V の無効化
-        Disable-WindowsOptionalFeature -Online -FeatureName $("Microsoft-Hyper-V")
-        # WSL の有効化
-        Enable-WindowsOptionalFeature -Online -FeatureName $("VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux")
-        ```
-
-    1. Microsoft Store で Ubuntu をインストール
-        * アプリ名にバージョンが入っていない「Ubuntu」アプリを推奨
-            * その時点の最新版(Ubuntu 20.04 LTS 等)へのエイリアスになっている
-        * 単体で起動してユーザー作成、ログインまで済ませる
-        * 確認
-
-            ```bash
-            > wsl -l -v
-            NAME      STATE           VERSION
-            * Ubuntu    Stopped         2
-            ```
-
-        * VERSION 1 で動いている場合は、更に `wsl --set-version Ubuntu 2` を打ち込んでディストリビューションの更新を行う
-
-1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
-
-:::
-
-::: tab "Mac" id="tab-docker-mac"
-
-1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
-2. 「Preferences > Resources > FILE SHARING」を開き、ワークスペースのパスを追加する  
-    ex.) /Usera/itizawa/GROWI
-    ![ready](./images/enable-mutagen.png)
-
-:::
-
-::::
 
 ## GROWI-Dev devcontainer の起動
 
@@ -224,7 +229,8 @@ GROWI-Dev devcontainer ウィンドウ内で作業します。
     ```
 
   * `credential.helper` に関しては、上記のようなスクリプトがセットされている状態が正常
-  
+
+
 
 ## トラブルシュート
 

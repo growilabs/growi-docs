@@ -5,6 +5,8 @@ The below documentation details our development environment at WESEEK Inc.  It m
 that are not necessary for your use case.
 :::
 
+
+
 ## Tools to Prepare
 
 ### 3-Way Merge Tool
@@ -46,6 +48,7 @@ related considerations
 ### GUI Client for MongoDB
 
 1. Install [Robo 3T](https://robomongo.org/download)
+
 
 
 ## Git Setup
@@ -90,47 +93,6 @@ These settings must be set up on the host side.
 ::::
 
 
-## Set up Visual Studio Code
-
-1. Install [Visual Studio Code](https://code.visualstudio.com/download)
-2. Install extensions
-    * Remote - Development
-    * Docker
-
-
-## Preparing a Workspace
-
-In order to develop using devcontainer, you need to set up a directory tree as follows:
-
-```
-- GROWI
-    - growi                   <-- weseek/growi repository
-    - growi-docker-compose    <-- weseek/growi-docker-compose repository
-    - node_modules            <-- an empty directory for developing plugin
-```
-
-### Procedures
-
-* If you are using Windows, use WSL to execute the following commands; on Mac use the included terminal
-
-::: warning
-**Check before starting**
-`git config -l --global` should show autoCRLF set to false
-:::
-
-```bash
-mkdir -p ~/Projects/GROWI
-cd ~/Projects/GROWI
-git clone https://github.com/weseek/growi.git
-git clone https://github.com/weseek/growi-docker-compose.git
-# Create an empty directory for plugin development
-mkdir node_modules
-```
-
-### Register in the SourceTree repository list
-
-* Register the repository cloned above
-  * Path for WSL (Windows users): `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
 
 ## Install an execution environment for docker and docker-compose
 
@@ -172,15 +134,59 @@ mkdir node_modules
 ::: tab "Mac" id="tab-docker-mac"
 
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
-2. Open Preferences > Resources > FILE SHARING and set up your workspace path.  
-    ex.) /Usera/itizawa/GROWI
-    ![ready](./images/enable-mutagen.png)
 
 :::
 
 ::::
 
-## ACtivating the GROWI-Dev devcontainer
+
+
+## Set up Visual Studio Code
+
+1. Install [Visual Studio Code](https://code.visualstudio.com/download)
+2. Install extensions
+    * Remote - Development
+    * Docker
+
+
+
+## Preparing a Workspace
+
+In order to develop using devcontainer, you need to set up a directory tree as follows:
+
+```
+- GROWI
+    - growi                   <-- weseek/growi repository
+    - growi-docker-compose    <-- weseek/growi-docker-compose repository
+    - node_modules            <-- an empty directory for developing plugin
+```
+
+### Procedures
+
+* If you are using Windows, use WSL to execute the following commands; on Mac use the included terminal
+
+::: warning
+**Check before starting**
+`git config -l --global` should show autoCRLF set to false
+:::
+
+```bash
+mkdir -p ~/Projects/GROWI
+cd ~/Projects/GROWI
+git clone https://github.com/weseek/growi.git
+git clone https://github.com/weseek/growi-docker-compose.git
+# Create an empty directory for plugin development
+mkdir node_modules
+```
+
+### Register in the SourceTree repository list
+
+* Register the repository cloned above
+  * Path for WSL (Windows users): `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
+
+
+
+## Activating the GROWI-Dev devcontainer
 
 1. Open Visual Studio Code
 1. From the Remote Connection indicator, open the devcontainer repository
@@ -195,15 +201,15 @@ mkdir node_modules
 
 ### Confirmation
 
-To ensure there were no errors in setup, confirm the following information 
+To ensure there were no errors in setup, confirm the following information
 in the GROWI-Dev devcontainer window.
 
 
 #### Git Settings
 
 * In terminal, display your Git settings.  They should look similar to the following.
-    * In Windows, check the WSL global settings
-    * In Mac, check the local PC global settings
+  * In Windows, check the WSL global settings
+  * In Mac, check the local PC global settings
 
     ```bash
     $ git config -l --show-origin
@@ -222,6 +228,7 @@ in the GROWI-Dev devcontainer window.
 
   * It is normal for the `credential.helper` setting to look like a script as shown above
   
+
 
 ## Troubleshooting
 
