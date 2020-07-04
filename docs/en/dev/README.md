@@ -4,4 +4,5 @@ sidebarDepth: 0
 
 # Architecture Diagram
 
-![architecture](./images/architecuture.png)
+<!-- editable at https://dev.growi.org/5f007b1493d37400489f3993 -->
+![Dev Architecture](./images/dev-architecture.png)
