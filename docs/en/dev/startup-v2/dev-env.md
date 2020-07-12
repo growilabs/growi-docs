@@ -126,6 +126,14 @@ These settings must be set up on the host side.
             ```
 
         * If the VERSION says 1, execute `wsl --set-version Ubuntu 2` to change the distribution.
+    1. Limit memory size due to the issue that WSL 2 consumes massive amounts of RAM ([microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))
+        * Edit or create `C:\Users\YourAccout\.wslconfig`
+
+        ```
+        [wsl2]
+        memory=6GB
+        swap=0
+        ```
 
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
@@ -134,6 +142,8 @@ These settings must be set up on the host side.
 ::: tab "Mac" id="tab-docker-mac"
 
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+    1. Increase the RAM because of 2 GB runtime memory is set by default.
+        * Reference: [Get started with Docker Desktop for Mac | Resources](https://docs.docker.com/docker-for-mac/#resources)
 
 :::
 

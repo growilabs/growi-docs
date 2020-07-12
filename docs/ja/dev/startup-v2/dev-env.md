@@ -130,6 +130,14 @@ devcontainer は 自動的に docker ホストの設定を拝借します。
             ```
 
         * VERSION 1 で動いている場合は、更に `wsl --set-version Ubuntu 2` を打ち込んでディストリビューションの更新を行う
+    1. ホストのメモリを消費しすぎてしまう問題([microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))への対処として、メモリサイズを制限する
+        * `C:\Users\YourAccout\.wslconfig` を編集(ファイルが存在しない場合は作成)
+
+        ```
+        [wsl2]
+        memory=6GB
+        swap=0
+        ```
 
 1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
 
@@ -138,6 +146,8 @@ devcontainer は 自動的に docker ホストの設定を拝借します。
 ::: tab "Mac" id="tab-docker-mac"
 
 1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
+    1. メモリ利用量上限がデフォルトでは 2GB に設定されているので変更する
+        * 参考: [Get started with Docker Desktop for Mac | Resources](https://docs.docker.com/docker-for-mac/#resources)
 
 :::
 
