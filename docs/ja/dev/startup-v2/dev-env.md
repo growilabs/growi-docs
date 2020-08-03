@@ -53,49 +53,6 @@
 
 
 
-## Git 設定
-
-devcontainer は 自動的に docker ホストの設定を拝借します。  
-ここではコンテナ内部から参照するためのホスト側の設定を行います。
-
-:::: tabs
-
-::: tab "Windows" id="tab-git-configuration-win"
-
-1. docker ホストとなる WSL2 のターミナルで以下を実行
-
-    ```bash
-    # name, email の設定
-    git config --global user.name "Your Name"
-    git config --global user.email "yourname@example.com"
-    # Windows の場合は、WSL 内から更にホストPCの credential helper を参照する設定を行う
-    git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
-    ```
-
-1. ホスト PC で credential helper を利用するため、以下の設定を行う
-    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
-
-:::
-
-::: tab "Mac" id="tab-git-configuration-mac"
-
-1. ホストPCのターミナルで以下を実行
-
-    ```bash
-    # name, email の設定
-    git config --global user.name "Your Name"
-    git config --global user.email "yourname@example.com"
-    ```
-
-1. credential helper を利用するため、以下の設定を行う
-    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
-
-:::
-
-::::
-
-
-
 ## docker, docker-compose 実行環境のインストール
 
 ホストPCで作業します。
@@ -148,6 +105,49 @@ devcontainer は 自動的に docker ホストの設定を拝借します。
 1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
     1. メモリ利用量上限がデフォルトでは 2GB に設定されているので変更する
         * 参考: [Get started with Docker Desktop for Mac | Resources](https://docs.docker.com/docker-for-mac/#resources)
+
+:::
+
+::::
+
+
+
+## Git 設定
+
+devcontainer は 自動的に docker ホストの設定を拝借します。  
+ここではコンテナ内部から参照するためのホスト側の設定を行います。
+
+:::: tabs
+
+::: tab "Windows" id="tab-git-configuration-win"
+
+1. docker ホストとなる WSL2 のターミナルで以下を実行
+
+    ```bash
+    # name, email の設定
+    git config --global user.name "Your Name"
+    git config --global user.email "yourname@example.com"
+    # Windows の場合は、WSL 内から更にホストPCの credential helper を参照する設定を行う
+    git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
+    ```
+
+1. ホスト PC で credential helper を利用するため、以下の設定を行う
+    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
+
+:::
+
+::: tab "Mac" id="tab-git-configuration-mac"
+
+1. ホストPCのターミナルで以下を実行
+
+    ```bash
+    # name, email の設定
+    git config --global user.name "Your Name"
+    git config --global user.email "yourname@example.com"
+    ```
+
+1. credential helper を利用するため、以下の設定を行う
+    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
 
 :::
 

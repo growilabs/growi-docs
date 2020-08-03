@@ -51,48 +51,6 @@ related considerations
 
 
 
-## Git Setup
-
-Devcontainer will automatically inherit settings from Docker.  
-These settings must be set up on the host side.
-
-:::: tabs
-
-::: tab "Windows" id="tab-git-configuration-win"
-
-1. In a WSL2 terminal on the docker host machine, execute the following commands
-
-    ```bash
-    # name, email settings
-    git config --global user.name "Your Name"
-    git config --global user.email "yourname@example.com"
-    # If you are using Windows, you will also need to set up a credential helper for WSL to reference the local machines settings
-    git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
-    ```
-
-1. In order to use the credential helper, you will need the following settings:
-    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
-
-:::
-
-::: tab "Mac" id="tab-git-configuration-mac"
-
-1. Open a terminal and execute the following commands
-
-    ```bash
-    # name, email settings
-    git config --global user.name "Your Name"
-    git config --global user.email "yourname@example.com"
-    ```
-
-1. In order to use the credential helper, you will need the following settings:
-    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
-
-:::
-
-::::
-
-
 
 ## Install an execution environment for docker and docker-compose
 
@@ -144,6 +102,49 @@ These settings must be set up on the host side.
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
     1. Increase the RAM because of 2 GB runtime memory is set by default.
         * Reference: [Get started with Docker Desktop for Mac | Resources](https://docs.docker.com/docker-for-mac/#resources)
+
+:::
+
+::::
+
+
+
+## Git Setup
+
+Devcontainer will automatically inherit settings from Docker.  
+These settings must be set up on the host side.
+
+:::: tabs
+
+::: tab "Windows" id="tab-git-configuration-win"
+
+1. In a WSL2 terminal on the docker host machine, execute the following commands
+
+    ```bash
+    # name, email settings
+    git config --global user.name "Your Name"
+    git config --global user.email "yourname@example.com"
+    # If you are using Windows, you will also need to set up a credential helper for WSL to reference the local machines settings
+    git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
+    ```
+
+1. In order to use the credential helper, you will need the following settings:
+    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
+
+:::
+
+::: tab "Mac" id="tab-git-configuration-mac"
+
+1. Open a terminal and execute the following commands
+
+    ```bash
+    # name, email settings
+    git config --global user.name "Your Name"
+    git config --global user.email "yourname@example.com"
+    ```
+
+1. In order to use the credential helper, you will need the following settings:
+    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
 
 :::
 
