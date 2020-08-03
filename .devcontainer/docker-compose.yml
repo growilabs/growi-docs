@@ -22,6 +22,7 @@ services:
 
     volumes:
       - ..:/workspace/growi-docs:cached
+      - /workspace/growi-docs/node_modules
       - ../../growi:/workspace/growi:cached
       - ../../growi-commons:/workspace/growi-commons:cached
 
