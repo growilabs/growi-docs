@@ -36,12 +36,19 @@ pageClass: admin-cookbook-env-vars
 | `GCS_BUCKET` | Name of the GCS bucket | |
 | `GCS_UPLOAD_NAMESPACE` | Directory name to create in the bucket | |
 | **Option to integrate with external systems** | | |
+| `NCHAN_URI` | URI to connect to Nginx [Nchan](https://nchan.io/) server. | |
 | `HACKMD_URI` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server. | |
 | | This server must load the GROWI agent. [Here's how to prepare it](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html). | |
 | `HACKMD_URI_FOR_SERVER` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server from GROWI Express server. If not set, `HACKMD_URI` will be used. | |
 | `PLANTUML_URI` | URI to connect to [PlantUML](http://plantuml.com/) server. | |
 | `BLOCKDIAG_URI` | URI to connect to [blockdiag](http://http://blockdiag.com/) server. | |
 | `DRAWIO_URI` | URI to connect to [diagrams.net(draw.io)](https://www.diagrams.net/) server. | |
+| `S2SMSG_PUBSUB_SERVER_TYPE` |  | |
+| | : `nchan` Nginx [Nchan](https://nchan.io/) | |
+| | : `redis` (Not implemented yet) | |
+| `S2SMSG_PUBSUB_NCHAN_PUBLISH_PATH` | Publisher endpoint path for Nchan server | `/pubsub` |
+| `S2SMSG_PUBSUB_NCHAN_SUBSCRIBE_PATH` | Subscriber endpoint path for Nchan server | `/pubsub` |
+| `S2SMSG_PUBSUB_NCHAN_CHANNEL_ID` | The channel id to connect to Nchan server | |
 | **Option (Overwritable in admin page)** | | |
 | `APP_SITE_URL` | Site URL. e.g. `https://example.com`, `https://example.com:8080` | |
 | `LOCAL_STRATEGY_ENABLED` | Enable or disable ID/Pass login | |

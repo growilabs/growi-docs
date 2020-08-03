@@ -36,12 +36,19 @@ pageClass: admin-cookbook-env-vars
 | `GCS_BUCKET` | 利用する GCS バケット名 | |
 | `GCS_UPLOAD_NAMESPACE` | バケット内に作成するファイルアップロード用のディレクトリ名 | |
 | **外部システム連携オプション** | | |
+| `NCHAN_URI` | 接続する Nginx [Nchan](https://nchan.io/) サーバーの URI | |
 | `HACKMD_URI` | 接続する [HackMD(CodiMD)](https://hackmd.io/) サーバーの URI | |
 | | このサーバーは GROWI エージェントをロードする必要があります。 セットアップ方法は[こちら](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html)。| |
 | `HACKMD_URI_FOR_SERVER` | GROWI Express サーバーが参照する [HackMD(CodiMD)](https://hackmd.io/) のURI。 未設定の場合は `HACKMD_URI` が使用されます。 | |
 | `PLANTUML_URI` | 接続する [PlantUML](http://plantuml.com/) サーバーの URI | |
 | `BLOCKDIAG_URI` | 接続する [blockdiag](http://http://blockdiag.com/) サーバーの URI | |
 | `DRAWIO_URI` | 接続する [diagrams.net(draw.io)](https://www.diagrams.net/) サーバーの URI | |
+| `S2SMSG_PUBSUB_SERVER_TYPE` |  | |
+| | : `nchan` Nginx [Nchan](https://nchan.io/) を利用します | |
+| | : `redis` (未実装) | |
+| `S2SMSG_PUBSUB_NCHAN_PUBLISH_PATH` | Nchan サーバーの publish エンドポイントのパス | `/pubsub` |
+| `S2SMSG_PUBSUB_NCHAN_SUBSCRIBE_PATH` | Nchan サーバーの subscribe エンドポイントのパス | `/pubsub` |
+| `S2SMSG_PUBSUB_NCHAN_CHANNEL_ID` | Nchan サーバーの接続チャンネルID | |
 | **管理設定を上書きする環境変数** | | |
 | `APP_SITE_URL` | サイト URL (例: `https://example.com` 、 `https://example.com:8080`) | |
 | `LOCAL_STRATEGY_ENABLED` | `true` の場合、ID/Pass ログインが有効になります。 | |
