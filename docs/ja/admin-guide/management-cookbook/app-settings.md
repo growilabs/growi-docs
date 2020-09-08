@@ -179,5 +179,5 @@ GROWI では、Node.js のモジュール解決の仕組みを利用し、 `grow
 `growi-plugin-xxx` の部分を使用するプラグインに書き換えてください。
 
 ```
-npm install --save growi-plugin-xxx
+$ npm install --save growi-plugin-xxx
 ```
