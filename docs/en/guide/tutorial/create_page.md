@@ -121,10 +121,10 @@ Put the link text in the square brackets the page URL in the round brackets.
 ## Insert an image
 
 An image can be inserted using the insert image button in the edit toolbar.
-You can also insert an image by prepending an exclamation mark (`!`) to the 
+You can also insert an image by prepending an exclamation mark (`!`) to the
 link format (`[]()`) discussed above.
 
-``` 
+```
 ### Insert an image
   ![growi](https://growi.org/assets/images/logo.png)
 ```
@@ -140,6 +140,13 @@ The Attach function allows you to upload files to AWS or GCS.
 To attach files to your pages, you may need to configure settings on your wiki management page.
 Click [here](/en/admin-guide/management-cookbook/attachment.html#mongodb-gridfs-%E3%81%B8%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89)
 for instructions.
+
+::: tip
+When you upload an image on the new page,
+The disclosure range is automatically changed to **Only for me**.
+Click [here](http://localhost:8080/en/guide/features/authority.html#%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E9%96%B2%E8%A6%A7%E3%83%BB%E7%B7%A8%E9%9B%86%E6%A8%A9%E9%99%90%E3%81%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95)
+for instructions.
+:::
 
 ## Use emoji
 
@@ -211,7 +218,7 @@ You can also create a table by clicking the table button in the edit toolbar.
 ![emoji](./images/edit_table2.png)
 
 You even can edit the created table in View mode.
-When you place the cursor on the table in View mode, the edit icon 
+When you place the cursor on the table in View mode, the edit icon
 is displayed.
 
 ![emoji](./images/edit_table3.png)
