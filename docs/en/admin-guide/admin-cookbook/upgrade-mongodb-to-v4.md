@@ -1,3 +1,0 @@
-# Upgrade MongoDB
-
-[[toc]]
