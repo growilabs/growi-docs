@@ -190,6 +190,7 @@ module.exports = {
                 '/en/admin-guide/admin-cookbook/lets-encrypt.md',
                 '/en/admin-guide/admin-cookbook/attachment.md',
                 '/en/admin-guide/admin-cookbook/mongodb-backup.md',
+                '/en/admin-guide/admin-cookbook/upgrade-mongodb-to-v4.md',
                 '/en/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/en/admin-guide/admin-cookbook/integrate-with-hackmd.md',
               ]
@@ -407,6 +408,7 @@ module.exports = {
                 '/ja/admin-guide/admin-cookbook/lets-encrypt.md',
                 '/ja/admin-guide/admin-cookbook/attachment.md',
                 '/ja/admin-guide/admin-cookbook/mongodb-backup.md',
+                '/ja/admin-guide/admin-cookbook/upgrade-mongodb-to-v4.md',
                 '/ja/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/ja/admin-guide/admin-cookbook/integrate-with-hackmd.md',
               ]
