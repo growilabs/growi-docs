@@ -159,6 +159,7 @@ module.exports = {
               title: 'Upgrading',
               collapsable: false,
               children: [
+                '/en/admin-guide/upgrading/42x.md',
                 '/en/admin-guide/upgrading/41x.md',
                 '/en/admin-guide/upgrading/40x.md',
                 '/en/admin-guide/upgrading/38x.md',
@@ -190,6 +191,7 @@ module.exports = {
                 '/en/admin-guide/admin-cookbook/lets-encrypt.md',
                 '/en/admin-guide/admin-cookbook/attachment.md',
                 '/en/admin-guide/admin-cookbook/mongodb-backup.md',
+                '/en/admin-guide/admin-cookbook/upgrade-mongodb.md',
                 '/en/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/en/admin-guide/admin-cookbook/integrate-with-hackmd.md',
               ]
@@ -376,6 +378,7 @@ module.exports = {
               title: 'アップグレード',
               collapsable: false,
               children: [
+                '/ja/admin-guide/upgrading/42x.md',
                 '/ja/admin-guide/upgrading/41x.md',
                 '/ja/admin-guide/upgrading/40x.md',
                 '/ja/admin-guide/upgrading/38x.md',
@@ -407,6 +410,7 @@ module.exports = {
                 '/ja/admin-guide/admin-cookbook/lets-encrypt.md',
                 '/ja/admin-guide/admin-cookbook/attachment.md',
                 '/ja/admin-guide/admin-cookbook/mongodb-backup.md',
+                '/ja/admin-guide/admin-cookbook/upgrade-mongodb.md',
                 '/ja/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/ja/admin-guide/admin-cookbook/integrate-with-hackmd.md',
               ]
