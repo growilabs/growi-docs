@@ -24,7 +24,7 @@ pageClass: admin-cookbook-env-vars
 | `USER_UPPER_LIMIT` | (TBD) | |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Max connection size to deliver push messages to all clients. | 5000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Max connection size to deliver push messages to guest users. | 2000 |
-| `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_ADMIN` | Max connection size to deliver push messages to admin users in admin pages. | 100 |
+| `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_ADMIN` | Max connection size to deliver push messages to admin users in admin pages.<br>(This is isolated from `S2CMSG_PUBSUB_CONNECTIONS_LIMIT`)  | 100 |
 | **Option for file uploading** | | |
 | `FILE_UPLOAD` | Attached files storage. | `aws` |
 | | : `aws` Amazon Web Service S3 (needs AWS settings on Admin page) | |
