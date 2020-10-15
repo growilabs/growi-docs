@@ -22,6 +22,9 @@ pageClass: admin-cookbook-env-vars
 | `FORMAT_NODE_LOG` | If `false`, Output server log as JSON. (Enabled only when `NODE_ENV=production`) | `true` |
 | `MATHJAX` | (TBD) | |
 | `USER_UPPER_LIMIT` | (TBD) | |
+| `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Max connection size to deliver push messages to all clients. | 5000 |
+| `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Max connection size to deliver push messages to guest users. | 2000 |
+| `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_ADMIN` | Max connection size to deliver push messages to admin users in admin pages. | 100 |
 | **Option for file uploading** | | |
 | `FILE_UPLOAD` | Attached files storage. | `aws` |
 | | : `aws` Amazon Web Service S3 (needs AWS settings on Admin page) | |
