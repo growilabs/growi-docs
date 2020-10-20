@@ -35,7 +35,7 @@ AWS S3 Bucket にファイルを保存します。
 
 環境変数 `FILE_UPLOAD` を 'aws' とするか、指定せずに GROWI のアプリ設定(`/admin/app`)内のファイルアップロード設定でファイルアップロード方法を `AWS` にすると利用できます。
 
-AWS S3 Bucket の設定方法は[こちら](../management-cookbook/app-settings.html#aws-設定)を参考にしてください。
+AWS S3 Bucket の設定方法は[こちら](../management-cookbook/app-settings.html#ファイルアップロード設定)を参考にしてください。
 
 ### Google Cloud Storage へのアップロード
 
@@ -46,7 +46,7 @@ Google Cloud Storage にファイルを保存します。
 [こちら](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) を参考に GCS の情報を取得し、以下の環境変数またはファイルアップロード設定のフォームに設定してください。
 
 - `GCS_API_KEY_JSON_PATH` : [(GROWIのルートディレクトリから見た) GCP サービスアカウントキー の JSON ファイルのパス]
-- `GCS_BUCKET` : [GCS のバケット名] 
+- `GCS_BUCKET` : [GCS のバケット名]
 - `GCS_UPLOAD_NAMESPACE` : [バケット内に作成するファイルアップロード用のディレクトリ名]
 
 ### ファイルシステムへのアップロード
@@ -57,7 +57,7 @@ GROWI サーバーから見たローカルファイルシステムにファイ�
 
 - `FILE_UPLOAD` : 'local'
 
-##  添付ファイルのサイズ制限
+## 添付ファイルのサイズ制限
 
 以下の環境変数により、一度にアップロードできるファイルのサイズ上限と全ページに添付されているファイルの累計サイズの上限を設定することができます。いずれも単位は `bytes` です。デフォルトではいずれの値も `Infinity` となっており、ファイルサイズは制限されません。
 
