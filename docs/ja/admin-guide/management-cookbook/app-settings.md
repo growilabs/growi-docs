@@ -117,19 +117,17 @@ GROWI からメールが送信されます。
 **招待をメールで送信** にチェックをするとメールが機能します。  
 メール設定が正しく出来ていない場合はメールが機能しません。
 
-## AWS 設定
+## ファイルアップロード設定
+
+GROWI ページへのファイルアップロードに関する設定を行います。ファイルアップロード先が環境変数によって固定されている場合、ここでのファイルアップロード先の変更はできません。詳細は[こちら](../admin-guide/attachment)を参照してください。
+
+このフォームでは ファイルアップロード先に AWS S3, Google Cloud Storage を選択できます。各設定方法を下記にて説明します。
 
 ### AWS S3 Bucket のセットアップ
 
 AWS S3(Amazon Simple Storage Service) への接続設定の手順を紹介します。
 
-この設定を行うことにより、AWS S3 Bucket へのファイルアップロード、プロフィール写真機能、
-また、SMTP 設定がない場合、SES(Amazon Simple Email Service) を利用したメール送信が行われます。  
-SES を利用したメール送信には、From メールアドレスの Verify、プロダクション利用設定をする必要があります。
-
-![appsettings16](./images/appsettings16.png)
-
-### AWS アカウント情報の取得
+#### AWS アカウント情報の取得
 
 1. [AWS マネジメントコンソール](https://aws.amazon.com/jp/console/) にサインインし、
 ナビバー右上のアカウント名をクリックすると表示されるドロップダウンから、
@@ -138,9 +136,9 @@ SES を利用したメール送信には、From メールアドレスの Verify�
 AWS アカウントのAccess Key ID および Secret Access Key を作成、保管します。
 3. 「アカウント ID」を展開し、正規ユーザー ID を確認します。
 
-### AWS S3 Bucket 情報の取得、権限変更
+#### AWS S3 Bucket 情報の取得、権限変更
 
-1. AWS S3 の[ダッシュボード](https://s3.console.aws.amazon.com/s3)にアクセスします。
+1. A#S S3 の[ダッシュボード](https://s3.console.aws.amazon.com/s3)にアクセスします。
 2. 登録したい S3 Bucket のリージョンとバケット名を確認します。
 3. 登録したい S3 Bucket を選択し、「アクセス権限」を開きます。
 4. 「ブロックパブリックアクセス」の編集ボタンをクリックし、「新しいアクセスコントロールリスト (ACL) を介して
@@ -149,13 +147,16 @@ AWS アカウントのAccess Key ID および Secret Access Key を作成、保�
 手順「AWS アカウント情報の取得」の 3. で確認したものと一致していなければ、
 「他の AWS アカウントのアクセス」に、確認した正規 ID でアカウントを追加します。この時、権限の種類全てにチェックします。
 
-### GROWI に Bucket を登録
+#### GROWI に Bucket を登録
 
 1. GROWI の App 管理画面の AWS 設定に上記過程で確認した情報を入力し、更新してください。
 
 2. MinIO など、S3 互換 API を持つ他のオブジェクトストレージサービスを使用する場合は、
 そのエンドポイントの URL をカスタムエンドポイントに入力してください。
 
+### Google Cloud Storage のセットアップ
+
+[こちら](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) を参考に GCS の情報を取得しフォームに設定してください。
 
 ## プラグイン設定
 
