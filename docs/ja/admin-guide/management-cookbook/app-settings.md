@@ -209,6 +209,10 @@ AWS アカウントのAccess Key ID および Secret Access Key を作成、保�
 
 ![appsettings20](./images/appsettings20.png)
 
+- Api Key Json Path: [(GROWIのルートディレクトリから見た) GCP サービスアカウントキー の JSON ファイルのパス]
+- バケット名: [GCS のバケット名]
+- Name Space: [バケット内に作成するファイルアップロード用のディレクトリ名]
+
 ## プラグイン設定
 
 この欄で `プラグインを読み込む` を ON / OFF に設定することで、GROWI にインストールされたプラグインを有効化/無効化します。  
