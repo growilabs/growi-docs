@@ -8,7 +8,7 @@ GROWI ページへのファイルアップロードに関する設定につい�
 
 ## アップロード先の指定
 
-GROWI ページの添付ファイルの保存先は以下を利用できます。詳細は[こちら](../management-cookbook/app-settings#添付ファイルの保存先の変更)を参照してください。
+GROWI ページの添付ファイルの保存先は以下を利用できます。詳細は[こちら](../management-cookbook/app-settings.html#ファイルアップロード設定)を参照してください。
 
 - Amazon S3
 - Google Cloud Storage
