@@ -121,12 +121,38 @@ GROWI からメールが送信されます。
 
 ## ファイルアップロード設定
 
-GROWI ページへの添付ファイルのアップロードに関する設定を行います。添付ファイルの保存先は以下を利用できます。
+GROWI ページへの添付ファイルのアップロードに関する設定を行います。
+
+### 利用可能な保存先
+
+添付ファイルの保存先は以下を利用できます。
 
 - Amazon S3
 - Google Cloud Storage
 - MongoDB
 - ローカルファイルシステム
+
+#### Amazon S3 へのアップロード
+
+Amazon S3 の Bucket にファイルを保存します。
+
+AWS S3 の設定方法は[こちら](../management-cookbook/app-settings.html#Amazon S3 Bucket のセットアップ)を参考にしてください。
+
+#### Google Cloud Storage へのアップロード
+
+Google Cloud Storage の Bucket にファイルを保存します。
+
+Google Cloud Storage の設定方法は[こちら](../management-cookbook/app-settings.html#Google Cloud Storage のセットアップ)を参考にしてください。
+
+#### MongoDB へのアップロード
+
+GROWI データの保存先に指定している MongoDB に [GridFS](https://docs.mongodb.com/manual/core/gridfs/) を利用し、ファイルを保存します。
+
+#### ファイルシステムへのアップロード
+
+GROWI サーバーから見たローカルファイルシステムにファイルを保存します。
+
+### 添付ファイルの保存先の変更
 
 保存先はアプリ設定のファイルアップロード設定にて変更できます。
 
