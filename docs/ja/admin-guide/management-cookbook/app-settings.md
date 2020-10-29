@@ -136,7 +136,7 @@ GROWI ページへの添付ファイルのアップロードに関する設定�
 
 Amazon S3 の Bucket にファイルを保存します。
 
-AWS S3 の設定方法は[こちら](../management-cookbook/app-settings.html#Amazon S3 Bucket のセットアップ)を参考にしてください。
+Amazon S3 の設定方法は[こちら](../management-cookbook/app-settings.html#Amazon S3 Bucket のセットアップ)を参考にしてください。
 
 #### Google Cloud Storage へのアップロード
 
@@ -181,9 +181,9 @@ Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介し
 AWS アカウントのAccess Key ID および Secret Access Key を作成、保管します。
 3. 「アカウント ID」を展開し、正規ユーザー ID を確認します。
 
-#### AWS S3 Bucket 情報の取得、権限変更
+#### Amazon S3 Bucket 情報の取得、権限変更
 
-1. A#S S3 の[ダッシュボード](https://s3.console.aws.amazon.com/s3)にアクセスします。
+1. Amazon S3 の[ダッシュボード](https://s3.console.aws.amazon.com/s3)にアクセスします。
 2. 登録したい S3 Bucket のリージョンとバケット名を確認します。
 3. 登録したい S3 Bucket を選択し、「アクセス権限」を開きます。
 4. 「ブロックパブリックアクセス」の編集ボタンをクリックし、「新しいアクセスコントロールリスト (ACL) を介して
