@@ -163,7 +163,7 @@ GROWI サーバーから見たローカルファイルシステムにファイ�
 ![appsettings18](./images/appsettings18.png)
 
 ::: warning
-ファイルアップロード先が環境変数によって固定されている場合、ここでのファイルアップロード先の変更はできません。詳細は[こちら](../admin-cookbook/attachment)を参照してください。
+ファイルアップロード先が環境変数 `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` によって固定されている場合、ここでのファイルアップロード先の変更はできません。詳細は[こちら](../admin-cookbook/attachment)を参照してください。
 :::
 
 Amazon S3, Google Cloud Storage を利用する場合はそれぞれ設定が必要です。下記を参照に設定を完了してください。
