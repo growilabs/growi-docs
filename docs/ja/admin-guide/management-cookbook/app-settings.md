@@ -152,7 +152,7 @@ GROWI データの保存先に指定している MongoDB に [GridFS](https://do
 
 GROWI サーバーから見たローカルファイルシステムにファイルを保存します。
 
-### 添付ファイルの保存先の変更
+### 添付ファイル保存先の変更
 
 保存先はアプリ設定のファイルアップロード設定にて変更できます。
 
@@ -238,5 +238,5 @@ GROWI では、Node.js のモジュール解決の仕組みを利用し、 `grow
 `growi-plugin-xxx` の部分を使用するプラグインに書き換えてください。
 
 ```
-$ npm install --save growi-plugin-xxx
+npm install --save growi-plugin-xxx
 ```
