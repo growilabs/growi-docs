@@ -6,51 +6,47 @@
 
 GROWI ページへのファイルアップロードに関する設定について紹介します。
 
-## アップロード先の指定
+## 添付ファイル保存先の指定
 
-GROWI ページの添付ファイルの保存先は、環境変数によりMongoDB GridFS、AWS S3、Google Cloud Storage、ローカルファイルシステムから選択できます。デフォルトでは AWS S3 が選択されています。
+GROWI ページの添付ファイルの保存先は以下を利用できます。詳細は[こちら](../management-cookbook/app-settings.html#ファイルアップロード設定)を参照してください。
+
+- Amazon S3
+- Google Cloud Storage
+- MongoDB
+- ローカルファイルシステム
+
+### 環境変数による添付ファイル保存先の固定
 
 ::: danger
 ファイル保存先を途中で変更すると、これまでにアップロードしたファイル等へのアクセスができなくなりますのでご注意ください。
 :::
 
-### MongoDB GridFS へのアップロード
+添付ファイルの保存先を環境変数によって固定したい場合は、環境変数 `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` を `true` にし、以下の表を参考に環境変数 `FILE_UPLOAD` の値を設定してください。
 
-GROWI データの保存先に指定している MongoDB に [GridFS](https://docs.mongodb.com/manual/core/gridfs/) を利用し、ファイルを保存します。
+| 保存先 | `FILE_UPLOAD` |
+| --- | --- |
+| Amazon S3 | `aws` |
+| Google Cloud Storage | `gcs` |
+| MongoDB | `mongodb` |
+| ローカルファイルシステム | `local` |
 
-利用するには以下のように環境変数を設定し、GROWI を再起動してください。
+環境変数 `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` によって保存先が固定されている場合、管理画面での保存先選択機能は無効となります。
 
-- `FILE_UPLOAD` : 'mongodb'
+### 環境変数による Google Cloud Storage 設定
 
-### AWS S3 へのアップロード
+ファイルアップロード設定内の GCS 設定のフォームで値を指定していない場合は、以下のデフォルト値を利用します。
 
-App 設定画面の AWS 設定にて登録されている AWS S3 Bucketにファイルを保存します。
+- Api Key Json Path: `GCS_API_KEY_JSON_PATH`
+- バケット名: `GCS_BUCKET`
+- Name Space: `GCS_UPLOAD_NAMESPACE`
 
-利用するには以下のように環境変数を設定し、GROWI を再起動してください。`FILE_UPLOAD` が未設定の場合も AWS S3 へのファイルアップロードが採用されます。
+#### 環境変数による GCS 設定の固定
 
-- `FILE_UPLOAD` : 'aws' (Default)
+GCS 設定を環境変数によって固定したい場合は、環境変数 `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` を `true` にし、上記の環境変数に値を入れてください。未設定の場合は、null が入ります。
 
-AWS S3 Bucket のセットアップが未完了の場合は、[こちら](../management-cookbook/app-settings.html#aws-設定)を参考にセットアップしてください。
+環境変数 `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` による GCS 設定の固定が有効な場合、ファイルアップロード設定での GCS 設定のフォームの値は無効となり、変更もできなくなります。
 
-### Google Cloud Storage へのアップロード
-
-環境変数で指定された Google Cloud Storage にファイルを保存します。
-
-利用するには、[こちら](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) を参考に、GCP のサービスアカウントキー の JSON ファイルを用意した後、以下のように環境変数を設定し、GROWI を再起動してください。
-
-- `FILE_UPLOAD` : 'gcs' 
-- `GCS_API_KEY_JSON_PATH` : [(GROWIのルートディレクトリから見た) GCP サービスアカウントキー の JSON ファイルのパス]
-- `GCS_BUCKET` : [GCS のバケット名] 
-
-### ファイルシステムへのアップロード
-
-GROWI サーバーから見たローカルファイルシステムにファイルを保存します。
-
-利用するには以下のように環境変数を設定し、GROWI を再起動してください。
-
-- `FILE_UPLOAD` : 'local' 
-
-##  添付ファイルのサイズ制限
+## 添付ファイルのサイズ制限
 
 以下の環境変数により、一度にアップロードできるファイルのサイズ上限と全ページに添付されているファイルの累計サイズの上限を設定することができます。いずれも単位は `bytes` です。デフォルトではいずれの値も `Infinity` となっており、ファイルサイズは制限されません。
 
