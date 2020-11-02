@@ -38,7 +38,7 @@ the function of selecting save destination on the management page is disabled.
 
 ### Google Cloud Storage Settings with environment variable
 
-If you have not specified a value in the GCS Settings form in the File Upload Settings,
+If you don't set a value in the GCS Settings form in the File Upload Settings,
 use the default value below.
 
 - Api Key Json Path: `GCS_API_KEY_JSON_PATH`
@@ -49,13 +49,15 @@ use the default value below.
 
 ### Fixing GCS Settings with environment variable
 
-If you want to fix the GCS settings with environment variables, set the environment variable `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` to `true` and put a value in the above environment variable. If it is not set, null will be entered.
+If you want to fix the GCS settings with environment variables, set the environment variable `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` to `true` and put a value in the above environment variable.  
+If it is not set, null will be entered.
 
 If pinning the GCS settings with the environment variable `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` is enabled, the form values of the GCS settings in the file upload settings are invalid and cannot be changed.
 
 ## Attached File Size Limitation
 
-The following environment variables allow you to set the maximum size of files that can be uploaded at one time and the cumulative size of attached files to all pages.
+The following environment variables allow you to set the maximum size of files that can be uploaded at one time and the cumulative size of attached files to all pages.  
+
 In both cases, the unit is `bytes`. By default, both values are `Infinity` and the file size is not limited.
 
 - `MAX_FILE_SIZE` : [The upper limit of uploadable file size (bytes)]
