@@ -15,7 +15,7 @@ The following can be used to save the attachment file of the GROWI page. See [he
 - MongoDB
 - Local File System
 
-### Fixing save destination for attachments by environment variables
+### Fixing save destination for attached files with environment variables
 
 ::: danger
 Warning: Changing the file upload destination will lose access to the previously uploaded files.
