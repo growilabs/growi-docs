@@ -21,7 +21,9 @@ The following can be used to save the attachment file of the GROWI page. See [he
 Warning: Changing the file upload destination will lose access to the previously uploaded files.
 :::
 
-When you want to fix the save destination of the attached file by the environment variable, set the environment variable `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` to `true`. Also, set the value of the environment variable `FILE_UPLOAD` referring to the table below.
+When you want to fix the save destination of the attached files with the environment variable, set the environment variable `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` to `true`.
+
+Also, set the value of the environment variable `FILE_UPLOAD` referring to the table below.
 
 | Save Destination | `FILE_UPLOAD` |
 | --- | --- |
@@ -31,7 +33,7 @@ When you want to fix the save destination of the attached file by the environmen
 | Local File System | `local` |
 
 If the save destination is fixed by the environment variable `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE`,
-the saving destination function on the management page is disabled.
+the function of selecting save destination on the management page is disabled.
 
 
 ### Google Cloud Storage Settings with environment variable
