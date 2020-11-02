@@ -52,7 +52,7 @@ use the default value below.
 If you want to fix the GCS settings with environment variables, set the environment variable `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` to `true` and put a value in the above environment variable.  
 If it is not set, null will be entered.
 
-If pinning the GCS settings with the environment variable `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` is enabled, the form values of the GCS settings in the file upload settings are invalid and cannot be changed.
+If pinning the GCS settings with the environment variable `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` is enabled, the form values of the GCS settings in the file upload settings are disabled and cannot be changed.
 
 ## Attached File Size Limitation
 
