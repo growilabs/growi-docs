@@ -6,7 +6,7 @@
 
 This chapter introduces how to change the destination to upload attachment files.
 
-## Setting attached files' save destination
+## Setting save destination of attached files
 
 The following can be used to save the attachment file of the GROWI page. See [here] (../management-cookbook/app-settings.html#ファイルアップロード設定) for details.
 
