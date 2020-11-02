@@ -2,4 +2,5 @@
 
 ## File Upload Settings
 
-GROWI ページへの添付ファイルのアップロードに関する設定を行います。
+Make settings for uploaded attachments to the GROWI page.
+<!-- [TODO: English translation by gw4283] -->
