@@ -6,7 +6,7 @@
 
 This chapter introduces how to change the destination to upload attachment files.
 
-## Setting save destination of attached files
+## Setting file upload method of attached files
 
 The following can be used to save the attachment file of the GROWI page. See [here](../management-cookbook/app-settings.html#file-upload-settings) for details.
 
@@ -15,25 +15,25 @@ The following can be used to save the attachment file of the GROWI page. See [he
 - MongoDB
 - Local File System
 
-### Fixing save destination for attached files with environment variables
+### Fixing file upload method for attached files with environment variables
 
 ::: danger
 Warning: Changing the file upload destination will lose access to the previously uploaded files.
 :::
 
-When you want to fix the save destination of the attached files with the environment variable, set the environment variable `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` to `true`.
+When you want to fix the file upload method of the attached files with the environment variable, set the environment variable `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` to `true`.
 
 Also, set the value of the environment variable `FILE_UPLOAD` referring to the table below.
 
-| Save Destination | `FILE_UPLOAD` |
+| File Upload Method | `FILE_UPLOAD` |
 | --- | --- |
 | Amazon S3 | `aws` |
 | Google Cloud Storage | `gcs` |
 | MongoDB | `mongodb` |
 | Local File System | `local` |
 
-If the save destination is fixed by the environment variable `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE`,
-the function of selecting save destination on the management page is disabled.
+If the file upload method is fixed by the environment variable `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE`,
+the function of selecting file upload method on the management page is disabled.
 
 
 ### Google Cloud Storage Settings with environment variable
