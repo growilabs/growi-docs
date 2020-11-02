@@ -30,11 +30,11 @@ When you want to fix the save destination of the attached file by the environmen
 | MongoDB | `mongodb` |
 | Local File System | `local` |
 
-If the save destination is fixed by the environment variable `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE`, the saving destination function on the management page is disabled.
+If the save destination is fixed by the environment variable `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE`,
+the saving destination function on the management page is disabled.
 
-<!-- ここから -->
 
-### Google Cloud Storage Settings by environment variable
+### Google Cloud Storage Settings with environment variable
 
 If you have not specified a value in the GCS Settings form in the File Upload Settings, use the default value below.
 
@@ -44,33 +44,11 @@ If you have not specified a value in the GCS Settings form in the File Upload Se
 
 
 
-### Fixed GCS Settings by environment variable
+### Fixed GCS Settings with environment variable
 
+If you want to fix the GCS settings with environment variables, set the environment variable `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` to `true` and put a value in the above environment variable. If it is not set, null will be entered.
 
-<!-- ### Upload Files to Google Cloud Storage
-
-Upload attached files to Google Cloud Storage specified in environment variables. The setting procedure is as follows.
-
-1. Refer to [GCP Docs](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and get the JSON file of GCP service account.
-
-2. Set the following environment variables as below and rebuild the app.
-
-- `FILE_UPLOAD` : 'gcs'
-- `GCS_API_KEY_JSON_PATH` : [Path of the JSON file of GCP service account key (as seen from the root directory of GROWI server)]
-- `GCS_BUCKET` : [GCS bucket name] -->
-
-
-<!-- ### Upload Files to AWS S3
-
-Upload attached files to AWS S3 bucket specified in AWS setting in App Settings page.
-
-Set the following environment variable as below and rebuild the app. This is the default setting.
-
-- `FILE_UPLOAD` : 'aws' (Default)
-
-If the AWS S3 bucket setup has not been completed, refer to [AWS S3 Bucket Setting](../management-cookbook/aws-s3-bucket-setting.md) to set it up. -->
-
-
+If pinning the GCS settings with the environment variable `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` is enabled, the form values for the GCS settings in the file upload settings are invalid and cannot be changed.
 
 ## Attached File Size Limitation
 
