@@ -3,9 +3,13 @@
 Make settings for uploaded attachments to the GROWI page.
 <!-- [TODO: English translation by gw4283] -->
 
-## App settings aaaa
+## Site URL Settings (TBD)
 
-### File Upload Settings
+## App Settings (TBD)
+
+## Email Settings (TBD)
+
+## File Upload Settings
 
 GROWI has settings that allow you to upload files except images to your page.
 
@@ -111,3 +115,5 @@ Enter the URL of that endpoint into your custom endpoint.
 - Api Key Json Path: [The path to the JSON file for the GCP service account key (as seen from the GROWI root directory)]
 - Bucket Name: [Bucket Name of GCS]
 - Name Space: [Directory name for uploading files created in the bucket]
+
+## Plugin Settings (TBD)
