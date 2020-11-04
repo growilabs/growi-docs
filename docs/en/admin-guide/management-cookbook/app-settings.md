@@ -28,8 +28,8 @@ The following can be used to save the attached file.
 #### Upload to Amazon S3
 
 Save files to Bucket of Amazon S3.
-<!-- 
-Amazon S3 の設定方法は[こちら](../management-cookbook/app-settings.html#amazon-s3-bucket-のセットアップ)を参考にしてください。 -->
+
+Please refer [here](../management-cookbook/app-settings.html#amazon-s3-bucket-のセットアップ) to set Amazon S3.
 
 #### Upload to Google Cloud Storage
 
@@ -41,7 +41,7 @@ Save files Bucket to Google Cloud Storage.
 
 GROWI データの保存先に指定している MongoDB に [GridFS](https://docs.mongodb.com/manual/core/gridfs/) を利用し、ファイルを保存します。
 
-<!-- Save files to MongoDB by using [GridFS](https://docs.mongodb.com/manual/core/gridfs/) to MongoDB  -->
+Save files to MongoDB by using [GridFS](https://docs.mongodb.com/manual/core/gridfs/) to MongoDB
 
 Use [GridFS] (<https://docs.mongodb.com/manual/core/gridfs/>) in MongoDB specified as the save destination of GROWI data, and save the file.
 
