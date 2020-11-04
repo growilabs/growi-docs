@@ -18,7 +18,7 @@ GROWI ページへの添付ファイルのアップロードに関する設定�
 
 ### 利用可能な保存先
 
-添付ファイルの保存先は以下を利用できます。
+The following can be used to save the attached file.
 
 - Amazon S3
 - Google Cloud Storage
@@ -27,13 +27,13 @@ GROWI ページへの添付ファイルのアップロードに関する設定�
 
 #### Upload to Amazon S3
 
-Amazon S3 の Bucket にファイルを保存します。
+Save files to Bucket of Amazon S3.
 <!-- 
 Amazon S3 の設定方法は[こちら](../management-cookbook/app-settings.html#amazon-s3-bucket-のセットアップ)を参考にしてください。 -->
 
 #### Upload to Google Cloud Storage
 
-Google Cloud Storage の Bucket にファイルを保存します。
+Save files Bucket to Google Cloud Storage.
 
 <!-- Google Cloud Storage の設定方法は[こちら](../management-cookbook/app-settings.html#google-cloud-storage-のセットアップ)を参考にしてください。 -->
 
@@ -41,67 +41,73 @@ Google Cloud Storage の Bucket にファイルを保存します。
 
 GROWI データの保存先に指定している MongoDB に [GridFS](https://docs.mongodb.com/manual/core/gridfs/) を利用し、ファイルを保存します。
 
+<!-- Save files to MongoDB by using [GridFS](https://docs.mongodb.com/manual/core/gridfs/) to MongoDB  -->
+
+Use [GridFS] (<https://docs.mongodb.com/manual/core/gridfs/>) in MongoDB specified as the save destination of GROWI data, and save the file.
+
 #### Upload to File Systems
 
-GROWI サーバーから見たローカルファイルシステムにファイルを保存します。
+
+Save the file to the local file system as seen by the GROWI server.
 
 ### Change stored attached file location
 
-保存先はアプリ設定のファイルアップロード設定にて変更できます。
+
+The save destination can be changed in the file upload settings of the application settings.
 
 ::: danger
-ファイル保存先を途中で変更すると、これまでにアップロードしたファイル等へのアクセスができなくなりますのでご注意ください。
+Please note that if you change the file save destination in the middle, you will not be able to access the files uploaded so far.
 :::
 
 <!-- ![appsettings18](./images/appsettings18.png) -->
 
 ::: warning
-ファイルアップロード先が環境変数 `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` によって固定されている場合、ここでのファイルアップロード先の変更はできません。詳細は[こちら](../admin-cookbook/attachment)を参照してください。
+If the file upload destination is fixed by the environment variable `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE`, you cannot change the file upload destination here. See here (../admin-cookbook/attachment) for more information.
 :::
 
-Amazon S3, Google Cloud Storage を利用する場合はそれぞれ設定が必要です。下記を参照に設定を完了してください。
+Settings are required when using Amazon S3 and Google Cloud Storage. Please refer to the following to complete the setting.
 
 ### Set up Amazon S3 Bucket
 
-Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介します。
+Here are the steps to set up a connection to Amazon S3 (Amazon Simple Storage Service).
 
 #### Get AWS account infomation
 
-1. [AWS マネジメントコンソール](https://aws.amazon.com/jp/console/) にサインインし、
-ナビバー右上のアカウント名をクリックすると表示されるドロップダウンから、
- [マイセキュリティ資格情報](https://console.aws.amazon.com/iam/home?#/security_credentials) を選択します。
-2. 「アクセスキー(アクセスキー ID とシークレットアクセスキー)」を展開し、
-AWS アカウントのAccess Key ID および Secret Access Key を作成、保管します。
-3. 「アカウント ID」を展開し、正規ユーザー ID を確認します。
+1. Sign in to the AWS Management Console (<https://aws.amazon.com/jp/console/>) and sign in.
+From the dropdown that appears when you click on the account name in the upper right corner of the navigation bar,
+  Select My Security Credentials (<https://console.aws.amazon.com/iam/home?#/security_credentials>).
+2. Expand Access Key (Access Key ID and Secret Access Key)
+Create and store the Access Key ID and Secret Access Key for your AWS account.
+3. Expand Account ID to see the legitimate user ID.
 
 #### Get or Change permitions of Amazon S3 Bucket
 
-1. Amazon S3 の[ダッシュボード](https://s3.console.aws.amazon.com/s3)にアクセスします。
-2. 登録したい S3 Bucket のリージョンとバケット名を確認します。
-3. 登録したい S3 Bucket を選択し、「アクセス権限」を開きます。
-4. 「ブロックパブリックアクセス」の編集ボタンをクリックし、「新しいアクセスコントロールリスト (ACL) を介して
-許可されたバケットとオブジェクトへのパブリックアクセスをブロックする」のみチェックを外し、変更を保存します。
-5. 「アクセスコントロールリスト」の「バケット所有者のアクセス権」に追加されている AWS アカウントの正規 ID が
-手順「AWS アカウント情報の取得」の 3. で確認したものと一致していなければ、
-「他の AWS アカウントのアクセス」に、確認した正規 ID でアカウントを追加します。この時、権限の種類全てにチェックします。
+1. Go to the Amazon S3 [Dashboard] (<https://s3.console.aws.amazon.com/s3>).
+2. Check the region and bucket name of the S3 Bucket you want to register.
+3. Select the S3 Bucket you want to register and open "Access Rights".
+4. Click the Edit Block Public Access button and click the New Access Control List (ACL)
+Only uncheck Block public access to allowed buckets and objects to save your changes.
+5. The legitimate ID of the AWS account that has been added to Bucket Owner Permissions in the Access Control List
+If it doesn't match what you checked in step 3 of the procedure "Getting AWS Account Information",
+Add the account with the verified canonical ID to Access Other AWS Accounts. At this time, check all types of authority.
 
 #### Resistor Bucket to GROWI
 
-1. GROWI のアプリ設定のファイルアップロード設定にて AWS (S3) を選択し、上記過程で確認した情報を設定してください。
+1. Select AWS (S3) in the file upload settings of GROWI's app settings, and set the information confirmed in the above process.
 
-2. MinIO など、S3 互換 API を持つ他のオブジェクトストレージサービスを使用する場合は、
-そのエンドポイントの URL をカスタムエンドポイントに入力してください。
+2. If you use other object storage services that have an S3-compatible API, such as MinIO
+Enter the URL of that endpoint into your custom endpoint.
 
 <!-- ![appsettings19](./images/appsettings19.png) -->
 
 ### Set up Google Cloud Storage
 
-1. [こちら](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) を参考に GCS の情報を取得してください。
+1. Please refer to [here](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) to get the GCS information.
 
-2. GROWI のアプリ設定のファイルアップロード設定にて GCS を選択し、上記過程で確認した情報を設定してください。
+2. Select GCS in the file upload settings of GROWI's app settings and set the information confirmed in the above process.
 
 <!-- ![appsettings20](./images/appsettings20.png) -->
 
-- Api Key Json Path: [(GROWIのルートディレクトリから見た) GCP サービスアカウントキー の JSON ファイルのパス]
-- バケット名: [GCS のバケット名]
-- Name Space: [バケット内に作成するファイルアップロード用のディレクトリ名]
+- Api Key Json Path: [The path to the JSON file for the GCP service account key (as seen from the GROWI root directory)]
+- Bucket Name: [Bucket Name of GCS]
+- Name Space: [Directory name for uploading files created in the bucket]
