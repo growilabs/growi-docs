@@ -18,9 +18,9 @@ If you do not check here, you will not be able to upload files except
 
 GROWI ページへの添付ファイルのアップロードに関する設定を行います。 -->
 
-### Available storage destinations
+### Available file upload method
 
-You can use the following upload systems to save the attached file.
+You can use the following upload systems to save attached files.
 
 - Amazon S3
 - Google Cloud Storage
@@ -31,22 +31,22 @@ You can use the following upload systems to save the attached file.
 
 Save files to Bucket of Amazon S3.
 
-Please refer to [here](../management-cookbook/app-settings.html#file-upload-settings) to set up Amazon S3.
+Please refer to [here](../management-cookbook/app-settings.html#get-aws-account-infomation) to set up Amazon S3.
 
 #### Upload to Google Cloud Storage
 
 Save files Bucket to Google Cloud Storage.
 
-Please refer to [here](../management-cookbook/app-settings.html#file-upload-settings) to set up Google Cloud Storage.
+Please refer to [here](../management-cookbook/app-settings.html#set-up-google-cloud-storage) to set up Google Cloud Storage.
 
 #### Upload to MongoDB
 
-Save the files to MongoDB specified as the file upload system of GROWI data with
- [GridFS] (<https://docs.mongodb.com/manual/core/gridfs/>).
+Save files to MongoDB specified as the file upload system of GROWI data with
+ [GridFS](<https://docs.mongodb.com/manual/core/gridfs/>).
 
 #### Upload to File Systems
 
-Save the file to the local file system of the GROWI server.
+Save files to the local file system of the GROWI server.
 
 ### Change file upload method
 
@@ -74,8 +74,8 @@ Here are the steps to set up a connection to Amazon S3 (Amazon Simple Storage Se
 
 #### Get AWS account infomation
 
-1. Sign in to [AWS Management Console](<https://aws.amazon.com/jp/console/>) and
- select [My Security Credentials](<https://console.aws.amazon.com/iam/home?#/security_credentials>)
+1. Sign in to [AWS Management Console](https://aws.amazon.com/console/) and
+ select [My Security Credentials](https://console.aws.amazon.com/iam/home?#/security_credentials)
 from the dropdown that appears when you click on the account name in the upper right corner of the navigation bar.
 2. Expand "Access Key (Access Key ID and Secret Access Key)",
  create and store the Access Key ID and Secret Access Key for your AWS account.
@@ -83,7 +83,7 @@ from the dropdown that appears when you click on the account name in the upper r
 
 #### Get or change permitions of Amazon S3 Bucket
 
-1. Access to Amazon S3 [Dashboard] (<https://s3.console.aws.amazon.com/s3>).
+1. Access to Amazon S3 [Dashboard](https://s3.console.aws.amazon.com/s3).
 2. Check the region and bucket name of the S3 Bucket you want to register.
 3. Select the S3 Bucket you want to register and open "Access Rights".
 4. Click the edit button of "Block Public Access".
@@ -104,7 +104,8 @@ Please enter the URL of the endpoint into your custom endpoint.
 
 ### Set up Google Cloud Storage
 
-1. Please refer to [here](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) to get the GCS information.
+1. Please refer to [here](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)
+for more GCS information.
 
 2. Select GCS in the file upload settings of GROWI app settings and set the information confirmed in the above process.
 
