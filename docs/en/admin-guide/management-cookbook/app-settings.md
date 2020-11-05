@@ -41,11 +41,8 @@ Please refer to [here](../management-cookbook/app-settings.html#file-upload-sett
 
 #### Upload to MongoDB
 
-<!-- GROWI データの保存先に指定している MongoDB に [GridFS](https://docs.mongodb.com/manual/core/gridfs/) を利用し、ファイルを保存します。
-
-Save files to MongoDB by using [GridFS](https://docs.mongodb.com/manual/core/gridfs/) to MongoDB
-
-Use [GridFS] (<https://docs.mongodb.com/manual/core/gridfs/>) in MongoDB specified as the save destination of GROWI data, and save the file. -->
+Save the files to MongoDB specified as the file upload system of GROWI data with
+ [GridFS] (<https://docs.mongodb.com/manual/core/gridfs/>).
 
 #### Upload to File Systems
 
@@ -89,14 +86,11 @@ from the dropdown that appears when you click on the account name in the upper r
 1. Access to Amazon S3 [Dashboard] (<https://s3.console.aws.amazon.com/s3>).
 2. Check the region and bucket name of the S3 Bucket you want to register.
 3. Select the S3 Bucket you want to register and open "Access Rights".
-<!-- 複雑 -->
-4. Click the "Block Public Access" edit button and click the New Access Control List (ACL)
-Only uncheck Block public access to allowed buckets and objects to save your changes.
-
-5. The valid ID of the AWS account that has been added to Bucket Owner Permissions in the Access Control List
-If it doesn't match what you checked in step 3 of the procedure "Getting AWS Account Information",
-Add the account with the verified canonical ID to Access Other AWS Accounts. At this time, check all types of authority.
-<!-- 複雑終わり -->
+4. Click the edit button of "Block Public Access".
+only uncheck "Block public access" through the New Access Control List (ACL) and save the changes.
+5. If the valid ID of the AWS account that has been added to the "Bucket Owner Permissions" and the "Access Control List" doesn't match step 3 of the procedure "Getting AWS Account Information,
+ add the account with the verified canonical ID to "Access Other AWS Accounts".
+ In this case, please check all types of authority.
 
 #### Resistor Bucket to GROWI
 
