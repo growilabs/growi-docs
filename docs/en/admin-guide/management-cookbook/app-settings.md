@@ -10,14 +10,6 @@
 
 Make settings for uploaded attachments to the GROWI pages.
 
-
-<!-- ![app-settings18](./images/app-settings18.png)
-
-If you do not check here, you will not be able to upload files except
- images when editing a wiki page.
-
-GROWI ページへの添付ファイルのアップロードに関する設定を行います。 -->
-
 ### Available file upload method
 
 You can use the following upload systems to save attached files.
