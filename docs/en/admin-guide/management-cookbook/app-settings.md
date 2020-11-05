@@ -57,7 +57,7 @@ Please note that if you change the file upload method in the middle,
  you will not be able to access the uploaded files so far.
 :::
 
-<!-- ![appsettings18](./images/appsettings18.png) -->
+![appsettings18](./images/appsettings18.png)
 
 ::: warning
 If the file upload method is fixed by the environment variable
@@ -100,7 +100,7 @@ only uncheck "Block public access" through the New Access Control List (ACL) and
 2. If you use other object storage services that have an S3-compatible API, such as MinIO,
 Please enter the URL of the endpoint into your custom endpoint.
 
-<!-- ![appsettings19](./images/appsettings19.png) -->
+![appsettings19](./images/appsettings19.png)
 
 ### Set up Google Cloud Storage
 
@@ -108,7 +108,7 @@ Please enter the URL of the endpoint into your custom endpoint.
 
 2. Select GCS in the file upload settings of GROWI app settings and set the information confirmed in the above process.
 
-<!-- ![appsettings20](./images/appsettings20.png) -->
+![appsettings20](./images/appsettings20.png)
 
 - Api Key Json Path: [The path to the JSON file for the GCP service account key (as seen from the GROWI root directory)]
 - Bucket Name: [Bucket Name of GCS]
