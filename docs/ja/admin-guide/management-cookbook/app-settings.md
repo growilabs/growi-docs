@@ -1,4 +1,6 @@
-# アプリ設定 AppSettings
+# アプリ設定
+
+[[toc]]
 
 ## サイトURL設定
 
@@ -71,7 +73,7 @@ GROWI では、ページへの画像以外のファイルのアップロード�
 こちらにチェックをしないと、wiki ページの編集時には画像以外のファイルはアップロードできません。
 
 また、以下の画像のように、このチェック欄がチェック出来ない場合は、  
-[ファイルアップロード設定](ja/admin-guide/admin-cookbook/attachment.html) が未完了です。
+[ファイルアップロード設定](#ファイルアップロード設定) が未完了です。
 
 ![appsettings7](./images/appsettings7.png)
 
@@ -117,19 +119,60 @@ GROWI からメールが送信されます。
 **招待をメールで送信** にチェックをするとメールが機能します。  
 メール設定が正しく出来ていない場合はメールが機能しません。
 
-## AWS 設定
+## ファイルアップロード設定
 
-### AWS S3 Bucket のセットアップ
+GROWI ページへの添付ファイルのアップロードに関する設定を行います。
 
-AWS S3(Amazon Simple Storage Service) への接続設定の手順を紹介します。
+### 利用可能な保存先
 
-この設定を行うことにより、AWS S3 Bucket へのファイルアップロード、プロフィール写真機能、
-また、SMTP 設定がない場合、SES(Amazon Simple Email Service) を利用したメール送信が行われます。  
-SES を利用したメール送信には、From メールアドレスの Verify、プロダクション利用設定をする必要があります。
+添付ファイルの保存先は以下を利用できます。
 
-![appsettings16](./images/appsettings16.png)
+- Amazon S3
+- Google Cloud Storage
+- MongoDB
+- ローカルファイルシステム
 
-### AWS アカウント情報の取得
+#### Amazon S3 へのアップロード
+
+Amazon S3 の Bucket にファイルを保存します。
+
+Amazon S3 の設定方法は[こちら](../management-cookbook/app-settings.html#amazon-s3-bucket-のセットアップ)を参考にしてください。
+
+#### Google Cloud Storage へのアップロード
+
+Google Cloud Storage の Bucket にファイルを保存します。
+
+Google Cloud Storage の設定方法は[こちら](../management-cookbook/app-settings.html#google-cloud-storage-のセットアップ)を参考にしてください。
+
+#### MongoDB へのアップロード
+
+GROWI データの保存先に指定している MongoDB に [GridFS](https://docs.mongodb.com/manual/core/gridfs/) を利用し、ファイルを保存します。
+
+#### ファイルシステムへのアップロード
+
+GROWI サーバーから見たローカルファイルシステムにファイルを保存します。
+
+### 添付ファイル保存先の変更
+
+保存先はアプリ設定のファイルアップロード設定にて変更できます。
+
+::: danger
+ファイル保存先を途中で変更すると、これまでにアップロードしたファイル等へのアクセスができなくなりますのでご注意ください。
+:::
+
+![appsettings18](./images/appsettings18.png)
+
+::: warning
+ファイルアップロード先が環境変数 `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` によって固定されている場合、ここでのファイルアップロード先の変更はできません。詳細は[こちら](../admin-cookbook/attachment)を参照してください。
+:::
+
+Amazon S3, Google Cloud Storage を利用する場合はそれぞれ設定が必要です。下記を参照に設定を完了してください。
+
+### Amazon S3 Bucket のセットアップ
+
+Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介します。
+
+#### AWS アカウント情報の取得
 
 1. [AWS マネジメントコンソール](https://aws.amazon.com/jp/console/) にサインインし、
 ナビバー右上のアカウント名をクリックすると表示されるドロップダウンから、
@@ -138,9 +181,9 @@ SES を利用したメール送信には、From メールアドレスの Verify�
 AWS アカウントのAccess Key ID および Secret Access Key を作成、保管します。
 3. 「アカウント ID」を展開し、正規ユーザー ID を確認します。
 
-### AWS S3 Bucket 情報の取得、権限変更
+#### Amazon S3 Bucket 情報の取得、権限変更
 
-1. AWS S3 の[ダッシュボード](https://s3.console.aws.amazon.com/s3)にアクセスします。
+1. Amazon S3 の[ダッシュボード](https://s3.console.aws.amazon.com/s3)にアクセスします。
 2. 登録したい S3 Bucket のリージョンとバケット名を確認します。
 3. 登録したい S3 Bucket を選択し、「アクセス権限」を開きます。
 4. 「ブロックパブリックアクセス」の編集ボタンをクリックし、「新しいアクセスコントロールリスト (ACL) を介して
@@ -149,13 +192,26 @@ AWS アカウントのAccess Key ID および Secret Access Key を作成、保�
 手順「AWS アカウント情報の取得」の 3. で確認したものと一致していなければ、
 「他の AWS アカウントのアクセス」に、確認した正規 ID でアカウントを追加します。この時、権限の種類全てにチェックします。
 
-### GROWI に Bucket を登録
+#### GROWI に Bucket を登録
 
-1. GROWI の App 管理画面の AWS 設定に上記過程で確認した情報を入力し、更新してください。
+1. GROWI のアプリ設定のファイルアップロード設定にて AWS (S3) を選択し、上記過程で確認した情報を設定してください。
 
 2. MinIO など、S3 互換 API を持つ他のオブジェクトストレージサービスを使用する場合は、
 そのエンドポイントの URL をカスタムエンドポイントに入力してください。
 
+![appsettings19](./images/appsettings19.png)
+
+### Google Cloud Storage のセットアップ
+
+1. [こちら](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) を参考に GCS の情報を取得してください。
+
+2. GROWI のアプリ設定のファイルアップロード設定にて GCS を選択し、上記過程で確認した情報を設定してください。
+
+![appsettings20](./images/appsettings20.png)
+
+- Api Key Json Path: [(GROWIのルートディレクトリから見た) GCP サービスアカウントキー の JSON ファイルのパス]
+- バケット名: [GCS のバケット名]
+- Name Space: [バケット内に作成するファイルアップロード用のディレクトリ名]
 
 ## プラグイン設定
 
@@ -182,5 +238,5 @@ GROWI では、Node.js のモジュール解決の仕組みを利用し、 `grow
 `growi-plugin-xxx` の部分を使用するプラグインに書き換えてください。
 
 ```
-$ npm install --save growi-plugin-xxx
+npm install --save growi-plugin-xxx
 ```
