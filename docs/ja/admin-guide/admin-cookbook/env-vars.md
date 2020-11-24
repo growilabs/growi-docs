@@ -54,6 +54,8 @@ pageClass: admin-cookbook-env-vars
 | `S2SMSG_PUBSUB_NCHAN_CHANNEL_ID` | Nchan サーバーの接続チャンネルID | |
 | **管理設定を上書きする環境変数** | | |
 | `APP_SITE_URL` | サイト URL (例: `https://example.com` 、 `https://example.com:8080`) | |
+| `FILE_UPLOAD` | ファイルアップロードタイプ (例: `aws` 、 `gcs`) | `aws` |
+| `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` |`true` の場合、ファイルアップロードタイプの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。|`false`|
 | `LOCAL_STRATEGY_ENABLED` | `true` の場合、ID/Pass ログインが有効になります。 | |
 | `LOCAL_STRATEGY_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、ID/Pass オプションの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | |
 | `SAML_ENABLED` | `true` の場合、SAML 連携を有効にします。 | |
