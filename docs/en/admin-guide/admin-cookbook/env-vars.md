@@ -54,6 +54,8 @@ pageClass: admin-cookbook-env-vars
 | `S2SMSG_PUBSUB_NCHAN_CHANNEL_ID` | The channel id to connect to Nchan server | |
 | **Option (Overwritable in admin page)** | | |
 | `APP_SITE_URL` | Site URL. e.g. `https://example.com`, `https://example.com:8080` | |
+| `FILE_UPLOAD` | File Upload Type e.g. `aws`, `gcs` | `aws` |
+| `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` | Prioritize env var than value in DB for File Upload Type | `false` |
 | `LOCAL_STRATEGY_ENABLED` | Enable or disable ID/Pass login | |
 | `LOCAL_STRATEGY_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars than values in DB for some ID/Pass login options | |
 | `SAML_ENABLED` | Enable or disable SAML | |
