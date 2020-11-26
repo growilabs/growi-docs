@@ -63,9 +63,9 @@ environment:
 
 ## Upgrade GROWI
 
-### Upgrading to GROWI v3.4.x(from v3.3.x or below)
+### Upgrading GROWI to v3.4.x(from v3.3.x or below)
 
-See [Upgrading to GROWI v3.4.x](../upgrading/34x.html).
+See [Upgrading GROWI to v3.4.x](../upgrading/34x.html).
 
 ### Upgrading Container
 

@@ -5,7 +5,7 @@
 ::: warning
 This page content is necessary operation when you upgrade GROWI version
 from v4.1.x to v4.2.x. [See here](../upgrading/42x.md) for instructions
- on upgrading to GROWI v4.2.x.
+ on upgrading GROWI to v4.2.x.
 :::
 
 When you upgrade GROWI version from v4.1.x to v4.2.x,
