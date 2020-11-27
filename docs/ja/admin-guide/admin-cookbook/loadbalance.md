@@ -2,19 +2,19 @@
 
 (TBD)
 
-## PubSub server
+## PubSub サーバー
 
-[weseek/nginx-nchan](https://hub.docker.com/repository/docker/weseek/nginx-nchan/) or Redis (Not implemented yet)
+[weseek/nginx-nchan](https://hub.docker.com/repository/docker/weseek/nginx-nchan/) または Redis (未実装)
 
-## Environment variable settings
+## 環境変数の設定
 
-### Minimum settings
+### 簡易設定
 
 ```
 S2SMSG_PUBSUB_SERVER_TYPE=nchan
 NCHAN_URI=http://nchan
 ```
 
-### More info
+### 詳細設定
 
-See `S2SMSG_PUBSUB_NCHAN_*` of [Environment Variables](./env-vars.md).
+[環境変数](./env-vars.md) ページの `S2SMSG_PUBSUB_NCHAN_*` を参照してください
