@@ -63,11 +63,16 @@ environment:
 
 ## GROWI のアップグレード
 
-### GROWI を v3.4.x にアップグレードする
+### アップグレードガイドの確認
 
 以下のページで、v3.3.x 以下の GROWI を利用してる人向けに v3.4.x へのアップグレードの手順を説明しています。
 
 [GROWI v3.4.x へのアップグレード](../upgrading/34x.html)
+
+::: danger
+その他のバージョンのアップグレードに於いても、まずはアップグレードガイドを確認してください。
+
+:::
 
 ### コンテナのアップグレード
 
@@ -86,6 +91,7 @@ docker rmi weseek/growi:3
 ```
 
 最新版を pull し、Docker イメージを作成した後、コンテナを立ち上げます。
+
 ```text
 git pull
 docker-compose build

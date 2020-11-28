@@ -63,9 +63,16 @@ environment:
 
 ## Upgrade GROWI
 
-### Upgrading GROWI to v3.4.x(from v3.3.x or below)
+### Refer to upgrading guides
 
-See [Upgrading GROWI to v3.4.x](../upgrading/34x.html).
+The following page introduces the processes to upgrade GROWI to v3.4.x from v3.3.x or below.
+
+[Upgrading GROWI to v3.4.x](../upgrading/34x.html).
+
+::: danger
+In upgrading any other version, please check the upgrade guide for the appropriate version first.
+
+:::
 
 ### Upgrading Container
 
@@ -79,7 +86,7 @@ docker-compose stop
 Remove Docker containers and Docker images.
 
 ```text
-docker-compose rm app　mongodb elasticseach
+docker-compose rm app mongo elasticseach
 docker rmi weseek/growi:3
 ```
 
