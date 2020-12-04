@@ -22,15 +22,15 @@ See `S2SMSG_PUBSUB_NCHAN_*` of [Environment Variables](./env-vars.md).
 ## Cautionary points about importing/exporting data
 
 :::danger
-Data imports/exports doesn't operete normally with load balancing multi apps because these use file system.
+In case of load balancing multiple GROWI apps, data imports/exports may not work properly because these use the file system.
 :::
 
 
-Data imports/exports expands the follow data on file system in the process.
+Data imports/exports expand the following data on the file system in the process.
 
-- "GROWI Archive File" in Import GROWI archive of Import Data page(`/admin/importer`)
-- "Exported Archive Data" in Export Archive Data page(`/admin/export`)
+- "GROWI Archive File" uploaded by "Import GROWI archive" on the "Import Data" page(`/admin/importer`)
+- "Exported Archive Data" on the "Export Archive Data" page(`/admin/export`)
 
-Therefore Data imports/exports is not recommended with load balancing multi apps.
+Therefore, data imports/exports are not recommended with load balancing multiple GROWI apps.
 
-If you want to create a backup, [mongodb-awesome-backup](./mongodb-backup.md) is recommended.
+If you want to back up your data, [mongodb-awesome-backup](./mongodb-backup.md) is recommended instead of exporting the archive.
