@@ -26,11 +26,11 @@ In case of load balancing multiple GROWI apps, data imports/exports may not work
 :::
 
 
-Data imports/exports expand the following data on the file system in the process.
+Data imports/exports expand the following data on the file system.
 
 - "GROWI Archive File" uploaded by "Import GROWI archive" on the "Import Data" page(`/admin/importer`)
 - "Exported Archive Data" on the "Export Archive Data" page(`/admin/export`)
 
 Therefore, data imports/exports are not recommended with load balancing multiple GROWI apps.
 
-If you want to back up your data, [mongodb-awesome-backup](./mongodb-backup.md) is recommended instead of exporting the archive.
+When backing up data, [mongodb-awesome-backup](./mongodb-backup.md) is recommended instead of exporting the archive.
