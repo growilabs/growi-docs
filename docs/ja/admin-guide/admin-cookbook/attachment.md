@@ -52,3 +52,35 @@ GCS 設定を環境変数によって固定したい場合は、環境変数 `GC
 
 - `MAX_FILE_SIZE` : [アップロード可能なファイルのサイズ上限(bytes)]
 - `FILE_UPLOAD_TOTAL_LIMIT` : [アップロードされたファイルの累計サイズ上限(bytes)]
+
+## ファイル配信方法の設定
+
+v4.2.3 より ファイルの配信方法に変更が加わりました。
+
+Amazon S3, Google Cloud Storage を利用する場合、下記の2種類の方法から選択できます。
+なお、v4.2.3 以降デフォルトが Redirect Mode になります。
+
+セキュリティを向上させる場合、[管理画面のアプリ設定](../management-cookbook/app-settings.html#ファイルアップロード設定)から変更してください。
+
+### Relay Mode (従来の方法)
+
+![fileUpload1](../management-cookbook/images/fileUpload1.png)
+
+Relay Mode では GROWI サーバーが Cloud Serviceから受け取ったファイルを中継して クライアント に配信します。  
+セキュリティーを高めることができます。
+
+### Redirect Mode (デフォルト)
+
+![fileUpload2](../management-cookbook/images/fileUpload2.png)
+
+Redirect Mode では GROWI サーバーは Cloud Serviceで発行された署名付きURLを クライアント に配信します。  
+クライアントは受け取った署名付きURLにリダイレクトし、直接 Cloud Service から画像を取得します。  
+そのため、一度に大量のファイルを取得する場合でも優れたパフォーマンスを発揮します。
+
+署名付きURLは 120秒間キャッシュされます。  
+キャッシュを保持する秒数は[環境変数](../admin-cookbook/env-vars.html)で変更できます。
+
+- aws(s3)
+  - `S3_LIFETIME_SEC_FOR_TEMPORARY_URL`
+- gcp(gcs)  
+  - `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL`
