@@ -77,12 +77,12 @@ Relay Mode では GROWI サーバーが Cloud Serviceから受け取ったファ
 
 Redirect Mode では Cloud Serviceで署名付きURLを発行し クライアント に配信します。  
 クライアントは受け取った署名付きURLにリダイレクトし、直接 Cloud Service から画像を取得します。
-  
+
 GROWIサーバーを介さずにファイルを配信するため、  
 一度に大量のファイルを取得する場合でも優れたパフォーマンスを発揮します。
 
 署名付きURLは 120秒間キャッシュされます。  
-キャッシュを保持する秒数は[環境変数](../admin-cookbook/env-vars.html)で変更できます。
+キャッシュを保持する秒数は[環境変数](../admin-cookbook/env-vars.html)で設定できます。
 
 - AWS(S3)
   - `S3_LIFETIME_SEC_FOR_TEMPORARY_URL`
