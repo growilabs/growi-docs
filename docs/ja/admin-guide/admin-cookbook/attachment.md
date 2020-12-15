@@ -80,7 +80,7 @@ Redirect Mode では GROWI サーバーは Cloud Serviceで発行された署名
 署名付きURLは 120秒間キャッシュされます。  
 キャッシュを保持する秒数は[環境変数](../admin-cookbook/env-vars.html)で変更できます。
 
-- aws(s3)
+- AWS(S3)
   - `S3_LIFETIME_SEC_FOR_TEMPORARY_URL`
-- gcp(gcs)  
+- GCP(GCS)  
   - `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL`
