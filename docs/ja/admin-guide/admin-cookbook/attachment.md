@@ -53,37 +53,41 @@ GCS 設定を環境変数によって固定したい場合は、環境変数 `GC
 - `MAX_FILE_SIZE` : [アップロード可能なファイルのサイズ上限(bytes)]
 - `FILE_UPLOAD_TOTAL_LIMIT` : [アップロードされたファイルの累計サイズ上限(bytes)]
 
-## ファイル配信方法の設定
+## 添付ファイル参照方法
 
 v4.2.3 より ファイルの配信方法に変更が加わりました。
 
 Amazon S3, Google Cloud Storage を利用する場合、下記の2種類の方法から選択できます。  
 なお、v4.2.3 以降デフォルトが Redirect Mode になります。
 
-セキュリティを向上させる場合、
+完全なセキュリティーが必要な場合のみ、
 [管理画面のアプリ設定](../management-cookbook/app-settings.html#ファイルアップロード設定)から
 Relay Mode に変更してください。
 
-### Relay Mode (従来の方法)
+### Relay Mode (オプショナル / v4.2.2 以前のデフォルト仕様)
 
 <!-- https://dev.growi.org/5fd8424f2271ae00481ed2e8 -->
 ![fileUpload1](../management-cookbook/images/fileUpload1.png)
 
-Relay Mode では GROWI サーバーが Cloud Serviceから受け取ったファイルを中継して クライアント に配信します。  
-内部の機構を用いて画像を配信するため、セキュリティーを高めることができます。
+Relay Mode では GROWI サーバーが Cloud Service との通信を中継し、クライアントにデータをリレー配信します。
 
-### Redirect Mode (デフォルト)
+クライアントは GROWI サーバーとの通信しか行わないため、ファイル参照に関してはセキュリティー的には最も安全な手段となります。  
+ただしリレーの特性上、画像の数や容量、リクエスト数に応じて GROWI サーバーとクラウドサービスとの間のトラフィックが増大するというデメリットがあります。
+
+### Redirect Mode (v4.2.3 以降のデフォルト仕様)
 
 <!-- https://dev.growi.org/5fd8424f2271ae00481ed2e8 -->
 ![fileUpload2](../management-cookbook/images/fileUpload2.png)
 
-Redirect Mode では Cloud Serviceで署名付きURLを発行し クライアント に配信します。  
-クライアントは受け取った署名付きURLにリダイレクトし、直接 Cloud Service から画像を取得します。
+Redirect Mode では Cloud Service にファイル参照用の署名付きURLの発行を依頼し、それをクライアントに知らせ、リダイレクトを促します。
 
-GROWIサーバーを介さずにファイルを配信するため、  
-一度に大量のファイルを取得する場合でも優れたパフォーマンスを発揮します。
+クライアントは受け取った署名付きURLにアクセスし、Cloud Service から画像を直接取得します。
 
-署名付きURLは 120秒間キャッシュされます。  
+GROWI サーバーがトラフィックの中継を行うことなくクライアントそれぞれが直接 Cloud Service から画像を受け取るので、  
+画像の数や容量、リクエスト数によって GROWI サーバーに負荷がかかることがなく、全体的に優れたパフォーマンスを発揮できる設定です。
+
+また署名付き URL の発行時は十分に短い失効期間が設定されるため、セキュリティ上もバランスの取れた仕様となっています。  
+GROWI サーバーは失効期間と同じ長さだけ署名付き URL をキャッシュします(デフォルトでは120秒)。  
 キャッシュを保持する秒数は[環境変数](../admin-cookbook/env-vars.html)で設定できます。
 
 - AWS(S3)
