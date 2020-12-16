@@ -47,11 +47,11 @@ module.exports = {
   locales: {
     '/en/': {
       lang: 'en-US',
-      description: 'GROWI Documentation Site',
+      description: 'GROWI Document',
     },
     '/ja/': {
       lang: 'ja',
-      description: 'GROWI ドキュメンテーション',
+      description: 'GROWI ドキュメント',
     },
   },
   themeConfig: {
