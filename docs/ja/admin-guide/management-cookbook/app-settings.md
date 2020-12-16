@@ -217,7 +217,7 @@ AWS アカウントのAccess Key ID および Secret Access Key を作成、保�
 
 Amazon S3, Google Cloud Storage を利用する場合、添付ファイル参照方法を設定できます。
 
-配信方法のについては [添付ファイル参照方法](../admin-cookbook/attachment.html#添付ファイル参照方法) を参照ください。
+配信方法については [添付ファイル参照方法](../admin-cookbook/attachment.html#添付ファイル参照方法) を参照ください。
 
 ## プラグイン設定
 
