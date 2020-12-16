@@ -213,6 +213,12 @@ AWS アカウントのAccess Key ID および Secret Access Key を作成、保�
 - バケット名: [GCS のバケット名]
 - Name Space: [バケット内に作成するファイルアップロード用のディレクトリ名]
 
+### 添付ファイル参照方法
+
+Amazon S3, Google Cloud Storage を利用する場合、添付ファイル参照方法を設定できます。
+
+配信方法については [添付ファイル参照方法](../admin-cookbook/attachment.html#添付ファイル参照方法) を参照ください。
+
 ## プラグイン設定
 
 この欄で `プラグインを読み込む` を ON / OFF に設定することで、GROWI にインストールされたプラグインを有効化/無効化します。  
