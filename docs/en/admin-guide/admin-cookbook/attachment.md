@@ -69,9 +69,9 @@ The attachment reference method has been changed from v4.2.3.
 
 When using Amazon S3 or Google Cloud Storage, one of the following two methods can be chosen.
 
-In addition, after v4.2.3, the default is Redirect Mode.
+After v4.2.3, Redirect Mode is set as a default.
 
-When the system requires advanced security, change to Relay Mode from [App settings of the Management page ](../management-cookbook/app-settings.html#appsettings-tbd).
+In case of the system requires advanced security, change to Relay Mode from [App settings of the Management page ](../management-cookbook/app-settings.html#appsettings-tbd).
 
 ### Relay Mode (optional / default specification before v4.2.2)
 
