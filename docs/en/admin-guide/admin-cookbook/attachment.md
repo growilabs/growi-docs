@@ -67,31 +67,31 @@ In both cases, the unit is `bytes`. By default, both values are `Infinity` and t
 
 The attachment reference method has been changed from v4.2.3.
 
-When using Amazon S3 or Google Cloud Storage, you can choose from the following two methods.
+When using Amazon S3 or Google Cloud Storage, one of the following two methods can be chosen.
 
 In addition, after v4.2.3, the default is Redirect Mode.
 
-Only if you need full security, Change to Relay Mode from [App settings of the Management page ](../management-cookbook/app-settings.html#appsettings-tbd).
+When the system requires advanced security, change to Relay Mode from [App settings of the Management page ](../management-cookbook/app-settings.html#appsettings-tbd).
 
 ### Relay Mode (optional / default specification before v4.2.2)
 
 <!-- https://dev.growi.org/5fd8424f2271ae00481ed2e8 -->
 ![fileUpload1](../management-cookbook/images/fileUpload1.png)
 
-In Relay Mode, the GROWI server relays communication with Cloud Service and pass the data to clients.
+In Relay Mode, Cloud Service issues a signed URL for file references as a result of a request from the GROWI server.
 
 Since the client only communicates with the GROWI server, it is the safest way to refer to files in terms of security.
 
-However, due to the characteristics of the relay, there is a disadvantage that the traffic between the GROWI server and Cloud Service increases depending on the number of images, capacity, and number of requests.
+However, due to the characteristics of the relay, there is a disadvantage that the traffic between the GROWI server and Cloud Service increases depending on the number of images, capacity, and requests.
 
 ### Redirect Mode (default specification after v4.2.3)
 <!-- https://dev.growi.org/5fd8424f2271ae00481ed2e8 -->
 ![fileUpload2](../management-cookbook/images/fileUpload2.png)
 
-In the Redirect Mode, Cloud Service to issue a signed URL for file references.
-Notify the client and prompt for a redirect.
+In Redirect Mode, Cloud Service issues a signed URL for file references as a result of a request from the GROWI server.
+Also, the server notifies the client and prompts for a redirection.
 
-The client accesses the signed URL it receives and retrieves the image directly from Cloud Service.
+The client accesses the signed URL and retrieves the image from Cloud Service directly.
 
 Since each client receives images directly from Cloud Service without relaying traffic, the GROWI server is not overloaded with the number of images, capacity, and requests. This is the setting to achieve excellent performance.
 
