@@ -62,3 +62,36 @@ In both cases, the unit is `bytes`. By default, both values are `Infinity` and t
 
 - `MAX_FILE_SIZE` : [The upper limit of uploadable file size (bytes)]
 - `FILE_UPLOAD_TOTAL_LIMIT` : [The upper limit of the total size of attached files in DB (bytes)]
+
+## How to refer to attached files
+
+The attachment reference method has been changed from v4.2.3.
+
+When using Amazon S3 or Google Cloud Storage, you can choose from the following two methods.
+
+In addition, after v4.2.3, the default is Redirect Mode.
+
+Only if you need full security, Change to Relay Mode from [Management screen app settings] (../management-cookbook/app-settings.html#file upload settings).
+
+### Relay Mode (optional / default specification before v4.2.2)
+
+<!-- https://dev.growi.org/5fd8424f2271ae00481ed2e8 -->
+![fileUpload1](../management-cookbook/images/fileUpload1.png)
+
+Redirect Mode asks Cloud Service to issue a signed URL for file references, informs the client about it, and prompts for a redirect.
+
+The client accesses the signed URL it receives and retrieves the image directly from Cloud Service.
+
+Because each client receives images directly from Cloud Service without the GROWI server relaying traffic
+Depending on the number of images, the size, and the number of requests, he does not overwhelm the GROWI server, and it is a setting that can demonstrate excellent performance overall.
+
+In addition, when a signed URL is issued, a sufficiently short expiration period is set, so the specifications are well-balanced in terms of security.
+
+The GROWI server caches signed URLs for the same length as the expiration period (120 seconds by default).
+The number of seconds to keep the cache can be set in Environment Variables (../admin-cookbook/env-vars.html).
+
+- AWS(S3)
+  - `S3_LIFETIME_SEC_FOR_TEMPORARY_URL`
+- GCP(GCS)  
+  - `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL`
+  
