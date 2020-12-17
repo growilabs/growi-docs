@@ -71,7 +71,7 @@ When using Amazon S3 or Google Cloud Storage, you can choose from the following 
 
 In addition, after v4.2.3, the default is Redirect Mode.
 
-Only if you need full security, Change to Relay Mode from [Management screen app settings] (../management-cookbook/app-settings.html#file upload settings).
+Only if you need full security, Change to Relay Mode from [App settings of the Management page ](../management-cookbook/app-settings.html#appsettings-tbd).
 
 ### Relay Mode (optional / default specification before v4.2.2)
 
@@ -99,7 +99,7 @@ In addition, when a signed URL is issued, a sufficiently short expiration period
 
 The GROWI server caches signed URLs for the same amount of time as the expiration period (120 seconds by default)
 
-The number of seconds to keep the cache can be set in Environment Variables (../admin-cookbook/env-vars.html).
+The number of seconds to keep the cache can be set with [Environment Variables](../admin-cookbook/env-vars.html).
 
 - AWS(S3)
   - `S3_LIFETIME_SEC_FOR_TEMPORARY_URL`
