@@ -94,4 +94,3 @@ The number of seconds to keep the cache can be set in Environment Variables (../
   - `S3_LIFETIME_SEC_FOR_TEMPORARY_URL`
 - GCP(GCS)  
   - `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL`
-  
