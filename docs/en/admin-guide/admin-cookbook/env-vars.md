@@ -35,9 +35,11 @@ pageClass: admin-cookbook-env-vars
 | `FILE_UPLOAD_DISABLED` | If `true`, file uploading will be disabled. However, the files can be still viewed. | `false` |
 | `MAX_FILE_SIZE` | The maximum file size limit for uploads (bytes). | `Infinity` |
 | `FILE_UPLOAD_TOTAL_LIMIT` | Total capacity limit for uploads (bytes). | `Infinity` |
+| `S3_LIFETIME_SEC_FOR_TEMPORARY_URL` | time to keep the cache of signed URLs (number of seconds) | 120 |
 | `GCS_API_KEY_JSON_PATH` | Path of the JSON file that contains [service account key to authenticate to GCP API](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) | |
 | `GCS_BUCKET` | Name of the GCS bucket | |
 | `GCS_UPLOAD_NAMESPACE` | Directory name to create in the bucket | |
+| `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL` | time to keep the cache of signed URLs (number of seconds)| 120|
 | **Option to integrate with external systems** | | |
 | `NCHAN_URI` | URI to connect to Nginx [Nchan](https://nchan.io/) server. | |
 | `HACKMD_URI` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server. | |

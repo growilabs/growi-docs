@@ -107,4 +107,10 @@ for more GCS information.
 - Bucket Name: [Bucket Name of GCS]
 - Name Space: [Directory name for uploading files created in the bucket]
 
+## How to refer to attached files
+
+When using Amazon S3 or Google Cloud Storage, an attachment reference method can be set.
+
+Please refer to [Attachment reference method](../admin-cookbook/attachment.html#how-to-refer-to-attached-files) for the delivery method.
+
 ## Plugin Settings (TBD)
