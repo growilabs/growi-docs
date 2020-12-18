@@ -68,7 +68,6 @@ In both cases, the unit is `bytes`. By default, both values are `Infinity` and t
 The attachment reference method has been changed from v4.2.3.
 
 When using Amazon S3 or Google Cloud Storage, one of the following two methods can be chosen.
-
 After v4.2.3, Redirect Mode is set as a default.
 
 In case of the system requires advanced security, change to Relay Mode from [App settings of the Management page ](../management-cookbook/app-settings.html#appsettings-tbd).
@@ -80,7 +79,7 @@ In case of the system requires advanced security, change to Relay Mode from [App
 
 In Relay Mode, Cloud Service issues a signed URL for file references as a result of a request from the GROWI server.
 
-Since the client only communicates with the GROWI server, it is the safest way to refer to files in terms of security.
+This mode is the safest way to refer to files in terms of security since clients only communicate with GROWI server.
 
 However, due to the characteristics of the relay, there is a disadvantage that the traffic between the GROWI server and Cloud Service increases depending on the number of images, capacity, and requests.
 
@@ -95,10 +94,9 @@ The client accesses the signed URL and retrieves the image from Cloud Service di
 
 Since each client receives images directly from Cloud Service without relaying traffic, the GROWI server is not overloaded with the number of images, capacity, and requests. This is the setting to achieve excellent performance.
 
-In addition, when a signed URL is issued, a sufficiently short expiration period is set, so the specifications are well-balanced in terms of security.
+In addition, when a signed URL is issued, a sufficiently short expiration period is set. That's why the specifications are well-balanced in terms of security.
 
 The GROWI server caches signed URLs for the same amount of time as the expiration period (120 seconds by default)
-
 The number of seconds to keep the cache can be set with [Environment Variables](../admin-cookbook/env-vars.html).
 
 - AWS(S3)
