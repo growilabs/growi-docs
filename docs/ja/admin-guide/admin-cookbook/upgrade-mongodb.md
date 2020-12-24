@@ -47,7 +47,7 @@ v4.2 から v4.4 へのアップグレードは[こちら](https://docs.mongodb.
 ## 付録B: docker-compose ユーザーのためのアップグレード手順例
 
 以下は MongoDB を v4.2 から v4.4 にアップグレードする場合の例です。  
-実際の MongoDB サービス名を `MONGO_CONTAINER_NAME` に設定してください。
+実際の MongoDB サービス名を `MONGO_SERVICE_NAME` に設定してください。
 
 1. MongoDB v4.2 起動中に以下を実行
 
