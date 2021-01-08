@@ -23,7 +23,7 @@ GROWI データを別の GROWI に移行するための zip 形式の GROWI ア�
 | ページ | Pages | ページ。Revisions とセットでインポートする必要があります。閲覧権限はそのまま引き継がれるため、公開範囲を保持するには Users 及び Usergroups とセットでインポートする必要があります。`/trash` 配下のページもインポートされます。 |
 || Revisions | ページの変更履歴。<br>Pages とセットでインポートする必要があります。 |
 || Tags | ページタグ。ページに紐づいた状態のままインポートするためには以下の PageTagRelation とセットでインポートする必要があります。 |
-|| PageTagRelations | ページとページタグの紐づけを行うデータ。<br>Pages と Tags とセットでインポートする必要があります。 |   
+|| PageTagRelations | ページとページタグの紐づけを行うデータ。<br>Pages と Tags とセットでインポートする必要があります。 |
 | ユーザー | Users | ユーザー。(注意: 環境変数 `PASSWORD_SEED` を設定する必要があります。[^*1] ユーザーデータのインポートには注意が必要です。[^*2]) |
 || Externalaccounts | 外部認証機構のアカウント。Users とセットでインポートする必要があります。|
 || Usergroups | ユーザーグループ。グループ内のユーザーを保持する場合には Users と UserGroupRelations とセットでインポートする必要があります。 |
