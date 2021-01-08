@@ -47,11 +47,11 @@ module.exports = {
   locales: {
     '/en/': {
       lang: 'en-US',
-      description: 'GROWI Documentation Site',
+      description: 'GROWI Document',
     },
     '/ja/': {
       lang: 'ja',
-      description: 'GROWI ドキュメンテーション',
+      description: 'GROWI ドキュメント',
     },
   },
   themeConfig: {
@@ -222,7 +222,10 @@ module.exports = {
               collapsable: false,
               children: [
                 '/en/dev/startup-v2/dev-env.md',
-                '/en/dev/startup-v2/launch.md',
+                '/en/dev/startup-v2/prepare-tools.md',
+                '/en/dev/startup-v2/prepare-workspace.md',
+                '/en/dev/startup-v2/launch-devcontainer.md',
+                '/en/dev/startup-v2/launch-system.md',
               ],
             },
             {
@@ -440,7 +443,10 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/dev/startup-v2/dev-env.md',
-                '/ja/dev/startup-v2/launch.md',
+                '/ja/dev/startup-v2/prepare-tools.md',
+                '/ja/dev/startup-v2/prepare-workspace.md',
+                '/ja/dev/startup-v2/launch-devcontainer.md',
+                '/ja/dev/startup-v2/launch-system.md',
               ],
             },
             {
