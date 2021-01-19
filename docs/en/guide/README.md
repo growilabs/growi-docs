@@ -27,13 +27,13 @@ Comments can be threaded for each page. Of course, comments can also be written 
 
 ## Recommended environment
 
-|browser|Description|
+|Browser|Description|
 |---|---|
-|Chrome| Recommendation（latest version）|
-|FireFox| Recommendation（latest version）|
-|Safari| Recommendation（latest version）|
-|InternetExplorer|Excluded|
-|Edge|Excluded|
+|Google Chrome| Recommendation (latest version) |
+|Mozilla FireFox| Recommendation (latest version) |
+|Safari| Recommendation (latest version) |
+|Microsoft Edge| Recommendation (latest version)<br />Excluded (version 79 or below) |
+|Microsoft Internet Explorer| Excluded |
 
 GROWI screens will not be displayed properly
 on unsupported browsers and cannot be used.

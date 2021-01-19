@@ -1,28 +1,25 @@
 # GROWI page layout
 
+This guide will walk you through the basic parts of a GROWI page.
+
 ![](./images/page_layout.png)
 
-In order to operate GROWI comfortably, let's first understand the basic layout.
-
-## Page Title (ページタイトル)
+## Page Title
 
 The title of the page is displayed here.
-Here you can [Copy titles and URLs to clipboard](./ copy_to_clipboard.md) and tag pages.
+You can [copy the page title and URL](./copy_to_clipboard.md) and [create a tag for the page](./tag.md) using the buttons located here.
 
-## Page Toolbar (ページツールバー)
+## Page Toolbar
 
-A toolbar that performs operations related to pages.
+This toolbar allows you to perform various operations on this page.
+In addition to editing the page, you can also [check the page's update history](./history.md) and [move, copy, or delete this page](./page_operation.md) using this toolbar.
 
-In addition to editing the page, [Check Update History](./history.md) and [Move / Duplicate / Delete Page](./page_operation.md) are also performed from this page toolbar.
+## Page Sidebar
 
-## Page Sidebar (ページサイドバー)
+All page headings and subheadings are displayed here as a list of location links.
+You can use the location links to quickly jump to the corresponding location in the page.
 
-If you write a headline in the page, the heading list will be displayed here as a sidebar.
+## Page Creation Button
 
-Use the sidebar to jump to the desired location immediately when the content of the page becomes long.
-
-## Page creation button (ページ作成ボタン)
-
-The buttons for creating pages are in the upper right corner of the screen.
-
-You can create a regular page, or create a new page using the template function.
+The button for creating new pages is in the upper right corner of the screen.
+You can create a blank page or create a new page using a template.

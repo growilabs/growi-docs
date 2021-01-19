@@ -1,39 +1,43 @@
-# Add annotations (footnotes)
+# Creating annotations and footnotes
 
-In GROWI, annotations (footnotes) can be described.
-
+You can add annotations and footnotes to your GROWI wiki.
 When you add an annotation, a footnote appears at the bottom of the page.
 
-## How to write annotations (footnotes)
+## How to write annotations and footnotes
 
-- add a reference
+### Using references
 
-  Like `[^1]`, you can add a reference to the footnote in the position
-  where you want to add it, and write the annotations text with `[^1]:` and a colon.
+You can add a footer reference to a footnote using the notation
+`[^#]`, where `#` is the footnote number, e.g. `[^1]`, `[^2]`,
+etc. You can add a footnote reference anywhere in the document
+you want.  The corresponding footnote should be annotated using
+`[^#]:`, the same text but with a colon at the end.
 
-  You can also use a string description for the annotation, like `[^longnote]`.
+You can write the annotation reference using plain English as well.
+For example, you could use an annotation like `[^longnote]`; the
+footnote would be annotated `[^longnote]:` (with a colon).
 
-  If both the annotations reference position `[^1]` and
-  the annotations text `[^1]:` arenot described, they will not function as annotations.
+Both the reference `[^1]` and the annotation `[^1]:` must exist.
+If either one is not present, the other will not function as 
+an annotation.
 
-- writing inline
+### Inline annotations
 
-  Like `[^Add annotation text inline]` , you can add annotations inline in the text.
+You can add annotations inline using the Markdown code `[^Add annotation text inline]`
+(using your own annotation text).
 
-- writing footnotes in multiple blocks
+When you use a text annotation, the footnote will automatically
+be assigned a numeric reference.
 
-  An annotation text following `[^longnote]:`,
-  By adding indentation, the contents of multiple blocks can be commented.
-   (See reference below)
+## Writing long footnotes with paragraphs
 
-Annotation number is automatically assigned a serial number in the page.
+If you would like to add a line break into your footnote, you can
+continue your footnote after the line break by adding an indentation
+to the beginning of the following paragraph.
 
-## reference
-
-![footnote](./images/footnote.png)
+## Example
 
 ```markdown
-
 ## annotations
 When an annotation is set, its contents are expanded at the bottom of the page.
 
@@ -51,8 +55,9 @@ Long footnotes can be written like this[^longnote].
 
 # Another article
 sample
-
 ```
 
-If you paste the above description into a GROWI article,
-you can set an annotation (footnote) like an image.
+When you create a GROWI page with the above Markdown text, the
+page created will look like the image below.
+
+![footnote](./images/footnote.png)

@@ -2,12 +2,9 @@
 sidebarDepth: 0
 ---
 
-# イントロダクション
+# アーキテクチャ俯瞰図
 
-## アーキテクチャ
+<!-- editable at https://dev.growi.org/5f007b1493d37400489f3993 -->
+![Dev Architecture](./images/dev-architecture.png)
 
-(TBD)
 
-## ディレクトリ構成
-
-(TBD)

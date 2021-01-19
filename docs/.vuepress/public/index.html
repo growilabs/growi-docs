@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GROWI Docs</title>
+    <meta name="description" content="GROWI Document">
+  </head>
+  <body>
+    <script>
+      const browserLang = (window.navigator.languages && window.navigator.languages[0]) ||
+        window.navigator.language ||
+        window.navigator.userLanguage ||
+        window.navigator.browserLanguage;
+
+      switch(browserLang) {
+      case 'ja':
+        location.href = '/ja';
+        break;
+      default:
+        location.href = '/en';
+        break;
+      }
+    </script>
+  </body>
+</html>

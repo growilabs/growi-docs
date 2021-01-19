@@ -1,26 +1,26 @@
-# 5 Minutes GROWI Tutorial
+# Quick-Start Guide
 
-GROWI demo site available. You can get started easily.
+This guide will walk through how to quickly create a page, create a child page, and navigate between parent and child pages.
 
 [[toc]]
 
-## Login to Demo site
+## Setup
 
-[Access to demo](https://demo.growi.org/) and Login with the account listed on the demo's top.
+[Proceed to the demo site](https://demo.growi.org/) and log in with the account credentials provided.
 
-## Create a Page
+## Create a page
 
-Let's create a page from the "Create" button in the upper right of the screen.
+Create a page by clicking the Create button in the upper right corner of the screen.
 
 ![](./images/create_page_button.png)
 
-The title here is `/Trial/FirstPage`.
-If it has already been created try creating a different page name.
+[//]: <> (TODO: Create This Pageと言う名はよくなくて英語サイト完成したら変わってください。)
+Choose a title for your page by typing it in the box titled Create This Page, then click Create.
 
+[//]: <> (TODO: 下のイメージはホワイトスペース多くて、レンダーされたページは綺麗ではありません)
 ![](./images/create_page_dialog.png)
 
-
-Paste to form the following content.
+Paste the following content in the body of the page:
 
 ```markdown
 # FirstPage
@@ -35,27 +35,27 @@ Paste to form the following content.
 2. Number List 2
 ```
 
-When pasting, a preview reflecting the contents in real time as shown below is displayed on the right side of the screen.
+A preview reflecting the contents is displayed on the right side of the screen, updating in real time.
 
 ![Create Button](./images/begin_create_page.png)
 
-Press the “Create” button at the bottom right of the screen to save the page.
+Press the Create button at the bottom right of the screen to finish creating the page.
 
 ![Create Dialog](./images/save_button.png)
 
 ::: tip
-As a shortcut key, you can also save the page with **Ctrl + s**.
+You can also save the page with **Ctrl + S**.
 :::
 
-## Create more pages under the created page
+## Create a child page
 
-Let's add more pages under the page you created. Create a page again from the “Create” button at the top right of the screen.
+As before, click the Create button in the upper right corner of the screen to create a new page.
 
-This time, the page name will be `/Trial/FirstPage/NestedPage`.
+Use the name `/[PARENT_PAGE]/NestedPage` for your new page, replacing `[PARENT_PAGE]` with the name you created in the previous section.  For example, if you named the previous page `/MyPage`, then this page would be named `/MyPage/NestedPage`.
 
 ![](./images/create_nest_page_dialog.png)
 
-Then paste the following content.
+Paste the following content in the body of the new page:
 
 ```markdown
 # Nested Page
@@ -70,18 +70,18 @@ Then paste the following content.
 2. Number List 2
 ```
 
-When you ’re done, press the “Create” button at the bottom right of the screen to save the page.
+When you’re done, press the Create button at the bottom right of the screen to save the page.
 
 ![](./images/save_button.png)
 
-## Go to parent page
+## View parent page
 
-After the above work is completed, you can easily move to the parent page by clicking “FirstPage” in the displayed page.
+You can easily navigate to the parent page from its child page by clicking the name of the parent page at the top of the the child page.
 
 ![](./images/title_click.png)
 
-## Check the list of pages created under the page
+## View a list of child pages
 
-The page list created under the page is displayed at the bottom of the current page.
+A list of child pages is displayed at the bottom of each parent page.
 
-![](./images/page_list.png  )
+![](./images/page_list.png)

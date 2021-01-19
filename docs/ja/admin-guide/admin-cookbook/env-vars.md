@@ -1,60 +1,79 @@
+---
+pageClass: admin-cookbook-env-vars
+---
+
+
 # 環境変数
 
-| Enviroment Variable | Description | Default Value |
-| ------------------- | ----------: | ------------- |
-| `MONGO_URI` | URI to connect to MongoDB. | `mongodb://localhost/growi` |
-| `NO_CDN` | If `true`, system doesn't use CDN, all resources will be downloaded from CDN when build client, and served by the GROWI Express server. | `false` |
-| `ELASTICSEARCH_URI` | URI to connect to Elasticearch. | |
-| `REDIS_URI` | URI to connect to Redis (use it as a session store instead of MongoDB). | |
-| `PASSWORD_SEED` | A password seed used by password hash generator. | |
-| `SECRET_TOKEN` | A secret key for verifying the integrity of signed cookies. | |
-| `SESSION_NAME` | The name of the session ID cookie to set in the response by Express. | `connect.sid` |
-| `SAML_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | If `true`, the system uses only the value of the environment variable as the value of the SAML option that can be set via the environment variable. | `false` |
-| `FORCE_WIKI_MODE` | Forces wiki mode. | `undefined` |
-| | : `undefined` Publicity will be configured by the admin security page settings | |
-| | : `public` Forces all pages to become public | |
-| | : `private` Forces all pages to become private | |
-| `FORMAT_NODE_LOG` | If `false`, Output server log as JSON. (Enabled only when `NODE_ENV=production`) | `true` |
+| 環境変数名 | 説明 | デフォルト値 |
+| ------------------- | ---------- | ------------- |
+| `MONGO_URI` | 接続する MongoDB サーバーの URI | `mongodb://localhost/growi` |
+| `NO_CDN` | `true` の場合、システムは CDN を使用しません。代わりに全てのリソースはクライアントビルド時に CDN からダウンロードされ、利用時は GROWI Express serverからのみ提供されるようになります。 | `false` |
+| `ELASTICSEARCH_URI` | 接続する Elasticearch サーバーの URI | |
+| `ELASTICSEARCH_REQUEST_TIMEOUT` | リクエスト時のタイムアウト(msec) | 8000 |
+| `REDIS_URI` | 接続する Redis サーバーの URI (Redis を MongoDB の代わりにセッションストアとして利用する場合に設定してください） | |
+| `PASSWORD_SEED` | パスワードハッシュ生成時に使用されるパスワードシード | |
+| `SECRET_TOKEN` | 発行された cookie の正当性を検証するためのシークレットトークン | |
+| `SESSION_NAME` | Express からのレスポンスに含まれる cookie 内のセッション ID 名 | `connect.sid` |
+| `FORCE_WIKI_MODE` | wiki 閲覧モードの強制指定 | `undefined` |
+| | : `undefined` 閲覧権限は管理画面のセキュリティ設定に従います。 | |
+| | : `public` 全てのページを強制的にパブリックにします。 | |
+| | : `private` 全てのページを強制的に非公開にします。 | |
+| `FORMAT_NODE_LOG` |  `false`の場合、サーバーログを JSON 形式で出力します。(`NODE_ENV=production` の時のみ可能) | `true` |
 | `MATHJAX` | (TBD) | |
 | `USER_UPPER_LIMIT` | (TBD) | |
-| **Option for file uploading** | | |
-| `FILE_UPLOAD` | Attached files storage. | `aws` |
-| | : `aws` Amazon Web Service S3 (needs AWS settings on Admin page) | |
-| | : `gcs` Google Cloud Storage (needs settings with environment variables) | |
-| | : `mongodb` MongoDB GridFS (Setting-less) | |
-| | : `local` Server's Local file system (Setting-less) | |
-| | : `none` Disable file uploading | |
-| `FILE_UPLOAD_DISABLED` | If `true`, file uploading will be disabled. However, the files can be still viewed. | `false` |
-| `MAX_FILE_SIZE` | The maximum file size limit for uploads (bytes). | `Infinity` |
-| `FILE_UPLOAD_TOTAL_LIMIT` | Total capacity limit for uploads (bytes). | `Infinity` |
-| `GCS_API_KEY_JSON_PATH` | Path of the JSON file that contains [service account key to authenticate to GCP API](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) | |
-| `GCS_BUCKET` | Name of the GCS bucket | |
-| `GCS_UPLOAD_NAMESPACE` | Directory name to create in the bucket | |
-| **Option to integrate with external systems** | | |
-| `HACKMD_URI` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server. | |
-| | This server must load the GROWI agent. [Here's how to prepare it](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html). | |
-| `HACKMD_URI_FOR_SERVER` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server from GROWI Express server. If not set, `HACKMD_URI` will be used. | |
-| `PLANTUML_URI` | URI to connect to [PlantUML](http://plantuml.com/) server. | |
-| `BLOCKDIAG_URI` | URI to connect to [blockdiag](http://http://blockdiag.com/) server. | |
-| **Option (Overwritable in admin page)** | | |
-| `APP_SITE_URL` | Site URL. e.g. `https://example.com`, `https://example.com:8080` | |
-| `LOCAL_STRATEGY_ENABLED` | Enable or disable ID/Pass login | |
-| `LOCAL_STRATEGY_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars than values in DB for some ID/Pass login options | |
-| `SAML_ENABLED` | Enable or disable SAML | |
-| `SAML_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars than values in DB for some SAML options | |
-| `SAML_ENTRY_POINT` | IdP entry point | |
-| `SAML_ISSUER` | Issuer string to supply to IdP | |
-| `SAML_ATTR_MAPPING_ID` | Attribute map for id | |
-| `SAML_ATTR_MAPPING_USERNAME` | Attribute map for username | |
-| `SAML_ATTR_MAPPING_MAIL` | Attribute map for email | |
-| `SAML_ATTR_MAPPING_FIRST_NAME` | Attribute map for first name | |
-| `SAML_ATTR_MAPPING_LAST_NAME` | Attribute map for last name | |
-| `SAML_CERT` | PEM-encoded X.509 signing certificate string to validate the response from IdP | |
-| `OAUTH_GOOGLE_CLIENT_ID` | Google API client id for OAuth login. | |
-| `OAUTH_GOOGLE_CLIENT_SECRET` | Google API client secret for OAuth login. | |
-| `OAUTH_GITHUB_CLIENT_ID` | GitHub API client id for OAuth login. | |
-| `OAUTH_GITHUB_CLIENT_SECRET` | GitHub API client secret for OAuth login. | |
-| `OAUTH_TWITTER_CONSUMER_KEY` | Twitter consumer key(API key) for OAuth login. | |
-| `OAUTH_TWITTER_CONSUMER_SECRET` | Twitter consumer secret(API secret) for OAuth login. | |
+| `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Push 通知を行う全クライアントの同時接続数上限 | 5000 |
+| `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Push 通知を行うことのできるゲストユーザーの同時接続数上限 | 2000 |
+| `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_ADMIN` | 管理画面で Push 通知を行うことのできる管理者ユーザーの同時接続数上限<br>(`S2CMSG_PUBSUB_CONNECTIONS_LIMIT`からは独立した値です) | 100 |
+| **ファイルアップロードオプション** | | |
+| `FILE_UPLOAD` | ファイルアップロード先のストレージ | `aws` |
+| | : `aws` Amazon Web Service S3 を使用します。(管理ページにて AWS 設定を行う必要があります。) | |
+| | : `gcs` Google Cloud Storage を使用します。(環境変数にて使用する GCS を設定する必要があります。) | |
+| | : `mongodb` MongoDB の GridFS　機能を使用します。 (別途の設定は不要です。) | |
+| | : `local` ローカルのファイルシステムを使用します。 (別途の設定は不要です。) | |
+| | : `none` ファイルアップロードを無効にします。  | |
+| `FILE_UPLOAD_DISABLED` | `true` の場合、ファイルアップロード機能を無効にしますが、既にアップロードされている画像の閲覧は可能です。 | `false` |
+| `MAX_FILE_SIZE` | アップロード可能なファイルサイズ上限（bytes）。 | `Infinity` |
+| `FILE_UPLOAD_TOTAL_LIMIT` | アップロードファイルの総容量の上限（bytes） | `Infinity` |
+| `S3_LIFETIME_SEC_FOR_TEMPORARY_URL` | 署名付きURLのキャッシュを保持する期間(秒数) | 120 |
+| `GCS_API_KEY_JSON_PATH` |  [GCP API 認証用のサービスアカウントキー](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) を含む JSON ファイルのパス | |
+| `GCS_BUCKET` | 利用する GCS バケット名 | |
+| `GCS_UPLOAD_NAMESPACE` | バケット内に作成するファイルアップロード用のディレクトリ名 | |
+| `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL` | 署名付きURLのキャッシュを保持する期間(秒数)| 120|
+| **外部システム連携オプション** | | |
+| `NCHAN_URI` | 接続する Nginx [Nchan](https://nchan.io/) サーバーの URI | |
+| `HACKMD_URI` | 接続する [HackMD(CodiMD)](https://hackmd.io/) サーバーの URI | |
+| | このサーバーは GROWI エージェントをロードする必要があります。 セットアップ方法は[こちら](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html)。| |
+| `HACKMD_URI_FOR_SERVER` | GROWI Express サーバーが参照する [HackMD(CodiMD)](https://hackmd.io/) のURI。 未設定の場合は `HACKMD_URI` が使用されます。 | |
+| `PLANTUML_URI` | 接続する [PlantUML](http://plantuml.com/) サーバーの URI | |
+| `BLOCKDIAG_URI` | 接続する [blockdiag](http://http://blockdiag.com/) サーバーの URI | |
+| `DRAWIO_URI` | 接続する [diagrams.net(draw.io)](https://www.diagrams.net/) サーバーの URI | |
+| `S2SMSG_PUBSUB_SERVER_TYPE` |  | |
+| | : `nchan` Nginx [Nchan](https://nchan.io/) を利用します | |
+| | : `redis` (未実装) | |
+| `S2SMSG_PUBSUB_NCHAN_PUBLISH_PATH` | Nchan サーバーの publish エンドポイントのパス | `/pubsub` |
+| `S2SMSG_PUBSUB_NCHAN_SUBSCRIBE_PATH` | Nchan サーバーの subscribe エンドポイントのパス | `/pubsub` |
+| `S2SMSG_PUBSUB_NCHAN_CHANNEL_ID` | Nchan サーバーの接続チャンネルID | |
+| **管理設定を上書きする環境変数** | | |
+| `APP_SITE_URL` | サイト URL (例: `https://example.com` 、 `https://example.com:8080`) | |
+| `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` |`true` の場合、ファイルアップロードタイプの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。|`false`|
+| `LOCAL_STRATEGY_ENABLED` | `true` の場合、ID/Pass ログインが有効になります。 | |
+| `LOCAL_STRATEGY_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、ID/Pass オプションの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | |
+| `SAML_ENABLED` | `true` の場合、SAML 連携を有効にします。 | |
+| `SAML_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、SAML オプションの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
+| `SAML_ENTRY_POINT` | IdP のエントリーポイント | |
+| `SAML_ISSUER` | 認証要求をする issuer (SP) | |
+| `SAML_ATTR_MAPPING_ID` | SAML Identity プロバイダ内で一意に識別可能な値を格納している属性 | |
+| `SAML_ATTR_MAPPING_USERNAME` | 新規ユーザーのアカウント名 (`username`) に関連付ける属性 | |
+| `SAML_ATTR_MAPPING_MAIL` | 新規ユーザーのメールアドレスに関連付ける属性 | |
+| `SAML_ATTR_MAPPING_FIRST_NAME` | 新規ユーザーの姓に関連付ける属性 | |
+| `SAML_ATTR_MAPPING_LAST_NAME` | 新規ユーザーの名に関連付ける属性 | |
+| `SAML_CERT` | IdP からのレスポンスを検証するための PEM エンコードされた X.509 証明書文字列  | |
+| `OAUTH_GOOGLE_CLIENT_ID` | OAuth ログインで使用する Google API の クライアント ID | |
+| `OAUTH_GOOGLE_CLIENT_SECRET` | OAuth ログインで使用する Google API のクライアントシークレット | |
+| `OAUTH_GITHUB_CLIENT_ID` | OAuth ログインで使用する GitHub API のクライアント ID | |
+| `OAUTH_GITHUB_CLIENT_SECRET` | OAuth ログインで使用する GitHub API のクライアント シークレット | |
+| `OAUTH_TWITTER_CONSUMER_KEY` | OAuth ログインで使用する Twitter カスタマーキー (API キー) | |
+| `OAUTH_TWITTER_CONSUMER_SECRET` | OAuth ログインで使用する Twitter カスタマーシークレット(API シークレット) | |
 
 

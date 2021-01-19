@@ -1,10 +1,15 @@
+---
+pageClass: admin-cookbook-env-vars
+---
+
 # Environment Variables
 
 | Enviroment Variable | Description | Default Value |
-| ------------------- | ----------: | ------------- |
+| ------------------- | ----------  | ------------- |
 | `MONGO_URI` | URI to connect to MongoDB. | `mongodb://localhost/growi` |
 | `NO_CDN` | If `true`, system doesn't use CDN, all resources will be downloaded from CDN when build client, and served by the GROWI Express server. | `false` |
 | `ELASTICSEARCH_URI` | URI to connect to Elasticearch. | |
+| `ELASTICSEARCH_REQUEST_TIMEOUT` | Max request timeout in milliseconds for each request.(msec) | 8000 |
 | `REDIS_URI` | URI to connect to Redis (use it as a session store instead of MongoDB). | |
 | `PASSWORD_SEED` | A password seed used by password hash generator. | |
 | `SECRET_TOKEN` | A secret key for verifying the integrity of signed cookies. | |
@@ -17,6 +22,9 @@
 | `FORMAT_NODE_LOG` | If `false`, Output server log as JSON. (Enabled only when `NODE_ENV=production`) | `true` |
 | `MATHJAX` | (TBD) | |
 | `USER_UPPER_LIMIT` | (TBD) | |
+| `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Maximum number of connections for all clients that receive push messages. | 5000 |
+| `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Maximum number of connections for guest clients that receive push messages. | 2000 |
+| `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_ADMIN` | Maximum number of connections for admin users in admin pages.<br>(This is isolated from `S2CMSG_PUBSUB_CONNECTIONS_LIMIT`)  | 100 |
 | **Option for file uploading** | | |
 | `FILE_UPLOAD` | Attached files storage. | `aws` |
 | | : `aws` Amazon Web Service S3 (needs AWS settings on Admin page) | |
@@ -27,17 +35,28 @@
 | `FILE_UPLOAD_DISABLED` | If `true`, file uploading will be disabled. However, the files can be still viewed. | `false` |
 | `MAX_FILE_SIZE` | The maximum file size limit for uploads (bytes). | `Infinity` |
 | `FILE_UPLOAD_TOTAL_LIMIT` | Total capacity limit for uploads (bytes). | `Infinity` |
+| `S3_LIFETIME_SEC_FOR_TEMPORARY_URL` | time to keep the cache of signed URLs (number of seconds) | 120 |
 | `GCS_API_KEY_JSON_PATH` | Path of the JSON file that contains [service account key to authenticate to GCP API](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) | |
 | `GCS_BUCKET` | Name of the GCS bucket | |
 | `GCS_UPLOAD_NAMESPACE` | Directory name to create in the bucket | |
+| `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL` | time to keep the cache of signed URLs (number of seconds)| 120|
 | **Option to integrate with external systems** | | |
+| `NCHAN_URI` | URI to connect to Nginx [Nchan](https://nchan.io/) server. | |
 | `HACKMD_URI` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server. | |
 | | This server must load the GROWI agent. [Here's how to prepare it](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html). | |
 | `HACKMD_URI_FOR_SERVER` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server from GROWI Express server. If not set, `HACKMD_URI` will be used. | |
 | `PLANTUML_URI` | URI to connect to [PlantUML](http://plantuml.com/) server. | |
 | `BLOCKDIAG_URI` | URI to connect to [blockdiag](http://http://blockdiag.com/) server. | |
+| `DRAWIO_URI` | URI to connect to [diagrams.net(draw.io)](https://www.diagrams.net/) server. | |
+| `S2SMSG_PUBSUB_SERVER_TYPE` |  | |
+| | : `nchan` Nginx [Nchan](https://nchan.io/) | |
+| | : `redis` (Not implemented yet) | |
+| `S2SMSG_PUBSUB_NCHAN_PUBLISH_PATH` | Publisher endpoint path for Nchan server | `/pubsub` |
+| `S2SMSG_PUBSUB_NCHAN_SUBSCRIBE_PATH` | Subscriber endpoint path for Nchan server | `/pubsub` |
+| `S2SMSG_PUBSUB_NCHAN_CHANNEL_ID` | The channel id to connect to Nchan server | |
 | **Option (Overwritable in admin page)** | | |
 | `APP_SITE_URL` | Site URL. e.g. `https://example.com`, `https://example.com:8080` | |
+| `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` | Prioritize env var than value in DB for File Upload Type | `false` |
 | `LOCAL_STRATEGY_ENABLED` | Enable or disable ID/Pass login | |
 | `LOCAL_STRATEGY_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars than values in DB for some ID/Pass login options | |
 | `SAML_ENABLED` | Enable or disable SAML | |
