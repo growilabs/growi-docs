@@ -71,7 +71,7 @@ Click [here](/en/admin-guide/management-cookbook/group.md) for details
 
 ## Control showing page list and search result for restricted pages
 
-If you don't want to show a page to an unauthorized person when viewing GROWI's search results or page list, switching on / off function of the corresponding setting in `Security setting` of management menu.
+If you don't want to show search results or lists of restricted pages to an unauthorized person, switching on / off function of the corresponding setting in `Security setting` of management menu.
 
 ![security](./images/security.png)
 
