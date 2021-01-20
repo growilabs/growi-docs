@@ -69,25 +69,23 @@ By default, the page you created appears in the page list and page search result
 
 Click [here](/en/admin-guide/management-cookbook/group.md) for details
 
-## Control showing list and search result for privilege pages
+## Control showing page list and search result for restricted pages
 
-If you don't want to show a page to someone who doesn't have vieing and editing privileges when viewing GROWI's search results or page list, switching on / off function of the corresponding setting in `Security setting` of management menu.
+If you don't want to show a page to an unauthorized person when viewing GROWI's search results or page list, switching on / off function of the corresponding setting in `Security setting` of management menu.
 
 ![security](./images/security.png)
 
 ### Show page list and restricted pages as 'Only me'
 
 
-- Case of switching "ON"
+- When the Switch is On
 
-  It will show restricted pages that applied
-  as search result or page list for the users except you.
+  List and search results of restricted pages are shown to a person who doesn't have permission to see the page details.
 
 
-- Case of switching "off"
+- When the Switch is Off
 
-  It will not show restricted pages that applied
-  as search result or page list for the users except you.
+  List and search results of restricted pages are not shown to a person who doesn't have permission to see the page details.
   
 
 ### Show page list and restricted pages for specific groups
