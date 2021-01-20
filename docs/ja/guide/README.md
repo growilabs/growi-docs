@@ -29,11 +29,11 @@ ElasticSearch を利用したページタイトルのインクリメンタルサ
 
 |ブラウザ|説明|
 |---|---|
-|Chrome| 推奨（最新version）|
-|FireFox|推奨（最新version）|
-|Safari|推奨（最新version）|
-|InternetExplorer|対象外|
-|Edge|対象外|
+|Google Chrome| 推奨（最新version）|
+|Mozilla FireFox| 推奨（最新version）|
+|Safari| 推奨（最新version）|
+|Microsoft Edge| 推奨 (最新version)<br />対象外 (version 79以前) |
+|Microsoft Internet Explorer| 対象外 |
 
 対象外のブラウザでは GROWI の各画面は正常に表示されず、ご利用いただけません。
 

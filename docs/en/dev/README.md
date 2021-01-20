@@ -2,12 +2,7 @@
 sidebarDepth: 0
 ---
 
-# Introduction
+# Architecture Diagram
 
-## Architecture
-
-(TBD)
-
-## Directory Structure
-
-(TBD)
+<!-- editable at https://dev.growi.org/5f007b1493d37400489f3993 -->
+![Dev Architecture](./images/dev-architecture.png)

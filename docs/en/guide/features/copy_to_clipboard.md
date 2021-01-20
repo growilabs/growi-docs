@@ -1,17 +1,16 @@
-# Copy titles and URLs to the clipboard
+# Copy page titles and URLs
+
+You can copy the page title and URL by clicking the clipboard icon next to the page title.
 
 ![](./images/copy_to_clipboard.png)
-
-
-You can copy the page title and page URL to the clipboard by clicking the clipboard icon next to the page title.
 
 This is useful when you want to share page contents with others.
 
 * Page name
-   * Copy only the page title
+    * Copy only the page title
 * Permalink
-   * Copy the URL to the page
+    * Copy only the page URL
 * Page name and permalink
-   * Copy page title and URL
+    * Copy both the page title and the URL
 * Markdown format links
-   * Copy title and URL in Markdown link format
+    * Copy both the title and URL for use with Markdown

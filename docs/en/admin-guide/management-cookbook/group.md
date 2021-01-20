@@ -58,7 +58,7 @@ In the page edit mode, set "Only inside the group" as shown in the image below.
 
 ![group10](./images/group10.png)
 
-Then, the group selection menu is displayed and you can select the created group.
+Then, the list of the groups you belong is displayed.
 
 ![group11](./images/group11.png)
 

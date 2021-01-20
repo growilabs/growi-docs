@@ -20,14 +20,14 @@ footer: © 2018 WESEEK, Inc.
 <div class="features">
   <div class="feature">
     <h2>Markdown x Wiki</h2>
-    <p>What you see is what you write with live preview. Write with emojis, footnotes, to do lists, raw HTML with Bootstrap, and syntax highlighting for various languages.</p>
+    <p>Using the split-screen live preview, you can see what you are writing in real-time. You can use emojis, footnotes, create to-do lists, write raw HTML with Bootstrap, and syntax highlighting for various languages is provided.</p>
   </div>
   <div class="feature">
     <h2>Highly Customizable</h2>
-    <p>Pick a theme, authentication method, and keymap (Vim/Emacs/Sublime Text). Customize GROWI to satisfy the demands of both administrators and users.</p>
+    <p>Pick your own theme, authentication method, and keymap (Vim/Emacs/Sublime Text). Customize GROWI to satisfy the demands of both administrators and users.</p>
   </div>
   <div class="feature">
     <h2>Ever-Growing</h2>
-    <p>Engineers in WESEEK, Inc. are commited to strive for the most desired communication tool with the community and users.</p>
+    <p>WESEEK, Inc., together with our community of contributors, is committed to creating the most powerful and desirable communication tool.</p>
   </div>
 </div>
