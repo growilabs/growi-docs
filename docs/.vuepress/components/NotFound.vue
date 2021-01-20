@@ -27,8 +27,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '~@vuepress/core/lib/app/style/config.styl';
-@import '~@vuepress/theme-default/styles/theme.styl';
+@import '~@vuepress/core/lib/client/style/config.styl';
 
 .action-button
   display inline-block

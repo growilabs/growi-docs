@@ -1,68 +1,69 @@
-# Set page view / edit authority
+# Set Page View / Edit Authority
 
-GROWI users can be set so that only authorized users can view and edit the page.
+  GROWI has a function that only autholized users can view and edit for pages.
 
-This section describes the authority that can be set for pages.
+  This section describes access control method that can be set for pages.
 
 ## How to set view / edit authority for pages
 
-In the edit mode of the page,
-click the "▲" enclosed in red line of the below image first,
-then the options are displayed as shown in the image below.
+  In the edit mode,
+  click the "Public" on the lower-right button,
+  then you can see options as shown in the image below.
 
-![authority1](./images/authority1.png)
+  ![authority1](./images/authority1.png)
 
-After selecting this option,
-click the "Create / Update" button view / edit authority for the page apply.
+  After selecting this option,
+  click the "Create / Update" button to apply view / edit
+  access control for the page.
 
 ## Types that can be set as view / edit authority
 
-You can select any of the following for the contents
-that can be set as page view / edit restrictions.
+  You can select one of the following options to set page restrictions.
 
 ### Public
 
-  There is no viewing or editing restriction for pages with this setting.
-  Anyone can view and edit. This is the default.
+There is no restriction for pages with this setting.
+Anyone can view and edit.
+This is selected by default.
 
-  If the entire GROWI is `settings that cannot be viewed without logging in`,
+`When GROWI is set up as only logged in users can view`
 
-  Even if the page is public,
-  you will not be able to view or edit it unless you log in,
-  and if you access the page, you will be redirected to the login page.
+You will not be able to view or edit it unless you log in even if the page is public,
+and you will be redirected to the login page.
 
-  Anyone who is logged in can view and edit.
+### Anyone with the Link
 
-### Anyone with the link
+Pages with this setting will not be displayed in the page list or page search results.
 
-  Pages with this setting will not be output to the page list or page search results.
+Only users who know the page URL can view and edit the page.
 
-  Only users who know the URL of the page will be able to view and edit it.
+when you don't remember where the page is,
+follow from "Recently Created" on the home screen.
 
+If it's the page you created, it will be displayed in the page list.
 
-  If you do not know where to place the page,
-  follow the page from "Recently Created" on the home page.
+### Just Me
 
-  If it is a page you created, it will be output to this page list.
+Pages with this setting will not be viewed or edited by anyone except you.
 
-### Just me
+Whether it's displayed or not in the page list
+and page search results of users except you
+depends on the settings on the security settings
+of the management page.(described later)
 
-  Pages with this setting cannot be viewed or edited by anyone other than yourself.
+By default, the page you created appears in the page list and page search results.
 
-  Whether it is displayed in page list and page search results of other users
-  can be set by ON / OFF of the management page.
+### Only inside the Group
 
-  By default, it appears in the page list and page search results.
+Pages with this setting can only be viewed and edited by users
+belonging to the group.
 
-### Only inside the group
+Whether it's displayed or not on the page list
+and page search results of users who don't belong to the group
+depends on the settings on the security settings
+of the management page.(described later)
 
-  Pages with this setting can only be viewed and edited by users
-  belonging to the set group.
-
-  Whether it is displayed in page list and page search results of a user not in group
-  can be set by ON / OFF of the management page.
-
-  By default, it appears in the page list and page search results.
+By default, the page you created appears in the page list and page search results.
 
 ## About group management feature
 

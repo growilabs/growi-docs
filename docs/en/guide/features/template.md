@@ -1,61 +1,54 @@
-# Use page templates to make page creation easier
+# Creating and Using Page Templates
 
-![](./images/template_01.png)
+In GROWI, you can model your new page based on a page template.
+Templates make it easy to create pages that are regularly required, such as daily reports, bug reports, and meeting minutes.
 
-In GROWI, you can create a page using a template.
-
-By using a template, you can easily create pages that are regularly required, such as daily reports (diaries), bug reports, and minutes of meetings.
-
-Here is an example of creating a daily report template.
+This tutorial will walk you through creating a daily report template.
 
 ## Create a template page
 
+From the page toolbar, select Create/Edit Page Template.
+
 ![](./images/template_02.png)
 
-From the page toolbar, select Create / Edit Template Page.
+Select Create a Page Template at this Hierarchy Level from the displayed dialog.
 
 ![](./images/template_01.png)
 
-Select "Same Hierarchy Template" from the displayed dialog.
-
-Then paste the following content and save the page.
-
+Paste the following content into the template and save the template.
 
 ```markdown
-# MM Month DD Daily
+# MM DD Daily Report
 
 ## What I did today
 
 ## Things to do tomorrow
 
-## Block for some reason
+## Blocked items which cannot be completed
 
 ## TODO
 
 ## Message
 ```
 
-A template page that has a fixed form is now created.
+A page template for daily reports has now been created.
 
-## Create a page with a template applied
+## Create a page using a page template
 
-Next, create a new page in the same level as the template page.
+Create a new page at the same level as the template page.
 
+[//]: <> (TODO: 下のイメージは「〜にテンプレートページを作成」フィールドが入ってない。表れると使いやすい？)
 ![](./images/template_03.png)
 
-Then, the page is created with the template applied as shown below.
-
-Change to the edit screen as needed.
+You will be taken to the Edit Page screen for your new page, and it will be pre-filled with your template.
+Edit the page as needed, then click Save to create your page.
 
 ![](./images/template_04.png)
 
-## How to use lower layer template
+## Using lower level templates
 
-If you want to create a regular page, you can use the “same hierarchy template” introduced earlier.
-
-On the other hand, lower layer templates can be used when you want to unify the format of the entire GROWI wiki.
-
-For example, by placing the following template on the top page, you can create a page that can always display the page list at the top of the page.
+Lower level templates can be used when you want to unify the format of your entire wiki.
+For example, by creating the following template at the top level, you can create a page template that always displays the child page list at the top of the page.
 
 The notation `$lsx()` is from [weseek/growi-plugin-lsx](https://github.com/weseek/growi-plugin-lsx).
 

@@ -1,10 +1,13 @@
 # GROWI Commons Libraries
 
-## [path-utils](util/path-utils.html)
+## Usage
+
+### [path-utils](util/path-utils.html)
 
 An utility object provides functions working with GROWI page path.
 
 Usage:
+
 ```javascript
 // import
 import { pathUtils } from 'growi-commons`;
@@ -19,11 +22,12 @@ const { pathUtils } = require('growi-commons);
 </div>
 
 
-## [env-utils](util/env-utils.html)
+### [env-utils](util/env-utils.html)
 
 An utility object provides functions for environment variables.
 
 Usage:
+
 ```javascript
 // import
 import { envUtils } from 'growi-commons`;
@@ -38,11 +42,12 @@ const { envUtils } = require('growi-commons);
 </div>
 
 
-## [custom-tag-utils](plugin/util/custom-tag-utils.html)
+### [custom-tag-utils](plugin/util/custom-tag-utils.html)
 
 An utility object provides functions and classes for custom tags with syntax like `$lsx(/)`.
 
 Usage:
+
 ```javascript
 // import
 import { customTagUtils } from 'growi-commons`;
@@ -57,11 +62,12 @@ const { customTagUtils } = require('growi-commons);
 </div>
 
 
-### customTagUtils.[TagContext](plugin/model/tag-context.html#TagContext)
+#### customTagUtils.[TagContext](plugin/model/tag-context.html#TagContext)
 
 TagContext class is provided by a property of `customTagUtils`.
 
 Usage:
+
 ```javascript
 const { TagContext } = customTagUtils;
 ```
@@ -73,11 +79,12 @@ const { TagContext } = customTagUtils;
 </div>
 
 
-### customTagUtils.[ArgsParser](plugin/util/args-parser.html#ArgsParser)
+#### customTagUtils.[ArgsParser](plugin/util/args-parser.html#ArgsParser)
 
 ArgsParser class is provided by a property of `customTagUtils`.
 
 Usage:
+
 ```javascript
 const { ArgsParser } = customTagUtils;
 ```
@@ -89,11 +96,12 @@ const { ArgsParser } = customTagUtils;
 </div>
 
 
-### customTagUtils.[OptionParser](plugin/util/option-parser.html#OptionParser)
+#### customTagUtils.[OptionParser](plugin/util/option-parser.html#OptionParser)
 
 OptionParser class is provided by a property of `customTagUtils`.
 
 Usage:
+
 ```javascript
 const { OptionParser } = customTagUtils;
 ```
@@ -105,11 +113,12 @@ const { OptionParser } = customTagUtils;
 </div>
 
 
-## [basic-interceptor](util/basic-interceptor.html)
+### [basic-interceptor](util/basic-interceptor.html)
 
 BasicInterceptor class is provided by [basic-interceptor](util/basic-interceptor.html) module.
 
 Usage:
+
 ```javascript
 // import
 import { BasicInterceptor } from 'growi-commons`;
@@ -124,21 +133,22 @@ const { BasicInterceptor } = require('growi-commons);
 </div>
 
 
-## LocalStorageManager
+### [taga-cache-manager](plugin/service/tag-cache-manager)
 
 Usage:
+
 ```javascript
 // import
-import { LocalStorageManager } from 'growi-commons`;
+import { TagCacheManager } from 'growi-commons`;
 // require
-const { LocalStorageManager } = require('growi-commons);
+const { TagCacheManager } = require('growi-commons);
 
 // get the singleton instance
-const localStorageManager = LocalStorageManager.getInstance();
+const TagCacheManager = TagCacheManager.getInstance();
 ```
 
 <div style="text-align: right">
 
-[> (TBD) show detail]()
+[> show detail](plugin/service/tag-cache-manager)
 
 </div>
