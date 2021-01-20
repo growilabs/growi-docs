@@ -65,4 +65,65 @@ of the management page.(described later)
 
 By default, the page you created appears in the page list and page search results.
 
-TBD
+## About group management feature
+
+Click [here](/en/admin-guide/management-cookbook/group.md) for details
+
+## Control showing page list and search result for restricted pages
+
+If you don't want to show search results or lists of restricted pages to an unauthorized person, switching on / off function of the corresponding setting in `Security setting` of management menu.
+
+![security](./images/security.png)
+
+### Show page list and restricted pages as 'Only me'
+
+
+- When the Switch is On
+
+  List and search results of restricted pages are shown to a person who doesn't have permission to see the page details.
+
+
+- When the Switch is Off
+
+  List and search results of restricted pages are not shown to a person who doesn't have permission to see the page details.
+  
+
+### Show page list and restricted pages for specific groups
+
+- Case of switching "ON"
+
+  It will show restricted pages that applied
+  as search result or page list for the users who do not belong to any groups.
+
+- Case of switching "off"
+
+  It will not show restricted pages that applied
+  as search result or page list for the users who do not belong to any groups.
+
+
+## Set viewing and editing privileges to be under the page at once
+
+There are the case that you want to manage all privileges at once, cause page is hierarchical structure.
+
+In this case, please click "▲" of "Create / Update" button which appears in the lower right corner of the screen when in create/edit.
+
+then, click "Update and Overwrite scopes of all descendants".
+
+![authority2](./images/authority2.png)
+
+By this operation, be able to apply same privilege settings to all pages under the corresponding page.
+
+## Example of setting privileges
+
+Basically, you can be easy to manage if you organize pages together which needs viewing and editing privileges and then update at once under the corresponding pages.
+
+Move the pages that need privileges like as shown example below, if Updating the studctures of the page has no problem.
+
+- Create a group name page
+
+- Move the page that you want to set viewing or editing privileges for only applicable group, to the under the page.
+
+  Click [here](/en/guide/features/page_operation.md) for how to move pages
+
+
+- Set privilege for group name pages at once
