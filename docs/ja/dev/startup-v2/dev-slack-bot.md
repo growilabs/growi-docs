@@ -53,6 +53,6 @@ Slack 上で GROWI にアクセス、操作する Slack-Bot「GROWI-Bot」の開
 
    Forwardin の https の方の URL (今回の例では `https://ad2a1e1851f1.ngrok.io` )をコピー
 
-1. [Slash Commands](https://api.slack.com/apps/A01KC9EV5KK/slash-commands?) の Request URL に、コピーした URL に`/_api/v3/slack-bot` のパスをつけたものを設定
+1. [Slash Commands](https://api.slack.com/apps/A01KC9EV5KK/slash-commands?) の Request URL に、コピーした URL + `/_api/v3/slack-bot` を設定
 
 1. Slack にて該当のアクションを行い、サーバーへのアクセスが確認できたら設定完了
