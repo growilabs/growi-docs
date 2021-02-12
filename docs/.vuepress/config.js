@@ -226,6 +226,7 @@ module.exports = {
                 '/en/dev/startup-v2/prepare-workspace.md',
                 '/en/dev/startup-v2/launch-devcontainer.md',
                 '/en/dev/startup-v2/launch-system.md',
+                '/en/dev/startup-v2/dev-slack-bot.md',
               ],
             },
             {
@@ -447,6 +448,7 @@ module.exports = {
                 '/ja/dev/startup-v2/prepare-workspace.md',
                 '/ja/dev/startup-v2/launch-devcontainer.md',
                 '/ja/dev/startup-v2/launch-system.md',
+                '/ja/dev/startup-v2/dev-slack-bot.md',
               ],
             },
             {

@@ -1,26 +1,22 @@
 # GROWI-Bot の開発
 
-[toc]
+[[toc]]
 
 ## 概要
 
 Slack 上で GROWI にアクセス、操作する Slack-Bot「GROWI-Bot」の開発手順です。
 
-## 手順
-
-# Slack-Bot 開発環境構築
-
-## GROWI-Bot
-
-- 管理ベージ
+- Bot 管理ベージ
   - <https://api.slack.com/apps/A01KC9EV5KK>
 
-## 準備
+## Slack-Bot 開発環境構築
+
+### 準備
 
 - 開発時にサーバーのデプロイするために[ngrok](https://ngrok.com/) をインストールしておく。
 - 「GROWI-Bot」のコラボレータ申請をする。
 
-## サーバー起動手順
+### サーバー起動手順
 
 1. 以下の情報を取得
    - [Basic Information](https://api.slack.com/apps/A01KC9EV5KK/general) の 「App Credentials」内の `Signing Secret`
