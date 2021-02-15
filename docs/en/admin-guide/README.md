@@ -15,7 +15,7 @@ Introducing various ways to install GROWI.
 If you are just trying out, [Heroku](getting-started/heroku.md) might be your fit.
 If you are committed to GROWI, [docker-compose](getting-started/docker-compose.md) is the best fit.
 
-### [Upgrade](upgrading/34x.md)
+### [Upgrade](upgrading/42x.md)
 
 Upgrade guide from old versions of GROWI.
 About data integrity and other things to note.
