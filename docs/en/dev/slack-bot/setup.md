@@ -1,4 +1,4 @@
-# Development GROWI-Bot
+# Development Slack-Bot
 
 (TBD)
 

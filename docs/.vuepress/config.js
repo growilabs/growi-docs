@@ -226,7 +226,6 @@ module.exports = {
                 '/en/dev/startup-v2/prepare-workspace.md',
                 '/en/dev/startup-v2/launch-devcontainer.md',
                 '/en/dev/startup-v2/launch-system.md',
-                '/en/dev/startup-v2/dev-slack-bot.md',
               ],
             },
             {
@@ -242,6 +241,13 @@ module.exports = {
               collapsable: false,
               children: [
                 '/en/dev/repository/directories.md',
+              ],
+            },
+            {
+              title: 'Slack Bot',
+              collapsable: false,
+              children: [
+                '/en/dev/slack-bot/setup.md',
               ],
             },
             {
@@ -448,7 +454,6 @@ module.exports = {
                 '/ja/dev/startup-v2/prepare-workspace.md',
                 '/ja/dev/startup-v2/launch-devcontainer.md',
                 '/ja/dev/startup-v2/launch-system.md',
-                '/ja/dev/startup-v2/dev-slack-bot.md',
               ],
             },
             {
@@ -464,6 +469,13 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/dev/repository/directories.md',
+              ],
+            },
+            {
+              title: 'Slack Bot',
+              collapsable: false,
+              children: [
+                '/ja/dev/slack-bot/setup.md',
               ],
             },
             {
