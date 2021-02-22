@@ -15,7 +15,7 @@ GROWI Docs へようこそ。
 ちょっとしたお試しには起動までの手順が少ない [Heroku](getting-started/heroku.md) が便利です。
 本格的な利用を考えている場合は [docker-compose](getting-started/docker-compose.md) をお勧めします。
 
-### [アップグレード](upgrading/34x.md)
+### [アップグレード](upgrading/42x.md)
 
 過去のバージョンの GROWI からのアップグレードマニュアルです。
 データの整合性や、その他気をつけるべきことなどを載せています。
