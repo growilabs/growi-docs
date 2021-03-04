@@ -33,7 +33,7 @@ GROWI Botを導入することで、Slack上で「全文検索」や「検索結
 Slackのワークスペースに GROWI Bot を導入するには、Slackアプリを新規作成する必要があります。  
 手順は以下の通りです。
 
-#### 1. アプリの作成
+#### 1. Slackアプリの作成
 -  Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
 
 ![slack-custom-bot1](./images/slack-custom-bot1.png)
