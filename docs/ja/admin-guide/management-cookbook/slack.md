@@ -43,7 +43,24 @@ Slackのワークスペースに GROWI Bot を導入するには、Slackアプ�
 
 ![slack-custom-bot2](./images/slack-custom-bot2.png)
 
+#### 2. ボットトークンのスコープの追加
+- 「OAuth&Permissions」をクリックし「Redirect URLs」の設定をします。
+- 「Add New Redirect URL」をクリックします。
+-  テキストBOXが表示されるのでRedirect URLs に下記のURLを入力します。
 
+Redirect URLsは`連携するGROWIのURL` に `/_api/v3/slack-bot` のパスをつけたものをセットしたものになります
+例: `https://growi-company.co.jp/_api/v3/slack-bot`
+
+- 次に、Redirect URLs」下に表示されている「Scopes」の設定をします。
+- 「Bot Token Scopes」の「Add an OAuth Scope」をクリックします。
+- プルダウンが表示されますので、下記Xつを追加します。
+
+```
+- chat:write
+- commands
+```
+
+<!-- TODO: add pics -->
 
 ## User Trigger Notification 設定
 
