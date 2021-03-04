@@ -29,8 +29,9 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 
 
 ### GROWI Bot 作成方法
-GROWI Bot を Slack に導入するには、アプリを作成する必要があります。
-
+GROWI Botを導入することで、Slack上で「全文検索」や「検索結果の共有」が可能になります。
+Slackのワークスペースに GROWI Bot を導入するには、Slackアプリを新規作成する必要があります。  
+手順は以下の通りです。
 
 #### 1. アプリの作成
 -  Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
