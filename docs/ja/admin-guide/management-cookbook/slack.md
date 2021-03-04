@@ -27,6 +27,23 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 ページの保存・更新時に 入力したチャンネルに Slack 通知が届きます。  
 この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
 
+
+### GROWI Bot 作成方法
+GROWI Bot を Slack に導入するには、アプリを作成する必要があります。
+
+
+#### 1. アプリの作成
+-  Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
+
+![slack-custom-bot1](./images/slack-custom-bot1.png)
+
+- 「Create a Slack App」の「App Name」にはアプリの名前を、「Development Slack Workspace」には GROWI botを追加したいワークスペースを選択します。
+- 「Creat App」をクリックします。
+
+![slack-custom-bot2](./images/slack-custom-bot2.png)
+
+
+
 ## User Trigger Notification 設定
 
 通常、通知先のチャンネルを通知する度に入力する必要がありますが、
