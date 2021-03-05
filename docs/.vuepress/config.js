@@ -435,6 +435,7 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/group.md',
                 '/ja/admin-guide/management-cookbook/ldap.md',
                 '/ja/admin-guide/management-cookbook/active-directory.md',
+                '/ja/admin-guide/management-cookbook/slack-bot.md',
                 '/ja/admin-guide/management-cookbook/google-analytics.md',
                 '/ja/admin-guide/management-cookbook/slack.md',
                 '/ja/admin-guide/management-cookbook/import.md',
