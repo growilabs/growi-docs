@@ -12,8 +12,9 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 1. 管理画面のセキュリティ設定ページ(/admin/notification)にアクセスします。
 2. Slack Incoming Webhooks 設定の必要事項を入力し、更新ボタンを押します。
 
-- **Wrbhook URL**  
-[Incoming Webhooks](https://itizawa.slack.com/apps/new/A0F7XDUAZ--incoming-webhook-) で取得できます。
+- **Webhook URL**  
+[Incoming Webhooks](https://slack.com/services/new/incoming-webhook) で取得できます。
+
 
 - **Slack アプリより Incoming Webhook を優先する**  
 このオプションをオンにすると、 Slack App が有効になっていても GROWI は Incoming Webhook を使用します。
