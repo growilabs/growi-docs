@@ -8,7 +8,7 @@
 
 ### Slack/Mattermost incoming webhook
 
-### IFTTT
+<!-- ### IFTTT -->
 
 
 ## 通知の種類 / 設定方法
