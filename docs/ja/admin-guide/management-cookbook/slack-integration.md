@@ -1,12 +1,19 @@
 # Slack 連携
 
 ## 概要
-<!-- TODO: GW-5376 作成した図を用いて、botの概要を記述する -->
 
-GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。  
-1つの GROWI につき 1つのワークスペースを登録でき、ワークスペースに属する全てのチャンネルに通知できます。
+GROWI では、 Slack 連携の方法として、1. GROWI bot と 2. Incoming Webhook の2種類の方法があります。
 
-### Custom bot (non-proxy) のセットアップ
+1. GROWI bot
+
+    <!-- TODO: GW-5376 作成した図を用いて、botの概要を記述する -->
+
+2. Incoming Webhook  
+
+Incoming Webhook は、Slack への通知ができる機能です。
+ワークスペースに属するチャンネルのいずれかを選択して通知を行う事ができます。
+
+### Custom bot (non-proxy) 設定
 
 #### Slack appで Bot を新規作成する
 <!-- TODO: GW-5326 「slack appでbot新規作成するまで」を記述 (日本語) -->
@@ -21,13 +28,13 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 <!-- TODO: GW-5337 botをslackにインストールできるところまで記述(日本語) -->
 
 
-<!-- ### Official bot のセットアップ -->
+<!-- ### Official bot 設定 -->
 
 
-<!-- ### Custom bot (with-proxy) のセットアップ -->
+<!-- ### Custom bot (with-proxy) 設定 -->
 
 
-### Incoming webhook のセットアップ
+### Incoming webhook 設定
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 通知を行う Slack ワークスペースを設定します。
 
