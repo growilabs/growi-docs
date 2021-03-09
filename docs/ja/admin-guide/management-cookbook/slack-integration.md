@@ -5,16 +5,16 @@
 
 ### Custom bot(non-proxy)
 
-#### slack appでのbot新規作成
+#### Slack appでbotを新規作成する
 <!-- TODO: GW-5326 「slack appでbot新規作成するまで」を記述 (日本語) -->
 
-#### スコープの設定
+#### スコープを設定する
 <!-- TODO: GW-5332 スコープの設定方法を記述する(日本語) -->
 
-#### 各RequestURL設定
+#### 各RequestURLを設定する
 <!-- TODO: GW-5336 スラッシュコマンドなど各RequestURLのセット方法を記述(日本語) -->
 
-#### botをslackのワークスペースへインストールする
+#### botをSlackのワークスペースへインストールする
 <!-- TODO: GW-5337 botをslackにインストールできるところまで記述(日本語) -->
 
 
