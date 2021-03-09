@@ -1,7 +1,7 @@
 # Slack連携
 
 ## 概要
-
+<!-- TODO: GW-5376 作成した図を用いて、botの概要を記述する -->
 
 ### Custom bot(non-proxy)
 
