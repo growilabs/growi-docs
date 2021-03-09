@@ -1,5 +1,4 @@
 # 外部ツールへの通知
-<!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
 ## 通知手段の種類
 
@@ -9,6 +8,8 @@
 ### Slack bot
 
 ### Slack/Mattermost incoming webhook
+GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。  
+1つの GROWI につき 1つのワークスペースを登録でき、ワークスペースに属する全てのチャンネルに通知できます。
 
 <!-- ### IFTTT -->
 
