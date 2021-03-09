@@ -437,7 +437,6 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/slack-integration.md',
                 '/ja/admin-guide/management-cookbook/active-directory.md',
                 '/ja/admin-guide/management-cookbook/google-analytics.md',
-                '/ja/admin-guide/management-cookbook/slack-mattermost-notification.md',
                 '/ja/admin-guide/management-cookbook/external-notification.md',
                 '/ja/admin-guide/management-cookbook/import.md',
                 '/ja/admin-guide/management-cookbook/export.md',

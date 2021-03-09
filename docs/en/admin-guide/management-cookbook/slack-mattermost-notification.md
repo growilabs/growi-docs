@@ -1,3 +1,0 @@
-# Slack/Mattermost Integration
-
-(TBD)
