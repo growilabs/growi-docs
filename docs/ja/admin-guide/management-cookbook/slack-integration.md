@@ -48,6 +48,8 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 ページの保存・更新時に 入力したチャンネルに Slack 通知が届きます。  
 この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
 
+User Trigger Notificationの設定方法は[こちら](../management-cookbook/external-notification.html#user-trigger-notification-設定)を参照してください。
+
 ## Slack bot でできること
 
 ### ワークスペース内の全文検索
