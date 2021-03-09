@@ -27,7 +27,7 @@
 ### Incoming webhook のセットアップ
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
-## Slack Bot でできること
+## Slack bot でできること
 
 ### ワークスペース内の全文検索
 <!-- TODO: GW-5375 全文検索の方法を記述(日本語) -->
