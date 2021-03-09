@@ -1,9 +1,9 @@
-# Slack連携
+# Slack 連携
 
 ## 概要
 <!-- TODO: GW-5376 作成した図を用いて、botの概要を記述する -->
 
-### Custom bot(non-proxy)のセットアップ
+### Custom bot (non-proxy) のセットアップ
 
 #### Slack appで Bot を新規作成する
 <!-- TODO: GW-5326 「slack appでbot新規作成するまで」を記述 (日本語) -->
@@ -18,10 +18,10 @@
 <!-- TODO: GW-5337 botをslackにインストールできるところまで記述(日本語) -->
 
 
-<!-- ### Official botのセットアップ -->
+<!-- ### Official bot のセットアップ -->
 
 
-<!-- ### Custom bot (with-proxy)のセットアップ -->
+<!-- ### Custom bot (with-proxy) のセットアップ -->
 
 
 ### Incoming webhook のセットアップ
