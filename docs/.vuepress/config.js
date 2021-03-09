@@ -436,7 +436,7 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/ldap.md',
                 '/ja/admin-guide/management-cookbook/active-directory.md',
                 '/ja/admin-guide/management-cookbook/google-analytics.md',
-                '/ja/admin-guide/management-cookbook/slack.md',
+                '/ja/admin-guide/management-cookbook/slack-mattermost-notification.md',
                 '/ja/admin-guide/management-cookbook/import.md',
                 '/ja/admin-guide/management-cookbook/export.md',
                 '/ja/admin-guide/management-cookbook/setup-search-system.md',
