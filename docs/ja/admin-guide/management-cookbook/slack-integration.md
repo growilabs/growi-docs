@@ -5,13 +5,9 @@
 
 ### Custom bot (non-proxy) のセットアップ
 
-#### Slack appで Bot を新規作成する
+Custom bot (non-proxy) を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
 
-GROWI Botを導入することで、Slack上で「ページ検索」や「検索結果の共有」が可能になります。
-Slackのワークスペースに GROWI Bot を導入するには、Slackアプリを新規作成する必要があります。  
-手順は以下の通りです。
-
-#### Slackアプリの作成
+#### Slack app を作成する
 
 1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
 
