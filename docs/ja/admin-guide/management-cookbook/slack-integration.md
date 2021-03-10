@@ -44,10 +44,6 @@ Incoming Webhook は、Slack への通知ができる機能です。
 - **Webhook URL**  
 [Incoming Webhooks](https://slack.com/services/new/incoming-webhook) で取得できます。
 
-
-- **Slack アプリより Incoming Webhook を優先する**  
-このオプションをオンにすると、 Slack App が有効になっていても GROWI は Incoming Webhook を使用します。
-
 ### 設定が反映されているかの確認
 
 上記の設定後、ページの編集モード画面に Slack 通知フォームが追加されます。  
