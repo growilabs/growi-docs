@@ -27,7 +27,7 @@
   1. Request URL を以下のように入力してください。
 
      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot
-       - 例 https://ff9b07497173.ngrok.io/_api/v3/slack-bot
+       - 例 https://example.com/_api/v3/slack-bot
 
      ![event-subscriptions-creation](./images/event-sucscriptions-creation.png)
 
