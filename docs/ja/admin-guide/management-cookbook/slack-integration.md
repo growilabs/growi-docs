@@ -26,7 +26,7 @@ Custom bot (non-proxy) を Slack のワークスペースに導入するには�
 2. 「Create a Slack App」の ①「App Name」にはアプリの名前を、②「Development Slack Workspace」には
 GROWI botを追加したいワークスペースを選択します。
 
-3. 「Creat App」をクリックします。
+3. 「Create App」をクリックします。
 
     ![slack-custom-bot2](./images/slack-custom-bot2.png)
 
