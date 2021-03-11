@@ -92,7 +92,7 @@ Custom bot (non-proxy) を Slack のワークスペースに導入するには�
    ![install-your-app-introduction](./images/install-your-app-introduction.png)
 1. **Install to Workspace** をクリックします。
    ![install-to-workspace](./images/install-to-workspace.png)
-1. 遷移先の画面にて、**許可する**をクリックします。
+1. 遷移先の画面にて、**Allow**をクリックします。
    ![install-your-app-transition-destination](./images/install-your-app-transition-destination.png)
 1. Install your app の右側に 緑色のチェックがつけば完了です。
 ![install-your-app-complete](./images/install-your-app-complete.png)
