@@ -87,11 +87,22 @@ Custom bot (non-proxy) を Slack のワークスペースに導入するには�
 
 #### Bot を Slack のワークスペースへインストールする
 
-<!-- TODO: GW-5337 botをslackにインストールできるところまで記述(日本語) -->
-
+1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
+1. **Install your app** をクリックします。
+   ![install-your-app-introduction](./images/install-your-app-introduction.png)
+1. **Install to Workspace** をクリックします。
+   ![install-to-workspace](./images/install-to-workspace.png)
+1. 遷移先の画面にて、**Allow**をクリックします。
+   ![install-your-app-transition-destination](./images/install-your-app-transition-destination.png)
+1. Install your app の右側に 緑色のチェックがつけば完了です。
+![install-your-app-complete](./images/install-your-app-complete.png)
 <!-- ### Official bot 設定 -->
 
-<!-- ### Custom bot (with-proxy) 設定 -->
+<!-- ### Custom bot (with-proxy) のセットアップ -->
+
+### Incoming webhook のセットアップ
+
+<!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
 ### Incoming webhook 設定
 
