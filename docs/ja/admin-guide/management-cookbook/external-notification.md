@@ -15,19 +15,30 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 
 ### IFTTT
 
-GROWI では、IFTTT を利用して、その他の Web サービスに通知を行うことが可能です。
+GROWI では、IFTTT を利用して、その他の Web サービスに通知を行うことができます。
 
 - IFTTT ご利用手順
+
   1. GROWI 管理画面の「アプリ設定」 からメール設定を行う。
-     - 詳しくは、メールの設定をご覧ください。
+     - 詳しくは、[メール設定](/ja/admin-guide/management-cookbook/app-settings.html#メールの設定)をご覧ください。
   1. GROWI 管理画面の「通知設定」 から Global notification をクリックする。
+
+     ![ifttt-global-notification-introduction](./images/ifttt-global-notification-introduction.png)
+
   1. **通知設定を追加** をクリックする。
+
+     ![ifttt-global-notification-addition](./images/ifttt-global-notification-addition.png)
+
   1. トリガーパスを設定してください。
-  1. 通知先を **Email** とし、IFTTT のトリガーとなる email を入力してください。
+  1. リンクから IFTTT のアプレットをお好みで作成してください。
+  1. 通知先を **Email** とし、IFTTT のトリガーとなる Email を入力してください。
      - 例: IFTTT の **email** をご利用の場合、trigger@applet.ifttt.com と入力します。
        - 注意: IFTTT の **email** をご利用の場合、 メール設定で AWS(SES) はお使いいただけません。
   1. GROWI 上での トリガーイベントを設定してください。
-  1. リンクから IFTTT のアプレットをお好みで作成してください。
+
+     ![ifttt-global-notification-detail-settings](./images/ifttt-global-notification-detail-settings.png)
+
+  1. 必要事項を入力したら、**更新**を押してください。
 
 ## 通知の種類 / 設定方法
 
