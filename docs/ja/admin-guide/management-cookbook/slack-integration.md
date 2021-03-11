@@ -15,8 +15,21 @@ Incoming Webhook は、Slack への通知ができる機能です。
 
 ### Custom bot (non-proxy) 設定
 
-#### Slack appで Bot を新規作成する
-<!-- TODO: GW-5326 「slack appでbot新規作成するまで」を記述 (日本語) -->
+Custom bot (non-proxy) を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
+
+#### Slack app を作成する
+
+1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
+
+    ![slack-custom-bot1](./images/slack-custom-bot1.png)
+
+2. 「Create a Slack App」の ①「App Name」にはアプリの名前を、②「Development Slack Workspace」には
+GROWI botを追加したいワークスペースを選択します。
+
+3. 「Create App」をクリックします。
+
+    ![slack-custom-bot2](./images/slack-custom-bot2.png)
+
 
 #### スコープを設定する
 <!-- TODO: GW-5332 スコープの設定方法を記述する(日本語) -->
