@@ -96,7 +96,7 @@ Custom bot (non-proxy) を Slack のワークスペースに導入するには�
    ![install-your-app-transition-destination](./images/install-your-app-transition-destination.png)
 1. Install your app の右側に 緑色のチェックがつけばワークスペースへのインストール完了です。
    ![install-your-app-complete](./images/install-your-app-complete.png)
-1. GROWI-bot を使いたいチャンネルに招待します。
+1. GROWI bot を使いたいチャンネルに招待します。
    ![full-text-search-introduction-to-channel](./images/full-text-search-introduction-to-channel.png)
 
 <!-- ### Official bot 設定 -->
