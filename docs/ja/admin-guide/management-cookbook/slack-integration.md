@@ -15,9 +15,20 @@ Incoming Webhook は、Slack への通知ができる機能です。
 
 ### Custom bot (non-proxy) 設定
 
-#### Slack app で Bot を新規作成する
+Custom bot (non-proxy) を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
 
-<!-- TODO: GW-5326 「slack appでbot新規作成するまで」を記述 (日本語) -->
+#### Slack app を作成する
+
+1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
+
+   ![slack-custom-bot1](./images/slack-custom-bot1.png)
+
+2. 「Create a Slack App」の ①「App Name」にはアプリの名前を、②「Development Slack Workspace」には
+   GROWI bot を追加したいワークスペースを選択します。
+
+3. 「Create App」をクリックします。
+
+   ![slack-custom-bot2](./images/slack-custom-bot2.png)
 
 #### スコープを設定する
 
@@ -25,15 +36,73 @@ Incoming Webhook は、Slack への通知ができる機能です。
 
 #### 各 Request URL を設定する
 
-<!-- TODO: GW-5336 スラッシュコマンドなど各RequestURLのセット方法を記述(日本語) -->
+- **Event Subscriptions** の Request URL を設定する
+
+  1. 作成した Slack App の **Features** から **Event Subscriptions** をクリックします。
+     ![event-subscriptions-introduction](./images/event-subscriptions-introduction.png)
+
+  1. **Enable Events** 右側にあるボタンを On にします。
+     ![event-subscriptions-enable-button](./images/event-sucscriptions-enable-button.png)
+
+  1. Request URL を以下のように入力してください。
+
+     - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot
+       - 例 https://example.com/_api/v3/slack-bot
+
+     ![event-subscriptions-creation](./images/event-sucscriptions-creation.png)
+
+  1. 入力が完了したら、**Save Changes** をクリックしてください。
+
+- **Interactivity & Shortcuts** の Request URL を設定する
+
+  1. 作成した Slack App の **Features** から **Interactivity Shortcuts** をクリックします。
+     ![interactivity-shortcuts-introduction](./images/interactivity-shortcuts-introduction.png)
+
+  1. **Interactivity** 右側にあるボタンを On にします。
+     ![interactivity-shortcuts-enable-button](./images/interactivity-shortcuts-enable-button.png)
+
+  1. Request URL には先ほど入力したものと同じものを入力してください。
+     ![interactivity-shortcuts-creation](./images/interactivity-shortcuts-creation.png)
+
+  1. 入力が完了したら、**Save Changes** をクリックしてください。
+
+#### スラッシュコマンドの作成
+
+1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
+
+![slash-commands-introduction](./images/slash-commands-introduction.png)
+
+2. **Create New Command** をクリックします。
+
+![slash-commands-create-new-command](./images/slash-commands-create-new-command.png)
+
+- Command に /growi と入力してください。
+- RequestURL には、上記で設定した Request URL と同じものを入力してください
+- Short Description も入力必須のため、適当なご説明を入力してください。
+- Usage Hint に関しては任意なので、適宜入力してください。
+- Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
+- 入力が完了したら、**Save** をクリックしてください。
+
+![slash-commands-create](./images/slash-commands-create.png)
 
 #### Bot を Slack のワークスペースへインストールする
 
-<!-- TODO: GW-5337 botをslackにインストールできるところまで記述(日本語) -->
-
+1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
+1. **Install your app** をクリックします。
+   ![install-your-app-introduction](./images/install-your-app-introduction.png)
+1. **Install to Workspace** をクリックします。
+   ![install-to-workspace](./images/install-to-workspace.png)
+1. 遷移先の画面にて、**Allow**をクリックします。
+   ![install-your-app-transition-destination](./images/install-your-app-transition-destination.png)
+1. Install your app の右側に 緑色のチェックがつけば完了です。
+![install-your-app-complete](./images/install-your-app-complete.png)
 <!-- ### Official bot 設定 -->
 
-<!-- ### Custom bot (with-proxy) 設定 -->
+<!-- ### Custom bot (with-proxy) のセットアップ -->
+
+### Incoming webhook のセットアップ
+
+<!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
 ### Incoming webhook 設定
 
