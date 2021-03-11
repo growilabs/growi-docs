@@ -94,9 +94,10 @@ Custom bot (non-proxy) を Slack のワークスペースに導入するには�
    ![install-to-workspace](./images/install-to-workspace.png)
 1. 遷移先の画面にて、**Allow**をクリックします。
    ![install-your-app-transition-destination](./images/install-your-app-transition-destination.png)
-1. Install your app の右側に 緑色のチェックがつけば完了です。
+1. Install your app の右側に 緑色のチェックがつけばワークスペースへのインストール完了です。
    ![install-your-app-complete](./images/install-your-app-complete.png)
-
+1. GROWI-bot を使いたいチャンネルに招待します。
+![full-text-search-introduction-to-channel](./images/full-text-search-introduction-to-channel.png)
 <!-- ### Official bot 設定 -->
 
 <!-- ### Custom bot (with-proxy) のセットアップ -->
@@ -132,8 +133,6 @@ User Trigger Notification の設定方法は[こちら](../management-cookbook/e
 
 ### ワークスペース内の全文検索
 
-1. GROWI-bot を使いたいチャンネルに招待します。
-   ![full-text-search-introduction-to-channel](./images/full-text-search-introduction-to-channel.png)
 1. /growi search [keyword(s)] を入力すると検索結果が表示されます。
 
    - 例: /growi search example
