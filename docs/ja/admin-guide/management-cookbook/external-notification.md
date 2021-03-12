@@ -33,7 +33,6 @@ GROWI では、IFTTT を利用して、その他の Web サービスに通知を
   1. リンクから IFTTT のアプレットをお好みで作成してください。
   1. 通知先を **Email** とし、IFTTT のトリガーとなる Email を入力してください。
      - 例: IFTTT の **email** をご利用の場合、trigger@applet.ifttt.com と入力します。
-       - 注意: IFTTT の **email** をご利用の場合、 メール設定で AWS(SES) はお使いいただけません。
   1. GROWI 上での トリガーイベントを設定してください。
 
      ![ifttt-global-notification-detail-settings](./images/ifttt-global-notification-detail-settings.png)
