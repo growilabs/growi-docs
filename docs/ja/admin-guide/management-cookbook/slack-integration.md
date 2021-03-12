@@ -94,8 +94,12 @@ Custom bot (non-proxy) を Slack のワークスペースに導入するには�
    ![install-to-workspace](./images/install-to-workspace.png)
 1. 遷移先の画面にて、**Allow**をクリックします。
    ![install-your-app-transition-destination](./images/install-your-app-transition-destination.png)
-1. Install your app の右側に 緑色のチェックがつけば完了です。
-![install-your-app-complete](./images/install-your-app-complete.png)
+1. Install your app の右側に 緑色のチェックがつけばワークスペースへのインストール完了です。
+   ![install-your-app-complete](./images/install-your-app-complete.png)
+1. GROWI bot を使いたいチャンネルに @example を使用して招待します。
+   ![install-to-workspace-joined-bot](./images/install-to-workspace-joined-bot.png)
+   ![install-your-app-introduction-to-channel](./images/install-your-app-introduction-to-channel.png)
+
 <!-- ### Official bot 設定 -->
 
 <!-- ### Custom bot (with-proxy) のセットアップ -->
@@ -131,7 +135,16 @@ User Trigger Notification の設定方法は[こちら](../management-cookbook/e
 
 ### ワークスペース内の全文検索
 
-<!-- TODO: GW-5375 全文検索の方法を記述(日本語) -->
+1. /growi search [keyword(s)] を入力すると検索結果が表示されます。
+
+   - 例: /growi search example
+     ![full-text-search-display-result-command](./images/full-text-search-display-result-command.png)
+   - 検索結果
+     ![full-text-search-display-result](./images/full-text-search-display-result.png)
+   - **Next** ボタンをクリックすると、次の検索結果を表示します。
+     <!-- TODO post pictures after https://youtrack.weseek.co.jp/issue/GW-5283 -->
+   - **Share** ボタンをクリックすると、チャンネル内に共有されます。
+     ![full-text-search-share](./images/full-text-search-share.png)
 
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
