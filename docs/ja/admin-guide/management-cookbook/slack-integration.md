@@ -5,27 +5,32 @@
 GROWI では、 Slack 連携の方法として、1. GROWI bot と 2. Incoming Webhook の 2 種類の方法があります。
 
 1. GROWI bot
-    GROWI bot には 3 種類あります。
+
+   - GROWI bot には 3 種類あります。
      - Official bot
      - Custom bot(non-proxy)
      - Custom bot(with-proxy)
 
-   <!-- #### Official bot (推奨)
-   Official bot は Slack のワークスペースにインストールし、GROWI の管理画面の **Slack 連携** から ACCESS TOKEN を発行することで、Slack から GROWI の機能の一部を使用することができます。 -->
-      <!-- 図を挿入 -->
-   ### Official bot (推奨)
-   TBD
-   ### Custom bot(non-proxy)
-   Custom bot(non-proxy) は Slack bot を作成し、お使いの GROWI と紐付けを行うことで、Slack から GROWI の機能の一部を使用することができます。
-      <!--以下の図は暫定的なものです。https://youtrack.weseek.co.jp/issue/GW-5421 で差し替えます。-->
-      ![bot-outline](./images/bot-outline.png)
+#### Official bot (推奨)
 
-   ### Custom bot(with-proxy)
-   TBD
-   <!-- #### Custom bot(with-proxy)
-   Custom bot(with-proxy) は proxy サーバーを立ち上げ・設定することで、Official bot と同様の手順で GROWI の昨日の一部を使用することができます。 -->
-      <!-- 図を挿入 -->
-   
+Official bot は Slack のワークスペースにインストールし、GROWI の管理画面の **Slack 連携** から ACCESS TOKEN を発行することで、Slack から GROWI の機能の一部を使用することができます。
+
+<!--以下の図は暫定的なものです。https://youtrack.weseek.co.jp/issue/GW-5421 で差し替えます。-->
+
+![bot-outline-proxy](./images/bot-outline-proxy.png)
+
+#### Custom bot(non-proxy)
+
+- Custom bot(non-proxy) は Slack bot を作成し、お使いの GROWI と紐付けを行うことで、Slack から GROWI の機能の一部を使用することができます。
+
+<!--以下の図は暫定的なものです。https://youtrack.weseek.co.jp/issue/GW-5421 で差し替えます。-->
+
+![bot-outline](./images/bot-outline.png)
+
+#### Custom bot(with-proxy)
+
+Custom bot(with-proxy) は Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、Official bot と同様の手順で GROWI の昨日の一部を使用することができます。
+
 2. Incoming Webhook
 
 Incoming Webhook は、Slack への通知ができる機能です。
