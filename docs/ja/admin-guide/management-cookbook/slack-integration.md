@@ -28,8 +28,6 @@ Custom bot(non-proxy) は Slack bot を作成し、お使いの GROWI と紐付�
 
 ![bot-outline](./images/bot-outline.png)
 
-<!-- リリース時に「未実装です」アラートを出す -->
-
 #### Custom bot(with-proxy)
 
 ::: danger
