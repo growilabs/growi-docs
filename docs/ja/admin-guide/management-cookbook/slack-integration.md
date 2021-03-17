@@ -31,15 +31,17 @@ Custom bot (non-proxy) を Slack のワークスペースに導入するには�
    ![slack-custom-bot2](./images/slack-custom-bot2.png)
 
 #### スコープを設定する
+
 1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
    ![scope-introduction](./images/scope-introduction.png)
 1. **Add an OAuth Scope** をクリックします。
    ![scope-add-oauth-click](./images/scope-add-oauth-click.png)
-1. commands を選択します。
+1. commands と chat: write を選択します。
    ![scope-select-commands](./images/scope-select-commands.png)
-1. 以下のように表示されたら、スコープの設定は完了です。
-   ![scope-selected-commands](./images/scope-selected-commands.png)
+   ![scope-select-chat-write](./images/scope-add-chat-write.png)
 
+1. 以下のように表示されたら、スコープの設定は完了です。
+   ![scope-selected](./images/scope-selected.png)
 
 #### 各 Request URL を設定する
 
