@@ -6,7 +6,7 @@ GROWI では、 Slack 連携の方法として、1. GROWI bot と 2. Incoming We
 
 1. GROWI bot
 
-GROWI bot には **Official bot**, **Custom bot(non-proxy)**, **Custom bot(with-proxy)** の 3 種類あります。お手軽に始めたい方は **Official bot** をご利用ください。
+GROWI bot には Official bot, Custom bot(non-proxy), Custom bot(with-proxy) の 3 種類あります。お手軽に始めたい方は **Official bot** をご利用ください。
 
 **Official bot (推奨)**  
 Official bot は Slack のワークスペースにインストールし、GROWI の管理画面の **Slack 連携** から ACCESS TOKEN を発行することで、Slack から GROWI の機能の一部を使用することができます。
