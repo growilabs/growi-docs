@@ -6,7 +6,7 @@ GROWI では、 Slack 連携の方法として、1. GROWI bot と 2. Incoming We
 
 ### 1. GROWI bot
 
-GROWI bot には Official bot, Custom bot(non-proxy), Custom bot(with-proxy) の 3 種類の方法があります。お手軽に始めたい方は **Official bot** をご利用ください。
+GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。任意の Slack ワークスペースにインストールすることで、GROWI からの通知だけでなくチャットからの全文検索実行や会話まとめなど様々な機能を利用することができるようになります。
 
 #### Official bot (推奨)
 
@@ -14,7 +14,7 @@ GROWI bot には Official bot, Custom bot(non-proxy), Custom bot(with-proxy) の
 この項目の内容は、未実装です。
 :::
 
-Official bot は Slack のワークスペースにインストールし、GROWI の管理画面の **Slack 連携** から ACCESS TOKEN を発行することで、Slack から GROWI の機能の一部を使用することができます。
+Official GROWI bot は GROWI 開発チーム が無償で提供・運用している GROWI bot です。[slack app directory](https://wsgrowi.slack.com/apps) で公開されており、どなたでも利用できます。
 
 <!--以下の図は暫定的なものです。https://youtrack.weseek.co.jp/issue/GW-5421 で差し替えます。-->
 
@@ -38,7 +38,7 @@ Custom bot(with-proxy) は Slack bot を作成し、proxy サーバーを立ち�
 
 ### 2. Incoming Webhook
 
-Incoming Webhook は、Slack への通知ができる機能です。ワークスペースに属するチャンネルのいずれかを選択して通知を行う事ができます。詳しくは[通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法)をご覧ください。
+Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot とは異なり、Slack への通知に特化しています。チャットからの全文検索など GROWI bot にある機能の多くは使うことができませんが、その分簡単にセットアップできます。詳しくは[通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法)をご覧ください。
 
 ### Custom bot (non-proxy) 設定
 
