@@ -34,7 +34,7 @@ Custom bot(non-proxy) は Slack bot を作成し、お使いの GROWI と紐付�
 この項目の内容は、未実装です。
 :::
 
-Custom bot(with-proxy) は Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、Official bot と同様の手順で GROWI の昨日の一部を使用することができます。
+Custom bot(with-proxy) は Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、Official bot と同様の手順で GROWI の機能の一部を使用することができます。
 
 ### 2. Incoming Webhook
 
