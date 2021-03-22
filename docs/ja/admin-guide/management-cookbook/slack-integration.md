@@ -178,9 +178,9 @@ User Trigger Notification の設定方法は[こちら](../management-cookbook/e
    - 検索結果
      ![full-text-search-display-result](./images/full-text-search-display-result.png)
    - **Next** ボタンをクリックすると、次の検索結果を表示します。
-     <!-- TODO post pictures after https://youtrack.weseek.co.jp/issue/GW-5283 -->
+     ![full-text-search-click-next](./images/full-text-search-click-next.png)
    - **Share** ボタンをクリックすると、チャンネル内に共有されます。
-     ![full-text-search-share](./images/full-text-search-share.png)
+     ![full-text-search-click-share](./images/full-text-search-click-share.png)
 
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 

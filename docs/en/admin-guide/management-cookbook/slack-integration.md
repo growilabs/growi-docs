@@ -136,7 +136,6 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 1. If you see a green check mark to the right of Install your app, the installation is complete in your workspace.
    ![install-your-app-complete](../../../ja/admin-guide/management-cookbook/images/install-your-app-complete.png)
 1. Invite the channel you want to use the GROWI bot on using @example.
-   <!-- 差し替え -->
    ![install-to-workspace-joined-bot](../../../ja/admin-guide/management-cookbook/images/install-to-workspace-joined-bot.png)
    ![install-your-app-introduction-to-channel](../../../ja/admin-guide/management-cookbook/images/install-your-app-introduction-to-channel.png)
 
@@ -162,8 +161,6 @@ Set up a Slack workspace for notifications.
 
 After the above settings, a Slack notification form will be added to the edit mode screen of the page.
 
-<!-- 差し替え -->
-
 ![slack1](../../../ja/admin-guide/management-cookbook/images/slack1.png)
 
 When a page is saved or updated, a Slack notification is sent to the channel you entered.  
@@ -179,14 +176,13 @@ For details on how to configure User Trigger Notification, please refer to here
 
 1. If you enter /growi search [keyword(s)], the search results will be displayed.
    - e.g. /growi search example
-     <!-- 差し替え全部 -->
      ![full-text-search-display-result-command](../../../ja/admin-guide/management-cookbook/images/full-text-search-display-result-command.png)
    - Search results
      ![full-text-search-display-result](../../../ja/admin-guide/management-cookbook/images/full-text-search-display-result.png)
    - Click the **Next** button to display the next search result.
-     <!-- TODO post pictures after https://youtrack.weseek.co.jp/issue/GW-5283 -->
+     ![full-text-search-click-next](../../../ja/admin-guide/management-cookbook/images/full-text-search-click-next.png)
    - Click the **Share** button to share it within the channel.
-     ![full-text-search-share](../../../ja/admin-guide/management-cookbook/images/full-text-search-share.png)
+     ![full-text-search-click-share](../../../ja/admin-guide/management-cookbook/images/full-text-search-click-share.png)
 
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
