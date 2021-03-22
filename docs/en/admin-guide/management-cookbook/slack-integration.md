@@ -73,7 +73,7 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 1. When the following OAuth Scope is displayed, the scope setting is complete.
    ![scope-selected](../../../ja/admin-guide/management-cookbook//images/scope-selected.png)
 
-#### Set each Request URL.
+#### Set each Request URL
 
 - Set Request URL of **Event Subscriptions**
 
@@ -179,7 +179,7 @@ For details on how to configure User Trigger Notification, please refer to here.
 1. If you input /growi search [keyword(s)], the search results will be displayed.
    - e.g. /growi search example
      ![full-text-search-display-result-command](../../../ja/admin-guide/management-cookbook/images/full-text-search-display-result-command.png)
-   - Search results
+   - Search results.
      ![full-text-search-display-result](../../../ja/admin-guide/management-cookbook/images/full-text-search-display-result.png)
    - Click the **Next** button to display the next search result.
      ![full-text-search-click-next](../../../ja/admin-guide/management-cookbook/images/full-text-search-click-next.png)
