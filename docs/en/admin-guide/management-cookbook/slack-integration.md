@@ -151,7 +151,7 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 
 Set up a Slack workspace for notifications.
 
-1. Access the security settings page (/admin/notification) in the administration panel.
+1. Access the security settings page (/admin/notification) in the Management page.
 1. Input the required information for the Slack Incoming Webhooks setting, and click the Update button.
 
 - **Webhook URL**  
