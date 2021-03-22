@@ -8,7 +8,7 @@ GROWI provides two methods of Slack integration: 1. GROWI bot and 2. Incoming We
 
 The GROWI bot is a Slack App developed by the GROWI development team. By installing it in any Slack workspace, you can not only receive notifications from GROWI, but also execute full-text searches from chats, summarize conversations, and use various other functions.
 
-#### Official bot (Recommended)
+#### Official bot 【Recommended】
 
 ::: danger
 This contents are not yet implemented.
@@ -64,9 +64,9 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 
 1. In the Slack App you created, go to **Features** and click **OAuth & Permissions**.
    ![scope-introduction](../../../ja/admin-guide/management-cookbook//images/scope-introduction.png)
-1. Click the **Add an OAuth Scope**
+1. Click the **Add an OAuth Scope**.
    ![scope-add-oauth-click](../../../ja/admin-guide/management-cookbook//images/scope-add-oauth-click.png)
-1. Select **commands** and **chat: write**
+1. Select **commands** and **chat: write**.
    ![scope-select-commands](../../../ja/admin-guide/management-cookbook//images/scope-select-commands.png)
    ![scope-select-chat-write](../../../ja/admin-guide/management-cookbook//images/scope-add-chat-write.png)
 
@@ -83,7 +83,7 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
   1. Turn on the button to the right side of **Enable Events**.
      ![event-subscriptions-enable-button](../../../ja/admin-guide/management-cookbook/images/event-sucscriptions-enable-button.png)
 
-  1. Enter the Request URL as follows.
+  1. Input the Request URL as follows.
 
      - https:// your GROWI domain /\_api/v3/slack-bot
        - 例 https://example.com/_api/v3/slack-bot
@@ -100,7 +100,7 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
   1. Turn on the button on the right side of **Interactivity**.
      ![interactivity-shortcuts-enable-button](../../../ja/admin-guide/management-cookbook/images/interactivity-shortcuts-enable-button.png)
 
-  1. For the Request URL, enter the same one you entered earlier.
+  1. For the Request URL, input the same one you inputted earlier.
      ![interactivity-shortcuts-creation](../../../ja/admin-guide/management-cookbook/images/interactivity-shortcuts-creation.png)
 
   1. When you are done, click **Save Changes**.
@@ -116,10 +116,10 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 ![slash-commands-create-new-command](../../../ja/admin-guide/management-cookbook/images/slash-commands-create-new-command.png)
 
 - Input /growi for Command.
-- For RequestURL, enter the same Request URL you set above.
-- Short Description is also required, so please enter an appropriate description.
-- The Usage Hint is optional, so please enter it accordingly.
-- The Escape channels, users, and links sent to your app is optional, so enter it accordingly.
+- For RequestURL, input the same Request URL you set above.
+- Short Description is also required, so please input an appropriate description.
+- The Usage Hint is optional, so please input it accordingly.
+- The Escape channels, users, and links sent to your app is optional, so input it accordingly.
 - When you are done, click **Save**.
 
 ![slash-commands-create](../../../ja/admin-guide/management-cookbook/images/slash-commands-create.png)
@@ -152,7 +152,7 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 Set up a Slack workspace for notifications.
 
 1. Access the security settings page (/admin/notification) in the administration panel.
-1. Enter the required information for the Slack Incoming Webhooks setting, and click the Update button.
+1. Input the required information for the Slack Incoming Webhooks setting, and click the Update button.
 
 - **Webhook URL**  
   You can get it at [Incoming Webhooks](https://slack.com/services/new/incoming-webhook).
@@ -163,7 +163,7 @@ After the above settings, a Slack notification form will be added to the edit mo
 
 ![slack1](../../../ja/admin-guide/management-cookbook/images/slack1.png)
 
-When a page is saved or updated, a Slack notification is sent to the channel you entered.  
+When a page is saved or updated, a Slack notification is sent to the channel you inputted.  
 This method of notification is referred to as **User Trigger Notification** in GROWI.
 
 <!-- リンク未実装: external-notification がまだ en では書かれていないため。 -->
@@ -174,7 +174,7 @@ For details on how to configure User Trigger Notification, please refer to here
 
 ### Full-text search in the workspace
 
-1. If you enter /growi search [keyword(s)], the search results will be displayed.
+1. If you input /growi search [keyword(s)], the search results will be displayed.
    - e.g. /growi search example
      ![full-text-search-display-result-command](../../../ja/admin-guide/management-cookbook/images/full-text-search-display-result-command.png)
    - Search results
