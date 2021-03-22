@@ -38,7 +38,7 @@ Custom bot(with-proxy) allows you to create a Slack bot, set up and configure a 
 
 ### 2. Incoming Webhook
 
-<!-- リンク未実装: external-notification がまだ en では書かれていないため。 -->
+<!-- TODO Imple link after https://youtrack.weseek.co.jp/issue/GW-5452 -->
 
 Incoming Webhook is another way to do Slack integration, but unlike GROWI bot, it is focused on notifications to Slack. It does not have many of the features of GROWI bot, such as full-text search from chat, but it is easier to set up.For more information, please click here.
 
@@ -166,9 +166,11 @@ After the above settings, a Slack notification form will be added to the edit mo
 When a page is saved or updated, a Slack notification is sent to the channel you inputted.  
 This method of notification is referred to as **User Trigger Notification** in GROWI.
 
-<!-- リンク未実装: external-notification がまだ en では書かれていないため。 -->
+<!-- TODO Imple link after https://youtrack.weseek.co.jp/issue/GW-5452 -->
 
 For details on how to configure User Trigger Notification, please refer to here
+
+<!-- [通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#user-trigger-notification-設定). -->
 
 ## What you can do with a Slack bot ?
 
