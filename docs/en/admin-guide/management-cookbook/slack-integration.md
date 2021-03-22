@@ -168,7 +168,7 @@ This method of notification is referred to as **User Trigger Notification** in G
 
 <!-- TODO Imple link after https://youtrack.weseek.co.jp/issue/GW-5452 -->
 
-For details on how to configure User Trigger Notification, please refer to here
+For details on how to configure User Trigger Notification, please refer to here.
 
 <!-- [通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#user-trigger-notification-設定). -->
 
