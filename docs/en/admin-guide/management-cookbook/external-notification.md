@@ -20,14 +20,14 @@ GROWI can use IFTTT to send notifications to other web services.
 - How to use IFTTT
 
   1. Configure the email settings from the "Application settings" of the GROWI Management page.
-     - For details, see [メール設定](/en/admin-guide/management-cookbook/app-settings.html#Mail Settings).
+     - For details, see [Email Settings](/en/admin-guide/management-cookbook/app-settings.html#Mail Settings).
   1. Click "Global notification" from "Notification settings" in the GROWI administration page.
 
-     ! [ifttt-global-notification-introduction](. /images/ifttt-global-notification-introduction.png)
+     <!-- ! [ifttt-global-notification-introduction](./images/ifttt-global-notification-introduction.png) -->
 
   1. click **Add Notification Settings**.
 
-     ! [ifttt-global-notification-addition](. /images/ifttt-global-notification-addition.png)
+     <!-- ! [ifttt-global-notification-addition](./images/ifttt-global-notification-addition.png) -->
 
   1. Set the trigger path.
   1. Create an IFTTT applet of your choice from the link.
@@ -35,7 +35,7 @@ GROWI can use IFTTT to send notifications to other web services.
      - Example: If you are using **email** for IFTTT, enter trigger@applet.ifttt.com.
   1. Set the trigger event on GROWI.
 
-     ! [ifttt-global-notification-detail-settings](. /images/ifttt-global-notification-detail-settings.png) 1.
+     <!-- ! [ifttt-global-notification-detail-settings](. /images/ifttt-global-notification-detail-settings.png) -->
 
   1. Once you have entered the required information, press **Update**.
 
@@ -62,7 +62,7 @@ Basically, it is necessary to enter the channel to be notified each time, but it
 For example, if you set the pattern to `/event/*` and the channel to `general`, then
 If you create a page with the path `/event/announcement`, it will go to edit mode with `general` set in the Slack notification form.
 
-![slack2](./images/slack2.png)
+![slack2](../../../public/assets/images/slack2.png)
 
 If the checkbox is enabled and the page is refreshed, the `general` channel will receive a Slack notification.
 
