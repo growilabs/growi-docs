@@ -2,16 +2,16 @@
 
 ## Overview
 
-GROWI provides two methods of Slack integration: 1. GROWI bot and 2. Incoming Webhook.
+GROWI provides two methods of Slack integration: 1. GROWI bots and 2. Incoming Webhooks.
 
-### 1. GROWI bot
+### 1. GROWI bots
 
-The GROWI bot is a Slack App developed by the GROWI development team. By installing it in any Slack workspace, you can not only receive notifications from GROWI, but also execute full-text searches from chats, summarize conversations, and use various other functions.
+The GROWI bots is a Slack App developed by the GROWI development team. By installing it in Slack workspaces, you can not only receive notifications from GROWI, but also execute full-text searches from chats, summarize conversations, and use various other functions.
 
 #### Official bot 【Recommended】
 
 ::: danger
-This contents are not yet implemented.
+This service has not been implemented yet.
 :::
 
 The Official GROWI bot is a free GROWI bot provided and operated by the GROWI development team.It is available at [slack app directory](https://wsgrowi.slack.com/apps) and anyone can use this service.
@@ -31,16 +31,16 @@ Custom bot(non-proxy) allows you to create a Slack bot and link it to your GROWI
 #### Custom bot(with-proxy)
 
 ::: danger
-This contents are not yet implemented.
+This service has not been implemented yet.
 :::
 
 Custom bot(with-proxy) allows you to create a Slack bot, set up and configure a proxy server, and use some of the features of GROWI in the same way as the Official bot.
 
-### 2. Incoming Webhook
+### 2. Incoming Webhooks
 
 <!-- TODO Imple link after https://youtrack.weseek.co.jp/issue/GW-5452 -->
 
-Incoming Webhook is another way to do Slack integration, but unlike GROWI bot, it is focused on notifications to Slack. It does not have many of the features of GROWI bot, such as full-text search from chat, but it is easier to set up.For more information, please click here.
+Incoming Webhook is another way to do Slack integration, but unlike GROWI bots, it is focused on notifications to Slack. It does not have many features like GROWI bots, such as full-text search from chat, but it is easier to set up. For more information, please click here.
 
 <!-- [通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法). -->
 
@@ -50,11 +50,11 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 
 #### Create Slack app
 
-1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click [Create New App].
+1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click **Create New App** button.
 
    ![slack-custom-bot1](../../../public/assets/images/slack-custom-bot1.png)
 
-2. In the [Create a Slack App] section, ① input the name of your app in the [App Name] field and ② select the workspace where you want to add the GROWI bot in the [Development Slack Workspace].
+2. In the [Create a Slack App] section, ① input the name of your app in the [App Name] field and ② select the workspace where you want to add the GROWI bots in the [Development Slack Workspace].
 
 3. Click the [Create App].
 
@@ -64,13 +64,13 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 
 1. In the Slack App you created, go to **Features** and click **OAuth & Permissions**.
    ![scope-introduction](../../../public/assets//images/scope-introduction.png)
-1. Click the **Add an OAuth Scope**.
+1. Click the **Add an OAuth Scope** button.
    ![scope-add-oauth-click](../../../public/assets//images/scope-add-oauth-click.png)
 1. Select **commands** and **chat: write**.
    ![scope-select-commands](../../../public/assets//images/scope-select-commands.png)
    ![scope-select-chat-write](../../../public/assets//images/scope-add-chat-write.png)
 
-1. When the following OAuth Scope is displayed, the scope setting is complete.
+1. When the following OAuth Scope is displayed, the scope setting will be completed.
    ![scope-selected](../../../public/assets//images/scope-selected.png)
 
 #### Set each Request URL
@@ -90,7 +90,7 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 
      ![event-subscriptions-creation](../../../public/assets/images/event-sucscriptions-creation.png)
 
-  1. When you are done, click **Save Changes**.
+  1. When you are done, click **Save Changes** button.
 
 - Set Request URL of **Interactivity & Shortcuts**
 
@@ -103,7 +103,7 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
   1. For the Request URL, input the same one you inputted earlier.
      ![interactivity-shortcuts-creation](../../../public/assets/images/interactivity-shortcuts-creation.png)
 
-  1. When you are done, click **Save Changes**.
+  1. When you are done, click **Save Changes** button.
 
 #### Create Slash Commands
 
@@ -111,7 +111,7 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 
 <!-- ![slash-commands-introduction](../../../public/assets/images/slash-commands-introduction.png) -->
 
-2. Click the **Create New Command**.
+2. Click the **Create New Command** button.
 
 ![slash-commands-create-new-command](../../../public/assets/images/slash-commands-create-new-command.png)
 
@@ -120,7 +120,7 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 - Short Description is also required, so please input an appropriate description.
 - The Usage Hint is optional, so please input it accordingly.
 - The Escape channels, users, and links sent to your app is optional, so input it accordingly.
-- When you are done, click **Save**.
+- When you are done, click **Save** button.
 
 ![slash-commands-create](../../../public/assets/images/slash-commands-create.png)
 
@@ -131,7 +131,7 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
    ![install-your-app-introduction](../../../public/assets/images/install-your-app-introduction.png)
 1. Click the **Install to Workspace**.
    ![install-to-workspace](../../../public/assets/images/install-to-workspace.png)
-1. On the destination screen, Click the**Allow**.
+1. On the destination screen, Click the **Allow** button.
    ![install-your-app-transition-destination](../../../public/assets/images/install-your-app-transition-destination.png)
 1. If you see a green check mark to the right of Install your app, the installation is complete in your workspace.
    ![install-your-app-complete](../../../public/assets/images/install-your-app-complete.png)
@@ -163,8 +163,8 @@ After the above settings, a Slack notification form will be added to the edit mo
 
 ![slack1](../../../public/assets/images/slack1.png)
 
-When a page is saved or updated, a Slack notification is sent to the channel you inputted.  
-This method of notification is referred to as **User Trigger Notification** in GROWI.
+When a page is saved or updated, a notification will be sent to the Slack channel you inputted.  
+This notification fucntion is called as **User Trigger Notification** in GROWI.
 
 <!-- TODO Imple link after https://youtrack.weseek.co.jp/issue/GW-5452 -->
 
