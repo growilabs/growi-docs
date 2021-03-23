@@ -19,9 +19,9 @@ GROWI can use IFTTT to send notifications to other web services.
 
 - How to use IFTTT
 
-  1. Configure the email settings from the "Application settings" of the GROWI Management page.
-     - For details, see [Email Settings](/en/admin-guide/management-cookbook/app-settings.html#Mail Settings).
-  1. Click "Global notification" from "Notification settings" in the GROWI administration page.
+  1. Configure the email settings from the [Application settings] of the GROWI Management page.
+     - For details, see [Email Settings](en/admin-guide/management-cookbook/app-settings.html#email-settings-tbd).
+  1. Click [Global notification] from [Notification settings] in the GROWI administration page.
 
      ![ifttt-global-notification-introduction](./images/ifttt-global-notification-introduction.png)
 
