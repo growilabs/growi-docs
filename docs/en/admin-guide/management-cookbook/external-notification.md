@@ -8,7 +8,7 @@
 
 ### Slack bot
 
-### Slack / Mattermost incoming webhook
+### Slack / Mattermost incoming webhooks
 
 GROWI allows Slack notifications using an Incoming Webhook.
 You can select one of the channels belonging to the workspace to be notified.
@@ -21,7 +21,7 @@ GROWI can use IFTTT to send notifications to other web services.
 
   1. Configure the email settings from the [Application settings] of the GROWI Management page.
      - For details, see [Email Settings](en/admin-guide/management-cookbook/app-settings.html#email-settings-tbd).
-  1. Click [Global notification] from [Notification settings] in the GROWI administration page.
+  1. Click [Global notification] from [Notification settings] in the GROWI Management page.
 
      ![ifttt-global-notification-introduction](./images/ifttt-global-notification-introduction.png)
 
@@ -37,7 +37,7 @@ GROWI can use IFTTT to send notifications to other web services.
 
      ![ifttt-global-notification-detail-settings](./images/ifttt-global-notification-detail-settings.png)
 
-  1. Once you have entered the required information, press **Update**.
+  1. Once you have entered the required information, press **Update** button.
 
 ## Types of notifications / How to set them
 
@@ -50,7 +50,7 @@ Basically, it is necessary to enter the channel to be notified each time, but it
 
 ### How to set the default pattern
 
-1. Access the security settings page (/admin/notification) in the administration panel.
+1. Access the security settings page (/admin/notification) in the Management page.
 1. Open the User Trigger Notification tab.
 1. Enter the pattern and channel name.
 
