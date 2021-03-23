@@ -60,9 +60,9 @@ User Trigger Notification は、GROWI を利用するユーザーがページの
 ### デフォルトパターン設定が反映されているかの確認
 
 例えば、パターンを `/event/*` チャンネルを `general` と設定した場合、  
-`/event/忘年会のお知らせ`というパスのページを作成すると Slack 通知フォームに `general` が設定された状態で編集モードに遷移します。
+`/event/annoucement`というパスのページを作成すると Slack 通知フォームに `general` が設定された状態で編集モードに遷移します。
 
-![slack2](./images/slack2.png)
+![slack2](../../../public/assets/images/slack2.png)
 
 チェックボックスを有効にした状態でページを更新した場合、 `general` チャンネルに Slack 通知が届きます。
 
