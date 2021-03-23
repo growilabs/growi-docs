@@ -208,6 +208,7 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/ldap.md',
                 '/en/admin-guide/management-cookbook/active-directory.md',
                 '/en/admin-guide/management-cookbook/google-analytics.md',
+                '/en/admin-guide/management-cookbook/external-notification.md',
                 '/en/admin-guide/management-cookbook/import.md',
                 '/en/admin-guide/management-cookbook/export.md',
                 '/en/admin-guide/management-cookbook/setup-search-system.md',
