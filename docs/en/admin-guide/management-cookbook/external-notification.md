@@ -1,92 +1,92 @@
 # External Notification
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
-<!--
-## 通知手段の種類
 
-### 概要
+## Type of notificaiton method
+
+### Overview
 
 ### Slack bot
 
 ### Slack / Mattermost incoming webhook
 
-GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
-ワークスペースに属するチャンネルのいずれかを選択して通知を行う事ができます。
+GROWI allows Slack notifications using an Incoming Webhook.
+You can select one of the channels belonging to the workspace to be notified.
 
 ### IFTTT
 
-GROWI では、IFTTT を利用して、その他の Web サービスに通知を行うことができます。
+GROWI can use IFTTT to send notifications to other web services.
 
-- IFTTT ご利用手順
+- How to use IFTTT
 
-  1. GROWI 管理画面の「アプリ設定」 からメール設定を行う。
-     - 詳しくは、[メール設定](/ja/admin-guide/management-cookbook/app-settings.html#メールの設定)をご覧ください。
-  1. GROWI 管理画面の「通知設定」 から Global notification をクリックする。
+  1. Configure the email settings from the "Application settings" of the GROWI Management page.
+     - For details, see [メール設定](/en/admin-guide/management-cookbook/app-settings.html#Mail Settings).
+  1. Click "Global notification" from "Notification settings" in the GROWI administration page.
 
-     ![ifttt-global-notification-introduction](./images/ifttt-global-notification-introduction.png)
+     ! [ifttt-global-notification-introduction](. /images/ifttt-global-notification-introduction.png)
 
-  1. **通知設定を追加** をクリックする。
+  1. click **Add Notification Settings**.
 
-     ![ifttt-global-notification-addition](./images/ifttt-global-notification-addition.png)
+     ! [ifttt-global-notification-addition](. /images/ifttt-global-notification-addition.png)
 
-  1. トリガーパスを設定してください。
-  1. リンクから IFTTT のアプレットをお好みで作成してください。
-  1. 通知先を **Email** とし、IFTTT のトリガーとなる Email を入力してください。
-     - 例: IFTTT の **email** をご利用の場合、trigger@applet.ifttt.com と入力します。
-  1. GROWI 上での トリガーイベントを設定してください。
+  1. Set the trigger path.
+  1. Create an IFTTT applet of your choice from the link.
+  1. Set the notification destination as **Email** and enter the Email that will be triggered by IFTTT.
+     - Example: If you are using **email** for IFTTT, enter trigger@applet.ifttt.com.
+  1. Set the trigger event on GROWI.
 
-     ![ifttt-global-notification-detail-settings](./images/ifttt-global-notification-detail-settings.png)
+     ! [ifttt-global-notification-detail-settings](. /images/ifttt-global-notification-detail-settings.png) 1.
 
-  1. 必要事項を入力したら、**更新**を押してください。
+  1. Once you have entered the required information, press **Update**.
 
-## 通知の種類 / 設定方法
+## Types of notifications / How to set them
 
-## 概要
+## Overview
 
-## User Trigger Notification 設定
+## User Trigger Notification Setting
 
-User Trigger Notification は、GROWI を利用するユーザーがページの編集やコメントの投稿を行う際に選択的に通知を行う事ができる機能です。
-基本的には通知先のチャンネルを都度入力する必要がありますが、デフォルトパターンを設定することで入力を省くことが可能です。
+User Trigger Notification is a feature that allows users of GROWI to be selectively notified when they edit a page or post a comment.
+Basically, it is necessary to enter the channel to be notified each time, but it is possible to eliminate the input by setting a default pattern.
 
-### デフォルトパターンの設定方法
+### How to set the default pattern
 
-1. 管理画面のセキュリティ設定ページ(/admin/notification)にアクセスします。
-2. User Trigger Notification のタブを開きます。
-3. パターンとチャンネル名を入力します。
+1. Access the security settings page (/admin/notification) in the administration panel.
+1. Open the User Trigger Notification tab.
+1. Enter the pattern and channel name.
 
-- 設定値を表示するパスをパターンといいます。例えば `/event/*` と設定した場合 event 配下のページのみに設定したデフォルトパターンが表示されます。
-- 全てのページにデフォルトパターン表示したい場合は `/*` と入力してください。
+- The path to display the configuration value is called pattern. For example, if you set `/event/*`, only pages under event will show the default pattern you set.
+- If you want to display the default pattern on all pages, type `/*`.
 
-### デフォルトパターン設定が反映されているかの確認
+### Check if the default pattern settings are reflected.
 
-例えば、パターンを `/event/*` チャンネルを `general` と設定した場合、
-`/event/忘年会のお知らせ`というパスのページを作成すると Slack 通知フォームに `general` が設定された状態で編集モードに遷移します。
+For example, if you set the pattern to `/event/*` and the channel to `general`, then
+If you create a page with the path `/event/announcement`, it will go to edit mode with `general` set in the Slack notification form.
 
 ![slack2](./images/slack2.png)
 
-チェックボックスを有効にした状態でページを更新した場合、 `general` チャンネルに Slack 通知が届きます。
+If the checkbox is enabled and the page is refreshed, the `general` channel will receive a Slack notification.
 
-## Global Notification 設定
+## Global Notification Setting
 
-Wiki 利用者が所定のアクションをしたタイミングで発信される Slack 通知を設定できます。
+You can configure Slack notifications to be sent out when a Wiki user performs a certain action.
 
-### Global Notification の設定方法
+### How to set Global Notification
 
-1. 管理画面のセキュリティ設定ページ(/admin/notification)にアクセスします。
-2. Global Notification のタブを開きます。
-3. 通知設定の一覧の右側にある通知設定の追加ボタンを押します。
-4. 通知詳細設定で各種設定を行います。
+1. Access the security settings page (/admin/notification) in the Management page.
+1. Open the Global Notification tab.
+1. Click the Add Notification button on the right side of the list of notification settings.
+1. Configure various settings in Notification Advanced Settings.
 
-- 通知機構はトリガーパスで起きるイベントを感知します。
-  例えば `/event/*` と設定した場合、`/event` 配下のページで Global Notification が有効になります。
+- The notification mechanism detects events that occur in the trigger path.
+  For example, if you set `/event/*`, Global Notification will be enabled on the pages under `/event`.
 
-### 通知の有効 / 無効
+### Enable/disable notifications
 
-Global Notification は通常 public なページ内のイベントのみ通知が届きます。
+Global Notifications will usually only send notifications for events in public pages.
 
-チェックボックスを有効にすることで以下のページ内のイベントを感知するようになります。
+Enabling the checkbox will enable the detection of events in the following pages.
 
-- '自分のみ'に閲覧制限をしているページ
-- '特定グループにのみ'に閲覧制限をしているページ
+- Pages that are restricted to 'Only me'.
+- Pages that are restricted to 'only inside the group'.
 
-link を知っている人のみ閲覧できるページは設定に関わらず常に通知されません。 -->
+Pages that can only be viewed by people who know the link will always be unnotified, regardless of the setting.
