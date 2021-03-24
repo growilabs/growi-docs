@@ -10,7 +10,7 @@
 
 ### Slack / Mattermost incoming webhooks
 
-GROWI allows Slack notifications using an Incoming Webhook.
+GROWI allows Slack notifications using Incoming Webhooks.
 You can select one of the channels belonging to the workspace to be notified.
 
 ### IFTTT
@@ -43,19 +43,19 @@ GROWI can use IFTTT to send notifications to other web services.
 
 ## Overview
 
-## User Trigger Notification Setting
+## User Trigger Notification Settings
 
-User Trigger Notification is a feature that allows users of GROWI to be selectively notified when they edit a page or post a comment.
+User Trigger Notification is a feature that allows GROWI users to be selectively notified when they edit a page or post a comment.
 Basically, it is necessary to enter the channel to be notified each time, but it is possible to eliminate the input by setting a default pattern.
 
-### How to set the default pattern
+### How to set a default pattern
 
-1. Access the security settings page (/admin/notification) in the Management page.
+1. Access the Security Settings page (/admin/notification) in the Management page.
 1. Open the User Trigger Notification tab.
 1. Enter the pattern and channel name.
 
 - The path to display the configuration value is called pattern. For example, if you set `/event/*`, only pages under event will show the default pattern you set.
-- If you want to display the default pattern on all pages, type `/*`.
+- If you want to display the default pattern on all pages, please type `/*`.
 
 ### Check if the default pattern settings are reflected.
 
@@ -68,11 +68,11 @@ If the checkbox is enabled and the page is refreshed, the `general` channel will
 
 ## Global Notification Setting
 
-You can configure Slack notifications to be sent out when a Wiki user performs a certain action.
+You can configure Slack notifications to be sent out when a GROWI user performs a certain action.
 
 ### How to set Global Notification
 
-1. Access the security settings page (/admin/notification) in the Management page.
+1. Access to the Security Settings page (/admin/notification) in the Management page.
 1. Open the Global Notification tab.
 1. Click the Add Notification button on the right side of the list of notification settings.
 1. Configure various settings in Notification Advanced Settings.
@@ -84,9 +84,9 @@ You can configure Slack notifications to be sent out when a Wiki user performs a
 
 Global Notifications will usually only send notifications for events in public pages.
 
-Enabling the checkbox will enable the detection of events in the following pages.
+Enabling the checkbox will detect events in the following pages.
 
 - Pages that are restricted to 'Only me'.
-- Pages that are restricted to 'only inside the group'.
+- Pages that are restricted to 'Only inside the group'.
 
 Pages that can only be viewed by people who know the link will always be unnotified, regardless of the setting.
