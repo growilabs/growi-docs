@@ -6,7 +6,7 @@ GROWI provides two methods of Slack integration: 1. GROWI bots and 2. Incoming W
 
 ### 1. GROWI bots
 
-GROWI bots are a Slack App developed by the GROWI development team. By installing it in Slack workspaces, you can not only receive notifications from GROWI, but also execute full-text searches from chats, summarize conversations, and use various other functions.
+GROWI bots are Slack Apps developed by the GROWI development team. By installing it in Slack workspaces, you can not only receive notifications from GROWI, but also execute full-text searches from chats, summarize conversations, and use various other functions.
 
 #### Official bot 【Recommended】
 
@@ -48,7 +48,7 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 
 To deploy a custom bot (non-proxy) in your Slack workspace, you need to create and edit a Slack app. The steps are as follows.
 
-#### Create Slack app
+#### Create a Slack app
 
 1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click **Create New App** button.
 
