@@ -74,7 +74,7 @@ You can configure Slack notifications to be sent out when a GROWI user performs 
 
 1. Access to the Security Settings page (/admin/notification) in the Management page.
 1. Open the Global Notification tab.
-1. Click the Add Notification button on the right side of the list of notification settings.
+1. Click the **Add Notification** button on the right side of the list of notification settings.
 1. Configure various settings in Notification Advanced Settings.
 
 - The notification mechanism detects events that occur in the trigger path.
