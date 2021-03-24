@@ -6,7 +6,7 @@ GROWI provides two methods of Slack integration: 1. GROWI bots and 2. Incoming W
 
 ### 1. GROWI bots
 
-The GROWI bots is a Slack App developed by the GROWI development team. By installing it in Slack workspaces, you can not only receive notifications from GROWI, but also execute full-text searches from chats, summarize conversations, and use various other functions.
+GROWI bots are a Slack App developed by the GROWI development team. By installing it in Slack workspaces, you can not only receive notifications from GROWI, but also execute full-text searches from chats, summarize conversations, and use various other functions.
 
 #### Official bot 【Recommended】
 
@@ -14,7 +14,7 @@ The GROWI bots is a Slack App developed by the GROWI development team. By instal
 This service has not been implemented yet.
 :::
 
-The Official GROWI bot is a free GROWI bot provided and operated by the GROWI development team.It is available at [slack app directory](https://wsgrowi.slack.com/apps) and anyone can use this service.
+Official bot is a free GROWI bot provided and operated by the GROWI development team. It is available at [slack app directory](https://wsgrowi.slack.com/apps) and anyone can use this service.
 
 <!--以下の図は暫定的なものです。https://youtrack.weseek.co.jp/issue/GW-5421 で差し替えます。-->
 
@@ -40,11 +40,11 @@ Custom bot(with-proxy) allows you to create a Slack bot, set up and configure a 
 
 <!-- TODO Imple link after https://youtrack.weseek.co.jp/issue/GW-5452 -->
 
-Incoming Webhook is another way to do Slack integration, but unlike GROWI bots, it is focused on notifications to Slack. It does not have many features like GROWI bots, such as full-text search from chat, but it is easier to set up. For more information, please click here.
+Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots, it is focused on notifications to Slack. It does not have many features like GROWI bots, such as full-text search from chat, but it is easier to set up. For more information, please click here.
 
 <!-- [通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法). -->
 
-### Custom bot (non-proxy) Setting
+### Custom bot (non-proxy) Settings
 
 To deploy a custom bot (non-proxy) in your Slack workspace, you need to create and edit a Slack app. The steps are as follows.
 
@@ -60,7 +60,7 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 
    ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
 
-#### Set the scope
+#### Scope settings
 
 1. In the Slack App you created, go to **Features** and click **OAuth & Permissions**.
    ![scope-introduction](../../../.vuepress/public/assets//images/scope-introduction.png)
@@ -73,7 +73,7 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 1. When the following OAuth Scope is displayed, the scope setting will be completed.
    ![scope-selected](../../../.vuepress/public/assets//images/scope-selected.png)
 
-#### Set each Request URL
+#### Request URL settings
 
 - Set Request URL of **Event Subscriptions**
 
@@ -139,13 +139,13 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
    ![install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/install-to-workspace-joined-bot.png)
    ![install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/install-your-app-introduction-to-channel.png)
 
-### Set the Official bot
+### Official bot settings
 
-### Set the Custom bot (with-proxy)
+### Custom bot (with-proxy) settings
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
-### Set the Incoming webhook
+### Incoming webhook settings
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
@@ -174,7 +174,7 @@ For details on how to configure User Trigger Notification, please refer to here.
 
 ## What you can do with a Slack bot ?
 
-### Full-text search in the workspace
+### Full-text search in a workspace
 
 1. If you input /growi search [keyword(s)], the search results will be displayed.
    - e.g. /growi search example
