@@ -18,7 +18,7 @@ Official GROWI bot は GROWI 開発チーム が無償で提供・運用して�
 
 <!--以下の図は暫定的なものです。https://youtrack.weseek.co.jp/issue/GW-5421 で差し替えます。-->
 
-![bot-outline-proxy](./images/bot-outline-proxy.png)
+![bot-outline-proxy](../../../.vuepress/public/assets/images/bot-outline-proxy.png)
 
 #### Custom bot(non-proxy)
 
@@ -26,7 +26,7 @@ Custom bot(non-proxy) は Slack bot を作成し、お使いの GROWI と紐付�
 
 <!--以下の図は暫定的なものです。https://youtrack.weseek.co.jp/issue/GW-5421 で差し替えます。-->
 
-![bot-outline](./images/bot-outline.png)
+![bot-outline](../../../.vuepress/public/assets/images/bot-outline.png)
 
 #### Custom bot(with-proxy)
 
@@ -48,57 +48,57 @@ Custom bot (non-proxy) を Slack のワークスペースに導入するには�
 
 1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
 
-   ![slack-custom-bot1](./images/slack-custom-bot1.png)
+   ![slack-custom-bot1](../../../.vuepress/public/assets/images/slack-custom-bot1.png)
 
 2. 「Create a Slack App」の ①「App Name」にはアプリの名前を、②「Development Slack Workspace」には
    GROWI bot を追加したいワークスペースを選択します。
 
 3. 「Create App」をクリックします。
 
-   ![slack-custom-bot2](./images/slack-custom-bot2.png)
+   ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
 
 #### スコープを設定する
 
 1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
-   ![scope-introduction](./images/scope-introduction.png)
+   ![scope-introduction](../../../.vuepress/public/assets/images/scope-introduction.png)
 1. **Add an OAuth Scope** をクリックします。
-   ![scope-add-oauth-click](./images/scope-add-oauth-click.png)
+   ![scope-add-oauth-click](../../../.vuepress/public/assets/images/scope-add-oauth-click.png)
 1. commands と chat: write を選択します。
-   ![scope-select-commands](./images/scope-select-commands.png)
-   ![scope-select-chat-write](./images/scope-add-chat-write.png)
+   ![scope-select-commands](../../../.vuepress/public/assets/images/scope-select-commands.png)
+   ![scope-select-chat-write](../../../.vuepress/public/assets/images/scope-add-chat-write.png)
 
 1. 以下のように表示されたら、スコープの設定は完了です。
-   ![scope-selected](./images/scope-selected.png)
+   ![scope-selected](../../../.vuepress/public/assets/images/scope-selected.png)
 
 #### 各 Request URL を設定する
 
 - **Event Subscriptions** の Request URL を設定する
 
   1. 作成した Slack App の **Features** から **Event Subscriptions** をクリックします。
-     ![event-subscriptions-introduction](./images/event-subscriptions-introduction.png)
+     ![event-subscriptions-introduction](../../../.vuepress/public/assets/images/event-subscriptions-introduction.png)
 
   1. **Enable Events** 右側にあるボタンを On にします。
-     ![event-subscriptions-enable-button](./images/event-sucscriptions-enable-button.png)
+     ![event-subscriptions-enable-button](../../../.vuepress/public/assets/images/event-sucscriptions-enable-button.png)
 
   1. Request URL を以下のように入力してください。
 
      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot
        - 例 https://example.com/_api/v3/slack-bot
 
-     ![event-subscriptions-creation](./images/event-sucscriptions-creation.png)
+     ![event-subscriptions-creation](../../../.vuepress/public/assets/images/event-sucscriptions-creation.png)
 
   1. 入力が完了したら、**Save Changes** をクリックしてください。
 
 - **Interactivity & Shortcuts** の Request URL を設定する
 
   1. 作成した Slack App の **Features** から **Interactivity Shortcuts** をクリックします。
-     ![interactivity-shortcuts-introduction](./images/interactivity-shortcuts-introduction.png)
+     ![interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/interactivity-shortcuts-introduction.png)
 
   1. **Interactivity** 右側にあるボタンを On にします。
-     ![interactivity-shortcuts-enable-button](./images/interactivity-shortcuts-enable-button.png)
+     ![interactivity-shortcuts-enable-button](../../../.vuepress/public/assets/images/interactivity-shortcuts-enable-button.png)
 
   1. Request URL には先ほど入力したものと同じものを入力してください。
-     ![interactivity-shortcuts-creation](./images/interactivity-shortcuts-creation.png)
+     ![interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/interactivity-shortcuts-creation.png)
 
   1. 入力が完了したら、**Save Changes** をクリックしてください。
 
@@ -106,11 +106,11 @@ Custom bot (non-proxy) を Slack のワークスペースに導入するには�
 
 1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
 
-![slash-commands-introduction](./images/slash-commands-introduction.png)
+![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png)
 
 2. **Create New Command** をクリックします。
 
-![slash-commands-create-new-command](./images/slash-commands-create-new-command.png)
+![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
 - Command に /growi と入力してください。
 - RequestURL には、上記で設定した Request URL と同じものを入力してください
@@ -119,22 +119,22 @@ Custom bot (non-proxy) を Slack のワークスペースに導入するには�
 - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
 - 入力が完了したら、**Save** をクリックしてください。
 
-![slash-commands-create](./images/slash-commands-create.png)
+![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
 #### Bot を Slack のワークスペースへインストールする
 
 1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
 1. **Install your app** をクリックします。
-   ![install-your-app-introduction](./images/install-your-app-introduction.png)
+   ![install-your-app-introduction](../../../.vuepress/public/assets/images/install-your-app-introduction.png)
 1. **Install to Workspace** をクリックします。
-   ![install-to-workspace](./images/install-to-workspace.png)
+   ![install-to-workspace](../../../.vuepress/public/assets/images/install-to-workspace.png)
 1. 遷移先の画面にて、**Allow**をクリックします。
-   ![install-your-app-transition-destination](./images/install-your-app-transition-destination.png)
+   ![install-your-app-transition-destination](../../../.vuepress/public/assets/images/install-your-app-transition-destination.png)
 1. Install your app の右側に 緑色のチェックがつけばワークスペースへのインストール完了です。
-   ![install-your-app-complete](./images/install-your-app-complete.png)
+   ![install-your-app-complete](../../../.vuepress/public/assets/images/install-your-app-complete.png)
 1. GROWI bot を使いたいチャンネルに @example を使用して招待します。
-   ![install-to-workspace-joined-bot](./images/install-to-workspace-joined-bot.png)
-   ![install-your-app-introduction-to-channel](./images/install-your-app-introduction-to-channel.png)
+   ![install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/install-to-workspace-joined-bot.png)
+   ![install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/install-your-app-introduction-to-channel.png)
 
 <!-- ### Official bot 設定 -->
 
@@ -160,7 +160,7 @@ Custom bot (non-proxy) を Slack のワークスペースに導入するには�
 
 上記の設定後、ページの編集モード画面に Slack 通知フォームが追加されます。
 
-![slack1](./images/slack1.png)
+![slack1](../../../.vuepress/public/assets/images/slack1.png)
 
 ページの保存・更新時に 入力したチャンネルに Slack 通知が届きます。  
 この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
@@ -174,13 +174,13 @@ User Trigger Notification の設定方法は[こちら](../management-cookbook/e
 1. /growi search [keyword(s)] を入力すると検索結果が表示されます。
 
    - 例: /growi search example
-     ![full-text-search-display-result-command](./images/full-text-search-display-result-command.png)
+     ![full-text-search-display-result-command](../../../.vuepress/public/assets/images/full-text-search-display-result-command.png)
    - 検索結果
-     ![full-text-search-display-result](./images/full-text-search-display-result.png)
+     ![full-text-search-display-result](../../../.vuepress/public/assets/images/full-text-search-display-result.png)
    - **Next** ボタンをクリックすると、次の検索結果を表示します。
-     <!-- TODO post pictures after https://youtrack.weseek.co.jp/issue/GW-5283 -->
+     ![full-text-search-click-next](../../../.vuepress/public/assets/images/full-text-search-click-next.png)
    - **Share** ボタンをクリックすると、チャンネル内に共有されます。
-     ![full-text-search-share](./images/full-text-search-share.png)
+     ![full-text-search-click-share](../../../.vuepress/public/assets/images/full-text-search-click-share.png)
 
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
