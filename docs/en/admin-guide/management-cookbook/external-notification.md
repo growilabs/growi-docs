@@ -30,7 +30,7 @@ GROWI can use IFTTT to send notifications to other web services.
      ![ifttt-global-notification-addition](./images/ifttt-global-notification-addition.png)
 
   1. Set the trigger path.
-  1. Create an IFTTT applet of your choice from the link.
+  1. Create your original IFTTT applet from the link.
   1. Set the notification destination as **Email** and enter the Email that will be triggered by IFTTT.
      - Example: If you are using **email** for IFTTT, enter trigger@applet.ifttt.com.
   1. Set the trigger event on GROWI.
