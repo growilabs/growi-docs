@@ -2,7 +2,7 @@
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
-## Type of notificaiton method
+## Types of notification method
 
 ### Overview
 
@@ -25,7 +25,7 @@ GROWI can use IFTTT to send notifications to other web services.
 
      ![ifttt-global-notification-introduction](./images/ifttt-global-notification-introduction.png)
 
-  1. click **Add Notification Settings**.
+  1. Click **Add Notification Settings**.
 
      ![ifttt-global-notification-addition](./images/ifttt-global-notification-addition.png)
 
@@ -50,7 +50,7 @@ Basically, it is necessary to enter the channel to be notified each time, but it
 
 ### How to set a default pattern
 
-1. Access the Security Settings page (/admin/notification) in the Management page.
+1. Access to the Security Settings page (/admin/notification) in the Management page.
 1. Open the User Trigger Notification tab.
 1. Enter the pattern and channel name.
 
