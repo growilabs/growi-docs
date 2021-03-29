@@ -60,45 +60,45 @@ Custom bot (non-proxy) を Slack のワークスペースに導入するには�
 #### スコープを設定する
 
 1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
-   ![scope-introduction](../../../.vuepress/public/assets/images/scope-introduction.png)
+   ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
 1. **Add an OAuth Scope** をクリックします。
-   ![scope-add-oauth-click](../../../.vuepress/public/assets/images/scope-add-oauth-click.png)
+   ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets/images/slack-bot-scope-add-oauth-click.png)
 1. commands と chat: write を選択します。
-   ![scope-select-commands](../../../.vuepress/public/assets/images/scope-select-commands.png)
-   ![scope-select-chat-write](../../../.vuepress/public/assets/images/scope-add-chat-write.png)
+   ![slack-bot-scope-select-commands](../../../.vuepress/public/assets/images/slack-bot-scope-select-commands.png)
+   ![slack-bot-scope-select-chat-write](../../../.vuepress/public/assets/images/slack-bot-scope-add-chat-write.png)
 
 1. 以下のように表示されたら、スコープの設定は完了です。
-   ![scope-selected](../../../.vuepress/public/assets/images/scope-selected.png)
+   ![slack-bot-scope-selected](../../../.vuepress/public/assets/images/slack-bot-scope-selected.png)
 
 #### 各 Request URL を設定する
 
 - **Event Subscriptions** の Request URL を設定する
 
   1. 作成した Slack App の **Features** から **Event Subscriptions** をクリックします。
-     ![event-subscriptions-introduction](../../../.vuepress/public/assets/images/event-subscriptions-introduction.png)
+     ![slack-bot-event-subscriptions-introduction](../../../.vuepress/public/assets/images/slack-bot-event-subscriptions-introduction.png)
 
   1. **Enable Events** 右側にあるボタンを On にします。
-     ![event-subscriptions-enable-button](../../../.vuepress/public/assets/images/event-sucscriptions-enable-button.png)
+     ![slack-bot-event-subscriptions-enable-button](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-enable-button.png)
 
   1. Request URL を以下のように入力してください。
 
      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot
        - 例 https://example.com/_api/v3/slack-bot
 
-     ![event-subscriptions-creation](../../../.vuepress/public/assets/images/event-sucscriptions-creation.png)
+     ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
 
   1. 入力が完了したら、**Save Changes** をクリックしてください。
 
 - **Interactivity & Shortcuts** の Request URL を設定する
 
   1. 作成した Slack App の **Features** から **Interactivity Shortcuts** をクリックします。
-     ![interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/interactivity-shortcuts-introduction.png)
+     ![slack-bot-interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
 
   1. **Interactivity** 右側にあるボタンを On にします。
-     ![interactivity-shortcuts-enable-button](../../../.vuepress/public/assets/images/interactivity-shortcuts-enable-button.png)
+     ![slack-bot-interactivity-shortcuts-enable-button](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-enable-button.png)
 
   1. Request URL には先ほど入力したものと同じものを入力してください。
-     ![interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/interactivity-shortcuts-creation.png)
+     ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
   1. 入力が完了したら、**Save Changes** をクリックしてください。
 
@@ -125,16 +125,49 @@ Custom bot (non-proxy) を Slack のワークスペースに導入するには�
 
 1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
 1. **Install your app** をクリックします。
-   ![install-your-app-introduction](../../../.vuepress/public/assets/images/install-your-app-introduction.png)
+   ![slack-bot-install-your-app-introduction](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction.png)
 1. **Install to Workspace** をクリックします。
-   ![install-to-workspace](../../../.vuepress/public/assets/images/install-to-workspace.png)
+   ![slack-bot-install-to-workspace](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace.png)
 1. 遷移先の画面にて、**Allow**をクリックします。
-   ![install-your-app-transition-destination](../../../.vuepress/public/assets/images/install-your-app-transition-destination.png)
+   ![slack-bot-install-your-app-transition-destination](../../../.vuepress/public/assets/images/slack-bot-install-your-app-transition-destination.png)
 1. Install your app の右側に 緑色のチェックがつけばワークスペースへのインストール完了です。
-   ![install-your-app-complete](../../../.vuepress/public/assets/images/install-your-app-complete.png)
+   ![slack-bot-install-your-app-complete](../../../.vuepress/public/assets/images/slack-bot-install-your-app-complete.png)
 1. GROWI bot を使いたいチャンネルに @example を使用して招待します。
-   ![install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/install-to-workspace-joined-bot.png)
-   ![install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/install-your-app-introduction-to-channel.png)
+   ![slack-bot-install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace-joined-bot.png)
+   ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
+
+#### Signing Secret と Bot User OAuth Token の設定
+
+Signing Secret と Bot User OAuth Token の設定を行う前に、作成した Bot でそれぞれの値を確認します。
+
+**Signing Secret の確認方法**
+
+1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
+   ![slack-bot-basic-information](../../../.vuepress/public/assets/images/slack-bot-basic-information.png)
+
+1. App Credentials の **Signing Secret** の **show** ボタンを押して確認します。
+   ![slack-bot-signing-secret](../../../.vuepress/public/assets/images/slack-bot-signing-secret.png)
+
+**Bot User OAuth Token の確認方法**
+
+1. 作成した Slack App の **Settings** から **OAuth and Permissions** をクリックします。
+   ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
+1. OAuth Tokens for Your Team の Bot User Oauth Token から確認します。
+   ![slack-bot-oauth-and-permissions](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions.png)
+
+確認した Signing Secret と Bot User OAuth Token は 管理画面で入力して設定する方法と環境変数で設定する方法があります。管理画面で直接入力する方が容易です。また、環境変数と管理画面の両方に入力した場合は、管理画面で入力した値が優先されるので、管理画面での入力をおすすめします。
+
+1. 管理画面で直接入力する方法
+
+管理画面の Slack 連携をクリックし、Signin Secret と Bot User OAuth Token を入力して **Update** をクリックします。
+
+<!-- 画像は後で差し替えます -->
+
+![slack-integration](../../../.vuepress/public/assets/images/slack-integration-introduction.png)
+
+2. 環境変数で設定する方法
+
+環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
 
 <!-- ### Official bot 設定 -->
 
@@ -174,13 +207,13 @@ User Trigger Notification の設定方法は[こちら](../management-cookbook/e
 1. /growi search [keyword(s)] を入力すると検索結果が表示されます。
 
    - 例: /growi search example
-     ![full-text-search-display-result-command](../../../.vuepress/public/assets/images/full-text-search-display-result-command.png)
+     ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
    - 検索結果
-     ![full-text-search-display-result](../../../.vuepress/public/assets/images/full-text-search-display-result.png)
+     ![slack-bot-full-text-search-display-result](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result.png)
    - **Next** ボタンをクリックすると、次の検索結果を表示します。
-     ![full-text-search-click-next](../../../.vuepress/public/assets/images/full-text-search-click-next.png)
+     ![slack-bot-full-text-search-click-next](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-next.png)
    - **Share** ボタンをクリックすると、チャンネル内に共有されます。
-     ![full-text-search-click-share](../../../.vuepress/public/assets/images/full-text-search-click-share.png)
+     ![slack-bot-full-text-search-click-share](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-share.png)
 
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
