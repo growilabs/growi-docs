@@ -144,36 +144,36 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 Signing Secret と Bot User OAuth Token の設定を行う前に、作成した Bot でそれぞれの値を確認します。
 Before setting Signing Secret and Bot User OAuth Token, check the values.
 
-**Signing Secret の確認方法**
 **How to check Signing Secret**
 
-1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
+1. In the Slack App you created, go to **Settings** and click **Basic Information**.
 
    ![slack-bot-basic-information](../../../.vuepress/public/assets/images/slack-bot-basic-information.png)
 
-1. App Credentials の **Signing Secret** の **show** ボタンを押して確認します。
+1. Push **show** button for **Signing Secret** in App Credentials to confirm.
    ![slack-bot-signing-secret](../../../.vuepress/public/assets/images/slack-bot-signing-secret.png)
 
-**Bot User OAuth Token の確認方法**
+**How to check Bot User OAuth Token**
 
-1. 作成した Slack App の **Settings** から **OAuth and Permissions** をクリックします。
+1. In the Slack App you created, go to **Settings** and click **OAuth and Permissions**.
    ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
-1. **OAuth Tokens for Your Team** の **Bot User Oauth Token** から確認します。
+1. Check **Bot User Oauth Token** in **OAuth Tokens for Your Team**.
+
    ![slack-bot-oauth-and-permissions](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions.png)
 
-確認した Signing Secret と Bot User OAuth Token は 1. 管理画面で入力して設定する方法 と 2. 環境変数で設定する方法の 2 種類の方法があります。管理画面で直接入力する方が容易です。また、環境変数と管理画面の両方に入力した場合は、管理画面で入力した値が優先されるので、管理画面での入力をおすすめします。
+There are two ways to set the Signing Secret and Bot User OAuth Token: 1. Set them in the Management page 2. Set them with environment variables. It is easier to set them in the Management page. Also, if you input the value in both the environment variable and the Management page, the Management page value will take precedence, so we recommend setting in the Management page.
 
-1. 管理画面で直接入力する方法
+1. How to set them in Management page
 
-管理画面の Slack 連携をクリックし、Signin Secret と Bot User OAuth Token を入力して **Update** をクリックします。
+Click on Slack integration in the Management page, input the Signing Secret and Bot User OAuth Token, and click **Update**.
 
 <!-- 画像は後で差し替えます -->
 
 ![slack-integration](../../../.vuepress/public/assets/images/slack-integration-introduction.png)
 
-2. 環境変数で設定する方法
+1. How to set them with environment variables
 
-環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
+Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
 ### Official bot settings
 
