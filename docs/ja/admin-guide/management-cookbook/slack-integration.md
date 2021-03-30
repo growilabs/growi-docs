@@ -159,7 +159,7 @@ Signing Secret と Bot User OAuth Token の設定を行う前に、作成した 
 
 1. 管理画面で直接入力する方法
 
-管理画面の Slack 連携をクリックし、Signin Secret と Bot User OAuth Token を入力して **Update** をクリックします。
+管理画面の Slack 連携をクリックし、Signing Secret と Bot User OAuth Token を入力して **Update** をクリックします。
 
 <!-- 画像は後で差し替えます -->
 
