@@ -139,6 +139,42 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
    ![install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/install-to-workspace-joined-bot.png)
    ![install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/install-your-app-introduction-to-channel.png)
 
+#### Signing Secret and Bot User OAuth Token settings
+
+Signing Secret と Bot User OAuth Token の設定を行う前に、作成した Bot でそれぞれの値を確認します。
+Before setting Signing Secret and Bot User OAuth Token, check the values.
+
+**Signing Secret の確認方法**
+**How to check Signing Secret**
+
+1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
+
+   ![slack-bot-basic-information](../../../.vuepress/public/assets/images/slack-bot-basic-information.png)
+
+1. App Credentials の **Signing Secret** の **show** ボタンを押して確認します。
+   ![slack-bot-signing-secret](../../../.vuepress/public/assets/images/slack-bot-signing-secret.png)
+
+**Bot User OAuth Token の確認方法**
+
+1. 作成した Slack App の **Settings** から **OAuth and Permissions** をクリックします。
+   ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
+1. **OAuth Tokens for Your Team** の **Bot User Oauth Token** から確認します。
+   ![slack-bot-oauth-and-permissions](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions.png)
+
+確認した Signing Secret と Bot User OAuth Token は 1. 管理画面で入力して設定する方法 と 2. 環境変数で設定する方法の 2 種類の方法があります。管理画面で直接入力する方が容易です。また、環境変数と管理画面の両方に入力した場合は、管理画面で入力した値が優先されるので、管理画面での入力をおすすめします。
+
+1. 管理画面で直接入力する方法
+
+管理画面の Slack 連携をクリックし、Signin Secret と Bot User OAuth Token を入力して **Update** をクリックします。
+
+<!-- 画像は後で差し替えます -->
+
+![slack-integration](../../../.vuepress/public/assets/images/slack-integration-introduction.png)
+
+2. 環境変数で設定する方法
+
+環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
+
 ### Official bot settings
 
 ### Custom bot (with-proxy) settings
