@@ -152,10 +152,10 @@ Signing Secret と Bot User OAuth Token の設定を行う前に、作成した 
 
 1. 作成した Slack App の **Settings** から **OAuth and Permissions** をクリックします。
    ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
-1. OAuth Tokens for Your Team の Bot User Oauth Token から確認します。
+1. **OAuth Tokens for Your Team** の **Bot User Oauth Token** から確認します。
    ![slack-bot-oauth-and-permissions](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions.png)
 
-確認した Signing Secret と Bot User OAuth Token は 管理画面で入力して設定する方法と環境変数で設定する方法があります。管理画面で直接入力する方が容易です。また、環境変数と管理画面の両方に入力した場合は、管理画面で入力した値が優先されるので、管理画面での入力をおすすめします。
+確認した Signing Secret と Bot User OAuth Token は 1. 管理画面で入力して設定する方法 と 2. 環境変数で設定する方法の 2 種類の方法があります。管理画面で直接入力する方が容易です。また、環境変数と管理画面の両方に入力した場合は、管理画面で入力した値が優先されるので、管理画面での入力をおすすめします。
 
 1. 管理画面で直接入力する方法
 
