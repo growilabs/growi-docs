@@ -141,7 +141,6 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 
 #### Signing Secret and Bot User OAuth Token settings
 
-Signing Secret と Bot User OAuth Token の設定を行う前に、作成した Bot でそれぞれの値を確認します。
 Before setting Signing Secret and Bot User OAuth Token, check the values.
 
 **How to check Signing Secret**
@@ -161,11 +160,11 @@ Before setting Signing Secret and Bot User OAuth Token, check the values.
 
    ![slack-bot-oauth-and-permissions](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions.png)
 
-There are two ways to set the Signing Secret and Bot User OAuth Token: 1. Set them in the Management page 2. Set them with environment variables. It is easier to set them in the Management page. Also, if you input the value in both the environment variable and the Management page, the Management page value will take precedence, so we recommend setting in the Management page.
+There are two ways to set Signing Secret and Bot User OAuth Token: 1. Set them in the Management page 2. Set them with environment variables. It is easier to set them in the Management page. Also, if you input values in both the Management page and environment variable, the Management page value will take precedence, so we recommend setting in the Management page.
 
 1. How to set them in Management page
 
-Click on Slack integration in the Management page, input the Signing Secret and Bot User OAuth Token, and click **Update**.
+Click on Slack integration in the Management page, input Signing Secret and Bot User OAuth Token, and click **Update**.
 
 <!-- 画像は後で差し替えます -->
 
