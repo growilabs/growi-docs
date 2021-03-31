@@ -160,7 +160,8 @@ Before setting Signing Secret and Bot User OAuth Token, check the values.
 
    ![slack-bot-oauth-and-permissions](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions.png)
 
-There are two ways to set Signing Secret and Bot User OAuth Token: 1. Set them in the Management page 2. Set them with environment variables. It is easier to set them in the Management page. Also, if you input values in both the Management page and environment variable, the Management page value will take precedence, so we recommend setting in the Management page.
+There are two ways to set Signing Secret and Bot User OAuth Token: 1. Set them in the Management page 2. Set them with environment variables. It is easier to set them in the Management page. Also,
+in case that you input values in both the Management page and environment variable, the Management page value will take a priority. That's why we recommend setting in the Management page.
 
 1. How to set them in Management page
 
