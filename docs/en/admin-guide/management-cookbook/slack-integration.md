@@ -20,9 +20,9 @@ Official bot is a free GROWI bot provided and operated by the GROWI development 
 
 ![bot-outline-proxy](../../../.vuepress/public/assets/images/bot-outline-proxy.png)
 
-#### Custom bot(non-proxy)
+#### Custom bot(without-proxy)
 
-Custom bot(non-proxy) allows you to create a Slack bot and link it to your GROWI so that you can use some of the GROWI features from Slack.
+Custom bot(without-proxy) allows you to create a Slack bot and link it to your GROWI so that you can use some of the GROWI features from Slack.
 
 <!--以下の図は暫定的なものです。https://youtrack.weseek.co.jp/issue/GW-5421 で差し替えます。-->
 
@@ -44,9 +44,9 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 
 <!-- [通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法). -->
 
-### Custom bot (non-proxy) Settings
+### Custom bot (without-proxy) Settings
 
-To deploy a custom bot (non-proxy) in your Slack workspace, you need to create and edit a Slack app. The steps are as follows.
+To deploy a custom bot (without-proxy) in your Slack workspace, you need to create and edit a Slack app. The steps are as follows.
 
 #### Create a Slack app
 
