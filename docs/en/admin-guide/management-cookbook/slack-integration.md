@@ -63,45 +63,45 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 #### Scope settings
 
 1. In the Slack App you created, go to **Features** and click **OAuth & Permissions**.
-   ![scope-introduction](../../../.vuepress/public/assets//images/scope-introduction.png)
+   ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
 1. Click the **Add an OAuth Scope** button.
-   ![scope-add-oauth-click](../../../.vuepress/public/assets//images/scope-add-oauth-click.png)
+   ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets//images/slack-bot-scope-add-oauth-click.png)
 1. Select **commands** and **chat: write**.
-   ![scope-select-commands](../../../.vuepress/public/assets//images/scope-select-commands.png)
-   ![scope-select-chat-write](../../../.vuepress/public/assets//images/scope-add-chat-write.png)
+   ![slack-bot-scope-select-commands](../../../.vuepress/public/assets//images/slack-bot-scope-select-commands.png)
+   ![slack-bot-scope-select-chat-write](../../../.vuepress/public/assets//images/slack-bot-scope-add-chat-write.png)
 
 1. When the following OAuth Scope is displayed, the scope setting will be completed.
-   ![scope-selected](../../../.vuepress/public/assets//images/scope-selected.png)
+   ![slack-bot-scope-selected](../../../.vuepress/public/assets//images/slack-bot-scope-selected.png)
 
 #### Request URL settings
 
 - Set Request URL of **Event Subscriptions**
 
   1. In the Slack App you created, go to **Features** and click **Event Subscriptions**.
-     ![event-subscriptions-introduction](../../../.vuepress/public/assets/images/event-subscriptions-introduction.png)
+     ![slack-bot-event-subscriptions-introduction](../../../.vuepress/public/assets/images/slack-bot-event-subscriptions-introduction.png)
 
   1. Turn on the button to the right side of **Enable Events**.
-     ![event-subscriptions-enable-button](../../../.vuepress/public/assets/images/event-sucscriptions-enable-button.png)
+     ![slack-bot-event-subscriptions-enable-button](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-enable-button.png)
 
   1. Input the Request URL as follows.
 
      - https:// your GROWI domain /\_api/v3/slack-bot
        - 例 https://example.com/_api/v3/slack-bot
 
-     ![event-subscriptions-creation](../../../.vuepress/public/assets/images/event-sucscriptions-creation.png)
+     ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
 
   1. When you are done, click **Save Changes** button.
 
 - Set Request URL of **Interactivity & Shortcuts**
 
   1. In the Slack App you created, go to **Features** and click **Interactivity Shortcuts**.
-     ![interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/interactivity-shortcuts-introduction.png)
+     ![slack-bot-interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
 
   1. Turn on the button on the right side of **Interactivity**.
-     ![interactivity-shortcuts-enable-button](../../../.vuepress/public/assets/images/interactivity-shortcuts-enable-button.png)
+     ![slack-bot-interactivity-shortcuts-enable-button](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-enable-button.png)
 
   1. For the Request URL, input the same one you inputted earlier.
-     ![interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/interactivity-shortcuts-creation.png)
+     ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
   1. When you are done, click **Save Changes** button.
 
@@ -128,16 +128,52 @@ To deploy a custom bot (non-proxy) in your Slack workspace, you need to create a
 
 1. In the Slack App you created, go to **Settings** and click **Basic Information**.
 1. Click the **Install your app**.
-   ![install-your-app-introduction](../../../.vuepress/public/assets/images/install-your-app-introduction.png)
+   ![slack-bot-install-your-app-introduction](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction.png)
 1. Click the **Install to Workspace**.
-   ![install-to-workspace](../../../.vuepress/public/assets/images/install-to-workspace.png)
+   ![slack-bot-install-to-workspace](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace.png)
 1. On the destination screen, Click the **Allow** button.
-   ![install-your-app-transition-destination](../../../.vuepress/public/assets/images/install-your-app-transition-destination.png)
+   ![slack-bot-install-your-app-transition-destination](../../../.vuepress/public/assets/images/slack-bot-install-your-app-transition-destination.png)
 1. If you see a green check mark to the right of Install your app, the installation is complete in your workspace.
-   ![install-your-app-complete](../../../.vuepress/public/assets/images/install-your-app-complete.png)
+   ![slack-bot-install-your-app-complete](../../../.vuepress/public/assets/images/slack-bot-install-your-app-complete.png)
 1. Invite the channel you want to use the GROWI bot on using @example.
-   ![install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/install-to-workspace-joined-bot.png)
-   ![install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/install-your-app-introduction-to-channel.png)
+   ![slack-bot-install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace-joined-bot.png)
+   ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
+
+#### Signing Secret and Bot User OAuth Token settings
+
+Before setting Signing Secret and Bot User OAuth Token, check the values.
+
+**How to check Signing Secret**
+
+1. In the Slack App you created, go to **Settings** and click **Basic Information**.
+
+   ![slack-bot-basic-information](../../../.vuepress/public/assets/images/slack-bot-basic-information.png)
+
+1. Push **show** button for **Signing Secret** in App Credentials to confirm.
+   ![slack-bot-signing-secret](../../../.vuepress/public/assets/images/slack-bot-signing-secret.png)
+
+**How to check Bot User OAuth Token**
+
+1. In the Slack App you created, go to **Settings** and click **OAuth and Permissions**.
+   ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
+1. Check **Bot User Oauth Token** in **OAuth Tokens for Your Team**.
+
+   ![slack-bot-oauth-and-permissions](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions.png)
+
+There are two ways to set Signing Secret and Bot User OAuth Token: 1. Set them in the Management page 2. Set them with environment variables. It is easier to set them in the Management page. Also,
+in case that you input values in both the Management page and environment variable, the Management page value will take a priority. That's why settings in the Management page is recommended.
+
+1. How to set them in Management page
+
+Click on Slack integration in the Management page, input Signing Secret and Bot User OAuth Token, and click **Update**.
+
+<!-- 画像は後で差し替えます -->
+
+![slack-integration](../../../.vuepress/public/assets/images/slack-integration-introduction.png)
+
+1. How to set them with environment variables
+
+Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
 ### Official bot settings
 
@@ -178,13 +214,13 @@ For details on how to configure User Trigger Notification, please refer to here.
 
 1. If you input /growi search [keyword(s)], the search results will be displayed.
    - e.g. /growi search example
-     ![full-text-search-display-result-command](../../../.vuepress/public/assets/images/full-text-search-display-result-command.png)
+     ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
    - Search results.
-     ![full-text-search-display-result](../../../.vuepress/public/assets/images/full-text-search-display-result.png)
+     ![slack-bot-full-text-search-display-result](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result.png)
    - Click the **Next** button to display the next search result.
-     ![full-text-search-click-next](../../../.vuepress/public/assets/images/full-text-search-click-next.png)
+     ![slack-bot-full-text-search-click-next](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-next.png)
    - Click the **Share** button to share it within the channel.
-     ![full-text-search-click-share](../../../.vuepress/public/assets/images/full-text-search-click-share.png)
+     ![slack-bot-full-text-search-click-share](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-share.png)
 
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
