@@ -16,17 +16,13 @@ GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。
 
 Official GROWI bot は GROWI 開発チーム が無償で提供・運用している GROWI bot です。[slack app directory](https://wsgrowi.slack.com/apps) で公開されており、どなたでも利用できます。
 
-<!--以下の図は暫定的なものです。https://youtrack.weseek.co.jp/issue/GW-5421 で差し替えます。-->
-
-![bot-outline-proxy](../../../.vuepress/public/assets/images/bot-outline-proxy.png)
+![slack-bot-outline-official](../../../.vuepress/public/assets/images/slack-bot-outline-official.png)
 
 #### Custom bot(without-proxy)
 
 Custom bot(without-proxy) は Slack bot を作成し、お使いの GROWI と紐付けを行うことで、Slack から GROWI の 機能の一部を使用することができます。
 
-<!--以下の図は暫定的なものです。https://youtrack.weseek.co.jp/issue/GW-5421 で差し替えます。-->
-
-![bot-outline](../../../.vuepress/public/assets/images/bot-outline.png)
+![slack-bot-outline-without-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-without-proxy.png)
 
 #### Custom bot(with-proxy)
 
