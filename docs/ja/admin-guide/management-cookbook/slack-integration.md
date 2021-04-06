@@ -22,7 +22,7 @@ Official GROWI bot は GROWI 開発チーム が無償で提供・運用して�
 
 Custom bot(without-proxy) は Slack bot を作成し、お使いの GROWI と紐付けを行うことで、Slack から GROWI の 機能の一部を使用することができます。
 
-![slack-bot-outline-without-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-without-proxy.png)
+![slack-bot-outline-without-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
 
 #### Custom bot(with-proxy)
 
