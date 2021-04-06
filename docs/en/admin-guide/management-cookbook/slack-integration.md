@@ -18,7 +18,7 @@ Official bot is a free GROWI bot provided and operated by the GROWI development 
 
 <!--以下の図は暫定的なものです。https://youtrack.weseek.co.jp/issue/GW-5421 で差し替えます。-->
 
-![bot-outline-proxy](../../../.vuepress/public/assets/images/bot-outline-proxy.png)
+<!-- ![bot-outline-proxy](../../../.vuepress/public/assets/images/bot-outline-proxy.png) -->
 
 #### Custom bot(without-proxy)
 
@@ -26,7 +26,7 @@ Custom bot(without-proxy) allows you to create a Slack bot and link it to your G
 
 <!--以下の図は暫定的なものです。https://youtrack.weseek.co.jp/issue/GW-5421 で差し替えます。-->
 
-![bot-outline](../../../.vuepress/public/assets/images/bot-outline.png)
+<!-- ![bot-outline](../../../.vuepress/public/assets/images/bot-outline.png) -->
 
 #### Custom bot(with-proxy)
 
