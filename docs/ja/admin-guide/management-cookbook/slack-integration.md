@@ -8,23 +8,22 @@ GROWI では、 Slack 連携の方法として、1. GROWI bot と 2. Incoming We
 
 GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。任意の Slack ワークスペースにインストールすることで、GROWI からの通知だけでなくチャットからの全文検索実行や会話まとめなど様々な機能を利用することができるようになります。
 
-<!-- #### Official bot (推奨) -->
-
-![slack-bot-outline-official](../../../.vuepress/public/assets/images/slack-bot-outline-official.png)
+#### Official bot (推奨)
 
 ::: danger
 この項目の内容は、未実装です。
 :::
+![slack-bot-outline-official](../../../.vuepress/public/assets/images/slack-bot-outline-official.png)
 
 Official GROWI bot は GROWI 開発チーム が無償で提供・運用している GROWI bot です。[slack app directory](https://wsgrowi.slack.com/apps) で公開されており、どなたでも利用できます。
 
-<!-- #### Custom bot(without-proxy) -->
+#### Custom bot(without-proxy)
 
 ![slack-bot-outline-custom-without-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
 
 Custom bot(without-proxy) は Slack bot を作成し、お使いの GROWI と紐付けを行うことで、Slack から GROWI の 機能の一部を使用することができます。
 
-<!-- #### Custom bot(with-proxy) -->
+#### Custom bot(with-proxy)
 
 ![slack-bot-outline-custom-with-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-with-proxy.png)
 
