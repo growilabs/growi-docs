@@ -19,20 +19,20 @@ Official bot is a free GROWI bot provided and operated by the GROWI development 
 【Diagram】
 ![diagram-for-official-bot](../../../.vuepress/public/assets/images/slack-bot-outline-official.png)
 
-#### Custom bot(without-proxy)
+#### Custom bot withoutproxy
 
-Custom bot(without-proxy) allows you to create a Slack bot and link it to your GROWI so that you can use some of the GROWI features from Slack.
+Custom bot withoutproxy allows you to create a Slack bot and link it to your GROWI so that you can use some of the GROWI features from Slack.
 
 【Diagram】
 ![diagram-for-custom-bot-without-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
 
-#### Custom bot(with-proxy)
+#### Custom bot with proxy
 
 ::: danger
 This service has not been implemented yet.
 :::
 
-Custom bot(with-proxy) allows you to create a Slack bot, set up and configure a proxy server, and use some of the features of GROWI in the same way as the Official bot.
+Custom bot with proxy allows you to create a Slack bot, set up and configure a proxy server, and use some of the features of GROWI in the same way as the Official bot.
 
 【Diagram】
 ![diagram-for-custom-bot-with-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-with-proxy.png)
@@ -45,9 +45,9 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 
 <!-- [通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法). -->
 
-### Custom bot (without-proxy) Settings
+### Custom bot without proxy Settings
 
-To deploy a custom bot (without-proxy) in your Slack workspace, you need to create and edit a Slack app. The steps are as follows.
+To deploy a custom bot without proxy in your Slack workspace, you need to create and edit a Slack app. The steps are as follows.
 
 #### Create a Slack app
 
@@ -178,7 +178,7 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
 ### Official bot settings
 
-### Custom bot (with-proxy) settings
+### Custom bot with proxy settings
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
