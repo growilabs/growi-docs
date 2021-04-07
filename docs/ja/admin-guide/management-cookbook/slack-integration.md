@@ -14,35 +14,35 @@ GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。
 この項目の内容は、未実装です。
 :::
 【概念図】
-![slack-bot-outline-official](../../../.vuepress/public/assets/images/slack-bot-outline-official.png)
+![diagram-for-official-bot](../../../.vuepress/public/assets/images/slack-bot-outline-official.png)
 
 Official GROWI bot は GROWI 開発チーム が無償で提供・運用している GROWI bot です。[slack app directory](https://wsgrowi.slack.com/apps) で公開されており、どなたでも利用できます。
 
-#### Custom bot(without-proxy)
+#### Custom bot without-proxy
 
 【概念図】
-![slack-bot-outline-custom-without-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
+![diagram-for-custom-bot-without-bot](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
 
-Custom bot(without-proxy) は Slack bot を作成し、お使いの GROWI と紐付けを行うことで、Slack から GROWI の 機能の一部を使用することができます。
+Custom bot without-proxy は Slack bot を作成し、お使いの GROWI と紐付けを行うことで、Slack から GROWI の 機能の一部を使用することができます。
 
-#### Custom bot(with-proxy)
+#### Custom bot with-proxy
 
 【概念図】
-![slack-bot-outline-custom-with-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-with-proxy.png)
+![diagram-for-custom-bot-with-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-with-proxy.png)
 
 ::: danger
 この項目の内容は、未実装です。
 :::
 
-Custom bot(with-proxy) は Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、Official bot と同様の手順で GROWI の機能の一部を使用することができます。
+Custom bot with-proxy は Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、Official bot と同様の手順で GROWI の機能の一部を使用することができます。
 
 ### 2. Incoming Webhook
 
 Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot とは異なり、Slack への通知に特化しています。チャットからの全文検索など GROWI bot にある機能の多くは使うことができませんが、その分簡単にセットアップできます。詳しくは[通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法)をご覧ください。
 
-### Custom bot (without-proxy) 設定
+### Custom bot without-proxy 設定
 
-Custom bot (without-proxy) を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
+Custom bot without-proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
 
 #### Slack app を作成する
 
@@ -171,7 +171,7 @@ Signing Secret と Bot User OAuth Token の設定を行う前に、作成した 
 
 <!-- ### Official bot 設定 -->
 
-<!-- ### Custom bot (with-proxy) のセットアップ -->
+<!-- ### Custom bot with-proxy のセットアップ -->
 
 ### Incoming webhook のセットアップ
 
