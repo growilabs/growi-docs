@@ -19,9 +19,9 @@ Official bot is a free GROWI bot provided and operated by the GROWI development 
 【Diagram】
 ![diagram-for-official-bot](../../../.vuepress/public/assets/images/slack-bot-outline-official.png)
 
-#### Custom bot withoutproxy
+#### Custom bot without proxy
 
-Custom bot withoutproxy allows you to create a Slack bot and link it to your GROWI so that you can use some of the GROWI features from Slack.
+Custom bot without proxy allows you to create a Slack bot and link it to your GROWI so that you can use some of the GROWI features from Slack.
 
 【Diagram】
 ![diagram-for-custom-bot-without-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
