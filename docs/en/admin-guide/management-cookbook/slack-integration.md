@@ -17,14 +17,14 @@ This service has not been implemented yet.
 Official bot is a free GROWI bot provided and operated by the GROWI development team. It is available at [slack app directory](https://wsgrowi.slack.com/apps) and anyone can use this service.
 
 【Diagram】
-![slack-bot-outline-official](../../../.vuepress/public/assets/images/slack-bot-outline-official.png)
+![diagram-for-official-bot](../../../.vuepress/public/assets/images/slack-bot-outline-official.png)
 
 #### Custom bot(without-proxy)
 
 Custom bot(without-proxy) allows you to create a Slack bot and link it to your GROWI so that you can use some of the GROWI features from Slack.
 
 【Diagram】
-![slack-bot-outline-custom-without-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
+![diagram-for-custom-without-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
 
 #### Custom bot(with-proxy)
 
@@ -35,7 +35,7 @@ This service has not been implemented yet.
 Custom bot(with-proxy) allows you to create a Slack bot, set up and configure a proxy server, and use some of the features of GROWI in the same way as the Official bot.
 
 【Diagram】
-![slack-bot-outline-custom-with-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-with-proxy.png)
+![diagram-for-custom-with-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-with-proxy.png)
 
 ### 2. Incoming Webhooks
 
