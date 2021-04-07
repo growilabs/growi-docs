@@ -10,10 +10,6 @@ GROWI bots are Slack Apps developed by the GROWI development team. By installing
 
 #### Official bot 【Recommended】
 
-::: danger
-This service has not been implemented yet.
-:::
-
 Official bot is a free GROWI bot provided and operated by the GROWI development team. It is available at [slack app directory](https://wsgrowi.slack.com/apps) and anyone can use this service.
 
 【Diagram】
@@ -27,10 +23,6 @@ Custom bot without proxy allows you to create a Slack bot and link it to your GR
 ![diagram-for-custom-bot-without-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
 
 #### Custom bot with proxy
-
-::: danger
-This service has not been implemented yet.
-:::
 
 Custom bot with proxy allows you to create a Slack bot, set up and configure a proxy server, and use some of the features of GROWI in the same way as the Official bot.
 
