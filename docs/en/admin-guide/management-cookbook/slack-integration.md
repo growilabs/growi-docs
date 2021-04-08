@@ -79,7 +79,7 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
   1. Input the Request URL as follows.
 
      - https:// your GROWI domain /\_api/v3/slack-bot
-       - 例 https://example.com/_api/v3/slack-bot
+       - e.g. <https://example.com/_api/v3/slack-bot>
 
      ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
 
@@ -93,7 +93,11 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
   1. Turn on the button on the right side of **Interactivity**.
      ![slack-bot-interactivity-shortcuts-enable-button](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-enable-button.png)
 
-  1. For the Request URL, input the same one you inputted earlier.
+  1. Input the Request URL as follows.
+
+     - https:// your GROWI domain /\_api/v3/slack-bot
+       - e.g. <https://example.com/_api/v3/slack-bot/interactive>
+
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
   1. When you are done, click **Save Changes** button.
@@ -186,7 +190,7 @@ Set up a Slack workspace for notifications.
 - **Webhook URL**  
   You can get it at [Incoming Webhooks](https://slack.com/services/new/incoming-webhook).
 
-### Check if the settings are reflected.
+### Check if the settings are reflected
 
 After the above settings, a Slack notification form will be added to the edit mode screen of the page.
 
