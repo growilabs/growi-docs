@@ -74,9 +74,8 @@ Custom bot without proxy を Slack のワークスペースに導入するには
      ![slack-bot-event-subscriptions-enable-button](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-enable-button.png)
 
   1. Request URL を以下のように入力してください。
-
-     - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot
-       - 例 https://example.com/_api/v3/slack-bot
+      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot
+        - 例 <https://example.com/_api/v3/slack-bot>
 
      ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
 
@@ -90,7 +89,10 @@ Custom bot without proxy を Slack のワークスペースに導入するには
   1. **Interactivity** 右側にあるボタンを On にします。
      ![slack-bot-interactivity-shortcuts-enable-button](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-enable-button.png)
 
-  1. Request URL には先ほど入力したものと同じものを入力してください。
+  1. Request URL を以下のように入力してください。
+      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/interactive
+        - 例 <https://example.com/_api/v3/slack-bot/interactive>
+
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
   1. 入力が完了したら、**Save Changes** をクリックしてください。
