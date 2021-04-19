@@ -25,7 +25,7 @@ Enter a keyword in the search bar and press the Enter (return) key to move to th
   - The profile image of the last person who updated the page is displayed on the left side of the page name.
   - Click the page name to see a preview of that page on the right side of the screen.
   - On the right side of the page name, meta information such as the number of likes, comments, and privacy settings is displayed as an icon.
-  - You can set the display of pages with limited disclosure range from the security settings on the management screen.
+  - Visibility
   - You can move to that page from the icon on the right side of the list.
   - Press "Deletion Mode" at the top left of the list to enter page deletion mode, where you can delete the checked page.
 
