@@ -1,54 +1,49 @@
 # Search pages
 
-(TBD)
-
-[Japanese page](../../../../ja/guide/features/search.md) is archived.
-# ページを検索する
-
 :::warning
-この機能を利用するには、検索用DBとして Elasticsearch をセッティングする必要があります。設定方法は [こちら](../admin-guide/admin-cookbook/setting-elasticsearch.md)
+To use this function, it is required to set up Elastic search as a search DB. Check [this](../admin-guide/admin-cookbook/setting-elasticsearch.md) page to find out how.
 :::
 
-ページトップバーの検索バーから、ページパス、本文、タグによりページを検索することができます。(検索のための環境が未完了の場合は表示されません。)
+From the search bar on the top bar of the page, you can search for pages by page path, body, and tags. (It will not be displayed if the environment for searching is incomplete.)
 
 ![search1](./images/search1.png)
 
-検索バーにキーワードを入力すると、以下のようにページパスがキーワードと部分的に一致するページの候補が表示されます。この候補からページにアクセスすることができます。
+When you enter a keyword in the search bar, page candidates whose page path partially matches the keyword are displayed as shown below. You can access the page from this candidate.
 
-また、検索バーないの虫眼鏡アイコンもしくは Enter(return) キー押下により、ページパスまたは本文にキーワードを含むページが一覧表示されます。この時、検索バー左側のドロップダウンから「全てのページ」か「この階層下の子ページ」を選択することで、検索範囲を変更できます。
+Also, by pressing the magnifying glass icon on the search bar or pressing the Enter (return) key, pages containing keywords in the page path or body will be displayed in a list. At this time, you can change the search range by selecting "All pages" or "Child pages below this hierarchy" from the dropdown on the left side of the search bar.
 
 ![search2](./images/search2.png)
 
-## 検索結果ページ
-検索バーでキーワードを入力し、Enter(return) キーを押すと、以下のような検索結果一覧画面に遷移します。
+## Search result page
+Enter a keyword in the search bar and press the Enter (return) key to move to the search result list screen as shown below
 
 ![search3](./images/search3.png)
 
-- ページ名のリスト
-  - 画面左側に、検索にヒットしたページ名のリストが表示されます。
-  - ページ名の左側にはそのページの最終更新者のプロフィール画像が表示されます。
-  - ページ名のクリックすると画面右部にそのページのプレビューが表示されます。
-  - ページ名の右側にはそのページのいいね数、コメント数、公開範囲の有無などのメタ情報がアイコンで表示されます。
-    - 公開範囲が制限されているページの表示に関しては管理画面のセキュリティ設定から設定できます。
-  - リストの右側のアイコンからそのページに遷移することができます。
-  - リストの左上にある 「DeletionMode」を押すとページ削除モードになり、チェックマークをつけたページを削除することができます。
+- List of page names
+- A list of page names that hit the search is displayed on the left side of the screen.
+  - The profile image of the last person who updated the page is displayed on the left side of the page name.
+  - Click the page name to see a preview of that page on the right side of the screen.
+  - On the right side of the page name, meta information such as the number of likes, comments, and whether or not the page is open is displayed as an icon.
+    - You can set the display of pages with limited disclosure range from the security settings on the management screen.
+  - You can move to that page from the icon on the right side of the list.
+  - Press "Deletion Mode" at the top left of the list to enter page deletion mode, where you can delete the checked page.
 
   ![search4](./images/search4.png)
 
-- ページのプレビュー
-  - 画面右側には検索にヒットしたページパスのプレビューが表示されます。
-  - ページ名をクリックするとそのページに遷移することができます。
-  - ページが持っているタグも表示されます。
-  - そのページへの閲覧権限がない場合はプレビューは表示されません。
-
-### 検索オプション
-検索時は以下のような表記でオプションを指定できます。オプションは併用可能です。
-| オプション | 概要 | 
+- Page preview
+  - A preview of the page path that hit the search is displayed on the right side of the screen.
+  - You can move to that page by clicking the page name.
+  - The tags that the page has are also displayed.
+  - If you do not have permission to view the page, the preview will not be displayed.  - そのページへの閲覧権限がない場合はプレビューは表示されません。
+<!-- 
+### Search options
+When searching, you can specify options with the following notation. Options can be used together.
+| Options | Overview | 
 | --- | --- | --- |
-| 複数のキーワードによる検索  | スペースを挟んで複数単語を指定するとページ名か本文にそれら全てを含むページを検索します。<br />例えば `word1 word2` とすると、ページ名か本文に `word1` , `word2` の両方を含むページを検索します。|
-| 指定の文章を本文に含むページを検索 | ダブルクウォートで文章を挟むと、その文章を本文に含むページを検索します。<br />例えば、 `"This is GROWI"` とすると、 `"This is GROWI"` を本文に含むページを検索します。 |
-| キーワードによる除外 | 半角のハイフン `-` の後にキーワードを指定すると、ページ名か本文にそのキーワードを含むページを除外します。<br />例えば、 `-keyword` とすると、ページ名か本文に `keyword` を含むページを除外します。 |
-| ページ名の先頭一致による検索 | `prefix:` の後にページ名を指定すると、そのページ名から始まるページを検索します。<br />例えば、 `prefix:/user/` とすると、ページ名が `/user/` から始まるページを検索します。 |
-| ページ名の先頭一致による除外 | `-prefix:` の後にページ名を指定すると、そのページ名から始まるページを除外します。<br /> 例えば `-prefix:/user/` とすると、ページ名が `/user/` から始まるページを除外します。 |
-| タグによる検索 | `tag:` の後にタグを指定すると、そのタグを含むページを検索します。 <br />例えば `tag:wiki` とすると、 `wiki` というタグを含むページを検索します。 |
-| タグによる除外 | `-tag:` の後にタグを指定すると、そのタグを含むページを除外します。 例えば `-tag:wiki` とすると、 `wiki` というタグを含むページを除外します。 |
+| Search by multiple keywords | If you specify multiple words with a space in between, the page name or body will search for pages that include all of them. <br /> For example, `word1 word2` will search for pages that contain both` word1` and `word2` in the page name or body. |
+| Search for pages that include the specified text in the text | If you insert a text between double quotes, the page that contains that text in the text will be searched. <br /> For example, `" This is GROWI "` will search for pages that contain` "" This is GROWI "` in the body. |
+| Exclusion by keyword | If you specify a keyword after the half-width hyphen `-`, the page that contains the keyword in the page name or body is excluded. <br /> For example, `-keyword` excludes pages that contain` keyword` in the page name or body. |
+| Search by first match of page name | If you specify a page name after `prefix:`, the page starting with that page name is searched. <br /> For example, `prefix: / user /` finds pages whose page names start with `/ user /`. |
+| Exclusion by first match of page name | Specifying a page name after `-prefix:` excludes pages starting with that page name. <br /> For example, `-prefix: / user /` excludes pages whose page names start with `/ user /`. |
+| Search by tag | If you specify a tag after `tag:`, the page containing that tag will be searched. <br /> For example, `tag: wiki` will search for pages that contain the tag` wiki`. |
+| Exclude by tag | Specifying a tag after `-tag:` excludes pages that contain that tag. For example, `-tag: wiki` excludes pages that contain the tag` wiki`. | -->
