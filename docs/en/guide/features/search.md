@@ -15,16 +15,16 @@ By pressing the magnifying glass icon on the search bar or pressing the Enter (R
 ![search2](./images/search2.png)
 
 ## Search result page
-Enter a keyword in the search bar and press the Enter (return) key to move to the search result list screen as shown below
+Enter a keyword in the search bar and press the Enter (return) key to move to the search result page as shown below
 
 ![search3](./images/search3.png)
 
 - List of page names
-- A list of page names that hit the search is displayed on the left side of the screen.
+  - A list of page names that match the search is displayed on the left side of the screen.
   - The profile image of the last person who updated the page is displayed on the left side of the page name.
   - Click the page name to see a preview of that page on the right side of the screen.
   - On the right side of the page name, meta information such as the number of likes, comments, and whether or not the page is open is displayed as an icon.
-    - You can set the display of pages with limited disclosure range from the security settings on the management screen.
+  - You can set the display of pages with limited disclosure range from the security settings on the management screen.
   - You can move to that page from the icon on the right side of the list.
   - Press "Deletion Mode" at the top left of the list to enter page deletion mode, where you can delete the checked page.
 
