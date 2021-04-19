@@ -4,7 +4,7 @@
 To use this function, it is required to set up Elastic search as a search DB. Check [this](../admin-guide/admin-cookbook/setting-elasticsearch.md) page to find out how.
 :::
 
-From the search bar on the top bar of the page, you can search for pages by page path, body, and tags. (It will not be displayed if the environment for searching is incomplete.)
+From the search bar on the top bar of the page, enter a page path, text body, or tags to search for pages. (It will not be displayed if the setup is incomplete.)
 
 ![search1](./images/search1.png)
 
