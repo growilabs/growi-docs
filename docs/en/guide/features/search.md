@@ -1,14 +1,14 @@
 # Search pages
 
 :::warning
-To use this function, it is required to set up Elastic search as a search DB. <!-- Todo Insert link to elasticsearch settings: Check [this](../admin-guide/admin-cookbook/setting-elasticsearch.md) page to find out how. -->
+To use this function, setting up Elastic search as a search DB is required. <!-- Todo: Insert link to elasticsearch settings: Check [this](../admin-guide/admin-cookbook/setting-elasticsearch.md) page to find out how. -->
 :::
 
 From the search bar on the top bar of the page, enter a page path, text body, or tags to search for pages. (It will not be displayed if the setup is incomplete.)
 
 ![search1](./images/search1.png)
 
-When a keyword is entered in the search bar, page paths that partially match the keyword are displayed as shown below. Those pages can be accessed from the results.
+When a keyword is entered in the search bar, page paths that partially match the keyword are displayed as shown below. Those pages can be accessed from these results.
 
 By clicking the magnifying glass icon on the search bar or pressing the Enter (Return) key, pages containing the keywords in the page path or body will be displayed in a list. Change the scope of the search by selecting "All pages" or "Only children of this tree" from the dropdown on the left side of the search bar.
 
@@ -43,18 +43,11 @@ When searching, options can be specified with the following notation. Options ca
 
 | Options | Overview |
 | --- | --- |
-| Search by multiple keywords | If multiple words with space in between are entered, the page name or body will search for pages that include all of them. <br /> For example, `word1 word2` will search for pages that contain both`word1` and `word2` in the page name or body. |
- 
-
-| Search for pages that include the specified text in the body | If text is entered with double quotes, the page that contains that text in the page body will be searched. <br /> For example, `" This is GROWI "` will search for pages that contain`"This is GROWI "` in the body text. |
- 
-| Exclusion by keyword | If a keyword is specified after a half-width hyphen `-`, the page that contains the keyword in the page name or body is excluded. <br /> For example, `-keyword` excludes pages that contain`keyword` in the page name or body. |
- 
+| Search by multiple keywords | If multiple words with space in between are entered, the page name or body will search for pages that include all of them. <br /> For example, `word1 word2` will search for pages that contain both `word1` and `word2` in the page name or body. |
+| Search for pages that include the specified text in the body | If text is entered with double quotes, the page that contains that text in the page body will be searched. <br /> For example, `"This is GROWI "` will search for pages that contain`This is GROWI` in the body text. |
+| Exclusion by keyword | If a keyword is specified after a half-width hyphen `-`, the page that contains the keyword in the page name or body is excluded. <br /> For example, `-keyword` excludes pages that contain `keyword` in the page name or body. |
 | Search by the first match of the page name | If a page name is specified after `prefix:`, the page starting with that page name is searched. <br /> For example, `prefix: / user /` finds pages whose page names start with `/ user /`. |
- 
 | Exclusion by the first match of the page name | Specifying a page name after `-prefix:` excludes pages starting with that page name. <br /> For example, `-prefix: / user /` excludes pages whose page names start with `/ user /`. |
- 
-| Search by tag | If a tag is specified after `tag:`, the page containing that tag will be searched. <br /> For example, `tag: wiki` will search for pages that contain the tag`wiki`. |
- 
-| Exclude by tag | Specifying a tag after `-tag:` excludes pages that contain that tag. For example, `-tag: wiki` excludes pages that contain the tag`wiki`. |
+| Search by tag | If a tag is specified after `tag:`, the page containing that tag will be searched. <br /> For example, `tag: wiki` will search for pages that contain the tag `wiki`. |
+| Exclude by tag | Specifying a tag after `-tag:` excludes pages that contain that tag. For example, `-tag: wiki` excludes pages that contain the tag `wiki`. |
  
