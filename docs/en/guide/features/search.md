@@ -25,27 +25,36 @@ Enter a keyword in the search bar and press the Enter (return) key to move to th
   - The profile image of the last person who updated the page is displayed on the left side of the page name.
   - Click the page name to see a preview of that page on the right side of the screen.
   - On the right side of the page name, meta information such as the number of likes, comments, and privacy settings is displayed as an icon.
-  - Visibility
-  - You can move to that page from the icon on the right side of the list.
-  - Press "Deletion Mode" at the top left of the list to enter page deletion mode, where you can delete the checked page.
+  - Visibility of the restricted pages can be configured from security settings in the admin page.
+  - Click the icon on the right side of the list to go to the page.
+  - Click "DeletionMode" in the upper left corner of the list to enter the page deletion mode and delete the checked pages.
 
   ![search4](./images/search4.png)
 
 - Page preview
-  - A preview of the page path that hit the search is displayed on the right side of the screen.
+  - On the right side of the screen, a preview of the page path that matches the search is displayed.
   - You can move to that page by clicking the page name.
-  - The tags that the page has are also displayed.
-  - If you do not have permission to view the page, the preview will not be displayed.
+  - The tags that the page has will also be displayed.
+  - If the user does not have permission to view the page, the preview will not be displayed.
   
 ### Search options
 
-When searching, you can specify options with the following notation. Options can be used together.
+When searching, options can be specified with the following notation. Options can be used together.
+
 | Options | Overview |
 | --- | --- |
-| Search by multiple keywords | If you specify multiple words with a space in between, the page name or body will search for pages that include all of them. <br /> For example, `word1 word2` will search for pages that contain both`word1` and `word2` in the page name or body. |
-| Search for pages that include the specified text in the text | If you insert a text between double quotes, the page that contains that text in the text will be searched. <br /> For example, `" This is GROWI "` will search for pages that contain`"" This is GROWI "` in the body. |
-| Exclusion by keyword | If you specify a keyword after the half-width hyphen `-`, the page that contains the keyword in the page name or body is excluded. <br /> For example, `-keyword` excludes pages that contain`keyword` in the page name or body. |
-| Search by first match of page name | If you specify a page name after `prefix:`, the page starting with that page name is searched. <br /> For example, `prefix: / user /` finds pages whose page names start with `/ user /`. |
-| Exclusion by first match of page name | Specifying a page name after `-prefix:` excludes pages starting with that page name. <br /> For example, `-prefix: / user /` excludes pages whose page names start with `/ user /`. |
-| Search by tag | If you specify a tag after `tag:`, the page containing that tag will be searched. <br /> For example, `tag: wiki` will search for pages that contain the tag`wiki`. |
+| Search by multiple keywords | If multiple words with space in between are entered, the page name or body will search for pages that include all of them. <br /> For example, `word1 word2` will search for pages that contain both`word1` and `word2` in the page name or body. |
+ 
+
+| Search for pages that include the specified text in the body | If text is entered with double quotes, the page that contains that text in the page body will be searched. <br /> For example, `" This is GROWI "` will search for pages that contain`"This is GROWI "` in the body text. |
+ 
+| Exclusion by keyword | If a keyword is specified after a half-width hyphen `-`, the page that contains the keyword in the page name or body is excluded. <br /> For example, `-keyword` excludes pages that contain`keyword` in the page name or body. |
+ 
+| Search by the first match of the page name | If a page name is specified after `prefix:`, the page starting with that page name is searched. <br /> For example, `prefix: / user /` finds pages whose page names start with `/ user /`. |
+ 
+| Exclusion by the first match of the page name | Specifying a page name after `-prefix:` excludes pages starting with that page name. <br /> For example, `-prefix: / user /` excludes pages whose page names start with `/ user /`. |
+ 
+| Search by tag | If a tag is specified after `tag:`, the page containing that tag will be searched. <br /> For example, `tag: wiki` will search for pages that contain the tag`wiki`. |
+ 
 | Exclude by tag | Specifying a tag after `-tag:` excludes pages that contain that tag. For example, `-tag: wiki` excludes pages that contain the tag`wiki`. |
+ 
