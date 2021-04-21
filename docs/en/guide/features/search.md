@@ -1,6 +1,6 @@
 # Search pages
 :::warning
-To use this function, setting up Elastic search as a search DB is required. <!-- Todo: Insert link to elasticsearch settings: Check [this](../admin-guide/admin-cookbook/setting-elasticsearch.md) page to find out how. -->
+To use this function, setting up Elasticsearch as a as a search-engine database is required. <!-- Todo: Insert link to elasticsearch settings: Check [this](../admin-guide/admin-cookbook/setting-elasticsearch.md) page to find out how. -->
 :::
 
 From the search bar on the top bar of the page, enter a page path, text body, or tags to search for pages. (It will not be displayed if the setup is incomplete.)
@@ -19,7 +19,7 @@ Enter a keyword in the search bar and press the Enter (return) key to move to th
 ![search3](./images/search3.png)
 
 - List of page names
-  - A list of page names that were found in the search are displayed on the left side of the screen.
+  - A list of page names that were found in the search is displayed on the left side of the screen.
   - The profile image of the last person who updated the page is displayed on the left side of the page name.
   - Click the page name to see a preview of that page on the right side of the screen.
   - On the right side of the page name, meta information such as the number of likes, comments, and privacy settings is displayed as an icon.
@@ -29,8 +29,8 @@ Enter a keyword in the search bar and press the Enter (return) key to move to th
 
   ![search4](./images/search4.png)
 
-- Page preview
-  - The preview of the pages that were found in the search are displayed on the right side of the screen.
+- Page previews
+  - The previews of the pages that were found in the search are displayed on the right side of the screen.
   - Click the page name to move to that page.
   - The tags that the page has will also be displayed.
   - If the user does not have permission to view the page, the preview will not be displayed.
