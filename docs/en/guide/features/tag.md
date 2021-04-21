@@ -1,68 +1,71 @@
-# タグを利用する
+# Using Tags
 
-GROWI ではページパスという階層構造でページを管理するのが一般的ですが、ページに対してタグを付けることで、横断的に属性を持たせた管理も可能です。
+In GROWI, pages are generally managed using a hierarchical structure called page paths, but it is also possible to manage pages with cross-cutting attributes by attaching tags to them.
 
-タグを利用すれば特定のページを検索しやすくなります。
+Tags make it easier to search for specific pages.
 
-ここではタグの使い方を説明します。
+Here is an explanation of how to use tags.
 
-## ページにタグを付ける
+## Tagging a page
 
-タグを付けたいページへ移動します。  
-下記の画像の通り、ページ左上側に「タグを付ける　＋」のリンクがあります。
+Go to the page where you want to add a tag.  
+As you can see in the image below, there is a "Add Tag +" link on the upper left side of the page.
 
-![](./images/tag1.png)
-
-
-ページの「タグを付ける　＋」のリンクをクリックして、タグを追加できます。  
-リンクをクリックすると下記の画像のようにタグ編集用のウィンドウが表示されます。
-
-![](./images/tag2.png)
-
-この入力欄で、タグとして利用したい単語を入力し、下記の画像の赤丸部分をクリックするか、Enter キーを入力します。
-
-![](./images/tag3.png)
+! [](. /images/tag1.png)
 
 
-すると、下記の画像のように、単語が色付けされます。
+You can add a tag by clicking on the "Add a tag +" link on the page.  
+When you click on the link, a window for editing tags will appear as shown in the image below.
 
-![](./images/tag4.png)
+! [](. /images/tag2.png)
 
+In this input field, type the word you want to use as a tag, then click on the red circle in the image below or press Enter.
 
-この状態がタグとして設定可能な状態です。日本語のタグも利用可能です。  
-複数同時にタグとして追加可能で、各タグの×ボタンでタグの削除編集も出来ます。
-
-![](./images/tag5.png)
-
-ページに付けたいタグの設定が出来たら、下記の画像の通り Done ボタンをクリックします。
-
-![](./images/tag6.png)
-
-Done ボタンクリックにより、ページにタグが設定され、リンクの文言が「タグを編集する　＋」に更新されます。  
-ページに付いたタグは、クリックすると検索が実行されます。
-
-![](./images/tag7.png)
-
-ページに付いたタグをクリックした結果、タグを対象にページ検索が実行されます。  
-検索結果には、同じタグが付いたページが表示されます。
-
-![](./images/tag8.png)
+! [](. /images/tag3.png)
 
 
-## タグで検索する
+The word will then be colored, as shown in the image below.
 
-GROWI のヘッダーメニューにある検索ボックスからも、タグを対象に検索が可能です。  
-検索ボックスにカーソルを当てると、下記の画像にある通り検索のヘルプが表示されます。  
-
-![](./images/tagsearch1.png)
-
-tag 検索の使い方として `tag:日本語` などの入力形式でタグを対象とした検索が可能です。
-
-![](./images/tagsearch2.png)
-
-先ほど設定したタグが付いたページが検索結果に表示されます。
-
-![](./images/tagsearch3.png)
+! [](. /images/tag4.png)
 
 
-タグ機能も使いこなして、GROWI をより発展させましょう。
+This is the state that can be set as a tag. Japanese tags are also available.  
+You can add multiple tags at the same time, and you can delete or edit tags by clicking the X button on each tag.
+
+You can also delete and edit tags by clicking the X button on each tag. [](. /images/tag5.png)
+
+Once you have set up the tags you want to add to the page, click the Done button as shown in the image below.
+
+! [](. /images/tag6.png)
+
+When you click the Done button, the page will be tagged and the link will be updated to say "Edit Tags +".  
+The tags on the page will be searched when clicked.
+
+! [](. /images/tag7.png)
+
+As a result of clicking on a tag attached to a page, a page search will be performed on the tag.  
+The search results will show the pages with the same tag.
+
+! [](. /images/tag8.png)
+
+
+## Search by tag
+
+The search box in the header menu of GROWI also allows you to search for tags.  
+Hovering over the search box will display help for searching, as shown in the image below.  
+
+! [](. /images/tagsearch1.png)
+
+As a usage of `tag search', you can search for tags by using input format such as `tag:Japanese`.
+
+! [](. /images/tagsearch2.png)
+
+Pages with the tags you have just set will be displayed in the search results.
+
+! [](. /images/tagsearch3.png)
+
+
+Let's use the tag function to further develop GROWI.
+
+
+Translated with www.DeepL.com/Translator (free version)
