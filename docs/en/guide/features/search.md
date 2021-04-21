@@ -1,5 +1,4 @@
 # Search pages
-
 :::warning
 To use this function, setting up Elastic search as a search DB is required. <!-- Todo: Insert link to elasticsearch settings: Check [this](../admin-guide/admin-cookbook/setting-elasticsearch.md) page to find out how. -->
 :::
@@ -15,7 +14,6 @@ By clicking the magnifying glass icon on the search bar or pressing the Enter (R
 ![search2](./images/search2.png)
 
 ## Search result page
-
 Enter a keyword in the search bar and press the Enter (return) key to move to the search result page as shown below
 
 ![search3](./images/search3.png)
@@ -38,7 +36,6 @@ Enter a keyword in the search bar and press the Enter (return) key to move to th
   - If the user does not have permission to view the page, the preview will not be displayed.
   
 ### Search options
-
 When searching, options can be specified with the following notation. Options can be used together.
 
 | Options | Overview |
