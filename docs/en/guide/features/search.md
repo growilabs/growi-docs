@@ -25,7 +25,7 @@ Enter a keyword in the search bar and press the Enter (return) key to move to th
   - The profile image of the last person who updated the page is displayed on the left side of the page name.
   - Click the page name to see a preview of that page on the right side of the screen.
   - On the right side of the page name, meta information such as the number of likes, comments, and privacy settings is displayed as an icon.
-  - Visibility of the restricted pages can be configured from security settings in the admin page.
+    - Visibility of the restricted pages can be configured from security settings in the admin page.
   - Click the icon on the right side of the list to go to the page.
   - Click "DeletionMode" in the upper left corner of the list to enter the page deletion mode and delete the checked pages.
 
