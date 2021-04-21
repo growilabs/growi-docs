@@ -1,9 +1,9 @@
 # Search pages
 :::warning
-To use this function, setting up Elasticsearch as a as a search-engine database is required. <!-- Todo: Insert link to elasticsearch settings: Check [this](../admin-guide/admin-cookbook/setting-elasticsearch.md) page to find out how. -->
+To use this function, setting up Elasticsearch as a search-engine database is required. <!-- Todo: Insert link to elasticsearch settings: Check [this](../admin-guide/admin-cookbook/setting-elasticsearch.md) page to find out how. -->
 :::
 
-From the search bar on the top bar of the page, enter a page path, text body, or tags to search for pages. (It will not be displayed if the setup is incomplete.)
+From the search bar on the Navbar, enter a page path, text body, or tags to search for pages. (It will not be displayed if the setup is incomplete.)
 
 ![search1](./images/search1.png)
 
@@ -46,5 +46,4 @@ When searching, options can be specified with the following notation. Options ca
 | Search by the first match of the page name | If a page name is specified after `prefix:`, pages starting with that page name is searched. <br /> For example, `prefix:/user/` finds pages whose page names start with `/user/`. |
 | Exclusion by the first match of the page name | Specifying a page name after `-prefix:` excludes pages starting with that page name. <br /> For example, `-prefix:/user/` excludes pages whose page names start with `/user/`. |
 | Search by tag | If a tag is specified after `tag:`, the page containing that tag will be searched. <br /> For example, `tag:wiki` will search for pages that contain the tag `wiki`. |
-| Exclude by tag | Specifying a tag after `-tag:` excludes pages that contain that tag. For example, `-tag:wiki` excludes pages that contain the tag `wiki`. |
- 
+| Exclusion by tag | Specifying a tag after `-tag:` excludes pages that contain that tag. For example, `-tag:wiki` excludes pages that contain the tag `wiki`. |
