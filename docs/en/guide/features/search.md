@@ -9,12 +9,12 @@ From the search bar on the top bar of the page, enter a page path, text body, or
 
 When a keyword is entered in the search bar, page paths that partially match the keyword are displayed as shown below. Those pages can be accessed from these results.
 
-By clicking the magnifying glass icon on the search bar or pressing the Enter (Return) key, pages containing the keywords in the page path or body will be displayed in a list. Change the scope of the search by selecting "All pages" or "Only children of this tree" from the dropdown on the left side of the search bar.
+In addition, clicking the magnifying glass icon on the search bar or pressing the Enter (Return) key will display a list of pages that contain the keyword in the page path or text. At this time, you can change the search range by selecting "All pages" or "Only children of this tree" from the drop-down menu on the left side of the search bar.
 
 ![search2](./images/search2.png)
 
 ## Search result page
-Enter a keyword in the search bar and press the Enter (return) key to move to the search result page as shown below
+Enter a keyword in the search bar and press the Enter (return) key to move to the search result page as shown below.
 
 ![search3](./images/search3.png)
 
