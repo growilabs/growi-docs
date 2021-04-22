@@ -8,12 +8,12 @@ This section explains how to use tags.
 
 ## Tagging a page
 
-Navigate to the page where the tags are going to be added.
+Navigate to the page where the tags are going to be added. <br/>
 As shown in the image below, there is a "Add tags for this page +" button on the upper left side of the page.
 
 ![](./images/tag1.png)
 
-Click the "Add tags for this page +" button to add tags to the page.  
+Click the "Add tags for this page +" button to add tags to the page. <br/>
 When clicked, a window for editing tags will appear as shown in the image below.
 
 ![](./images/tag2.png)
@@ -26,7 +26,7 @@ The word will then be highlighted, as shown in the image below.
 
 ![](./images/tag4.png)
 
-This is the state in which tags are ready to be set. Japanese tags could also be added.
+This is the state in which tags are ready to be set. Japanese tags could also be added. <br/>
 Multiple tags can be added at the same time and can be deleted or edited by clicking the X button on each tag.
 
 ![](./images/tag5.png)
@@ -35,19 +35,19 @@ Once the tags have been set up, click the Done button as shown in the image belo
 
 ![](./images/tag6.png)
 
-Clicking the Done button will successfully add the tags to the page.
+Clicking the Done button will successfully add the tags to the page. <br/>
 Tags attached to a page can be clicked to perform a search.
 
 ![](./images/tag7.png)
 
-Clicking on a tag attached to a page will perform a search using the tag.  
+Clicking on a tag attached to a page will perform a search using the tag. <br/>
 Pages with the same tag will be displayed in the search results.
 
 ![](./images/tag8.png)
 
 ## Search by tag
 
-The search box in the Navbar can also be used to search for tags.  
+The search box in the Navbar can also be used to search for tags. <br/>
 Hovering over the search box will display a guide when searching, as shown in the image below.
 
 ![](./images/tagsearch1.png)
