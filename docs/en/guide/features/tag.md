@@ -17,13 +17,11 @@ When clicked, a window for editing tags will appear as shown in the image below.
 In this input field, type the word to use as a tag, then click on the desired tag as shown in the red circle below, or press Enter.
 ![](./images/tag3.png)
 
-
 The word will then be highlighted, as shown in the image below.
 ![](./images/tag4.png)
 
-
-This is the state that can be set as a tag. Japanese tags are also available.  
-You can add multiple tags at the same time, and you can delete or edit tags by clicking the X button on each tag.
+This is the state in which tags are ready to be set. Japanese tags could also be used.
+Multiple tags can be added at the same time, and can be deleted or edited by clicking the X button on each tag.
 
 You can also delete and edit tags by clicking the X button on each tag. 
 ![](./images/tag5.png)
