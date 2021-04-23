@@ -48,7 +48,7 @@ Pages with the same tag will be displayed in the search results.
 ## Searching by tag
 
 The search box in the Navbar can also be used to search for tags.  
-Focusing over the search box will display a guide when searching, as shown in the image below.
+Focusing on the search box will display a guide when searching, as shown in the image below.
 
 ![](./images/tagsearch1.png)
 
