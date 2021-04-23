@@ -31,7 +31,7 @@ Multiple tags can be added at the same time and can be deleted or edited by clic
 
 ![](./images/tag5.png)
 
-Once the tags have been set up, click the Done button as shown in the image below.
+When the tags have been set, click the "Done" button as shown in the image below.
 
 ![](./images/tag6.png)
 
