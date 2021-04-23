@@ -45,7 +45,7 @@ Pages with the same tag will be displayed in the search results.
 
 ![](./images/tag8.png)
 
-## Search by tag
+## Searching by tag
 
 The search box in the Navbar can also be used to search for tags. <br/>
 Hovering over the search box will display a guide when searching, as shown in the image below.
