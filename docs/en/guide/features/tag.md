@@ -9,7 +9,7 @@ This section explains how to use tags.
 ## Tagging a page
 
 Navigate to the page where the tags are going to be added. <br/>
-As shown in the image below, there is a "Add tags for this page +" button on the upper left side of the page.
+As shown in the image below, there is an "Add tags for this page +" button on the upper left side of the page.
 
 ![](./images/tag1.png)
 
