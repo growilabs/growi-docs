@@ -136,7 +136,7 @@ HackMD モードで Windows なら Ctrl + S キー、Mac なら Command + S キ�
 ページ編集情報が競合し、HackMD 側で更新ボタンが機能しなくなります。
 
 この状態では、ページ更新を行った後も HackMD モードでは編集を開始することができず、  
-`DRAFT MEY BE OUTDATED` のアラートが表示されます。
+`DRAFT MAY BE OUTDATED` のアラートが表示されます。
 
 ![](./images/HackMD8.png)
 
