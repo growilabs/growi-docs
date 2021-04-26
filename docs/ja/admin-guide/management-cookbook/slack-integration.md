@@ -56,9 +56,10 @@ Custom bot without proxy を Slack のワークスペースに導入するには
    ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
 1. **Add an OAuth Scope** をクリックします。
    ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets/images/slack-bot-scope-add-oauth-click.png)
-1. commands と chat: write を選択します。
+1. **commands**, **chat:write**, **team:read** を選択します。
    ![slack-bot-scope-select-commands](../../../.vuepress/public/assets/images/slack-bot-scope-select-commands.png)
    ![slack-bot-scope-select-chat-write](../../../.vuepress/public/assets/images/slack-bot-scope-add-chat-write.png)
+   ![slack-bot-scope-select-team-read](../../../.vuepress/public/assets/images/slack-bot-scope-add-team-read.png)
 
 1. 以下のように表示されたら、スコープの設定は完了です。
    ![slack-bot-scope-selected](../../../.vuepress/public/assets/images/slack-bot-scope-selected.png)
