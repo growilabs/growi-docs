@@ -9,7 +9,7 @@ This section will explain how to use it.
 
 HackMD is an open source tool that allows multiple people to edit a document written in Markdown and preview it in real time.
 
-By linking with HackMD, GROWI allows multiple people to edit a document under GROWI control at the same time.
+By linking with HackMD, GROWI allows multiple people to edit a document within GROWI at the same time.
 
 
 ## Setting up HackMD
@@ -31,7 +31,7 @@ HackMD can be used by one person, but the following section explains how to use 
 
 
 ### Start editing in HackMD mode
-User A and User B will be editing the same page at the same time.
+User A and User B will edit the same page at the same time.
 
 1. User A clicks on the tab `HackMD` in the Edit Page section.
 
@@ -39,7 +39,7 @@ User A and User B will be editing the same page at the same time.
 
    ![](./images/HackMD2.png)
 
-1. click on the `Start to edit with HackMD` button
+2. Click on the `Start to edit with HackMD` button
 
    Click on it to start editing in HackMD mode, as shown in the image below.
 
@@ -135,5 +135,5 @@ If this message appears,
 and start editing from the latest version of the page.
 because the update (saving) in normal editing mode takes precedence over editing in HackMD mode.  
 
-This will discard any edits made on HackMD.
+**This will discard any edits made on HackMD.**
 :::
