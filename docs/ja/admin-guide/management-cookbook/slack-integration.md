@@ -37,8 +37,11 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 Custom bot without proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
 
+#### Slack app を作成する前に
+
+GROWI 本体サーバーを立ち上げてください。後述する Event Subscription の応答に必要となります。
+
 #### Slack app を作成する
-1. Slack app を作成する前に、GORWI 本体サーバーを立ち上げてください。これは、後述する Event Subscription に応答するために必要となります。
 
 1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
 
