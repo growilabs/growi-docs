@@ -117,7 +117,7 @@ Start up the GROWI main server to respond to the Event Subscription described be
 ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
 - Input /growi for Command.
-- For RequestURL, input the same Request URL you set above.
+- For RequestURL, input **https://example.com/_api/v3/slack-bot/commands**.
 - Short Description is also required, so please input an appropriate description.
 - The Usage Hint is optional, so please input it accordingly.
 - The Escape channels, users, and links sent to your app is optional, so input it accordingly.
