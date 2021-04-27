@@ -40,7 +40,7 @@ HackMD は一人でも利用できますが、ここでは 2つのユーザー�
 
    クリックすると、`HackMD is READY!` という表示と、`Start to edit with HackMD` のボタンが表示されます。
 
-   ![](./images/HackMD2.png)
+   ![](./images/HackMD2-6.png)
 
 1. `Start to edit with HackMD` のボタンをクリック
 
@@ -67,7 +67,7 @@ HackMD は一人でも利用できますが、ここでは 2つのユーザー�
 すると、ユーザー A の時と同様の `Start to edit with HackMD` のボタンが表示されるか、  
 `Resume to edit with HackMD` のボタンと `Discard changes of HackMD` のボタンが並んだ画面が表示されます。
 
-![](./images/HackMD6.png)
+![](./images/HackMD2-6.png)
 
 ![](./images/HackMD7.png)
 
