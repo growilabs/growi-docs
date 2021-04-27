@@ -98,6 +98,8 @@ Custom bot without proxy を Slack のワークスペースに導入するには
 
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
+  1. 入力が完了したら、**Save Changes** をクリックしてください。
+
 #### スラッシュコマンドの作成
 
 1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
