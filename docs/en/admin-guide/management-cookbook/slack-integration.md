@@ -83,7 +83,7 @@ Start up the GROWI main server to respond to the Event Subscription described be
   1. Input the Request URL as follows.
 
      - https:// your GROWI domain /\_api/v3/slack-bot/commands
-       - e.g. <https://example.com/_api/v3/slack-bot/commands>
+       - e.g. **https://example.com/_api/v3/slack-bot/commands**
 
      ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
 
@@ -100,7 +100,7 @@ Start up the GROWI main server to respond to the Event Subscription described be
   1. Input the Request URL as follows.
 
      - https:// your GROWI domain /\_api/v3/slack-bot/interactions
-       - e.g. <https://example.com/_api/v3/slack-bot/interactions>
+       - e.g. **https://example.com/_api/v3/slack-bot/interactions**
 
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
