@@ -104,7 +104,7 @@ Start up the GROWI main server to respond to the Event Subscription described be
 
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
-  1. When you are done, click **Save Changes** button.
+  1. When the input is complete and **Verified** is displayed, the communication from the Slack APP to the GROWI server has been successful.
 
 #### Create Slash Commands
 
