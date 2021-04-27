@@ -85,7 +85,7 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 
      ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
 
-  1. 入力が完了し **Verified** が表示されたら、Slack api から GROWI サーバーへの通信は成功しています。
+  1. 入力が完了し **Verified** が表示されたら、Slack APP から GROWI サーバーへの通信は成功しています。
 
 - **Interactivity & Shortcuts** の Request URL を設定する
 
