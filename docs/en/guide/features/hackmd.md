@@ -99,7 +99,7 @@ Pressing the `Start to edit with HackMD` button after pressing the `Discard` but
 
 ## Simultaneous editing of articles
 
-More than one user can edit an article at the same time.
+One or more users can edit an article at the same time.
 
 When two users operate at the same time, it will look like the following.
 
@@ -116,11 +116,11 @@ When two users operate at the same time, it will look like the following.
 Multiple cursors will appear and the document could be edited at the same time.
 
 
-## Save edits
+## Saving edits
 
-When a user presses the "Refresh" button, the edits of all users will be saved to the page.
+When a user presses the "Update" button, the edits of all users will be saved to the page.
 
-The user who presses the Refresh button will switch from HackMD mode to Browse mode, while the other users will continue to edit the page.
+The user who presses the Update button will switch from HackMD mode to View mode, while the other users will continue to edit the page.
 
 Pressing Ctrl+S on Windows or Command+S on Mac while in HackMD mode will save the page while in HackMD mode.
 
