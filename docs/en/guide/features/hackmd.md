@@ -38,7 +38,7 @@ User A and User B will edit the same page at the same time.
 
    When clicked, the message `HackMD is READY!` and the button `Start to edit with HackMD` will be displayed.
 
-   ![](./images/HackMD2.png)
+   ![](./images/HackMD2-6.png)
 
 2. Click on the `Start to edit with HackMD` button
 
@@ -64,7 +64,7 @@ At this point, select the HackMD part in the view/edit/HackMD tab, or click the 
 
 The same `Start to edit with HackMD` button as for user A will then appear, or a screen with a `Resume to edit with HackMD` button and a `Discard changes of HackMD` button will appear.
 
-![](./images/HackMD6.png)
+![](./images/HackMD2-6.png)
 
 ![](./images/HackMD7.png)
 
