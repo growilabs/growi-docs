@@ -31,6 +31,7 @@ HackMD can be used by one person, but the following section explains how to use 
 
 
 ### Start editing in HackMD mode
+
 User A and User B will edit the same page at the same time.
 
 1. User A clicks on the tab `HackMD` in the Edit Page section.
@@ -48,6 +49,7 @@ User A and User B will edit the same page at the same time.
 This is all it takes to edit the page in HackMD mode.
 
 User B will then join this page as a second editor.
+
 
 ### Second and subsequent participants
 
@@ -81,6 +83,7 @@ If another user is already editing a page with HackMD, and the HackMD button is 
 
 Open a page in HackMD mode by taking over the edits of another user who is editing the page in HackMD mode.
 
+
 ### `Discard changes of HackMD` button
 
 Discard the unsaved edits of another user who is currently editing the page and open the page in HackMD mode
@@ -100,9 +103,11 @@ More than one user can edit an article at the same time.
 
 When two users operate at the same time, it will look like the following.
 
+
 ### User A's editing screen
 
 ![](./images/HackMD_editing1.gif)
+
 
 ### User B's editing screen
 
@@ -118,6 +123,7 @@ When a user presses the "Refresh" button, the edits of all users will be saved t
 The user who presses the Refresh button will switch from HackMD mode to Browse mode, while the other users will continue to edit the page.
 
 Pressing Ctrl+S on Windows or Command+S on Mac while in HackMD mode will save the page while in HackMD mode.
+
 
 ## Precautions when using HackMD mode
 
