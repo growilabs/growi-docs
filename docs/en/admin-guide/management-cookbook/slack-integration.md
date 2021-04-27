@@ -59,9 +59,10 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
    ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
 1. Click the **Add an OAuth Scope** button.
    ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets//images/slack-bot-scope-add-oauth-click.png)
-1. Select **commands** and **chat: write**.
+1. Select **commands**,**chat: write** and **team:read**.
    ![slack-bot-scope-select-commands](../../../.vuepress/public/assets//images/slack-bot-scope-select-commands.png)
    ![slack-bot-scope-select-chat-write](../../../.vuepress/public/assets//images/slack-bot-scope-add-chat-write.png)
+   ![slack-bot-scope-select-team-read](../../../.vuepress/public/assets/images/slack-bot-scope-add-team-read.png)
 
 1. When the following OAuth Scope is displayed, the scope setting will be completed.
    ![slack-bot-scope-selected](../../../.vuepress/public/assets//images/slack-bot-scope-selected.png)
