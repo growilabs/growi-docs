@@ -80,7 +80,7 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 
   1. Request URL を以下のように入力してください。
 
-      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot
+      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/commands
         - 例 **https://example.com/_api/v3/slack-bot/commands**
 
      ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
