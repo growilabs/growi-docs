@@ -77,11 +77,11 @@ Custom bot without proxy を Slack のワークスペースに導入するには
   1. Request URL を以下のように入力してください。
 
       - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot
-        - 例 <https://example.com/_api/v3/slack-bot>
+        - 例 **https://example.com/_api/v3/slack-bot/commands**
 
      ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
 
-  1. 入力が完了したら、**Save Changes** をクリックしてください。
+  1. 入力が完了し **Verified** が表示されたら、Slack api から GROWI サーバーへの通信は成功しています。
 
 - **Interactivity & Shortcuts** の Request URL を設定する
 
@@ -93,12 +93,12 @@ Custom bot without proxy を Slack のワークスペースに導入するには
 
   1. Request URL を以下のように入力してください。
 
-      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/interactive
-        - 例 <https://example.com/_api/v3/slack-bot/interactive>
+      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/interactions
+        - 例 **https://example.com/_api/v3/slack-bot/interactions**
 
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
-  1. 入力が完了したら、**Save Changes** をクリックしてください。
+  1. 
 
 #### スラッシュコマンドの作成
 
@@ -111,7 +111,7 @@ Custom bot without proxy を Slack のワークスペースに導入するには
 ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
 - Command に /growi と入力してください。
-- RequestURL には、上記で設定した Request URL と同じものを入力してください
+- RequestURL には、 **https://example.com/_api/v3/slack-bot/commands** と入力してください
 - Short Description も入力必須のため、適当なご説明を入力してください。
 - Usage Hint に関しては任意なので、適宜入力してください。
 - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
