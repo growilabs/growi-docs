@@ -57,7 +57,7 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 #### スコープを設定する
 
 1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
-   ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
+   ![slack-bot-oauth-and-permissions-introduction-no-check](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction-no-check.png)
 1. **Add an OAuth Scope** をクリックします。
    ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets/images/slack-bot-scope-add-oauth-click.png)
 1. **commands**, **chat:write**, **team:read** を選択します。
