@@ -50,9 +50,9 @@ Start up the GROWI main server to respond to the Event Subscription described be
 
    ![slack-custom-bot1](../../../.vuepress/public/assets/images/slack-custom-bot1.png)
 
-2. In the [Create a Slack App] section, ① input the name of your app in the [App Name] field and ② select the workspace where you want to add the GROWI bots in the [Development Slack Workspace].
+1. In the [Create a Slack App] section, ① input the name of your app in the [App Name] field and ② select the workspace where you want to add the GROWI bots in the [Development Slack Workspace].
 
-3. Click the [Create App].
+1. Click the [Create App].
 
    ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
 
@@ -82,8 +82,8 @@ Start up the GROWI main server to respond to the Event Subscription described be
 
   1. Input the Request URL as follows.
 
-     - https:// your GROWI domain /\_api/v3/slack-bot
-       - e.g. <https://example.com/_api/v3/slack-bot>
+     - https:// your GROWI domain /\_api/v3/slack-bot/commands
+       - e.g. <https://example.com/_api/v3/slack-bot/commands>
 
      ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
 
