@@ -33,6 +33,7 @@ Custom bot with proxy は Slack bot を作成し、proxy サーバーを立ち�
 
 Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot とは異なり、Slack への通知に特化しています。チャットからの全文検索など GROWI bot にある機能の多くは使うことができませんが、その分簡単にセットアップできます。詳しくは[通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法)をご覧ください。
 
+## 各種 Bot のセットアッップ
 ### Custom bot without proxy 設定
 
 Custom bot without proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
@@ -171,10 +172,10 @@ Signing Secret と Bot User OAuth Token の設定を行う前に、作成した 
 
 環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
 
-<!-- ### Official bot 設定 -->
-
-<!-- ### Custom bot with proxy のセットアップ -->
-
+### Official bot のセットアップ
+(TBD)
+### Custom bot with proxy のセットアップ
+(TBD)
 ### Incoming webhook のセットアップ
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
