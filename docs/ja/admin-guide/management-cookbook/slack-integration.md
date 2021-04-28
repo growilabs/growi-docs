@@ -33,9 +33,14 @@ Custom bot with proxy は Slack bot を作成し、proxy サーバーを立ち�
 
 Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot とは異なり、Slack への通知に特化しています。チャットからの全文検索など GROWI bot にある機能の多くは使うことができませんが、その分簡単にセットアップできます。詳しくは[通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法)をご覧ください。
 
+## 各種 Bot のセットアッップ
 ### Custom bot without proxy 設定
 
 Custom bot without proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
+
+#### Slack app を作成する前に
+
+GROWI 本体サーバーを立ち上げてください。後述する Event Subscription の応答に必要となります。
 
 #### Slack app を作成する
 
@@ -43,22 +48,23 @@ Custom bot without proxy を Slack のワークスペースに導入するには
 
    ![slack-custom-bot1](../../../.vuepress/public/assets/images/slack-custom-bot1.png)
 
-2. 「Create a Slack App」の ①「App Name」にはアプリの名前を、②「Development Slack Workspace」には
+1. 「Create a Slack App」の ①「App Name」にはアプリの名前を、②「Development Slack Workspace」には
    GROWI bot を追加したいワークスペースを選択します。
 
-3. 「Create App」をクリックします。
+1. 「Create App」をクリックします。
 
    ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
 
 #### スコープを設定する
 
 1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
-   ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
+   ![slack-bot-oauth-and-permissions-introduction-no-check](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction-no-check.png)
 1. **Add an OAuth Scope** をクリックします。
    ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets/images/slack-bot-scope-add-oauth-click.png)
-1. commands と chat: write を選択します。
+1. **commands**, **chat:write**, **team:read** を選択します。
    ![slack-bot-scope-select-commands](../../../.vuepress/public/assets/images/slack-bot-scope-select-commands.png)
    ![slack-bot-scope-select-chat-write](../../../.vuepress/public/assets/images/slack-bot-scope-add-chat-write.png)
+   ![slack-bot-scope-select-team-read](../../../.vuepress/public/assets/images/slack-bot-scope-add-team-read.png)
 
 1. 以下のように表示されたら、スコープの設定は完了です。
    ![slack-bot-scope-selected](../../../.vuepress/public/assets/images/slack-bot-scope-selected.png)
@@ -75,12 +81,12 @@ Custom bot without proxy を Slack のワークスペースに導入するには
 
   1. Request URL を以下のように入力してください。
 
-      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot
-        - 例 <https://example.com/_api/v3/slack-bot>
+      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/commands
+        - 例 **https://example.com/_api/v3/slack-bot/commands**
 
      ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
 
-  1. 入力が完了したら、**Save Changes** をクリックしてください。
+  1. 入力が完了し **Verified** が表示されたら、Slack APP から GROWI サーバーへの通信は成功しています。
 
 - **Interactivity & Shortcuts** の Request URL を設定する
 
@@ -92,8 +98,8 @@ Custom bot without proxy を Slack のワークスペースに導入するには
 
   1. Request URL を以下のように入力してください。
 
-      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/interactive
-        - 例 <https://example.com/_api/v3/slack-bot/interactive>
+      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/interactions
+        - 例 **https://example.com/_api/v3/slack-bot/interactions**
 
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
@@ -110,7 +116,7 @@ Custom bot without proxy を Slack のワークスペースに導入するには
 ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
 - Command に /growi と入力してください。
-- RequestURL には、上記で設定した Request URL と同じものを入力してください
+- RequestURL には、 **https://example.com/_api/v3/slack-bot/commands** と入力してください
 - Short Description も入力必須のため、適当なご説明を入力してください。
 - Usage Hint に関しては任意なので、適宜入力してください。
 - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
@@ -166,10 +172,10 @@ Signing Secret と Bot User OAuth Token の設定を行う前に、作成した 
 
 環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
 
-<!-- ### Official bot 設定 -->
-
-<!-- ### Custom bot with proxy のセットアップ -->
-
+### Official bot のセットアップ
+(TBD)
+### Custom bot with proxy のセットアップ
+(TBD)
 ### Incoming webhook のセットアップ
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
