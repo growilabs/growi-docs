@@ -43,7 +43,7 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
 
 #### Before creating Slack app
 
-Start up the GROWI main server to respond to the Event Subscription described below.
+Start your GROWI main server to respond to the Event Subscriptions described below.
 #### Create a Slack app
 
 1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click **Create New App** button.
@@ -62,7 +62,7 @@ Start up the GROWI main server to respond to the Event Subscription described be
    ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
 1. Click the **Add an OAuth Scope** button.
    ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets//images/slack-bot-scope-add-oauth-click.png)
-1. Select **commands**,**chat: write** and **team:read**.
+1. Select **commands**, **chat: write** and **team:read**.
    ![slack-bot-scope-select-commands](../../../.vuepress/public/assets//images/slack-bot-scope-select-commands.png)
    ![slack-bot-scope-select-chat-write](../../../.vuepress/public/assets//images/slack-bot-scope-add-chat-write.png)
    ![slack-bot-scope-select-team-read](../../../.vuepress/public/assets/images/slack-bot-scope-add-team-read.png)
@@ -104,7 +104,7 @@ Start up the GROWI main server to respond to the Event Subscription described be
 
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
-  1. When the input is complete and **Verified** is displayed, the communication from the Slack APP to the GROWI server has been successful.
+  1. When the Request URL has been correctly entered, **Verified** will be displayed on the screen. It means the Slack APP and the GROWI server are connecting successfully.
 
 #### Create Slash Commands
 
