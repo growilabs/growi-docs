@@ -177,8 +177,10 @@ Click on Slack integration in the Management page, input Signing Secret and Bot 
 Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
 ### Official bot settings
+(TBD)
 
 ### Custom bot with proxy settings
+(TBD)
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
