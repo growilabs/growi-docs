@@ -105,12 +105,12 @@ When two users operate at the same time, it will look like the following.
 
 
 ### User A's editing screen
-<!-- TODO: Update photo -->
+
 ![](./images/HackMD_editing1.gif)
 
 
 ### User B's editing screen
-<!-- TODO: Update photo -->
+
 ![](./images/HackMD_editing2.gif)
 
 Multiple cursors will appear and the document could be edited at the same time.
@@ -131,10 +131,8 @@ Pressing Ctrl+S on Windows or Command+S on Mac while in HackMD mode will save th
 If a user is editing a page in HackMD mode and another user saves the page in the built-in editor (which is not HackMD), the page edits will conflict and the update button will not work on the HackMD side.
 
 In this situation, you will not be able to start editing in HackMD mode even after updating the page, and you will get a `DRAFT MAY BE OUTDATED` alert.
-<!-- TODO: Update photo -->
+
 ![](./images/HackMD8.png)
-<!-- TODO: Update photo -->
-![](./images/HackMD9.png)
 
 If this message appears,
   click the `Discard it` link or the `Discard changes of HackMD` button

@@ -109,11 +109,11 @@ Discard ボタン押下後の `Start to edit with HackMD` ボタン押下の操�
 2ユーザーが同時に操作すると、以下のようになります。
 
 ### ユーザーAの操作画面
-<!-- TODO: Update photo -->
+
 ![](./images/HackMD_editing1.gif)
 
 ### ユーザーBの操作画面
-<!-- TODO: Update photo -->
+
 ![](./images/HackMD_editing2.gif)
 
 編集カーソルが複数現れ、各画面で同時に編集操作が可能となります。
@@ -137,10 +137,8 @@ HackMD モードで Windows なら Ctrl + S キー、Mac なら Command + S キ�
 
 この状態では、ページ更新を行った後も HackMD モードでは編集を開始することができず、  
 `DRAFT MAY BE OUTDATED` のアラートが表示されます。
-<!-- TODO: Update photo -->
+
 ![](./images/HackMD8.png)
-<!-- TODO: Update photo -->
-![](./images/HackMD9.png)
 
 HackMD モードでの編集より通常の編集モードでの更新（保存）が優先されてしまいますので、この表示が出た時には  
  `Discard it` のリンク や `Discard changes of HackMD` ボタンをクリックし、
