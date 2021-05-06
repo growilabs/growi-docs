@@ -5,7 +5,55 @@
 ## Site URL Settings (TBD)
 
 ## App Settings (TBD)
+### Site Name
 
+The content set for the site name is displayed on the login screen and the title of GROWI.
+
+![appsettings1](./images/appsettings1.png)
+
+![appsettings2](./images/appsettings2.png)
+
+### Confidential display
+
+The contents of the Confidential Display field will be displayed in the GROWI header.
+
+![appsettings3](./images/appsettings3.png)
+
+### Default language setting for new users
+
+In this field, the user can select English or Japanese.
+
+![appsettings4](./images/appsettings4.png)
+
+The above setting switches the default language when creating a new user in GROWI.
+
+![appsettings5](./images/appsettings5.png)
+
+
+### File Uploading
+
+GROWI has a setting that allows uploading of files other than images to a page.
+
+![appsettings6](./images/appsettings6.png)
+
+If you do not check this box, you will not be able to upload any files other than images when editing the wiki page.
+
+Also, if you are unable to check this box, as shown in the image below, please click  
+If this checkbox is not checked, as shown in the image below, [File Upload Settings](#File Upload Settings) is not complete.
+
+![appsettings7](./images/appsettings7.png)
+
+The file upload settings will allow you to upload files.
+
+![appsettings8](./images/appsettings8.png)
+
+If you see the following, the file upload is not working.
+
+![appsettings9](./images/appsettings9.png)
+
+
+
+Translated with www.DeepL.com/Translator (free version)
 ## Email Settings (TBD)
 
 ## File Upload Settings
