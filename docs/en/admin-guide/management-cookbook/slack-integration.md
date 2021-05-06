@@ -41,15 +41,17 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 
 To deploy a custom bot without proxy in your Slack workspace, you need to create and edit a Slack app. The steps are as follows.
 
+#### Before creating Slack app
+Start the GROWI main server so that the Event Subscriptions described below work properly.
 #### Create a Slack app
 
 1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click **Create New App** button.
 
    ![slack-custom-bot1](../../../.vuepress/public/assets/images/slack-custom-bot1.png)
 
-2. In the [Create a Slack App] section, ① input the name of your app in the [App Name] field and ② select the workspace where you want to add the GROWI bots in the [Development Slack Workspace].
+1. In the [Create a Slack App] section, ① input the name of your app in the [App Name] field and ② select the workspace where you want to add the GROWI bots in the [Development Slack Workspace].
 
-3. Click the [Create App].
+1. Click the [Create App].
 
    ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
 
@@ -59,9 +61,10 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
    ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
 1. Click the **Add an OAuth Scope** button.
    ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets//images/slack-bot-scope-add-oauth-click.png)
-1. Select **commands** and **chat: write**.
+1. Select **commands**, **chat: write** and **team:read**.
    ![slack-bot-scope-select-commands](../../../.vuepress/public/assets//images/slack-bot-scope-select-commands.png)
    ![slack-bot-scope-select-chat-write](../../../.vuepress/public/assets//images/slack-bot-scope-add-chat-write.png)
+   ![slack-bot-scope-select-team-read](../../../.vuepress/public/assets/images/slack-bot-scope-add-team-read.png)
 
 1. When the following OAuth Scope is displayed, the scope setting will be completed.
    ![slack-bot-scope-selected](../../../.vuepress/public/assets//images/slack-bot-scope-selected.png)
@@ -78,8 +81,8 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
 
   1. Input the Request URL as follows.
 
-     - https:// your GROWI domain /\_api/v3/slack-bot
-       - e.g. <https://example.com/_api/v3/slack-bot>
+     - https:// your GROWI domain /\_api/v3/slack-bot/commands
+       - e.g. **https://example.com/_api/v3/slack-bot/commands**
 
      ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
 
@@ -95,12 +98,12 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
 
   1. Input the Request URL as follows.
 
-     - https:// your GROWI domain /\_api/v3/slack-bot
-       - e.g. <https://example.com/_api/v3/slack-bot/interactive>
+     - https:// your GROWI domain /\_api/v3/slack-bot/interactions
+       - e.g. **https://example.com/_api/v3/slack-bot/interactions**
 
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
-  1. When you are done, click **Save Changes** button.
+  1. When the Request URL has been correctly entered, **Verified** will be displayed on the screen. It means the Slack APP and the GROWI server are connecting successfully.
 
 #### Create Slash Commands
 
@@ -113,7 +116,7 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
 ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
 - Input /growi for Command.
-- For RequestURL, input the same Request URL you set above.
+- For RequestURL, input **https://example.com/_api/v3/slack-bot/commands**.
 - Short Description is also required, so please input an appropriate description.
 - The Usage Hint is optional, so please input it accordingly.
 - The Escape channels, users, and links sent to your app is optional, so input it accordingly.
@@ -173,8 +176,10 @@ Click on Slack integration in the Management page, input Signing Secret and Bot 
 Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
 ### Official bot settings
+(TBD)
 
 ### Custom bot with proxy settings
+(TBD)
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
