@@ -47,7 +47,7 @@ The file upload settings will enable users to upload files.
 
 ![appsettings8](./images/appsettings8.png)
 
-If you see the following, the file upload is not working.
+If the upload banner is hidden as following, the File Upload Settings has not been configured.
 
 ![appsettings9](./images/appsettings9.png)
 
