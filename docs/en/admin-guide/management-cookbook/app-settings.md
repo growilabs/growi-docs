@@ -1,5 +1,7 @@
 # AppSettings (TBD)
 
+[[toc]]
+
 ## Site URL Settings (TBD)
 
 ## App Settings (TBD)
