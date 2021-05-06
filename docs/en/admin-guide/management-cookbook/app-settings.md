@@ -5,6 +5,7 @@
 ## Site URL Settings (TBD)
 
 ## App Settings (TBD)
+
 ### Site Name
 
 The content set for the site name is displayed on the login screen and the title of GROWI.
@@ -36,14 +37,13 @@ GROWI has a setting that allows uploading of files other than images to a page.
 
 ![appsettings6](./images/appsettings6.png)
 
-If you do not check this box, you will not be able to upload any files other than images when editing the wiki page.
+If this option is not checked, users will not be able to upload non-image files when editing the wiki page.
 
-Also, if you are unable to check this box, as shown in the image below, please click  
-If this checkbox is not checked, as shown in the image below, [File Upload Settings](#File Upload Settings) is not complete.
+In addition, if this checkbox cannot be checked as shown in the image below, then [File Upload Settings](#file-upload-settings) has not been set up.
 
 ![appsettings7](./images/appsettings7.png)
 
-The file upload settings will allow you to upload files.
+The file upload settings will enable users to upload files.
 
 ![appsettings8](./images/appsettings8.png)
 
@@ -51,9 +51,6 @@ If you see the following, the file upload is not working.
 
 ![appsettings9](./images/appsettings9.png)
 
-
-
-Translated with www.DeepL.com/Translator (free version)
 ## Email Settings (TBD)
 
 ## File Upload Settings
