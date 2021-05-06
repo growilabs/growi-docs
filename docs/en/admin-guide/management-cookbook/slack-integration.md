@@ -42,8 +42,7 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 To deploy a custom bot without proxy in your Slack workspace, you need to create and edit a Slack app. The steps are as follows.
 
 #### Before creating Slack app
-
-Start your GROWI main server to respond to the Event Subscriptions described below.
+Start the GROWI main server so that the Event Subscriptions described below work properly.
 #### Create a Slack app
 
 1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click **Create New App** button.
