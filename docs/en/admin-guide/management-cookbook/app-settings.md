@@ -8,25 +8,25 @@
 
 ### Site Name
 
-The content set for the site name is displayed on the login screen and the title of GROWI.
+If the site name is set, it is displayed on the login screen and the title of GROWI.
 
 ![appsettings1](./images/appsettings1.png)
 
 ![appsettings2](./images/appsettings2.png)
 
-### Confidential display
+### Confidential Name
 
-The contents of the Confidential Display field will be displayed in the GROWI header.
+The contents set as the Confidential Name will be displayed in the GROWI header.
 
 ![appsettings3](./images/appsettings3.png)
 
 ### Default language setting for new users
 
-In this field, the user can select English or Japanese.
+In this field, the user can select English, Japanese, or Chinese.
 
 ![appsettings4](./images/appsettings4.png)
 
-The above setting switches the default language when creating a new user in GROWI.
+The above setting changes the default language when creating a new user in GROWI.
 
 ![appsettings5](./images/appsettings5.png)
 
@@ -37,17 +37,17 @@ GROWI has a setting that allows uploading of files other than images to a page.
 
 ![appsettings6](./images/appsettings6.png)
 
-If this option is not checked, users will not be able to upload non-image files when editing the wiki page.
+If this option is unchecked, users will not be able to upload non-image files when editing the wiki page.
 
 In addition, if this checkbox cannot be checked as shown in the image below, then [File Upload Settings](#file-upload-settings) has not been set up.
 
 ![appsettings7](./images/appsettings7.png)
 
-The file upload settings will enable users to upload files.
+The File Uploading settings will enable users to upload files.
 
 ![appsettings8](./images/appsettings8.png)
 
-If the upload banner is hidden as following, the File Upload Settings has not been configured.
+If the upload banner is hidden as following, the File Uploading settings has not been configured.
 
 ![appsettings9](./images/appsettings9.png)
 
