@@ -39,10 +39,6 @@ GROWI has a setting that allows uploading of files other than images to a page.
 
 If this option is unchecked, users will not be able to upload non-image files when editing the wiki page.
 
-In addition, if this checkbox cannot be checked as shown in the image below, then [File Upload Settings](#file-upload-settings) has not been set up.
-
-![appsettings7](./images/appsettings7.png)
-
 The File Uploading settings will enable users to upload files.
 
 ![appsettings8](./images/appsettings8.png)
