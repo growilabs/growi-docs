@@ -1,10 +1,10 @@
-# AppSettings (TBD)
+# AppSettings
 
 [[toc]]
 
-## Site URL Settings (TBD)
+## Site URL Settings
 
-## App Settings (TBD)
+## App Settings
 
 ### Site Name
 
@@ -43,11 +43,11 @@ The File Uploading settings will enable users to upload files.
 
 ![appsettings8](./images/appsettings8.png)
 
-If the upload banner is hidden as following, the File Uploading settings has not been configured.
+If the upload banner is hidden as following, the File Uploading settings have not been configured.
 
 ![appsettings9](./images/appsettings9.png)
 
-## Email Settings (TBD)
+## Email Settings
 
 ## File Upload Settings
 
@@ -156,4 +156,4 @@ When using Amazon S3 or Google Cloud Storage, an attachment reference method can
 
 Please refer to [Attachment reference method](../admin-cookbook/attachment.html#how-to-refer-to-attached-files) for the delivery method.
 
-## Plugin Settings (TBD)
+## Plugin Settings
