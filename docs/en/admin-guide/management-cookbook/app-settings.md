@@ -1,10 +1,53 @@
-# AppSettings (TBD)
+# AppSettings
 
-## Site URL Settings (TBD)
+[[toc]]
 
-## App Settings (TBD)
+## Site URL Settings
 
-## Email Settings (TBD)
+## App Settings
+
+### Site Name
+
+If the site name is set, it is displayed on the login screen and the title of GROWI.
+
+![appsettings1](./images/appsettings1.png)
+
+![appsettings2](./images/appsettings2.png)
+
+### Confidential Name
+
+The contents set as the Confidential Name will be displayed in the GROWI header.
+
+![appsettings3](./images/appsettings3.png)
+
+### Default language setting for new users
+
+In this field, the user can select English, Japanese, or Chinese.
+
+![appsettings4](./images/appsettings4.png)
+
+The above setting changes the default language when creating a new user in GROWI.
+
+![appsettings5](./images/appsettings5.png)
+
+
+### File Uploading
+
+GROWI has a setting that allows uploading of files other than images to a page.
+
+![appsettings6](./images/appsettings6.png)
+
+If this option is unchecked, users will not be able to upload non-image files when editing the wiki page.
+
+The File Uploading settings will enable users to upload files.
+
+![appsettings8](./images/appsettings8.png)
+
+If the upload banner is hidden as following, the File Uploading settings have not been configured.
+
+![appsettings9](./images/appsettings9.png)
+
+## Email Settings
 
 ## File Upload Settings
 
@@ -113,4 +156,4 @@ When using Amazon S3 or Google Cloud Storage, an attachment reference method can
 
 Please refer to [Attachment reference method](../admin-cookbook/attachment.html#how-to-refer-to-attached-files) for the delivery method.
 
-## Plugin Settings (TBD)
+## Plugin Settings
