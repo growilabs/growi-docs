@@ -4,6 +4,41 @@
 
 ## Site URL Settings
 
+## Set the site URL
+
+In this field, a URL could be set for GROWI.
+
+**Make sure to set the Site URL setting for GROWI.**
+
+:::warning
+If the site URL is not set, some of the functions on GROWI will not work properly.
+:::
+
+If a DNS record such as `growi.hogehoge.com` has been specified as the destination for the domain you own, set it here.  
+If a domain is not set to DNS, set the value to any URL.
+
+![appsettings10](. /images/appsettings10.png)
+
+If the environment variable `APP_SITE_URL` is set, the value will be displayed in the `Environment variables` column on the right.  
+
+
+![appsettings11](. /images/appsettings11.png)
+
+If a value is entered in the `Database` field to be edited in the admin panel, the value will be displayed in the `Database` field.
+If a value is entered in the `Database` field, the value set in the `Database` field will take precedence over the `Environment variables` field.  
+
+:::warning
+If the site URL is not set, an error message will be displayed because some of the functions of GROWI will not work properly.
+
+The following error message is displayed in the settings section of the administration screen and in the header section of the page.  
+Please be sure to set the **Site URL setting for GROWI**.
+
+![appsettings12](. /images/appsettings12.png)
+
+![appsettings13](. /images/appsettings13.png)
+:::
+
+
 ## App Settings
 
 ### Site Name
