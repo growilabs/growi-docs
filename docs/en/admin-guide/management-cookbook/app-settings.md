@@ -47,8 +47,6 @@ If the upload banner is hidden as following, the File Uploading settings have no
 
 ![appsettings9](./images/appsettings9.png)
 
-## Email Settings
-
 ## Email settings
 
 Sending e-mail from the GROWI allows the user to select from one of the following configuration patterns:
@@ -56,7 +54,7 @@ Sending e-mail from the GROWI allows the user to select from one of the followin
   1. setting up an SMTP server
   2. use SES of AWS
 
-! [appsettings14](. /images/appsettings14.png)
+![appsettings14](./images/appsettings14.png)
 
 If you see the alert ** "Your email settings are not set up. If you see the alert **, it means that the  
 ** indicates that the configuration form is insufficient.  
@@ -81,7 +79,7 @@ If the email settings are enabled, the email will be sent from GROWI.
 
 The following is the New User Invitation window in the User Management menu.
 
-! [appsettings15](. /images/appsettings15.png)
+![appsettings15](./images/appsettings15.png)
 
 **Check the Send invitation by email** checkbox to make the email work.  
 If the settings are not configured correctly, the email will not work.
