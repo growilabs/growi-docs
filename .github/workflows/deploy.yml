@@ -59,7 +59,7 @@ jobs:
     - name: Build and deploy
       uses: jenkey2011/vuepress-deploy@master
       env:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACCESS_TOKEN: $GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}
         BUILD_SCRIPT: yarn commons:build && yarn apiv3:build && yarn docs:build
         BUILD_DIR: docs/.vuepress/dist/
         CNAME: docs.growi.org
