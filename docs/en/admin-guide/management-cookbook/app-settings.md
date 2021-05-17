@@ -52,16 +52,15 @@ If the upload banner is hidden as following, the File Uploading settings have no
 Sending e-mail from the GROWI allows the user to select from one of the following configuration patterns:
 
   1. setting up an SMTP server
-  2. use SES of AWS
+  2. using AWS's SES
 
 ![appsettings14](./images/appsettings14.png)
 
-If you see the alert ** "Your email settings are not set up. If you see the alert **, it means that the  
-** indicates that the configuration form is insufficient.  
+If there is an alert that says, **"Your email settings are not set up."** This indicates that the configuration form has not been fully completed.
 
 ### Notes on using SES
 
-GROWI does not allow setting the Region and will attempt to send using us-east-1.  
+GROWI does not allow setting the Region and will attempt to send using us-east-1.
 If region other than us-east-1 is used, please consider setting up SMTP on GROWI using the information on the SES side to send mail.
 
 ### Sending a test mail (only SMTP can be executed)
@@ -75,7 +74,7 @@ After updating the SMTP server settings, press the **Send Test Email** button.
 
 If the email settings are enabled, the email will be sent from GROWI.
 
-### The following is an example of the mail sending function.
+### The following is an example of the mail sending function
 
 The following is the New User Invitation window in the User Management menu.
 
