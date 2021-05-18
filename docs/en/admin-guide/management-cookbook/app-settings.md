@@ -12,7 +12,7 @@ In this field, a URL could be set for GROWI.
 If the site URL is not set, some of the functions on GROWI will not work properly.
 :::
 
-If a DNS record such as `growi.hogehoge.com` has been specified as the destination for a custom domain, set it here.  
+If a DNS record such as `growi.example.com` has been specified as the destination for a custom domain, set it here.  
 If a domain is not set to DNS, set the value to any URL.
 
 ![appsettings10](./images/appsettings10.png)
