@@ -193,7 +193,7 @@ only uncheck "Block public access" through the New Access Control List (ACL) and
  add the account with the verified canonical ID to "Access Other AWS Accounts".
  In this case, please check all types of authority.
 
-#### Resistor Bucket to GROWI
+#### Register Bucket to GROWI
 
 1. Please select AWS (S3) in the file upload settings of GROWI's app settings,
  and set the information confirmed in the above process.
