@@ -244,7 +244,7 @@ See [Development Guide](/en/dev/plugin/architecture.html) for details.
 
 ### How to install
 
-Replace `growi-plugin-xxx` with the plugin you want to use.
+Replace `growi-plugin-xxx` with the name of the plugin to install.
 
 ```
 npm install --save growi-plugin-xxx
