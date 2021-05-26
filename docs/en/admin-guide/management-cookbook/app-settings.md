@@ -236,7 +236,7 @@ See [Development Guide](/en/dev/plugin/architecture.html) for details.
 ### List of official plugins
 
 - [growi-plugin-attachment-refs](https://github.com/weseek/growi-plugin-attachment-refs)
-  - Plug-in for displaying a list or gallery of attached images.
+  - Plugin for displaying a list or gallery of attached images.
 - [growi-plugin-lsx](https://github.com/weseek/growi-plugin-lsx)
   - Plugin to apply pukiwiki's original plugin lsx.
 - [growi-plugin-pukiwiki-like-linker](https://github.com/weseek/growi-plugin-pukiwiki-like-linker)
