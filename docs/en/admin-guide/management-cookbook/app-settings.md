@@ -224,8 +224,8 @@ Please refer to [Attachment reference method](../admin-cookbook/attachment.html#
 
 ## Plugin Settings
 
-Enable/Disable installed plug-ins on GROWI by setting `Load Plugins` to ON/OFF in this field.  
-When OFF, plug-ins installed in GROWI are not applied.
+Enable/Disable installed plugins on GROWI by setting `Load Plugins` to ON/OFF in this field.  
+When OFF, plugins installed in GROWI are not applied.
 
 ![appsettings17](./images/appsettings17.png)
 
