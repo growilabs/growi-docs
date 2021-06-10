@@ -167,8 +167,6 @@ in case that you input values in both the Management page and environment variab
 
 Click on Slack integration in the Management page, input Signing Secret and Bot User OAuth Token, and click **Update**.
 
-<!-- 画像は後で差し替えます -->
-
 ![slack-integration](../../../.vuepress/public/assets/images/slack-integration-introduction.png)
 
 1. How to set them with environment variables
