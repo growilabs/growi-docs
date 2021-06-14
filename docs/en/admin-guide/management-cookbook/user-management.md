@@ -1,6 +1,6 @@
 # User Management
 
-Registered users can be managed from the User Management of the Administration page.
+Registered users can be managed from the User Management of the Admin page.
 
 ## User Table
 
@@ -8,17 +8,17 @@ Displays a list of users. Use the search filter to narrow down the users by user
 
 This table can also be used to reset passwords, delete or suspend accounts, and change access privileges to the administration screen.
 
-! [](. /images/user-management1.png)
+![](./images/user-management1.png)
 
 ### Status
 
 - Active
   - Authorized user
-  - If the user has access to the administration screen, the user will have "Administrator" status.
+  - If the user has access to the admin page, the user will have the "Administrator" status.
 - Approval pending
   - User pending approval
   - Accounts in this status cannot log in.
-  - If the registration restriction is set to " Restrict" in the ID/Password authentication mechanism setting in the security settings, the newly registered user will be in this status until the administrator approves the account.
+  - If the registration restriction is set to "Restrict" in the ID/Password authentication mechanism setting in the security settings, the newly registered user will be in this status until the administrator approves the account.
   - In order for the account to be valid, "Approve" must be executed in the same table.
 - Suspended
   - A user who has been suspended by the administrator.
@@ -35,15 +35,15 @@ This table can also be used to reset passwords, delete or suspend accounts, and 
 
 A user's password can be reset from the drop-down menu on the right side of the user table.
 
-! [](. /images/user-management2.png)
+![](./images/user-management2.png)
 
-When you select Reset Password from the Edit drop-down menu, a modal will appear, and you should see the target user for password reset displayed there.
+When the Reset Password from the Edit drop-down menu has been clicked, a modal with the target user for password reset will be displayed.
 
-<img src=". /images/user-management3.png" width="50%">
+<img src="./images/user-management3.png" width="50%">
 
 When the reset password is pressed, a new password will be issued. Tell the user to log in using this password, and then reset the password from the password settings in the user settings ( `/me` ).
 
-<img src=". /images/user-management4.png" width="50%">
+<img src="./images/user-management4.png" width="50%">
 
 
 #### Granting administrative privileges
@@ -79,7 +79,9 @@ To send an invitation email, the email settings must have been completed in the 
 
 Manage external accounts. An external account is information that is associated with a GROWI account when registered using the external authentication mechanism, and when the GROWI account associated with it is deleted, the external account associated with it is also deleted automatically.
 
-When the GROWI account is deleted, the external account associated with it is also automatically deleted. [](. /images/user-management5.png)
+When the GROWI account is deleted, the external account associated with it is also automatically deleted.
+
+![](. /images/user-management5.png)
 
 If the password for the GROWI account is not set, the status of the password setting will be displayed as "Not set. If the password of the GROWI account has not been set, the password setting status will be displayed as "Not set". Log in to the external account and set the password from the personal settings screen, or have the administrator reset the password for the account to "Set".
 
