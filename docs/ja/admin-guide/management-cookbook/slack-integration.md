@@ -173,10 +173,41 @@ Signing Secret と Bot User OAuth Token の設定を行う前に、作成した 
 
 環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
 
-### Official bot のセットアップ
+### Official bot 設定
+
 (TBD)
-### Custom bot with proxy のセットアップ
-(TBD)
+
+### Custom bot with proxy 設定
+
+Custom bot with proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
+
+#### Slack app を作成する前に
+<!-- TODO: GW-6324 [Custom bot withput proxy]「Slack app を作成する前に」を記述(ja) -->
+
+#### Slack app を作成する
+<!-- TODO: GW-6325 [Custom bot without proxy] 「スコープを設定する」&「各 Request URL を設定する」の記述(ja) -->
+1. スコープを設定する
+
+2. 各 Request URL を設定する
+
+- Interactivity & Shortcuts
+
+- Slash Commands
+
+- OAuth & Permissions
+
+3. Manage Distribution を設定する
+<!-- TODO: GW-6329 [Custom bot without proxy]「Manage Distribution を設定する」を記述する(ja)) -->
+
+#### Bot を Slack のワークスペースへインストールする
+<!-- TODO: GW-6326 [Custom bot without proxy] 「Bot を Slack のワークスペースへインストールする」の記述(ja) -->
+
+#### アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録
+<!-- TODO: GW-6327 [Custom bot without proxy]「アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録」の記述(ja) -->
+
+#### テストを実行する
+<!-- TODO: GW-6328 [Custom bot without proxy]「テストを実行する」の記述(ja) -->
+
 ### Incoming webhook のセットアップ
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
