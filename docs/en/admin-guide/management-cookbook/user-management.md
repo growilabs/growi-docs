@@ -56,7 +56,7 @@ Administrative privileges can be granted or removed from the drop-down menu on t
 
 Accounts that are pending approval or suspended can be granted approval. Approving an account allows the user to log in with that account.
 
-Accounts that have been approved can also be suspended. If the account is suspended, the account information will remain, but the user will not be able to log in. If the account is suspended, the account information will remain, but the user will not be able to log in.
+Accounts that have been approved can also be suspended. If the account is suspended, the account information will remain, but the user will not be able to log in. The administrator has to reapprove in order for that user to log in.
 
 #### Delete account
 
@@ -77,12 +77,10 @@ To send an invitation email, the email settings must have been completed in the 
 
 ## Manage external accounts
 
-Manage external accounts. An external account is information that is associated with a GROWI account when registered using the external authentication mechanism, and when the GROWI account associated with it is deleted, the external account associated with it is also deleted automatically.
-
-When the GROWI account is deleted, the external account associated with it is also automatically deleted.
+This function manages external accounts. An external account is an information that is associated with a GROWI account when it is registered using the external OAuth. When a GROWI account is deleted, the external account associated with it is also deleted automatically.
 
 ![](./images/user-management5.png)
 
-If the password for the GROWI account is not set, the status of the password setting will be displayed as "Not set. If the password of the GROWI account has not been set, the password setting status will be displayed as "Not set". Log in to the external account and set the password from the personal settings screen, or have the administrator reset the password for the account to "Set".
+If the password for the GROWI account is not set, the password setting status is displayed as "Not set". The GROWI account associated with the external account in this state cannot log in using regular ID and password. Log in with the external account and set the password from the personal settings screen, or let the administrator reset the password to change the status to "Set".
 
 External accounts can be deleted from the table in the External Account Management. Deleting an external account will not delete the GROWI account.
