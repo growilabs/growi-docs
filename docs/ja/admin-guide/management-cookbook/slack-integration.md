@@ -42,7 +42,7 @@ Custom bot without proxy を Slack のワークスペースに導入するには
 
 GROWI 本体サーバーを立ち上げてください。後述する Event Subscription の応答に必要となります。
 
-#### BotType の選択
+#### Bot type の選択
 管理画面の Slack 連携 にて Custom bot without proxy を選択してください。
 
 #### Slack app を作成する

@@ -44,7 +44,7 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
 #### Before creating Slack app
 Start the GROWI main server so that the Event Subscriptions described below work properly.
 
-#### Select BotType
+#### Select Bot type
 Select Custom bot without proxy in Slack Integration of the Management page.
 #### Create a Slack app
 
