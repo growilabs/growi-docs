@@ -6,7 +6,7 @@ Registered users can be managed from the User Management of the Admin page.
 
 Displays a list of users. Use the search filter to narrow down the users by username, name, email address, and status.
 
-This table can also be used to reset passwords, delete or suspend accounts, and change access privileges to the administration screen.
+This table can also be used to reset passwords, delete or suspend accounts, and change access privileges to the admin page.
 
 ![](./images/user-management1.png)
 
@@ -37,11 +37,11 @@ A user's password can be reset from the drop-down menu on the right side of the 
 
 ![](./images/user-management2.png)
 
-When the Reset Password from the Edit drop-down menu has been clicked, a modal with the target user for password reset will be displayed.
+When the "Reset Password" from the drop-down menu has been clicked, a modal with the target user for password reset will be displayed.
 
 <img src="./images/user-management3.png" width="50%">
 
-When the reset password is pressed, a new password will be issued. Tell the user to log in using this password, and then reset the password from the password settings in the user settings ( `/me` ).
+When the "Reset Password" button on the modal is pressed, a new password will be issued. Tell the user to log in using this password, and then reset the password from the password settings in the user settings ( `/me` ).
 
 <img src="./images/user-management4.png" width="50%">
 
@@ -72,7 +72,7 @@ Enter the e-mail address of the user to be issued. Multiple e-mail addresses can
 When the **issue** button is clicked, a new user will be issued and a temporary password will be assigned to each user.  
 The new user can complete the registration by logging in using the email address and temporary password.
 
-**If**Send invitation email** is enabled and issued, an invitation email will be sent to the specified email address.  
+If **Send invitation email** is enabled and issued, an invitation email will be sent to the specified email address.  
 To send an invitation email, the email settings must have been completed in the application settings.
 
 ## Manage external accounts
@@ -81,7 +81,7 @@ Manage external accounts. An external account is information that is associated 
 
 When the GROWI account is deleted, the external account associated with it is also automatically deleted.
 
-![](. /images/user-management5.png)
+![](./images/user-management5.png)
 
 If the password for the GROWI account is not set, the status of the password setting will be displayed as "Not set. If the password of the GROWI account has not been set, the password setting status will be displayed as "Not set". Log in to the external account and set the password from the personal settings screen, or have the administrator reset the password for the account to "Set".
 
