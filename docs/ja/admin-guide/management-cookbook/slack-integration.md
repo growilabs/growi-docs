@@ -182,7 +182,7 @@ Signing Secret と Bot User OAuth Token の設定を行う前に、作成した 
 Custom bot with proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
 
 #### Slack app を作成する前に
-<!-- TODO: GW-6324 [Custom bot withput proxy]「Slack app を作成する前に」を記述(ja) -->
+
 
 #### Slack app を作成する
 <!-- TODO: GW-6325 [Custom bot without proxy] 「スコープを設定する」&「各 Request URL を設定する」の記述(ja) -->
