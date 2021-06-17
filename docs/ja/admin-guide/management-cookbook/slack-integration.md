@@ -229,7 +229,7 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
   1. Request URL を以下のように入力してください。
 
   - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/interactions
-    - 例 **<https://example.com/_api/v3/slack-bot/interactions>**
+    - 例 `https://example.com/_api/v3/slack-bot/interactions`
 
     ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
