@@ -117,7 +117,7 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
 - Command に /growi と入力してください。
-- RequestURL には、`https://example.com/_api/v3/slack-bot/commands` と入力してください
+- Request URL には、`https://example.com/_api/v3/slack-bot/commands` と入力してください
 - Short Description も入力必須のため、適当なご説明を入力してください。
 - Usage Hint に関しては任意なので、適宜入力してください。
 - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
@@ -207,7 +207,8 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 
    ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
 
-1. スコープを設定する
+#### スコープを設定する
+
 1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
   ![slack-bot-oauth-and-permissions-introduction-no-check](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction-no-check.png)
 1. **Add an OAuth Scope** をクリックします。
@@ -216,11 +217,42 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
   以下のように表示されたら、スコープの設定は完了です。
   ![slack-bot-scope-selected](../../../.vuepress/public/assets/images/slack-bot-scope-selected.png)
 
-2. 各 Request URL を設定する
+#### 各 Request URL を設定する
 
 - Interactivity & Shortcuts
+  1. 作成した Slack App の **Features** から **Interactivity Shortcuts** をクリックします。
+    ![slack-bot-interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
 
-- Slash Commands
+  1. **Interactivity** 右側にあるボタンを On にします。
+    ![slack-bot-interactivity-shortcuts-enable-button](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-enable-button.png)
+
+  1. Request URL を以下のように入力してください。
+
+  - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/interactions
+    - 例 **<https://example.com/_api/v3/slack-bot/interactions>**
+
+    ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
+
+  1. 入力が完了したら、**Save Changes** をクリックしてください。
+
+#### スラッシュコマンドの作成
+
+  1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
+
+  ![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png)
+
+  2. **Create New Command** をクリックします。
+
+  ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
+
+- Command に /growi と入力してください。
+- Request URL には、`https://example.com/_api/v3/slack-bot/commands` と入力してください
+- Short Description も入力必須のため、適当なご説明を入力してください。
+- Usage Hint に関しては任意なので、適宜入力してください。
+- Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
+- 入力が完了したら、**Save** をクリックしてください。
+
+  ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
 - OAuth & Permissions
 
