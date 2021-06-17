@@ -63,16 +63,12 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 #### スコープを設定する
 
 1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
-   ![slack-bot-oauth-and-permissions-introduction-no-check](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction-no-check.png)
+  ![slack-bot-oauth-and-permissions-introduction-no-check](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction-no-check.png)
 1. **Add an OAuth Scope** をクリックします。
-   ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets/images/slack-bot-scope-add-oauth-click.png)
+  ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets/images/slack-bot-scope-add-oauth-click.png)
 1. **commands**, **chat:write**, **team:read** を選択します。
-   ![slack-bot-scope-select-commands](../../../.vuepress/public/assets/images/slack-bot-scope-select-commands.png)
-   ![slack-bot-scope-select-chat-write](../../../.vuepress/public/assets/images/slack-bot-scope-add-chat-write.png)
-   ![slack-bot-scope-select-team-read](../../../.vuepress/public/assets/images/slack-bot-scope-add-team-read.png)
-
-1. 以下のように表示されたら、スコープの設定は完了です。
-   ![slack-bot-scope-selected](../../../.vuepress/public/assets/images/slack-bot-scope-selected.png)
+  以下のように表示されたら、スコープの設定は完了です。  
+  ![slack-bot-scope-selected](../../../.vuepress/public/assets/images/slack-bot-scope-selected.png)
 
 #### 各 Request URL を設定する
 
@@ -199,8 +195,26 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 管理画面の Slack 連携 にて Custom bot with proxy を選択してください。
 
 #### Slack app を作成する
-<!-- TODO: GW-6325 [Custom bot with proxy] 「スコープを設定する」&「各 Request URL を設定する」の記述(ja) -->
+
+1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
+
+   ![slack-custom-bot1](../../../.vuepress/public/assets/images/slack-custom-bot1.png)
+
+1. 「Create a Slack App」の ①「App Name」にはアプリの名前を、②「Development Slack Workspace」には
+   GROWI bot を追加したいワークスペースを選択します。
+
+1. 「Create App」をクリックします。
+
+   ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
+
 1. スコープを設定する
+1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
+  ![slack-bot-oauth-and-permissions-introduction-no-check](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction-no-check.png)
+1. **Add an OAuth Scope** をクリックします。
+  ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets/images/slack-bot-scope-add-oauth-click.png)
+1. **commands**, **chat:write**, **team:read** を選択します。
+  以下のように表示されたら、スコープの設定は完了です。
+  ![slack-bot-scope-selected](../../../.vuepress/public/assets/images/slack-bot-scope-selected.png)
 
 2. 各 Request URL を設定する
 
