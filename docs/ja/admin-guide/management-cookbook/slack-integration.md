@@ -192,6 +192,8 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 
 3. GROWI 本体サーバーとプロキシ用サーバー(`slackbot-proxy`)の両方を立ち上げてください。
 
+- プロキシ用サーバーは`yarn`, `yarn dev`で起動することができます。
+
 #### Slack app を作成する
 <!-- TODO: GW-6325 [Custom bot without proxy] 「スコープを設定する」&「各 Request URL を設定する」の記述(ja) -->
 1. スコープを設定する
