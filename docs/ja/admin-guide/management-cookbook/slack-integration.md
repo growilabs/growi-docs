@@ -199,7 +199,7 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 管理画面の Slack 連携 にて Custom bot with proxy を選択してください。
 
 #### Slack app を作成する
-<!-- TODO: GW-6325 [Custom bot without proxy] 「スコープを設定する」&「各 Request URL を設定する」の記述(ja) -->
+<!-- TODO: GW-6325 [Custom bot with proxy] 「スコープを設定する」&「各 Request URL を設定する」の記述(ja) -->
 1. スコープを設定する
 
 2. 各 Request URL を設定する
@@ -211,16 +211,16 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 - OAuth & Permissions
 
 3. Manage Distribution を設定する
-<!-- TODO: GW-6329 [Custom bot without proxy]「Manage Distribution を設定する」を記述する(ja)) -->
+<!-- TODO: GW-6329 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(ja)) -->
 
 #### Bot を Slack のワークスペースへインストールする
-<!-- TODO: GW-6326 [Custom bot without proxy] 「Bot を Slack のワークスペースへインストールする」の記述(ja) -->
+<!-- TODO: GW-6326 [Custom bot with proxy] 「Bot を Slack のワークスペースへインストールする」の記述(ja) -->
 
 #### アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録
-<!-- TODO: GW-6327 [Custom bot without proxy]「アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録」の記述(ja) -->
+<!-- TODO: GW-6327 [Custom bot with proxy]「アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録」の記述(ja) -->
 
 #### テストを実行する
-<!-- TODO: GW-6328 [Custom bot without proxy]「テストを実行する」の記述(ja) -->
+<!-- TODO: GW-6328 [Custom bot with proxy]「テストを実行する」の記述(ja) -->
 
 ### Incoming webhook のセットアップ
 
