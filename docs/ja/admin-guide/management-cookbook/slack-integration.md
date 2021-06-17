@@ -87,7 +87,7 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
   1. Request URL を以下のように入力してください。
 
       - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/commands
-        - 例 **<https://example.com/_api/v3/slack-bot/commands>**
+        - 例 `https://example.com/_api/v3/slack-bot/commands`
 
      ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
 
@@ -121,7 +121,7 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
 - Command に /growi と入力してください。
-- RequestURL には、 **<https://example.com/_api/v3/slack-bot/commands>** と入力してください
+- RequestURL には、`https://example.com/_api/v3/slack-bot/commands` と入力してください
 - Short Description も入力必須のため、適当なご説明を入力してください。
 - Usage Hint に関しては任意なので、適宜入力してください。
 - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
@@ -188,7 +188,7 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 1. `packages/slackbot-proxy` の配下に 新規ファイル`.env.development.local`を作成します。
 2. 1で作成したファイルに任意の環境変数`SERVER_URI`を入力してください。
 
-例: **SERVER_URI=<http://localhost:8080>**
+例: `SERVER_URI=http://localhost:8080`
 
 3. GROWI 本体サーバーとプロキシ用サーバー(`slackbot-proxy`)の両方を立ち上げてください。
 
