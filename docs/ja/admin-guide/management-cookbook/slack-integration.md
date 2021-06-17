@@ -256,7 +256,9 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 
   ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
-- OAuth & Permissions
+##### OAuth & Permissions
+<!-- TODO: GW-6353 [Custom bot with proxy]Redirect URLの設定方法を記述する -->
+
 
 3. Manage Distribution を設定する
 <!-- TODO: GW-6329 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(ja)) -->
