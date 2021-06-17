@@ -1,5 +1,3 @@
-# Export GROWI Data
-
 # Archive data
 
 Creates a zipped GROWI archive data for migrating GROWI data to another GROWI.
@@ -15,14 +13,14 @@ Creates a zipped GROWI archive data for migrating GROWI data to another GROWI.
 
 :::danger
 
-- Since the data for the export function uses the file system, it may not work properly when the GROWI server is load balanced. For details, see [here](. /admin-cookbook/loadbalance.md#Notes on the import and export functions).
+- Since the data for the export function uses the file system, it may not work properly when the GROWI server is load balanced. For details, see [here](../admin-cookbook/loadbalance.html#cautionary-points-about-importing-exporting-data).
 :::
 
 ### Archivable MongoDB Collections
 
-| <div style="white-space: nowrap;">Categories</div>| MongoDB Collection Name | Description | .
-| :--- | :--- | :--- | Pages | Pages.
-| Pages | Pages, which must be imported with Revisions. You will need to import it with Revisions to preserve the public range, as browsing permissions will be retained. Pages under `/trash` will also be imported. || Revisions
+| <div style="white-space: nowrap;">Categories</div>| MongoDB Collection Name | Description |
+| :--- | :--- | :--- |
+| Pages | Pages | Pages must be imported together with Revisions to preserve the public range, as browsing permissions will be retained. Pages under `/trash` will also be imported. |
 || Revisions | A history of changes to the page. <If you want to keep the range, you must import it with Users and Usergroups. || Tags
 || Tags | Page tags. The following tags must be imported with the following PageTagRelation in order to keep them associated with the page. | Tags
 || PageTagRelations | Data that ties pages to page tags. <It must be imported as a set with Pages and Tags. | Users
