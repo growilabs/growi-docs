@@ -194,7 +194,7 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 
 管理画面の Slack 連携 にて Custom bot with proxy を選択してください。
 
-#### Slack app を作成する
+##### Slack app を作成する
 
 1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
 
@@ -219,7 +219,8 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 
 #### 各 Request URL を設定する
 
-- Interactivity & Shortcuts
+##### Interactivity & Shortcuts
+
   1. 作成した Slack App の **Features** から **Interactivity Shortcuts** をクリックします。
     ![slack-bot-interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
 
@@ -228,25 +229,26 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 
   1. Request URL を以下のように入力してください。
 
-  - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/interactions
-    - 例 `https://example.com/_api/v3/slack-bot/interactions`
+- https:// 連携させたい PROXY のドメイン名 /slack/interactions
+  - 例 `https://example.com/slack/interactions`
 
+    <!-- TODO: GW-6349 [Custom bot with proxy] 画像の変更 by GW-6349 -->
     ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
   1. 入力が完了したら、**Save Changes** をクリックしてください。
 
-#### スラッシュコマンドの作成
+##### スラッシュコマンドの作成
 
   1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
 
-  ![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png)
+    ![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png)
 
-  2. **Create New Command** をクリックします。
-
+  1. **Create New Command** をクリックします。
+  <!-- TODO: GW-6349 [Custom bot with proxy] 画像の変更 by GW-6349 -->
   ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
 - Command に /growi と入力してください。
-- Request URL には、`https://example.com/_api/v3/slack-bot/commands` と入力してください
+- Request URL には、`https://example.com/slack/commands` と入力してください
 - Short Description も入力必須のため、適当なご説明を入力してください。
 - Usage Hint に関しては任意なので、適宜入力してください。
 - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
