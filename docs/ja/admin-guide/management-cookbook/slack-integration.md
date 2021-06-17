@@ -190,7 +190,7 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 
 例: **SERVER_URI=<http://localhost:8080>**
 
-3. GROWI 本体サーバーと`slackbot-proxy`(プロキシ用)サーバーの両方を立ち上げてください。
+3. GROWI 本体サーバーとプロキシ用サーバー(`slackbot-proxy`)の両方を立ち上げてください。
 
 #### Slack app を作成する
 <!-- TODO: GW-6325 [Custom bot without proxy] 「スコープを設定する」&「各 Request URL を設定する」の記述(ja) -->
