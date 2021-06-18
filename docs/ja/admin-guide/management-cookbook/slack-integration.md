@@ -33,6 +33,11 @@ Custom bot with proxy は Slack bot を作成し、proxy サーバーを立ち�
 
 Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot とは異なり、Slack への通知に特化しています。チャットからの全文検索など GROWI bot にある機能の多くは使うことができませんが、その分簡単にセットアップできます。詳しくは[通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法)をご覧ください。
 
+
+## Official bot 設定
+
+(TBD)
+
 ## Custom bot without proxy 設定
 
 Custom bot without proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
@@ -169,9 +174,6 @@ Signing Secret と Bot User OAuth Token の設定を行う前に、作成した 
 
 環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
 
-## Official bot 設定
-
-(TBD)
 
 ## Custom bot with proxy 設定
 
@@ -270,9 +272,25 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 ### テストを実行する
 <!-- TODO: GW-6328 [Custom bot with proxy]「テストを実行する」の記述(ja) -->
 
-### Incoming webhook のセットアップ
 
-<!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
+## GROWI bot でできること
+
+### ワークスペース内の全文検索
+
+1. /growi search [keyword(s)] を入力すると検索結果が表示されます。
+
+   - 例: /growi search example
+     ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
+   - 検索結果
+     ![slack-bot-full-text-search-display-result](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result.png)
+   - **Next** ボタンをクリックすると、次の検索結果を表示します。
+     ![slack-bot-full-text-search-click-next](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-next.png)
+   - **Share** ボタンをクリックすると、チャンネル内に共有されます。
+     ![slack-bot-full-text-search-click-share](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-share.png)
+
+<!-- ### 複数ワークスペースの横断検索 (TBD) -->
+
+<!-- ### Slack ログの記録 (TBD) -->
 
 ## Incoming webhook 設定
 
@@ -296,22 +314,3 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
 
 User Trigger Notification の設定方法は[こちら](../management-cookbook/external-notification.html#user-trigger-notification-設定)を参照してください。
-
-## Slack bot でできること
-
-### ワークスペース内の全文検索
-
-1. /growi search [keyword(s)] を入力すると検索結果が表示されます。
-
-   - 例: /growi search example
-     ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
-   - 検索結果
-     ![slack-bot-full-text-search-display-result](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result.png)
-   - **Next** ボタンをクリックすると、次の検索結果を表示します。
-     ![slack-bot-full-text-search-click-next](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-next.png)
-   - **Share** ボタンをクリックすると、チャンネル内に共有されます。
-     ![slack-bot-full-text-search-click-share](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-share.png)
-
-<!-- ### 複数ワークスペースの横断検索 (TBD) -->
-
-<!-- ### Slack ログの記録 (TBD) -->
