@@ -179,6 +179,20 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 
   環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
 
+#### 導通テスト
+1. test connection　をクリックし、GROWI-Bot を招待したチャンネルを入力します。
+  ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
+
+
+2. test ボタンをクリックします。
+  - 成功の場合  
+  以下のようなメッセージが表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
+    ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success.png)
+  - 失敗の場合 
+  エラーログが表示されます。ログの内容を修正してください。
+    - 例
+    Channel_not_found ならば チャンネルに GROWI-Bot を招待していません。
+    ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 ## Custom bot with proxy 設定
 
