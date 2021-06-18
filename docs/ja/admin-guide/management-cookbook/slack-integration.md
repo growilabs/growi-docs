@@ -45,11 +45,11 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 ## Custom bot without proxy 設定
 
-Custom bot without proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
+  Custom bot without proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
 
-### Slack app を作成する前に
+### Custom bot without proxy を作成する前に
 
-GROWI 本体サーバーを立ち上げてください。後述する Event Subscription の応答に必要となります。
+  GROWI 本体サーバーを立ち上げてください。後述する Event Subscription の応答に必要となります。
 
 ### Bot type の選択
 
@@ -60,26 +60,26 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 
 ### Slack app を作成する
 
-1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
+  1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
 
-   ![slack-custom-bot1](../../../.vuepress/public/assets/images/slack-custom-bot1.png)
+  ![slack-custom-bot1](../../../.vuepress/public/assets/images/slack-custom-bot1.png)
 
-1. 「Create a Slack App」の ①「App Name」にはアプリの名前を、②「Development Slack Workspace」には
-   GROWI bot を追加したいワークスペースを選択します。
+  1. 「Create a Slack App」の ①「App Name」にはアプリの名前を、②「Development Slack Workspace」には
+    GROWI bot を追加したいワークスペースを選択します。
 
-1. 「Create App」をクリックします。
+  1. 「Create App」をクリックします。
 
-   ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
+  ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
 
 ### スコープを設定する
 
-1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
-  ![slack-bot-oauth-and-permissions-introduction-no-check](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction-no-check.png)
-1. **Add an OAuth Scope** をクリックします。
-  ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets/images/slack-bot-scope-add-oauth-click.png)
-1. **commands**, **chat:write**, **team:read** を選択します。
-  以下のように表示されたら、スコープの設定は完了です。  
-  ![slack-bot-scope-selected](../../../.vuepress/public/assets/images/slack-bot-scope-selected.png)
+  1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
+    ![slack-bot-oauth-and-permissions-introduction-no-check](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction-no-check.png)
+  1. **Add an OAuth Scope** をクリックします。
+    ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets/images/slack-bot-scope-add-oauth-click.png)
+  1. **commands**, **chat:write**, **team:read** を選択します。
+    以下のように表示されたら、スコープの設定は完了です。  
+    ![slack-bot-scope-selected](../../../.vuepress/public/assets/images/slack-bot-scope-selected.png)
 
 ### 各 Request URL を設定する
 
@@ -169,9 +169,9 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 1. **OAuth Tokens for Your Team** の **Bot User Oauth Token** から確認します。
    ![slack-bot-oauth-and-permissions](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions.png)
 
-確認した **Signing Secret** と **Bot User OAuth Token** は 1. 管理画面で入力して設定する方法 と 2. 環境変数で設定する方法の
- 2 種類の方法があります。管理画面で直接入力する方が容易です。
-また、環境変数と管理画面の両方に入力した場合は、管理画面で入力した値が優先されるので、管理画面での入力をおすすめします。
+  確認した **Signing Secret** と **Bot User OAuth Token** は 1. 管理画面で入力して設定する方法 と 2. 環境変数で設定する方法の
+  2 種類の方法があります。管理画面で直接入力する方が容易です。
+  また、環境変数と管理画面の両方に入力した場合は、管理画面で入力した値が優先されるので、管理画面での入力をおすすめします。
 
 1. 管理画面で直接入力する方法
   管理画面の Slack 連携をクリックし、**Signing Secret** と **Bot User OAuth Token** を入力して
@@ -185,7 +185,7 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 
 ## Custom bot with proxy 設定
 
-Custom bot with proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
+  Custom bot with proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
 
 ### Custom bot with proxy を作成する前に
 
