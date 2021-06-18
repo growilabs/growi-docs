@@ -184,22 +184,20 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 
 Custom bot with proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
 
-### Slack app を作成する前に
+### Custom bot with proxy を作成する前に
 
-1. `packages/slackbot-proxy` の配下に 新規ファイル`.env.development.local`を作成します。
-2. 1で作成したファイルに任意の環境変数`SERVER_URI`を入力してください。
+  1. `packages/slackbot-proxy` の配下に 新規ファイル`.env.development.local`を作成します。
+  1. 1で作成したファイルに任意の環境変数`SERVER_URI`を入力してください。
 
-例: `SERVER_URI=http://localhost:8080`
+  例: `SERVER_URI=http://localhost:8080`
 
-3. GROWI 本体サーバーとプロキシ用サーバー(`slackbot-proxy`)の両方を立ち上げてください。
+  1. GROWI 本体サーバーとプロキシ用サーバー(`slackbot-proxy`)の両方を立ち上げてください。  
+    プロキシ用サーバーは`yarn`, `yarn dev`で起動することができます。
 
-- プロキシ用サーバーは`yarn`, `yarn dev`で起動することができます。
+  1. 管理画面の Slack 連携 にて Custom bot with proxy を選択してください。
+  <!-- TODO: GW-6349 [Custom bot with proxy] 画像の挿入 -->
 
-### Bot type の選択
-
-管理画面の Slack 連携 にて Custom bot with proxy を選択してください。
-
-### Slack app を作成する
+### Custom bot with proxy を作成する
 
 1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
 
@@ -212,7 +210,7 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 
    ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
 
-### スコープを設定する
+### Custom bot with proxy のスコープを設定する
 
 1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
   ![slack-bot-oauth-and-permissions-introduction-no-check](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction-no-check.png)
@@ -222,7 +220,7 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
   以下のように表示されたら、スコープの設定は完了です。
   ![slack-bot-scope-selected](../../../.vuepress/public/assets/images/slack-bot-scope-selected.png)
 
-### 各 Request URL を設定する
+### Request URL 設定
 
 #### Interactivity & Shortcuts
 
@@ -237,12 +235,12 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 - https:// 連携させたい PROXY のドメイン名 /slack/interactions
   - 例 `https://example.com/slack/interactions`
 
-    <!-- TODO: GW-6349 [Custom bot with proxy] 画像の変更 by GW-6349 -->
-    ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
+      <!-- TODO: GW-6349 [Custom bot with proxy] 画像の変更 by GW-6349 -->
+      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
-  1. 入力が完了したら、**Save Changes** をクリックしてください。
+    1. 入力が完了したら、**Save Changes** をクリックしてください。
 
-#### スラッシュコマンドの作成
+#### Slash Commandss
 
   1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
 
@@ -252,12 +250,12 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
   <!-- TODO: GW-6349 [Custom bot with proxy] 画像の変更 by GW-6349 -->
   ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
-- Command に /growi と入力してください。
-- Request URL には、`https://example.com/slack/commands` と入力してください
-- Short Description も入力必須のため、適当なご説明を入力してください。
-- Usage Hint に関しては任意なので、適宜入力してください。
-- Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
-- 入力が完了したら、**Save** をクリックしてください。
+      - Command に /growi と入力してください。
+      - Request URL には、`https://example.com/slack/commands` と入力してください
+      - Short Description も入力必須のため、適当なご説明を入力してください。
+      - Usage Hint に関しては任意なので、適宜入力してください。
+      - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
+      - 入力が完了したら、**Save** をクリックしてください。
 
   ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
@@ -268,7 +266,7 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 ### Manage Distribution を設定する
 <!-- TODO: GW-6329 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(ja)) -->
 
-### Bot を Slack のワークスペースへインストールする
+### Custom bot with proxy を Slack のワークスペースへインストールする
 <!-- TODO: GW-6326 [Custom bot with proxy] 「Bot を Slack のワークスペースへインストールする」の記述(ja) -->
 
 ### アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録
