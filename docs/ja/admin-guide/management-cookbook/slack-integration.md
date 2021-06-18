@@ -6,32 +6,37 @@ GROWI では、 Slack 連携の方法として、1. GROWI bot と 2. Incoming We
 
 ### 1. GROWI bot
 
-GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。任意の Slack ワークスペースにインストールすることで、GROWI からの通知だけでなくチャットからの全文検索実行や会話まとめなど様々な機能を利用することができるようになります。
+GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。任意の Slack ワークスペースにインストールすることで、
+GROWI からの通知だけでなくチャットからの全文検索実行や会話まとめなど様々な機能を利用することができるようになります。
 
 #### Official bot (推奨)
 
 【概念図】
 ![diagram-for-official-bot](../../../.vuepress/public/assets/images/slack-bot-outline-official.png)
 
-Official GROWI bot は GROWI 開発チーム が無償で提供・運用している GROWI bot です。[slack app directory](https://wsgrowi.slack.com/apps) で公開されており、どなたでも利用できます。
+Official GROWI bot は GROWI 開発チーム が無償で提供・運用している GROWI bot です。
+[slack app directory](https://wsgrowi.slack.com/apps) で公開されており、どなたでも利用できます。
 
 #### Custom bot without proxy
 
 【概念図】
 ![diagram-for-custom-bot-without-bot](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
 
-Custom bot without proxy は Slack bot を作成し、お使いの GROWI と紐付けを行うことで、Slack から GROWI の 機能の一部を使用することができます。
+Custom bot without proxy は Slack bot を作成し、お使いの GROWI と紐付けを行うことで、
+Slack から GROWI の 機能の一部を使用することができます。
 
 #### Custom bot with proxy
 
 【概念図】
 ![diagram-for-custom-bot-with-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-with-proxy.png)
 
-Custom bot with proxy は Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、Official bot と同様の手順で GROWI の機能の一部を使用することができます。
+Custom bot with proxy は Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、
+Official bot と同様の手順で GROWI の機能の一部を使用することができます。
 
 ### 2. Incoming Webhook
 
-Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot とは異なり、Slack への通知に特化しています。チャットからの全文検索など GROWI bot にある機能の多くは使うことができませんが、その分簡単にセットアップできます。詳しくは[通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法)をご覧ください。
+Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot とは異なり、Slack への通知に特化しています。
+チャットからの全文検索など GROWI bot にある機能の多くは使うことができませんが、その分簡単にセットアップできます。詳しくは[通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法)をご覧ください。
 
 
 ## Official bot 設定
@@ -111,37 +116,35 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 
 ### スラッシュコマンドの作成
 
-1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
+  1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
+    ![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png)
 
-  ![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png)
+  1. **Create New Command** をクリックします。
+    ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
-2. **Create New Command** をクリックします。
+    - Command に /growi と入力してください。
+    - Request URL には、`https://example.com/_api/v3/slack-bot/commands` と入力してください
+    - Short Description も入力必須のため、適当なご説明を入力してください。
+    - Usage Hint に関しては任意なので、適宜入力してください。
+    - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
+    - 入力が完了したら、**Save** をクリックしてください。
 
-![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
-
-- Command に /growi と入力してください。
-- Request URL には、`https://example.com/_api/v3/slack-bot/commands` と入力してください
-- Short Description も入力必須のため、適当なご説明を入力してください。
-- Usage Hint に関しては任意なので、適宜入力してください。
-- Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
-- 入力が完了したら、**Save** をクリックしてください。
-
-![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
+  ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
 ### Bot を Slack のワークスペースへインストールする
 
-1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
-1. **Install your app** をクリックします。
-   ![slack-bot-install-your-app-introduction](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction.png)
-1. **Install to Workspace** をクリックします。
-   ![slack-bot-install-to-workspace](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace.png)
-1. 遷移先の画面にて、**Allow**をクリックします。
-   ![slack-bot-install-your-app-transition-destination](../../../.vuepress/public/assets/images/slack-bot-install-your-app-transition-destination.png)
-1. Install your app の右側に 緑色のチェックがつけばワークスペースへのインストール完了です。
-   ![slack-bot-install-your-app-complete](../../../.vuepress/public/assets/images/slack-bot-install-your-app-complete.png)
-1. GROWI bot を使いたいチャンネルに @example を使用して招待します。
-   ![slack-bot-install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace-joined-bot.png)
-   ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
+  1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
+  1. **Install your app** をクリックします。
+    ![slack-bot-install-your-app-introduction](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction.png)
+  1. **Install to Workspace** をクリックします。
+    ![slack-bot-install-to-workspace](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace.png)
+  1. 遷移先の画面にて、**Allow**をクリックします。
+    ![slack-bot-install-your-app-transition-destination](../../../.vuepress/public/assets/images/slack-bot-install-your-app-transition-destination.png)
+  1. Install your app の右側に 緑色のチェックがつけばワークスペースへのインストール完了です。
+    ![slack-bot-install-your-app-complete](../../../.vuepress/public/assets/images/slack-bot-install-your-app-complete.png)
+  1. GROWI bot を使いたいチャンネルに @example を使用して招待します。
+    ![slack-bot-install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace-joined-bot.png)
+    ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
 
 ### Signing Secret と Bot User OAuth Token の設定
 
