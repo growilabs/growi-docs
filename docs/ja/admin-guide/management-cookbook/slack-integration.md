@@ -53,7 +53,10 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 
 ### Bot type の選択
 
-管理画面の Slack 連携 にて Custom bot without proxy を選択してください。
+  管理画面の Slack 連携 にて **Custom bot without proxy** を選択してください。
+
+  ![slack-bot-selecting-custom-bot-without-proxy](../../../.vuepress/public/assets/images/slack-bot-selecting-custom-bot-without-proxy.png)
+
 
 ### Slack app を作成する
 
@@ -194,8 +197,9 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
   1. GROWI 本体サーバーとプロキシ用サーバー(`slackbot-proxy`)の両方を立ち上げてください。  
     プロキシ用サーバーは`yarn`, `yarn dev`で起動することができます。
 
-  1. 管理画面の Slack 連携 にて Custom bot with proxy を選択してください。
-  <!-- TODO: GW-6349 [Custom bot with proxy] 画像の挿入 -->
+  1. 管理画面の Slack 連携 にて **Custom bot with proxy** を選択してください。
+  
+  ![slack-bot-selecting-custom-bot-with-proxy](../../../.vuepress/public/assets/images/slack-bot-selecting-custom-bot-with-proxy.png)
 
 ### Custom bot with proxy を作成する
 
