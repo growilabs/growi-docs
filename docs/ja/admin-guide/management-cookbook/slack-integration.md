@@ -95,17 +95,17 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 - **Interactivity & Shortcuts** の Request URL を設定する
 
   1. 作成した Slack App の **Features** から **Interactivity Shortcuts** をクリックします。
-     ![slack-bot-interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
+    ![slack-bot-interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
 
   1. **Interactivity** 右側にあるボタンを On にします。
-     ![slack-bot-interactivity-shortcuts-enable-button](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-enable-button.png)
+    ![slack-bot-interactivity-shortcuts-enable-button](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-enable-button.png)
 
   1. Request URL を以下のように入力してください。
 
-      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/interactions
-        - 例 `https://example.com/_api/v3/slack-bot/interactions`
+  - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/interactions
+  - 例 `https://example.com/_api/v3/slack-bot/interactions`
 
-     ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
+  ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
   1. 入力が完了したら、**Save Changes** をクリックしてください。
 
@@ -113,7 +113,7 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 
 1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
 
-![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png)
+  ![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png)
 
 2. **Create New Command** をクリックします。
 
