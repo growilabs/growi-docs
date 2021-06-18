@@ -41,7 +41,17 @@
 
 ## Official bot 設定
 
-  (TBD)
+### BotTypeの選択
+
+  管理画面の Slack 連携 にて **Custom bot with proxy** を選択してください。
+
+  ![slack-bot-selecting-official-bot](../../../.vuepress/public/assets/images/slack-bot-selecting-official-bot.png)
+
+### Official bot を Slack のワークスペースへインストールする
+
+### アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録
+
+### テストを実行する
 
 ## Custom bot without proxy 設定
 
