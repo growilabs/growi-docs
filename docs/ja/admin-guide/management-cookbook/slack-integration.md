@@ -244,15 +244,14 @@
 
     1. 入力が完了したら、**Save Changes** をクリックしてください。
 
-#### Slash Commandss
+#### Slash Commands
 
   1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
-
-  ![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png)
+    ![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png)
 
   1. **Create New Command** をクリックします。
   <!-- TODO: GW-6349 [Custom bot with proxy] 画像の変更 by GW-6349 -->
-  ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
+    ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
       - Command に /growi と入力してください。
       - Request URL には、`https://example.com/slack/commands` と入力してください
