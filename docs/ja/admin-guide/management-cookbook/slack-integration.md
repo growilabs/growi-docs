@@ -239,8 +239,7 @@
 - https:// 連携させたい PROXY のドメイン名 /slack/interactions
   - 例 `https://example.com/slack/interactions`
 
-      <!-- TODO: GW-6349 [Custom bot with proxy] 画像の変更 by GW-6349 -->
-      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
+      ![slack-bot-interactiviry-shortcuts-for-with-proxy](../../../.vuepress/public/assets/images/slack-bot-interactiviry-shortcuts-for-with-proxy.png)
 
     1. 入力が完了したら、**Save Changes** をクリックしてください。
 
@@ -250,7 +249,6 @@
     ![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png)
 
   1. **Create New Command** をクリックします。
-  <!-- TODO: GW-6349 [Custom bot with proxy] 画像の変更 by GW-6349 -->
     ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
       - Command に /growi と入力してください。
