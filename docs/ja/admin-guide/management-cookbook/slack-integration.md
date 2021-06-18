@@ -148,9 +148,9 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 
 ### Signing Secret と Bot User OAuth Token の設定
 
-Signing Secret と Bot User OAuth Token の設定を行う前に、作成した Bot でそれぞれの値を確認します。
+  Signing Secret と Bot User OAuth Token の設定を行う前に、作成した Bot でそれぞれの値を確認します。
 
-**Signing Secret の確認方法**
+#### Signing Secret の確認方法
 
 1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
    ![slack-bot-basic-information](../../../.vuepress/public/assets/images/slack-bot-basic-information.png)
@@ -158,24 +158,26 @@ Signing Secret と Bot User OAuth Token の設定を行う前に、作成した 
 1. App Credentials の **Signing Secret** の **show** ボタンを押して確認します。
    ![slack-bot-signing-secret](../../../.vuepress/public/assets/images/slack-bot-signing-secret.png)
 
-**Bot User OAuth Token の確認方法**
+#### Bot User OAuth Token の確認方法
 
 1. 作成した Slack App の **Settings** から **OAuth and Permissions** をクリックします。
    ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
+
 1. **OAuth Tokens for Your Team** の **Bot User Oauth Token** から確認します。
    ![slack-bot-oauth-and-permissions](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions.png)
 
-確認した Signing Secret と Bot User OAuth Token は 1. 管理画面で入力して設定する方法 と 2. 環境変数で設定する方法の 2 種類の方法があります。管理画面で直接入力する方が容易です。また、環境変数と管理画面の両方に入力した場合は、管理画面で入力した値が優先されるので、管理画面での入力をおすすめします。
+確認した **Signing Secret** と **Bot User OAuth Token** は 1. 管理画面で入力して設定する方法 と 2. 環境変数で設定する方法の
+ 2 種類の方法があります。管理画面で直接入力する方が容易です。
+また、環境変数と管理画面の両方に入力した場合は、管理画面で入力した値が優先されるので、管理画面での入力をおすすめします。
 
 1. 管理画面で直接入力する方法
+  管理画面の Slack 連携をクリックし、**Signing Secret** と **Bot User OAuth Token** を入力して
+   **Update** ボタンをクリックします。
+  ![slack-integration](../../../.vuepress/public/assets/images/slack-integration-introduction.png)
 
-管理画面の Slack 連携をクリックし、Signing Secret と Bot User OAuth Token を入力して **Update** をクリックします。
+1. 環境変数で設定する方法
 
-![slack-integration](../../../.vuepress/public/assets/images/slack-integration-introduction.png)
-
-2. 環境変数で設定する方法
-
-環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
+  環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
 
 
 ## Custom bot with proxy 設定
