@@ -122,12 +122,12 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
   1. **Create New Command** をクリックします。
     ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
-    - Command に /growi と入力してください。
-    - Request URL には、`https://example.com/_api/v3/slack-bot/commands` と入力してください
-    - Short Description も入力必須のため、適当なご説明を入力してください。
-    - Usage Hint に関しては任意なので、適宜入力してください。
-    - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
-    - 入力が完了したら、**Save** をクリックしてください。
+      - Command に /growi と入力してください。
+      - Request URL には、`https://example.com/_api/v3/slack-bot/commands` と入力してください
+      - Short Description も入力必須のため、適当なご説明を入力してください。
+      - Usage Hint に関しては任意なので、適宜入力してください。
+      - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
+      - 入力が完了したら、**Save** をクリックしてください。
 
   ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
