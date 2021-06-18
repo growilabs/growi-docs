@@ -186,11 +186,11 @@ GROWI 本体サーバーを立ち上げてください。後述する Event Subs
 
 2. 「Test」 ボタンをクリックします。
   - 成功の場合  
-  以下のようなメッセージが表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
+  **Successfully sent to Slack workspace.** が表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
     - GROWI 側
     ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success.png)
     - Slack 側
-    ![slack-bot-test-success-at-slack](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack.png)
+    ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
 
   - 失敗の場合 
   エラーログが表示されます。ログの内容を修正してください。
