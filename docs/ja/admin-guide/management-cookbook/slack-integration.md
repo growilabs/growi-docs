@@ -280,8 +280,8 @@
 ### Custom bot with proxy を Slack のワークスペースへインストールする
 <!-- TODO: GW-6326 [Custom bot with proxy] 「Bot を Slack のワークスペースへインストールする」の記述(ja) -->
 
-### アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録
-<!-- TODO: GW-6327 [Custom bot with proxy]「アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録」の記述(ja) -->
+### アクセストークンの発行 / Custom bot with proxy サービスへの登録
+<!-- TODO: GW-6327 [Custom bot with proxy]「アクセストークンの発行 / GROWI Custom bot with proxyサービスへの登録」の記述(ja) -->
 
 ### テストを実行する
 <!-- TODO: GW-6328 [Custom bot with proxy]「テストを実行する」の記述(ja) -->
