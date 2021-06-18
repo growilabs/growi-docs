@@ -2,46 +2,46 @@
 
 ## 概要
 
-GROWI では、 Slack 連携の方法として、1. GROWI bot と 2. Incoming Webhook の 2 種類の方法があります。
+  GROWI では、 Slack 連携の方法として、1. GROWI bot と 2. Incoming Webhook の 2 種類の方法があります。
 
 ### 1. GROWI bot
 
-GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。任意の Slack ワークスペースにインストールすることで、
-GROWI からの通知だけでなくチャットからの全文検索実行や会話まとめなど様々な機能を利用することができるようになります。
+  GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。任意の Slack ワークスペースにインストールすることで、
+  GROWI からの通知だけでなくチャットからの全文検索実行や会話まとめなど様々な機能を利用することができるようになります。
 
 #### Official bot (推奨)
 
-【概念図】
-![diagram-for-official-bot](../../../.vuepress/public/assets/images/slack-bot-outline-official.png)
+  【概念図】
+  ![diagram-for-official-bot](../../../.vuepress/public/assets/images/slack-bot-outline-official.png)
 
-Official GROWI bot は GROWI 開発チーム が無償で提供・運用している GROWI bot です。
-[slack app directory](https://wsgrowi.slack.com/apps) で公開されており、どなたでも利用できます。
+  Official GROWI bot は GROWI 開発チーム が無償で提供・運用している GROWI bot です。
+  [slack app directory](https://wsgrowi.slack.com/apps) で公開されており、どなたでも利用できます。
 
 #### Custom bot without proxy
 
-【概念図】
-![diagram-for-custom-bot-without-bot](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
+  【概念図】
+  ![diagram-for-custom-bot-without-bot](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
 
-Custom bot without proxy は Slack bot を作成し、お使いの GROWI と紐付けを行うことで、
-Slack から GROWI の 機能の一部を使用することができます。
+  Custom bot without proxy は Slack bot を作成し、お使いの GROWI と紐付けを行うことで、
+  Slack から GROWI の 機能の一部を使用することができます。
 
 #### Custom bot with proxy
 
-【概念図】
-![diagram-for-custom-bot-with-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-with-proxy.png)
+  【概念図】
+  ![diagram-for-custom-bot-with-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-with-proxy.png)
 
-Custom bot with proxy は Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、
-Official bot と同様の手順で GROWI の機能の一部を使用することができます。
+  Custom bot with proxy は Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、
+  Official bot と同様の手順で GROWI の機能の一部を使用することができます。
 
 ### 2. Incoming Webhook
 
-Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot とは異なり、Slack への通知に特化しています。
-チャットからの全文検索など GROWI bot にある機能の多くは使うことができませんが、その分簡単にセットアップできます。詳しくは[通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法)をご覧ください。
+  Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot とは異なり、Slack への通知に特化しています。
+  チャットからの全文検索など GROWI bot にある機能の多くは使うことができませんが、その分簡単にセットアップできます。詳しくは[通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法)をご覧ください。
 
 
 ## Official bot 設定
 
-(TBD)
+  (TBD)
 
 ## Custom bot without proxy 設定
 
@@ -198,7 +198,7 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
     プロキシ用サーバーは`yarn`, `yarn dev`で起動することができます。
 
   1. 管理画面の Slack 連携 にて **Custom bot with proxy** を選択してください。
-  
+
   ![slack-bot-selecting-custom-bot-with-proxy](../../../.vuepress/public/assets/images/slack-bot-selecting-custom-bot-with-proxy.png)
 
 ### Custom bot with proxy を作成する
@@ -303,21 +303,21 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
-通知を行う Slack ワークスペースを設定します。
+  通知を行う Slack ワークスペースを設定します。
 
-1. 管理画面のセキュリティ設定ページ(/admin/notification)にアクセスします。
-2. Slack Incoming Webhooks 設定の必要事項を入力し、更新ボタンを押します。
+  1. 管理画面のセキュリティ設定ページ(/admin/notification)にアクセスします。
+  2. Slack Incoming Webhooks 設定の必要事項を入力し、更新ボタンを押します。
 
-- **Webhook URL**  
-  [Incoming Webhooks](https://slack.com/services/new/incoming-webhook) で取得できます。
+      - **Webhook URL**  
+      [Incoming Webhooks](https://slack.com/services/new/incoming-webhook) で取得できます。
 
 ### 設定が反映されているかの確認
 
-上記の設定後、ページの編集モード画面に Slack 通知フォームが追加されます。
+  上記の設定後、ページの編集モード画面に Slack 通知フォームが追加されます。
 
-![slack1](../../../.vuepress/public/assets/images/slack1.png)
+  ![slack1](../../../.vuepress/public/assets/images/slack1.png)
 
-ページの保存・更新時に 入力したチャンネルに Slack 通知が届きます。  
-この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
+  ページの保存・更新時に 入力したチャンネルに Slack 通知が届きます。  
+  この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
 
-User Trigger Notification の設定方法は[こちら](../management-cookbook/external-notification.html#user-trigger-notification-設定)を参照してください。
+  User Trigger Notification の設定方法は[こちら](../management-cookbook/external-notification.html#user-trigger-notification-設定)を参照してください。
