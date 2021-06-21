@@ -106,7 +106,7 @@
 
   ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
-  1. 入力が完了したら、画面右下の **Save Changes** をクリックしてください。
+  1. 入力が完了したら、画面右下の **Save Changes** ボタンをクリックしてください。
 
 ### スラッシュコマンドの作成
 
@@ -121,7 +121,7 @@
       - Short Description も入力必須のため、適当なご説明を入力してください。
       - Usage Hint に関しては任意なので、適宜入力してください。
       - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
-      - 入力が完了したら、画面右下の **Save** をクリックしてください。
+      - 入力が完了したら、画面右下の **Save** ボタンをクリックしてください。
 
   ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
@@ -253,7 +253,7 @@
 
       ![slack-bot-interactiviry-shortcuts-for-with-proxy](../../../.vuepress/public/assets/images/slack-bot-interactiviry-shortcuts-for-with-proxy.png)
 
-    1. 入力が完了したら、画面右下の **Save Changes** をクリックしてください。
+    1. 入力が完了したら、画面右下の **Save Changes** ボタンをクリックしてください。
 
 #### Slash Commands
 
@@ -268,7 +268,7 @@
       - Short Description も入力必須のため、適当なご説明を入力してください。
       - Usage Hint に関しては任意なので、適宜入力してください。
       - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
-      - 入力が完了したら、画面右下の **Save** をクリックしてください。
+      - 入力が完了したら、画面右下の **Save** ボタンをクリックしてください。
 
   ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
