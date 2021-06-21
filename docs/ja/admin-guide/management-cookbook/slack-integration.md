@@ -201,15 +201,16 @@
   - 成功の場合  
   **Successfully sent to Slack workspace.** が表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
     - GROWI 側
-    ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success.png)
+    ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success.png)  
     - Slack 側
-    ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
+    ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)  
 
   - 失敗の場合  
   エラーログが表示されます。ログの内容を修正してください。
-    - 例
-　　 Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。GROWI-Bot が適切に Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。  
-   ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
+    - 例  
+    Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。GROWI-Bot が適切に Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
+    
+    ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 ## Custom bot with proxy 設定
 
