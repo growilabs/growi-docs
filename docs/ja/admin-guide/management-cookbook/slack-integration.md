@@ -101,8 +101,8 @@
 
   1. Request URL を以下のように入力してください。
 
-  - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/interactions
-  - 例 `https://example.com/_api/v3/slack-bot/interactions`
+  - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-integration/interactions
+  - 例 `https://example.com/_api/v3/slack-integration/interactions`
 
   ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
@@ -117,7 +117,7 @@
     ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
       - Command に /growi と入力してください。
-      - Request URL には、`https://example.com/_api/v3/slack-bot/commands` と入力してください
+      - Request URL には、`https://example.com/_api/v3/slack-integration/commands` と入力してください
       - Short Description も入力必須のため、適当なご説明を入力してください。
       - Usage Hint に関しては任意なので、適宜入力してください。
       - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
