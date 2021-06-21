@@ -156,18 +156,19 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 1. Click **Test connection** and input the slack channel to which invited GROWI-Bot.
   ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
 
-2. Click **Test**.  
+2. Click on the **Test** button.  
   - In case of success  
-  **Successfully sent to Slack workspace** will be displayed at Logs. Green check marks will appear in red circles. Check the channel to which you invited GROWI-Bot.
+  **Successfully sent to Slack workspace** will be displayed at Logs. Green checkmarks will appear in red circles. Check the channel to which you invited GROWI-Bot.
     - GROWI side
     ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success.png)
     - Slack side
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
 
-  - In case of Failed  
+  - In case of failure  
   Error logs will be displayed. Correct the contents of the logs.
     - e.g.  
-    if **Channel_not_found** will be displayed, you don't invite GROWI-Bot to the slack channel or input wrong channel. Make sure that GROWI-Bot has been invited to the slack channel, and input the channel name appropriately.
+    if you have not invited GROWI-Bot to the slack channel or inputted the wrong channel, **Channel_not_found** error will be displayed in the logs. Please make sure that GROWI-Bot has been invited to the Slack channel, and the channel name has been inputted appropriately.
+
     ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 ### Official bot settings
