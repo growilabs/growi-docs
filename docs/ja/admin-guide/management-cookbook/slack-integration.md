@@ -165,10 +165,11 @@
   また、環境変数と管理画面の両方に入力した場合は、管理画面で入力した値が優先されるので、管理画面での入力をおすすめします。
 
 1. 管理画面で直接入力する方法
-  管理画面の Slack 連携をクリックし、**Signing Secret** と **Bot User OAuth Token** を入力して
+  - 管理画面の Slack 連携をクリックし、**Signing Secret** と **Bot User OAuth Token** を入力して
    **Update** ボタンをクリックします。
   ![slack-bot-register-introduction](../../../.vuepress/public/assets/images/slack-bot-register-introduction.png)
-
+  - 赤丸で囲った部分に緑色のチェックマークが表示されたら登録完了です。
+    ![slack-bot-register-secrets](../../../.vuepress/public/assets/images/slack-bot-register-secrets.png)
 1. 環境変数で設定する方法
 
   環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
