@@ -291,6 +291,10 @@
 
 ### Manage Distribution を設定する
 
+  1. 作成した Slack App の **Settings** から **Manage Distribution** をクリックします。
+  1. **Share Your App With Your Workspace** の Sharable URL の右側にある **Copy** ボタンを押します。
+  ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-sharable-url.png)
+
 
 ### Custom bot with proxy を Slack のワークスペースへインストールする
 <!-- TODO: GW-6326 [Custom bot with proxy] 「Bot を Slack のワークスペースへインストールする」の記述(ja) -->
