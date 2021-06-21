@@ -42,8 +42,7 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 To deploy a custom bot without proxy in your Slack workspace, you need to create and edit a Slack app. The steps are as follows.
 
 #### Before creating Slack app
-Start the GROWI main server so that the Event Subscriptions described below work properly.
-
+Start the GROWI main server.
 #### Select Bot type
 Select Custom bot without proxy in Slack Integration of the Management page.
 #### Create a Slack app
@@ -68,26 +67,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
    When the following OAuth Scope is displayed, the scope setting will be completed.
    ![slack-bot-scope-selected](../../../.vuepress/public/assets//images/slack-bot-scope-selected.png)
 
-#### Request URL settings
-
-- Set Request URL of **Event Subscriptions**
-
-  1. In the Slack App you created, go to **Features** and click **Event Subscriptions**.
-     ![slack-bot-event-subscriptions-introduction](../../../.vuepress/public/assets/images/slack-bot-event-subscriptions-introduction.png)
-
-  1. Turn on the button to the right side of **Enable Events**.
-     ![slack-bot-event-subscriptions-enable-button](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-enable-button.png)
-
-  1. Input the Request URL as follows.
-
-     - https:// your GROWI domain /\_api/v3/slack-bot/commands
-       - e.g. **https://example.com/_api/v3/slack-bot/commands**
-
-     ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
-
-  1. When you are done, click **Save Changes** button.
-
-- Set Request URL of **Interactivity & Shortcuts**
+#### Set Request URL of **Interactivity & Shortcuts**
 
   1. In the Slack App you created, go to **Features** and click **Interactivity Shortcuts**.
      ![slack-bot-interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
@@ -97,8 +77,8 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
   1. Input the Request URL as follows.
 
-     - https:// your GROWI domain /\_api/v3/slack-bot/interactions
-       - e.g. **https://example.com/_api/v3/slack-bot/interactions**
+     - https:// your GROWI domain /\_api/v3/slack-integration/interactions
+       - e.g. **https://example.com/_api/v3/slack-integration/interactions**
 
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
@@ -115,7 +95,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
 - Input /growi for Command.
-- For RequestURL, input **https://example.com/_api/v3/slack-bot/commands**.
+- For RequestURL, input **https://example.com/_api/v3/slack-integration/commands**.
 - Short Description is also required, so please input an appropriate description.
 - The Usage Hint is optional, so please input it accordingly.
 - The Escape channels, users, and links sent to your app is optional, so input it accordingly.

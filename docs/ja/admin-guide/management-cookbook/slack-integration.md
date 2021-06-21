@@ -59,7 +59,7 @@
 
 ### Custom bot without proxy を作成する前に
 
-  GROWI 本体サーバーを立ち上げてください。後述する Event Subscription の応答に必要となります。
+  GROWI 本体サーバーを立ち上げてください。
 
 ### Bot type の選択
 
@@ -91,26 +91,7 @@
     以下のように表示されたら、スコープの設定は完了です。  
     ![slack-bot-scope-selected](../../../.vuepress/public/assets/images/slack-bot-scope-selected.png)
 
-### 各 Request URL を設定する
-
-- **Event Subscriptions** の Request URL を設定する
-
-  1. 作成した Slack App の **Features** から **Event Subscriptions** をクリックします。
-     ![slack-bot-event-subscriptions-introduction](../../../.vuepress/public/assets/images/slack-bot-event-subscriptions-introduction.png)
-
-  1. **Enable Events** 右側にあるボタンを On にします。
-     ![slack-bot-event-subscriptions-enable-button](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-enable-button.png)
-
-  1. Request URL を以下のように入力してください。
-
-      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/commands
-        - 例 `https://example.com/_api/v3/slack-bot/commands`
-
-     ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
-
-  1. 入力が完了し **Verified** が表示されたら、Slack APP から GROWI サーバーへの通信は成功しています。
-
-- **Interactivity & Shortcuts** の Request URL を設定する
+### Interactivity & Shortcuts の Request URL を設定する
 
   1. 作成した Slack App の **Features** から **Interactivity Shortcuts** をクリックします。
     ![slack-bot-interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
@@ -120,8 +101,8 @@
 
   1. Request URL を以下のように入力してください。
 
-  - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/interactions
-  - 例 `https://example.com/_api/v3/slack-bot/interactions`
+  - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-integration/interactions
+  - 例 `https://example.com/_api/v3/slack-integration/interactions`
 
   ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
@@ -136,7 +117,7 @@
     ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
       - Command に /growi と入力してください。
-      - Request URL には、`https://example.com/_api/v3/slack-bot/commands` と入力してください
+      - Request URL には、`https://example.com/_api/v3/slack-integration/commands` と入力してください
       - Short Description も入力必須のため、適当なご説明を入力してください。
       - Usage Hint に関しては任意なので、適宜入力してください。
       - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
@@ -199,7 +180,7 @@
 
 2. 「Test」 ボタンをクリックします。
   - 成功の場合  
-  **Successfully sent to Slack workspace.** が表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
+  **Successfully sent to Slack workspace.** が Logs に表示され、赤丸で囲った部分に緑色のチェックマークが表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
     - GROWI 側
     ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success.png)  
     - Slack 側
@@ -208,7 +189,7 @@
   - 失敗の場合  
   エラーログが表示されます。ログの内容を修正してください。
     - 例  
-    Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。GROWI-Bot が適切に Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
+    Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
     
     ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
