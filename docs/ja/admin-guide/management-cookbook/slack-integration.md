@@ -251,9 +251,19 @@
 
   ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
-#### OAuth & Permissions
-<!-- TODO: GW-6353 [Custom bot with proxy]Redirect URLの設定方法を記述する -->
+### Redirect URL 設定
 
+#### OAuth & Permissions
+
+  1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
+  1. **Redirect URLs** の **Add New Redirect URL** ボタンをクリックします。
+    ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions1.png)
+
+  1. 入力欄が表示されるので、`https://example.com/slack/oauth_redirect` と入力してください。
+    ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions2.png)
+
+  1. 入力したら **Add** ボタン をクリックしてください。
+  
 
 ### Manage Distribution を設定する
 <!-- TODO: GW-6329 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(ja)) -->
