@@ -173,7 +173,7 @@ Click on Slack integration in the Management page, input Signing Secret and Bot 
 Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
 #### Continuity check
-1. Click **Test connection** and input channel to which invited GROWI-Bot.
+1. Click **Test connection** and input the slack channel to which invited GROWI-Bot.
   ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
 
 2. Click **Test**.
@@ -184,10 +184,10 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
     - Slack side
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
 
-  - In case of Failed 
+  - In case of Failed  
   Error logs will be displayed. Correct the contents of the logs.
     - e.g.
-    if **Channel_not_found** will be displayed, you don't invite GROWI-Bot to the slack channel.
+    if **Channel_not_found** will be displayed, you don't invite GROWI-Bot to the slack channel or input wrong channel. Make sure that GROWI-Bot has been properly invited to the slack channel, and input the channel name appropriately.
     ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 ### Official bot settings
