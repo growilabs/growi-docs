@@ -286,6 +286,7 @@
      ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions2.png)
 
   1. 入力したら **Add** ボタン をクリックしてください。
+  1. **Save URLs** ボタンを押して入力した値を保存しましょう。
   
 
 ### Manage Distribution を設定する
