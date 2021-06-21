@@ -208,8 +208,8 @@
   - 失敗の場合  
   エラーログが表示されます。ログの内容を修正してください。
     - 例
-    Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないことになります。GROWI-Botが招待されているチャンネルを入力してください。
-    ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
+　　 Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。GROWI-Bot が適切に Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。  
+   ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 ## Custom bot with proxy 設定
 
