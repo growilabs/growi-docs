@@ -56,17 +56,24 @@
 
 
 ### アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録
-
   
   1. GROWI Official Bot Proxy サービスへの登録を開きます。  
     **Access Token の発行** に各種トークンにアクセストークンが2種生成されていることを確認できます。
     アクセストークンは必要に応じて再発行できます。
   1. Slack上で /growi register と打ちます。
-  1. 表示されるモーダルの GROWI URL に、対象 GROWI の URL を保存します。
-  1. 上記で発行されている Access Token Proxy to GROWI と Access Token GROWI to Proxy を入れ **Submit** を押下します。
 
   ![slack-bot-add-workspace](../../../.vuepress/public/assets/images/slack-bot-register-modal.png)
+  
+  1. 表示されるモーダルの GROWI URL に、対象 GROWI の url を保存します。
+  1. 上記で発行されている Access Token Proxy to GROWI と Access Token GROWI to Proxy を入れ **Submit** を押下します。
 
+  ![slack-bot-update-proxy-url](../../../.vuepress/public/assets/images/slack-bot-update-proxy-url.png)
+
+  成功した場合、 Proxy サーバーの url が表示されます。
+
+  ![slack-bot-input-proxy-url](../../../.vuepress/public/assets/images/slack-bot-input-proxy-url.png)
+
+  上記で取得した Proxy サーバーの url を **Official bot 連携** の Proxy URL に入力し更新します。
 
 ### テストを実行する
 
