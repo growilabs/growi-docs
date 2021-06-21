@@ -43,7 +43,7 @@
 
 ### BotTypeの選択
 
-  管理画面の Slack 連携 にて **Custom bot with proxy** を選択してください。
+  管理画面の Slack 連携 にて **Official bot** を選択してください。
 
   ![slack-bot-selecting-official-bot](../../../.vuepress/public/assets/images/slack-bot-selecting-official-bot.png)
 
