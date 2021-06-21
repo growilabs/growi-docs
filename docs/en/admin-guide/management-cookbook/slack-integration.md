@@ -176,7 +176,7 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 1. Click **Test connection** and input the slack channel to which invited GROWI-Bot.
   ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
 
-2. Click **Test**.
+2. Click **Test**.  
   - In case of success  
   **Successfully sent to Slack workspace.** will be displayed. Check the channel to which you invited GROWI-Bot.
     - GROWI side
@@ -186,7 +186,7 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
   - In case of Failed  
   Error logs will be displayed. Correct the contents of the logs.
-    - e.g.
+    - e.g.  
     if **Channel_not_found** will be displayed, you don't invite GROWI-Bot to the slack channel or input wrong channel. Make sure that GROWI-Bot has been properly invited to the slack channel, and input the channel name appropriately.
     ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
