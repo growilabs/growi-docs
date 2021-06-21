@@ -54,6 +54,9 @@
   1. **Slack ワークスペースを追加** ボタンを押下します。  
     押下すると連携手順に新規のアコーディオンが生成されます。
 
+  ![slack-bot-install-button](../../../.vuepress/public/assets/images/slack-bot-install-button.png)
+
+  1. Bot を Slack にインストールする を開き、**今すぐインストール** ボタン押下し、 Official bot をワークスペースにインストールします。
 
 ### アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録
   
