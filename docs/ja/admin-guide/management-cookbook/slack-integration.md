@@ -59,7 +59,7 @@
 
 ### Custom bot without proxy を作成する前に
 
-  GROWI 本体サーバーを立ち上げてください。後述する Event Subscription の応答に必要となります。
+  GROWI 本体サーバーを立ち上げてください。
 
 ### Bot type の選択
 
@@ -91,26 +91,7 @@
     以下のように表示されたら、スコープの設定は完了です。  
     ![slack-bot-scope-selected](../../../.vuepress/public/assets/images/slack-bot-scope-selected.png)
 
-### 各 Request URL を設定する
-
-- **Event Subscriptions** の Request URL を設定する
-
-  1. 作成した Slack App の **Features** から **Event Subscriptions** をクリックします。
-     ![slack-bot-event-subscriptions-introduction](../../../.vuepress/public/assets/images/slack-bot-event-subscriptions-introduction.png)
-
-  1. **Enable Events** 右側にあるボタンを On にします。
-     ![slack-bot-event-subscriptions-enable-button](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-enable-button.png)
-
-  1. Request URL を以下のように入力してください。
-
-      - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-bot/commands
-        - 例 `https://example.com/_api/v3/slack-bot/commands`
-
-     ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
-
-  1. 入力が完了し **Verified** が表示されたら、Slack APP から GROWI サーバーへの通信は成功しています。
-
-- **Interactivity & Shortcuts** の Request URL を設定する
+### Interactivity & Shortcuts の Request URL を設定する
 
   1. 作成した Slack App の **Features** から **Interactivity Shortcuts** をクリックします。
     ![slack-bot-interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
