@@ -80,8 +80,8 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
   1. Input the Request URL as follows.
 
-     - https:// your GROWI domain /\_api/v3/slack-bot/commands
-       - e.g. **https://example.com/_api/v3/slack-bot/commands**
+     - https:// your GROWI domain /\_api/v3/slack-integration-settings/commands
+       - e.g. **https://example.com/_api/v3/slack-integration-settings/commands**
 
      ![slack-bot-event-subscriptions-creation](../../../.vuepress/public/assets/images/slack-bot-event-sucscriptions-creation.png)
 
@@ -97,8 +97,8 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
   1. Input the Request URL as follows.
 
-     - https:// your GROWI domain /\_api/v3/slack-bot/interactions
-       - e.g. **https://example.com/_api/v3/slack-bot/interactions**
+     - https:// your GROWI domain /\_api/v3/slack-integration-settings/interactions
+       - e.g. **https://example.com/_api/v3/slack-integration-settings/interactions**
 
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
@@ -115,7 +115,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
 - Input /growi for Command.
-- For RequestURL, input **https://example.com/_api/v3/slack-bot/commands**.
+- For RequestURL, input **https://example.com/_api/v3/slack-integration-settings/commands**.
 - Short Description is also required, so please input an appropriate description.
 - The Usage Hint is optional, so please input it accordingly.
 - The Escape channels, users, and links sent to your app is optional, so input it accordingly.
