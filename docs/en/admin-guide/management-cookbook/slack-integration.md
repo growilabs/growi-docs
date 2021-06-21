@@ -158,7 +158,7 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
 2. Click **Test**.  
   - In case of success  
-  **Successfully sent to Slack workspace.** will be displayed. Check the channel to which you invited GROWI-Bot.
+  **Successfully sent to Slack workspace.** will be displayed at Logs. Green check marks will appear in red circle. Check the channel to which you invited GROWI-Bot.
     - GROWI side
     ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success.png)
     - Slack side
