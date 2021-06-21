@@ -167,7 +167,7 @@
 1. 管理画面で直接入力する方法
   管理画面の Slack 連携をクリックし、**Signing Secret** と **Bot User OAuth Token** を入力して
    **Update** ボタンをクリックします。
-  ![slack-integration](../../../.vuepress/public/assets/images/slack-integration-introduction.png)
+  ![slack-bot-register-introduction](../../../.vuepress/public/assets/images/slack-bot-register-introduction.png)
 
 1. 環境変数で設定する方法
 
