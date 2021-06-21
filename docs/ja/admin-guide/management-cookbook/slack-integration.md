@@ -101,12 +101,12 @@
 
   1. Request URL を以下のように入力してください。
 
-  - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-integration/interactions
-  - 例 `https://example.com/_api/v3/slack-integration/interactions`
+- https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-integration/interactions
+- 例 `https://example.com/_api/v3/slack-integration/interactions`
 
   ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
-  1. 入力が完了したら、**Save Changes** をクリックしてください。
+  1. 入力が完了したら、画面右下の **Save Changes** をクリックしてください。
 
 ### スラッシュコマンドの作成
 
@@ -121,7 +121,7 @@
       - Short Description も入力必須のため、適当なご説明を入力してください。
       - Usage Hint に関しては任意なので、適宜入力してください。
       - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
-      - 入力が完了したら、**Save** をクリックしてください。
+      - 入力が完了したら、画面右下の **Save** をクリックしてください。
 
   ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
@@ -174,23 +174,25 @@
   環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
 
 #### 導通テスト
+
 1. 「Test connection」をクリックし、GROWI-Bot を招待した Slack チャンネルを入力します。
   ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
 
 
 2. 「Test」 ボタンをクリックします。
-  - 成功の場合  
+
+- 成功の場合  
   **Successfully sent to Slack workspace.** が Logs に表示され、赤丸で囲った部分に緑色のチェックマークが表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
-    - GROWI 側
+  - GROWI 側
     ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success.png)  
-    - Slack 側
+  - Slack 側
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)  
 
-  - 失敗の場合  
+- 失敗の場合  
   エラーログが表示されます。ログの内容を修正してください。
-    - 例  
+  - 例  
     Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
-    
+
     ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 ## Custom bot with proxy 設定
@@ -251,7 +253,7 @@
 
       ![slack-bot-interactiviry-shortcuts-for-with-proxy](../../../.vuepress/public/assets/images/slack-bot-interactiviry-shortcuts-for-with-proxy.png)
 
-    1. 入力が完了したら、**Save Changes** をクリックしてください。
+    1. 入力が完了したら、画面右下の **Save Changes** をクリックしてください。
 
 #### Slash Commands
 
@@ -266,7 +268,7 @@
       - Short Description も入力必須のため、適当なご説明を入力してください。
       - Usage Hint に関しては任意なので、適宜入力してください。
       - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
-      - 入力が完了したら、**Save** をクリックしてください。
+      - 入力が完了したら、画面右下の **Save** をクリックしてください。
 
   ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
@@ -285,7 +287,7 @@
   
 
 ### Manage Distribution を設定する
-<!-- TODO: GW-6329 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(ja)) -->
+
 
 ### Custom bot with proxy を Slack のワークスペースへインストールする
 <!-- TODO: GW-6326 [Custom bot with proxy] 「Bot を Slack のワークスペースへインストールする」の記述(ja) -->
