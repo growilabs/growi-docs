@@ -280,8 +280,10 @@
   1. **Redirect URLs** の **Add New Redirect URL** ボタンをクリックします。
     ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions1.png)
 
-  1. 入力欄が表示されるので、`https://example.com/slack/oauth_redirect` と入力してください。
-    ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions2.png)
+  1. 入力欄が表示されるので、`https:// 連携させたい PROXY のドメイン名 /slack/interactions` を入力してください。
+     - 例 `https://example.com/slack/interactions`
+
+     ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions2.png)
 
   1. 入力したら **Add** ボタン をクリックしてください。
   
