@@ -1,4 +1,4 @@
-# Archive data
+# Archive Data
 
 Creates a zipped GROWI archive data for migrating GROWI data to another GROWI.
 
@@ -32,9 +32,9 @@ Creates a zipped GROWI archive data for migrating GROWI data to another GROWI.
 || Updateposts | Notification settings that are created in User Trigger Notification. |
 || Globalnotificationsettings | Notification settings that are created in Global Notification. |
 | Others | Comments | Comments. Must be imported together with Pages. |
-|| Attachments | Metadata for attachments. AttachmentFiles.Files and Attachmentfiles.Chunks must be imported together if GridFS is used as the file upload method. |
-|| AttachmentFiles.Files | Metadata of the attached files uploaded with Grid FS. Must be imported together with Attachments and AttachmentFiles.Chunks. |
-|| AttachmentFiles.Chunks | Data of the attachment files uploaded with Grid FS. Must be imported together with Attachments and Attachmentfiles.Files if GridFS is used as the file upload method. |
+|| Attachments | Metadata of attached files. `AttachmentFiles.Files` and `Attachmentfiles.Chunks` must be imported together if GridFS is used as the file upload method. |
+|| AttachmentFiles.Files | Metadata of the attached files uploaded with Grid FS. Must be imported together with Attachments and `AttachmentFiles.Chunks`. |
+|| AttachmentFiles.Chunks | Data of the attachment files uploaded with Grid FS. Must be imported together with Attachments and `AttachmentFiles.Files` if GridFS is used as the file upload method. |
 || Bookmark | Bookmarks attached to pages. Must be imported together with Users and Pages. |
 || Migrations | Migration log. MongoDB migrations in GROWI will skip the migration files that are added to this log. Therefore, to create archived data as complete data at the time of export, Migrations must be exported. |
 
