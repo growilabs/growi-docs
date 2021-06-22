@@ -49,34 +49,7 @@
 
 ### Official bot を Slack のワークスペースへインストールする
 
-  ![slack-bot-add-workspace](../../../.vuepress/public/assets/images/slack-bot-add-workspace.png)
-
-  1. **Slack ワークスペースを追加** ボタンを押下します。  
-    押下すると連携手順に新規のアコーディオンが生成されます。
-
-  ![slack-bot-install-button](../../../.vuepress/public/assets/images/slack-bot-install-button.png)
-
-  1. Bot を Slack にインストールする を開き、**今すぐインストール** ボタン押下し、 Official bot をワークスペースにインストールします。
-
 ### アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録
-  
-  1. GROWI Official Bot Proxy サービスへの登録を開きます。  
-    **Access Token の発行** に各種トークンにアクセストークンが2種生成されていることを確認できます。
-    アクセストークンは必要に応じて再発行できます。
-  1. Slack上で /growi register と打ちます。
-
-  ![slack-bot-add-workspace](../../../.vuepress/public/assets/images/slack-bot-register-modal.png)
-  
-  1. 表示されるモーダルの GROWI URL に、対象 GROWI の url を保存します。
-  1. 上記で発行されている Access Token Proxy to GROWI と Access Token GROWI to Proxy を入れ **Submit** を押下します。
-
-  ![slack-bot-update-proxy-url](../../../.vuepress/public/assets/images/slack-bot-update-proxy-url.png)
-
-  成功した場合、 Proxy サーバーの url が表示されます。
-
-  ![slack-bot-input-proxy-url](../../../.vuepress/public/assets/images/slack-bot-input-proxy-url.png)
-
-  上記で取得した Proxy サーバーの url を **Official bot 連携** の Proxy URL に入力し更新します。
 
 ### テストを実行する
 
@@ -305,10 +278,37 @@
 <!-- TODO: GW-6329 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(ja)) -->
 
 ### Custom bot with proxy を Slack のワークスペースへインストールする
-<!-- TODO: GW-6326 [Custom bot with proxy] 「Bot を Slack のワークスペースへインストールする」の記述(ja) -->
 
-### アクセストークンの発行 / Custom bot with proxy サービスへの登録
-<!-- TODO: GW-6327 [Custom bot with proxy]「アクセストークンの発行 / GROWI Custom bot with proxyサービスへの登録」の記述(ja) -->
+  ![slack-bot-add-workspace](../../../.vuepress/public/assets/images/slack-bot-add-workspace.png)
+
+  1. **Slack ワークスペースを追加** ボタンを押します。  
+    ボタンを押すと連携手順に新規のアコーディオンが生成されます。
+
+  ![slack-bot-install-button](../../../.vuepress/public/assets/images/slack-bot-install-button.png)
+
+  1. Bot を Slack にインストールする を開き、**今すぐインストール** ボタンを押して、 Official bot をワークスペースにインストールします。
+
+
+### GROWI Custom Bot with Proxy サービスへの登録
+  
+  1. GROWI Official Bot Proxy サービスへの登録を開きます。  
+    **Access Token の発行** に各種トークンにアクセストークンが2種生成されていることを確認できます。
+    アクセストークンは必要に応じて再発行できます。
+  1. Slack上で `/growi register` と打ちます。
+
+  ![slack-bot-add-workspace](../../../.vuepress/public/assets/images/slack-bot-register-modal.png)
+  
+  1. 表示されるモーダルの GROWI URL に、対象 GROWI の URL を保存します。
+  1. 上記で発行されている Access Token Proxy to GROWI と Access Token GROWI to Proxy を入れ **Submit** ボタンを押します。
+
+  ![slack-bot-update-proxy-url](../../../.vuepress/public/assets/images/slack-bot-update-proxy-url.png)
+
+  成功した場合、 Proxy サーバーの URL が表示されます。
+
+  ![slack-bot-input-proxy-url](../../../.vuepress/public/assets/images/slack-bot-input-proxy-url.png)
+
+  上記で取得した Proxy サーバーの URL を **Official bot 連携** の Proxy URL に入力し更新します。
+
 
 ### テストを実行する
 <!-- TODO: GW-6328 [Custom bot with proxy]「テストを実行する」の記述(ja) -->
