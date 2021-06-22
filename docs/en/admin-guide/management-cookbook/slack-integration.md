@@ -82,7 +82,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
-  1. When the Request URL has been correctly entered, **Verified** will be displayed on the screen. It means the Slack APP and the GROWI server are connecting successfully.
+  1. When the Request URL has been correctly entered, click **Save Changes** button.
 
 #### Create Slash Commands
 
