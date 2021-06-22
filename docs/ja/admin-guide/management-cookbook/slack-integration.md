@@ -49,9 +49,24 @@
 
 ### Official bot を Slack のワークスペースへインストールする
 
-### アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録
+  1. **Slack ワークスペースを追加** ボタンをクリックします。
+
+      ![slack-bot-add-a-slack-workspace](../../../.vuepress/public/assets/images/slack-bot-add-a-slack-workspace.png)
+
+  1. **Integration Procedure** に新規のアコーディオンが生成されるので、①「Instal Bot to Slack」のタブをクリックして開きます。
+  1. **Install now** ボタンをクリックします。
+
+      ![slack-bot-install-now-for-official](../../../.vuepress/public/assets/images/slack-bot-install-now-for-official.png)
+
+  1. Slack app directory のリンクに飛ぶので、「Add to Slack」ボタンを押して自身の Slack work space にインストールします。
+    <!-- TODO: GW-6420 [Official] app directoryの写真を挿入(GW4836 ブロック) -->
+
+### GROWI Official Bot Proxyサービスへの登録
+
+<!-- TODO: GW-6369 [Official]「アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録」の記述(ja) -->
 
 ### テストを実行する
+<!-- TODO: GW-6415 [Official bot]「テストを実行する」の記述(ja) -->
 
 ## Custom bot without proxy 設定
 
