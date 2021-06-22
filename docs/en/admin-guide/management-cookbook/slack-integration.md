@@ -173,9 +173,15 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
 ### Official bot settings
 (TBD)
+### Check the connected GROWI.
+By typing /growi status, you can see the GROWI that is connected to the Slack workspace.  
+![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
 ### Custom bot with proxy settings
 (TBD)
+### Check the connected GROWI.
+By typing /growi status, you can see the GROWI that is connected to the Slack workspace.  
+![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
