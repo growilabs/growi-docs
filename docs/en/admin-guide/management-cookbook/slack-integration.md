@@ -144,9 +144,10 @@ in case that you input values in both the Management page and environment variab
 
 1. How to set them in Management page
 
-- Click on Slack integration in the Management page, input Signing Secret and Bot User OAuth Token, and click **Update**.  
+- Go to the Slack integration in the Management page and input Signing Secret and Bot User OAuth Token, then click on the **Update** button.
+
 ![slack-bot-register-introduction](../../../.vuepress/public/assets/images/slack-bot-register-introduction.png)
-- When a green checkmark appears in the red circle, registration is complete.  
+- When a green checkmark appears in the red circle, registration is completed.  
 ![slack-bot-register-secrets](../../../.vuepress/public/assets/images/slack-bot-register-secrets.png)
 
 1. How to set them with environment variables
