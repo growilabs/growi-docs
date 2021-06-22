@@ -292,9 +292,10 @@
 
 ### アクセストークンの発行 / Custom bot with proxy サービスへの登録
 <!-- TODO: GW-6327 [Custom bot with proxy]「アクセストークンの発行 / GROWI Custom bot with proxyサービスへの登録」の記述(ja) -->
-
 ### テストを実行する
 <!-- TODO: GW-6328 [Custom bot with proxy]「テストを実行する」の記述(ja) -->
+### 接続中の GROWI を確認する
+/growi status と入力することで、現在 Slack ワークスペースと連携している GROWI を確認することができます。
 
 
 ## GROWI bot でできること
