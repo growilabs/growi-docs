@@ -53,7 +53,7 @@
 
 ### テストを実行する
 ### 接続中の GROWI を確認する
-/growi status と入力することで、現在 Slack ワークスペースと連携している GROWI を確認することができます。
+/growi status と入力することで、Slack ワークスペースと連携している GROWI を確認することができます。
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
 ## Custom bot without proxy 設定
