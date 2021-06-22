@@ -49,9 +49,12 @@
 
 ### Official bot を Slack のワークスペースへインストールする
 
-### アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録
+
+### GROWI Official Bot Proxyサービスへの登録
+<!-- TODO: GW-6369 [Official]「アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録」の記述(ja) -->
 
 ### テストを実行する
+<!-- TODO: GW-6415 [Official bot]「テストを実行する」の記述(ja) -->
 
 ## Custom bot without proxy 設定
 
