@@ -334,9 +334,9 @@
 
 <!-- ### Slack ログの記録 (TBD) -->
 
-### 登録情報を削除する
+### Proxy に登録した GROWI App(s) の情報を削除する
 
-1. `/growi unregister [削除したい GROWI app の URL1] [削除したい GROWI app の URL2] ...` と入力するとモーダルが表示されます。
+1. `/growi unregister [削除したい GROWI App の URL1] [削除したい GROWI App の URL2] ...` と入力するとモーダルが表示されます。
 
     - 入力例: `growi unregister http://example.com http://growi.jp`
     ![slack-bot-unregister-input-eg](../../../.vuepress/public/assets/images/slack-bot-unregister-input-eg.png)
