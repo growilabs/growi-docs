@@ -80,14 +80,9 @@
   - Slack 側
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
 
-<!-- TODO: GW-6441 導通テスト時の error 集を作成する -->
 - 失敗の場合  
-  エラーログが表示されます。ログの内容を修正してください。
-  - 例  
-    Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。
-    GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
+  [導通テスト時のエラーログ](./slack-integration.html#導通テスト時のエラーログ)を参照してください。
 
-    ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 全ての設定が完了したら [GROWI bot でできること](./slack-integration.html#growi-bot-でできること)を参照してください。
 
@@ -230,11 +225,7 @@
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)  
 
 - 失敗の場合  
-  エラーログが表示されます。ログの内容を修正してください。
-  - 例  
-    Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
-
-    ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
+  [導通テスト時のエラーログ](./slack-integration.html#導通テスト時のエラーログ)を参照してください。
 
 ## Custom bot with proxy 設定
 
@@ -339,6 +330,24 @@
 <!-- TODO: GW-6328 [Custom bot with proxy]「テストを実行する」の記述(ja) -->
 
 全ての設定が完了したら [GROWI bot でできること](./slack-integration.html#growi-bot-でできること)を参照してください。
+
+## 導通テスト時のエラーログ
+
+1. **Channel_not_found**  
+   指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。
+   GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。
+   ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
+
+1. **Scope not correct**
+   Slack App を作成した際に設定する Scope が正しくないことで発生するエラーです。
+   作成した Slack App の **OAuth & Permissions** から Scope を再設定し直してください。
+   必要な Scope は **team:read**, **chat:write**, **command** です。
+
+1. undefined
+   SigningSecret や BotOauthToken などの情報が登録されていないことで発生するエラーです。
+
+1. invalid_auth
+   設定した値が間違っていることによって発生する認証エラーです。
 
 ## GROWI bot でできること
 
