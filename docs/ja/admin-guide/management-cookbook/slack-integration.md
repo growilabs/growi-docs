@@ -336,9 +336,9 @@
 
 <!-- ### Slack ログの記録 (TBD) -->
 
-### Proxy に登録した GROWI App(s) の情報を削除する
+### Slack ワークスペースと GROWI App(s) との連携を解除する
 
-1. `/growi unregister [削除したい GROWI App の URL1] [削除したい GROWI App の URL2] ...` と入力するとモーダルが表示されます。
+1. `/growi unregister [連携解除したい GROWI App の URL1] [連携解除したい GROWI App の URL2] ...` と入力するとモーダルが表示されます。
 
     - 入力例: `growi unregister http://example.com http://growi.jp`
     ![slack-bot-unregister-input-eg](../../../.vuepress/public/assets/images/slack-bot-unregister-input-eg.png)
@@ -346,7 +346,7 @@
     - 表示されるモーダル
     ![slack-bot-unregister-modal](../../../.vuepress/public/assets/images/slack-bot-unregister-modal.png)
 1. **Submit** ボタンをクリックします。
-1. 以下のように表示されたら、削除が完了しています。
+1. 以下のように表示されたら、連携解除が完了しています。
     ![slack-bot-unregister-completed](../../../.vuepress/public/assets/images/slack-bot-unregister-completed.png)
 
 ## Incoming webhook 設定
