@@ -7,7 +7,7 @@ Registering an LDAP server allows users to login via LDAP.
 ## LDAP Server Settings
 
 1. Access the Security Settings page (/admin/security) on the administration page and open the LDAP tag in the Authentication Mechanism Settings.
-2. Turn ON "Enable LDAP" and enter the necessary information.
+2. Turn on the "Enable LDAP" switch and enter the necessary information.
 
 - Server URL: Enter the URL in the format `ldaps://host:port/BaseDN`.
   - Schema should be `ldap` or `ldaps`.
