@@ -180,11 +180,13 @@
   また、環境変数と管理画面の両方に入力した場合は、管理画面で入力した値が優先されるので、管理画面での入力をおすすめします。
 
 1. 管理画面で直接入力する方法
-  - 管理画面の Slack 連携をクリックし、**Signing Secret** と **Bot User OAuth Token** を入力して
+
+- 管理画面の Slack 連携をクリックし、**Signing Secret** と **Bot User OAuth Token** を入力して
    **Update** ボタンをクリックします。
   ![slack-bot-register-introduction](../../../.vuepress/public/assets/images/slack-bot-register-introduction.png)
-  - 赤丸で囲った部分に緑色のチェックマークが表示されたら登録完了です。
+- 赤丸で囲った部分に緑色のチェックマークが表示されたら登録完了です。
     ![slack-bot-register-secrets](../../../.vuepress/public/assets/images/slack-bot-register-secrets.png)
+
 1. 環境変数で設定する方法
 
   環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
@@ -331,6 +333,24 @@
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
 <!-- ### Slack ログの記録 (TBD) -->
+
+### 登録情報を削除する
+
+1. `/growi unregister [削除したい GROWI app の URL1] [削除したい GROWI app の URL2] ...` と入力するとモーダルが表示されます。
+
+    - 入力例: `growi unregister http://example.com http://growi.jp`
+    ![slack-bot-unregister-input-eg](../../../.vuepress/public/assets/images/slack-bot-unregister-input-eg.png)
+
+    - 表示されるモーダル
+    ![slack-bot-unregister-modal](../../../.vuepress/public/assets/images/slack-bot-unregister-modal.png)
+1. **Submit** ボタンをクリックします。
+1. 以下のように表示されたら、削除が完了しています。
+    ![slack-bot-unregister-completed](../../../.vuepress/public/assets/images/slack-bot-unregister-completed.png)
+
+
+
+
+
 
 ## Incoming webhook 設定
 
