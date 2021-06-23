@@ -68,6 +68,8 @@
 ### テストを実行する
 <!-- TODO: GW-6415 [Official bot]「テストを実行する」の記述(ja) -->
 
+全ての設定が完了したら [GROWI bot でできること](./slack-integration.html#growi-bot-でできること)を参照してください。
+
 ## Custom bot without proxy 設定
 
   Custom bot without proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
@@ -312,10 +314,10 @@
 
 ### アクセストークンの発行 / Custom bot with proxy サービスへの登録
 <!-- TODO: GW-6327 [Custom bot with proxy]「アクセストークンの発行 / GROWI Custom bot with proxyサービスへの登録」の記述(ja) -->
-
 ### テストを実行する
 <!-- TODO: GW-6328 [Custom bot with proxy]「テストを実行する」の記述(ja) -->
 
+全ての設定が完了したら [GROWI bot でできること](./slack-integration.html#growi-bot-でできること)を参照してください。
 
 ## GROWI bot でできること
 
@@ -331,6 +333,11 @@
      ![slack-bot-full-text-search-click-next](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-next.png)
    - **Share** ボタンをクリックすると、チャンネル内に共有されます。
      ![slack-bot-full-text-search-click-share](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-share.png)
+
+### 接続中の GROWI を確認する
+
+`/growi status` と入力することで、Slack ワークスペースと連携している GROWI を確認することができます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
+![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
