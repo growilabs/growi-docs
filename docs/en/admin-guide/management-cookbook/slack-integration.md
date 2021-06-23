@@ -223,7 +223,7 @@ For details on how to configure User Trigger Notification, please refer to here.
 
 ### Full-text search in a workspace
 
-1. If you input /growi search [keyword(s)], the search results will be displayed.
+1. If you input `/growi search [keyword(s)]`, the search results will be displayed.
    - e.g. /growi search example
      ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
    - Search results.
@@ -235,7 +235,7 @@ For details on how to configure User Trigger Notification, please refer to here.
 
 ### Check the connected GROWI
 
-By typing /growi status, you can see the GROWI that is connected to the Slack workspace.
+By typing `/growi status`, you can see the GROWI App(s) that is connected to the Slack workspace.
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
