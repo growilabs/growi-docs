@@ -243,15 +243,15 @@ By typing `/growi status`, you can see the GROWI App(s) that is connected to the
 
 ### Unregister the Slack workspace from the GROWI App(s)
 
-1. Please input `/growi unregister [URL1 of the GROWI App to be unregistered] [URL2 of the GROWI App to be unregistered]...`, then the modal will be displayed.
+  1. Please input `/growi unregister [URL1 of the GROWI App to be unregistered] [URL2 of the GROWI App to be unregistered]...`, then the modal will be displayed.
     - e.g.: `growi unregister http://example.com http://growi.jp`
     ![slack-bot-unregister-input-eg](../../../.vuepress/public/assets/images/slack-bot-unregister-input-eg.png)
 
     - Modal
     ![slack-bot-unregister-modal](../../../.vuepress/public/assets/images/slack-bot-unregister-modal.png)
 
-1. Click on **Submit** button.
-1. If the following is displayed, the unregister the Slack workspace is completed.
+  1. Click on **Submit** button.
+  1. If the following is displayed, the unregister the Slack workspace is completed.
     ![slack-bot-unregister-completed](../../../.vuepress/public/assets/images/slack-bot-unregister-completed.png)
 
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
