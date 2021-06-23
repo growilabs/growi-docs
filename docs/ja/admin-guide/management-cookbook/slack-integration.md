@@ -336,9 +336,7 @@
 
   1. **Slack ワークスペースを追加** ボタンを押します。  
     ボタンを押すと連携手順に新規のアコーディオンが生成されます。
-
   ![slack-bot-install-button](../../../.vuepress/public/assets/images/slack-bot-install-button.png)
-
   1. Bot を Slack にインストールする を開き、**今すぐインストール** ボタンを押して、 Official bot をワークスペースにインストールします。
 
 
