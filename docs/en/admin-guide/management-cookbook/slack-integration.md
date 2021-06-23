@@ -98,7 +98,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
 ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
-- Input /growi for Command.
+- Input `/growi` for Command.
 - For RequestURL, input **<https://example.com/_api/v3/slack-integration/commands>**.
 - Short Description is also required, so please input an appropriate description.
 - The Usage Hint is optional, so please input it accordingly.
@@ -224,7 +224,7 @@ For details on how to configure User Trigger Notification, please refer to here.
 ### Full-text search in a workspace
 
 1. If you input `/growi search [keyword(s)]`, the search results will be displayed.
-   - e.g. /growi search example
+   - e.g. `/growi search example`
      ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
    - Search results.
      ![slack-bot-full-text-search-display-result](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result.png)
