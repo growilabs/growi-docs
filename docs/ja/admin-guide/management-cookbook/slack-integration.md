@@ -333,7 +333,7 @@
 
 ### 接続中の GROWI を確認する
 
-/growi status と入力することで、Slack ワークスペースと連携している GROWI を確認することができます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
+`/growi status` と入力することで、Slack ワークスペースと連携している GROWI を確認することができます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
