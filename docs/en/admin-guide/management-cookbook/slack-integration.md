@@ -94,7 +94,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
 <!-- ![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png) -->
 
-2. Click the **Create New Command** button.
+1. Click the **Create New Command** button.
 
 ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
@@ -181,19 +181,12 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
 (TBD)
 
-### Check the connected GROWI
-
-By typing /growi status, you can see the GROWI that is connected to the Slack workspace.  
-![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
+<!-- Once you are all set up, see [what you can do with a GROWI-bot] -->
 
 ### Custom bot with proxy settings
 
 (TBD)
 
-### Check the connected GROWI
-
-By typing /growi status, you can see the GROWI that is connected to the Slack workspace.  
-![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
@@ -238,6 +231,10 @@ For details on how to configure User Trigger Notification, please refer to here.
    - Click the **Share** button to share it within the channel.
      ![slack-bot-full-text-search-click-share](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-share.png)
 
+### Check the connected GROWI
+
+By typing /growi status, you can see the GROWI that is connected to the Slack workspace.
+![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
 <!-- ### Slack ログの記録 (TBD) -->
