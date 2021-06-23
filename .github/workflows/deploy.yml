@@ -1,6 +1,9 @@
 name: Deploy
 
-on: push
+on:
+  push:
+    branches:
+      - master
 
 jobs:
 
@@ -57,9 +60,9 @@ jobs:
         curl -SL $GROWI_ARCHIVE_URL | tar -xz -C tmp/growi --strip-components 1
 
     - name: Build and deploy
-      uses: jenkey2011/vuepress-deploy@master
+      uses: jenkey2011/vuepress-deploy@v1.8.1
       env:
-        ACCESS_TOKEN: $GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BUILD_SCRIPT: yarn commons:build && yarn apiv3:build && yarn docs:build
         BUILD_DIR: docs/.vuepress/dist/
         CNAME: docs.growi.org
