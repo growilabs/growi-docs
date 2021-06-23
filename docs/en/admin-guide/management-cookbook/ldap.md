@@ -12,13 +12,13 @@ Registering an LDAP server allows users to login via LDAP.
 - Server URL: Enter the URL in the format `ldaps://host:port/BaseDN`.
   - Schema should be `ldap` or `ldaps`.
   - Port is optional.
-- Bind mode: Choose the behavior when connecting to an LDAP server to search for users.
-  - Manager Bind: This mode allows you to set a specific DN in advance and use it to search for LDAP users. Select this mode if you have permissions such as `uid=admin`.
+- Binding mode: Choose the behavior when connecting to an LDAP server to search for users.
+  - Manager Bind: This mode allows you to set a specific DN in advance and use it to search for LDAP users. Select this mode to have permissions such as `uid=admin`.
   - User Bind: A mode in which a DN is dynamically created from the user name entered in the GROWI login form and used to search for LDAP users.
 - Bind DN
   - Enter the account DN to be used when authenticating to the directory service.
   - Use the format `{{username}}` for User Bind to use the username entered at login.
-    - Example: `uid={{username}},dc=domain,dc=com`.
+    - Example: `uid={{username}},dc=domain,dc=com`
 - Bind DN Password
   - For Manager Bind only, enter the password to use. (Note: MongoDB will store the plaintext password for the DN in MongoDB).
   - (Note: MongoDB stores the plaintext password for the DN in question) For User Bind, the login password is used.
