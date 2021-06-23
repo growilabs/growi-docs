@@ -347,11 +347,6 @@
 1. 以下のように表示されたら、削除が完了しています。
     ![slack-bot-unregister-completed](../../../.vuepress/public/assets/images/slack-bot-unregister-completed.png)
 
-
-
-
-
-
 ## Incoming webhook 設定
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
