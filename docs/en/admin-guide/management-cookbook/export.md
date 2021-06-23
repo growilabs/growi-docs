@@ -47,4 +47,3 @@ Creates a zipped GROWI archive data for migrating GROWI data to another GROWI.
 1. Log in to GROWI with an administrator account and go to [Admin/Export Archive Data] (`/admin/export`).
 2. Click on [Create New Archive Data] and in the modal that appears, select the MongoDB Collections to be exported and click on the [Export] button.
 3. When the export is completed, the generated archive data will be added to the [Exported Archive Data List]. Click the cog icon to reveal the drop-down menu with the [Download] button.
-
