@@ -67,10 +67,8 @@
 
 ### テストを実行する
 
-
 1. 「Test connection」をクリックし、GROWI-Bot を招待した Slack チャンネルを入力します。
   ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
-
 
 2. 「Test」 ボタンをクリックします。
 
