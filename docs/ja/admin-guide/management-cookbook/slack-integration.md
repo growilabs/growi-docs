@@ -52,7 +52,9 @@
 ### アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録
 
 ### テストを実行する
+
 ### 接続中の GROWI を確認する
+
 /growi status と入力することで、Slack ワークスペースと連携している GROWI を確認することができます。
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
@@ -104,8 +106,8 @@
 
   1. Request URL を以下のように入力してください。
 
-  - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-integration/interactions
-  - 例 `https://example.com/_api/v3/slack-integration/interactions`
+- https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-integration/interactions
+- 例 `https://example.com/_api/v3/slack-integration/interactions`
 
   ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
@@ -177,23 +179,25 @@
   環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
 
 #### 導通テスト
+
 1. 「Test connection」をクリックし、GROWI-Bot を招待した Slack チャンネルを入力します。
   ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
 
 
 2. 「Test」 ボタンをクリックします。
-  - 成功の場合  
+
+- 成功の場合  
   **Successfully sent to Slack workspace.** が Logs に表示され、赤丸で囲った部分に緑色のチェックマークが表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
-    - GROWI 側
+  - GROWI 側
     ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success.png)  
-    - Slack 側
+  - Slack 側
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)  
 
-  - 失敗の場合  
+- 失敗の場合  
   エラーログが表示されます。ログの内容を修正してください。
-    - 例  
+  - 例  
     Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
-    
+
     ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 ## Custom bot with proxy 設定
@@ -298,6 +302,7 @@
 ### テストを実行する
 <!-- TODO: GW-6328 [Custom bot with proxy]「テストを実行する」の記述(ja) -->
 ### 接続中の GROWI を確認する
+
 /growi status と入力することで、現在 Slack ワークスペースと連携している GROWI を確認することができます。
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
