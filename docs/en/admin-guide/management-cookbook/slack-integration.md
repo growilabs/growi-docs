@@ -236,9 +236,14 @@ For details on how to configure User Trigger Notification, please refer to here.
    - Click the **Share** button to share it within the channel.
      ![slack-bot-full-text-search-click-share](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-share.png)
 
+### Check the connected GROWI
+
+By typing `/growi status`, you can see the GROWI App(s) that is connected to the Slack workspace.
+![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
+
 ### Unregister the Slack workspace from the GROWI App(s)
 
-1. Please input `/growi unregister [URL1 of the GROWI App to be unregistered] [URL2 of the GROWI App to be unregistered]... ,then modal will be displayed.
+1. Please input `/growi unregister [URL1 of the GROWI App to be unregistered] [URL2 of the GROWI App to be unregistered]...`, then the modal will be displayed.
     - e.g.: `growi unregister http://example.com http://growi.jp`
     ![slack-bot-unregister-input-eg](../../../.vuepress/public/assets/images/slack-bot-unregister-input-eg.png)
 
@@ -249,10 +254,6 @@ For details on how to configure User Trigger Notification, please refer to here.
 1. If the following is displayed, the unregister the Slack workspace is completed.
     ![slack-bot-unregister-completed](../../../.vuepress/public/assets/images/slack-bot-unregister-completed.png)
 
-### Check the connected GROWI
-
-By typing `/growi status`, you can see the GROWI App(s) that is connected to the Slack workspace.
-![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
 <!-- ### Slack ログの記録 (TBD) -->
