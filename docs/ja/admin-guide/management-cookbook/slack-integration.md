@@ -43,15 +43,53 @@
 
 ### BotTypeの選択
 
-  管理画面の Slack 連携 にて **Custom bot with proxy** を選択してください。
+  管理画面の Slack 連携 にて **Official bot** を選択してください。
 
   ![slack-bot-selecting-official-bot](../../../.vuepress/public/assets/images/slack-bot-selecting-official-bot.png)
 
 ### Official bot を Slack のワークスペースへインストールする
 
-### アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録
+  1. **Slack ワークスペースを追加** ボタンをクリックします。
+
+      ![slack-bot-add-a-slack-workspace](../../../.vuepress/public/assets/images/slack-bot-add-a-slack-workspace.png)
+
+  1. **Integration Procedure** に新規のアコーディオンが生成されるので、①「Instal Bot to Slack」のタブをクリックして開きます。
+  1. **Install now** ボタンをクリックします。
+
+      ![slack-bot-install-now-for-official](../../../.vuepress/public/assets/images/slack-bot-install-now-for-official.png)
+
+  1. Slack app directory のリンクに飛ぶので、「Add to Slack」ボタンを押して自身の Slack work space にインストールします。
+    <!-- TODO: GW-6420 [Official] app directoryの写真を挿入(GW4836 ブロック) -->
+
+### GROWI Official Bot Proxyサービスへの登録
+
+<!-- TODO: GW-6369 [Official]「アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録」の記述(ja) -->
 
 ### テストを実行する
+
+1. 「Test connection」をクリックし、GROWI-Bot を招待した Slack チャンネルを入力します。
+  ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
+
+2. 「Test」 ボタンをクリックします。
+
+- 成功の場合  
+  **Successfully sent to Slack workspace.** が Logs に表示され、
+  赤丸で囲った部分に緑色のチェックマークが表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
+  - GROWI 側
+    ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success.png)
+  - Slack 側
+    ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
+
+<!-- TODO: GW-6441 導通テスト時の error 集を作成する -->
+- 失敗の場合  
+  エラーログが表示されます。ログの内容を修正してください。
+  - 例  
+    Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。
+    GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
+
+    ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
+
+全ての設定が完了したら [GROWI bot でできること](./slack-integration.html#growi-bot-でできること)を参照してください。
 
 ## Custom bot without proxy 設定
 
@@ -101,8 +139,8 @@
 
   1. Request URL を以下のように入力してください。
 
-  - https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-integration/interactions
-  - 例 `https://example.com/_api/v3/slack-integration/interactions`
+- https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-integration/interactions
+- 例 `https://example.com/_api/v3/slack-integration/interactions`
 
   ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
@@ -165,32 +203,37 @@
   また、環境変数と管理画面の両方に入力した場合は、管理画面で入力した値が優先されるので、管理画面での入力をおすすめします。
 
 1. 管理画面で直接入力する方法
-  管理画面の Slack 連携をクリックし、**Signing Secret** と **Bot User OAuth Token** を入力して
+
+- 管理画面の Slack 連携をクリックし、**Signing Secret** と **Bot User OAuth Token** を入力して
    **Update** ボタンをクリックします。
-  ![slack-integration](../../../.vuepress/public/assets/images/slack-integration-introduction.png)
+  ![slack-bot-register-introduction](../../../.vuepress/public/assets/images/slack-bot-register-introduction.png)
+- 赤丸で囲った部分に緑色のチェックマークが表示されたら登録完了です。
+    ![slack-bot-register-secrets](../../../.vuepress/public/assets/images/slack-bot-register-secrets.png)
 
 1. 環境変数で設定する方法
 
   環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
 
 #### 導通テスト
+
 1. 「Test connection」をクリックし、GROWI-Bot を招待した Slack チャンネルを入力します。
   ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
 
 
 2. 「Test」 ボタンをクリックします。
-  - 成功の場合  
+
+- 成功の場合  
   **Successfully sent to Slack workspace.** が Logs に表示され、赤丸で囲った部分に緑色のチェックマークが表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
-    - GROWI 側
+  - GROWI 側
     ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success.png)  
-    - Slack 側
+  - Slack 側
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)  
 
-  - 失敗の場合  
+- 失敗の場合  
   エラーログが表示されます。ログの内容を修正してください。
-    - 例  
+  - 例  
     Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
-    
+
     ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 ## Custom bot with proxy 設定
@@ -270,9 +313,19 @@
 
   ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
-#### OAuth & Permissions
-<!-- TODO: GW-6353 [Custom bot with proxy]Redirect URLの設定方法を記述する -->
+### Redirect URL 設定
 
+#### OAuth & Permissions
+
+  1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
+  1. **Redirect URLs** の **Add New Redirect URL** ボタンをクリックします。
+    ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions1.png)
+
+  1. 入力欄が表示されるので、`https://example.com/slack/oauth_redirect` と入力してください。
+    ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions2.png)
+
+  1. 入力したら **Add** ボタン をクリックしてください。
+  
 
 ### Manage Distribution を設定する
 <!-- TODO: GW-6329 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(ja)) -->
@@ -313,6 +366,7 @@
 ### テストを実行する
 <!-- TODO: GW-6328 [Custom bot with proxy]「テストを実行する」の記述(ja) -->
 
+全ての設定が完了したら [GROWI bot でできること](./slack-integration.html#growi-bot-でできること)を参照してください。
 
 ## GROWI bot でできること
 
@@ -329,9 +383,27 @@
    - **Share** ボタンをクリックすると、チャンネル内に共有されます。
      ![slack-bot-full-text-search-click-share](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-share.png)
 
+### 接続中の GROWI を確認する
+
+`/growi status` と入力することで、Slack ワークスペースと連携している GROWI を確認することができます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
+![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
+
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
 <!-- ### Slack ログの記録 (TBD) -->
+
+### Slack ワークスペースと GROWI App(s) との連携を解除する
+
+1. `/growi unregister [連携解除したい GROWI App の URL1] [連携解除したい GROWI App の URL2] ...` と入力するとモーダルが表示されます。
+
+    - 入力例: `growi unregister http://example.com http://growi.jp`
+    ![slack-bot-unregister-input-eg](../../../.vuepress/public/assets/images/slack-bot-unregister-input-eg.png)
+
+    - 表示されるモーダル
+    ![slack-bot-unregister-modal](../../../.vuepress/public/assets/images/slack-bot-unregister-modal.png)
+1. **Submit** ボタンをクリックします。
+1. 以下のように表示されたら、連携解除が完了しています。
+    ![slack-bot-unregister-completed](../../../.vuepress/public/assets/images/slack-bot-unregister-completed.png)
 
 ## Incoming webhook 設定
 

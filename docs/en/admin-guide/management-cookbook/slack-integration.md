@@ -42,9 +42,13 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 To deploy a custom bot without proxy in your Slack workspace, you need to create and edit a Slack app. The steps are as follows.
 
 #### Before creating Slack app
+
 Start the GROWI main server.
+
 #### Select Bot type
+
 Select Custom bot without proxy in Slack Integration of the Management page.
+
 #### Create a Slack app
 
 1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click **Create New App** button.
@@ -78,11 +82,11 @@ Select Custom bot without proxy in Slack Integration of the Management page.
   1. Input the Request URL as follows.
 
      - https:// your GROWI domain /\_api/v3/slack-integration/interactions
-       - e.g. **https://example.com/_api/v3/slack-integration/interactions**
+       - e.g. **<https://example.com/_api/v3/slack-integration/interactions>**
 
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
-  1. When the Request URL has been correctly entered, **Verified** will be displayed on the screen. It means the Slack APP and the GROWI server are connecting successfully.
+  1. When the Request URL has been correctly entered, click **Save Changes** button.
 
 #### Create Slash Commands
 
@@ -90,12 +94,12 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
 <!-- ![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png) -->
 
-2. Click the **Create New Command** button.
+1. Click the **Create New Command** button.
 
 ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
-- Input /growi for Command.
-- For RequestURL, input **https://example.com/_api/v3/slack-integration/commands**.
+- Input `/growi` for Command.
+- For RequestURL, input **<https://example.com/_api/v3/slack-integration/commands>**.
 - Short Description is also required, so please input an appropriate description.
 - The Usage Hint is optional, so please input it accordingly.
 - The Escape channels, users, and links sent to your app is optional, so input it accordingly.
@@ -144,19 +148,49 @@ in case that you input values in both the Management page and environment variab
 
 1. How to set them in Management page
 
-Click on Slack integration in the Management page, input Signing Secret and Bot User OAuth Token, and click **Update**.
+- Go to the Slack integration in the Management page and input Signing Secret and Bot User OAuth Token, then click on the **Update** button.
 
-![slack-integration](../../../.vuepress/public/assets/images/slack-integration-introduction.png)
+![slack-bot-register-introduction](../../../.vuepress/public/assets/images/slack-bot-register-introduction.png)
+- When a green checkmark appears in the red circle, registration is completed.  
+![slack-bot-register-secrets](../../../.vuepress/public/assets/images/slack-bot-register-secrets.png)
 
 1. How to set them with environment variables
 
 Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
+#### Continuity check
+
+1. Click **Test connection** and input the Slack channel to which invited GROWI-Bot.
+  ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
+
+2. Click on the **Test** button.  
+
+- In case of success  
+  '**Successfully sent to Slack workspace.**' will be displayed at Logs. Green checkmarks will appear in red circles. Check the channel to which you invited GROWI-Bot.
+  - GROWI side
+    ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success.png)
+  - Slack side
+    ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
+
+- In case of failure  
+  Error logs will be displayed. Correct the contents of the logs.
+  - e.g.  
+    if you have not invited GROWI-Bot to the Slack channel or inputted the wrong channel, **Channel_not_found** error will be displayed in the logs. Please make sure that GROWI-Bot has been invited to the Slack channel, and the channel name has been inputted appropriately.
+
+    ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
+
 ### Official bot settings
+
 (TBD)
 
+Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
+
 ### Custom bot with proxy settings
+
 (TBD)
+
+Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
+
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
@@ -191,8 +225,8 @@ For details on how to configure User Trigger Notification, please refer to here.
 
 ### Full-text search in a workspace
 
-1. If you input /growi search [keyword(s)], the search results will be displayed.
-   - e.g. /growi search example
+1. If you input `/growi search [keyword(s)]`, the search results will be displayed.
+   - e.g. `/growi search example`
      ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
    - Search results.
      ![slack-bot-full-text-search-display-result](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result.png)
@@ -201,6 +235,10 @@ For details on how to configure User Trigger Notification, please refer to here.
    - Click the **Share** button to share it within the channel.
      ![slack-bot-full-text-search-click-share](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-share.png)
 
+### Check the connected GROWI
+
+By typing `/growi status`, you can see the GROWI App(s) that is connected to the Slack workspace.
+![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
 <!-- ### Slack ログの記録 (TBD) -->
