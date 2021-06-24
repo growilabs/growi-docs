@@ -370,7 +370,7 @@
   
 1. **The scopes is not appropriate**  
     Slack App を作成した際に設定する Scope が正しくない可能性があります。
-    作成した Slack App の **OAuth & Permissions** から Scope を。
+    作成した Slack App の **OAuth & Permissions** から Scope を確認のしてください。
     必要な Scope は **team:read**, **chat:write**, **command** です。
 
 1. **Cannot read property 'includes' of undefined**  
