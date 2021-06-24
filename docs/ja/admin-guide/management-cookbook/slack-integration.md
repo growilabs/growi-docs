@@ -65,7 +65,7 @@
 
 <!-- TODO: GW-6369 [Official]「アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録」の記述(ja) -->
 
-### テストを実行する
+### Official Bot with proxy の接続テストを実行する
 
 1. 「Test connection」をクリックし、GROWI-Bot を招待した Slack チャンネルを入力します。
   ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
@@ -214,7 +214,7 @@
 
   環境変数 `SLACK_SIGNING_SECRET` と `SLACK_BOT_TOKEN` に確認した値を代入してください。
 
-#### 導通テスト
+### Custom Bot without proxy の接続テストを実行する
 
 1. 「Test connection」をクリックし、GROWI-Bot を招待した Slack チャンネルを入力します。
   ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
@@ -339,7 +339,6 @@
   ![slack-bot-install-button](../../../.vuepress/public/assets/images/slack-bot-install-button.png)
   1. Bot を Slack にインストールする を開き、**今すぐインストール** ボタンを押して、 Official bot をワークスペースにインストールします。
 
-
 ### GROWI Custom Bot with Proxy サービスへの登録
   
   1. GROWI Official Bot Proxy サービスへの登録を開きます。  
@@ -360,9 +359,29 @@
 
   上記で取得した Proxy サーバーの URL を **Official bot 連携** の Proxy URL に入力し更新します。
 
+### Custom bot with proxy の接続テストを実行する
 
-### テストを実行する
-<!-- TODO: GW-6328 [Custom bot with proxy]「テストを実行する」の記述(ja) -->
+  1. 「Test connection」をクリックし、GROWI-Bot を招待した Slack チャンネルを入力します。
+    ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction-custom-with-proxy.png)
+
+  2. 「Test」 ボタンをクリックします。
+
+- 成功の場合  
+    **Successfully sent to Slack workspace.** が Logs に表示され、
+    赤丸で囲った部分に緑色のチェックマークが表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
+  - GROWI 側
+      ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success-custom-with-proxy.png)
+  - Slack 側
+      ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
+
+  <!-- TODO: GW-6441 導通テスト時の error 集を作成する -->
+- 失敗の場合  
+    エラーログが表示されます。ログの内容を修正してください。
+  - 例  
+      Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。
+      GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
+
+      ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 全ての設定が完了したら [GROWI bot でできること](./slack-integration.html#growi-bot-でできること)を参照してください。
 
