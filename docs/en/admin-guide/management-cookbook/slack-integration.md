@@ -45,14 +45,16 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 
 ### Register for the GROWI Official Bot Proxy service
 
-### Continuity check
+### Run connectivity test of Official bot
 
 Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
 
 
 ## Custom bot without proxy Settings
 
-To deploy a custom bot without proxy in your Slack workspace, you need to create and edit a Slack app. The steps are as follows.
+  To deploy a custom bot without proxy in your Slack workspace,
+   you need to create and edit a Slack app.
+   The steps are as follows.
 
 ### Before creating Slack app
 
@@ -112,7 +114,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
 
 - Input `/growi` for Command.
-- For RequestURL, input **<https://example.com/_api/v3/slack-integration/commands>**.
+- For RequestURL, input `https://example.com/_api/v3/slack-integration/commands`.
 - Short Description is also required, so please input an appropriate description.
 - The Usage Hint is optional, so please input it accordingly.
 - The Escape channels, users, and links sent to your app is optional, so input it accordingly.
@@ -172,7 +174,7 @@ in case that you input values in both the Management page and environment variab
 
 Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
-### Continuity check
+### Run connectivity test of Custom bot without proxy
 
 1. Click **Test connection** and input the Slack channel to which invited GROWI-Bot.
   ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
@@ -194,44 +196,116 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
     ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 ## Custom bot with proxy settings
-<!-- TODO: GW-6460 「Custom bot with proxy settings」を記述する(en) -->
+
+  To deploy a custom bot without proxy in your Slack workspace,
+    you need to create and edit a Slack app.
+    The steps are as follows.
 
 ### Before creating Custom bot with proxy
-
+<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
 
 ### Create Custom bot with proxy
+<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
 
-
-### Scope settings
-
+### Set Custom bot with proxy Scopes
+<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
 
 ### Request URL settings
 
-
 #### Interactivity & Shortcuts
-
+<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
 
 #### Slash Commands
 
+  1. In the Slack App you created, go to **Features** and click **Slash Commands**.
+
+  <!-- ![slash-commands-introduction](../../../.vuepress/public/assets/images/slash-commands-introduction.png) -->
+
+  1. Click the **Create New Command** button.
+
+      ![slash-commands-create-new-command](../../../.vuepress/public/assets/images/slash-commands-create-new-command.png)
+
+      - Input `/growi` for Command.
+      - For RequestURL, input `https://example.com/_api/v3/slack-integration/commands`.
+      - Short Description is also required, so please input an appropriate description.
+      - The Usage Hint is optional, so please input it accordingly.
+      - The Escape channels, users, and links sent to your app is optional, so input it accordingly.
+      - When you are done, click **Save** button.
+
+      ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
+
+### Install the Custom bot with proxy in your Slack workspace
+
+  1. In the Slack App you created, go to **Settings** and click **Basic Information**.
+  1. Click the **Install your app**.
+    ![slack-bot-install-your-app-introduction](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction.png)
+  1. Click the **Install to Workspace**.
+    ![slack-bot-install-to-workspace](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace.png)
+  1. On the destination screen, Click the **Allow** button.
+    ![slack-bot-install-your-app-transition-destination](../../../.vuepress/public/assets/images/slack-bot-install-your-app-transition-destination.png)
+  1. If you see a green check mark to the right of Install your app,
+      the installation is complete in your workspace.
+    ![slack-bot-install-your-app-complete](../../../.vuepress/public/assets/images/slack-bot-install-your-app-complete.png)
+  1. Invite the channel you want to use the GROWI bot on using @example.
+    ![slack-bot-install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace-joined-bot.png)
+    ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
 
 ### Redirect URL setting
 
-
 #### OAuth & Permissions
-
+<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
 
 ### Manage Distribution settings
 <!-- TODO: GW-6475 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(en) -->
 
-### Install the app in your Slack workspace
+### Install Custom bot with proxy in your Slack workspace
+
+  1. In the Slack App you created, go to **Settings** and click **Basic Information**.
+  1. Click the **Install your app**.
+    ![slack-bot-install-your-app-introduction](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction.png)
+  1. Click the **Install to Workspace**.
+    ![slack-bot-install-to-workspace](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace.png)
+  1. On the destination screen, Click the **Allow** button.
+    ![slack-bot-install-your-app-transition-destination](../../../.vuepress/public/assets/images/slack-bot-install-your-app-transition-destination.png)
+  1. If you see a green check mark to the right of Install your app,
+  　　the installation is complete in your workspace.
+    ![slack-bot-install-your-app-complete](../../../.vuepress/public/assets/images/slack-bot-install-your-app-complete.png)
+  1. Invite the channel you want to use the GROWI bot on using @example.
+    ![slack-bot-install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace-joined-bot.png)
+    ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
 
 
 ### Register Custom bot with proxy Service
 
 
-### Continuity check
+### Run connectivity test of Custom bot with proxy
 
-Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
+  1. Click **Test connection** and input the Slack channel to which invited GROWI-Bot.
+    ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
+
+  2. Click on the **Test** button.  
+
+      - In case of success
+          '**Successfully sent to Slack workspace.**' will be displayed at Logs.
+          Green checkmarks will appear in red circles. Check the channel to
+          which you invited GROWI-Bot.
+        - GROWI side
+            ![slack-bot-test-success](../../../.vuepress/public/assets/images/slack-bot-test-success.png)
+        - Slack side
+            ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
+
+      - In case of failure
+          Error logs will be displayed. Correct the contents of the logs.
+        - e.g.  
+            if you have not invited GROWI-Bot to the Slack channel or inputted
+            the wrong channel, **Channel_not_found** error will be displayed
+              in the logs.
+            Please make sure that GROWI-Bot has been invited to the Slack channel,
+            and the channel name has been inputted appropriately.
+
+            ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
+
+        Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
 
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
