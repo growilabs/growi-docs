@@ -37,19 +37,32 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 
 <!-- [通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法). -->
 
-### Custom bot without proxy Settings
+## Official bot Settings
+<!-- TODO: GW-6457 「Official bot 設定」を記述する(en) -->
+### Select Bot type
+
+### Install Official bot in your Slack workspace
+
+### Register for the GROWI Official Bot Proxy service
+
+### Continuity check
+
+Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
+
+
+## Custom bot without proxy Settings
 
 To deploy a custom bot without proxy in your Slack workspace, you need to create and edit a Slack app. The steps are as follows.
 
-#### Before creating Slack app
+### Before creating Slack app
 
 Start the GROWI main server.
 
-#### Select Bot type
+### Select Bot type
 
 Select Custom bot without proxy in Slack Integration of the Management page.
 
-#### Create a Slack app
+### Create a Slack app
 
 1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click **Create New App** button.
 
@@ -61,7 +74,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
    ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
 
-#### Scope settings
+### Scope settings
 
 1. In the Slack App you created, go to **Features** and click **OAuth & Permissions**.
    ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
@@ -71,7 +84,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
    When the following OAuth Scope is displayed, the scope setting will be completed.
    ![slack-bot-scope-selected](../../../.vuepress/public/assets//images/slack-bot-scope-selected.png)
 
-#### Set Request URL of **Interactivity & Shortcuts**
+### Set Request URL of **Interactivity & Shortcuts**
 
   1. In the Slack App you created, go to **Features** and click **Interactivity Shortcuts**.
      ![slack-bot-interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
@@ -88,7 +101,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
   1. When the Request URL has been correctly entered, click **Save Changes** button.
 
-#### Create Slash Commands
+### Create Slash Commands
 
 1. In the Slack App you created, go to **Features** and click **Slash Commands**.
 
@@ -107,7 +120,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
 ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
-#### Install the Bot in your Slack workspace
+### Install the Custom bot without proxy in your Slack workspace
 
 1. In the Slack App you created, go to **Settings** and click **Basic Information**.
 1. Click the **Install your app**.
@@ -122,11 +135,11 @@ Select Custom bot without proxy in Slack Integration of the Management page.
    ![slack-bot-install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace-joined-bot.png)
    ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
 
-#### Signing Secret and Bot User OAuth Token settings
+### Signing Secret and Bot User OAuth Token settings
 
 Before setting Signing Secret and Bot User OAuth Token, check the values.
 
-**How to check Signing Secret**
+#### How to check Signing Secret
 
 1. In the Slack App you created, go to **Settings** and click **Basic Information**.
 
@@ -135,7 +148,7 @@ Before setting Signing Secret and Bot User OAuth Token, check the values.
 1. Push **show** button for **Signing Secret** in App Credentials to confirm.
    ![slack-bot-signing-secret](../../../.vuepress/public/assets/images/slack-bot-signing-secret.png)
 
-**How to check Bot User OAuth Token**
+#### How to check Bot User OAuth Token
 
 1. In the Slack App you created, go to **Settings** and click **OAuth and Permissions**.
    ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
@@ -159,7 +172,7 @@ in case that you input values in both the Management page and environment variab
 
 Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
-#### Continuity check
+### Continuity check
 
 1. Click **Test connection** and input the Slack channel to which invited GROWI-Bot.
   ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
@@ -180,15 +193,43 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
     ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
-### Official bot settings
+## Custom bot with proxy settings
+<!-- TODO: GW-6460 「Custom bot with proxy settings」を記述する(en) -->
 
-(TBD)
+### Before creating Custom bot with proxy
 
-Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
 
-### Custom bot with proxy settings
+### Create Custom bot with proxy
 
-(TBD)
+
+### Scope settings
+
+
+### Request URL settings
+
+
+#### Interactivity & Shortcuts
+
+
+#### Slash Commands
+
+
+### Redirect URL setting
+
+
+#### OAuth & Permissions
+
+
+### Manage Distribution settings
+<!-- TODO: GW-6475 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(en) -->
+
+### Install the app in your Slack workspace
+
+
+### Register Custom bot with proxy Service
+
+
+### Continuity check
 
 Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
 
@@ -256,4 +297,3 @@ By typing `/growi status`, you can see the GROWI App(s) that is connected to the
 
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
-<!-- ### Slack ログの記録 (TBD) -->

@@ -410,8 +410,7 @@
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
-
-<!-- ### Slack ログの記録 (TBD) -->
+  <!-- TODO: GW-6455 「複数ワークスペースの横断検索」 を記述する -->
 
 ### Slack ワークスペースと GROWI App(s) との連携を解除する
 
