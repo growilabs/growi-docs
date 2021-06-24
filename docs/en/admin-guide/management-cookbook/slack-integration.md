@@ -52,7 +52,9 @@ Once you are all set up, see [what you can do with a GROWI-bot](./slack-integrat
 
 ## Custom bot without proxy Settings
 
-To deploy a custom bot without proxy in your Slack workspace, you need to create and edit a Slack app. The steps are as follows.
+  To deploy a custom bot without proxy in your Slack workspace,
+   you need to create and edit a Slack app.
+   The steps are as follows.
 
 ### Before creating Slack app
 
@@ -194,22 +196,13 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
     ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 ## Custom bot with proxy settings
-<!-- TODO: GW-6460 「Custom bot with proxy settings」を記述する(en) -->
+
+  To deploy a custom bot without proxy in your Slack workspace,
+    you need to create and edit a Slack app.
+    The steps are as follows.
 
 ### Before creating Custom bot with proxy
-
-  1. `packages/slackbot-proxy` の配下に 新規ファイル`.env.development.local`を作成します。
-  1. 作成したファイルに任意の環境変数`SERVER_URI`を入力してください。
-
-  e.g. `SERVER_URI=http://localhost:8080`
-
-  1. GROWI 本体サーバーとプロキシ用サーバー(`slackbot-proxy`)の両方を立ち上げてください。  
-    プロキシ用サーバーは`yarn`, `yarn dev`で起動することができます。
-
-  1. 管理画面の Slack 連携 にて **Custom bot with proxy** を選択してください。
-
-  ![slack-bot-selecting-custom-bot-with-proxy](../../../.vuepress/public/assets/images/slack-bot-selecting-custom-bot-with-proxy.png)
-
+<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
 
 ### Create Custom bot with proxy
 <!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
