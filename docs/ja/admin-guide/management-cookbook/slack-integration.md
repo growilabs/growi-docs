@@ -61,7 +61,7 @@
   1. Slack app directory のリンクに飛ぶので、「Add to Slack」ボタンを押して自身の Slack work space にインストールします。
     <!-- TODO: GW-6420 [Official] app directoryの写真を挿入(GW4836 ブロック) -->
 
-### GROWI Official Bot Proxyサービスへの登録
+### GROWI Official Bot with proxy サービスへの登録
 
 <!-- TODO: GW-6369 [Official]「アクセストークンの発行 / GROWI Official Bot Proxyサービスへの登録」の記述(ja) -->
 
@@ -163,7 +163,7 @@
 
   ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
-### Bot を Slack のワークスペースへインストールする
+### Custom bot without proxy を Slack のワークスペースへインストールする
 
   1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
   1. **Install your app** をクリックします。
@@ -332,16 +332,22 @@
 
 ### Custom bot with proxy を Slack のワークスペースへインストールする
 
-  ![slack-bot-add-workspace](../../../.vuepress/public/assets/images/slack-bot-add-workspace.png)
+  1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
+  1. **Install your app** をクリックします。
+    ![slack-bot-install-your-app-introduction](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction.png)
+  1. **Install to Workspace** をクリックします。
+    ![slack-bot-install-to-workspace](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace.png)
+  1. 遷移先の画面にて、**Allow**をクリックします。
+    ![slack-bot-install-your-app-transition-destination](../../../.vuepress/public/assets/images/slack-bot-install-your-app-transition-destination.png)
+  1. Install your app の右側に 緑色のチェックがつけばワークスペースへのインストール完了です。
+    ![slack-bot-install-your-app-complete](../../../.vuepress/public/assets/images/slack-bot-install-your-app-complete.png)
+  1. GROWI bot を使いたいチャンネルに @example を使用して招待します。
+    ![slack-bot-install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace-joined-bot.png)
+    ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
 
-  1. **Slack ワークスペースを追加** ボタンを押します。  
-    ボタンを押すと連携手順に新規のアコーディオンが生成されます。
-  ![slack-bot-install-button](../../../.vuepress/public/assets/images/slack-bot-install-button.png)
-  1. Bot を Slack にインストールする を開き、**今すぐインストール** ボタンを押して、 Official bot をワークスペースにインストールします。
-
-### GROWI Custom Bot with Proxy サービスへの登録
+### GROWI Custom Bot with proxy サービスへの登録
   
-  1. GROWI Official Bot Proxy サービスへの登録を開きます。  
+  1. GROWI Custom Bot with proxy サービスへの登録を開きます。  
     **Access Token の発行** に各種トークンにアクセストークンが2種生成されていることを確認できます。
     アクセストークンは必要に応じて再発行できます。
   1. Slack上で `/growi register` と打ちます。
@@ -353,11 +359,11 @@
 
   ![slack-bot-update-proxy-url](../../../.vuepress/public/assets/images/slack-bot-update-proxy-url.png)
 
-  成功した場合、 Proxy サーバーの URL が表示されます。
+  成功した場合、 proxy サーバーの URL が表示されます。
 
   ![slack-bot-input-proxy-url](../../../.vuepress/public/assets/images/slack-bot-input-proxy-url.png)
 
-  上記で取得した Proxy サーバーの URL を **Official bot 連携** の Proxy URL に入力し更新します。
+  上記で取得した proxy サーバーの URL を **Official bot 連携** の proxy URL に入力し更新します。
 
 ### Custom bot with proxy の接続テストを実行する
 
