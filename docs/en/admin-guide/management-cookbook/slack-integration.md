@@ -38,7 +38,7 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 <!-- [通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法). -->
 
 ## Official bot Settings
-
+<!-- TODO: GW-6457 「Official bot 設定」を記述する(en) -->
 ### Select Bot type
 
 ### Install the bot in your Slack workspace
@@ -194,6 +194,7 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
     ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 ## Custom bot with proxy settings
+<!-- TODO: GW-6460 「Custom bot with proxy settings」を記述する(en) -->
 
 ### Before creating Custom bot with proxy
 
@@ -282,4 +283,3 @@ By typing `/growi status`, you can see the GROWI App(s) that is connected to the
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
-<!-- ### Slack ログの記録 (TBD) -->
