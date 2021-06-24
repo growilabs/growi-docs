@@ -41,7 +41,7 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 <!-- TODO: GW-6457 「Official bot 設定」を記述する(en) -->
 ### Select Bot type
 
-### Install the bot in your Slack workspace
+### Install Official bot in your Slack workspace
 
 ### Register for the GROWI Official Bot Proxy service
 
@@ -120,7 +120,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
 ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
-### Install the Bot in your Slack workspace
+### Install the Custom bot without proxy in your Slack workspace
 
 1. In the Slack App you created, go to **Settings** and click **Basic Information**.
 1. Click the **Install your app**.
