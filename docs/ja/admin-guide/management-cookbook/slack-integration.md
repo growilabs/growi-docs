@@ -243,7 +243,7 @@
 ### Custom bot with proxy を作成する前に
 
   1. `packages/slackbot-proxy` の配下に 新規ファイル`.env.development.local`を作成します。
-  1. 1で作成したファイルに任意の環境変数`SERVER_URI`を入力してください。
+  1. 作成したファイルに任意の環境変数`SERVER_URI`を入力してください。
 
   例: `SERVER_URI=http://localhost:8080`
 
@@ -309,7 +309,7 @@
       - Short Description も入力必須のため、適当なご説明を入力してください。
       - Usage Hint に関しては任意なので、適宜入力してください。
       - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
-      - 入力が完了したら、**Save** をクリックしてください。
+      - 入力が完了したら、右下の **Save** ボタンをクリックしてください。
 
   ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
@@ -327,6 +327,7 @@
       ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions2.png)
 
   1. 入力したら **Add** ボタン をクリックしてください。
+  1. **Save URLs** ボタンをクリックして 入力したURLを保存します。
   
 
 ### Manage Distribution を設定する
