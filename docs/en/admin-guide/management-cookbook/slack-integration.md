@@ -151,6 +151,7 @@ in case that you input values in both the Management page and environment variab
 - Go to the Slack integration in the Management page and input Signing Secret and Bot User OAuth Token, then click on the **Update** button.
 
 ![slack-bot-register-introduction](../../../.vuepress/public/assets/images/slack-bot-register-introduction.png)
+
 - When a green checkmark appears in the red circle, registration is completed.  
 ![slack-bot-register-secrets](../../../.vuepress/public/assets/images/slack-bot-register-secrets.png)
 
@@ -239,6 +240,20 @@ For details on how to configure User Trigger Notification, please refer to here.
 
 By typing `/growi status`, you can see the GROWI App(s) that is connected to the Slack workspace.
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
+
+### Unregister the Slack workspace from the GROWI App(s)
+
+  1. Please input `/growi unregister [URL1 of the GROWI App to be unregistered] [URL2 of the GROWI App to be unregistered]...`, then the modal as bellow will be displayed.
+       - e.g.: `growi unregister http://example.com http://growi.jp`  
+       ![slack-bot-unregister-input-eg](../../../.vuepress/public/assets/images/slack-bot-unregister-input-eg.png)
+
+       - Modal
+       ![slack-bot-unregister-modal](../../../.vuepress/public/assets/images/slack-bot-unregister-modal.png)
+
+  1. Click on **Submit** button.
+  1. If the following is displayed, the unregister the Slack workspace is completed.
+    ![slack-bot-unregister-completed](../../../.vuepress/public/assets/images/slack-bot-unregister-completed.png)
+
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
 
 <!-- ### Slack ログの記録 (TBD) -->
