@@ -139,7 +139,7 @@
 
   1. Request URL を以下のように入力してください。
 
-- https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-integration/interactions
+- https://{連携させたい GROWI のドメイン名}/\_api/v3/slack-integration/interactions
 - 例 `https://example.com/_api/v3/slack-integration/interactions`
 
   ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
@@ -289,12 +289,12 @@
 
   1. Request URL を以下のように入力してください。
 
-- https:// 連携させたい PROXY のドメイン名 /slack/interactions
+- `https://{連携させたい proxy のドメイン名}/slack/interactions`
   - 例 `https://example.com/slack/interactions`
 
       ![slack-bot-interactiviry-shortcuts-for-with-proxy](../../../.vuepress/public/assets/images/slack-bot-interactiviry-shortcuts-for-with-proxy.png)
 
-    1. 入力が完了したら、**Save Changes** をクリックしてください。
+    1. 入力が完了したら、右下の **Save Changes** ボタンをクリックしてください。
 
 #### Slash Commands
 
@@ -321,8 +321,10 @@
   1. **Redirect URLs** の **Add New Redirect URL** ボタンをクリックします。
     ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions1.png)
 
-  1. 入力欄が表示されるので、`https://example.com/slack/oauth_redirect` と入力してください。
-    ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions2.png)
+  1. 入力欄が表示されるので、`https://{連携させたい proxy のドメイン名}/slack/oauth-redirect` を入力してください。
+      - 例 `https://example.com/slack/oauth-redirect`
+
+      ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions2.png)
 
   1. 入力したら **Add** ボタン をクリックしてください。
   
