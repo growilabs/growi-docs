@@ -45,7 +45,7 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 
 ### Register for the GROWI Official Bot Proxy service
 
-### Continuity check
+### Run connectivity test of Official bot
 
 Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
 
@@ -174,7 +174,7 @@ in case that you input values in both the Management page and environment variab
 
 Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
-### Continuity check
+### Run connectivity test of Custom bot without proxy
 
 1. Click **Test connection** and input the Slack channel to which invited GROWI-Bot.
   ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
@@ -278,7 +278,7 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 ### Register Custom bot with proxy Service
 
 
-### Run Custom bot with proxy connectivity test
+### Run connectivity test of Custom bot with proxy
 
   1. Click **Test connection** and input the Slack channel to which invited GROWI-Bot.
     ![slack-bot-test-introduction](../../../.vuepress/public/assets/images/slack-bot-test-introduction.png)
