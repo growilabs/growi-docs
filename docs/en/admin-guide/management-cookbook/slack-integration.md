@@ -221,7 +221,7 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
 
 ### Manage Distribution settings
-
+<!-- TODO: GW-6475 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(en) -->
 
 ### Install the app in your Slack workspace
 
