@@ -198,18 +198,29 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
 ### Before creating Custom bot with proxy
 
+  1. `packages/slackbot-proxy` の配下に 新規ファイル`.env.development.local`を作成します。
+  1. 作成したファイルに任意の環境変数`SERVER_URI`を入力してください。
+
+  e.g. `SERVER_URI=http://localhost:8080`
+
+  1. GROWI 本体サーバーとプロキシ用サーバー(`slackbot-proxy`)の両方を立ち上げてください。  
+    プロキシ用サーバーは`yarn`, `yarn dev`で起動することができます。
+
+  1. 管理画面の Slack 連携 にて **Custom bot with proxy** を選択してください。
+
+  ![slack-bot-selecting-custom-bot-with-proxy](../../../.vuepress/public/assets/images/slack-bot-selecting-custom-bot-with-proxy.png)
+
 
 ### Create Custom bot with proxy
+<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
 
-
-### Scope settings
-
+### Set Custom bot with proxy Scopes
+<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
 
 ### Request URL settings
 
-
 #### Interactivity & Shortcuts
-
+<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
 
 #### Slash Commands
 
@@ -248,9 +259,8 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
 ### Redirect URL setting
 
-
 #### OAuth & Permissions
-
+<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
 
 ### Manage Distribution settings
 <!-- TODO: GW-6475 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(en) -->
