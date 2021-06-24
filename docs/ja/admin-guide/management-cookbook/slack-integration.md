@@ -139,7 +139,7 @@
 
   1. Request URL を以下のように入力してください。
 
-- https:// 連携させたい GROWI のドメイン名 /\_api/v3/slack-integration/interactions
+- https://{連携させたい GROWI のドメイン名}/\_api/v3/slack-integration/interactions
 - 例 `https://example.com/_api/v3/slack-integration/interactions`
 
   ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
@@ -243,7 +243,7 @@
 ### Custom bot with proxy を作成する前に
 
   1. `packages/slackbot-proxy` の配下に 新規ファイル`.env.development.local`を作成します。
-  1. 1で作成したファイルに任意の環境変数`SERVER_URI`を入力してください。
+  1. 作成したファイルに任意の環境変数`SERVER_URI`を入力してください。
 
   例: `SERVER_URI=http://localhost:8080`
 
@@ -289,12 +289,12 @@
 
   1. Request URL を以下のように入力してください。
 
-- https:// 連携させたい PROXY のドメイン名 /slack/interactions
+- `https://{連携させたい proxy のドメイン名}/slack/interactions`
   - 例 `https://example.com/slack/interactions`
 
       ![slack-bot-interactiviry-shortcuts-for-with-proxy](../../../.vuepress/public/assets/images/slack-bot-interactiviry-shortcuts-for-with-proxy.png)
 
-    1. 入力が完了したら、**Save Changes** をクリックしてください。
+    1. 入力が完了したら、右下の **Save Changes** ボタンをクリックしてください。
 
 #### Slash Commands
 
@@ -309,7 +309,7 @@
       - Short Description も入力必須のため、適当なご説明を入力してください。
       - Usage Hint に関しては任意なので、適宜入力してください。
       - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
-      - 入力が完了したら、**Save** をクリックしてください。
+      - 入力が完了したら、右下の **Save** ボタンをクリックしてください。
 
   ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
 
@@ -321,10 +321,13 @@
   1. **Redirect URLs** の **Add New Redirect URL** ボタンをクリックします。
     ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions1.png)
 
-  1. 入力欄が表示されるので、`https://example.com/slack/oauth_redirect` と入力してください。
-    ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions2.png)
+  1. 入力欄が表示されるので、`https://{連携させたい proxy のドメイン名}/slack/oauth-redirect` を入力してください。
+      - 例 `https://example.com/slack/oauth-redirect`
+
+      ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions2.png)
 
   1. 入力したら **Add** ボタン をクリックしてください。
+  1. **Save URLs** ボタンをクリックして 入力したURLを保存します。
   
 
 ### Manage Distribution を設定する
