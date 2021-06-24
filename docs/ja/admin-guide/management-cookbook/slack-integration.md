@@ -360,16 +360,30 @@
    GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。
    ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
-1. **Scope not correct**
-   Slack App を作成した際に設定する Scope が正しくないことで発生するエラーです。
-   作成した Slack App の **OAuth & Permissions** から Scope を再設定し直してください。
-   必要な Scope は **team:read**, **chat:write**, **command** です。
+1. **Cannot read property '0' of null**  
+   Proxy URL が設定されていない可能性があります。Proxy URL を入力してください。
 
-1. undefined
-   SigningSecret や BotOauthToken などの情報が登録されていないことで発生するエラーです。
+1. **Request failed with status code 400**  
+   Slack ワークスペースで `/growi register` をせずに Test ボタンをクリックした可能性があります。
+   Slack ワークスペースで `/growi register` を実行し、必要な情報を入力してください。
 
-1. invalid_auth
-   設定した値が間違っていることによって発生する認証エラーです。
+1. **Request failed with status code 500**  
+   すでに Access Token を登録された後、Access Token を再発行してテストを実行した可能性があります。
+   [接続中の GROWI を確認する](./slack-integration.html#接続中の-GROWI-を確認する)を参照して、現在どの GROWI App(s) と連携しているのかを確認してください。
+   確認ができましたら、[Slack ワークスペースと GROWI App(s) との連携を解除する](./slack-integration.html#slack-ワークスペースと-growi-app-s-との連携を解除する)を参照していただき、GROWI App(s) との連携を解除してください。
+   連携を解除することができたら、再度登録し直してください。
+  
+1. **The scopes is not appropriate**  
+    Slack App を作成した際に設定する Scope が正しくない可能性があります。
+    作成した Slack App の **OAuth & Permissions** から Scope を。
+    必要な Scope は **team:read**, **chat:write**, **command** です。
+
+1. **Cannot read property 'includes' of undefined**  
+    Signing Secret や Bot User OAuth Token などの情報が登録されていないことで発生するエラーです。
+
+
+1. **invalid_auth**  
+    Signing Secret や Bot User OAuth Token の値が間違っている可能性があります。正しい値を入力してください。
 
 ## GROWI bot でできること
 
