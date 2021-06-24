@@ -351,9 +351,7 @@
     **Access Token の発行** に各種トークンにアクセストークンが2種生成されていることを確認できます。
     アクセストークンは必要に応じて再発行できます。
   1. Slack上で `/growi register` と打ちます。
-
   ![slack-bot-add-workspace](../../../.vuepress/public/assets/images/slack-bot-register-modal.png)
-  
   1. 表示されるモーダルの GROWI URL に、対象 GROWI の URL を保存します。
   1. 上記で発行されている Access Token Proxy to GROWI と Access Token GROWI to Proxy を入れ **Submit** ボタンを押します。
 
