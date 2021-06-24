@@ -81,7 +81,7 @@
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
 
 - 失敗の場合  
-  [導通テスト時のエラーログ](./slack-integration.html#導通テスト時のエラーログ)を参照してください。
+  [接続テスト時のエラーログ](./slack-integration.html#接続テスト時のエラーログ)を参照してください。
 
 
 全ての設定が完了したら [GROWI bot でできること](./slack-integration.html#growi-bot-でできること)を参照してください。
@@ -225,7 +225,7 @@
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)  
 
 - 失敗の場合  
-  [導通テスト時のエラーログ](./slack-integration.html#導通テスト時のエラーログ)を参照してください。
+  [接続テスト時のエラーログ](./slack-integration.html#接続テスト時のエラーログ)を参照してください。
 
 ## Custom bot with proxy 設定
 
@@ -342,18 +342,13 @@
   - Slack 側
       ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
 
-  <!-- TODO: GW-6441 導通テスト時の error 集を作成する -->
 - 失敗の場合  
-    エラーログが表示されます。ログの内容を修正してください。
-  - 例  
-      Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。
-      GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
+  [接続テスト時のエラーログ](./slack-integration.html#接続テスト時のエラーログ)を参照してください。
 
-      ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 全ての設定が完了したら [GROWI bot でできること](./slack-integration.html#growi-bot-でできること)を参照してください。
 
-## 導通テスト時のエラーログ
+## 接続テスト時のエラーログ
 
 1. **Channel_not_found**  
    指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。
