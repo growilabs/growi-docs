@@ -408,7 +408,7 @@
     ![slack-bot-errors-scopes-not-appropriate](../../../.vuepress/public/assets/images/slack-bot-errors-scopes-not-appropriate.png)
 
 1. **Cannot read property 'includes' of undefined**  
-    Signing Secret や Bot User OAuth Token などの情報が登録されていないことで発生するエラーです。正しい値を入力してください。
+    Signing Secret や Bot User OAuth Token などの情報が登録されていない可能性があります。正しい値を入力してください。
     ![slack-bot-errors-includes-of-undefined](../../../.vuepress/public/assets/images/slack-bot-errors-includes-of-undefined.png)
 
 1. **invalid_auth**  
