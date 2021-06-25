@@ -189,7 +189,7 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
 
 - In case of failure  
-  See ![Error logs for connectivity test](./slack-integration.html#Error-logs-for-connectivity-test)
+  See [Error logs for connectivity test](./slack-integration.html#error-logs-for-connectivity-test)
 
 ## Custom bot with proxy settings
 
@@ -290,8 +290,8 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
         - Slack side
             ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
 
-      - In case of failure
-           See ![Error logs for connectivity test](./slack-integration.html#Error-logs-for-connectivity-test)
+      - In case of failure  
+           See [Error logs for connectivity test](./slack-integration.html#error-logs-for-connectivity-test)
 
         Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
 
