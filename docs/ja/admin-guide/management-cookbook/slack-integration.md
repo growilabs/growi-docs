@@ -396,14 +396,15 @@
 
 1. **Request failed with status code 500**  
    すでに Access Token を登録された後、Access Token を再発行してテストを実行した可能性があります。
-   [接続中の GROWI を確認する](./slack-integration.html#接続中の-GROWI-を確認する)を参照して、現在どの GROWI App(s) と連携しているのかを確認してください。
-   確認ができましたら、[Slack ワークスペースと GROWI App(s) との連携を解除する](./slack-integration.html#slack-ワークスペースと-growi-app-s-との連携を解除する)を参照していただき、GROWI App(s) との連携を解除してください。
+   [接続中の GROWI を確認する](./slack-integration.html#接続中の-GROWI-を確認する)を参照して、
+   現在どの GROWI App と連携しているのかを確認してください。
+   確認ができましたら、[Slack ワークスペースと GROWI App との連携を解除する](./slack-integration.html#slack-ワークスペースと-growi-app-s-との連携を解除する)を参照していただき、GROWI App との連携を解除してください。
    連携を解除することができたら、再度登録し直してください。
    ![slack-bot-errors-500](../../../.vuepress/public/assets/images/slack-bot-errors-500.png)
   
 1. **The scopes is not appropriate**  
     Slack App を作成した際に設定する Scope が正しくない可能性があります。
-    作成した Slack App の OAuth & Permissions から Scope を確認のしてください。
+    作成した Slack App の OAuth & Permissions から Scope の確認をしてください。
     必要な Scope は **team:read**, **chat:write**, **command** です。
     ![slack-bot-errors-scopes-not-appropriate](../../../.vuepress/public/assets/images/slack-bot-errors-scopes-not-appropriate.png)
 
@@ -438,7 +439,7 @@
 <!-- ### 複数ワークスペースの横断検索 (TBD) -->
   <!-- TODO: GW-6455 「複数ワークスペースの横断検索」 を記述する -->
 
-### Slack ワークスペースと GROWI App(s) との連携を解除する
+### Slack ワークスペースと GROWI App との連携を解除する
 
   1. `/growi unregister [連携解除したい GROWI App の URL1] [連携解除したい GROWI App の URL2] ...` と入力するとモーダルが表示されます。
 
