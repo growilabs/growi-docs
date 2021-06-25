@@ -80,14 +80,9 @@
   - Slack 側
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
 
-<!-- TODO: GW-6441 導通テスト時の error 集を作成する -->
 - 失敗の場合  
-  エラーログが表示されます。ログの内容を修正してください。
-  - 例  
-    Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。
-    GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
+  [接続テスト時のエラーログ](./slack-integration.html#接続テスト時のエラーログ)を参照してください。
 
-    ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 全ての設定が完了したら [GROWI bot でできること](./slack-integration.html#growi-bot-でできること)を参照してください。
 
@@ -230,11 +225,7 @@
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)  
 
 - 失敗の場合  
-  エラーログが表示されます。ログの内容を修正してください。
-  - 例  
-    Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
-
-    ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
+  [接続テスト時のエラーログ](./slack-integration.html#接続テスト時のエラーログ)を参照してください。
 
 ## Custom bot with proxy 設定
 
@@ -381,16 +372,48 @@
   - Slack 側
       ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
 
-  <!-- TODO: GW-6441 導通テスト時の error 集を作成する -->
 - 失敗の場合  
-    エラーログが表示されます。ログの内容を修正してください。
-  - 例  
-      Channel_not_found がログに出力された場合、指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。
-      GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。　　
+  [接続テスト時のエラーログ](./slack-integration.html#接続テスト時のエラーログ)を参照してください。
 
-      ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
 
 全ての設定が完了したら [GROWI bot でできること](./slack-integration.html#growi-bot-でできること)を参照してください。
+
+## 接続テスト時のエラーログ
+
+1. **Channel_not_found**  
+   指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。
+   GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。
+   ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
+
+1. **Cannot read property '0' of null**  
+   Proxy URL が設定されていない可能性があります。Proxy URL を入力してください。
+   ![slack-bot-errors-property-0-of-null](../../../.vuepress/public/assets/images/slack-bot-errors-property-0-of-null.png)
+
+1. **Request failed with status code 400**  
+   Slack ワークスペースで `/growi register` で Proxy に情報を登録せずに Test ボタンをクリックした可能性があります。
+   Slack ワークスペースで `/growi register` を実行し、必要な情報を Proxy に登録してください。
+   ![slack-bot-errors-400](../../../.vuepress/public/assets/images/slack-bot-errors-400.png)
+
+1. **Request failed with status code 500**  
+   すでに Access Token を登録された後、Access Token を再発行してテストを実行した可能性があります。
+   [接続中の GROWI を確認する](./slack-integration.html#接続中の-GROWI-を確認する)を参照して、現在どの GROWI App(s) と連携しているのかを確認してください。
+   確認ができましたら、[Slack ワークスペースと GROWI App(s) との連携を解除する](./slack-integration.html#slack-ワークスペースと-growi-app-s-との連携を解除する)を参照していただき、GROWI App(s) との連携を解除してください。
+   連携を解除することができたら、再度登録し直してください。
+   ![slack-bot-errors-500](../../../.vuepress/public/assets/images/slack-bot-errors-500.png)
+  
+1. **The scopes is not appropriate**  
+    Slack App を作成した際に設定する Scope が正しくない可能性があります。
+    作成した Slack App の OAuth & Permissions から Scope を確認のしてください。
+    必要な Scope は **team:read**, **chat:write**, **command** です。
+    ![slack-bot-errors-scopes-not-appropriate](../../../.vuepress/public/assets/images/slack-bot-errors-scopes-not-appropriate.png)
+
+1. **Cannot read property 'includes' of undefined**  
+    Signing Secret や Bot User OAuth Token などの情報が登録されていない可能性があります。正しい値を入力してください。
+    ![slack-bot-errors-includes-of-undefined](../../../.vuepress/public/assets/images/slack-bot-errors-includes-of-undefined.png)
+
+1. **invalid_auth**  
+    Signing Secret や Bot User OAuth Token の値が間違っている可能性があります。正しい値を入力してください。
+    ![slack-bot-errors-invalid-auth](../../../.vuepress/public/assets/images/slack-bot-errors-invalid-auth.png)
 
 ## GROWI bot でできること
 
