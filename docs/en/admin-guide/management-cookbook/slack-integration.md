@@ -375,11 +375,13 @@ For details on how to configure User Trigger Notification, please refer to here.
   ![slack-bot-errors-scopes-not-appropriate](../../../.vuepress/public/assets/images/slack-bot-errors-scopes-not-appropriate.png)
 
 1. **Cannot read property 'includes' of undefined**  
-    Signing Secret や Bot User OAuth Token などの情報が登録されていないことで発生するエラーです。正しい値を入力してください。
+   You may not register the information such as Signing Secret
+   and Bot User OAuth Token. Please register the correct values.
     ![slack-bot-errors-includes-of-undefined](../../../.vuepress/public/assets/images/slack-bot-errors-includes-of-undefined.png)
 
 1. **invalid_auth**  
-    Signing Secret や Bot User OAuth Token の値が間違っている可能性があります。正しい値を入力してください。
+    You may not register incorrect Signing Secret or Bot User OAuth Token.
+    Please register the correct values.
     ![slack-bot-errors-invalid-auth](../../../.vuepress/public/assets/images/slack-bot-errors-invalid-auth.png)
 
 
