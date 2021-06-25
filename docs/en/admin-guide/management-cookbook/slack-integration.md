@@ -189,11 +189,7 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
 
 - In case of failure  
-  Error logs will be displayed. Correct the contents of the logs.
-  - e.g.  
-    if you have not invited GROWI-Bot to the Slack channel or inputted the wrong channel, **Channel_not_found** error will be displayed in the logs. Please make sure that GROWI-Bot has been invited to the Slack channel, and the channel name has been inputted appropriately.
-
-    ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
+  See ![Error logs for connectivity test](./slack-integration.html#Error-logs-for-connectivity-test)
 
 ## Custom bot with proxy settings
 
@@ -295,15 +291,7 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
             ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
 
       - In case of failure
-          Error logs will be displayed. Correct the contents of the logs.
-        - e.g.  
-            if you have not invited GROWI-Bot to the Slack channel or inputted
-            the wrong channel, **Channel_not_found** error will be displayed
-              in the logs.
-            Please make sure that GROWI-Bot has been invited to the Slack channel,
-            and the channel name has been inputted appropriately.
-
-            ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
+           See ![Error logs for connectivity test](./slack-integration.html#Error-logs-for-connectivity-test)
 
         Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
 
