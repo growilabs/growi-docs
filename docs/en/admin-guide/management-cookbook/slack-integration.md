@@ -337,6 +337,52 @@ For details on how to configure User Trigger Notification, please refer to here.
 
 <!-- [通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#user-trigger-notification-設定). -->
 
+## Error logs for connectivity test
+
+1. **Channel_not_found**  
+    if you have not invited GROWI-Bot to the Slack channel or inputted
+    the wrong channel, **Channel_not_found** error will be displayed in the logs.
+    Please make sure that GROWI-Bot has been invited to the Slack channel,
+    and the channel name has been inputted appropriately.
+   ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
+
+1. **Cannot read property '0' of null**  
+    The Proxy URL may not be set, please input the Proxy URL.
+   ![slack-bot-errors-property-0-of-null](../../../.vuepress/public/assets/images/slack-bot-errors-property-0-of-null.png)
+
+1. **Request failed with status code 400**  
+   You may have clicked the Test button in the Slack workspace
+   without registering information to the Proxy with `/growi register`.
+   Please run `/growi register` in the Slack workspace
+   and register the necessary information to the Proxy.
+   ![slack-bot-errors-400](../../../.vuepress/public/assets/images/slack-bot-errors-400.png)
+
+1. **Request failed with status code 500**  
+   You may have already registered an Access Token
+   and then reissued the Access Token to run the test.
+   [Check the connected GROWI](./slack-integration.html#Check-the-connected-GROWI)
+   to check which GROWI App(s) you are currently connected to.
+   Once you have confirmed this,
+   click [Unregister the Slack workspace from the GROWI App(s)](./slack-integration.html#Unregister-the-Slack-workspace-from-the-GROWI-App(s)),
+   and then unregister the GROWI App(s). If you are able to unregister,
+   please register again.
+   ![slack-bot-errors-500](../../../.vuepress/public/assets/images/slack-bot-errors-500.png)
+  
+1. **The scopes is not appropriate**  
+   You may not set correct Scopes when you create the Slack App.
+   Please check the Scopes from OAuth & Permissions of the Slack App you created.
+   The required Scopes are **team:read**, **chat:write**, and **command**.
+  ![slack-bot-errors-scopes-not-appropriate](../../../.vuepress/public/assets/images/slack-bot-errors-scopes-not-appropriate.png)
+
+1. **Cannot read property 'includes' of undefined**  
+    Signing Secret や Bot User OAuth Token などの情報が登録されていないことで発生するエラーです。正しい値を入力してください。
+    ![slack-bot-errors-includes-of-undefined](../../../.vuepress/public/assets/images/slack-bot-errors-includes-of-undefined.png)
+
+1. **invalid_auth**  
+    Signing Secret や Bot User OAuth Token の値が間違っている可能性があります。正しい値を入力してください。
+    ![slack-bot-errors-invalid-auth](../../../.vuepress/public/assets/images/slack-bot-errors-invalid-auth.png)
+
+
 ## What you can do with a Slack bot ?
 
 ### Full-text search in a workspace
