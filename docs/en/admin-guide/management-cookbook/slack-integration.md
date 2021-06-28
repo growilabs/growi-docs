@@ -41,13 +41,13 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 
 ### Select Bot type
 
-  Select **Official bot** in the Slack integration of the admin panel.
+  Select **Official bot** from the Slack Integration section of the admin panel.
 
   ![slack-bot-selecting-official-bot](../../../.vuepress/public/assets/images/slack-bot-selecting-official-bot.png)
 
 ### Install Official bot in your Slack workspace
 
-  1. Click the **Add Slack Workspace** button.
+  1. Click the **Add a Slack Workspace** button.
 
       ![slack-bot-add-a-slack-workspace](../../../.vuepress/public/assets/images/slack-bot-add-a-slack-workspace.png)
 
@@ -61,11 +61,13 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 
 ### Register for the GROWI Official Bot Proxy service
 
-  1. Open the registration for the GROWI Custom Bot with proxy service.  
+  1. Open "Register for GROWI Official Bot Proxy Service".  
     Note that two access tokens have been generated for each token in the **Issue Access Token** section.
     The access tokens can be reissued as needed.
-  1.On Slack, type `/growi register`.
+
+  1. On Slack, type `/growi register`.
   ![slack-bot-add-workspace](../../../.vuepress/public/assets/images/slack-bot-register-modal.png)
+
   1. save the URL of the target GROWI in the GROWI URL of the modal to be displayed.
   1. Enter the Access Token Proxy to GROWI and Access Token GROWI to Proxy issued above.
    Click the **Submit** button.
@@ -94,7 +96,8 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
     ![slack-bot-test-success-at-slack-app](../../../.vuepress/public/assets/images/slack-bot-test-success-at-slack-app.png)
 
 - In case of failure  
-  [接続テスト時のエラーログ](./slack-integration.html#接続テスト時のエラーログ)を参照してください。
+  See [Error logs for connectivity test](./slack-integration.html#error-logs-for-connectivity-test)
+
 
 
 Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
