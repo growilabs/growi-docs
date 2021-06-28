@@ -435,7 +435,7 @@
 
 ### ワークスペース内の全文検索
 
-1. `/growi search [keyword(s)]` を入力すると検索結果が表示されます。
+1. `/growi search [キーワード]` を入力すると検索結果が表示されます。
 
    - 例: `/growi search example`
      ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
@@ -454,7 +454,7 @@
 ### 複数 の GROWI を横断検索する
 
 Slack ワークスペースを 複数の GROWI に登録することによって、横断検索することが可能になります。
-お使いのワークスペースで `/growi search [keyword(s)]` と検索してください。
+お使いのワークスペースで `/growi search [キーワード]` と検索してください。
 
 - 例: `/growi search example`
      ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
