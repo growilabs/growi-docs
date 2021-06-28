@@ -32,9 +32,9 @@ GROWI データを別の GROWI に移行するための zip 形式の GROWI ア�
 || Updateposts | User Trigger Notification で作成されている通知設定。 |
 || Globalnotificationsettings | Global Notification で作成されている通知設定。 |
 | その他 | Comments |コメント。Pages とセットでインポートする必要があります。 |
-|| Attachmants | 添付ファイルのメタデータ。ファイルアップロード方法に GridFS 使用している場合、Attachmantfiles.Files と Attachmantfiles.Chunks とセットでインポートする必要があります。 |
-|| AttachmantFiles.Files | Grid FS でアップロードされた添付ファイルのメタデータ。Attachmants と Attachmantfiles.Chunks とセットでインポートする必要があります。|
-|| AttachmantFiles.Chunks | Grid FS でアップロードされた添付ファイルのデータ。ファイルアップロード方法に GridFS 使用している場合、Attachmants と Attachmantfiles.Files とセットでインポートする必要があります。|
+|| Attachments | 添付ファイルのメタデータ。ファイルアップロード方法に GridFS 使用している場合、AttachmentFiles.Files と AttachmentFiles.Chunks とセットでインポートする必要があります。 |
+|| AttachmentFiles.Files | Grid FS でアップロードされた添付ファイルのメタデータ。Attachments と AttachmentFiles.Chunks とセットでインポートする必要があります。|
+|| AttachmentFiles.Chunks | Grid FS でアップロードされた添付ファイルのデータ。ファイルアップロード方法に GridFS 使用している場合、Attachments と AttachmentFiles.Files とセットでインポートする必要があります。|
 || Bookmark | ページについているブックマーク。Users と Pages とセットでインポートする必要があります。 |
 || Migrations | マイグレーションログ。GROWI における MongoDB のマイグレーションはこのログに追加されているマーグレーションファイルをスキップします。そのため、エクスポート時点での完全なデータとしてアーカイブデータを作成する場合、Migrations をエクスポートしておく必要があります。 |
 
