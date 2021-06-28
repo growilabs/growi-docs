@@ -327,8 +327,8 @@
   1. **Redirect URLs** の **Add New Redirect URL** ボタンをクリックします。
     ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions1.png)
 
-  1. 入力欄が表示されるので、`https://{連携させたい proxy のドメイン名}/slack/oauth-redirect` を入力してください。
-      - 例 `https://example.com/slack/oauth-redirect`
+  1. 入力欄が表示されるので、`https://{連携させたい proxy のドメイン名}/slack/oauth_redirect` を入力してください。
+      - 例 `https://example.com/slack/oauth_redirect`
 
       ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions2.png)
 
