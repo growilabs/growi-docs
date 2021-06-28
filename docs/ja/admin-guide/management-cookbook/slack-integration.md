@@ -435,9 +435,9 @@
 
 ### ワークスペース内の全文検索
 
-1. /growi search [keyword(s)] を入力すると検索結果が表示されます。
+1. `/growi search [キーワード]` を入力すると検索結果が表示されます。
 
-   - 例: /growi search example
+   - 例: `/growi search example`
      ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
    - 検索結果
      ![slack-bot-full-text-search-display-result](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result.png)
@@ -451,8 +451,18 @@
 `/growi status` と入力することで、Slack ワークスペースと連携している GROWI を確認することができます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
-<!-- ### 複数ワークスペースの横断検索 (TBD) -->
-  <!-- TODO: GW-6455 「複数ワークスペースの横断検索」 を記述する -->
+### 複数 の GROWI を横断検索する
+
+Slack ワークスペースを 複数の GROWI に登録することによって、横断検索することが可能になります。
+お使いのワークスペースで `/growi search [キーワード]` と検索してください。
+
+- 例: `/growi search example`
+     ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
+- 検索結果
+     <!-- 画像は後で差し替える。ワークスペースが記載されていない。 -->
+     ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-multi-growi.png)
+
+
 
 ### Slack ワークスペースと GROWI App との連携を解除する
 
