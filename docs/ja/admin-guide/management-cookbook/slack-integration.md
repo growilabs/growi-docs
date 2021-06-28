@@ -53,7 +53,7 @@
 
       ![slack-bot-add-a-slack-workspace](../../../.vuepress/public/assets/images/slack-bot-add-a-slack-workspace.png)
 
-  1. **Integration Procedure** に新規のアコーディオンが生成されるので、①「Instal Bot to Slack」のタブをクリックして開きます。
+  1. **Integration Procedure** に新規のアコーディオンが生成されるので、①「Install Bot to Slack」のタブをクリックして開きます。
   1. **Install now** ボタンをクリックします。
 
       ![slack-bot-install-now-for-official](../../../.vuepress/public/assets/images/slack-bot-install-now-for-official.png)
