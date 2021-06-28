@@ -99,7 +99,6 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
   See [Error logs for connectivity test](./slack-integration.html#error-logs-for-connectivity-test)
 
 
-
 Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
 
 
