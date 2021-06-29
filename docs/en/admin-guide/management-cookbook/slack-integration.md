@@ -116,6 +116,8 @@ Start the GROWI main server.
 
 Select Custom bot without proxy in Slack Integration of the Management page.
 
+![slack-bot-selecting-custom-bot-without-proxy](../../../.vuepress/public/assets/images/slack-bot-selecting-custom-bot-without-proxy.png)
+
 ### Create a Slack app
 
 1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click **Create New App** button.
@@ -126,7 +128,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
 1. Click the [Create App].
 
-   ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
+  ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
 
 ### Scope settings
 
@@ -155,7 +157,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
   1. When the Request URL has been correctly entered, click **Save Changes** button.
 
-### Create Slash Commands
+### Slash Commands
 
 1. In the Slack App you created, go to **Features** and click **Slash Commands**.
 
@@ -250,18 +252,64 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
     The steps are as follows.
 
 ### Before creating Custom bot with proxy
-<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
+
+  1. Create a new file `.env.development.local` under `packages/slackbot-proxy`.
+  1. Please input any environment variable `SERVER_URI` to the created file above.
+
+  e.g. `SERVER_URI=http://localhost:8080`
+
+  1. Start both the GROWI main server and the proxy server(`slackbot-proxy`).  
+    You can start the proxy server with `yarn` and `yarn dev` commands.
+
+  1. Select **Custom bot with proxy** from the Slack Integration section
+   of the admin panel.
+
+  ![slack-bot-selecting-custom-bot-with-proxy](../../../.vuepress/public/assets/images/slack-bot-selecting-custom-bot-with-proxy.png)
 
 ### Create Custom bot with proxy
-<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
+
+  1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click
+   **Create New App** button.
+
+   ![slack-custom-bot1](../../../.vuepress/public/assets/images/slack-custom-bot1.png)
+
+  1. In the **Create a Slack App** section, ① input the name of your app in the
+    **App Name** field and ② select the workspace where you want to add the GROWI
+    bots in the **Development Slack Workspace**.
+
+  1. Click the **Create App** button.
+
+  ![slack-custom-bot2](../../../.vuepress/public/assets/images/slack-custom-bot2.png)
+
 
 ### Set Custom bot with proxy Scopes
-<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
+
+  1. In the Slack App you created, go to **Features** and click **OAuth & Permissions**.
+    ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
+  1. Click the **Add an OAuth Scope** button.
+    ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets//images/slack-bot-scope-add-oauth-click.png)
+  1. Select **commands**, **chat: write** and **team:read**.
+    When the following OAuth Scope is displayed, the scope setting will be completed.
+    ![slack-bot-scope-selected](../../../.vuepress/public/assets//images/slack-bot-scope-selected.png)
 
 ### Request URL settings
 
 #### Interactivity & Shortcuts
-<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
+
+  1. In the Slack App you created, go to **Features** and click **Interactivity Shortcuts**.
+     ![slack-bot-interactivity-shortcuts-introduction](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
+
+  1. Turn on the button on the right side of **Interactivity**.
+     ![slack-bot-interactivity-shortcuts-enable-button](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-enable-button.png)
+
+  1. Input the Request URL as follows.
+
+     - https:// your GROWI domain /\_api/v3/slack-integration/interactions
+       - e.g. **<https://example.com/_api/v3/slack-integration/interactions>**
+
+     ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
+
+  1. When the Request URL has been correctly entered, click **Save Changes** button.
 
 #### Slash Commands
 
@@ -277,7 +325,8 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
       - For RequestURL, input `https://example.com/_api/v3/slack-integration/commands`.
       - Short Description is also required, so please input an appropriate description.
       - The Usage Hint is optional, so please input it accordingly.
-      - The Escape channels, users, and links sent to your app is optional, so input it accordingly.
+      - The Escape channels, users, and links sent to your app is optional,
+       so input it accordingly.
       - When you are done, click **Save** button.
 
       ![slash-commands-create](../../../.vuepress/public/assets/images/slash-commands-create.png)
@@ -301,7 +350,20 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 ### Redirect URL setting
 
 #### OAuth & Permissions
-<!-- TODO: GW-6481 「Custom bot with proxy settings」を記述する(en) 2 -->
+
+  1. In the Slack App you created, go to **Features** and click **OAuth & Permissions**.
+
+  1. **Redirect URLs** の **Add New Redirect URL** ボタンをクリックします。
+  1. Click on the **Add New Redirect URL** button of **Redirect URLs**.
+    ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions1.png)
+
+  1. when displayed input form, please input `https://{your proxy domain name}/slack/oauth_redirect`.
+      - e.g. `https://example.com/slack/oauth_redirect`
+
+      ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-auth-and-permisions2.png)
+
+  1. Click on the **Add** button.
+  1. Save the URL by clicking on the **Save URLs** button.
 
 ### Manage Distribution settings
 <!-- TODO: GW-6475 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(en) -->
