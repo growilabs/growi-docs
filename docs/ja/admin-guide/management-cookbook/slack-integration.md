@@ -459,7 +459,7 @@ Custom bot with proxy と Official bot では、Slack ワークスペースを �
 - 例: `/growi search example`
      ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
 - 検索結果
-     <!-- 画像は後で差し替える。ワークスペースが記載されていない。 -->
+     <!-- TODO GW-6581 -->
      ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-multi-growi.png)
 
 ### 複数の Slack ワークスペースから GROWI のページを検索する

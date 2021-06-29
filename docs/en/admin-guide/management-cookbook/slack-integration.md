@@ -452,7 +452,7 @@ Please search for `/growi search [keyword(s)]` in your workspace.
 - e.g.: `/growi search example`
      ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
 - Search results.
-     <!-- 画像は後で差し替える。ワークスペースが記載されていない。 -->
+     <!-- TODO GW-6581 -->
      ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-multi-growi.png)
 
 ### Unregister the Slack workspace from the GROWI App(s)
