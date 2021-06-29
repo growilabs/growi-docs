@@ -57,15 +57,26 @@ which can be accessed from client browser
 1. Set the environment variables below
     - `GROWI_URI`: GROWI server URI
 which can be accessed from client browser
-2. To load the GROWI agent for HackMD, edit ejs
-    - Add below to the end of `/codimd/public/views/codimd/head.ejs`
-        ```javascript
-        <script src="<%= process.env.GROWI_URI %>/_hackmd/load-styles"></script>
-        ```
-    - Add below to the end of `/codimd/public/views/codimd/foot.ejs`
-        ```javascript
-        <script src="<%= process.env.GROWI_URI %>/_hackmd/load-agent" defer></script>
-        ```
+2. Edit ejs to load the GROWI agent:
+    * For HackMD/CodiMD:
+      - Add below to the end of `/codimd/public/views/codimd/head.ejs`
+          ```javascript
+          <script src="<%= process.env.GROWI_URI %>/_hackmd/load-styles"></script>
+          ```
+      - Add below to the end of `/codimd/public/views/codimd/foot.ejs`
+          ```javascript
+          <script src="<%= process.env.GROWI_URI %>/_hackmd/load-agent" defer></script>
+          ```
+
+    * For HedgeDoc:
+      - Add below to the end of `/hedgedoc/public/views/hedgedoc/head.ejs`
+          ```javascript
+          <script src="<%= process.env.GROWI_URI %>/_hackmd/load-styles"></script>
+          ```
+      - Add below to the end of `/hedgedoc/public/views/hedgedoc/footer.ejs`
+          ```javascript
+          <script src="<%= process.env.GROWI_URI %>/_hackmd/load-agent" defer></script>
+          ```
 3. Restart
 
 ## Validation
