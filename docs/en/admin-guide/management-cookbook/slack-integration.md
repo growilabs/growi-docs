@@ -409,6 +409,10 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
         Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
 
+## Icon
+
+  Feel free to use the following image for custom bot.
+  ![growikun-icon-2000_2000](../../../.vuepress/public/assets/images/growikun-icon-2000_2000.png)
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
