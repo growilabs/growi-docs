@@ -68,7 +68,7 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
   1. On Slack, type `/growi register`.
   ![slack-bot-add-workspace](../../../.vuepress/public/assets/images/slack-bot-register-modal.png)
 
-  1. save the URL of the target GROWI in the GROWI URL of the modal to be displayed.
+  1. Save the URL of the target GROWI in the GROWI URL of the modal to be displayed.
   1. Enter the Access Token Proxy to GROWI and Access Token GROWI to Proxy issued above.
    Click the **Submit** button.
 
