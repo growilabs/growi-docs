@@ -465,7 +465,7 @@ Custom bot with proxy と Official bot では、Slack ワークスペースを �
 ### 複数の Slack ワークスペースから GROWI のページを検索する
 
 Custom bot with proxy と Official bot では、複数の Slack ワークスペースから GROWI のページを検索することが可能です。
-各ワークスペースにて GROWI-Bot をインストールし、`/growi register` を行ってください。
+各 Slack ワークスペースにて GROWI-Bot をインストールし、`/growi register` を行ってください。
 複数の Slack ワークスペースが連携されたら以下のように表示されます。
 ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-single-growi-to-multi-ws.png)
 
