@@ -501,25 +501,22 @@ For details on how to configure User Trigger Notification, please refer to here.
    - Click the **Share** button to share it within the channel.
      ![slack-bot-full-text-search-click-share](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-share.png)
 
+1. If you have registered your Slack workspace in multiple GROWIs, you can search across multiple GROWI App(s). (This is only available when the Bot type is Official bot or Custom bot with proxy.)
+
+    - e.g.: `/growi search example`
+        ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
+    - Search results.
+        <!-- TODO 6581 -->
+        ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-multi-growi.png)
+
 ### Check the connected GROWI
 
-By typing `/growi status`, you can see the GROWI App(s) that is connected to the Slack workspace.
+By typing `/growi status`, you can see the GROWI App(s) that is connected to the Slack workspace. (This is only available when the Bot type is Official bot or Custom bot with proxy.)
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
-
-### Search pages from multi GROWI
-
-By registering your Slack workspace with multi GROWI Apps, you will be able to search across them.
-Please search for `/growi search [keyword(s)]` in your workspace.
-
-- e.g.: `/growi search example`
-     ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
-- Search results.
-     <!-- 画像は後で差し替える。ワークスペースが記載されていない。 -->
-     ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-multi-growi.png)
 
 ### Unregister the Slack workspace from the GROWI App(s)
 
-  1. Please input `/growi unregister [URL1 of the GROWI App to be unregistered] [URL2 of the GROWI App to be unregistered]...`, then the modal as bellow will be displayed.
+  1. Please input `/growi unregister [URL1 of the GROWI App to be unregistered] [URL2 of the GROWI App to be unregistered]...`, then the modal as bellow will be displayed. (This is only available when the Bot type is Official bot or Custom bot with proxy.)
        - e.g.: `growi unregister http://example.com http://growi.jp`  
        ![slack-bot-unregister-input-eg](../../../.vuepress/public/assets/images/slack-bot-unregister-input-eg.png)
 
@@ -529,6 +526,4 @@ Please search for `/growi search [keyword(s)]` in your workspace.
   1. Click on **Submit** button.
   1. If the following is displayed, the unregister the Slack workspace is completed.
     ![slack-bot-unregister-completed](../../../.vuepress/public/assets/images/slack-bot-unregister-completed.png)
-
-<!-- ### 複数 GROWI の横断検索 (TBD) -->
 

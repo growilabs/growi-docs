@@ -446,27 +446,22 @@
    - **Share** ボタンをクリックすると、チャンネル内に共有されます。
      ![slack-bot-full-text-search-click-share](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-share.png)
 
+1. Slack ワークスペースを複数の GROWI に登録している場合、複数の GROWI から横断検索することができます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
+
+    - 例: `/growi search example`
+        ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
+    - 検索結果
+        <!-- TODO 6581 -->
+        ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-multi-growi.png)
+
 ### 接続中の GROWI を確認する
 
 `/growi status` と入力することで、Slack ワークスペースと連携している GROWI を確認することができます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
-### 複数 の GROWI からページを横断検索する
-
-Slack ワークスペースを 複数の GROWI に登録することによって、横断検索することが可能になります。
-お使いのワークスペースで `/growi search [キーワード]` と検索してください。
-
-- 例: `/growi search example`
-     ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
-- 検索結果
-     <!-- 画像は後で差し替える。ワークスペースが記載されていない。 -->
-     ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-multi-growi.png)
-
-
-
 ### Slack ワークスペースと GROWI App との連携を解除する
 
-  1. `/growi unregister [連携解除したい GROWI App の URL1] [連携解除したい GROWI App の URL2] ...` と入力するとモーダルが表示されます。
+  1. `/growi unregister [連携解除したい GROWI App の URL1] [連携解除したい GROWI App の URL2] ...` と入力するとモーダルが表示されます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
 
      - 入力例: `growi unregister http://example.com http://growi.jp`
      ![slack-bot-unregister-input-eg](../../../.vuepress/public/assets/images/slack-bot-unregister-input-eg.png)
