@@ -478,6 +478,11 @@ Slack ワークスペースを 複数の GROWI に登録することによって
   1. 以下のように表示されたら、連携解除が完了しています。
     ![slack-bot-unregister-completed](../../../.vuepress/public/assets/images/slack-bot-unregister-completed.png)
 
+## アイコン
+
+  よければ以下のイラストを Custom bot 用のアイコンにお使いください。
+  ![growikun-icon-2000_2000](../../../.vuepress/public/assets/images/growikun-icon-2000_2000.png)
+
 ## Incoming webhook 設定
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
