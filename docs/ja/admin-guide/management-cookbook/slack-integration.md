@@ -451,7 +451,6 @@
     - 例: `/growi search example`
         ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
     - 検索結果
-        <!-- TODO 6581 -->
         ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-multi-growi.png)
 
 ### 接続中の GROWI を確認する
