@@ -392,9 +392,9 @@ For details on how to configure User Trigger Notification, please refer to here.
 By typing `/growi status`, you can see the GROWI App(s) that is connected to the Slack workspace.
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
-### Search multi GROWI
+### Search pages from multi GROWI
 
-By registering your Slack workspace with multiple GROWIs, you will be able to search across them.
+By registering your Slack workspace with multi GROWI Apps, you will be able to search across them.
 Please search for `/growi search [keyword(s)]` in your workspace.
 
 - e.g.: `/growi search example`
