@@ -124,7 +124,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
 
    ![slack-custom-bot1](../../../.vuepress/public/assets/images/slack-custom-bot1.png)
 
-1. In the [Create a Slack App] section, ① input the name of your app in the [App Name] field and ② select the workspace where you want to add the GROWI bots in the [Development Slack Workspace].
+1. In the **Create a Slack App** section, ① input the name of your app in the **App Name** field and ② select the workspace where you want to add the GROWI bots in the **Development Slack Workspace**.
 
 1. Click the [Create App].
 
@@ -288,7 +288,7 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
     ![slack-bot-oauth-and-permissions-introduction](../../../.vuepress/public/assets/images/slack-bot-oauth-and-permissions-introduction.png)
   1. Click the **Add an OAuth Scope** button.
     ![slack-bot-scope-add-oauth-click](../../../.vuepress/public/assets//images/slack-bot-scope-add-oauth-click.png)
-  1. Select **commands**, **chat: write** and **team:read**.
+  1. Select **commands**, **chat: write** and **team:read**.  
     When the following OAuth Scope is displayed, the scope setting will be completed.
     ![slack-bot-scope-selected](../../../.vuepress/public/assets//images/slack-bot-scope-selected.png)
 
@@ -309,7 +309,7 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
 
      ![slack-bot-interactivity-shortcuts-creation](../../../.vuepress/public/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 
-  1. When the Request URL has been correctly entered, click **Save Changes** button.
+  1. When the Request URL has been correctly entered, click the **Save Changes** button.
 
 #### Slash Commands
 
