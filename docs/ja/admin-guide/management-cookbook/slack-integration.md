@@ -462,6 +462,12 @@ Slack ワークスペースを 複数の GROWI に登録することによって
      <!-- 画像は後で差し替える。ワークスペースが記載されていない。 -->
      ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-multi-growi.png)
 
+### 複数の Slack ワークスペースから GROWI を参照する
+
+Custom bot with proxy と Official bot では、複数の Slack ワークスペースから GROWI を参照することが可能です。
+各ワークスペースにてGROWI-Bot をインストールし、register を行ってください。
+複数の Slack ワークスペースが連携されたら以下のように表示されます。
+![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-single-growi-to-multi-ws.png)
 
 
 ### Slack ワークスペースと GROWI App との連携を解除する
