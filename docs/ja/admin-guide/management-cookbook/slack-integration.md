@@ -451,7 +451,7 @@
 `/growi status` と入力することで、Slack ワークスペースと連携している GROWI を確認することができます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
-### 複数 の GROWI からページを横断検索する
+### 複数の GROWI からページを横断検索する
 
 Custom bot with proxy と Official bot では、Slack ワークスペースを 複数の GROWI に登録することによって、横断検索することが可能になります。
 お使いのワークスペースで `/growi search [キーワード]` と検索してください。
