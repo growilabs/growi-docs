@@ -453,7 +453,7 @@
 
 ### 複数 の GROWI からページを横断検索する
 
-Slack ワークスペースを 複数の GROWI に登録することによって、横断検索することが可能になります。
+Custom bot with proxy と Official bot では、Slack ワークスペースを 複数の GROWI に登録することによって、横断検索することが可能になります。
 お使いのワークスペースで `/growi search [キーワード]` と検索してください。
 
 - 例: `/growi search example`
@@ -462,10 +462,10 @@ Slack ワークスペースを 複数の GROWI に登録することによって
      <!-- 画像は後で差し替える。ワークスペースが記載されていない。 -->
      ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-multi-growi.png)
 
-### 複数の Slack ワークスペースから GROWI を参照する
+### 複数の Slack ワークスペースから GROWI のページを検索する
 
-Custom bot with proxy と Official bot では、複数の Slack ワークスペースから GROWI を参照することが可能です。
-各ワークスペースにてGROWI-Bot をインストールし、register を行ってください。
+Custom bot with proxy と Official bot では、複数の Slack ワークスペースから GROWI のページを検索することが可能です。
+各ワークスペースにて GROWI-Bot をインストールし、`/growi register` を行ってください。
 複数の Slack ワークスペースが連携されたら以下のように表示されます。
 ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-single-growi-to-multi-ws.png)
 
