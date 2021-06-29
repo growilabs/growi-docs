@@ -444,6 +444,17 @@ For details on how to configure User Trigger Notification, please refer to here.
 By typing `/growi status`, you can see the GROWI App(s) that is connected to the Slack workspace.
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
+### Search pages from multi GROWI
+
+By registering your Slack workspace with multi GROWI Apps, you will be able to search across them.
+Please search for `/growi search [keyword(s)]` in your workspace.
+
+- e.g.: `/growi search example`
+     ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
+- Search results.
+     <!-- 画像は後で差し替える。ワークスペースが記載されていない。 -->
+     ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-multi-growi.png)
+
 ### Unregister the Slack workspace from the GROWI App(s)
 
   1. Please input `/growi unregister [URL1 of the GROWI App to be unregistered] [URL2 of the GROWI App to be unregistered]...`, then the modal as bellow will be displayed.
