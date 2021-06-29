@@ -510,7 +510,6 @@ For details on how to configure User Trigger Notification, please refer to here.
     - e.g.: `/growi search example`
         ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
     - Search results.
-        <!-- TODO 6581 -->
         ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-multi-growi.png)
 
 ### Check the connected GROWI
