@@ -501,7 +501,7 @@ For details on how to configure User Trigger Notification, please refer to here.
    - Click the **Share** button to share it within the channel.
      ![slack-bot-full-text-search-click-share](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-share.png)
 
-1. If you have registered your Slack workspace in multiple GROWIs, you can search across multiple GROWI App(s). (* This is only available when the Bot type is Official bot or Custom bot with proxy.)
+1. If you have registered your Slack workspace in multiple GROWIs, you can search across multiple GROWI App(s). (This is only available when the Bot type is Official bot or Custom bot with proxy.)
 
     - e.g.: `/growi search example`
         ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
@@ -511,12 +511,12 @@ For details on how to configure User Trigger Notification, please refer to here.
 
 ### Check the connected GROWI
 
-By typing `/growi status`, you can see the GROWI App(s) that is connected to the Slack workspace.(* This is only available when the Bot type is Official bot or Custom bot with proxy.)
+By typing `/growi status`, you can see the GROWI App(s) that is connected to the Slack workspace. (This is only available when the Bot type is Official bot or Custom bot with proxy.)
 ![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
 
 ### Unregister the Slack workspace from the GROWI App(s)
 
-  1. Please input `/growi unregister [URL1 of the GROWI App to be unregistered] [URL2 of the GROWI App to be unregistered]...`, then the modal as bellow will be displayed.
+  1. Please input `/growi unregister [URL1 of the GROWI App to be unregistered] [URL2 of the GROWI App to be unregistered]...`, then the modal as bellow will be displayed. (This is only available when the Bot type is Official bot or Custom bot with proxy.)
        - e.g.: `growi unregister http://example.com http://growi.jp`  
        ![slack-bot-unregister-input-eg](../../../.vuepress/public/assets/images/slack-bot-unregister-input-eg.png)
 
