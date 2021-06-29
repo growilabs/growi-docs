@@ -468,5 +468,3 @@ Please search for `/growi search [keyword(s)]` in your workspace.
   1. If the following is displayed, the unregister the Slack workspace is completed.
     ![slack-bot-unregister-completed](../../../.vuepress/public/assets/images/slack-bot-unregister-completed.png)
 
-<!-- ### 複数 GROWI の横断検索 (TBD) -->
-
