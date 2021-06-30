@@ -1,6 +1,6 @@
 # データのインポート
 
-GROWI v3.7.2 現在では、GROWI、 esa.io、Qiita:Team のデータをインポートする機能をサポートしています。
+GROWI v4.2.21 現在では、GROWI、 esa.io、Qiita:Team のデータをインポートする機能をサポートしています。
 
 ## GROWI アーカイブデータインポート
 
