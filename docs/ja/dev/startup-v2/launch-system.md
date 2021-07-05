@@ -6,14 +6,15 @@ GROWI-Dev devcontainer 内のターミナルで作業します。
 
 ### 依存ライブラリの取得
 
-lerna パッケージがインストールされていないため npx を用い実行します。
+npx を用いて lerna bootstrap を実行します。
 
 ``` bash
 npx lerna bootstrap
 ```
 
 ::: danger
-`yarn` または、`npm install` は利用しないでください
+monorepo を採用しているため、依存関係管理には [lerna](https://lerna.js.org/) を使います。
+`yarn install` または、`npm install` は利用しないでください
 :::
 
 ### データマイグレーション
