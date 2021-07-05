@@ -6,7 +6,7 @@ GROWI-Dev devcontainer 内のターミナルで作業します。
 
 ### 依存ライブラリの取得
 
-lerna パッケージがインストールされていないので npx で実行します。
+lerna パッケージがインストールされていないため npx を用い実行します。
 
 ``` bash
 npx lerna bootstrap
