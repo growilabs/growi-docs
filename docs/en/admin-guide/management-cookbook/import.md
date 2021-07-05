@@ -33,7 +33,7 @@ There are three different rules for importing duplicate data, one for each colle
 - Flash and Insert
   - If there is data with the same name, the existing data will be completely deleted before importing.
   - This mode is not selectable in the User collection.
-  - The Config collection can only be imported in this mode.
+  - The Config collection can only be selected in this mode.
     - If you import the Config collection, you will need to restart the server.
 
 ### How to import
