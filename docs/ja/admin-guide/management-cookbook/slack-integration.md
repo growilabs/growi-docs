@@ -8,6 +8,7 @@
 
   GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。任意の Slack ワークスペースにインストールすることで、
   GROWI からの通知だけでなくチャットからの全文検索実行や会話まとめなど様々な機能を利用することができるようになります。
+  提供されている GROWI bot は以下の3種類があります。
 
 #### Official bot (推奨)
 
@@ -22,7 +23,7 @@
   【概念図】
   ![diagram-for-custom-bot-without-bot](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
 
-  Custom bot without proxy は Slack bot を作成し、お使いの GROWI と紐付けを行うことで、
+  Custom bot without proxy は 自身でSlack bot を作成し、お使いの GROWI と紐付けを行うことで、
   Slack から GROWI の 機能の一部を使用することができます。
 
 #### Custom bot with proxy
@@ -30,7 +31,7 @@
   【概念図】
   ![diagram-for-custom-bot-with-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-with-proxy.png)
 
-  Custom bot with proxy は Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、
+  Custom bot with proxy は 自身で Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、
   Official bot と同様の手順で GROWI の機能の一部を使用することができます。
 
 ### 2. Incoming Webhook
@@ -474,7 +475,7 @@
 
 ## アイコン
 
-  よければ以下のイラストを Custom bot 用のアイコンにお使いください。
+  よろしければ、以下のイラストを Custom bot 用のアイコンにお使いください。
   ![growikun-icon-2000_2000](../../../.vuepress/public/assets/images/growikun-icon-2000_2000.png)
 
 ## Incoming webhook 設定
