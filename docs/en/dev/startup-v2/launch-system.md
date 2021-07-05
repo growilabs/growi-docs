@@ -6,12 +6,14 @@ Perform the following steps in a terminal inside your GROWI-Dev devcontainer.
 
 ### Install Dependencies
 
+Execute with npx because lerna　package is not installed.
+
 ``` bash
-yarn
+npx lerna bootstrap
 ```
 
 ::: danger
-DO NOT USE `npm install`
+DO NOT USE `npm install` or `yarn`
 :::
 
 ### Migration
@@ -37,6 +39,12 @@ Either process can be terminated with `Ctrl-C`.
 ## Additional Launches
 
 Each time the application is launched, repeat the steps under [First Time](#first-time).
+
+Section [Install Dependencies](#install-dependencies) can be executed with yarn if the lerna package is installed in node_modules.
+
+``` bash
+yarn lerna bootstrap
+```
 
 ## Production Build and Execution
 
