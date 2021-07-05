@@ -6,7 +6,7 @@ Perform the following steps in a terminal inside your GROWI-Dev devcontainer.
 
 ### Install Dependencies
 
-Execute with npx because lerna is not installed.
+Execute with npx because lerna　package is not installed.
 
 ``` bash
 npx lerna bootstrap
