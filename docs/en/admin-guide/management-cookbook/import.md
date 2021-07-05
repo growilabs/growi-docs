@@ -1,6 +1,6 @@
 # Import Data
 
-As of GROWI v4.2.21, we support the ability to import data from GROWI, esa.io, and Qiita:Team.
+GROWI version 3.7.2 and later supports the ability to import data from GROWI, esa.io, and Qiita:Team.
 
 ## GROWI archive data import
 
