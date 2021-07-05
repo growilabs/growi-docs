@@ -6,12 +6,14 @@ GROWI-Dev devcontainer 内のターミナルで作業します。
 
 ### 依存ライブラリの取得
 
+lerna が入っていないので npx で実行します。
+
 ``` bash
-yarn
+npx lerna bootstrap
 ```
 
 ::: danger
-`npm install` は利用しないでください
+`yarn` または、`npm install` は利用しないでください
 :::
 
 ### データマイグレーション
@@ -38,6 +40,11 @@ yarn migrate
 
 毎回、上記の [初回起動](#初回起動) のセクションを全て実行してください。
 
+[依存ライブラリの取得](#依存ライブラリの取得) のセクションは、node_modules 内に lerna パッケージが存在する場合、yarn 経由で実行可能です。
+
+``` bash
+yarn lerna bootstrap
+```
 
 ## production 用の成果物をビルドして起動
 
