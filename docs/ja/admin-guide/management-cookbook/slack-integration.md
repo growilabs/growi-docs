@@ -53,12 +53,12 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 1. **Slack ワークスペースを追加** ボタンをクリックします。
 
-![slack-bot-add-a-slack-workspace](../../../.vuepress/public/assets/images/slack-bot-add-a-slack-workspace.png)
+  ![slack-bot-add-a-slack-workspace](../../../.vuepress/public/assets/images/slack-bot-add-a-slack-workspace.png)
 
 1. **Integration Procedure** に新規のアコーディオンが生成されるので、①「Install Bot to Slack」のタブをクリックして開きます。
 1. **Install now** ボタンをクリックします。
 
-![slack-bot-install-now-for-official](../../../.vuepress/public/assets/images/slack-bot-install-now-for-official.png)
+  ![slack-bot-install-now-for-official](../../../.vuepress/public/assets/images/slack-bot-install-now-for-official.png)
 
 1. Slack app directory のリンクに飛ぶので、「Add to Slack」ボタンを押して自身の Slack work space にインストールします。
 <!-- TODO: GW-6420 [Official] app directoryの写真を挿入(GW4836 ブロック) -->
@@ -68,9 +68,10 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 1. GROWI Custom Bot with proxy サービスへの登録を開きます。  
   **Access Token の発行** に各種トークンにアクセストークンが2種生成されていることを確認できます。
   アクセストークンは必要に応じて再発行できます。
+
 1. Slack上で `/growi register` と打ちます。
 
-![slack-bot-add-workspace](../../../.vuepress/public/assets/images/slack-bot-register-modal.png)
+  ![slack-bot-add-workspace](../../../.vuepress/public/assets/images/slack-bot-register-modal.png)
 
 1. 表示されるモーダルの GROWI URL に、対象 GROWI の URL を保存します。
 1. 上記で発行されている Access Token Proxy to GROWI と Access Token GROWI to Proxy を入れ
