@@ -11,7 +11,7 @@ GROWI Docs へようこそ。
 
 ### [インストール](getting-started/docker-compose.md)
 
-様々な方法による GROWI のインストール手順の紹介です。
+GROWI のインストール手順の紹介です。
 
 [docker-compose](getting-started/docker-compose.md) をご覧ください。
 
