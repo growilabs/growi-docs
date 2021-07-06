@@ -8,12 +8,11 @@ Welcome to GROWI Docs.
 This site consists of the following sections.
 
 ## Admin's Guide
+
 ### [Installation](getting-started/docker-compose.md)
 
-Introducing various ways to install GROWI.
-
-If you are just trying out, [Heroku](getting-started/heroku.md) might be your fit.
-If you are committed to GROWI, [docker-compose](getting-started/docker-compose.md) is the best fit.
+Introducing to install GROWI.
+See [docker-compose](getting-started/docker-compose.md).
 
 ### [Upgrade](upgrading/42x.md)
 

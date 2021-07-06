@@ -8,12 +8,12 @@ GROWI Docs へようこそ。
 このサイトは以下のセクションで構成されています。
 
 ## 管理者ガイド
+
 ### [インストール](getting-started/docker-compose.md)
 
-様々な方法による GROWI のインストール手順の紹介です。
+GROWI のインストール手順の紹介です。
 
-ちょっとしたお試しには起動までの手順が少ない [Heroku](getting-started/heroku.md) が便利です。
-本格的な利用を考えている場合は [docker-compose](getting-started/docker-compose.md) をお勧めします。
+[docker-compose](getting-started/docker-compose.md) をご覧ください。
 
 ### [アップグレード](upgrading/42x.md)
 
