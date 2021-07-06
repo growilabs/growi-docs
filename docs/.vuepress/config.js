@@ -150,7 +150,6 @@ module.exports = {
               collapsable: false,
               children: [
                 '/en/admin-guide/getting-started/docker-compose.md',
-                '/en/admin-guide/getting-started/heroku.md',
                 '/en/admin-guide/getting-started/ubuntu-server.md',
                 '/en/admin-guide/getting-started/centos.md'
               ]
@@ -380,7 +379,6 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/admin-guide/getting-started/docker-compose.md',
-                '/ja/admin-guide/getting-started/heroku.md',
                 '/ja/admin-guide/getting-started/ubuntu-server.md',
                 '/ja/admin-guide/getting-started/centos.md'
               ]
