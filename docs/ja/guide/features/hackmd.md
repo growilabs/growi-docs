@@ -40,7 +40,7 @@ HackMD は一人でも利用できますが、ここでは 2つのユーザー�
 
    クリックすると、`HackMD is READY!` という表示と、`Start to edit with HackMD` のボタンが表示されます。
 
-   ![](./images/HackMD2.png)
+   ![](./images/HackMD2-6.png)
 
 1. `Start to edit with HackMD` のボタンをクリック
 
@@ -67,7 +67,7 @@ HackMD は一人でも利用できますが、ここでは 2つのユーザー�
 すると、ユーザー A の時と同様の `Start to edit with HackMD` のボタンが表示されるか、  
 `Resume to edit with HackMD` のボタンと `Discard changes of HackMD` のボタンが並んだ画面が表示されます。
 
-![](./images/HackMD6.png)
+![](./images/HackMD2-6.png)
 
 ![](./images/HackMD7.png)
 
@@ -136,11 +136,9 @@ HackMD モードで Windows なら Ctrl + S キー、Mac なら Command + S キ�
 ページ編集情報が競合し、HackMD 側で更新ボタンが機能しなくなります。
 
 この状態では、ページ更新を行った後も HackMD モードでは編集を開始することができず、  
-`DRAFT MEY BE OUTDATED` のアラートが表示されます。
+`DRAFT MAY BE OUTDATED` のアラートが表示されます。
 
 ![](./images/HackMD8.png)
-
-![](./images/HackMD9.png)
 
 HackMD モードでの編集より通常の編集モードでの更新（保存）が優先されてしまいますので、この表示が出た時には  
  `Discard it` のリンク や `Discard changes of HackMD` ボタンをクリックし、

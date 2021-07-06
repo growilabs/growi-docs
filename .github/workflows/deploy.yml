@@ -1,0 +1,78 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Cache/Restore node_modules
+      id: cache-dependencies
+      uses: actions/cache@v2
+      with:
+        path: node_modules
+        key: ${{ runner.OS }}-node_modules-${{ matrix.node-version }}-${{ hashFiles('**/yarn.lock') }}
+
+    - name: Get yarn cache dir
+      if: steps.cache-dependencies.outputs.cache-hit != 'true'
+      id: cache-yarn
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+
+    - name: Cache/Restore yarn cache
+      if: steps.cache-dependencies.outputs.cache-hit != 'true'
+      uses: actions/cache@v2
+      with:
+        path: ${{ steps.cache-yarn.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ matrix.node-version }}-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-${{ matrix.node-version }}-
+
+    - name: Install dependencies
+      if: steps.cache-dependencies.outputs.cache-hit != 'true'
+      run: |
+        yarn
+
+    - name: Print dependencies
+      run: |
+        echo -n "node " && node -v
+        echo -n "npm " && npm -v
+        yarn list --depth=0
+
+    - name: Download and extract GROWI source
+      run: |
+        mkdir tmp/growi
+        export GROWI_ARCHIVE_URL=https://github.com/weseek/growi/archive/master.tar.gz
+        curl -SL $GROWI_ARCHIVE_URL | tar -xz -C tmp/growi --strip-components 1
+
+    - name: Build and deploy
+      uses: jenkey2011/vuepress-deploy@v1.8.1
+      env:
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BUILD_SCRIPT: yarn commons:build && yarn apiv3:build && yarn docs:build
+        BUILD_DIR: docs/.vuepress/dist/
+        CNAME: docs.growi.org
+
+    - name: Slack Notification
+      uses: weseek/ghaction-slack-notification@master
+      if: failure()
+      with:
+        type: ${{ job.status }}
+        job_name: '*Deploy growi-docs*'
+        channel: '#ci'
+        isCompactMode: true
+        url: ${{ secrets.SLACK_WEBHOOK_URL }}

@@ -86,7 +86,7 @@ docker-compose stop
 既存の Docker コンテナと Docker イメージを削除します。
 
 ```text
-docker-compose rm app mongo elasticseach
+docker-compose rm app mongo elasticsearch
 docker rmi weseek/growi:3
 ```
 
