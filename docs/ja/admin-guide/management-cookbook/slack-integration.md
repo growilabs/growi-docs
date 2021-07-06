@@ -336,16 +336,9 @@
   1. **Save URLs** ボタンをクリックして 入力したURLを保存します。
   
 
-### Manage Distribution を設定する
-
-  1. 作成した Slack App の **Settings** から **Manage Distribution** をクリックします。
-  1. **Share Your App With Your Workspace** の Sharable URL の右側にある **Copy** ボタンを押します。
-  ![slash-commands-introduction](../../../.vuepress/public/assets/images/slack-bot-sharable-url.png)
-
-
 ### Custom bot with proxy を Slack のワークスペースへインストールする
 
-  1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
+  <!-- 1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
   1. **Install your app** をクリックします。
     ![slack-bot-install-your-app-introduction](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction.png)
   1. **Install to Workspace** をクリックします。
@@ -356,7 +349,13 @@
     ![slack-bot-install-your-app-complete](../../../.vuepress/public/assets/images/slack-bot-install-your-app-complete.png)
   1. GROWI bot を使いたいチャンネルに @example を使用して招待します。
     ![slack-bot-install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace-joined-bot.png)
-    ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
+    ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png) -->
+
+  1. 作成した Slack App の **Settings** から **Manage distribution** をクリックします。
+  1. **Shareable URL** に表示されているURLをブラウザで開きます。
+  1. 遷移先の画面にて、Allowをクリックします。
+  ![slack-bot-install-your-app-transition-destination](../../../.vuepress/public/assets/images/slack-bot-install-your-app-transition-destination.png)
+  1. **Congratulations!**と表示されたらInstallが完了です。
 
 ### GROWI Custom Bot with proxy サービスへの登録
   
