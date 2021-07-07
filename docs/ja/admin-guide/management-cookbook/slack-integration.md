@@ -338,32 +338,18 @@
 
 ### Custom bot with proxy を Slack のワークスペースへインストールする
 
-  <!-- 1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
-  1. **Install your app** をクリックします。
-    ![slack-bot-install-your-app-introduction](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction.png)
-  1. **Install to Workspace** をクリックします。
-    ![slack-bot-install-to-workspace](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace.png)
-  1. 遷移先の画面にて、**Allow**をクリックします。
-    ![slack-bot-install-your-app-transition-destination](../../../.vuepress/public/assets/images/slack-bot-install-your-app-transition-destination.png)
-  1. Install your app の右側に 緑色のチェックがつけばワークスペースへのインストール完了です。
-    ![slack-bot-install-your-app-complete](../../../.vuepress/public/assets/images/slack-bot-install-your-app-complete.png)
-  1. GROWI bot を使いたいチャンネルに @example を使用して招待します。
-    ![slack-bot-install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace-joined-bot.png)
-    ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png) -->
-
   1. 作成した Slack App の **Settings** から **Manage distribution** をクリックします。
   1. **Embeddable Slack Button** の **Add to Slack** ボタンを押します。
   1. 遷移先の画面にて、Allowをクリックします。
   ![slack-bot-install-your-app-transition-destination](../../../.vuepress/public/assets/images/slack-bot-install-your-app-transition-destination.png)
-  1. **Congratulations!**と表示されたらInstallが完了です。
-
-  ::: danger
-  `Illegal state, try it again.`と表示される場合は、**Go to install page** を押し、表示される　**Add to Slack** ボタンから再度インストールを行ってください。
-  :::
-
+  1. **Congratulations!** と表示されたらInstallが完了です。
   1. GROWI bot を使いたいチャンネルに @example を使用して招待します。
   ![slack-bot-install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace-joined-bot.png)
-  ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png) -->
+  ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
+
+  ::: warning
+  `Illegal state, try it again.`と表示される場合は、**Go to install page** を押し、表示される **Add to Slack** ボタンから再度インストールを行ってください。
+  :::
 
 
 ### GROWI Custom Bot with proxy サービスへの登録
