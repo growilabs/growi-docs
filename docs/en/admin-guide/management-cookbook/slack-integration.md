@@ -50,17 +50,19 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 
 ### Install Official bot in your Slack workspace
 
-  1. Click the **Add a Slack Workspace** button.
+1. Click the **Add a Slack Workspace** button.
+  ![slack-bot-add-a-slack-workspace](../../../.vuepress/public/assets/images/slack-bot-add-a-slack-workspace.png)
 
-      ![slack-bot-add-a-slack-workspace](../../../.vuepress/public/assets/images/slack-bot-add-a-slack-workspace.png)
 
-  1. A new accordion will be generated in **Integration Procedure**. Click on the tab "① Install Bot to Slack" to open it.
-  1. Click the **Install now** button.
+1. A new accordion will be generated in **Integration Procedure**. Click on the tab "① Install Bot to Slack" to open it.
 
-      ![slack-bot-install-now-for-official](../../../.vuepress/public/assets/images/slack-bot-install-now-for-official.png)
+1. Click the **Install now** button.
 
-  1. Once redirected to the Slack app directory, click the "Add to Slack" button to install it on the Slack work space.
-    <!-- TODO: Insert picture of GW-6420 [Official] app directory (GW4836 block) -->
+  ![slack-bot-install-now-for-official](../../../.vuepress/public/assets/images/slack-bot-install-now-for-official.png)
+
+1. Once redirected to the Slack app directory, click the "Add to Slack" button to install it on the Slack work space.
+
+![slack-bot-in-app-directory](../../../.vuepress/public/assets/images/slack-bot-in-app-directory.png)
 
 ### Register for the GROWI Official Bot Proxy service
 

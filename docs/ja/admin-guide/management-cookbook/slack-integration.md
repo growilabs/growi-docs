@@ -61,7 +61,7 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
   ![slack-bot-install-now-for-official](../../../.vuepress/public/assets/images/slack-bot-install-now-for-official.png)
 
 1. Slack app directory のリンクに飛ぶので、「Add to Slack」ボタンを押して自身の Slack work space にインストールします。
-<!-- TODO: GW-6420 [Official] app directoryの写真を挿入(GW4836 ブロック) -->
+![slack-bot-in-app-directory](../../../.vuepress/public/assets/images/slack-bot-in-app-directory.png)
 
 ### GROWI Official Bot with proxy サービスへの登録
 
