@@ -59,8 +59,8 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 
       ![slack-bot-install-now-for-official](../../../.vuepress/public/assets/images/slack-bot-install-now-for-official.png)
 
-  1. Once redirected to the Slack app directory, click the "Add to Slack" button to install it on the Slack work space.
-    <!-- TODO: Insert picture of GW-6420 [Official] app directory (GW4836 block) -->
+  ![slack-bot-install-now-for-official](../../../.vuepress/public/assets/images/slack-bot-install-now-for-official.png)
+
 
 ### Register for the GROWI Official Bot Proxy service
 
