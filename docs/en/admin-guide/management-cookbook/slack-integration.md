@@ -7,6 +7,7 @@ GROWI provides two methods of Slack integration: 1. GROWI bots and 2. Incoming W
 ### 1. GROWI bots
 
 GROWI bots are Slack Apps developed by the GROWI development team. By installing it in Slack workspaces, you can not only receive notifications from GROWI, but also execute full-text searches from chats, summarize conversations, and use various other functions.
+There are three types of GROWI bots available.
 
 #### Official bot 【Recommended】
 
@@ -17,14 +18,14 @@ Official bot is a free GROWI bot provided and operated by the GROWI development 
 
 #### Custom bot without proxy
 
-Custom bot without proxy allows you to create a Slack bot and link it to your GROWI so that you can use some of the GROWI features from Slack.
+Custom bot without proxy allows you to create a Slack bot by yourself and link it to your GROWI so that you can use some of the GROWI features from Slack.
 
 【Diagram】
 ![diagram-for-custom-bot-without-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
 
 #### Custom bot with proxy
 
-Custom bot with proxy allows you to create a Slack bot, set up and configure a proxy server, and use some of the features of GROWI in the same way as the Official bot.
+Custom bot with proxy allows you to create a Slack bot by yourself, set up and configure a proxy server, and use some of the features of GROWI in the same way as the Official bot.
 
 【Diagram】
 ![diagram-for-custom-bot-with-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-with-proxy.png)
@@ -32,6 +33,8 @@ Custom bot with proxy allows you to create a Slack bot, set up and configure a p
 ### 2. Incoming Webhooks
 
 <!-- TODO Imple link after https://youtrack.weseek.co.jp/issue/GW-5452 -->
+Incoming Webhook integration was a recommended feature up to v4.2 series,
+ but since v4.3 series, GROWI bot integration is recommended.
 
 Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots, it is focused on notifications to Slack. It does not have many features like GROWI bots, such as full-text search from chat, but it is easier to set up. For more information, please click here.
 

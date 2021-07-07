@@ -39,7 +39,7 @@ GROWI can use IFTTT to send notifications to other web services.
 
   1. Once you have entered the required information, press **Update** button.
 
-## Types of notifications / How to set them
+## Type of notification contents / How to set them
 
 ## Overview
 
