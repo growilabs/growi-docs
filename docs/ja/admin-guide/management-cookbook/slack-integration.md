@@ -352,10 +352,19 @@
     ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png) -->
 
   1. 作成した Slack App の **Settings** から **Manage distribution** をクリックします。
-  1. **Shareable URL** に表示されているURLをブラウザで開きます。
+  1. **Embeddable Slack Button** の **Add to Slack** ボタンを押します。
   1. 遷移先の画面にて、Allowをクリックします。
   ![slack-bot-install-your-app-transition-destination](../../../.vuepress/public/assets/images/slack-bot-install-your-app-transition-destination.png)
   1. **Congratulations!**と表示されたらInstallが完了です。
+
+  ::: danger
+  `Illegal state, try it again.`と表示される場合は、**Go to install page** を押し、表示される　**Add to Slack** ボタンから再度インストールを行ってください。
+  :::
+
+  1. GROWI bot を使いたいチャンネルに @example を使用して招待します。
+  ![slack-bot-install-to-workspace-joined-bot](../../../.vuepress/public/assets/images/slack-bot-install-to-workspace-joined-bot.png)
+  ![slack-bot-install-your-app-introduction-to-channel](../../../.vuepress/public/assets/images/slack-bot-install-your-app-introduction-to-channel.png) -->
+
 
 ### GROWI Custom Bot with proxy サービスへの登録
   
