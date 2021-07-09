@@ -14,7 +14,7 @@ GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。
 #### Official bot (推奨)
 
 【概念図】
-![diagram-for-official-bot](../../../.vuepress/public/assets/images/slack-bot-outline-official.png)
+![diagram-for-official-bot](/assets/images/slack-bot-outline-official.png)
 
 Official GROWI bot は GROWI 開発チーム が無償で提供・運用している GROWI bot です。
 [Slack app directory](https://wsgrowi.slack.com/apps) で公開されており、どなたでも利用できます。
@@ -22,7 +22,7 @@ Official GROWI bot は GROWI 開発チーム が無償で提供・運用して�
 #### Custom bot without proxy
 
 【概念図】
-![diagram-for-custom-bot-without-bot](../../../.vuepress/public/assets/images/slack-bot-outline-custom-without-proxy.png)
+![diagram-for-custom-bot-without-bot](/assets/images/slack-bot-outline-custom-without-proxy.png)
 
 Custom bot without proxy は 自身でSlack bot を作成し、お使いの GROWI と紐付けを行うことで、
 Slack から GROWI の 機能の一部を使用することができます。
@@ -30,7 +30,7 @@ Slack から GROWI の 機能の一部を使用することができます。
 #### Custom bot with proxy
 
 【概念図】
-![diagram-for-custom-bot-with-proxy](../../../.vuepress/public/assets/images/slack-bot-outline-custom-with-proxy.png)
+![diagram-for-custom-bot-with-proxy](/assets/images/slack-bot-outline-custom-with-proxy.png)
 
 Custom bot with proxy は 自身で Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、
 Official bot と同様の手順で GROWI の機能の一部を使用することができます。
@@ -59,16 +59,16 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 1. **Channel_not_found**  
    指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。
    GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。
-   ![slack-bot-test-channel-not-found](../../../.vuepress/public/assets/images/slack-bot-test-channel-not-found.png)
+   ![slack-bot-test-channel-not-found](/assets/images/slack-bot-test-channel-not-found.png)
 
 1. **Cannot read property '0' of null**  
    Proxy URL が設定されていない可能性があります。Proxy URL を入力してください。
-   ![slack-bot-errors-property-0-of-null](../../../.vuepress/public/assets/images/slack-bot-errors-property-0-of-null.png)
+   ![slack-bot-errors-property-0-of-null](/assets/images/slack-bot-errors-property-0-of-null.png)
 
 1. **Request failed with status code 400**  
    Slack ワークスペースで `/growi register` で Proxy に情報を登録せずに Test ボタンをクリックした可能性があります。
    Slack ワークスペースで `/growi register` を実行し、必要な情報を Proxy に登録してください。
-   ![slack-bot-errors-400](../../../.vuepress/public/assets/images/slack-bot-errors-400.png)
+   ![slack-bot-errors-400](/assets/images/slack-bot-errors-400.png)
 
 1. **Request failed with status code 500**  
    すでに Access Token を登録された後、Access Token を再発行してテストを実行した可能性があります。
@@ -77,21 +77,21 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
    確認ができたら、[Slack ワークスペースと GROWI App との連携を解除する](./slack-integration.html#slack-ワークスペースと-growi-app-s-との連携を解除する)
    を参照し、GROWI App との連携を解除してください。
    連携を解除することができたら、再度登録し直してください。
-   ![slack-bot-errors-500](../../../.vuepress/public/assets/images/slack-bot-errors-500.png)
+   ![slack-bot-errors-500](/assets/images/slack-bot-errors-500.png)
   
 1. **The scopes is not appropriate**  
     Slack App を作成した際に設定する Scope が正しくない可能性があります。
     作成した Slack App の OAuth & Permissions から Scope の確認をしてください。
     必要な Scope は **team:read**, **chat:write**, **command** です。
-    ![slack-bot-errors-scopes-not-appropriate](../../../.vuepress/public/assets/images/slack-bot-errors-scopes-not-appropriate.png)
+    ![slack-bot-errors-scopes-not-appropriate](/assets/images/slack-bot-errors-scopes-not-appropriate.png)
 
 1. **Cannot read property 'includes' of undefined**  
     Signing Secret や Bot User OAuth Token などの情報が登録されていない可能性があります。正しい値を入力してください。
-    ![slack-bot-errors-includes-of-undefined](../../../.vuepress/public/assets/images/slack-bot-errors-includes-of-undefined.png)
+    ![slack-bot-errors-includes-of-undefined](/assets/images/slack-bot-errors-includes-of-undefined.png)
 
 1. **invalid_auth**  
     Signing Secret や Bot User OAuth Token の値が間違っている可能性があります。正しい値を入力してください。
-    ![slack-bot-errors-invalid-auth](../../../.vuepress/public/assets/images/slack-bot-errors-invalid-auth.png)
+    ![slack-bot-errors-invalid-auth](/assets/images/slack-bot-errors-invalid-auth.png)
 
 ## GROWI bot でできること
 
@@ -100,48 +100,48 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 1. `/growi search [キーワード]` を入力すると検索結果が表示されます。
 
    - 例: `/growi search example`
-     ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
+     ![slack-bot-full-text-search-display-result-command](/assets/images/slack-bot-full-text-search-display-result-command.png)
    - 検索結果
-     ![slack-bot-full-text-search-display-result](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result.png)
+     ![slack-bot-full-text-search-display-result](/assets/images/slack-bot-full-text-search-display-result.png)
    - **Next** ボタンをクリックすると、次の検索結果を表示します。
-     ![slack-bot-full-text-search-click-next](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-next.png)
+     ![slack-bot-full-text-search-click-next](/assets/images/slack-bot-full-text-search-click-next.png)
    - **Share** ボタンをクリックすると、チャンネル内に共有されます。
-     ![slack-bot-full-text-search-click-share](../../../.vuepress/public/assets/images/slack-bot-full-text-search-click-share.png)
+     ![slack-bot-full-text-search-click-share](/assets/images/slack-bot-full-text-search-click-share.png)
 
 1. Slack ワークスペースを複数の GROWI に登録している場合、複数の GROWI から横断検索することができます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
 
     - 例: `/growi search example`
-        ![slack-bot-full-text-search-display-result-command](../../../.vuepress/public/assets/images/slack-bot-full-text-search-display-result-command.png)
+        ![slack-bot-full-text-search-display-result-command](/assets/images/slack-bot-full-text-search-display-result-command.png)
     - 検索結果
-        ![slack-bot-search-multi-growi](../../../.vuepress/public/assets/images/slack-bot-search-multi-growi.png)
+        ![slack-bot-search-multi-growi](/assets/images/slack-bot-search-multi-growi.png)
 
 ### 接続中の GROWI を確認する
 
 `/growi status` と入力することで、Slack ワークスペースと連携している GROWI を確認することができます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
-![slack-bot-growi-status](../../../.vuepress/public/assets/images/slack-bot-growi-status.png)
+![slack-bot-growi-status](/assets/images/slack-bot-growi-status.png)
 
 ### Slack ワークスペースと GROWI App との連携を解除する
 
   1. `/growi unregister [連携解除したい GROWI App の URL1] [連携解除したい GROWI App の URL2] ...` と入力するとモーダルが表示されます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
 
      - 入力例: `growi unregister http://example.com http://growi.jp`
-     ![slack-bot-unregister-input-eg](../../../.vuepress/public/assets/images/slack-bot-unregister-input-eg.png)
+     ![slack-bot-unregister-input-eg](/assets/images/slack-bot-unregister-input-eg.png)
 
      - 表示されるモーダル
-     ![slack-bot-unregister-modal](../../../.vuepress/public/assets/images/slack-bot-unregister-modal.png)
+     ![slack-bot-unregister-modal](/assets/images/slack-bot-unregister-modal.png)
 
   1. **Submit** ボタンをクリックします。
   1. 以下のように表示されたら、連携解除が完了しています。
-    ![slack-bot-unregister-completed](../../../.vuepress/public/assets/images/slack-bot-unregister-completed.png)
+    ![slack-bot-unregister-completed](/assets/images/slack-bot-unregister-completed.png)
 
 ## アイコン
 
 よろしければ、以下のイラストを Custom bot 用のアイコンにお使いください。
-![growikun-icon-2000_2000](../../../.vuepress/public/assets/images/growikun-icon-2000_2000.png)
+![growikun-icon-2000_2000](/assets/images/growikun-icon-2000_2000.png)
 
 ## Incoming webhook 設定
 
-<!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
+TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる
 Incoming Webhook による連携は v4.2 系までの推奨機能でしたが、v4.3 系以降は前述の GROWI bot による連携を推奨しています。
 
 通知を行う Slack ワークスペースを設定します。
@@ -156,7 +156,7 @@ Incoming Webhook による連携は v4.2 系までの推奨機能でしたが、
 
 上記の設定後、ページの編集モード画面に Slack 通知フォームが追加されます。
 
-![slack1](../../../.vuepress/public/assets/images/slack1.png)
+![slack1](/assets/images/slack1.png)
 
 ページの保存・更新時に 入力したチャンネルに Slack 通知が届きます。  
 この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
