@@ -1,6 +1,9 @@
 # Custom bot with proxy 設定
 
-  Custom bot with proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
+【概念図】
+![diagram-for-custom-bot-with-proxy](/assets/images/slack-bot-outline-custom-with-proxy.png)
+
+Custom bot with proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
 
 ## Custom bot with proxy を作成する前に
 

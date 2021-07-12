@@ -1,5 +1,8 @@
 # Custom bot without proxy 設定
 
+【概念図】
+![diagram-for-custom-bot-without-bot](/assets/images/slack-bot-outline-custom-without-proxy.png)
+
 Custom bot without proxy を Slack のワークスペースに導入するには、Slack アプリを作成・編集する必要があります。手順は以下の通りです。
 
 ## Custom bot without proxy を作成する前に

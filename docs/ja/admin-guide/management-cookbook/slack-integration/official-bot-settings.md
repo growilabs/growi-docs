@@ -1,5 +1,9 @@
 # Official bot 設定
 
+【概念図】
+![diagram-for-official-bot](/assets/images/slack-bot-outline-official.png)
+
+
 ## BotTypeの選択
 
 管理画面の Slack 連携 にて **Official bot** を選択してください。
