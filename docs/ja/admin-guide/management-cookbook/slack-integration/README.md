@@ -44,15 +44,15 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 ### Official bot
 
-設定方法は[こちら](/ja/admin-guide/management-cookbook/grw-official-bot-settings.md)をご覧ください。
+設定方法は[こちら](/ja/admin-guide/management-cookbook/slack-integration/official-bot-settings.md)をご覧ください。
 
 ### Custom bot without proxy
 
-設定方法は[こちら](/ja/admin-guide/management-cookbook/grw-custom-bot-with-proxy-settings.md)をご覧ください。
+設定方法は[こちら](/ja/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md)をご覧ください。
 
 ### Custom bot with proxy
 
-設定方法は[こちら](/ja/admin-guide/management-cookbook/grw-custom-bot-without-proxy-settings.md)をご覧ください。
+設定方法は[こちら](/ja/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md)をご覧ください。
 
 ## 接続テスト時のエラーログ
 
