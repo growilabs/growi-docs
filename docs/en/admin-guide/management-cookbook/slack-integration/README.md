@@ -100,10 +100,10 @@ For details on how to configure User Trigger Notification, please refer to here.
 1. **Request failed with status code 500**  
    You may have already registered an Access Token
    and then reissued the Access Token to run the test.
-   [Check the connected GROWI](./slack-integration.html#Check-the-connected-GROWI)
+   [Check the connected GROWI](/admin-guide/management-cookbook/slack-integration/#Check-the-connected-GROWI)
    to check which GROWI App(s) you are currently connected to.
    Once you have confirmed this,
-   click [Unregister the Slack workspace from the GROWI App(s)](./slack-integration.html#Unregister-the-Slack-workspace-from-the-GROWI-App(s)),
+   click [Unregister the Slack workspace from the GROWI App(s)](/admin-guide/management-cookbook/slack-integration/#Unregister-the-Slack-workspace-from-the-GROWI-App(s)),
    and then unregister the GROWI App(s). If you are able to unregister,
    please register again.
    ![slack-bot-errors-500](/assets/images/slack-bot-errors-500.png)

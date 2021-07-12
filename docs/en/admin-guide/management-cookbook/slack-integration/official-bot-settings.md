@@ -59,7 +59,7 @@
     ![slack-bot-test-success-at-slack-app](/assets/images/slack-bot-test-success-at-slack-app.png)
 
 - In case of failure  
-  See [Error logs for connectivity test](./slack-integration.html#error-logs-for-connectivity-test)
+  See [Error logs for connectivity test](/admin-guide/management-cookbook/slack-integration/#error-logs-for-connectivity-test)
 
 
-Once you are all set up, see [what you can do with a GROWI-bot](./slack-integration.html#check-the-connected-growi)
+Once you are all set up, see [what you can do with a GROWI-bot](/admin-guide/management-cookbook/slack-integration/#check-the-connected-growi)
