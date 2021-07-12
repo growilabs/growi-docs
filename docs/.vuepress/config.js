@@ -216,7 +216,6 @@ module.exports = {
                     '/en/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
                   ],
                 },
-                // '/en/admin-guide/management-cookbook/slack-integration.md',
                 '/en/admin-guide/management-cookbook/active-directory.md',
                 '/en/admin-guide/management-cookbook/google-analytics.md',
                 '/en/admin-guide/management-cookbook/external-notification.md',
