@@ -35,7 +35,7 @@ Slack から GROWI の 機能の一部を使用することができます。
 Custom bot with proxy は 自身で Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、
 Official bot と同様の手順で GROWI の機能の一部を使用することができます。
 
-### 2. Incoming Webhook
+### 2. Incoming Webhooks
 
 Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot とは異なり、Slack への通知に特化しています。
 チャットからの全文検索など GROWI bot にある機能の多くは使うことができませんが、その分簡単にセットアップできます。詳しくは[通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法)をご覧ください。
