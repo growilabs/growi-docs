@@ -38,16 +38,10 @@
 1. 表示されるモーダルの GROWI URL に、対象 GROWI の URL を保存します。
 1. 上記で発行されている Access Token Proxy to GROWI と Access Token GROWI to Proxy を入れ
   **Submit** ボタンを押します。
-  <!-- TODO: GW-6770 画像の差し替え-->
-  ![slack-bot-update-proxy-url](/assets/images/slack-bot-update-proxy-url.png)
 
-  <!-- TODO: GW-6770 Successfully registered with the proxy! Please check test connection in your GROWI と表示される -->
-  成功した場合、 proxy サーバーの URL が表示されます。
+  成功した場合、"Successfully registered with the proxy! Please check test connection in your GROWI" と表示されます。
 
-  ![slack-bot-input-proxy-url](/assets/images/slack-bot-input-proxy-url.png)
-
-  <!-- TODO: GW-6770 この文言は消す -->
-  上記で取得した proxy サーバーの URL を **Official bot 連携** の proxy URL に入力し更新します。
+  ![slack-bot-update-proxy-url](/assets/images/slack-bot-successfully-registered-with-proxy.png)
 
 ## Official Bot with proxy の接続テストを実行する
 <!-- TODO: GW-6770 デザインが変わっているため、画像の差し替え-->
@@ -60,11 +54,9 @@
   **Successfully sent to Slack workspace.** が Logs に表示され、
   赤丸で囲った部分に緑色のチェックマークが表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
   - GROWI 側
-    <!-- TODO: GW-6770 デザインが変わっているため、画像の差し替え-->
-    ![slack-bot-test-success](/assets/images/slack-bot-test-success.png)
+   ![slack-bot-test-success](/assets/images/slack-bot-test-success-official.png)
   - Slack 側
-    <!-- TODO: GW-6770 現在の Official bot のアイコンは GROWI bot 君になっているので変えた方がよさそう？-->
-    ![slack-bot-test-success-at-slack-app](/assets/images/slack-bot-test-success-at-slack-app.png)
+   ![slack-bot-test-success](/assets/images/slack-bot-test-success-official-at-slack-app.png)
 
 <!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
 - 失敗の場合  

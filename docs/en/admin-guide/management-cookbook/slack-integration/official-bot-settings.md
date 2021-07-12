@@ -27,8 +27,7 @@
 ## Register for the GROWI Official Bot Proxy service
 
   1. Open "Register for GROWI Official Bot Proxy Service".  
-    <!-- TODO: GW-6770 文言修正（Issue Access Token -> Generate Access Token） -->
-    Note that two access tokens have been generated for each token in the **Issue Access Token** section.
+    Note that two access tokens have been generated for each token in the **Generate Access Token** section.
     The access tokens can be reissued as needed.
 
   1. On Slack, type `/growi register`.
@@ -37,16 +36,10 @@
   1. Save the URL of the target GROWI in the GROWI URL of the modal to be displayed.
   1. Enter the Access Token Proxy to GROWI and Access Token GROWI to Proxy issued above.
    Click the **Submit** button.
-   <!-- TODO: GW-6770 画像の差し替え-->
-  ![slack-bot-update-proxy-url](/assets/images/slack-bot-update-proxy-url.png)
-
-  If successful, the URL of the proxy server will be displayed.
-
-  <!-- TODO: GW-6770 Successfully registered with the proxy! Please check test connection in your GROWI と表示される -->
-  ![slack-bot-input-proxy-url](/assets/images/slack-bot-input-proxy-url.png)
-
-  <!-- TODO: GW-6770 この文言は消す -->
-  Enter the URL of the proxy server obtained above into the proxy URL for **Official bot integration** and update it.
+  
+  If successful, you will see the words "Successfully registered with the proxy! Please check test connection in your GROWI".
+  
+  ![slack-bot-update-proxy-url](/assets/images/slack-bot-successfully-registered-with-proxy.png)
 
 ## Run connectivity test of Official bot
 
@@ -59,12 +52,10 @@
 - In case of success  
   **Successfully sent to Slack workspace.** will be displayed in Logs, and
   Let's check it out on the Slack channel where you invited GROWI-Bot.
-  - GROWI side
-    <!-- TODO: GW-6770 デザインが変わっているため、画像の差し替え-->
-    ![slack-bot-test-success](/assets/images/slack-bot-test-success.png)
+  - GROWI sides
+    ![slack-bot-test-success](/assets/images/slack-bot-test-success-official.png)
   - Slack side
-    <!-- TODO: GW-6770 現在の Official bot のアイコンは GROWI bot 君になっているので変えた方がよさそう？-->
-    ![slack-bot-test-success-at-slack-app](/assets/images/slack-bot-test-success-at-slack-app.png)
+    ![slack-bot-test-success](/assets/images/slack-bot-test-success-official-at-slack-app.png)
 
 <!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
 - In case of failure  
