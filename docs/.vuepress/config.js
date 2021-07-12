@@ -435,7 +435,16 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/user-management.md',
                 '/ja/admin-guide/management-cookbook/group.md',
                 '/ja/admin-guide/management-cookbook/ldap.md',
-                '/ja/admin-guide/management-cookbook/slack-integration.md',
+                {
+                  title: 'Slack 連携',
+                  collapsable: false,
+                  children: [
+                    '/ja/admin-guide/management-cookbook/slack-integration/',
+                    '/ja/admin-guide/management-cookbook/slack-integration/official-bot-settings.md',
+                    '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md',
+                    '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
+                  ],
+                },
                 '/ja/admin-guide/management-cookbook/active-directory.md',
                 '/ja/admin-guide/management-cookbook/google-analytics.md',
                 '/ja/admin-guide/management-cookbook/external-notification.md',
