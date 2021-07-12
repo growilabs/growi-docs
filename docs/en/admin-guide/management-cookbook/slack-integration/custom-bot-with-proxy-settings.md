@@ -1,9 +1,12 @@
 
 # Custom bot with proxy settings
 
-  To deploy a custom bot without proxy in your Slack workspace,
-    you need to create and edit a Slack app.
-    The steps are as follows.
+【Diagram】
+![diagram-for-custom-bot-with-proxy](/assets/images/slack-bot-outline-custom-with-proxy.png)
+
+To deploy a custom bot without proxy in your Slack workspace,
+  you need to create and edit a Slack app.
+  The steps are as follows.
 
 ## Before creating Custom bot with proxy
 

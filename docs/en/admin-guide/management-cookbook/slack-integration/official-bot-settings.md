@@ -1,5 +1,8 @@
 # Official bot Settings
 
+【Diagram】
+![diagram-for-official-bot](/assets/images/slack-bot-outline-official.png)
+
 ## Select Bot type
 
   Select **Official bot** from the Slack Integration section of the admin panel.
