@@ -11,18 +11,17 @@
 ![slack-bot-selecting-official-bot](/assets/images/slack-bot-selecting-official-bot.png)
 
 ## Official bot を Slack のワークスペースへインストールする
- <!-- TODO: GW-6770  英語に統一（Slack ワークスペースを追加 -> Add a Slack Workspace）-->
-1. **Slack ワークスペースを追加** ボタンをクリックします。
 
+1. **Add a Slack Workspace** ボタンをクリックします。
   ![slack-bot-add-a-slack-workspace](/assets/images/slack-bot-add-a-slack-workspace.png)
 
 1. **Integration Procedure** に新規のアコーディオンが生成されるので、①「Install Bot to Slack」のタブをクリックして開きます。
-1. **Install now** ボタンをクリックします。
 
+1. **Install now** ボタンをクリックします。
   ![slack-bot-install-now-for-official](/assets/images/slack-bot-install-now-for-official.png)
 
 1. Slack app directory のリンクに飛ぶので、「Add to Slack」ボタンを押して自身の Slack work space にインストールします。
-![slack-bot-in-app-directory](/assets/images/slack-bot-in-app-directory.png)
+  ![slack-bot-in-app-directory](/assets/images/slack-bot-in-app-directory.png)
 
 ## GROWI Official Bot with proxy サービスへの登録
 
