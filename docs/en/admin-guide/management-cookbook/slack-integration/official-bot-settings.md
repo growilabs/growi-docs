@@ -14,7 +14,6 @@
 1. Click the **Add a Slack Workspace** button.
   ![slack-bot-add-a-slack-workspace](/assets/images/slack-bot-add-a-slack-workspace.png)
 
-<!-- TODO: GW-6770  大文字にする（to -> To）-->
 1. A new accordion will be generated in **Integration Procedure**. Click on the tab "① Install Bot to Slack" to open it.
 
 1. Click the **Install now** button.

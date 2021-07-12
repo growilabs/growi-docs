@@ -16,7 +16,6 @@
 
   ![slack-bot-add-a-slack-workspace](/assets/images/slack-bot-add-a-slack-workspace.png)
 
-<!-- TODO: GW-6770  大文字にする（to -> To）-->
 1. **Integration Procedure** に新規のアコーディオンが生成されるので、①「Install Bot to Slack」のタブをクリックして開きます。
 1. **Install now** ボタンをクリックします。
 
