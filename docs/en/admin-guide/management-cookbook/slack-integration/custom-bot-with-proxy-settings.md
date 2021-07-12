@@ -109,8 +109,6 @@ To deploy a custom bot without proxy in your Slack workspace,
 ### OAuth & Permissions
 
   1. In the Slack App you created, go to **Features** and click **OAuth & Permissions**.
-  <!-- TODO: GW-6770 日本語になっている！！ -->
-  1. **Redirect URLs** の **Add New Redirect URL** ボタンをクリックします。
   1. Click on the **Add New Redirect URL** button of **Redirect URLs**.
     ![slash-commands-introduction](/assets/images/slack-bot-auth-and-permisions1.png)
 
@@ -153,8 +151,7 @@ To deploy a custom bot without proxy in your Slack workspace,
   2. Click on the **Test** button.  
 
       - In case of success
-          <!-- TODO: GW-6770 '' <- いらない気がする -->
-          '**Successfully sent to Slack workspace.**' will be displayed at Logs.
+          **Successfully sent to Slack workspace.** will be displayed at Logs.
           Green checkmarks will appear in red circles. Check the channel to
           which you invited GROWI-Bot.
         - GROWI side
