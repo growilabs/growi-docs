@@ -40,6 +40,8 @@ Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots,
 
 <!-- [通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法). -->
 
+<!-- TODO: GW-6768 各種Botの設定へ飛ばす項目の追加(en) -->
+
 
 ## Icon
 
