@@ -14,7 +14,7 @@
 1. Click the **Add a Slack Workspace** button.
   ![slack-bot-add-a-slack-workspace](/assets/images/slack-bot-add-a-slack-workspace.png)
 
-
+<!-- TODO: GW-6770  大文字にする（to -> To）-->
 1. A new accordion will be generated in **Integration Procedure**. Click on the tab "① Install Bot to Slack" to open it.
 
 1. Click the **Install now** button.
@@ -28,6 +28,7 @@
 ## Register for the GROWI Official Bot Proxy service
 
   1. Open "Register for GROWI Official Bot Proxy Service".  
+    <!-- TODO: GW-6770 文言修正（Issue Access Token -> Generate Access Token） -->
     Note that two access tokens have been generated for each token in the **Issue Access Token** section.
     The access tokens can be reissued as needed.
 
@@ -37,18 +38,21 @@
   1. Save the URL of the target GROWI in the GROWI URL of the modal to be displayed.
   1. Enter the Access Token Proxy to GROWI and Access Token GROWI to Proxy issued above.
    Click the **Submit** button.
-
+   <!-- TODO: GW-6770 画像の差し替え-->
   ![slack-bot-update-proxy-url](/assets/images/slack-bot-update-proxy-url.png)
 
   If successful, the URL of the proxy server will be displayed.
 
+  <!-- TODO: GW-6770 Successfully registered with the proxy! Please check test connection in your GROWI と表示される -->
   ![slack-bot-input-proxy-url](/assets/images/slack-bot-input-proxy-url.png)
 
+  <!-- TODO: GW-6770 この文言は消す -->
   Enter the URL of the proxy server obtained above into the proxy URL for **Official bot integration** and update it.
 
 ## Run connectivity test of Official bot
 
 1. Click "Test connection" and enter the Slack channel to which GROWI-Bot is invited.
+  <!-- TODO: GW-6770 デザインが変わっているため、画像の差し替え-->
   ![slack-bot-test-introduction](/assets/images/slack-bot-test-introduction.png)
 
 2. Click the "Test" button.
@@ -57,12 +61,15 @@
   **Successfully sent to Slack workspace.** will be displayed in Logs, and
   Let's check it out on the Slack channel where you invited GROWI-Bot.
   - GROWI side
+    <!-- TODO: GW-6770 デザインが変わっているため、画像の差し替え-->
     ![slack-bot-test-success](/assets/images/slack-bot-test-success.png)
   - Slack side
+    <!-- TODO: GW-6770 現在の Official bot のアイコンは GROWI bot 君になっているので変えた方がよさそう？-->
     ![slack-bot-test-success-at-slack-app](/assets/images/slack-bot-test-success-at-slack-app.png)
 
+<!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
 - In case of failure  
   See [Error logs for connectivity test](/admin-guide/management-cookbook/slack-integration/#error-logs-for-connectivity-test)
 
-
+<!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
 Once you are all set up, see [what you can do with a GROWI-bot](/admin-guide/management-cookbook/slack-integration/#check-the-connected-growi)

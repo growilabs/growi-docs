@@ -148,8 +148,9 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
   - Slack 側
       ![slack-bot-test-success-at-slack-app](/assets/images/slack-bot-test-success-at-slack-app.png)
 
+<!-- TODO: GW-6770  #以下が遷移しない -->
 - 失敗の場合  
   [接続テスト時のエラーログ](/admin-guide/management-cookbook/slack-integration/#接続テスト時のエラーログ)を参照してください。
 
-
+<!-- TODO: GW-6770  #以下が遷移しない -->
 全ての設定が完了したら [GROWI bot でできること](/admin-guide/management-cookbook/slack-integration/#growi-bot-でできること)を参照してください。

@@ -60,9 +60,10 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
    指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。
    GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。
    ![slack-bot-test-channel-not-found](/assets/images/slack-bot-test-channel-not-found.png)
-
+<!-- TODO: GW-6770 Proxy URL が存在しない時は  Cause: Proxy URL is not registered が出力される -->
 1. **Cannot read property '0' of null**  
    Proxy URL が設定されていない可能性があります。Proxy URL を入力してください。
+   <!-- TODO: GW-6770 画像の差し替え -->
    ![slack-bot-errors-property-0-of-null](/assets/images/slack-bot-errors-property-0-of-null.png)
 
 1. **Request failed with status code 400**  
@@ -72,8 +73,10 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 1. **Request failed with status code 500**  
    すでに Access Token を登録された後、Access Token を再発行してテストを実行した可能性があります。
+   <!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
    [接続中の GROWI を確認する](/admin-guide/management-cookbook/slack-integration/#接続中の-GROWI-を確認する)を参照して、
    現在どの GROWI App と連携しているのかを確認してください。
+   <!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
    確認ができたら、[Slack ワークスペースと GROWI App との連携を解除する](/admin-guide/management-cookbook/slack-integration/#slack-ワークスペースと-growi-app-s-との連携を解除する)
    を参照し、GROWI App との連携を解除してください。
    連携を解除することができたら、再度登録し直してください。
@@ -161,4 +164,5 @@ Incoming Webhook による連携は v4.2 系までの推奨機能でしたが、
 ページの保存・更新時に 入力したチャンネルに Slack 通知が届きます。  
 この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
 
+<!-- TODO: GW-6770 URL のリンクが切れている -->
 User Trigger Notification の設定方法は[こちら](../management-cookbook/external-notification.html#user-trigger-notification-設定)を参照してください。

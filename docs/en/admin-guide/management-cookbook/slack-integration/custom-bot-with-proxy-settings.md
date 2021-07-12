@@ -109,7 +109,7 @@ To deploy a custom bot without proxy in your Slack workspace,
 ### OAuth & Permissions
 
   1. In the Slack App you created, go to **Features** and click **OAuth & Permissions**.
-
+  <!-- TODO: GW-6770 日本語になっている！！ -->
   1. **Redirect URLs** の **Add New Redirect URL** ボタンをクリックします。
   1. Click on the **Add New Redirect URL** button of **Redirect URLs**.
     ![slash-commands-introduction](/assets/images/slack-bot-auth-and-permisions1.png)
@@ -143,7 +143,7 @@ To deploy a custom bot without proxy in your Slack workspace,
 
 
 ## Register Custom bot with proxy Service
-
+<!-- TODO: GW-6770 中身がない -->
 
 ## Run connectivity test of Custom bot with proxy
 
@@ -153,6 +153,7 @@ To deploy a custom bot without proxy in your Slack workspace,
   2. Click on the **Test** button.  
 
       - In case of success
+          <!-- TODO: GW-6770 '' <- いらない気がする -->
           '**Successfully sent to Slack workspace.**' will be displayed at Logs.
           Green checkmarks will appear in red circles. Check the channel to
           which you invited GROWI-Bot.
@@ -161,7 +162,8 @@ To deploy a custom bot without proxy in your Slack workspace,
         - Slack side
             ![slack-bot-test-success-at-slack-app](/assets/images/slack-bot-test-success-at-slack-app.png)
 
+      <!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
       - In case of failure  
            See [Error logs for connectivity test](/admin-guide/management-cookbook/slack-integration/#error-logs-for-connectivity-test)
-
+        <!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
         Once you are all set up, see [what you can do with a GROWI-bot](/admin-guide/management-cookbook/slack-integration/#check-the-connected-growi)

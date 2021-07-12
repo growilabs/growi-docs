@@ -71,7 +71,7 @@ After the above settings, a Slack notification form will be added to the edit mo
 When a page is saved or updated, a notification will be sent to the Slack channel you inputted.  
 This notification fucntion is called as **User Trigger Notification** in GROWI.
 
-<!-- TODO Imple link after https://youtrack.weseek.co.jp/issue/GW-5452 -->
+<!-- TODO: GW-6770 External Notification のリンクを作成 -->
 
 For details on how to configure User Trigger Notification, please refer to here.
 
@@ -85,9 +85,10 @@ For details on how to configure User Trigger Notification, please refer to here.
     Please make sure that GROWI-Bot has been invited to the Slack channel,
     and the channel name has been inputted appropriately.
    ![slack-bot-test-channel-not-found](/assets/images/slack-bot-test-channel-not-found.png)
-
+<!-- TODO: GW-6770 Proxy URL が存在しない時は  Cause: Proxy URL is not registered が出力される -->
 1. **Cannot read property '0' of null**  
     The Proxy URL may not be set, please input the Proxy URL.
+   <!-- TODO: GW-6770 画像の差し替え -->
    ![slack-bot-errors-property-0-of-null](/assets/images/slack-bot-errors-property-0-of-null.png)
 
 1. **Request failed with status code 400**  
