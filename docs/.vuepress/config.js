@@ -206,7 +206,16 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/group.md',
                 '/en/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
                 '/en/admin-guide/management-cookbook/ldap.md',
-                '/en/admin-guide/management-cookbook/slack-integration.md',
+                {
+                  title: 'Slack Integration',
+                  collapsable: false,
+                  children: [
+                    '/en/admin-guide/management-cookbook/slack-integration/',
+                    '/en/admin-guide/management-cookbook/slack-integration/official-bot-settings.md',
+                    '/en/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md',
+                    '/en/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
+                  ],
+                },
                 '/en/admin-guide/management-cookbook/active-directory.md',
                 '/en/admin-guide/management-cookbook/google-analytics.md',
                 '/en/admin-guide/management-cookbook/external-notification.md',

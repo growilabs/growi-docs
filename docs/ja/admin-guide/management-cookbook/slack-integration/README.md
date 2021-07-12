@@ -35,7 +35,7 @@ Slack から GROWI の 機能の一部を使用することができます。
 Custom bot with proxy は 自身で Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、
 Official bot と同様の手順で GROWI の機能の一部を使用することができます。
 
-### 2. Incoming Webhook
+### 2. Incoming Webhooks
 
 Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot とは異なり、Slack への通知に特化しています。
 チャットからの全文検索など GROWI bot にある機能の多くは使うことができませんが、その分簡単にセットアップできます。詳しくは[通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法)をご覧ください。
@@ -44,15 +44,15 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 ### Official bot
 
-設定方法は[こちら](/ja/admin-guide/management-cookbook/grw-official-bot-settings.md)をご覧ください。
+設定方法は[こちら](/ja/admin-guide/management-cookbook/slack-integration/official-bot-settings.md)をご覧ください。
 
 ### Custom bot without proxy
 
-設定方法は[こちら](/ja/admin-guide/management-cookbook/grw-custom-bot-with-proxy-settings.md)をご覧ください。
+設定方法は[こちら](/ja/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md)をご覧ください。
 
 ### Custom bot with proxy
 
-設定方法は[こちら](/ja/admin-guide/management-cookbook/grw-custom-bot-without-proxy-settings.md)をご覧ください。
+設定方法は[こちら](/ja/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md)をご覧ください。
 
 ## 接続テスト時のエラーログ
 
@@ -72,9 +72,9 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 1. **Request failed with status code 500**  
    すでに Access Token を登録された後、Access Token を再発行してテストを実行した可能性があります。
-   [接続中の GROWI を確認する](./slack-integration.html#接続中の-GROWI-を確認する)を参照して、
+   [接続中の GROWI を確認する](/admin-guide/management-cookbook/slack-integration/#接続中の-GROWI-を確認する)を参照して、
    現在どの GROWI App と連携しているのかを確認してください。
-   確認ができたら、[Slack ワークスペースと GROWI App との連携を解除する](./slack-integration.html#slack-ワークスペースと-growi-app-s-との連携を解除する)
+   確認ができたら、[Slack ワークスペースと GROWI App との連携を解除する](/admin-guide/management-cookbook/slack-integration/#slack-ワークスペースと-growi-app-s-との連携を解除する)
    を参照し、GROWI App との連携を解除してください。
    連携を解除することができたら、再度登録し直してください。
    ![slack-bot-errors-500](/assets/images/slack-bot-errors-500.png)

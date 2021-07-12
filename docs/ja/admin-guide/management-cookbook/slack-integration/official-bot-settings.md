@@ -62,7 +62,7 @@
     ![slack-bot-test-success-at-slack-app](/assets/images/slack-bot-test-success-at-slack-app.png)
 
 - 失敗の場合  
-  [接続テスト時のエラーログ](./slack-integration.html#接続テスト時のエラーログ)を参照してください。
+  [接続テスト時のエラーログ](/admin-guide/management-cookbook/slack-integration/#接続テスト時のエラーログ)を参照してください。
 
 
-全ての設定が完了したら [GROWI bot でできること](./slack-integration.html#growi-bot-でできること)を参照してください。
+全ての設定が完了したら [GROWI bot でできること](/admin-guide/management-cookbook/slack-integration/#growi-bot-でできること)を参照してください。

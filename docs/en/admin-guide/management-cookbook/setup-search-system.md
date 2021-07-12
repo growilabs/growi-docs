@@ -23,12 +23,12 @@ a search bar wil appear in the GROWI top bar and you will be able to check the E
 settings and index information of your Elasticsearch instance in the (Full Text Search Management?) page of 
 the management screen.
 
-  ![](./images/setup-search-system1.png)
+  ![](/assets/images/setup-search-system1.png)
 
 - If you see the below error message even though you have set your Elasticsearch URI properly, double check your
 Elasticsearch information and URI.
 
-  ![](./images/setup-search-system2.png)
+  ![](/assets/images/setup-search-system2.png)
 
 ## Rebuilding Indexes
 In order to use Elasticsearch's search capabilities, data from the search database and data from MongoDB
@@ -46,6 +46,6 @@ An index may become corrupted if the processing of the index is interrupted.  On
 if the above rebuilding operation is interrupted.  When doing an index rebuild, please wait until the
 rebuild is complete to avoid corrupting the data.
 
-![](./images/setup-search-system3.png)
+![](/assets/images/setup-search-system3.png)
 
 A corrupted index can be repaired and returned to usable status by renormalizing the index as shown above.
