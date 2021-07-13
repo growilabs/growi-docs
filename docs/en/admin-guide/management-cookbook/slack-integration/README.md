@@ -81,11 +81,10 @@ For details on how to configure User Trigger Notification, please refer to [here
     Please make sure that GROWI-Bot has been invited to the Slack channel,
     and the channel name has been inputted appropriately.
    ![slack-bot-test-channel-not-found](/assets/images/slack-bot-test-channel-not-found.png)
-<!-- TODO: GW-6770 Proxy URL が存在しない時は  Cause: Proxy URL is not registered が出力される -->
-1. **Cannot read property '0' of null**  
-    The Proxy URL may not be set, please input the Proxy URL.
-   <!-- TODO: GW-6770 画像の差し替え -->
-   ![slack-bot-errors-property-0-of-null](/assets/images/slack-bot-errors-property-0-of-null.png)
+
+1. **Proxy URL is not registered**  
+   The Proxy URL may not be set, please input the Proxy URL.
+   ![slack-bot-errors-proxy-url-is-not-registered](/assets/images/slack-bot-errors-proxy-url-is-not-registered.png)
 
 1. **Request failed with status code 400**  
    You may have clicked the Test button in the Slack workspace

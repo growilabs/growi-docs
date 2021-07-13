@@ -60,11 +60,10 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
    指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。
    GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。
    ![slack-bot-test-channel-not-found](/assets/images/slack-bot-test-channel-not-found.png)
-<!-- TODO: GW-6770 Proxy URL が存在しない時は  Cause: Proxy URL is not registered が出力される -->
-1. **Cannot read property '0' of null**  
+
+1. **Proxy URL is not registered**  
    Proxy URL が設定されていない可能性があります。Proxy URL を入力してください。
-   <!-- TODO: GW-6770 画像の差し替え -->
-   ![slack-bot-errors-property-0-of-null](/assets/images/slack-bot-errors-property-0-of-null.png)
+   ![slack-bot-errors-proxy-url-is-not-registered](/assets/images/slack-bot-errors-proxy-url-is-not-registered.png)
 
 1. **Request failed with status code 400**  
    Slack ワークスペースで `/growi register` で Proxy に情報を登録せずに Test ボタンをクリックした可能性があります。
