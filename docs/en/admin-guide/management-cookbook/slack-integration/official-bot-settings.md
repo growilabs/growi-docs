@@ -44,7 +44,6 @@
 ## Run connectivity test of Official bot
 
 1. Click "Test connection" and enter the Slack channel to which GROWI-Bot is invited.
-  <!-- TODO: GW-6770 デザインが変わっているため、画像の差し替え-->
   ![slack-bot-test-introduction](/assets/images/slack-bot-test-introduction.png)
 
 2. Click the "Test" button.
@@ -57,9 +56,7 @@
   - Slack side
     ![slack-bot-test-success](/assets/images/slack-bot-test-success-official-at-slack-app.png)
 
-<!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
 - In case of failure  
-  See [Error logs for connectivity test](/admin-guide/management-cookbook/slack-integration/#error-logs-for-connectivity-test)
+  See [Error logs for connectivity test](/en/admin-guide/management-cookbook/slack-integration/#error-logs-for-connectivity-test)
 
-<!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
-Once you are all set up, see [what you can do with a GROWI-bot](/admin-guide/management-cookbook/slack-integration/#check-the-connected-growi)
+Once you are all set up, see [what you can do with a GROWI-bot](/en/admin-guide/management-cookbook/slack-integration/#check-the-connected-growi)

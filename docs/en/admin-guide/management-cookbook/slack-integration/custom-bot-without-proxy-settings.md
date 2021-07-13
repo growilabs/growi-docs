@@ -141,9 +141,7 @@ Assign `SLACK_SIGNING_SECRET` and `SLACK_BOT_TOKEN` with the values you checked.
   - Slack side
     ![slack-bot-test-success-at-slack-app](/assets/images/slack-bot-test-success-at-slack-app.png)
 
-<!-- TODO: GW-6770  #以下が遷移しない -->
 - In case of failure  
-  See [Error logs for connectivity test](/admin-guide/management-cookbook/slack-integration/#error-logs-for-connectivity-test)
+  See [Error logs for connectivity test](/en/admin-guide/management-cookbook/slack-integration/#error-logs-for-connectivity-test)
 
-<!-- TODO: GW-6770  #以下が遷移しない -->
-Once you are all set up, see [what you can do with a GROWI-bot](/admin-guide/management-cookbook/slack-integration/#check-the-connected-growi)
+Once you are all set up, see [what you can do with a GROWI-bot](/en/admin-guide/management-cookbook/slack-integration/#check-the-connected-growi)

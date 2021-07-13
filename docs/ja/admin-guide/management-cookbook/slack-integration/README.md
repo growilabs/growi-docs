@@ -72,11 +72,9 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 1. **Request failed with status code 500**  
    すでに Access Token を登録された後、Access Token を再発行してテストを実行した可能性があります。
-   <!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
-   [接続中の GROWI を確認する](/admin-guide/management-cookbook/slack-integration/#接続中の-GROWI-を確認する)を参照して、
+   [接続中の GROWI を確認する](/ja/admin-guide/management-cookbook/slack-integration/#接続中の-growi-を確認する)を参照して、
    現在どの GROWI App と連携しているのかを確認してください。
-   <!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
-   確認ができたら、[Slack ワークスペースと GROWI App との連携を解除する](/admin-guide/management-cookbook/slack-integration/#slack-ワークスペースと-growi-app-s-との連携を解除する)
+   確認ができたら、[Slack ワークスペースと GROWI App との連携を解除する](/ja/admin-guide/management-cookbook/slack-integration/#slack-ワークスペースと-growi-app-との連携を解除する)
    を参照し、GROWI App との連携を解除してください。
    連携を解除することができたら、再度登録し直してください。
    ![slack-bot-errors-500](/assets/images/slack-bot-errors-500.png)

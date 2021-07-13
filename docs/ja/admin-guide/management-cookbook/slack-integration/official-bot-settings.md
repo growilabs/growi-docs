@@ -42,7 +42,6 @@
   ![slack-bot-update-proxy-url](/assets/images/slack-bot-successfully-registered-with-proxy.png)
 
 ## Official Bot with proxy の接続テストを実行する
-<!-- TODO: GW-6770 デザインが変わっているため、画像の差し替え-->
 1. 「Test connection」をクリックし、GROWI-Bot を招待した Slack チャンネルを入力します。
   ![slack-bot-test-introduction](/assets/images/slack-bot-test-introduction.png)
 
@@ -56,9 +55,7 @@
   - Slack 側
    ![slack-bot-test-success](/assets/images/slack-bot-test-success-official-at-slack-app.png)
 
-<!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
 - 失敗の場合  
-  [接続テスト時のエラーログ](/admin-guide/management-cookbook/slack-integration/#接続テスト時のエラーログ)を参照してください。
+  [接続テスト時のエラーログ](/ja/admin-guide/management-cookbook/slack-integration/#接続テスト時のエラーログ)を参照してください。
 
-<!-- TODO: GW-6770 URLが正しく遷移していない（ドキュメント内リンクに遷移しない） -->
-全ての設定が完了したら [GROWI bot でできること](/admin-guide/management-cookbook/slack-integration/#growi-bot-でできること)を参照してください。
+全ての設定が完了したら [GROWI bot でできること](/ja/admin-guide/management-cookbook/slack-integration/#growi-bot-でできること)を参照してください。
