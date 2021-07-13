@@ -164,5 +164,6 @@ Incoming Webhook による連携は v4.2 系までの推奨機能でしたが、
 ページの保存・更新時に 入力したチャンネルに Slack 通知が届きます。  
 この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
 
-<!-- TODO: GW-6770 URL のリンクが切れている -->
-User Trigger Notification の設定方法は[こちら](../management-cookbook/external-notification.html#user-trigger-notification-設定)を参照してください。
+User Trigger Notification の設定方法は[こちら](/ja/admin-guide/management-cookbook/external-notification.html#user-trigger-notification-設定)を参照してください。
+
+ja/admin-guide/management-cookbook/external-notification.html#user-trigger-notification-設定

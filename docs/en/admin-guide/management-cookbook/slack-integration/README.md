@@ -71,11 +71,7 @@ After the above settings, a Slack notification form will be added to the edit mo
 When a page is saved or updated, a notification will be sent to the Slack channel you inputted.  
 This notification fucntion is called as **User Trigger Notification** in GROWI.
 
-<!-- TODO: GW-6770 External Notification のリンクを作成 -->
-
-For details on how to configure User Trigger Notification, please refer to here.
-
-<!-- [通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#user-trigger-notification-設定). -->
+For details on how to configure User Trigger Notification, please refer to [here](/en/admin-guide/management-cookbook/external-notification.html#user-trigger-notification-settings).
 
 ## Error logs for connectivity test
 
