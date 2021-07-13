@@ -122,8 +122,6 @@ To deploy a custom bot without proxy in your Slack workspace,
   1. Click on the **Add** button.
   1. Save the URL by clicking on the **Save URLs** button.
 
-## Manage Distribution settings
-<!-- TODO: GW-6475 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(en) -->
 
 ## Install Custom bot with proxy in your Slack workspace
 
