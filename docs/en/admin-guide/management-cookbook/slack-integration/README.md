@@ -38,10 +38,19 @@ Incoming Webhook integration was a recommended feature up to v4.2 series,
 
 Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots, it is focused on notifications to Slack. It does not have many features like GROWI bots, such as full-text search from chat, but it is easier to set up. For more information, please click here.
 
-<!-- [通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法). -->
+## How to set up various types of bots
 
-<!-- TODO: GW-6768 各種Botの設定へ飛ばす項目の追加(en) -->
+### Official bot
 
+Click [here](/en/admin-guide/management-cookbook/slack-integration/official-bot-settings.md) to see how to set it up.
+
+### Custom bot without proxy
+
+Click [here](/en/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md) to see how to set it up.
+
+### Custom bot with proxy
+
+Click [here](/en/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md) to see how to set it up.
 
 ## Icon
 
