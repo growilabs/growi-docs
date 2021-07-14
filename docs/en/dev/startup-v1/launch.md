@@ -59,7 +59,7 @@ DO NOT USE `npm install`
 npm run migrate
 ```
 
-### Lauch Front-end and Back-end Server
+### Launch Front-end and Back-end Server
 
 1. `yarn build` does the following.
    1. Build clients assets and launch webpack-dev-server.
@@ -78,7 +78,7 @@ See [First Time](#first-time), and follow the step below.
 2. Set up Datastore for Development
 3. Install Dependencies
 4. Migration
-5. Lauch Front-end and Back-end Server
+5. Launch Front-end and Back-end Server
 
 ## List of npm Commands
 

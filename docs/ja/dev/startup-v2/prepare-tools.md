@@ -84,7 +84,7 @@
 
         * VERSION 1 で動いている場合は、更に `wsl --set-version Ubuntu 2` を打ち込んでディストリビューションの更新を行う
     1. ホストのメモリを消費しすぎてしまう問題([microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))への対処として、メモリサイズを制限する
-        * `C:\Users\YourAccout\.wslconfig` を編集(ファイルが存在しない場合は作成)
+        * `C:\Users\YourAccount\.wslconfig` を編集(ファイルが存在しない場合は作成)
 
         ```
         [wsl2]
