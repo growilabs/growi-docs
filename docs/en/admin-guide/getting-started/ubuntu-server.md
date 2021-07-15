@@ -8,17 +8,17 @@ This chapter introduces the installation process for GROWI on Ubuntu Server 16.0
 
 Software needed for Setup are listed below.
 
-* node.js 8.x \(DO NOT USE 9.x\)
-* npm 5.x or 6.x
+* node.js 14.x \(DO NOT USE 9.x\)
+* npm 6.x
 * yarn
-* MongoDB 3.x
-* \(Option\) Elasticsearch 5.x
+* MongoDB 4.4
+* \(Option\) Elasticsearch 6.8
 * \(Option\) systemd
 * \(Option\) Apache or nginx
 
 Software listed as 'Optional' are not required, but in this document all are used, from construction of an environment using Apache or nginx as a reverse proxy for the full-text search feasible Growi, to simultaneously launching the host OS using systemd.
 
-## Installation for node.js 8.x & npm
+## Installation for node.js 14.x & npm
 
 ### Use the NodeSource repository
 
@@ -26,7 +26,7 @@ Download the Node.js installation script from [https://deb.nodesource.com/](http
 
 ```text
 $ cd ~
-$ curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+$ curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
 ```
 
 Run the retrieved script.
@@ -51,11 +51,11 @@ Once installation for Node.js, npm, yarn is completed, check the installed versi
 
 ```text
 $ nodejs -v
-v8.11.3
+v14.11.0
 $ npm -v
-5.6.0
+6.14.8
 $ yarn -v
-1.9.2
+1.22.5
 ```
 
 ## Elasticsearch
@@ -166,6 +166,10 @@ $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 
 Follow the [Official Website](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-ubuntu/) to proceed installation. In this section MongoDB 3.6 is used.
 
+::: warning
+This document is outdated. GROWI currently supports the version of MongoDB 4.x (updated 07/2021)
+:::
+
 To start off, import the public key used by `apt`.
 
 ```text
@@ -246,14 +250,14 @@ v3.2.0-RC4
 ...
 
 # Use the latest version that doesn't have RC
-$ sudo git checkout -b v3.1.9 refs/tags/v3.1.9
+$ sudo git checkout -b v4.3.1 refs/tags/v4.3.1
 ```
 
-After cloning the source code, use the `yarn` command to install packages needed for GROWI.
+After cloning the source code, use the `npx lerna` command to install packages needed for GROWI.
 
 ```text
 $ cd /opt/growi
-$ sudo yarn
+$ sudo npx lerna bootstrap
 ```
 
 ### Check Startup
@@ -268,11 +272,11 @@ Rewrite `MONGO_URI` and `ELASTICSEARCH_URI` appropriate to the environment.
 $ sudo \
 MONGO_URI=mongodb://localhost:27017/growi \
 ELASTICSEARCH_URI=http://localhost:9200/growi \
-npm start
+yarn start
 
 ...
 # Wait for the message below to appear
-> growi@3.1.9 server:prod /opt/growi
+> growi@4.3.1 server:prod /opt/growi
 > env-cmd config/env.prod.js node app.js
 ```
 
