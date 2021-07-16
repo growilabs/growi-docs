@@ -14,7 +14,6 @@
 1. Click the **Add a Slack Workspace** button.
   ![slack-bot-add-a-slack-workspace](/assets/images/slack-bot-add-a-slack-workspace.png)
 
-
 1. A new accordion will be generated in **Integration Procedure**. Click on the tab "① Install Bot to Slack" to open it.
 
 1. Click the **Install now** button.
@@ -28,7 +27,7 @@
 ## Register for the GROWI Official Bot Proxy service
 
   1. Open "Register for GROWI Official Bot Proxy Service".  
-    Note that two access tokens have been generated for each token in the **Issue Access Token** section.
+    Note that two access tokens have been generated for each token in the **Generate Access Token** section.
     The access tokens can be reissued as needed.
 
   1. On Slack, type `/growi register`.
@@ -37,14 +36,10 @@
   1. Save the URL of the target GROWI in the GROWI URL of the modal to be displayed.
   1. Enter the Access Token Proxy to GROWI and Access Token GROWI to Proxy issued above.
    Click the **Submit** button.
-
-  ![slack-bot-update-proxy-url](/assets/images/slack-bot-update-proxy-url.png)
-
-  If successful, the URL of the proxy server will be displayed.
-
-  ![slack-bot-input-proxy-url](/assets/images/slack-bot-input-proxy-url.png)
-
-  Enter the URL of the proxy server obtained above into the proxy URL for **Official bot integration** and update it.
+  
+  If successful, you will see the words "Successfully registered with the proxy! Please check test connection in your GROWI".
+  
+  ![slack-bot-update-proxy-url](/assets/images/slack-bot-successfully-registered-with-proxy.png)
 
 ## Run connectivity test of Official bot
 
@@ -59,10 +54,9 @@
   - GROWI side
     ![slack-bot-test-success](/assets/images/slack-bot-test-success.png)
   - Slack side
-    ![slack-bot-test-success-at-slack-app](/assets/images/slack-bot-test-success-at-slack-app.png)
+    ![slack-bot-test-success](/assets/images/slack-bot-test-success-at-slack-app.png)
 
 - In case of failure  
-  See [Error logs for connectivity test](/admin-guide/management-cookbook/slack-integration/#error-logs-for-connectivity-test)
+  See [Error logs for connectivity test](/en/admin-guide/management-cookbook/slack-integration/#error-logs-for-connectivity-test)
 
-
-Once you are all set up, see [what you can do with a GROWI-bot](/admin-guide/management-cookbook/slack-integration/#check-the-connected-growi)
+Once you are all set up, see [what you can do with a GROWI-bot](/en/admin-guide/management-cookbook/slack-integration/#check-the-connected-growi)

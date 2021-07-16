@@ -94,8 +94,6 @@ To deploy a custom bot without proxy in your Slack workspace,
 ### OAuth & Permissions
 
   1. In the Slack App you created, go to **Features** and click **OAuth & Permissions**.
-
-  1. **Redirect URLs** の **Add New Redirect URL** ボタンをクリックします。
   1. Click on the **Add New Redirect URL** button of **Redirect URLs**.
     ![slash-commands-introduction](/assets/images/slack-bot-auth-and-permisions1.png)
 
@@ -126,6 +124,20 @@ To deploy a custom bot without proxy in your Slack workspace,
 
 ## Register Custom bot with proxy Service
 
+1. Open the registration for the GROWI Custom Bot with proxy service.
+You will see that two access tokens have been generated for the various tokens in the **Generate Access Token** section. Access tokens can be reissued if necessary.
+1. On Slack, type `/growi register`.
+  ![slack-bot-add-workspace](/assets/images/slack-bot-register-modal.png)
+1. Save the URL of the target GROWI in the GROWI URL of the displayed modal.
+1. Enter the Access Token Proxy to GROWI and Access Token GROWI to Proxy issued above, and click the **Submit** button.
+
+![slack-bot-update-proxy-url](/assets/images/slack-bot-update-proxy-url.png)
+
+If successful, the URL of the proxy server will be displayed.
+
+![slack-bot-input-proxy-url](/assets/images/slack-bot-input-proxy-url.png)
+
+Enter the URL of the proxy server you obtained above into the Proxy URL of **Custom Bot With Proxy Integration** and update it.
 
 ## Run connectivity test of Custom bot with proxy
 
@@ -135,7 +147,7 @@ To deploy a custom bot without proxy in your Slack workspace,
   2. Click on the **Test** button.  
 
       - In case of success
-          '**Successfully sent to Slack workspace.**' will be displayed at Logs.
+          **Successfully sent to Slack workspace.** will be displayed at Logs.
           Green checkmarks will appear in red circles. Check the channel to
           which you invited GROWI-Bot.
         - GROWI side
@@ -144,6 +156,6 @@ To deploy a custom bot without proxy in your Slack workspace,
             ![slack-bot-test-success-at-slack-app](/assets/images/slack-bot-test-success-at-slack-app.png)
 
       - In case of failure  
-           See [Error logs for connectivity test](/admin-guide/management-cookbook/slack-integration/#error-logs-for-connectivity-test)
+           See [Error logs for connectivity test](/en/admin-guide/management-cookbook/slack-integration/#error-logs-for-connectivity-test)
 
-        Once you are all set up, see [what you can do with a GROWI-bot](/admin-guide/management-cookbook/slack-integration/#check-the-connected-growi)
+        Once you are all set up, see [what you can do with a GROWI-bot](/en/admin-guide/management-cookbook/slack-integration/#check-the-connected-growi)

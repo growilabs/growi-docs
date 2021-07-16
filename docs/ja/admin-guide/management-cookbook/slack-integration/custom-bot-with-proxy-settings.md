@@ -131,7 +131,7 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 
 ![slack-bot-input-proxy-url](/assets/images/slack-bot-input-proxy-url.png)
 
-上記で取得した proxy サーバーの URL を **Official bot 連携** の proxy URL に入力し更新します。
+上記で取得した proxy サーバーの URL を **Custom Bot With Proxy Integration** の Proxy URL に入力し更新します。
 
 ## Custom bot with proxy の接続テストを実行する
 
@@ -149,7 +149,6 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
       ![slack-bot-test-success-at-slack-app](/assets/images/slack-bot-test-success-at-slack-app.png)
 
 - 失敗の場合  
-  [接続テスト時のエラーログ](/admin-guide/management-cookbook/slack-integration/#接続テスト時のエラーログ)を参照してください。
+  [接続テスト時のエラーログ](/ja/admin-guide/management-cookbook/slack-integration/#接続テスト時のエラーログ)を参照してください。
 
-
-全ての設定が完了したら [GROWI bot でできること](/admin-guide/management-cookbook/slack-integration/#growi-bot-でできること)を参照してください。
+全ての設定が完了したら [GROWI bot でできること](/ja/admin-guide/management-cookbook/slack-integration/#growi-bot-でできること)を参照してください。

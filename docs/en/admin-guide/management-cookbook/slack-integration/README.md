@@ -71,11 +71,7 @@ After the above settings, a Slack notification form will be added to the edit mo
 When a page is saved or updated, a notification will be sent to the Slack channel you inputted.  
 This notification fucntion is called as **User Trigger Notification** in GROWI.
 
-<!-- TODO Imple link after https://youtrack.weseek.co.jp/issue/GW-5452 -->
-
-For details on how to configure User Trigger Notification, please refer to here.
-
-<!-- [通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#user-trigger-notification-設定). -->
+For details on how to configure User Trigger Notification, please refer to [here](/en/admin-guide/management-cookbook/external-notification.html#user-trigger-notification-settings).
 
 ## Error logs for connectivity test
 
@@ -86,9 +82,9 @@ For details on how to configure User Trigger Notification, please refer to here.
     and the channel name has been inputted appropriately.
    ![slack-bot-test-channel-not-found](/assets/images/slack-bot-test-channel-not-found.png)
 
-1. **Cannot read property '0' of null**  
-    The Proxy URL may not be set, please input the Proxy URL.
-   ![slack-bot-errors-property-0-of-null](/assets/images/slack-bot-errors-property-0-of-null.png)
+1. **Proxy URL is not registered**  
+   The Proxy URL may not be set, please input the Proxy URL.
+   ![slack-bot-errors-proxy-url-is-not-registered](/assets/images/slack-bot-errors-proxy-url-is-not-registered.png)
 
 1. **Request failed with status code 400**  
    You may have clicked the Test button in the Slack workspace
@@ -100,10 +96,10 @@ For details on how to configure User Trigger Notification, please refer to here.
 1. **Request failed with status code 500**  
    You may have already registered an Access Token
    and then reissued the Access Token to run the test.
-   [Check the connected GROWI](/admin-guide/management-cookbook/slack-integration/#Check-the-connected-GROWI)
+   [Check the connected GROWI](/en/admin-guide/management-cookbook/slack-integration/#check-the-connected-growi)
    to check which GROWI App(s) you are currently connected to.
    Once you have confirmed this,
-   click [Unregister the Slack workspace from the GROWI App(s)](/admin-guide/management-cookbook/slack-integration/#Unregister-the-Slack-workspace-from-the-GROWI-App(s)),
+   click [Unregister the Slack workspace from the GROWI App(s)](/en/admin-guide/management-cookbook/slack-integration/#unregister-the-slack-workspace-from-the-growi-app-s),
    and then unregister the GROWI App(s). If you are able to unregister,
    please register again.
    ![slack-bot-errors-500](/assets/images/slack-bot-errors-500.png)

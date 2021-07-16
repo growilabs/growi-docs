@@ -12,22 +12,21 @@
 
 ## Official bot を Slack のワークスペースへインストールする
 
-1. **Slack ワークスペースを追加** ボタンをクリックします。
-
+1. **Add a Slack Workspace** ボタンをクリックします。
   ![slack-bot-add-a-slack-workspace](/assets/images/slack-bot-add-a-slack-workspace.png)
 
 1. **Integration Procedure** に新規のアコーディオンが生成されるので、①「Install Bot to Slack」のタブをクリックして開きます。
-1. **Install now** ボタンをクリックします。
 
+1. **Install now** ボタンをクリックします。
   ![slack-bot-install-now-for-official](/assets/images/slack-bot-install-now-for-official.png)
 
 1. Slack app directory のリンクに飛ぶので、「Add to Slack」ボタンを押して自身の Slack work space にインストールします。
-![slack-bot-in-app-directory](/assets/images/slack-bot-in-app-directory.png)
+  ![slack-bot-in-app-directory](/assets/images/slack-bot-in-app-directory.png)
 
 ## GROWI Official Bot with proxy サービスへの登録
 
-1. GROWI Custom Bot with proxy サービスへの登録を開きます。  
-  **Access Token の発行** に各種トークンにアクセストークンが2種生成されていることを確認できます。
+1. GROWI Custom Bot with proxy サービスへの登録を開きます。
+  **Generate Access Token** に各種トークンにアクセストークンが2種生成されていることを確認できます。
   アクセストークンは必要に応じて再発行できます。
 
 1. Slack上で `/growi register` と打ちます。
@@ -38,13 +37,9 @@
 1. 上記で発行されている Access Token Proxy to GROWI と Access Token GROWI to Proxy を入れ
   **Submit** ボタンを押します。
 
-  ![slack-bot-update-proxy-url](/assets/images/slack-bot-update-proxy-url.png)
+  成功した場合、"Successfully registered with the proxy! Please check test connection in your GROWI" と表示されます。
 
-  成功した場合、 proxy サーバーの URL が表示されます。
-
-  ![slack-bot-input-proxy-url](/assets/images/slack-bot-input-proxy-url.png)
-
-  上記で取得した proxy サーバーの URL を **Official bot 連携** の proxy URL に入力し更新します。
+  ![slack-bot-update-proxy-url](/assets/images/slack-bot-successfully-registered-with-proxy.png)
 
 ## Official Bot with proxy の接続テストを実行する
 
@@ -57,12 +52,11 @@
   **Successfully sent to Slack workspace.** が Logs に表示され、
   赤丸で囲った部分に緑色のチェックマークが表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
   - GROWI 側
-    ![slack-bot-test-success](/assets/images/slack-bot-test-success.png)
+   ![slack-bot-test-success](/assets/images/slack-bot-test.png)
   - Slack 側
-    ![slack-bot-test-success-at-slack-app](/assets/images/slack-bot-test-success-at-slack-app.png)
+   ![slack-bot-test-success](/assets/images/slack-bot-test-success-at-slack-app.png)
 
 - 失敗の場合  
-  [接続テスト時のエラーログ](/admin-guide/management-cookbook/slack-integration/#接続テスト時のエラーログ)を参照してください。
+  [接続テスト時のエラーログ](/ja/admin-guide/management-cookbook/slack-integration/#接続テスト時のエラーログ)を参照してください。
 
-
-全ての設定が完了したら [GROWI bot でできること](/admin-guide/management-cookbook/slack-integration/#growi-bot-でできること)を参照してください。
+全ての設定が完了したら [GROWI bot でできること](/ja/admin-guide/management-cookbook/slack-integration/#growi-bot-でできること)を参照してください。
