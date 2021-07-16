@@ -54,7 +54,7 @@
   - GROWI sides
     ![slack-bot-test-success](/assets/images/slack-bot-test-success-official.png)
   - Slack side
-    ![slack-bot-test-success](/assets/images/slack-bot-test-success-official-at-slack-app.png)
+    ![slack-bot-test-success](/assets/images/slack-bot-test-success-at-slack-app.png)
 
 - In case of failure  
   See [Error logs for connectivity test](/en/admin-guide/management-cookbook/slack-integration/#error-logs-for-connectivity-test)
