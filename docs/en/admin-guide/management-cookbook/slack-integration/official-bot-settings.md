@@ -52,9 +52,9 @@
   **Successfully sent to Slack workspace.** will be displayed in Logs, and
   Let's check it out on the Slack channel where you invited GROWI-Bot.
   - GROWI side
-    ![slack-bot-test-success](/assets/images/slack-bot-test-success-official.png)
+    ![slack-bot-test-success](/assets/images/slack-bot-test-success.png)
   - Slack side
-    ![slack-bot-test-success](/assets/images/slack-bot-test-success-official-at-slack-app.png)
+    ![slack-bot-test-success](/assets/images/slack-bot-test-success-at-slack-app.png)
 
 - In case of failure  
   See [Error logs for connectivity test](/en/admin-guide/management-cookbook/slack-integration/#error-logs-for-connectivity-test)

@@ -42,6 +42,7 @@
   ![slack-bot-update-proxy-url](/assets/images/slack-bot-successfully-registered-with-proxy.png)
 
 ## Official Bot with proxy の接続テストを実行する
+
 1. 「Test connection」をクリックし、GROWI-Bot を招待した Slack チャンネルを入力します。
   ![slack-bot-test-introduction](/assets/images/slack-bot-test-introduction.png)
 
@@ -51,9 +52,9 @@
   **Successfully sent to Slack workspace.** が Logs に表示され、
   赤丸で囲った部分に緑色のチェックマークが表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
   - GROWI 側
-   ![slack-bot-test-success](/assets/images/slack-bot-test-success-official.png)
+   ![slack-bot-test-success](/assets/images/slack-bot-test.png)
   - Slack 側
-   ![slack-bot-test-success](/assets/images/slack-bot-test-success-official-at-slack-app.png)
+   ![slack-bot-test-success](/assets/images/slack-bot-test-success-at-slack-app.png)
 
 - 失敗の場合  
   [接続テスト時のエラーログ](/ja/admin-guide/management-cookbook/slack-integration/#接続テスト時のエラーログ)を参照してください。
