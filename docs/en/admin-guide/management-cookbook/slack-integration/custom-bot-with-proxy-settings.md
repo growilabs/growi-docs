@@ -88,21 +88,6 @@ To deploy a custom bot without proxy in your Slack workspace,
 
       ![slash-commands-create](/assets/images/slash-commands-create.png)
 
-## Install the Custom bot with proxy in your Slack workspace
-
-  1. In the Slack App you created, go to **Settings** and click **Basic Information**.
-  1. Click the **Install your app**.
-    ![slack-bot-install-your-app-introduction](/assets/images/slack-bot-install-your-app-introduction.png)
-  1. Click the **Install to Workspace**.
-    ![slack-bot-install-to-workspace](/assets/images/slack-bot-install-to-workspace.png)
-  1. On the destination screen, Click the **Allow** button.
-    ![slack-bot-install-your-app-transition-destination](/assets/images/slack-bot-install-your-app-transition-destination.png)
-  1. If you see a green check mark to the right of Install your app,
-      the installation is complete in your workspace.
-    ![slack-bot-install-your-app-complete](/assets/images/slack-bot-install-your-app-complete.png)
-  1. Invite the channel you want to use the GROWI bot on using @example.
-    ![slack-bot-install-to-workspace-joined-bot](/assets/images/slack-bot-install-to-workspace-joined-bot.png)
-    ![slack-bot-install-your-app-introduction-to-channel](/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
 
 ## Redirect URL setting
 
@@ -120,24 +105,21 @@ To deploy a custom bot without proxy in your Slack workspace,
   1. Click on the **Add** button.
   1. Save the URL by clicking on the **Save URLs** button.
 
-## Manage Distribution settings
-<!-- TODO: GW-6475 [Custom bot with proxy]「Manage Distribution を設定する」を記述する(en) -->
 
 ## Install Custom bot with proxy in your Slack workspace
 
-  1. In the Slack App you created, go to **Settings** and click **Basic Information**.
-  1. Click the **Install your app**.
-    ![slack-bot-install-your-app-introduction](/assets/images/slack-bot-install-your-app-introduction.png)
-  1. Click the **Install to Workspace**.
-    ![slack-bot-install-to-workspace](/assets/images/slack-bot-install-to-workspace.png)
-  1. On the destination screen, Click the **Allow** button.
-    ![slack-bot-install-your-app-transition-destination](/assets/images/slack-bot-install-your-app-transition-destination.png)
-  1. If you see a green check mark to the right of Install your app,
-  　　the installation is complete in your workspace.
-    ![slack-bot-install-your-app-complete](/assets/images/slack-bot-install-your-app-complete.png)
-  1. Invite the channel you want to use the GROWI bot on using @example.
-    ![slack-bot-install-to-workspace-joined-bot](/assets/images/slack-bot-install-to-workspace-joined-bot.png)
-    ![slack-bot-install-your-app-introduction-to-channel](/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
+  1. In the Slack App you have just created, go to **Settings** and click **Manage distribution**.
+  1. Click the **Add to Slack** button on the **Embeddable Slack Button**.
+  1. In the destination screen, click Allow.
+  ![slack-bot-install-your-app-transition-destination](/assets/images/slack-bot-install-your-app-transition-destination.png)
+  1. If the message **Congratulations!** is displayed, the installation is complete.
+  1. invite the GROWI bot to the channel you want to use by using @example.
+  ![slack-bot-install-to-workspace-joined-bot](/assets/images/slack-bot-install-to-workspace-joined-bot.png)
+  ![slack-bot-install-your-app-introduction-to-channel](/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
+
+  ::: warning
+  If the message `Illegal state, try it again.` is displayed, press **Go to install page**, and then click **Add to Slack** button to install again.
+  :::
 
 
 ## Register Custom bot with proxy Service
