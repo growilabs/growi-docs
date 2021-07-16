@@ -51,7 +51,7 @@
 - In case of success  
   **Successfully sent to Slack workspace.** will be displayed in Logs, and
   Let's check it out on the Slack channel where you invited GROWI-Bot.
-  - GROWI sides
+  - GROWI side
     ![slack-bot-test-success](/assets/images/slack-bot-test-success.png)
   - Slack side
     ![slack-bot-test-success](/assets/images/slack-bot-test-success-at-slack-app.png)
