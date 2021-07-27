@@ -132,6 +132,11 @@ For details on how to configure User Trigger Notification, please refer to [here
 
 ## What you can do with a Slack bot ?
 
+### Help command
+
+1. Entering `/growi help` will display a list of commands that can be used with the GROWI bot.
+![HackMD Demo](/assets/images/growi-help.gif)
+
 ### Full-text search in a workspace
 
 1. If you input `/growi search [keyword(s)]`, the search results will be displayed.

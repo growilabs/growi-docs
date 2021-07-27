@@ -95,6 +95,11 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 ## GROWI bot でできること
 
+### ヘルプコマンド
+
+1. `/growi help` を入力すると GROWI bot で使うことができる、コマンド一覧が表示されます。
+![HackMD Demo](/assets/images/growi-help.gif)
+
 ### ワークスペース内の全文検索
 
 1. `/growi search [キーワード]` を入力すると検索結果が表示されます。
