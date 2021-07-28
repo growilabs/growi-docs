@@ -137,6 +137,11 @@ For details on how to configure User Trigger Notification, please refer to [here
 1. Entering `/growi help` will display a list of commands that can be used with the GROWI bot.
 ![HackMD Demo](/assets/images/growi-help.gif)
 
+### Create a page
+
+ 1. Entering `/growi create` will create a new page in GROWI.
+ ![HackMD Demo](/assets/images/growi-create.gif)
+
 ### Full-text search in a workspace
 
 1. If you input `/growi search [keyword(s)]`, the search results will be displayed.
