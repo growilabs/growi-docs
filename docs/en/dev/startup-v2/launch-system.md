@@ -19,21 +19,28 @@ DO NOT USE `npm install` or `yarn`
 ### Migration
 
 ``` bash
+cd packages/app
 yarn migrate
 ```
 
 ### Launch Front-end and Back-end Server
 
-In 2 separate terminals, run the front end client and back end server.
+In 2 separate terminals, run the front end client and back end server.  
+Either process can be terminated with `Ctrl-C`.
 
-1. Use `yarn build` to:
+### Server for developing frontend
+
+1. `cd packages/app`
+1. Use `yarn dev:client` to:
    - Build client assets and launch webpack-dev-server.
    - Detect changes in client-side files and auto-rebuild the client assets.
-2. Use `yarn server` to:
-   1. Launch the Express server.
-   2. Detect changes in server-side files and auto-restart the Express server.
 
-Either process can be terminated with `Ctrl-C`.
+### Server for developing backend
+
+1. `cd packages/app`
+1. Use `yarn dev:server` to:
+   - Launch the Express server.
+   - Detect changes in server-side files and auto-restart the Express server.
 
 
 ## Additional Launches
@@ -61,12 +68,12 @@ Execute the following steps from the [First Time](#first-time) section.
 
 |command|desc|
 |--|--|
-|**`build`**|Same as `build:dev:watch`|
-|`build:dev`|Build client assets without monitoring for file changes|
-|`build:dev:watch`|Monitor for file changes and rebuild the client assets|
-|`build:prod`|Build client assets for production|
-|**`server`**|Same as `server:dev:watch`|
-|`server:dev`|Launch the server|
-|`server:dev:watch`|Monitor for file changes and restart the server|
-|`server:prod`|Launch the production server|
-|`start`|Run `build:prod` and `server:prod`|
+|`dev:client`|Build client and launch webpack-dev-server for development.<br>Watching file chages and rebuild automatically.|
+|`dev:server`|Launch Express server for development.<br>Watching file chages and restart automatically.|
+|`test`|Run unit/integration tests.|
+|`lint`|Run code linting.|
+|`migrate:create`|Create a new migration file.|
+|`migrate:status`|Check which migrations are applied (or not.|
+|`migrate:up`|Apply all pending migrations.|
+|`migrate:down`|Revert (only) the last applied migration.|
+|`migrate`|*[Alias]* Invoke `migrate:up`.|
