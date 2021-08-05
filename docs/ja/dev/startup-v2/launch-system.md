@@ -69,6 +69,10 @@ yarn lerna bootstrap
 
 開発で使う主なコマンド紹介です。
 
+::: tip
+以下のコマンドは `packages/app` ディレクトリ下で実行してください。
+:::
+
 |command|詳細|
 |--|--|
 |`dev:client`|開発用にクライアントのビルドを行い、webpack-dev-server を起動します<br>ファイルを監視し、変更時に自動で再ビルドします。|

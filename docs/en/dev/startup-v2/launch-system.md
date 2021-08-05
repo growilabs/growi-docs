@@ -66,6 +66,12 @@ Execute the following steps from the [First Time](#first-time) section.
 
 ## List of npm Commands
 
+Here are the main commands used in development.
+
+:::tip
+Execute the following command under the `packages / app` directory.
+:::
+
 |command|desc|
 |--|--|
 |`dev:client`|Build client and launch webpack-dev-server for development.<br>Watching file chages and rebuild automatically.|
