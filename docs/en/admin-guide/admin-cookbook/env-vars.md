@@ -22,6 +22,7 @@ pageClass: admin-cookbook-env-vars
 | `FORMAT_NODE_LOG` | If `false`, Output server log as JSON. (Enabled only when `NODE_ENV=production`) | `true` |
 | `MATHJAX` | (TBD) | |
 | `USER_UPPER_LIMIT` | (TBD) | |
+| `DEFAULT_EMAIL_PUBLISHED` | Default setting for publishing new user email addresses. | `true` |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Maximum number of connections for all clients that receive push messages. | 5000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Maximum number of connections for guest clients that receive push messages. | 2000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_ADMIN` | Maximum number of connections for admin users in admin pages.<br>(This is isolated from `S2CMSG_PUBSUB_CONNECTIONS_LIMIT`)  | 100 |
@@ -54,6 +55,8 @@ pageClass: admin-cookbook-env-vars
 | `S2SMSG_PUBSUB_NCHAN_PUBLISH_PATH` | Publisher endpoint path for Nchan server | `/pubsub` |
 | `S2SMSG_PUBSUB_NCHAN_SUBSCRIBE_PATH` | Subscriber endpoint path for Nchan server | `/pubsub` |
 | `S2SMSG_PUBSUB_NCHAN_CHANNEL_ID` | The channel id to connect to Nchan server | |
+| `PROMSTER_ENABLED` | Enable [Promster](https://github.com/tdeekens/promster) server | `false` |
+| `PROMSTER_PORT` | The port to launch Promster server | 7788 |
 | **Option (Overwritable in admin page)** | | |
 | `APP_SITE_URL` | Site URL. e.g. `https://example.com`, `https://example.com:8080` | |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` | Prioritize env var than value in DB for File Upload Type | `false` |

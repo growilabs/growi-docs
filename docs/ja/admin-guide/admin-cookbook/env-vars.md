@@ -22,6 +22,7 @@ pageClass: admin-cookbook-env-vars
 | `FORMAT_NODE_LOG` |  `false`の場合、サーバーログを JSON 形式で出力します。(`NODE_ENV=production` の時のみ可能) | `true` |
 | `MATHJAX` | (TBD) | |
 | `USER_UPPER_LIMIT` | (TBD) | |
+| `DEFAULT_EMAIL_PUBLISHED` | 新規作成されたユーザーのデフォルトの email 公開設定 | `true` |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Push 通知を行う全クライアントの同時接続数上限 | 5000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Push 通知を行うことのできるゲストユーザーの同時接続数上限 | 2000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_ADMIN` | 管理画面で Push 通知を行うことのできる管理者ユーザーの同時接続数上限<br>(`S2CMSG_PUBSUB_CONNECTIONS_LIMIT`からは独立した値です) | 100 |
@@ -54,6 +55,8 @@ pageClass: admin-cookbook-env-vars
 | `S2SMSG_PUBSUB_NCHAN_PUBLISH_PATH` | Nchan サーバーの publish エンドポイントのパス | `/pubsub` |
 | `S2SMSG_PUBSUB_NCHAN_SUBSCRIBE_PATH` | Nchan サーバーの subscribe エンドポイントのパス | `/pubsub` |
 | `S2SMSG_PUBSUB_NCHAN_CHANNEL_ID` | Nchan サーバーの接続チャンネルID | |
+| `PROMSTER_ENABLED` | [Promster](https://github.com/tdeekens/promster) サーバーの有効化 | `false` |
+| `PROMSTER_PORT` | Promster サーバーを起動するポート | 7788 |
 | **管理設定を上書きする環境変数** | | |
 | `APP_SITE_URL` | サイト URL (例: `https://example.com` 、 `https://example.com:8080`) | |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` |`true` の場合、ファイルアップロードタイプの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。|`false`|
