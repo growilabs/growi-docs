@@ -11,7 +11,6 @@ devcontainer で開発を行うには、以下のような構造のディレク�
 - GROWI
     - growi                   <-- weseek/growi repository
     - growi-docker-compose    <-- weseek/growi-docker-compose repository
-    - node_modules            <-- an empty directory for developing plugin
 ```
 
 ## 手順

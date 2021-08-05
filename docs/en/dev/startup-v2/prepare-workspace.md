@@ -11,7 +11,6 @@ In order to develop using devcontainer, you need to set up a directory tree as f
 - GROWI
     - growi                   <-- weseek/growi repository
     - growi-docker-compose    <-- weseek/growi-docker-compose repository
-    - node_modules            <-- an empty directory for developing plugin
 ```
 
 ## Procedures
