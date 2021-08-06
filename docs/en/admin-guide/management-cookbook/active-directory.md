@@ -1,3 +1,3 @@
-<!-- # Active Directory Integration
+# Active Directory Integration
 
-(TBD) -->
+(TBD)
