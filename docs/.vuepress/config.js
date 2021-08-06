@@ -216,7 +216,8 @@ module.exports = {
                     '/en/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
                   ],
                 },
-                '/en/admin-guide/management-cookbook/active-directory.md',
+                // Commented out AD integration from docs because the information has not been updated for a long time.
+                // '/en/admin-guide/management-cookbook/active-directory.md',
                 '/en/admin-guide/management-cookbook/google-analytics.md',
                 '/en/admin-guide/management-cookbook/external-notification.md',
                 '/en/admin-guide/management-cookbook/import.md',
@@ -454,7 +455,8 @@ module.exports = {
                     '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
                   ],
                 },
-                '/ja/admin-guide/management-cookbook/active-directory.md',
+                // Commented out AD integration from docs because the information has not been updated for a long time.
+                // '/ja/admin-guide/management-cookbook/active-directory.md',
                 '/ja/admin-guide/management-cookbook/google-analytics.md',
                 '/ja/admin-guide/management-cookbook/external-notification.md',
                 '/ja/admin-guide/management-cookbook/import.md',
