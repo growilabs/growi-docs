@@ -21,7 +21,7 @@ Incremental search of page titles using ElasticSearch and full text search of pa
 
 The page name is supplemented when creating the page, and the page hierarchy can be organized efficiently.
 
-To use this function, setting up Elastic search as a search DB is required. Check [this](../admin-guide/admin-cookbook/setting-elasticsearch.md) page to find out how.
+To use this function, setting up ElasticSearch as a search DB is required. Check [this](../guide/features/search.md) page to find out how.
 
 ## Energize communication with comment function
 

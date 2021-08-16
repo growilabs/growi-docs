@@ -81,7 +81,7 @@ Importing data from esa.io using [API v1](https://docs.esa.io/posts/102) publish
 
 ### Import Method
 
-1. Log in to esa.io with owner account and access [Settings] → [User Settings] from the tab on the left.
+1. Log in to esa.io with owner account and access [Settings] → [User Settings] → [Applications] from the tab on the left.
 2. Click the [Generate new token] under [Personal access tokens] to issue a token to access esa.io from GROWI.
 3. Enter the token, check the [Read] box under [Select scopes]  then click [Save].
 
@@ -92,8 +92,8 @@ Importing data from esa.io using [API v1](https://docs.esa.io/posts/102) publish
   ![import2](./images/import2.png)
 
 5. Log in to GROWI with an administrator account and go to [Admin/Data Import] (`/admin/importer`).
-6. In [Import from esa.io] section, enter the esa.io team name and access token (the token saved earlier) then update.
-7. Execute [Test Connection], If `Test connection to esa success.` displayed then the connection is successful.
+6. In [Import from esa.io] section, enter the esa.io Team name and Access token (the token saved earlier) then update.
+7. Execute [Test connection to esa], If `Test connection to esa success.` displayed then the connection is successful.
 8. Execute [Import] while connected to esa.io, and the page import will start.
 
 ## Import Data From Qiita:Team
@@ -128,13 +128,13 @@ Importing data from Qiita:Team using [API v2](https://qiita.com/api/v2/docs) pub
 ### Import Method
 
 1. Log in to Qiita:Team with the owner account. Click the user icon in the upper right to access [Settings] from the dropdown menu.
-2. Open the [Application] tab on the user account, and under [Personal Access Token], click [Issue New Token]
-3. Enter [Access Token Description], check [Read_qiita_team] in [Scope], then click [Issue].
+2. Open the [Applications] tab on the user account, and under [Personal access token], click [Generate new token]
+3. Enter [Description], check [read_qiita_team] in [Scopes], then click [Generate token].
 
 ![import3](./images/import3.png)
 
 4. Save the generated token.
 5. Log in to GROWI with an administrator account and go to [Admin/Data Import] (`/admin/importer`).
-6. In [Import from Qiita:Team] section, enter the esa.io team name and access token (the token saved earlier) then update.
+6. In [Import from Qiita:Team] section, enter the Qiita:Team Team name and Access token (the token saved earlier) then update.
 7. Execute [Test Connection], If `Test connection to qiita:team success.` is displayed then the connection is successful.
 8. Execute [Import] while connected to Qiita:Team, and the page import will start.
