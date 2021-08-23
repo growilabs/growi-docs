@@ -166,8 +166,8 @@ For details on how to configure User Trigger Notification, please refer to [here
 
 1. Input `/growi togetter`.
 2. For the `Oldest datetime` field, input datetime of the oldest message that you want to use for the page.
-3. For the `Latest datetime` field, input datetime of the latest message that you want to use for the page.
-4. Lastly, input the page path, then click `Create page`. It will create a page with a conversation from `Oldest datetime` to `Latest datetime`.
+3. For the `Newest datetime` field, input datetime of the newest message that you want to use for the page.
+4. Lastly, input the page path, then click `Create page`. It will create a page with a conversation from `Oldest datetime` to `Newest datetime`.
 
 ![HackMD Demo](/assets/images/growi-togetter.gif)
 
