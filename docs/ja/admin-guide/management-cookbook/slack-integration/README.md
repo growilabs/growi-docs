@@ -9,7 +9,7 @@ GROWI では、 Slack 連携の方法として、1. GROWI bot と 2. Incoming We
 GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。任意の Slack ワークスペースにインストールすること
 で、GROWI からの通知だけでなくチャットからの全文検索実行や会話まとめなど
 様々な機能を利用することができるようになります。
-提供されている GROWI bot は以下の3種類があります。
+提供されている GROWI bot は以下の 3 種類があります。
 
 #### Official bot (推奨)
 
@@ -24,7 +24,7 @@ Official GROWI bot は GROWI 開発チーム が無償で提供・運用して�
 【概念図】
 ![diagram-for-custom-bot-without-bot](/assets/images/slack-bot-outline-custom-without-proxy.png)
 
-Custom bot without proxy は 自身でSlack bot を作成し、お使いの GROWI と紐付けを行うことで、
+Custom bot without proxy は 自身で Slack bot を作成し、お使いの GROWI と紐付けを行うことで、
 Slack から GROWI の 機能の一部を使用することができます。
 
 #### Custom bot with proxy
@@ -78,27 +78,27 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
    を参照し、GROWI App との連携を解除してください。
    連携を解除することができたら、再度登録し直してください。
    ![slack-bot-errors-500](/assets/images/slack-bot-errors-500.png)
-  
+
 1. **The scopes is not appropriate**  
-    Slack App を作成した際に設定する Scope が正しくない可能性があります。
-    作成した Slack App の OAuth & Permissions から Scope の確認をしてください。
-    必要な Scope は **team:read**, **chat:write**, **command** です。
-    ![slack-bot-errors-scopes-not-appropriate](/assets/images/slack-bot-errors-scopes-not-appropriate.png)
+   Slack App を作成した際に設定する Scope が正しくない可能性があります。
+   作成した Slack App の OAuth & Permissions から Scope の確認をしてください。
+   必要な Scope は **team:read**, **chat:write**, **command** です。
+   ![slack-bot-errors-scopes-not-appropriate](/assets/images/slack-bot-errors-scopes-not-appropriate.png)
 
 1. **Cannot read property 'includes' of undefined**  
-    Signing Secret や Bot User OAuth Token などの情報が登録されていない可能性があります。正しい値を入力してください。
-    ![slack-bot-errors-includes-of-undefined](/assets/images/slack-bot-errors-includes-of-undefined.png)
+   Signing Secret や Bot User OAuth Token などの情報が登録されていない可能性があります。正しい値を入力してください。
+   ![slack-bot-errors-includes-of-undefined](/assets/images/slack-bot-errors-includes-of-undefined.png)
 
 1. **invalid_auth**  
-    Signing Secret や Bot User OAuth Token の値が間違っている可能性があります。正しい値を入力してください。
-    ![slack-bot-errors-invalid-auth](/assets/images/slack-bot-errors-invalid-auth.png)
+   Signing Secret や Bot User OAuth Token の値が間違っている可能性があります。正しい値を入力してください。
+   ![slack-bot-errors-invalid-auth](/assets/images/slack-bot-errors-invalid-auth.png)
 
 ## GROWI bot でできること
 
 ### ヘルプコマンド
 
 1. `/growi help` を入力すると GROWI bot で使うことができる、コマンド一覧が表示されます。
-![HackMD Demo](/assets/images/growi-help.gif)
+   ![HackMD Demo](/assets/images/growi-help.gif)
 
 ### ページの作成
 
@@ -121,10 +121,19 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 1. Slack ワークスペースを複数の GROWI に登録している場合、複数の GROWI から横断検索することができます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
 
-    - 例: `/growi search example`
-        ![slack-bot-full-text-search-display-result-command](/assets/images/slack-bot-full-text-search-display-result-command.png)
-    - 検索結果
-        ![slack-bot-search-multi-growi](/assets/images/slack-bot-search-multi-growi.png)
+   - 例: `/growi search example`
+     ![slack-bot-full-text-search-display-result-command](/assets/images/slack-bot-full-text-search-display-result-command.png)
+   - 検索結果
+     ![slack-bot-search-multi-growi](/assets/images/slack-bot-search-multi-growi.png)
+
+### Slack チャンネル内の会話からページを作成する (Alpha)
+
+1. `/growi togetter` を入力します。
+2. `Oldest datetime` にページに使用したいメッセージで最も古いものの時刻を入力します。
+3. `Latest datetime` にページに使用したいメッセージで最も新しいものの時刻を入力します。
+4. `Page path` にページの作成パスを入力し、`Submit` します。
+
+![HackMD Demo](/assets/images/growi-togetter.gif)
 
 ### 接続中の GROWI を確認する
 
@@ -133,17 +142,17 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 ### Slack ワークスペースと GROWI App との連携を解除する
 
-  1. `/growi unregister [連携解除したい GROWI App の URL1] [連携解除したい GROWI App の URL2] ...` と入力するとモーダルが表示されます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
+1. `/growi unregister [連携解除したい GROWI App の URL1] [連携解除したい GROWI App の URL2] ...` と入力するとモーダルが表示されます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
 
-     - 入力例: `growi unregister http://example.com http://growi.jp`
+   - 入力例: `growi unregister http://example.com http://growi.jp`
      ![slack-bot-unregister-input-eg](/assets/images/slack-bot-unregister-input-eg.png)
 
-     - 表示されるモーダル
+   - 表示されるモーダル
      ![slack-bot-unregister-modal](/assets/images/slack-bot-unregister-modal.png)
 
-  1. **Submit** ボタンをクリックします。
-  1. 以下のように表示されたら、連携解除が完了しています。
-    ![slack-bot-unregister-completed](/assets/images/slack-bot-unregister-completed.png)
+1. **Submit** ボタンをクリックします。
+1. 以下のように表示されたら、連携解除が完了しています。
+   ![slack-bot-unregister-completed](/assets/images/slack-bot-unregister-completed.png)
 
 ## アイコン
 
@@ -160,8 +169,8 @@ Incoming Webhook による連携は v4.2 系までの推奨機能でしたが、
 1. 管理画面のセキュリティ設定ページ(/admin/notification)にアクセスします。
 2. Slack Incoming Webhooks 設定の必要事項を入力し、更新ボタンを押します。
 
-    - **Webhook URL**  
-    [Incoming Webhooks](https://slack.com/services/new/incoming-webhook) で取得できます。
+   - **Webhook URL**  
+     [Incoming Webhooks](https://slack.com/services/new/incoming-webhook) で取得できます。
 
 ### 設定が反映されているかの確認
 
