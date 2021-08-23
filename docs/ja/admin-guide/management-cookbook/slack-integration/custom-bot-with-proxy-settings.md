@@ -41,7 +41,16 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 
   ![slack-bot-scope-add-oauth-click](/assets/images/slack-bot-scope-add-oauth-click.png)
 
-1. **commands**, **chat:write**, **team:read** を選択します。
+1. 以下を全て追加します
+    - `commands`
+    - `team:read`
+    - `chat:write`
+    - `chat:write.public`
+    - `channels:join`
+    - `channels:history`
+    - `groups:history`
+    - `im:history`
+    - `mpim:history`
 
   以下のように表示されたら、スコープの設定は完了です。
   ![slack-bot-scope-selected](/assets/images/slack-bot-scope-selected.png)
