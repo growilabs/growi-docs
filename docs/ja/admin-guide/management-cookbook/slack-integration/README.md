@@ -131,7 +131,7 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 1. `/growi togetter` を入力します。
 2. `Oldest datetime` にページに使用したいメッセージで最も古いものの時刻を入力します。
 3. `Latest datetime` にページに使用したいメッセージで最も新しいものの時刻を入力します。
-4. `Page path` にページの作成パスを入力し、`Submit` します。
+4. 最後に `Page path` にページの作成パスを入力し、`Create page` します。 `Oldest datetime` から `Latest datetime` の間の会話が作成されるページに反映されます。
 
 ![HackMD Demo](/assets/images/growi-togetter.gif)
 
