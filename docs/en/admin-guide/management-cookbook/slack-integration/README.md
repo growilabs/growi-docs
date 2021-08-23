@@ -33,8 +33,9 @@ Custom bot with proxy allows you to create a Slack bot by yourself, set up and c
 ### 2. Incoming Webhooks
 
 <!-- TODO Imple link after https://youtrack.weseek.co.jp/issue/GW-5452 -->
+
 Incoming Webhook integration was a recommended feature up to v4.2 series,
- but since v4.3 series, GROWI bot integration is recommended.
+but since v4.3 series, GROWI bot integration is recommended.
 
 Incoming Webhooks is another way to do Slack integration, but unlike GROWI bots, it is focused on notifications to Slack. It does not have many features like GROWI bots, such as full-text search from chat, but it is easier to set up. For more information, please click here.
 
@@ -54,8 +55,8 @@ Click [here](/en/admin-guide/management-cookbook/slack-integration/custom-bot-wi
 
 ## Icon
 
-  Feel free to use the following image for custom bot.
-  ![growikun-icon-2000_2000](/assets/images/growikun-icon-2000_2000.png)
+Feel free to use the following image for custom bot.
+![growikun-icon-2000_2000](/assets/images/growikun-icon-2000_2000.png)
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
 
@@ -86,9 +87,9 @@ For details on how to configure User Trigger Notification, please refer to [here
 
 1. **Channel_not_found**  
     if you have not invited GROWI-Bot to the Slack channel or inputted
-    the wrong channel, **Channel_not_found** error will be displayed in the logs.
-    Please make sure that GROWI-Bot has been invited to the Slack channel,
-    and the channel name has been inputted appropriately.
+   the wrong channel, **Channel_not_found** error will be displayed in the logs.
+   Please make sure that GROWI-Bot has been invited to the Slack channel,
+   and the channel name has been inputted appropriately.
    ![slack-bot-test-channel-not-found](/assets/images/slack-bot-test-channel-not-found.png)
 
 1. **Proxy URL is not registered**  
@@ -112,39 +113,39 @@ For details on how to configure User Trigger Notification, please refer to [here
    and then unregister the GROWI App(s). If you are able to unregister,
    please register again.
    ![slack-bot-errors-500](/assets/images/slack-bot-errors-500.png)
-  
+
 1. **The scopes is not appropriate**  
-   You may not set correct Scopes when you create the Slack App.
+    You may not set correct Scopes when you create the Slack App.
    Please check the Scopes from OAuth & Permissions of the Slack App you created.
    The required Scopes are **team:read**, **chat:write**, and **command**.
-  ![slack-bot-errors-scopes-not-appropriate](/assets/images/slack-bot-errors-scopes-not-appropriate.png)
+   ![slack-bot-errors-scopes-not-appropriate](/assets/images/slack-bot-errors-scopes-not-appropriate.png)
 
 1. **Cannot read property 'includes' of undefined**  
    You may not register the information such as Signing Secret
    and Bot User OAuth Token. Please register the correct values.
-    ![slack-bot-errors-includes-of-undefined](/assets/images/slack-bot-errors-includes-of-undefined.png)
+   ![slack-bot-errors-includes-of-undefined](/assets/images/slack-bot-errors-includes-of-undefined.png)
 
 1. **invalid_auth**  
-    You may not register incorrect Signing Secret or Bot User OAuth Token.
-    Please register the correct values.
-    ![slack-bot-errors-invalid-auth](/assets/images/slack-bot-errors-invalid-auth.png)
-
+   You may not register incorrect Signing Secret or Bot User OAuth Token.
+   Please register the correct values.
+   ![slack-bot-errors-invalid-auth](/assets/images/slack-bot-errors-invalid-auth.png)
 
 ## What you can do with a Slack bot ?
 
 ### Help command
 
 1. Entering `/growi help` will display a list of commands that can be used with the GROWI bot.
-![HackMD Demo](/assets/images/growi-help.gif)
+   ![HackMD Demo](/assets/images/growi-help.gif)
 
 ### Create a page
 
- 1. Entering `/growi create` will create a new page in GROWI.
- ![HackMD Demo](/assets/images/growi-create.gif)
+1.  Entering `/growi create` will create a new page in GROWI.
+    ![HackMD Demo](/assets/images/growi-create.gif)
 
 ### Full-text search in a workspace
 
 1. If you input `/growi search [keyword(s)]`, the search results will be displayed.
+
    - e.g. `/growi search example`
      ![slack-bot-full-text-search-display-result-command](/assets/images/slack-bot-full-text-search-display-result-command.png)
    - Search results.
@@ -156,10 +157,19 @@ For details on how to configure User Trigger Notification, please refer to [here
 
 1. If you have registered your Slack workspace in multiple GROWIs, you can search across multiple GROWI App(s). (This is only available when the Bot type is Official bot or Custom bot with proxy.)
 
-    - e.g.: `/growi search example`
-        ![slack-bot-full-text-search-display-result-command](/assets/images/slack-bot-full-text-search-display-result-command.png)
-    - Search results.
-        ![slack-bot-search-multi-growi](/assets/images/slack-bot-search-multi-growi.png)
+   - e.g.: `/growi search example`
+     ![slack-bot-full-text-search-display-result-command](/assets/images/slack-bot-full-text-search-display-result-command.png)
+   - Search results.
+     ![slack-bot-search-multi-growi](/assets/images/slack-bot-search-multi-growi.png)
+
+### Create page from conversation (Alpha)
+
+1. Input `/growi togetter`.
+2. For the `Oldest datetime` field, input datetime of the oldest message that you want to use for the page.
+3. For the `Newest datetime` field, input datetime of the newest message that you want to use for the page.
+4. Lastly, input the page path, then click `Create page`. It will create a page with a conversation from `Oldest datetime` to `Newest datetime`.
+
+![HackMD Demo](/assets/images/growi-togetter.gif)
 
 ### Check the connected GROWI
 
@@ -168,14 +178,14 @@ By typing `/growi status`, you can see the GROWI App(s) that is connected to the
 
 ### Unregister the Slack workspace from the GROWI App(s)
 
-  1. Please input `/growi unregister [URL1 of the GROWI App to be unregistered] [URL2 of the GROWI App to be unregistered]...`, then the modal as bellow will be displayed. (This is only available when the Bot type is Official bot or Custom bot with proxy.)
-       - e.g.: `growi unregister http://example.com http://growi.jp`  
-       ![slack-bot-unregister-input-eg](/assets/images/slack-bot-unregister-input-eg.png)
+1. Please input `/growi unregister [URL1 of the GROWI App to be unregistered] [URL2 of the GROWI App to be unregistered]...`, then the modal as bellow will be displayed. (This is only available when the Bot type is Official bot or Custom bot with proxy.)
 
-       - Modal
-       ![slack-bot-unregister-modal](/assets/images/slack-bot-unregister-modal.png)
+   - e.g.: `growi unregister http://example.com http://growi.jp`  
+     ![slack-bot-unregister-input-eg](/assets/images/slack-bot-unregister-input-eg.png)
 
-  1. Click on **Submit** button.
-  1. If the following is displayed, the unregister the Slack workspace is completed.
-    ![slack-bot-unregister-completed](/assets/images/slack-bot-unregister-completed.png)
+   - Modal
+     ![slack-bot-unregister-modal](/assets/images/slack-bot-unregister-modal.png)
 
+1. Click on **Submit** button.
+1. If the following is displayed, the unregister the Slack workspace is completed.
+   ![slack-bot-unregister-completed](/assets/images/slack-bot-unregister-completed.png)
