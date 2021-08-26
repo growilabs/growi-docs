@@ -127,6 +127,7 @@ To deploy a custom bot without proxy in your Slack workspace,
 1. Open the registration for the GROWI Custom Bot with proxy service.
 You will see that two access tokens have been generated for the various tokens in the **Generate Access Token** section. Access tokens can be reissued if necessary.
 1. On Slack, type `/growi register`.
+  ![slack-bot-growi-register](/assets/images/slack-bot-growi-register.png)
   ![slack-bot-add-workspace](/assets/images/slack-bot-register-modal.png)
 1. Save the URL of the target GROWI in the GROWI URL of the displayed modal.
 1. Enter the Access Token Proxy to GROWI and Access Token GROWI to Proxy issued above, and click the **Submit** button.
