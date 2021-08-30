@@ -57,6 +57,12 @@ pageClass: admin-cookbook-env-vars
 | `S2SMSG_PUBSUB_NCHAN_CHANNEL_ID` | Nchan サーバーの接続チャンネルID | |
 | `PROMSTER_ENABLED` | [Promster](https://github.com/tdeekens/promster) サーバーの有効化 | `false` |
 | `PROMSTER_PORT` | Promster サーバーを起動するポート | 7788 |
+| `SLACKBOT_TYPE` | Slack 連携を行う際に利用する Slack Bot のタイプ |  |
+| `SLACKBOT_WITHOUT_PROXY_SIGNING_SECRET` | Custom bot without proxy 環境下で利用する Signing Secret 文字列 |  |
+| `SLACKBOT_WITHOUT_PROXY_BOT_TOKEN` | Custom bot without proxy 環境下で利用する Bot トークン文字列 |  |
+| `SLACKBOT_WITH_PROXY_PROXY_URI` | Custom bot with proxy 環境下で利用する slackbot-proxy サーバーの URI |  |
+| `SLACKBOT_WITH_PROXY_SALT_FOR_GTOP` | Official bot または Custom bot with proxy 環境下で利用するトークンを生成する際の salt (GROWI to Proxy 向き) | `gtop` |
+| `SLACKBOT_WITH_PROXY_SALT_FOR_PTOG` | Official bot または Custom bot with proxy 環境下で利用するトークンを生成する際の salt (GROWI to Proxy 向き) | `ptog` |
 | **管理設定を上書きする環境変数** | | |
 | `APP_SITE_URL` | サイト URL (例: `https://example.com` 、 `https://example.com:8080`) | |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` |`true` の場合、ファイルアップロードタイプの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。|`false`|
