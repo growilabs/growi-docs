@@ -11,21 +11,21 @@ There are three types of GROWI bots available.
 
 #### Official bot 【Recommended】
 
-The official bot is a free GROWI's bot provided and operated by the GROWI development team. It is available at [slack app directory](https://wsgrowi.slack.com/apps) and anyone can use this service.
+The official bot is a free GROWI bot provided and operated by the GROWI development team. It is available at the [slack app directory](https://wsgrowi.slack.com/apps) and anyone can use this service.
 
 【Diagram】
 ![diagram-for-official-bot](/assets/images/slack-bot-outline-official.png)
 
 #### Custom bot without proxy
 
-The custom bot without proxy allows you to create a Slack bot by yourself and link it to your GROWI. So that you can use some of the GROWI's features from Slack.
+The custom bot without proxy allows you to create a Slack bot by yourself and link it to your GROWI. So that you can use some of GROWI's features from Slack.
 
 【Diagram】
 ![diagram-for-custom-bot-without-proxy](/assets/images/slack-bot-outline-custom-without-proxy.png)
 
 #### Custom bot with proxy
 
-The custom bot with proxy allows you to create a Slack bot by yourself. Set up and configure a proxy server and use some of the GROWI's features in the same way as the official bot.
+The custom bot with proxy allows you to create a Slack bot by yourself. Set up and configure a proxy server and use some of GROWI's features in the same way as the official bot.
 
 【Diagram】
 ![diagram-for-custom-bot-with-proxy](/assets/images/slack-bot-outline-custom-with-proxy.png)
@@ -35,10 +35,10 @@ The custom bot with proxy allows you to create a Slack bot by yourself. Set up a
 <!-- TODO Implement link after https://youtrack.weseek.co.jp/issue/GW-5452 -->
 
 Incoming Webhook integration was a recommended feature up to the v4.2 series.
-But from the v4.3 series, GROWI bot integration is recommended.
+But from the v4.3 series onwards, GROWI bot integration is recommended.
 
 Incoming Webhook is another way to do Slack integration. Unlike GROWI bots, it is focused on notifications to Slack.
-Although it doesn't have many features like GROWI's bots such as full-text search from chat, but it is easier to set up.
+Although it doesn't have many features like GROWI's bots such as full-text search in chat, it is easier to set up.
 For more information, please click link below:
 
 ## How to set up various types of bots
@@ -76,7 +76,7 @@ Set up a Slack workspace for notifications.
 
 ### Check if the settings are reflected
 
-After above settings is done, a Slack notification form will be added to the edit mode screen of the page.
+After the above settings are done, a Slack notification form will be added to the edit mode screen of the page.
 
 ![slack1](/assets/images/slack1.png)
 
@@ -91,7 +91,7 @@ For details on how to configure User Trigger Notification, please refer [here](/
    If you haven't invited GROWI-Bot to the Slack channel or inputted
    the wrong channel. The **Channel_not_found** error will be displayed in the logs.
    Please make sure that GROWI-Bot has been invited to the Slack channel,
-   and the channel name has been inputted correctly.
+   and that the channel name has been inputted correctly.
    ![slack-bot-test-channel-not-found](/assets/images/slack-bot-test-channel-not-found.png)
 
 2. **Proxy URL is not registered**  
@@ -116,7 +116,7 @@ For details on how to configure User Trigger Notification, please refer [here](/
    please repeat the registration.
    ![slack-bot-errors-500](/assets/images/slack-bot-errors-500.png)
 
-5. **The scopes is not appropriate**  
+5. **The scopes are not appropriate**  
    You may not set correct Scopes when you create the Slack App.
    Please check the Scopes from OAuth & Permissions of the Slack App you created.
    The required Scopes are **team:read**, **chat:write**, and **command**.
@@ -189,5 +189,5 @@ By typing `/growi status`, you can see the GROWI App(s) that are connected to th
      ![slack-bot-unregister-modal](/assets/images/slack-bot-unregister-modal.png)
 
 1. Click on the **Submit** button.
-2. If following messages are displayed, the unregister of the Slack workspace is completed.
+2. If following messages are displayed, the unregistration of the Slack workspace is completed.
    ![slack-bot-unregister-completed](/assets/images/slack-bot-unregister-completed.png)
