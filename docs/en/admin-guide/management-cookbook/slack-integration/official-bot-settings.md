@@ -31,6 +31,7 @@
     The access tokens can be reissued as needed.
 
   1. On Slack, type `/growi register`.
+  ![slack-bot-growi-register](/assets/images/slack-bot-growi-register.png)
   ![slack-bot-add-workspace](/assets/images/slack-bot-register-modal.png)
 
   1. Save the URL of the target GROWI in the GROWI URL of the modal to be displayed.
