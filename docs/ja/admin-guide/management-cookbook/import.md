@@ -81,7 +81,7 @@ esa.io が公開している [API v1](https://docs.esa.io/posts/102) を利用�
 
 ### インポート方法
 
-1. esa.io に owner アカウントでログインし、左側のタブから [SETTINGS] → [ユーザー設定] の画面にアクセスします。
+1. esa.io に owner アカウントでログインし、左側のタブから [SETTINGS] → [ユーザー設定] → [Applications] の画面にアクセスします。
 2. [Personal access tokens] の [Generate new token] ボタンをクリックし、GROWI から esa.io にアクセスするためのトークンを発行します。
 3. トークン名を入力し、[Select scopes] の [Read] にチェックを入れ、[Save] します。
 
