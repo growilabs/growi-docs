@@ -1,6 +1,7 @@
 # Search pages
+
 :::warning
-To use this function, setting up Elasticsearch as a search-engine database is required. <!-- Todo: Insert link to elasticsearch settings: Check [this](../admin-guide/admin-cookbook/setting-elasticsearch.md) page to find out how. -->
+To use this function, setting up Elasticsearch as a search-engine database is required. Todo: Insert link to elasticsearch settings: Check [this](../admin-guide/management-cookbook/setup-search-system.md) page to find out how.
 :::
 
 From the search bar on the Navbar, enter a page path, text body, or tags to search for pages. (It will not be displayed if the setup is incomplete.)
@@ -14,6 +15,7 @@ In addition, clicking the magnifying glass icon on the search bar or pressing th
 ![search2](./images/search2.png)
 
 ## Search result page
+
 Enter a keyword in the search bar and press the Enter (return) key to move to the search result page as shown below.
 
 ![search3](./images/search3.png)
@@ -36,6 +38,7 @@ Enter a keyword in the search bar and press the Enter (return) key to move to th
   - If the user does not have permission to view the page, the preview will not be displayed.
   
 ### Search options
+
 When searching, options can be specified with the following notation. Options can be used together.
 
 | Options | Overview |
