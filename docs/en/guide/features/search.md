@@ -1,7 +1,7 @@
 # Search pages
 
 :::warning
-To use this function, setting up Elasticsearch as a search-engine database is required. Todo: Insert link to elasticsearch settings: Check [this](../admin-guide/management-cookbook/setup-search-system.md) page to find out how.
+To use this function, setting up Elasticsearch as a search-engine database is required. Todo: Insert link to elasticsearch settings: Check [this](../../admin-guide/management-cookbook/setup-search-system.md) page to find out how.
 :::
 
 From the search bar on the Navbar, enter a page path, text body, or tags to search for pages. (It will not be displayed if the setup is incomplete.)
