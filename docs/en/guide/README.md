@@ -21,11 +21,6 @@ Incremental search of page titles using ElasticSearch and full text search of pa
 
 The page name is supplemented when creating the page, and the page hierarchy can be organized efficiently.
 
-# Search pages
-:::warning
-To use this function, setting up Elasticsearch as a search-engine database is required. Check [this](/en/admin-guide/management-cookbook/setup-search-system.md) page to find out how.
-:::
-
 ## Energize communication with comment function
 
 Comments can be threaded for each page. Of course, comments can also be written and previewed by Markdown and attached to files.
