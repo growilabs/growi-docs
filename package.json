@@ -45,7 +45,7 @@
     "watch": "npm-watch"
   },
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "^1.2.0",
+    "@vuepress/plugin-google-analytics": "^1.8.2",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.15.1",
     "eslint-config-weseek": "^1.0.1",
@@ -61,18 +61,18 @@
     "stylelint-config-recess-order": "^2.0.4",
     "swagger-jsdoc": "^3.4.0",
     "vue-tabs-component": "^1.5.0",
-    "vuepress": "^1.5.2",
+    "vuepress": "^1.8.2",
     "vuepress-jsdoc": "^3.0.0",
     "vuepress-plugin-tabs": "^0.3.0"
   },
   "engines": {
-    "node": ">=12.18 <15",
-    "npm": ">=6.14.0 <7",
-    "yarn": ">=1.22"
+    "node": "^12 || ^14",
+    "npm": ">=6.11.3 <7",
+    "yarn": ">=1.19.1 <2"
   },
   "dependencies": {
-    "vuepress-plugin-medium-zoom": "^1.1.6",
-    "vuepress-plugin-redirect": "^1.1.2",
-    "vuepress-plugin-sitemap": "^2.3.0"
+    "vuepress-plugin-medium-zoom": "^1.1.9",
+    "vuepress-plugin-redirect": "^1.2.5",
+    "vuepress-plugin-sitemap": "^2.3.1"
   }
 }
