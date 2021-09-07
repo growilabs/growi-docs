@@ -215,9 +215,9 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/ldap.md',
                 {
                   title: 'Slack Integration',
+                  path: '/en/admin-guide/management-cookbook/slack-integration/',
                   collapsable: false,
                   children: [
-                    '/en/admin-guide/management-cookbook/slack-integration/',
                     '/en/admin-guide/management-cookbook/slack-integration/official-bot-settings.md',
                     '/en/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md',
                     '/en/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
@@ -453,9 +453,9 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/ldap.md',
                 {
                   title: 'Slack 連携',
+                  path: '/ja/admin-guide/management-cookbook/slack-integration/',
                   collapsable: false,
                   children: [
-                    '/ja/admin-guide/management-cookbook/slack-integration/',
                     '/ja/admin-guide/management-cookbook/slack-integration/official-bot-settings.md',
                     '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md',
                     '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
