@@ -1,8 +1,15 @@
+const path = require('path');
+
 const { sidebarTree: growiCommonsSidebarTree } = require('../en/api/commons/config');
 
 module.exports = {
   title: 'GROWI Docs',
   serviceWorker: true,
+
+  // fix hot reload
+  // https://github.com/vuejs/vuepress/issues/2392#issuecomment-651903508
+  temp: path.resolve(__dirname, 'temp'),
+
   plugins: [
     'tabs',
     [

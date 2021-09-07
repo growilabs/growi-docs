@@ -19,7 +19,6 @@ package-lock.json
 docs/.vuepress/dist
 docs/.vuepress/public/redoc.html
 docs/en/api/commons
-tmp
 
 # Doc #
 
@@ -27,3 +26,4 @@ tmp
 .idea
 *.orig
 *.code-workspace
+docs/.vuepress/temp
