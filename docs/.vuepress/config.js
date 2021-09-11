@@ -178,7 +178,7 @@ module.exports = {
               ]
             },
             {
-              title: 'Migration form other system',
+              title: 'Migration from other system',
               collapsable: true,
               children: [
                 '/en/admin-guide/migration-guide/from-crowi-plus-onpremise.md',
