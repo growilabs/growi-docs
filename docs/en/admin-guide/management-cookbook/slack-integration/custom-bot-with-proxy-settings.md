@@ -3,11 +3,11 @@
 【Diagram】
 ![diagram-for-custom-bot-with-proxy](/assets/images/slack-bot-outline-custom-with-proxy.png)
 
-To deploy a custom bot without proxy in your Slack workspace, you need to create and edit it on Slack app. The steps are below.
+To deploy a custom bot without proxy in your Slack workspace, you need to create and edit it on the Slack app. The steps are below.
 
-## Create Custom bot with proxy
+## Create a Custom bot with proxy
 
-1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click **Create New App** button.
+1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click the **Create New App** button.
 
   ![slack-custom-bot1](/assets/images/slack-custom-bot1.png)
 
@@ -20,7 +20,7 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
 ## Start Slackbot Proxy
 
 1. Create a new file `.env.development.local` under `packages/slackbot-proxy`.
-1. Please input any environment variable `SERVER_URI` to the created file above.
+1. Please input any environment variable `SERVER_URI` into the created file above.
 
 e.g. `SERVER_URI=http://localhost:8080`
 
@@ -62,7 +62,7 @@ SLACK_SIGNING_SECRET={ Signing Secret }
    - `im:history`
    - `mpim:history`
 
-The scope setting is complete if following is displayed.
+The scope setting is complete if the following is displayed.
 ![slack-bot-scope-selected](/assets/images/slack-bot-scope-selected.png)
 
 ## Request URL settings
@@ -98,7 +98,7 @@ The scope setting is complete if following is displayed.
   - Short Description is also required, so please input an appropriate description.
   - The Usage Hint is optional, so please input it accordingly.
   - The Escape channels, users, and links sent to your app is optional,
-   so input it accordingly.
+   so input them accordingly.
   - When you are done, click **Save** button.
 
 ![slash-commands-create](/assets/images/slash-commands-create.png)
@@ -112,7 +112,7 @@ The scope setting is complete if following is displayed.
 1. Click on the **Add New Redirect URL** button of **Redirect URLs**.
   ![slash-commands-introduction](/assets/images/slack-bot-auth-and-permisions1.png)
 
-1. when displayed input form, please input `https://{your proxy domain name}/slack/oauth_redirect`.
+1. When displayed input form, please input `https://{your proxy domain name}/slack/oauth_redirect`.
 
     - e.g. `https://example.com/slack/oauth_redirect`
 
@@ -131,7 +131,7 @@ The scope setting is complete if following is displayed.
 1. In the destination screen, click Allow.
 ![slack-bot-install-your-app-transition-destination](/assets/images/slack-bot-install-your-app-transition-destination.png)
 1. If the message **Congratulations!** is displayed, the installation is complete.
-1. invite the GROWI bot to the channel you want to use by using @example.
+1. Invite the GROWI bot to the channel you want to use by using @example.
 ![slack-bot-install-to-workspace-joined-bot](/assets/images/slack-bot-install-to-workspace-joined-bot.png)
 ![slack-bot-install-your-app-introduction-to-channel](/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
 
@@ -141,7 +141,7 @@ Or, if the message `GROWI Bot installation failed..` is displayed, press retry f
 :::
 
 
-## Register Custom bot with proxy Service
+## Register a Custom Bot with Proxy Service
 
 1. Open the registration for the GROWI Custom Bot with proxy service.
 You will see that two access tokens have been generated for the various tokens in the **Generate Access Token** section. Access tokens can be reissued if necessary.
@@ -149,7 +149,7 @@ You will see that two access tokens have been generated for the various tokens i
   ![slack-bot-growi-register](/assets/images/slack-bot-growi-register.png)
   ![slack-bot-add-workspace](/assets/images/slack-bot-register-modal.png)
 1. Save the URL of the target GROWI in the GROWI URL of the displayed modal.
-1. Enter the Access Token Proxy to GROWI and Access Token GROWI to Proxy issued above, and click the **Submit** button.
+1. Enter the Access Token Proxy into GROWI and the Access Token GROWI to the Proxy issued above, then click the **Submit** button.
 
 ![slack-bot-update-proxy-url](/assets/images/slack-bot-update-proxy-url.png)
 
@@ -159,17 +159,17 @@ If successful, the URL of the proxy server will be displayed.
 
 Enter the URL of the proxy server you obtained above into the Proxy URL of **Custom Bot With Proxy Integration** and update it.
 
-## Run connectivity test of Custom bot with proxy
+## Run Connectivity Test of Custom Bot with Proxy
 
-  1. Click **Test connection** and input the Slack channel to which invited GROWI-Bot.
+  1. Click **Test connection** and input the Slack channel to which GROWI-Bot was invited.
     ![slack-bot-test-introduction](/assets/images/slack-bot-test-introduction.png)
 
   2. Click on the **Test** button.  
 
 - In case of success
-    **Successfully sent to Slack workspace.** will be displayed at Logs.
+    **Successfully sent to Slack workspace.** will be displayed in Logs.
     Green checkmarks will appear in red circles. Check the channel to
-    which you invited GROWI-Bot.
+    which you GROWI-Bot was invited.
   - GROWI side
       ![slack-bot-test-success](/assets/images/slack-bot-test-success.png)
   - Slack side
