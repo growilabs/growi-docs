@@ -57,12 +57,12 @@ pageClass: admin-cookbook-env-vars
 | `S2SMSG_PUBSUB_NCHAN_CHANNEL_ID` | The channel id to connect to Nchan server | |
 | `PROMSTER_ENABLED` | Enable [Promster](https://github.com/tdeekens/promster) server | `false` |
 | `PROMSTER_PORT` | The port to launch Promster server | 7788 |
-| `SLACKBOT_TYPE` | Slack 連携を行う際に利用する Slack Bot のタイプ |  |
-| `SLACKBOT_WITHOUT_PROXY_SIGNING_SECRET` |  |  |
-| `SLACKBOT_WITHOUT_PROXY_BOT_TOKEN` |  |  |
-| `SLACKBOT_WITH_PROXY_PROXY_URI` |  |  |
-| `SLACKBOT_WITH_PROXY_SALT_FOR_GTOP` |  | `gtop` |
-| `SLACKBOT_WITH_PROXY_SALT_FOR_PTOG` |  | `ptog` |
+| `SLACKBOT_TYPE` | Type of the Slack Bot to use when linking with Slack |  |
+| `SLACKBOT_WITHOUT_PROXY_SIGNING_SECRET` | Signing Secret string used for Custom Bot without proxy environment |  |
+| `SLACKBOT_WITHOUT_PROXY_BOT_TOKEN` | Bot Token string used for Custom Bot without proxy environment |  |
+| `SLACKBOT_WITH_PROXY_PROXY_URI` | URI of slackbot-proxy server used for Custom Bot with proxy environment |  |
+| `SLACKBOT_WITH_PROXY_SALT_FOR_GTOP` | Salt (for GROWI to Proxy) when generating tokens for the Official Bot or Custom Bot with proxy environment | `gtop` |
+| `SLACKBOT_WITH_PROXY_SALT_FOR_PTOG` | Salt (for GROWI to Proxy) when generating tokens for the Official Bot or Custom Bot with proxy environment | `ptog` |
 | **Option (Overwritable in admin page)** | | |
 | `APP_SITE_URL` | Site URL. e.g. `https://example.com`, `https://example.com:8080` | |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` | Prioritize env var than value in DB for File Upload Type | `false` |
