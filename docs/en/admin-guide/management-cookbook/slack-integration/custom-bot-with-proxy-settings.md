@@ -169,7 +169,7 @@ Enter the URL of the proxy server you obtained above into the Proxy URL of **Cus
 - In case of success
     **Successfully sent to Slack workspace.** will be displayed in Logs.
     Green checkmarks will appear in red circles. Check the channel to
-    which you GROWI-Bot was invited.
+    which your GROWI-Bot was invited.
   - GROWI side
       ![slack-bot-test-success](/assets/images/slack-bot-test-success.png)
   - Slack side
