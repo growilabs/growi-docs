@@ -64,28 +64,25 @@ Active ステータスでないアカウントのみ削除することができ�
 
 #### 新規ユーザーの仮発行
 
-1. 画面左下の歯車のマークを選択
+1. 左サイドバーのユーザー管理を選択
 
 ![](./images/user-management6.png)
 
-2. 左サイドバーのユーザー管理を選択
+2. 新規ユーザーの仮発行を選択
 
-![](./images/user-management7.png)
+3. 招待メールアドレスを入力
 
-3. 新規ユーザーの仮発行を選択
+4. 発行を選択
 
-4. 招待メールアドレスを入力
+<img src="./images/user-management7.png" width="50%">
 
-5. 発行を選択
+5. 画面上で表示されるパスワードをご自身のメーラーなどで通知
 
 <img src="./images/user-management8.png" width="50%">
 
-6. 画面上で表示されるパスワードをご自身のメーラーなどで通知
-
-<img src="./images/user-management9.png" width="50%">
-
-※GROWI から通知メールの配信を行う場合は、
-[管理画面からメールの設定](https://docs.growi.org/ja/admin-guide/management-cookbook/app-settings.html#%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E8%A8%AD%E5%AE%9A)が必要です
+::: tip
+GROWI から通知メールの配信を行う場合は、 [管理画面からメールの設定](https://docs.growi.org/ja/admin-guide/management-cookbook/app-settings.html#%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E8%A8%AD%E5%AE%9A) が必要です。
+:::
 
 ## 外部アカウント管理
 
