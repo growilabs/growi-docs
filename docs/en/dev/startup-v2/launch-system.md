@@ -16,12 +16,6 @@ npx lerna bootstrap
 DO NOT USE `npm install` or `yarn`
 :::
 
-### Migration
-
-``` bash
-cd packages/app
-yarn migrate
-```
 
 ### Launch Front-end and Back-end Server
 

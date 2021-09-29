@@ -17,12 +17,6 @@ monorepo を採用しているため、依存関係管理には [lerna](https://
 `yarn install` または、`npm install` は利用しないでください
 :::
 
-### データマイグレーション
-
-``` bash
-cd packages/app
-yarn migrate
-```
 
 ### フロントエンド・バックエンドサーバーの起動
 
