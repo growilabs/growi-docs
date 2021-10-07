@@ -60,6 +60,8 @@
     "stylelint": "^13.6.0",
     "stylelint-config-recess-order": "^2.0.4",
     "swagger-jsdoc": "^3.4.0",
+    "textlint": "^12.0.2",
+    "textlint-rule-preset-weseek": "^1.0.2",
     "vue-tabs-component": "^1.5.0",
     "vuepress": "^1.8.2",
     "vuepress-jsdoc": "^3.0.0",
