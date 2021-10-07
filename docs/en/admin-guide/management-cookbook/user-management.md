@@ -64,17 +64,25 @@ Only accounts that are not in Active status can be deleted. Please note that del
 
 #### Temporary issuance of a new user
 
-A new user can be temporarily issued by specifying an email address.
+1. Click User Management from the sidebar on the left.
 
-Click the **Provisional New User** button on the User Management screen to open a modal.  
-Enter the e-mail address of the user to be issued. Multiple e-mail addresses can be specified using line breaks.
+![](./images/user-management6.png)
 
-When the **issue** button is clicked, a new user will be issued and a temporary password will be assigned to each user.  
-The new user can complete the registration by logging in using the email address and temporary password.
+2. Click Temporary Issuance for new users.
 
-If **Send invitation email** is enabled and issued, an invitation email will be sent to the specified email address.  
-To send an invitation email, the email settings must have been completed in the application settings.
+3. Enter your invitation email address.
 
+4. Click issue.
+
+<img src="./images/user-management7.png" width="50%">
+
+5. Notification of the email and password is displayed on the screen.
+
+<img src="./images/user-management8.png" width="50%">
+
+::: tip
+[Email settings from management screen](https://docs.growi.org/en/admin-guide/management-cookbook/app-settings.html#email-settings) is required when delivering a notification email from GROWI.
+:::
 ## Manage external accounts
 
 This function manages external accounts. An external account is an information that is associated with a GROWI account when it is registered using the external OAuth. When a GROWI account is deleted, the external account associated with it is also deleted automatically.
