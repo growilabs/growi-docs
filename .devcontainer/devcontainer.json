@@ -25,6 +25,7 @@
 		"davidanson.vscode-markdownlint",
 		"octref.vetur",
 		"sysoev.language-stylus",
+    "taichi.vscode-textlint",
 	],
 
 	// Uncomment the next line if you want start specific services in your Docker Compose config.
