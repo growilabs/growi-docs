@@ -1,10 +1,22 @@
 {
-  "filters": {},
+  "filters": {
+    "comments": true
+  },
   "rules": {
     "preset-weseek": {
-      "ginger": false
       // 英文用ルールだが、日本語文で不要なエラーを吐くので、一時的にfalseにする
       // 将来的にはenフォルダ配下にのみ適用したい
+      "ginger": false,
+      "no-dead-link": {
+        "checkRelative": true,
+        "baseURI": "https://docs.growi.org/",
+        "ignore": [],
+        "preferGET": [],
+        "ignoreRedirects": false,
+      },
+      "ja-no-mixed-period": {
+        "allowPeriodMarks": ":",
+      }
     }
   }
 }
