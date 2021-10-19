@@ -47,7 +47,7 @@ pageClass: admin-cookbook-env-vars
 | | This server must load the GROWI agent. [Here's how to prepare it](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html). | |
 | `HACKMD_URI_FOR_SERVER` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server from GROWI Express server. If not set, `HACKMD_URI` will be used. | |
 | `PLANTUML_URI` | URI to connect to [PlantUML](http://plantuml.com/) server. | |
-| `BLOCKDIAG_URI` | URI to connect to [blockdiag](http://http://blockdiag.com/) server. | |
+| `BLOCKDIAG_URI` | URI to connect to [blockdiag](http://blockdiag.com/) server. | |
 | `DRAWIO_URI` | URI to connect to [diagrams.net(draw.io)](https://www.diagrams.net/) server. | |
 | `S2SMSG_PUBSUB_SERVER_TYPE` |  | |
 | | : `nchan` Nginx [Nchan](https://nchan.io/) | |
