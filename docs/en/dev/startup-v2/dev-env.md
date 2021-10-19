@@ -1,4 +1,4 @@
-# Creating a Development Enviroment
+# Creating a Development Environment
 
 Setup environment according to the following documents.
 

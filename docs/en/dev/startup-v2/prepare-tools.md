@@ -82,7 +82,7 @@ related considerations
 
         * If the VERSION says 1, execute `wsl --set-version Ubuntu 2` to change the distribution.
     1. Limit memory size due to the issue that WSL 2 consumes massive amounts of RAM ([microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))
-        * Edit or create `C:\Users\YourAccout\.wslconfig`
+        * Edit or create `C:\Users\YourAccount\.wslconfig`
 
         ```
         [wsl2]

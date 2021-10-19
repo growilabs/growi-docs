@@ -4,9 +4,9 @@
 
 * `config/env.dev.js`
 
-## Environment Variables Only Avaiable in Development
+## Environment Variables Only Available in Development
 
-|Enviroment Variable|Description|
+|Environment Variable|Description|
 |---|---|
 | **Option** ||
 |`PLUGIN_NAMES_TOBE_LOADED`|Specify plugins to load for development. See [Plugins](/en/dev/plugin/architecture.md).|

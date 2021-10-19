@@ -25,7 +25,7 @@ Migration guide from crowi-plus or [Crowi](http://site.crowi.wiki/)
 
 ### [System Admin Cookbook](admin-cookbook/launch-with-systemd.md)
 
-Cookbook for the server, container clusters, and network. For system admininistrators.
+Cookbook for the server, container clusters, and network. For system administrators.
 
 ### [GROWI Admin Cookbook](management-cookbook/line-breaks.md)
 

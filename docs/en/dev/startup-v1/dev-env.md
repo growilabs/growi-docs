@@ -7,7 +7,7 @@ In order to develop with the better environment, use [Getting Started v2](../sta
 :::
 
 ::: tip
-This chapter introduces development enviroment **specifically used in WESEEK, Inc**.
+This chapter introduces development environment **specifically used in WESEEK, Inc**.
 Generally, some of the tools and configurations are not required for developing GROWI.
 :::
 
