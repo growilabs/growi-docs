@@ -10,12 +10,15 @@
       "no-dead-link": {
         "checkRelative": true,
         "baseURI": "https://docs.growi.org/",
-        "ignore": [],
+        "ignore": ["http://localhost**"],
         "preferGET": [],
         "ignoreRedirects": false,
       },
       "ja-no-mixed-period": {
         "allowPeriodMarks": ":",
+      },
+      "max-kanji-continuous-len": {
+        "allow": ["証明書文字列","同時接続数上限","同時多人数編集"]
       }
     }
   }

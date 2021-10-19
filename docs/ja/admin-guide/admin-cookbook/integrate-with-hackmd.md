@@ -4,9 +4,9 @@
 
 ## 概要
 
-- [HackMD](https://hackmd.io) は、チームで単一の Markdown 同時多人数編集を行うにはとても優れたツールです。
+- [HackMD](https://hackmd.io) は、チームで単一の Markdown を同時に多人数で編集できるとても優れたツールです。
 - [CodiMD](https://github.com/hackmdio/codimd) は HackMD からフォークした OSS です。
-- GROWI を HackMD/CodiMD と連携させることで、GROWI 管理下のドキュメントを同時に多人数で編集することができるようになります。
+- GROWI を HackMD/CodiMD と連携させることで、GROWI 管理下のドキュメントを同時に多人数で編集できるようになります。
 
 ## 仕組み
 
@@ -14,7 +14,7 @@
 - ページのデータは [window.postMessage](https://developer.mozilla.org/ja/docs/Web/API/Window/postMessage) を介して共有されます。
 
 
-## [growi-docker-compose](../getting-started/docker-compose.md) で新しく HackMD(CodiMD) コンテナを立てる
+## [growi-docker-compose](/ja/admin-guide/getting-started/docker-compose.html) で新しく HackMD(CodiMD) コンテナを立てる
 
 [こちら](https://github.com/weseek/growi-docker-compose/tree/master/examples/integrate-with-hackmd) の Example を利用します。
 
@@ -28,9 +28,9 @@
 3. CodiMD コンテナに環境変数を設定
     - `GROWI_URI`: GROWI のクライアントを実行するブラウザからアクセス可能な GROWI の URI
 4. コンテナの起動
-5. GROWI の管理画面の「アプリ設定」から、サイトURL設定を行う
+5. GROWI の管理画面の「アプリ設定」から、サイトURLを設定する
     - GROWI のクライアントを実行するブラウザからアクセス可能な GROWI の URI を入力
-    - あるいは環境変数 `APP_SITE_URL` で設定することもできる
+    - または環境変数 `APP_SITE_URL` で設定
 
 ## 既存の HackMD(CodiMD) と連携する
 
@@ -41,9 +41,9 @@
     - `HACKMD_URI_FOR_SERVER`: GROWI サーバーからアクセス可能な CodiMD の URI
         - 設定されなかった場合は `HACKMD_URI` を利用します
 2. 再起動
-3. GROWI の管理画面の「アプリ設定」から、サイトURL設定を行う
+3. GROWI の管理画面の「アプリ設定」から、サイトURLを設定する
     - GROWI のクライアントを実行するブラウザからアクセス可能な GROWI の URI を入力
-    - あるいは環境変数 `APP_SITE_URL` で設定することもできる
+    - または環境変数 `APP_SITE_URL` で設定
 
 ### HackMD(CodiMD) の設定
 
@@ -51,13 +51,17 @@
     - `GROWI_URI`: GROWI のクライアントを実行するブラウザからアクセス可能な GROWI の URI
 2. GROWI agent for HackMD を読み込むため、ejs を編集
     - `/codimd/public/views/codimd/head.ejs` の末尾に以下を追加
+
         ```javascript
         <script src="<%= process.env.GROWI_URI %>/_hackmd/load-styles"></script>
         ```
+
     - `/codimd/public/views/codimd/foot.ejs` の末尾に以下を追加
+
         ```javascript
         <script src="<%= process.env.GROWI_URI %>/_hackmd/load-agent" defer></script>
         ```
+
 3. 再起動
 
 ## 動作確認
@@ -69,6 +73,7 @@
 ### HackMD(CodiMD)
 
 - 任意の編集可能なページを表示した際に、ブラウザのコンソールに以下のようなログが表示されていることを確認
+
     ```
     [GROWI] Loading styles for HackMD is not processed because currently not in iframe
     [GROWI] Loading agent for HackMD is not processed because currently not in iframe
@@ -91,7 +96,7 @@
 
 - GROWI のサイトURLに正しい値がセットされていることを確認してください
 - 既存の HackMD/CodiMD に変更を加えている場合、以下を確認してください
-    - head.ejs, foot.ejs に記述した内容が正しいこと
-    - HackMD/CodiMD のソース中に挿入された script タグの src のURLに正常にアクセスできる(css, javascript をロードできる)こと
+  - head.ejs, foot.ejs に記述した内容が正しいこと
+  - HackMD/CodiMD のソース中に挿入された script タグの src のURLに正常にアクセスできる(css, JavaScript をロードできる)こと
 
 
