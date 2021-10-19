@@ -16,13 +16,17 @@
 * \(Option\) systemd
 * \(Option\) Apache or nginx
 
-Option となっているものは必須ではありませんが、このドキュメントではこれらを全て利用し、全文検索可能な GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホスト起動と同時に起動させるところまでを扱います。
+<!-- textlint-disable weseek/no-doubled-joshi -->
+Optional となっているものは必須ではありません。ただし、本項ではこれら全てを利用し、全文検索できる GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホストと同時に起動させる方法を説明します。
+<!-- textlint-enable weseek/no-doubled-joshi -->
 
 ## node.js 8.x & npm のインストール
 
 ### NodeSource repository を利用する
 
-[https://deb.nodesource.com/](https://deb.nodesource.com/) から Node.js のインストールスクリプトを取得します。作業ディレクトリはホームディレクトリで作業します
+<!-- textlint-disable weseek/no-dead-link -->
+[https://deb.nodesource.com/](https://deb.nodesource.com/) から Node.js のインストールスクリプトを取得します。作業ディレクトリはホームディレクトリで作業します。
+<!-- textlint-enable weseek/no-dead-link -->
 
 ```text
 $ cd ~
@@ -35,7 +39,7 @@ $ curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
 $ sudo bash nodesource_setup.sh
 ```
 
-これで `apt-get` 経由で node.js が取得できるようになったので、 `apt-get` コマンドでインストールを行います。
+これにより `apt-get` 経由で node.js が取得できるようになったので、 `apt-get` コマンドでインストールを行います。
 
 ```text
 $ sudo apt-get install nodejs
@@ -62,7 +66,7 @@ $ yarn -v
 
 ### インストール
 
-[公式ページ](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) に従い、インストールを進めます。 ここでは Elasticsearch 5.x をインストールするために若干の修正をしています
+[公式ページ](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) に従い、インストールを進めます。 ここでは Elasticsearch 5.x をインストールするために若干の修正をしています。
 
 ::: warning
 このドキュメントは古くなっています。現在の GROWI がサポートする Elasticsearch の最新版は 6.x 系です (2019年05月時点)
@@ -80,7 +84,7 @@ $ sudo apt-get install openjdk-8-jdk
 $ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 ```
 
-https 経由で apt コマンドによるインストールを行うために、 `apt-transport-https` パッケージをインストールします。
+HTTPS 経由で apt コマンドによるインストールを行うために、 `apt-transport-https` パッケージをインストールします。
 
 ```text
 $ sudo apt-get install apt-transport-https
@@ -130,7 +134,7 @@ elasticsearch の自動起動設定を有効化します。
 $ sudo systemctl enable elasticsearch
 ```
 
-正常に起動しているか確認を行います。
+正常に起動しているか確認します。
 
 ```text
 $ sudo systemctl status elasticsearch
@@ -138,19 +142,19 @@ $ sudo systemctl status elasticsearch
 
 ### GROWI に必要な Elasticsearch プラグインのインストール
 
-以下の Elasticsearch plugin をインストールします
+以下の Elasticsearch plugin をインストールします。
 
 * [Japanese \(kuromoji\) Analysis plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-kuromoji.html)
 * [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-icu.html)
 
-まずは、Elasticsearch plugin をインストールするために利用するコマンドを検索します
+まずは、Elasticsearch plugin をインストールするために利用するコマンドを検索します。
 
 ```text
 $ dpkg -L elasticsearch | grep bin | grep plugin
 /usr/share/elasticsearch/bin/elasticsearch-plugin
 ```
 
-上記で出力されたコマンドを利用して、 analysis-kuromoji plugin と analysis-icu plugin をインストールします
+上記で出力されたコマンドを利用して、 analysis-kuromoji plugin と analysis-icu plugin をインストールします。
 
 ```text
 # analysis-kuromoji のインストール
@@ -172,7 +176,7 @@ $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
 ```
 
-レポジトリの追加を行います。 ここでは Ubuntu 14.04 と Ubuntu 16.04 の例を記載しています。
+レポジトリを追加します。ここでは Ubuntu 14.04 と Ubuntu 16.04 の例を記載しています。
 
 **Ubuntu 14.04**
 
@@ -214,7 +218,7 @@ MongoDB の自動起動設定を有効化します。
 $ sudo systemctl enable mongod
 ```
 
-正常に起動しているか確認を行います。
+正常に起動しているか確認します。
 
 ```text
 $ sudo systemctl status mongod
@@ -280,7 +284,7 @@ npm start
 
 ### systemd による自動起動の設定
 
-「[systemd による自動起動](../admin-cookbook/launch-with-systemd.md)」を参照して下さい。
+「[systemd による自動起動](/ja/admin-guide/admin-cookbook/launch-with-systemd.html)」を参照してください。
 
 ## リバースプロキシの設定
 
@@ -296,7 +300,7 @@ $ sudo apt-get update && sudo apt-get -y install apache2
 
 #### 必要なモジュールの有効化
 
-proxy, proxy\_http, proxy\_wstunnel module をインストールします
+proxy, proxy\_http, proxy\_wstunnel module をインストールします。
 
 ```text
 $ sudo a2enmod proxy proxy_http proxy_wstunnel

@@ -11,15 +11,13 @@
         "checkRelative": true,
         "baseURI": "https://docs.growi.org/",
         "ignore": ["http://localhost**"],
-        "preferGET": [],
-        "ignoreRedirects": false,
       },
       "ja-no-mixed-period": {
         "allowPeriodMarks": ":",
       },
       "max-kanji-continuous-len": {
-        "allow": ["証明書文字列","同時接続数上限","同時多人数編集"]
-      }
+        "allow": ["証明書文字列","同時接続数上限","同時多人数編集","自動起動設定","全文検索管理"]
+      },
     }
   }
 }
