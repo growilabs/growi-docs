@@ -11,8 +11,9 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 
    ![slack-custom-bot1](/assets/images/slack-custom-bot1.png)
 
-1. 「Create a Slack App」の ①「App Name」にはアプリの名前を、②「Development Slack Workspace」には
-   GROWI bot を追加したいワークスペースを選択します。
+1. 「Create a Slack App」の ①「App Name」にアプリの名前を入力します。
+
+1. ②「Development Slack Workspace」から GROWI bot を追加したいワークスペースを選択します。
 
 1. 「Create App」をクリックします。
 
@@ -39,7 +40,7 @@ SLACK_SIGNING_SECRET={ Signing Secret }
 ```
 
 4. GROWI 本体サーバーとプロキシ用サーバー(`slackbot-proxy`)の両方を立ち上げてください。  
-   プロキシ用サーバーは`yarn`, `yarn dev`で起動することができます。
+   プロキシ用サーバーは`yarn`, `yarn dev`で起動できます。
 
 5. 管理画面の Slack 連携 にて **Custom bot with proxy** を選択してください。
    ![slack-bot-selecting-custom-bot-with-proxy](/assets/images/slack-bot-selecting-custom-bot-with-proxy.png)
@@ -136,8 +137,8 @@ SLACK_SIGNING_SECRET={ Signing Secret }
    ![slack-bot-install-your-app-introduction-to-channel](/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
 
 ::: warning
-`Illegal state, try it again.` と表示される場合は、**Go to install page** を押し、表示される **Add to Slack** ボタンから再度インストールを行ってください。
-または `GROWI Bot installation failed..` と表示される場合は、**Add to Slack** ボタンからリトライしてください。
+* `Illegal state, try it again.` と表示される場合は、**Go to install page** を押し、 **Add to Slack** から再度インストールしてください。
+* `GROWI Bot installation failed..` と表示される場合は、**Add to Slack** ボタンから再度インストールしてください。
 :::
 
 ## GROWI Custom Bot with proxy サービスへの登録

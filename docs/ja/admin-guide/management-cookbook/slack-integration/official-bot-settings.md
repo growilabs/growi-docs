@@ -26,7 +26,7 @@
 ## GROWI Official Bot with proxy サービスへの登録
 
 1. GROWI Custom Bot with proxy サービスへの登録を開きます。
-  **Generate Access Token** に各種トークンにアクセストークンが2種生成されていることを確認できます。
+  **Generate Access Token** の各種トークンにアクセストークンが2種生成されていることを確認できます。
   アクセストークンは必要に応じて再発行できます。
 
 1. Slack上で `/growi register` と打ちます。
