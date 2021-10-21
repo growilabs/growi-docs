@@ -10,13 +10,20 @@
       "no-dead-link": {
         "checkRelative": true,
         "baseURI": "https://docs.growi.org/",
-        "ignore": ["http://localhost**"],
+        "ignore": [
+          "http://localhost**",
+          "https://slack.com/services/new/incoming-webhook,"
+          "https://s3.console.aws.amazon.com/s3"
+          ],
       },
       "ja-no-mixed-period": {
         "allowPeriodMarks": ":",
       },
       "max-kanji-continuous-len": {
-        "allow": ["証明書文字列","同時接続数上限","同時多人数編集","自動起動設定","全文検索管理"]
+        "allow": ["証明書文字列","同時接続数上限","同時多人数編集","自動起動設定","全文検索管理","外部認証機構","通知詳細設定","最終更新日時","認証機構設定","全文検索機能", "個人設定画面"]
+      },
+      "use-si-units": {
+            "allowedUnits": ["Bucket"],
       },
     }
   }

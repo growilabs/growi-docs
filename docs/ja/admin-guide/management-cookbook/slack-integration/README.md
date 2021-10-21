@@ -160,8 +160,6 @@ Incoming Webhook も Slack 連携する手段の一つですが、GROWI bot と�
 
 ## Incoming webhook 設定
 
-<!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
-
 Incoming Webhook による連携は v4.2 系までの推奨機能でしたが、v4.3 系以降は前述の GROWI bot による連携を推奨しています。
 
 通知する Slack ワークスペースを設定します。
