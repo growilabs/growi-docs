@@ -2,8 +2,9 @@
 
 ## 概要
 
-- Crowi の docker image、[bakudankun/crowi](https://github.com/crowi/docker-crowi) を利用している環境から、  
-GROWI 公式の docker-compose を用いたディプロイ方法である [weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose) への切り替えを想定
+<!-- textlint-disable weseek/sentence-length -->
+- Crowi の docker image、[bakudankun/crowi](https://github.com/crowi/docker-crowi) を利用している環境から、GROWI 公式の docker-compose を用いたディプロイ方法である [weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose) への切り替えを想定
+<!-- textlint-enable weseek/sentence-length -->
 - その際、以下のデータ移行を伴うことになる
     - MongoDB コンテナのデータボリュームからデータを吸い出し、リストアする
     - アプリケーションコンテナのデータボリュームからアップロードファイルデータを吸い出し、リストアする
@@ -56,7 +57,7 @@ GROWI 公式の docker-compose を用いたディプロイ方法である [wesee
 
 **アップロードファイルの保存先に AWS S3 を使う場合は、以下の作業は不要**
 
-- [bakudankun/crowi](https://github.com/crowi/docker-crowi) はデフォルトでアップロードファイルをファイルシステムに保存する設定(`FILE_UPLOAD=local`)になっている
+- [bakudankun/crowi](https://github.com/crowi/docker-crowi) は、デフォルトでアップロードファイルをファイルシステムに保存します(`FILE_UPLOAD=local`)
 - 同様の環境で動かすには、データを移した上で GROWI 側の起動時の環境変数(`docker-compose.yml` で指定)に `FILE_UPLOAD=local` を入れる
 
 1. Crowi から uploads のバックアップを取る

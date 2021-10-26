@@ -12,7 +12,7 @@
         "baseURI": "https://docs.growi.org/",
         "ignore": [
           "http://localhost**",
-          "https://slack.com/services/new/incoming-webhook,"
+          "https://slack.com/services/new/incoming-webhook",
           "https://s3.console.aws.amazon.com/s3"
           ],
       },
