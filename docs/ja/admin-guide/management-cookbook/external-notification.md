@@ -11,11 +11,11 @@
 ### Slack / Mattermost incoming webhook
 
 GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。  
-ワークスペースに属するチャンネルのいずれかを選択して通知を行う事ができます。
+ワークスペースに属するチャンネルのいずれかを選択して通知できます。
 
 ### IFTTT
 
-GROWI では、IFTTT を利用して、その他の Web サービスに通知を行うことができます。
+GROWI では、IFTTT を利用して、その他の Web サービスに通知できます。
 
 - IFTTT ご利用手順
 
@@ -45,7 +45,7 @@ GROWI では、IFTTT を利用して、その他の Web サービスに通知を
 
 ## User Trigger Notification 設定
 
-User Trigger Notification は、GROWI を利用するユーザーがページの編集やコメントの投稿を行う際に選択的に通知を行う事ができる機能です。
+User Trigger Notification は、GROWI を利用するユーザーがページの編集やコメントを投稿する際に選択的に通知できる機能です。
 基本的には通知先のチャンネルを都度入力する必要がありますが、デフォルトパターンを設定することで入力を省くことが可能です。
 
 ### デフォルトパターンの設定方法
@@ -59,8 +59,10 @@ User Trigger Notification は、GROWI を利用するユーザーがページの
 
 ### デフォルトパターン設定が反映されているかの確認
 
+<!-- textlint-disable weseek/sentence-length -->
 例えば、パターンを `/event/*` チャンネルを `general` と設定した場合、  
 `/event/忘年会のお知らせ`というパスのページを作成すると Slack 通知フォームに `general` が設定された状態で編集モードに遷移します。
+<!-- textlint-enable weseek/sentence-length -->
 
 ![slack2](./images/slack2.png)
 
@@ -75,7 +77,7 @@ Wiki 利用者が所定のアクションをしたタイミングで発信され
 1. 管理画面のセキュリティ設定ページ(/admin/notification)にアクセスします。
 2. Global Notification のタブを開きます。
 3. 通知設定の一覧の右側にある通知設定の追加ボタンを押します。
-4. 通知詳細設定で各種設定を行います。
+4. 通知詳細設定で各項目を設定します。
 
 - 通知機構はトリガーパスで起きるイベントを感知します。  
   例えば `/event/*` と設定した場合、`/event` 配下のページで Global Notification が有効になります。

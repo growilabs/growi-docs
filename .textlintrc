@@ -1,10 +1,34 @@
 {
-  "filters": {},
+  "filters": {
+    "comments": true
+  },
   "rules": {
     "preset-weseek": {
-      "ginger": false
       // 英文用ルールだが、日本語文で不要なエラーを吐くので、一時的にfalseにする
       // 将来的にはenフォルダ配下にのみ適用したい
+      "ginger": false,
+      "no-dead-link": {
+        "checkRelative": true,
+        "baseURI": "https://docs.growi.org/",
+        "ignore": [
+          // 以下のURLはリンク切れ、またはリダイレクトされる場合でも無視する
+          "http://localhost**",
+          "https://slack.com/services/new/incoming-webhook",
+          "https://s3.console.aws.amazon.com/s3"
+          ],
+      },
+      "ja-no-mixed-period": {
+        // :を日本語と認識してしまうので、句点として許可する
+        "allowPeriodMarks": ":",
+      },
+      "max-kanji-continuous-len": {
+        // 以下は6字以上の漢字の連続を許可する
+        "allow": ["証明書文字列","同時接続数上限","同時多人数編集","自動起動設定","全文検索管理","外部認証機構","通知詳細設定","最終更新日時","認証機構設定","全文検索機能", "個人設定画面"]
+      },
+      "use-si-units": {
+        // S3 Bucket と記載した時に単位と認識してしまうので、除外する
+        "allowedUnits": ["Bucket"],
+      },
     }
   }
 }

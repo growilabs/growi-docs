@@ -16,13 +16,17 @@
 * \(Optional\) systemd
 * \(Optional\) Apache or nginx
 
-Optional となっているものは必須ではありませんが、このドキュメントではこれら全てを利用し、全文検索可能な GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホスト起動と同時に起動させるところまでを扱います。
+<!-- textlint-disable weseek/no-doubled-joshi -->
+Optional となっているものは必須ではありません。ただし、本項ではこれら全てを利用し、全文検索できる GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホストと同時に起動させる方法を説明します。
+<!-- textlint-enable weseek/no-doubled-joshi -->
 
 ## node.js 8.x & npm のインストール
 
 ### NodeSource repository を利用する
 
+<!-- textlint-disable weseek/no-dead-link -->
 [https://rpm.nodesource.com/](https://rpm.nodesource.com/)からNode.js のインストールスクリプトを取得します。作業ディレクトリはホームディレクトリです。
+<!-- textlint-enable weseek/no-dead-link -->
 
 ```text
 $ cd ~
@@ -35,7 +39,7 @@ $ curl -sL https://rpm.nodesource.com/setup_8.x -o nodesource_setup.sh
 $ sudo bash nodesource_setup.sh
 ```
 
-これで `yum` 経由で node.js が取得できるようになったので、 `yum` コマンドでインストールを行います。
+これにより `yum` 経由で node.js が取得できるようになったので、 `yum` コマンドでインストールを行います。
 
 ```text
 $ sudo yum install -y nodejs
@@ -63,7 +67,7 @@ $ yarn -v
 
 ### インストール
 
-[公式ページ](https://www.elastic.co/guide/en/elasticsearch/reference/current/rpm.html) に従い、インストールを進めます。 ここでは Elasticsearch 5.x をインストールするために若干の修正をしています
+[公式ページ](https://www.elastic.co/guide/en/elasticsearch/reference/current/rpm.html) に従い、インストールを進めます。 ここでは Elasticsearch 5.x をインストールするために若干の修正をしています。
 
 ::: warning
 このドキュメントは古くなっています。現在の GROWI がサポートする Elasticsearch の最新版は 6.x 系です (2019年05月時点)
@@ -132,7 +136,7 @@ elsticsearch の自動起動設定を有効化します。
 $ sudo systemctl enable elasticsearch
 ```
 
-正常に起動しているか確認を行います。
+正常に起動しているか確認します。
 
 ```text
 $ sudo systemctl status elasticsearch
@@ -140,19 +144,19 @@ $ sudo systemctl status elasticsearch
 
 ### GROWI に必要な Elasticsearch プラグインのインストール
 
-以下の Elasticsearch plugin をインストールします
+以下の Elasticsearch plugin をインストールします。
 
 * [Japanese \(kuromoji\) Analysis plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-kuromoji.html)
 * [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-icu.html)
 
-まずは、Elasticsearch plugin をインストールするために利用するコマンドを検索します
+まずは、Elasticsearch plugin をインストールするために利用するコマンドを検索します。
 
 ```text
 $ rpm -ql elasticsearch | grep bin | grep plugin
 /usr/share/elasticsearch/bin/elasticsearch-plugin
 ```
 
-上記で出力されたコマンドを利用して、 analysis-kuromoji plugin と analysis-icu plugin をインストールします
+上記で出力されたコマンドを利用して、 analysis-kuromoji plugin と analysis-icu plugin をインストールします。
 
 ```text
 # analysis-kuromoji のインストール
@@ -168,7 +172,7 @@ $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 
 [公式ページ](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-red-hat/) に従ってインストールを実施します。 バージョンは、MongoDB 3.6 です。
 
-レポジトリの追加を行います。 `/etc/yum.repos.d/mongodb-org-3.6.repo` を作成し、以下の内容を書き込みます。
+レポジトリを追加します。 `/etc/yum.repos.d/mongodb-org-3.6.repo` を作成し、以下の内容を書き込みます。
 
 ```text
 [mongodb-org-3.6]
@@ -208,7 +212,7 @@ MongoDB の自動起動設定を有効化します。
 $ sudo systemctl enable mongod
 ```
 
-正常に起動しているか確認を行います。
+正常に起動しているか確認します。
 
 ```text
 $ sudo systemctl status mongod
@@ -274,7 +278,7 @@ npm start
 
 ### systemd による自動起動の設定
 
-「[systemd による自動起動](../admin-cookbook/launch-with-systemd.md)」を参照して下さい。
+「[systemd による自動起動](/ja/admin-guide/admin-cookbook/launch-with-systemd.html)」を参照してください。
 
 ## リバースプロキシの設定
 

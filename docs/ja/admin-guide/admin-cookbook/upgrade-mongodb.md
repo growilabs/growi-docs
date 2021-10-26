@@ -3,20 +3,24 @@
 [[toc]]
 
 ::: warning
-この項目の内容は、以下の GROWI バーションアップ時に必要になることがあります。
+この項目の内容は、以下の GROWI バーションアップ時に必要な場合があります。
 
-- [v4.2.x へのアップグレード](../upgrading/42x.md)
-- [v3.4.x へのアップグレード](../upgrading/34x.md)
+- [v4.2.x へのアップグレード](/ja/admin-guide/upgrading/42x.html)
+- [v3.4.x へのアップグレード](/ja/admin-guide/upgrading/34x.html)
 
 :::
 
+<!-- textlint-disable weseek/no-doubled-joshi -->
+<!-- textlint-disable weseek/sentence-length -->
 GROWI のバージョン v4.1.x から v4.2.x にアップグレードする場合は、以下のセクションのうち、「v3.4からv3.6(またはv3.6からv4.0)」から「v4.2からv4.4」までを上から順に一つずつ操作する必要があります。
+<!-- textlint-enable weseek/sentence-length -->
+<!-- textlint-enable weseek/no-doubled-joshi -->
 
 ## MongoDB v3.4 から v3.6 へのアップグレード
 
-::: note
+::: tip Note
 GROWI v3.3以前を利用したことがない場合、本セクションは飛ばして構いません。
-:::
+::: 
 
 v3.4 から v3.6 へのアップグレードは[こちら](https://docs.mongodb.com/manual/release-notes/3.6-upgrade-standalone/index.html)を参照してください。
 

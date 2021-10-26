@@ -29,7 +29,7 @@ WantedBy=multi-user.target
 #### WorkingDirectory
 
 GROWI のディレクトリのある場所を指定します。  
-[GROWI Docs](../getting-started/docker-compose.html) に従ってインストールした場合は `/opt/growi` です。適宜環境に合わせて設定してください。
+[GROWI Docs](/ja/admin-guide/getting-started/docker-compose.html) に従ってインストールした場合は `/opt/growi` です。適宜環境に合わせて設定してください。
 
 #### Environment
 

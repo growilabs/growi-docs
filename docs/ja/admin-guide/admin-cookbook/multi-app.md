@@ -1,7 +1,7 @@
 # 複数の GROWI を起動
 
 ::: tip
-この Cookbook は [docker-compose](../getting-started/docker-compose.md) による管理を前提としています
+この Cookbook は [docker-compose](/ja/admin-guide/getting-started/docker-compose.html) による管理を前提としています
 :::
 
 ## 概要

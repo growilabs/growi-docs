@@ -1,7 +1,7 @@
 # Let's Encrypt による HTTPS 運用
 
 ::: tip
-この Cookbook は [docker-compose](../getting-started/docker-compose.md) による管理を前提としています
+この Cookbook は [docker-compose](/ja/admin-guide/getting-started/docker-compose.html) による管理を前提としています
 :::
 
 ## 概要
@@ -31,6 +31,7 @@ docker-compose up
 
 
 ### ドメイン名の設定
+
 `./docker-compose.override.yml` の `DOMAINS` の値に、利用者が管理可能なドメイン名を設定してください。
 
 ```text:docker-compose.override.yml

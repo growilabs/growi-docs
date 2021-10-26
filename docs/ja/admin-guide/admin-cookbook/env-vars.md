@@ -46,8 +46,8 @@ pageClass: admin-cookbook-env-vars
 | `HACKMD_URI` | 接続する [HackMD(CodiMD)](https://hackmd.io/) サーバーの URI | |
 | | このサーバーは GROWI エージェントをロードする必要があります。 セットアップ方法は[こちら](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html)。| |
 | `HACKMD_URI_FOR_SERVER` | GROWI Express サーバーが参照する [HackMD(CodiMD)](https://hackmd.io/) のURI。 未設定の場合は `HACKMD_URI` が使用されます。 | |
-| `PLANTUML_URI` | 接続する [PlantUML](http://plantuml.com/) サーバーの URI | |
-| `BLOCKDIAG_URI` | 接続する [blockdiag](http://blockdiag.com/) サーバーの URI | |
+| `PLANTUML_URI` | 接続する [PlantUML](https://plantuml.com/ja/) サーバーの URI | |
+| `BLOCKDIAG_URI` | 接続する [blockdiag](http://blockdiag.com/ja/) サーバーの URI | |
 | `DRAWIO_URI` | 接続する [diagrams.net(draw.io)](https://www.diagrams.net/) サーバーの URI | |
 | `S2SMSG_PUBSUB_SERVER_TYPE` |  | |
 | | : `nchan` Nginx [Nchan](https://nchan.io/) を利用します | |
