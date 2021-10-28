@@ -5,12 +5,12 @@
 
 ## growi-plugin-boilerplate で可能になること
 
-growi-plugin-boilerplate をインストールすると、`$foo` タグおよび `$bar` タグが利用可能になります。(より詳しい説明は [カスタムタグ](./custom-tag.md) ページをご覧ください)
+growi-plugin-boilerplate をインストールすると、`$foo` タグおよび `$bar` タグが利用できます。(より詳しい説明は [カスタムタグ](/ja/dev/plugin/custom-tag.html) ページをご覧ください)
 
 利用時の全体の流れは以下のようになります。
 
 1. ユーザーが Markdown 入力中、`$foo` タグおよび `$bar` タグを利用する
-1. Markdown レンダラーに登録された [BasicInterceptor](/en/api/commons/util/basic-interceptor.md) 拡張が上記タグの利用を検出し、React Component を描画
+1. Markdown レンダラーに登録された [BasicInterceptor](/en/api/commons/util/basic-interceptor.html) 拡張が上記タグの利用を検出し、React Component を描画
     - `$foo` タグの場合は `Foo` コンポーネント、`$bar` タグの場合は `Bar` コンポーネントを描画する
 1. `Bar` コンポーネントは、初期化後に REST によるサーバーサイド API アクセスを行い、取得した情報を描画
 
@@ -22,25 +22,29 @@ growi-plugin-boilerplate をインストールすると、`$foo` タグおよび
 
 - エントリーポイントは `src/client-entry.js` です
     ::: tip
-    エントリーポイントの概要については、[アーキテクチャ](./architecture.md) のページを確認してください
+    エントリーポイントの概要については、[アーキテクチャ](/ja/dev/plugin/architecture.html) のページを確認してください
     :::
-- `interceptorManager` に対し、2つの [BasicInterceptor](/en/api/commons/util/basic-interceptor.md) 拡張クラスのインスタンスを登録しています
+- `interceptorManager` に対し、2つの [BasicInterceptor](/en/api/commons/util/basic-interceptor.html) 拡張クラスのインスタンスを登録しています
 
 
-### 2つの [BasicInterceptor](/en/api/commons/util/basic-interceptor.md) 拡張
+### 2つの [BasicInterceptor](/en/api/commons/util/basic-interceptor.html) 拡張
 
 - `FooBarPreRenderInterceptor`
-    - このクラスは、本体側が Markdown の解析段階で発火するイベントに反応するような設計になっています
+    - このクラスは、本体側が Markdown の解析段階で発火するイベントに反応する設計です
         - `isInterceptWhen` メソッドの処理によります
     - 上記イベントが起こると、`process` メソッドがトリガされ、ユーザーが入力したタグパターンに合致する記述があるかを調べます
+
         ::: tip
-        プラグインタグの解析用のライブラリとして [customTagUtils](https://docs.growi.org/api/commons/plugin/util/custom-tag-utils.html) を利用できます
+        プラグインタグの解析用のライブラリとして [customTagUtils](/en/api/commons/plugin/util/custom-tag-utils.html) を利用できます
+
     - `$foo()` または `$bar()` の形にマッチした箇所があった場合、後に React Component を描画するための特殊なIDを持つ DOM に置き換えられます
 - `FooBarPostRenderInterceptor`
     - HTML のレンダリング後、`FooBarPreRenderInterceptor` で用意された特殊なIDを持つ DOM を対象に、React Component を描画する処理を行います
     - 同時に、カスタムタグのコンテキストデータを作成します
+
         ::: tip
-        カスタムタグの書式を parse してコンテキストデータを作成するためのライブラリとして [TagContext](https://docs.growi.org/api/commons/plugin/model/tag-context.html) を利用できます
+        カスタムタグの書式を parse してコンテキストデータを作成するためのライブラリとして [TagContext](/en/api/commons/plugin/model/tag-context.html) を利用できます
+
     - `$foo` タグの場合は `FooContext`、`$bar` タグの場合は `BarContext` インスタンスを生成し、React Component に渡します
 
 
@@ -49,13 +53,15 @@ React Component
 
 ### 初期化
 
-Foo コンポーネントおよび Bar コンポーネントが初期化されると、`componentWillMount` で [ステートキャッシュ](./custom-tag.md#ステートキャッシュ) からのステートデータの復元が行われます。キャッシュが見つからなかった場合は改めてコンテキストデータの parse を行います。
+Foo コンポーネントおよび Bar コンポーネントが初期化されると、`componentWillMount` で [ステートキャッシュ](/ja/dev/plugin/custom-tag.html#ステートキャッシュ) からのステートデータの復元が行われます。キャッシュが見つからなかった場合は改めてコンテキストデータの parse を行います。
 
 ### Foo コンポーネント
 
 Foo コンポーネントは、タグのオプションの値を表示するだけの単純な機能のみが実装されています。
 
-[クイックスタート#プラグインの利用](./quick-start.md#プラグインの利用) にあったように、
+<!-- textlint-disable weseek/ja-no-mixed-period -->
+[クイックスタート#プラグインの利用](/ja/dev/plugin/quick-start.html#プラグインの利用) にあったように、
+<!-- textlint-enable weseek/ja-no-mixed-period -->
 
 ```
 $foo()
@@ -70,10 +76,12 @@ $foo(range=1:10)
 ```
 
 `1:10` は、スタートを 1 、エンドを 10 とする表現です。
-これで parse 処理で例外が発生しなくなり、`Foo` コンポーネントは `fooContext.getOptRange()` から `range` オプションの値を受け取って、正常なアウトプットを行います。
+これにより parse 処理で例外が発生せず、`Foo` コンポーネントは `fooContext.getOptRange()` から `range` オプションの値を受け取って、正常なアウトプットを行います。
 
 ::: tip
-カスタムタグのオプションとして Range Expression を適用した値の parse 処理は、[OptionParser](https://docs.growi.org/api/commons/plugin/util/option-parser.html) ライブラリの `parseRange` メソッドの利用が便利です
+
+カスタムタグのオプションとして Range Expression を適用した値の parse 処理は、[OptionParser](/en/api/commons/plugin/util/option-parser.html) ライブラリの `parseRange` メソッドの利用が便利です。
+
 :::
 
 
@@ -81,7 +89,9 @@ $foo(range=1:10)
 
 Bar コンポーネントは、サーバーに対する Rest API アクセスを行います。
 
-[クイックスタート#プラグインの利用](./quick-start.md#プラグインの利用) にあったように、
+<!-- textlint-disable weseek/ja-no-mixed-period -->
+[クイックスタート#プラグインの利用](/ja/dev/plugin/quick-start.html#プラグインの利用) にあったように、
+<!-- textlint-enable weseek/ja-no-mixed-period -->
 
 ```
 $bar()
@@ -89,9 +99,9 @@ $bar()
 
 と記述すると、`axios` を利用して `/_api/plugin/bar/author` への HTTP GET リクエストが行われます。(実際の通信内容も確認するとよいでしょう)
 
-URL から分かるように、この route は Bar コンポーネント専用に新たに作成されたものであり、GROWI 本体で予め用意されているものではありません。route の登録については [カスタム route](./custom-route.md) ページ および、この後の [サーバーサイドの動作](#サーバーサイドの動作) セクションをご覧ください。
+URL から分かるように、この route は Bar コンポーネント専用に新たに作成されたものであり、GROWI 本体で予め用意されているものではありません。route の登録については [カスタム route](/ja/dev/plugin/custom-route.html) ページ および、この後の [サーバーサイドの動作](#サーバーサイドの動作) セクションをご覧ください。
 
-通信に成功すると、結果オブジェクトから取り出された `res.data.author.username` がステートにセットされ、ローディングスピナーの代わりに表示されるようになります。
+通信に成功すると、結果オブジェクトから取り出された `res.data.author.username` がステートにセットされ、ローディングスピナーの代わりに表示されます。
 
 #### ステートキャッシュの作成
 
@@ -107,7 +117,7 @@ URL から分かるように、この route は Bar コンポーネント専用�
 Bar コンポーネントのローディング時、スピナーが明滅していることに気付きます。これは `src/client/css/bar.css` で定義されているアニメーションで、`Bar.jsx` 内でインポートされることで GROWI アプリケーションに適用されます。
 
 ::: warning
-このように取り込まれた CSS は直接 head エレメント内に展開されるため、GROWI アプリケーション全体をスコープに適用されることに注意してください。
+このように取り込まれた CSS は直接 head エレメント内に展開されます。そのため、GROWI アプリケーション全体をスコープに適用されますのでご注意ください。
 :::
 
 
@@ -118,7 +128,7 @@ Bar コンポーネントのローディング時、スピナーが明滅して�
 
 - エントリーポイントは `src/server-entry.js` です
     ::: tip
-    エントリーポイントの概要については、[アーキテクチャ](./architecture.md) のページを確認してください
+    エントリーポイントの概要については、[アーキテクチャ](/ja/dev/plugin/architecture.html) のページを確認してください
     :::
 - `src/server/routes` を require しています
 
@@ -137,9 +147,9 @@ Bar コンポーネントのローディング時、スピナーが明滅して�
 
 以上で growi-plugin-boilerplate の探検は終了です。紹介したコードは多かったかもしれませんが、カスタムタグの実現というスコープでは、独自にロジックの実装が必要なクラスは多くありません。
 
-以下にカスタマイズする際のポイントを列挙します。上から順に少しずつ改変して実装することで、比較的簡単にオリジナルのカスタムタグを実装することが可能です。
+以下にカスタマイズする際のポイントを列挙します。上から順に少しずつ改変して実装することで、比較的簡単にオリジナルのカスタムタグを実装できます。
 
-- [メタデータ](metadata.md)に関しては特に編集する必要はない
+- [メタデータ](/ja/dev/plugin/metadata.html)に関しては特に編集する必要はない
 - `BasicInterceptor` 拡張に関しては、ほとんどの部分を流用できる
     - PreRenderInterceptor は、実装したいタグのパターンの差し替えのみ
     - PostRenderInterceptor は、実装したいタグの数に応じてコンテキストクラスの初期化コードと、それに対応する React Component レンダリングコードを追加する
@@ -149,4 +159,4 @@ Bar コンポーネントのローディング時、スピナーが明滅して�
 - パフォーマンス対策として、`TagCacheManagerFactory` を実装
     - 各 React Component の 正常系/異常系 それぞれで、出力結果を左右するステートオブジェクトをキャッシュするように `tagCacheManager.cacheState()` を呼び出し
 - サーバーからデータを取得したい場合は REST API リクエストを行う
-    - プラグイン独自のデータ取得を行いたい場合は、新たにサーバーサイドに route を定義できる
+    - プラグイン独自のデータを取得したい場合は、新たにサーバーサイドに route を定義できる

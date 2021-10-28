@@ -1,7 +1,7 @@
 # 各種ツールの準備
 
 ::: tip Note
-以下は WESEEK, Inc. での統一開発環境の紹介です。
+以下は WESEEK, Inc. で統一された開発環境の紹介です。
 そのため、開発にあたって必須ではない設定やツールの指定が含まれています。
 :::
 
@@ -27,7 +27,7 @@
 ホストPCで作業します。
 
 1. SourceTreeインストール
-    * [https://ja.atlassian.com/software/sourcetree](https://ja.atlassian.com/software/sourcetree) からDLしてインストールする
+    * [https://www.atlassian.com/ja/software/sourcetree](https://www.atlassian.com/ja/software/sourcetree) からDLしてインストールする
     * 「Git が見つかりませんでした」というダイアログが表示された場合は、「システム全体でなく、SourceTree 単独で使うためだけの内蔵用の Git をダウンロードする。」を選択
 2. SourceTree設定
     1. SourceTree からターミナルを開く
@@ -57,10 +57,10 @@
 
 ::: tab "Windows" id="tab-docker-win"
 
-※下記手順は、Virtualbox との併用を行わない手順になります
+※下記手順は、Virtualbox を併用しない手順です。
 
-1. WSL2 を利用可能な状態にする
-    1. [WSL2 Linux カーネル更新プログラム パッケージ](https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-kernel) をインストール
+1. WSL2 を利用できる状態にする
+    1. [WSL2 Linux カーネル更新プログラム パッケージ](https://docs.microsoft.com/ja-jp/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package) をインストール
     1. 管理者権限で起動した PowerShell で以下を実行
 
         ```bash
@@ -82,7 +82,7 @@
             * Ubuntu    Stopped         2
             ```
 
-        * VERSION 1 で動いている場合は、更に `wsl --set-version Ubuntu 2` を打ち込んでディストリビューションの更新を行う
+        * VERSION 1 で動いている場合は、更に `wsl --set-version Ubuntu 2` を打ち込んでディストリビューションを更新する
     1. ホストのメモリを消費しすぎてしまう問題([microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))への対処として、メモリサイズを制限する
         * `C:\Users\YourAccount\.wslconfig` を編集(ファイルが存在しない場合は作成)
 
@@ -111,13 +111,13 @@
 ## Git 設定
 
 devcontainer は 自動的に docker ホストの設定を拝借します。  
-ここではコンテナ内部から参照するためのホスト側の設定を行います。
+ここではコンテナ内部から参照するためのホスト側のコンフィグレーションを設定します。
 
 :::: tabs
 
 ::: tab "Windows" id="tab-git-configuration-win"
 
-1. docker ホストとなる WSL2 のターミナルで以下を実行
+1. docker ホストとなる WSL2 のターミナルで以下を実行する
 
     ```bash
     # name, email の設定
@@ -127,8 +127,8 @@ devcontainer は 自動的に docker ホストの設定を拝借します。
     git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
     ```
 
-1. ホスト PC で credential helper を利用するため、以下の設定を行う
-    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
+1. ホスト PC で credential helper を利用するため、以下を設定する
+    <https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git>
 
 :::
 
@@ -142,8 +142,8 @@ devcontainer は 自動的に docker ホストの設定を拝借します。
     git config --global user.email "yourname@example.com"
     ```
 
-1. credential helper を利用するため、以下の設定を行う
-    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
+1. credential helper を利用するため、以下を設定する
+    <https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git>
 
 :::
 

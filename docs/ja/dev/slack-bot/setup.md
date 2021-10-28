@@ -49,7 +49,7 @@ Slack 上で GROWI にアクセス、操作する Slack-Bot「GROWI-Bot」の開
    -------------
    ```
 
-   Forwarding の https の方の URL (今回の例では `https://ad2a1e1851f1.ngrok.io` )をコピー
+   Forwarding の HTTPS の方の URL (今回の例では `https://ad2a1e1851f1.ngrok.io` )をコピー
 
 1. [Slash Commands](https://api.slack.com/apps/A01KC9EV5KK/slash-commands?) の Request URL に、コピーした URL + `/_api/v3/slack-bot` を設定
 
