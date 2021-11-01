@@ -4,10 +4,10 @@
 
 ## 概要
 
-Slack 上で GROWI にアクセス、操作する Slack-Bot「GROWI-Bot」の開発手順です。
+Slack 上で GROWI にアクセス、操作する Slack-Bot「GROWI-Bot」の開発手順です。各URLの[AppID]は、ご自身の App ID に置き換えてください。
 
-- Bot 管理ベージ
-  - <https://api.slack.com/apps/A01KC9EV5KK>
+- App 管理ページ
+  - <https://api.slack.com/apps/[AppID]>
 
 ## 準備
 
@@ -17,8 +17,8 @@ Slack 上で GROWI にアクセス、操作する Slack-Bot「GROWI-Bot」の開
 ## サーバー起動手順
 
 1. 以下の情報を取得
-   - [Basic Information](https://api.slack.com/apps/A01KC9EV5KK/general) の 「App Credentials」内の `Signing Secret`
-   - [OAuth & Permissions](https://api.slack.com/apps/A01KC9EV5KK/oauth?) の「OAuth Tokens for Your Team」内の `Bot User OAuth Access Token`
+   - 「Basic Information」 (<https://api.slack.com/apps/[AppID]/general>) の 「App Credentials」内の `Signing Secret`
+   - 「OAuth & Permissions」 (<https://api.slack.com/apps/[AppID]/oauth?>) の「OAuth Tokens for Your Team」内の `Bot User OAuth Access Token`
 1. `config/env.dev.js` に取得した値をセットする
 
    ```text:config.dev.js
@@ -51,6 +51,6 @@ Slack 上で GROWI にアクセス、操作する Slack-Bot「GROWI-Bot」の開
 
    Forwarding の HTTPS の方の URL (今回の例では `https://ad2a1e1851f1.ngrok.io` )をコピー
 
-1. [Slash Commands](https://api.slack.com/apps/A01KC9EV5KK/slash-commands?) の Request URL に、コピーした URL + `/_api/v3/slack-bot` を設定
+1. 「Slash Commands」 (<https://api.slack.com/apps/[AppID]/slash-commands?>) の Request URL に、コピーした URL + `/_api/v3/slack-bot` を設定
 
 1. Slack にて該当のアクションを行い、サーバーへのアクセスが確認できたら設定完了

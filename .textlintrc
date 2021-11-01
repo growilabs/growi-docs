@@ -12,9 +12,11 @@
         "baseURI": "https://docs.growi.org/",
         "ignore": [
           // 以下のURLはリンク切れ、またはリダイレクトされる場合でも無視する
-          "http://localhost**",
+          "http://localhost*",
           "https://slack.com/services/new/incoming-webhook",
-          "https://s3.console.aws.amazon.com/s3"
+          "https://s3.console.aws.amazon.com/s3",
+          "https://api.slack.com/apps/\[AppID*",
+          "https://api.slack.com/apps/\[AppID*\/*"
           ],
       },
       "ja-no-mixed-period": {
