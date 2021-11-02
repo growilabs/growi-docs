@@ -43,8 +43,10 @@ Done ボタンクリックにより、ページにタグが設定されます。
 
 ![](./images/tag7.png)
 
-ページに付いたタグをクリックした結果、タグを対象にページ検索が実行されます。  
+ページに付いたタグをクリックした結果、タグを対象にページ検索が実行されます。
+<!-- textlint-disable weseek/no-doubled-joshi -->
 検索結果には、同じタグが付いたページが表示されます。
+<!-- textlint-enable weseek/no-doubled-joshi -->
 
 ![](./images/tag8.png)
 
@@ -60,7 +62,9 @@ tag 検索の使い方として `tag:日本語` などの入力形式でタグ�
 
 ![](./images/tagsearch2.png)
 
+<!-- textlint-disable weseek/no-doubled-joshi -->
 先ほど設定したタグが付いたページが検索結果に表示されます。
+<!-- textlint-enable weseek/no-doubled-joshi -->
 
 ![](./images/tagsearch3.png)
 
