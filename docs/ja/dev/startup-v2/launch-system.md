@@ -13,7 +13,7 @@ npx lerna bootstrap
 ```
 
 ::: danger
-monorepo を採用しているため、依存関係管理には [lerna](https://lerna.js.org/) を使います。
+monorepo を採用しているため、依存関係の管理には [lerna](https://lerna.js.org/) を使います。
 `yarn install` または、`npm install` は利用しないでください
 :::
 
