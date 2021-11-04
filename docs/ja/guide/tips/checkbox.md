@@ -2,7 +2,7 @@
 
 ![checkbox](./images/checkbox.png)
 
-GROWI では、マークダウン記法でチェックボックスを記述する事が出来ます。
+GROWI では、マークダウン記法でチェックボックスを記述できます。
 
 ```markdown
 
