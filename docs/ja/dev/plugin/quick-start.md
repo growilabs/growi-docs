@@ -1,7 +1,7 @@
 # クイックスタート
 
 ::: tip
-以下の説明は、[開発環境の構築](../startup/dev-env.md) および [起動](../startup/launch.md) ページで紹介されている環境が構築されている前提で記述されています
+以下の説明は、[開発環境の構築](/ja/dev/startup-v2/dev-env.html) および [システムの起動](/ja/dev/startup-v2/launch-system.html) ページで紹介されている環境が構築されている前提で記述されています
 :::
 
 プラグインを開発するのに最も簡単な方法は、ボイラープレートである [growi-plugin-boilerplate](https://github.com/weseek/growi-plugin-boilerplate) をコピーし、それを元にオリジナルのリポジトリを作ることです。
@@ -38,7 +38,7 @@ GROWI は、[Node.js のモジュール解決](https://nodejs.org/dist/latest-v1
 
 こちらもディレクトリ名と同様に `growi-plugin-` プレフィクスを付けてください。
 
-依存関係解決
+依存関係の解決
 -----------
 
 プラグインが必要とするパッケージをインストールします。`growi-plugin-myplugin` ディレクトリ下で実行してください。
@@ -55,9 +55,9 @@ yarn
 開発環境の起動
 --------------
 
-本番環境でプラグインを利用する場合は、あらかじめ npm パッケージとして公開された GROWI プラグインを `yarn` を用いてインストールしますが、開発時はその手順は不要です。
+本番環境でプラグインを利用する場合は、あらかじめ npm パッケージとして公開された GROWI プラグインを `yarn` を用いてインストールします。ただし、開発時にこの手順は必要ありません。
 
-代わりに設定ファイルにリストされたプラグインを擬似的にインストールされた状態として扱うことで、`npm link` による設定を行う事無くシームレスな開発を実現しています。
+代わりに、設定ファイルにリストされたプラグインを擬似的にインストールされた状態として扱うことで、`npm link` により設定することなくシームレスな開発を実現しています。
 
 
 ### 本体の設定
@@ -80,7 +80,7 @@ yarn
 ### 本体の起動
 
 - フロントエンドサーバーの起動
-    - [起動](../startup/launch.html) ページの内容に従って起動
+    - [起動](/ja/dev/startup-v2/launch-system.html) ページの内容に従って起動
     - クライアントビルド時に以下のログを確認
         ```
         ...
@@ -93,7 +93,7 @@ yarn
         ...
         ```
 - サーバー
-    - [起動](../startup/launch.html) ページの内容に従って起動
+    - [起動](/ja/dev/startup-v2/launch-system.html) ページの内容に従って起動
     - サーバー起動時に以下のログを確認
         ```
         ...
@@ -111,7 +111,7 @@ yarn
 
 それでは使ってみましょう。
 
-[growi-plugin-boilerplate](https://github.com/weseek/growi-plugin-boilerplate) のソースコードを何も改変していなければ、Markdown 中で `$foo` タグと `$bar` タグが利用可能になります。
+[growi-plugin-boilerplate](https://github.com/weseek/growi-plugin-boilerplate) のソースコードを何も改変していなければ、Markdown 中で `$foo` タグと `$bar` タグが利用できます。
 
 
 ### `$foo` タグ
@@ -141,7 +141,7 @@ $foo(range=1:10)
 
 ### `$bar` タグ
 
-次はサーバーと通信を行う実装のサンプルです。
+次はサーバーと通信する実装のサンプルです。
 任意のページを編集し、以下を入力してください。
 
 ```

@@ -2,13 +2,13 @@
 
 ::: warning
 このページで紹介している開発スタートアップは**旧版**です。  
-ホストOSで node をセットアップし、実行します。
+ホストOSで Node.js をセットアップし、実行します。
 
-より快適な開発を行うには、Dev in Container を採用した [開発スタートアップ v2](../startup-v2/dev-env.md) を利用してください。
+より快適に開発するには、Dev in Container を採用した [開発スタートアップ v2](/ja/dev/startup-v2/dev-env.html) を利用してください。
 :::
 
 ::: tip
-以下は WESEEK, Inc. での統一開発環境の紹介です。
+以下は WESEEK, Inc. で統一している開発環境の紹介です。
 そのため、開発にあたって必須ではない設定やツールの指定が含まれています。
 :::
 
@@ -26,7 +26,7 @@
 ## Gitクライアントの準備
 
 1. SourceTreeインストール
-    * [https://ja.atlassian.com/software/sourcetree](https://ja.atlassian.com/software/sourcetree) からDLしてインストールする
+    * [https://www.atlassian.com/ja/software/sourcetree](https://www.atlassian.com/ja/software/sourcetree) からDLしてインストールする
     * 「Git が見つかりませんでした」というダイアログが表示された場合は、「システム全体でなく、SourceTree 単独で使うためだけの内蔵用の Git をダウンロードする。」を選択
 2. SourceTree設定
     1. SourceTree からターミナルを開く
@@ -44,7 +44,7 @@
 
 ## Node.js 実行環境のインストール
 
-Node.js, npm, Yarn 共に、CI 環境で利用する `node:12` のバージョンに合わせる
+Node.js, npm, Yarn 共に、CI 環境で利用する `node:12` のバージョンに合わせる。
 
 :::: tabs
 
@@ -61,7 +61,7 @@ Node.js, npm, Yarn 共に、CI 環境で利用する `node:12` のバージョ�
 
 1. Yarn インストール
 
-    * [https://yarnpkg.com/ja/docs/install](https://yarnpkg.com/ja/docs/install) から DL してインストール
+    * [https://classic.yarnpkg.com/en/docs/install#windows-stable](https://classic.yarnpkg.com/en/docs/install#windows-stable) から DL してインストール
 
 :::
 
@@ -77,7 +77,7 @@ Node.js, npm, Yarn 共に、CI 環境で利用する `node:12` のバージョ�
     ```
 
 1. Yarn インストール
-    * [https://classic.yarnpkg.com/ja/docs/install/#mac-stable](https://classic.yarnpkg.com/ja/docs/install/#mac-stable) からマニュアルに従ってインストール
+    * [https://classic.yarnpkg.com/en/docs/install#mac-stable](https://classic.yarnpkg.com/en/docs/install#mac-stable) からマニュアルに従ってインストール
 
 
 :::
@@ -113,7 +113,7 @@ Docker 環境をネイティブで準備できない場合のみ、以下の手�
         * バージョンは `6.0.8` とする。
     * Extension Pack の中で利用する機能はないのでインストール不要
 2. Vagrant インストール
-    * [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html) からDLしてインストールする
+    * [https://www.vagrantup.com/downloads](https://www.vagrantup.com/downloads) からDLしてインストールする
     * Vagrantfile を作成
 
         ```ruby

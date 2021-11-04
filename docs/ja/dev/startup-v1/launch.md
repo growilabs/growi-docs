@@ -2,9 +2,9 @@
 
 ::: warning
 このページで紹介している開発スタートアップは**旧版**です。  
-ホストOSで node をセットアップし、実行します。
+ホストOSで Node.js をセットアップし、実行します。
 
-より快適な開発を行うには、Dev in Container を採用した [開発スタートアップ v2](../startup-v2/dev-env.md) を利用してください。
+より快適に開発するには、Dev in Container を採用した [開発スタートアップ v2](./ja/dev/startup-v2/dev-env.html) を利用してください。
 :::
 
 ## 初回起動
@@ -17,14 +17,14 @@ git clone https://github.com/weseek/growi.git
 
 ### 実行環境のバージョンの確認
 
-[開発環境の構築#バージョンの確認](dev-env.md#バージョンの確認) を参照
+[開発環境の構築#バージョンの確認](/ja/dev/startup-v1/dev-env.html#バージョンの確認) を参照してください。
 
 ### 開発用データストアの準備
 
-Docker 利用可能な環境で以下を実行
+Docker を利用できる環境で以下を実行してください。
 
 ::: tip
-Windows の場合は [開発環境の構築#開発環境の依存インフラの準備](dev-env.md#開発環境の依存インフラの準備) で準備した Linux マシンの中で実行する
+Windows の場合は [開発環境の構築#開発環境の依存インフラの準備](/ja/dev/startup-v1/dev-env.html#開発環境の依存インフラの準備) で準備した Linux マシンの中で実行する。
 
 docker-compose コマンドがない場合はインストールしよう  
 [docker docs公式ページ　Install Docker Compose](https://docs.docker.com/compose/install/)
@@ -37,13 +37,13 @@ cd growi-docker-compose
 docker-compose -f docker-compose.dev.yml up
 ```
 
-以下のコンテナ群が起動します
+以下のコンテナ群が起動します。
 
 | Product | Port | Desc |
 | :--- | :--- | :--- |
 | MongoDB | 27017 |  |
 | ElasticSearch | 9200 |  |
-| [elasticsearch-head](https://github.com/mobz/elasticsearch-head) | 9100 | A web front end for an Elasticsearch cluster |
+| [elasticsearch-head](https://github.com/mobz/elasticsearch-head) | 9100 | A web frontend for an Elasticsearch cluster |
 
 ### 依存ライブラリの取得
 
@@ -74,7 +74,7 @@ npm run migrate
 
 ## 2回目以降の起動
 
-上記の [初回起動](#初回起動) のセクションを参考に、以下を実行
+上記の [初回起動](#初回起動) のセクションを参考に、以下を実行します。
 
 1. 実行環境のバージョンの確認
 2. 開発用データストアの準備

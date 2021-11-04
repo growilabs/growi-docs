@@ -10,7 +10,7 @@ GROWI は [Bunyan](https://github.com/trentm/node-bunyan) および [browser-bun
 
 ## ログレベル
 
-ログレベルの定義は [Bunyan#Levels](https://github.com/trentm/node-bunyan#levels) を参照してください
+ログレベルの定義は [Bunyan#Levels](https://github.com/trentm/node-bunyan#levels) を参照してください。
 
 デフォルトでは環境毎に以下のログレベルが設定されています。
 
