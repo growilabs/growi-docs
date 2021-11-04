@@ -1,7 +1,7 @@
 # 各種ツールの準備
 
 ::: tip Note
-以下は WESEEK, Inc. で統一された開発環境の紹介です。
+以下は WESEEK, Inc. で統一している開発環境の紹介です。
 そのため、開発にあたって必須ではない設定やツールの指定が含まれています。
 :::
 
@@ -110,8 +110,11 @@
 
 ## Git 設定
 
-devcontainer は 自動的に docker ホストの設定を拝借します。  
-ここではコンテナ内部から参照するためのホスト側のコンフィグレーションを設定します。
+devcontainer は 自動的に docker ホストの設定を参照します。  
+
+<!-- textlint-disable weseek/ja-no-redundant-expression -->
+ここではコンテナ内部から参照するためのホスト側の設定を行います。
+<!-- textlint-enable weseek/ja-no-redundant-expression -->
 
 :::: tabs
 
