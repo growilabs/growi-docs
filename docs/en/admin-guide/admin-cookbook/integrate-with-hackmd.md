@@ -14,7 +14,7 @@
 - Page data is shared through the medium of [window.postMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
 
 
-## Create a new HackMD(CodiMD) container with [growi-docker-compose](../getting-started/docker-compose.md)
+## Create a new HackMD(CodiMD) container with [growi-docker-compose](/en/admin-guide/getting-started/docker-compose.html)
 
 [This](https://github.com/weseek/growi-docker-compose/tree/master/examples/integrate-with-hackmd) example will be used.
 
@@ -22,18 +22,14 @@ Set up will follow these instructions [README.md](https://github.com/weseek/grow
 
 1. Prepare `examples/integrate-with-hackmd/docker-compose.override.yml`
 2. Add environment variables to GROWI container
-    - `HACKMD_URI`: HackMD server URI
-which can be accessed from GROWI client browser
-    - `HACKMD_URI_FOR_SERVER`: HackMD server URI
-which can be accessed from GROWI server container
+    - `HACKMD_URI`: HackMD server URI which can be accessed from GROWI client browser
+    - `HACKMD_URI_FOR_SERVER`: HackMD server URI which can be accessed from GROWI server container
         - System use the same value as `HACKMD_URI` if not set
 3. Add environment variables to CodiMD container
-    - `GROWI_URI`: GROWI server URI
-which can be accessed from client browser
+    - `GROWI_URI`: GROWI server URI which can be accessed from client browser
 4. Start the containers
 5. From the GROWI Admin page "App settings", set the Site URL
-    - Input GROWI server URI
-which can be accessed from client browser
+    - Input GROWI server URI which can be accessed from client browser
     - Another option is to set the `APP_SITE_URL` environment variable
 
 ## Integrate with an existing HackMD(CodiMD)
@@ -41,15 +37,12 @@ which can be accessed from client browser
 ### GROWI Settings
 
 1. Set the environment variables below
-    - `HACKMD_URI`: HackMD server URI
-which can be accessed from GROWI client browser
-    - `HACKMD_URI_FOR_SERVER`: HackMD server URI
-which can be accessed from GROWI server container
+    - `HACKMD_URI`: HackMD server URI which can be accessed from GROWI client browser
+    - `HACKMD_URI_FOR_SERVER`: HackMD server URI which can be accessed from GROWI server container
         - System use the same value as `HACKMD_URI` if not set
 2. Restart
 3. From the GROWI Admin page "App settings", set the Site URL
-    - Input GROWI server URI
-which can be accessed from client browser
+    - Input GROWI server URI which can be accessed from client browser
     - Another option is to set the `APP_SITE_URL` environment variable
 
 ### HackMD(CodiMD) Settings
@@ -60,20 +53,26 @@ which can be accessed from client browser
 2. Edit ejs to load the GROWI agent:
     * For HackMD/CodiMD:
       - Add below to the end of `/codimd/public/views/codimd/head.ejs`
+
           ```javascript
           <script src="<%= process.env.GROWI_URI %>/_hackmd/load-styles"></script>
           ```
+
       - Add below to the end of `/codimd/public/views/codimd/foot.ejs`
+
           ```javascript
           <script src="<%= process.env.GROWI_URI %>/_hackmd/load-agent" defer></script>
           ```
 
     * For HedgeDoc:
       - Add below to the end of `/hedgedoc/public/views/hedgedoc/head.ejs`
+
           ```javascript
           <script src="<%= process.env.GROWI_URI %>/_hackmd/load-styles"></script>
           ```
+
       - Add below to the end of `/hedgedoc/public/views/hedgedoc/footer.ejs`
+      
           ```javascript
           <script src="<%= process.env.GROWI_URI %>/_hackmd/load-agent" defer></script>
           ```

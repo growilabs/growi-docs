@@ -8,7 +8,7 @@ This chapter introduces how to change the destination to upload attachment files
 
 ## File upload method settings for attached files
 
-The following can be used to save the attachment file of the GROWI page. See [here](../management-cookbook/app-settings.html#file-upload-settings) for details.
+The following can be used to save the attachment file of the GROWI page. See [here](/en/admin-guide/management-cookbook/app-settings.html#file-upload-settings) for details.
 
 - Amazon S3
 - Google Cloud Storage
@@ -32,8 +32,7 @@ Also, set the value of the environment variable `FILE_UPLOAD` referring to the t
 | MongoDB | `mongodb` |
 | Local File System | `local` |
 
-If the file upload method is fixed by the environment variable `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE`,
-the function of selecting file upload method on the management page is disabled.
+If the file upload method is fixed by the environment variable `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE`, the function of selecting file upload method on the management page is disabled.
 
 
 ### Google Cloud Storage Settings with environment variable
@@ -41,7 +40,7 @@ the function of selecting file upload method on the management page is disabled.
 If you don't set a value in the GCS Settings form in the File Upload Settings,
 use the default value below.
 
-- Api Key Json Path: `GCS_API_KEY_JSON_PATH`
+- API Key Json Path: `GCS_API_KEY_JSON_PATH`
 - Bucket Name: `GCS_BUCKET`
 - Name Space: `GCS_UPLOAD_NAMESPACE`
 
@@ -70,7 +69,7 @@ The attachment reference method has been changed from v4.2.3.
 When using Amazon S3 or Google Cloud Storage, one of the following two methods can be chosen.
 After v4.2.3, Redirect Mode is set as a default.
 
-In case of the system requires advanced security, change to Relay Mode from [App settings of the Management page ](../management-cookbook/app-settings.html#appsettings-tbd).
+In case of the system requires advanced security, change to Relay Mode from [App settings of the Management page ](/en/admin-guide/management-cookbook/app-settings.html#appsettings-tbd).
 
 ### Relay Mode (optional / default specification before v4.2.2)
 
@@ -96,8 +95,8 @@ Since each client receives images directly from Cloud Service without relaying t
 
 In addition, when a signed URL is issued, a sufficiently short expiration period is set. That's why the specifications are well-balanced in terms of security.
 
-The GROWI server caches signed URLs for the same amount of time as the expiration period (120 seconds by default)
-The number of seconds to keep the cache can be set with [Environment Variables](../admin-cookbook/env-vars.html).
+The GROWI server caches signed URLs for the same amount of time as the expiration period (120 s by default).
+The number of seconds to keep the cache can be set with [Environment Variables](/en/admin-guide/admin-cookbook/env-vars.html).
 
 - AWS(S3)
   - `S3_LIFETIME_SEC_FOR_TEMPORARY_URL`
