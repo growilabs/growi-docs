@@ -59,7 +59,7 @@ man
       -e MONGODB_HOST=<Target MongoDB Host> \
       -e AWS_ACCESS_KEY_ID=<Your IAM Access Key ID> \
       -e AWS_SECRET_ACCESS_KEY=<Your IAM Secret Access Key> \
-      -e S3_TARGET_BUCKET_URL=<Target S3 Bucket URL (s3://...)> \
+      -e S3_TARGET_BUCKET_URL=<Target S3 bucket URL (s3://...)> \
       weseek/mongodb-awesome-backup
     ```
 
@@ -78,7 +78,7 @@ man
       -e MONGODB_HOST=<Target MongoDB Host> \
       -e AWS_ACCESS_KEY_ID=<Your IAM Access Key ID> \
       -e AWS_SECRET_ACCESS_KEY=<Your IAM Secret Access Key> \
-      -e S3_TARGET_BUCKET_URL=<Target S3 Bucket URL (s3://...)> \
+      -e S3_TARGET_BUCKET_URL=<Target S3 bucket URL (s3://...)> \
       -e S3_TARGET_FILE=backup-YYYYMMdd.tar.bz2 \
       weseek/mongodb-awesome-backup restore
     ```

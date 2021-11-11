@@ -13,7 +13,7 @@ This chapter introduces how to set up auto backup for GROWI data using [weseek/m
   * Access key and secret key for a user authorized to access S3 bucket.
 
 ::: tip
-See [MongoDB Backup & Restore](mongodb-backup.md) before you start.
+See [MongoDB Backup & Restore](/en/admin-guide/admin-cookbook/mongodb-backup.html) before you start.
 
 :::
 
@@ -25,7 +25,7 @@ See [MongoDB Backup & Restore](mongodb-backup.md) before you start.
       -e MONGODB_HOST=<Target MongoDB Host> \
       -e AWS_ACCESS_KEY_ID=<Your IAM Access Key ID> \
       -e AWS_SECRET_ACCESS_KEY=<Your IAM Secret Access Key> \
-      -e S3_TARGET_BUCKET_URL=<Target S3 Bucket URL (s3://...)> \
+      -e S3_TARGET_BUCKET_URL=<Target S3 bucket URL (s3://...)> \
       -e CRONMODE=true \
       -e "CRON_EXPRESSION=0 4 * * *" \
       weseek/mongodb-awesome-backup
@@ -43,7 +43,7 @@ See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-ba
 ## Manage with docker-compose
 
 ::: tip
-If GROWI is installed with [growi-docker-compose](../getting-started/docker-compose.md), preparing a backup container is even easier.
+If GROWI is installed with [growi-docker-compose](/en/admin-guide/getting-started/docker-compose.html), preparing a backup container is even easier.
 :::
 
 * Refer to weseek/growi-docker-compose [Example](https://github.com/weseek/growi-docker-compose/tree/master/examples/backup-mongodb-data), and follow the steps below.

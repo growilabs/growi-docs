@@ -48,8 +48,7 @@ Set up will follow these instructions [README.md](https://github.com/weseek/grow
 ### HackMD(CodiMD) Settings
 
 1. Set the environment variables below
-    - `GROWI_URI`: GROWI server URI
-which can be accessed from client browser
+    - `GROWI_URI`: GROWI server URI which can be accessed from client browser
 2. Edit ejs to load the GROWI agent:
     * For HackMD/CodiMD:
       - Add below to the end of `/codimd/public/views/codimd/head.ejs`
@@ -109,8 +108,8 @@ which can be accessed from client browser
 
 - Check whether the correct value is set for the GROWI Site URL
 - When making changes to existing HackMD/CodiMD, check whether
-    - content inserted into head.ejs, foot.ejs is correct
-    - the URL from the src attribute of the script tag inserted into the source code of HackMD/CodiMD can be accessed successfully(can load the css, javascript).
+    - Content inserted into head.ejs and foot.ejs are correct
+    - The URL from the src attribute of the script tag inserted into the source code of HackMD/CodiMD can be accessed successfully (can load the CSS and JavaScript).
 
 
 

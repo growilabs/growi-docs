@@ -81,14 +81,14 @@ If the upload banner is hidden as following, the File Uploading settings have no
 
 ## Email settings
 
-Sending e-mail from GROWI can be enabled by configuring one of the following configuration patterns:
+Sending email from GROWI can be enabled by configuring one of the following configuration patterns:
 
   1. Setting up an SMTP server
   2. Using SES from AWS
 
 ![appsettings14](./images/appsettings14.png)
 
-If there is an alert that says **"E-mail setting is not set up"**, this indicates that the configuration form has not been fully completed.
+If there is an alert that says **"Email setting is not set up"**, this indicates that the configuration form has not been fully completed.
 
 ### Notes on using SES
 
@@ -132,13 +132,13 @@ Please use the following upload systems to save attached files.
 
 Save files to Bucket of Amazon S3.
 
-Please refer to [here](../management-cookbook/app-settings.html#get-aws-account-infomation) to set up Amazon S3.
+Please refer to [here](/en/admin-guide/management-cookbook/app-settings.html#get-aws-account-infomation) to set up Amazon S3.
 
 #### Upload to Google Cloud Storage
 
 Save files Bucket to Google Cloud Storage.
 
-Please refer to [here](../management-cookbook/app-settings.html#set-up-google-cloud-storage) to set up Google Cloud Storage.
+Please refer to [here](/en/admin-guide/management-cookbook/app-settings.html#set-up-google-cloud-storage) to set up Google Cloud Storage.
 
 #### Upload to MongoDB
 
@@ -163,13 +163,13 @@ Please note that by changing the file upload method in the middle,
 ::: warning
 If the file upload method is fixed by the environment variable
  `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE`, the file upload method cannot be changed here.
-  See [here](../admin-cookbook/attachment) for more information.
+  See [here](/en/admin-guide/admin-cookbook/attachment) for more information.
 :::
 
 Settings are required when using Amazon S3 and Google Cloud Storage.
  Please refer to the following to complete it.
 
-### Set up Amazon S3 Bucket
+### Set up Amazon S3 bucket
 
 Here are the steps to set up a connection to Amazon S3 (Amazon Simple Storage Service).
 
@@ -182,16 +182,14 @@ from the dropdown that appears when clicking on the account name in the upper ri
  create and store the Access Key ID and Secret Access Key for the AWS account.
 3. Expand "Account ID" to comfirm the valid user ID.
 
-#### Get or change permitions of Amazon S3 Bucket
+#### Get or change permitions of Amazon S3 bucket
 
 1. Access to Amazon S3 [Dashboard](https://s3.console.aws.amazon.com/s3).
-2. Check the region and bucket name of the S3 Bucket to register.
-3. Select the S3 Bucket to register and open "Access Rights".
+2. Check the region and bucket name of the S3 bucket to register.
+3. Select the S3 bucket to register and open "Access Rights".
 4. Click the edit button of "Block Public Access".
 only uncheck "Block public access" through the New Access Control List (ACL) and save the changes.
-5. If the valid ID of the AWS account that has been added to the "Bucket Owner Permissions" and the "Access Control List" doesn't match step 3 of the procedure "Getting AWS Account Information,
- add the account with the verified canonical ID to "Access Other AWS Accounts".
- In this case, please check all types of authority.
+5. If the valid ID of the AWS account that has been added to the "Bucket Owner Permissions" and the "Access Control List" doesn't match step 3 of the procedure "Getting AWS Account Information", add the account with the verified canonical ID to "Access Other AWS Accounts". In this case, please check all types of authority.
 
 #### Register Bucket to GROWI
 
@@ -212,7 +210,7 @@ for more GCS information.
 
 ![appsettings20](./images/appsettings20.png)
 
-- Api Key Json Path: [The path to the JSON file for the GCP service account key (as seen from the GROWI root directory)]
+- API Key Json Path: [The path to the JSON file for the GCP service account key (as seen from the GROWI root directory)]
 - Bucket Name: [Bucket Name of GCS]
 - Name Space: [Directory name for uploading files created in the bucket]
 
@@ -220,7 +218,7 @@ for more GCS information.
 
 When using Amazon S3 or Google Cloud Storage, an attachment reference method can be set.
 
-Please refer to [Attachment reference method](../admin-cookbook/attachment.html#how-to-refer-to-attached-files) for the delivery method.
+Please refer to [Attachment reference method](/en/admin-guide/admin-cookbook/attachment.html#how-to-refer-to-attached-files) for the delivery method.
 
 ## Plugin Settings
 

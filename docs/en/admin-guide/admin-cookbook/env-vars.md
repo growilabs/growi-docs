@@ -4,6 +4,8 @@ pageClass: admin-cookbook-env-vars
 
 # Environment Variables
 
+<!-- textlint-disable weseek/use-si-units -->
+
 | Enviroment Variable | Description | Default Value |
 | ------------------- | ----------  | ------------- |
 | `MONGO_URI` | URI to connect to MongoDB. | `mongodb://localhost/growi` |
@@ -46,15 +48,15 @@ pageClass: admin-cookbook-env-vars
 | `HACKMD_URI` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server. | |
 | | This server must load the GROWI agent. [Here's how to prepare it](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html). | |
 | `HACKMD_URI_FOR_SERVER` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server from GROWI Express server. If not set, `HACKMD_URI` will be used. | |
-| `PLANTUML_URI` | URI to connect to [PlantUML](http://plantuml.com/) server. | |
-| `BLOCKDIAG_URI` | URI to connect to [blockdiag](http://blockdiag.com/) server. | |
+| `PLANTUML_URI` | URI to connect to [PlantUML](https://plantuml.com/en/) server. | |
+| `BLOCKDIAG_URI` | URI to connect to [blockdiag]http://blockdiag.com/en/) server. | |
 | `DRAWIO_URI` | URI to connect to [diagrams.net(draw.io)](https://www.diagrams.net/) server. | |
 | `S2SMSG_PUBSUB_SERVER_TYPE` |  | |
 | | : `nchan` Nginx [Nchan](https://nchan.io/) | |
 | | : `redis` (Not implemented yet) | |
 | `S2SMSG_PUBSUB_NCHAN_PUBLISH_PATH` | Publisher endpoint path for Nchan server | `/pubsub` |
 | `S2SMSG_PUBSUB_NCHAN_SUBSCRIBE_PATH` | Subscriber endpoint path for Nchan server | `/pubsub` |
-| `S2SMSG_PUBSUB_NCHAN_CHANNEL_ID` | The channel id to connect to Nchan server | |
+| `S2SMSG_PUBSUB_NCHAN_CHANNEL_ID` | The channel ID to connect to Nchan server | |
 | `PROMSTER_ENABLED` | Enable [Promster](https://github.com/tdeekens/promster) server | `false` |
 | `PROMSTER_PORT` | The port to launch Promster server | 7788 |
 | `SLACKBOT_TYPE` | Type of Slack Bot to use when linking with Slack |  |
@@ -72,15 +74,17 @@ pageClass: admin-cookbook-env-vars
 | `SAML_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars over values in DB for some SAML options | |
 | `SAML_ENTRY_POINT` | IdP entry point | |
 | `SAML_ISSUER` | Issuer string to supply to IdP | |
-| `SAML_ATTR_MAPPING_ID` | Attribute map for id | |
+| `SAML_ATTR_MAPPING_ID` | Attribute map for ID | |
 | `SAML_ATTR_MAPPING_USERNAME` | Attribute map for username | |
 | `SAML_ATTR_MAPPING_MAIL` | Attribute map for email | |
 | `SAML_ATTR_MAPPING_FIRST_NAME` | Attribute map for first name | |
 | `SAML_ATTR_MAPPING_LAST_NAME` | Attribute map for last name | |
 | `SAML_CERT` | PEM-encoded X.509 signing certificate string to validate the response from IdP | |
-| `OAUTH_GOOGLE_CLIENT_ID` | Google API client id for OAuth login. | |
+| `OAUTH_GOOGLE_CLIENT_ID` | Google API client ID for OAuth login. | |
 | `OAUTH_GOOGLE_CLIENT_SECRET` | Google API client secret for OAuth login. | |
-| `OAUTH_GITHUB_CLIENT_ID` | GitHub API client id for OAuth login. | |
+| `OAUTH_GITHUB_CLIENT_ID` | GitHub API client ID for OAuth login. | |
 | `OAUTH_GITHUB_CLIENT_SECRET` | GitHub API client secret for OAuth login. | |
 | `OAUTH_TWITTER_CONSUMER_KEY` | Twitter consumer key(API key) for OAuth login. | |
 | `OAUTH_TWITTER_CONSUMER_SECRET` | Twitter consumer secret(API secret) for OAuth login. | |
+
+<!-- textlint-enable weseek/sentence-length -->
