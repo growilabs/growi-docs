@@ -94,7 +94,7 @@ Since each client receives images directly from Cloud Service without relaying t
 
 In addition, when a signed URL is issued, a sufficiently short expiration period is set. That's why the specifications are well-balanced in terms of security.
 
-The GROWI server caches signed URLs for the same amount of time as the expiration period (120 s by default).
+The GROWI server caches signed URLs for the same amount of time as the expiration period (120 seconds by default).
 The number of seconds to keep the cache can be set with [Environment Variables](/en/admin-guide/admin-cookbook/env-vars.html).
 
 - AWS (S3)

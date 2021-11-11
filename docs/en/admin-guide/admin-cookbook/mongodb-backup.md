@@ -20,7 +20,9 @@ To backup/restore MongoDBs, [weseek/mongodb-awesome-backup](https://github.com/w
 
 #### When MongoDB Is Running as a Docker Container
 
-Run a command to find out the container name, and add an option `--link ${container}:mongo` with the container name (`${container}`).
+<!-- textlint-disable weseek/sentence-length -->
+Run a command to find out the container name, and add an option `--link ${container}:mongo` with the container name \(`${container}`\).
+<!-- textlint-enable weseek/sentence-length -->
 
 ##### e.g.
 
@@ -57,7 +59,7 @@ Add `--network host` to use the same network with the host.
       -e MONGODB_HOST=<Target MongoDB Host> \
       -e AWS_ACCESS_KEY_ID=<Your IAM Access Key ID> \
       -e AWS_SECRET_ACCESS_KEY=<Your IAM Secret Access Key> \
-      -e S3_TARGET_BUCKET_URL=<Target S3 bucket URL (s3://...)> \
+      -e S3_TARGET_BUCKET_URL=<Target S3 Bucket URL (s3://...)> \
       weseek/mongodb-awesome-backup
     ```
 2. The command creates a backup for all databases in the target MongoDB server, and upload it as `backup-YYYYMMdd.tar.bz2` in the S3 bucket.
@@ -74,7 +76,7 @@ See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-ba
       -e MONGODB_HOST=<Target MongoDB Host> \
       -e AWS_ACCESS_KEY_ID=<Your IAM Access Key ID> \
       -e AWS_SECRET_ACCESS_KEY=<Your IAM Secret Access Key> \
-      -e S3_TARGET_BUCKET_URL=<Target S3 bucket URL (s3://...)> \
+      -e S3_TARGET_BUCKET_URL=<Target S3 Bucket URL (s3://...)> \
       -e S3_TARGET_FILE=backup-YYYYMMdd.tar.bz2 \
       weseek/mongodb-awesome-backup restore
     ```

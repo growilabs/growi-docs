@@ -1,4 +1,4 @@
-# AWS S3 bucket Setting
+# AWS S3 Bucket Setting
 
 [[toc]]
 
@@ -19,7 +19,7 @@ This setting makes uploading attachment files and profile images to AWS S3 bucke
 2. In the "Access keys (access key ID and secret access key)" tab, create new access key.
 3. In the "Account identifiers" tab, check your Canonical User ID.
 
-### Get AWS S3 bucket Information 
+### Get AWS S3 Bucket Information 
 
 1. Access to [AWS S3 dashboard](https://s3.console.aws.amazon.com/s3).
 2. Check the region and name of S3 bucket that you will register with GROWI.
@@ -28,5 +28,5 @@ This setting makes uploading attachment files and profile images to AWS S3 bucke
 5. In the "Access Control List" tab, if the Canonical User ID that you checked in Step 3 of [Get AWS Account Information](#get-aws-account-information) doesn't match the Canonical ID added to the "Acceess for bucket owner" table, add the ID to the "Access for other AWS accounts" list with full permissions.
 
 ### Register Your Bucket With GROWI
-1. In App settings page (`/admin/app`), Input information of S3 bucket that you checked in Step 2 of [Get AWS S3 bucket Information](#get-aws-s3-bucket-information).
+1. In App settings page (`/admin/app`), Input information of S3 bucket that you checked in Step 2 of [Get AWS S3 Bucket Information](#get-aws-s3-bucket-information).
 2. If you use a S3-compatible storage service like MinIO, input the endpoint URL in the Custom Endpoint form. If this form is empty, GROWI uses Amazon S3 by default.
