@@ -10,7 +10,7 @@ growi-plugin-boilerplate をインストールすると、`$foo` タグおよび
 利用時の全体の流れは以下のようになります。
 
 1. ユーザーが Markdown 入力中、`$foo` タグおよび `$bar` タグを利用する
-1. Markdown レンダラーに登録された [BasicInterceptor](/en/api/commons/util/basic-interceptor.html) 拡張が上記タグの利用を検出し、React Component を描画
+1. Markdown レンダラーに登録された BasicInterceptor 拡張が上記タグの利用を検出し、React Component を描画
     - `$foo` タグの場合は `Foo` コンポーネント、`$bar` タグの場合は `Bar` コンポーネントを描画する
 1. `Bar` コンポーネントは、初期化後に REST によるサーバーサイド API アクセスを行い、取得した情報を描画
 
@@ -24,28 +24,28 @@ growi-plugin-boilerplate をインストールすると、`$foo` タグおよび
     ::: tip
     エントリーポイントの概要については、[アーキテクチャ](/ja/dev/plugin/architecture.html) のページを確認してください
     :::
-- `interceptorManager` に対し、2つの [BasicInterceptor](/en/api/commons/util/basic-interceptor.html) 拡張クラスのインスタンスを登録しています
+- `interceptorManager` に対し、2つの BasicInterceptor 拡張クラスのインスタンスを登録しています
 
 
-### 2つの [BasicInterceptor](/en/api/commons/util/basic-interceptor.html) 拡張
+### 2つの BasicInterceptor 拡張
 
 - `FooBarPreRenderInterceptor`
-    - このクラスは、本体側が Markdown の解析段階で発火するイベントに反応する設計です
-        - `isInterceptWhen` メソッドの処理によります
-    - 上記イベントが起こると、`process` メソッドがトリガされ、ユーザーが入力したタグパターンに合致する記述があるかを調べます
+  - このクラスは、本体側が Markdown の解析段階で発火するイベントに反応する設計です
+    - `isInterceptWhen` メソッドの処理によります
+  - 上記イベントが起こると、`process` メソッドがトリガされ、ユーザーが入力したタグパターンに合致する記述があるかを調べます
 
         ::: tip
-        プラグインタグの解析用のライブラリとして [customTagUtils](/en/api/commons/plugin/util/custom-tag-utils.html) を利用できます
+        プラグインタグの解析用のライブラリとして customTagUtils を利用できます
 
-    - `$foo()` または `$bar()` の形にマッチした箇所があった場合、後に React Component を描画するための特殊なIDを持つ DOM に置き換えられます
+  - `$foo()` または `$bar()` の形にマッチした箇所があった場合、後に React Component を描画するための特殊なIDを持つ DOM に置き換えられます
 - `FooBarPostRenderInterceptor`
-    - HTML のレンダリング後、`FooBarPreRenderInterceptor` で用意された特殊なIDを持つ DOM を対象に、React Component を描画する処理を行います
-    - 同時に、カスタムタグのコンテキストデータを作成します
+  - HTML のレンダリング後、`FooBarPreRenderInterceptor` で用意された特殊なIDを持つ DOM を対象に、React Component を描画する処理を行います
+  - 同時に、カスタムタグのコンテキストデータを作成します
 
         ::: tip
-        カスタムタグの書式を parse してコンテキストデータを作成するためのライブラリとして [TagContext](/en/api/commons/plugin/model/tag-context.html) を利用できます
+        カスタムタグの書式を parse してコンテキストデータを作成するためのライブラリとして TagContext を利用できます
 
-    - `$foo` タグの場合は `FooContext`、`$bar` タグの場合は `BarContext` インスタンスを生成し、React Component に渡します
+  - `$foo` タグの場合は `FooContext`、`$bar` タグの場合は `BarContext` インスタンスを生成し、React Component に渡します
 
 
 React Component
@@ -80,7 +80,7 @@ $foo(range=1:10)
 
 ::: tip
 
-カスタムタグのオプションとして Range Expression を適用した値の parse 処理は、[OptionParser](/en/api/commons/plugin/util/option-parser.html) ライブラリの `parseRange` メソッドの利用が便利です。
+カスタムタグのオプションとして Range Expression を適用した値の parse 処理は、OptionParser ライブラリの `parseRange` メソッドの利用が便利です。
 
 :::
 
@@ -107,9 +107,9 @@ URL から分かるように、この route は Bar コンポーネント専用�
 
 - `src/client/js/util/TagCacheManagerFactory.js`
 - `TagCacheManager` を利用するにあたり、2つのキーを渡しています
-    - 第一引数に、プラグイン独自の識別子
-    - 第二引数に、カスタムタグ利用時の識別子生成器
-        - `$foo` タグまたは `$bar` タグのメソッドおよびオプション値を繋げ、描画時の同一性を定義しています
+  - 第一引数に、プラグイン独自の識別子
+  - 第二引数に、カスタムタグ利用時の識別子生成器
+    - `$foo` タグまたは `$bar` タグのメソッドおよびオプション値を繋げ、描画時の同一性を定義しています
 
 
 #### スタイル(CSS)
@@ -151,12 +151,12 @@ Bar コンポーネントのローディング時、スピナーが明滅して�
 
 - [メタデータ](/ja/dev/plugin/metadata.html)に関しては特に編集する必要はない
 - `BasicInterceptor` 拡張に関しては、ほとんどの部分を流用できる
-    - PreRenderInterceptor は、実装したいタグのパターンの差し替えのみ
-    - PostRenderInterceptor は、実装したいタグの数に応じてコンテキストクラスの初期化コードと、それに対応する React Component レンダリングコードを追加する
+  - PreRenderInterceptor は、実装したいタグのパターンの差し替えのみ
+  - PostRenderInterceptor は、実装したいタグの数に応じてコンテキストクラスの初期化コードと、それに対応する React Component レンダリングコードを追加する
 - コンテキストクラスと React Component は、カスタムタグのモデルとビューに相当する
-    - オプション値の parse のロジックをコンテキストクラスのメソッドとして実装
-    - オプション値によって変更するアウトプットを React Component に実装
+  - オプション値の parse のロジックをコンテキストクラスのメソッドとして実装
+  - オプション値によって変更するアウトプットを React Component に実装
 - パフォーマンス対策として、`TagCacheManagerFactory` を実装
-    - 各 React Component の 正常系/異常系 それぞれで、出力結果を左右するステートオブジェクトをキャッシュするように `tagCacheManager.cacheState()` を呼び出し
+  - 各 React Component の 正常系/異常系 それぞれで、出力結果を左右するステートオブジェクトをキャッシュするように `tagCacheManager.cacheState()` を呼び出し
 - サーバーからデータを取得したい場合は REST API リクエストを行う
-    - プラグイン独自のデータを取得したい場合は、新たにサーバーサイドに route を定義できる
+  - プラグイン独自のデータを取得したい場合は、新たにサーバーサイドに route を定義できる

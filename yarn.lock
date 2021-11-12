@@ -5817,11 +5817,6 @@ gray-matter@^4.0.1:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-growi-commons@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/growi-commons/-/growi-commons-5.0.2.tgz#bac05e356787c1855920c81e57e73991f4c5fa3d"
-  integrity sha512-SUCgf4ZhA+qfNhianeoJXrHzIuu2cmcR2jkOyIpGO/dgddffIj5lTYwfmjUEO7DWLfY76es5smXLTOvoACeyGQ==
-
 handle-thing@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-2.0.0.tgz#0e039695ff50c93fc288557d696f3c1dc6776754"
