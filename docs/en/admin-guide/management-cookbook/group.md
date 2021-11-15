@@ -80,6 +80,6 @@ you will not be able to view or edit the contents of the page.
 ## Refer to the list of authorization pages on the group management page
 
 If you set view / edit authority to a page,
-you can see a list of autholized pages on the UserGroup Managemet screen.
+you can see a list of autholized pages on the UserGroup Management screen.
 
 ![group15](./images/group15.png)

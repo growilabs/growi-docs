@@ -16,7 +16,7 @@ This setting makes uploading attachment files and profile images to AWS S3 Bucke
 
 ![aws-setting-1](./images/aws-setting-1.png)
 
-2. In the "Access keys (access key ID and secret access key)" tab, create new access key.
+2. In the "Access keys (access key ID and secret access key)" tab, create a new access key.
 3. In the "Account identifiers" tab, check your Canonical User ID.
 
 ### Get AWS S3 Bucket Information 

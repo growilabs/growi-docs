@@ -40,8 +40,7 @@ SLACK_SIGNING_SECRET={ Signing Secret }
 4. Start both the GROWI main server and the proxy server(`slackbot-proxy`).  
   You can start the proxy server with `yarn` and `yarn dev` commands.
 
-5. Select **Custom bot with proxy** from the Slack Integration section
- of the admin panel.
+5. Select **Custom bot with proxy** from the Slack Integration section of the admin panel.
 ![slack-bot-selecting-custom-bot-with-proxy](/assets/images/slack-bot-selecting-custom-bot-with-proxy.png)
 
 ## Set Custom bot with proxy Scopes

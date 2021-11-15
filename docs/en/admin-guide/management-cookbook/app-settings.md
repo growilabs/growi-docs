@@ -13,7 +13,7 @@ If the site URL is not set, some of the functions on GROWI will not work properl
 :::
 
 If a DNS record such as `growi.example.com` has been specified as the destination for a custom domain, set it here.  
-If a domain is not set to DNS, set the value to any URL.
+If a domain is not set to the DNS, set the value to any URL.
 
 ![appsettings10](./images/appsettings10.png)
 
@@ -75,7 +75,7 @@ The File Uploading settings will enable users to upload files.
 
 ![appsettings8](./images/appsettings8.png)
 
-If the upload banner is hidden as following, the File Uploading settings have not been configured.
+If the upload banner is hidden as follows, the File Uploading settings have not been configured.
 
 ![appsettings9](./images/appsettings9.png)
 
@@ -130,7 +130,7 @@ Please use the following upload systems to save attached files.
 
 #### Upload to Amazon S3
 
-Save files to Bucket of Amazon S3.
+Save files to the bucket of Amazon S3.
 
 Please refer to [here](/en/admin-guide/management-cookbook/app-settings.html#get-aws-account-infomation) to set up Amazon S3.
 
@@ -185,7 +185,7 @@ from the dropdown that appears when clicking on the account name in the upper ri
 #### Get or change permitions of Amazon S3 Bucket
 
 1. Access to Amazon S3 [Dashboard](https://s3.console.aws.amazon.com/s3).
-2. Check the region and bucket name of the S3 Bucket to register.
+2. Check the region and the bucket name of the S3 Bucket to register.
 3. Select the S3 Bucket to register and open "Access Rights".
 4. Click the edit button of "Block Public Access".
 only uncheck "Block public access" through the New Access Control List (ACL) and save the changes.
