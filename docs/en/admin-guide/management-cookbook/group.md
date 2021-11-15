@@ -39,13 +39,13 @@ An input box for adding a user to the group is displayed.
 
 ![group6](./images/group6.png)
 
-Enter the user name registered as a user with your GROWI.
+Enter the username registered as a user with your GROWI.
 
 ![group7](./images/group7.png)
 
 ![group8](./images/group8.png)
 
-if the user name has not been registered yet, an error will occur
+if the username has not been registered yet, an error will occur
 and the user cannot be added to the group.
 
 ![group9](./images/group9.png)

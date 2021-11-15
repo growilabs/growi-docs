@@ -169,7 +169,7 @@ If the file upload method is fixed by the environment variable
 Settings are required when using Amazon S3 and Google Cloud Storage.
  Please refer to the following to complete it.
 
-### Set up Amazon S3 bucket
+### Set up Amazon S3 Bucket
 
 Here are the steps to set up a connection to Amazon S3 (Amazon Simple Storage Service).
 
@@ -182,11 +182,11 @@ from the dropdown that appears when clicking on the account name in the upper ri
  create and store the Access Key ID and Secret Access Key for the AWS account.
 3. Expand "Account ID" to comfirm the valid user ID.
 
-#### Get or change permitions of Amazon S3 bucket
+#### Get or change permitions of Amazon S3 Bucket
 
 1. Access to Amazon S3 [Dashboard](https://s3.console.aws.amazon.com/s3).
-2. Check the region and bucket name of the S3 bucket to register.
-3. Select the S3 bucket to register and open "Access Rights".
+2. Check the region and bucket name of the S3 Bucket to register.
+3. Select the S3 Bucket to register and open "Access Rights".
 4. Click the edit button of "Block Public Access".
 only uncheck "Block public access" through the New Access Control List (ACL) and save the changes.
 5. If the valid ID of the AWS account that has been added to the "Bucket Owner Permissions" and the "Access Control List" doesn't match step 3 of the procedure "Getting AWS Account Information", add the account with the verified canonical ID to "Access Other AWS Accounts". In this case, please check all types of authority.

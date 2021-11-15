@@ -67,7 +67,7 @@ Only accounts that are not in Active status can be deleted. Please note that del
 A new user can be temporarily issued by specifying an email address.
 
 Click the **Provisional New User** button on the User Management screen to open a modal.  
-Enter the e-mail address of the user to be issued. Multiple e-mail addresses can be specified using line breaks.
+Enter the email address of the user to be issued. Multiple email addresses can be specified using line breaks.
 
 When the **issue** button is clicked, a new user will be issued and a temporary password will be assigned to each user.  
 The new user can complete the registration by logging in using the email address and temporary password.
