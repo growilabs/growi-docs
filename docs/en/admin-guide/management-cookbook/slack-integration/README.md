@@ -141,8 +141,8 @@ For details on how to configure User Trigger Notification, please refer [here](/
 
 ### Create a page
 
-1.  Entering `/growi create` will create a new page in GROWI.
-    ![HackMD Demo](/assets/images/growi-create.gif)
+1. Entering `/growi note` will create a new page in GROWI.
+    ![HackMD Demo](/assets/images/growi-note.gif)
 
 ### Full-text search in a workspace
 
@@ -166,12 +166,12 @@ For details on how to configure User Trigger Notification, please refer [here](/
 
 ### Create a page from a conversation (Alpha)
 
-1. Input `/growi togetter`.
+1. Input `/growi keep`.
 2. For the `Oldest datetime` field, input the datetime of the oldest message that you want to use for the page.
 3. For the `Newest datetime` field, input the datetime of the newest message that you want to use for the page.
 4. Lastly, input the page path, then click `Create page`. It will create a page with a conversation from `Oldest datetime` to `Newest datetime`.
 
-![HackMD Demo](/assets/images/growi-togetter.gif)
+![HackMD Demo](/assets/images/growi-keep.gif)
 
 ### Check the connected GROWI
 
