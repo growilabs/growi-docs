@@ -142,7 +142,7 @@ For details on how to configure User Trigger Notification, please refer [here](/
 ### Create a page
 
 1. Entering `/growi note` will create a new page in GROWI.
-    ![HackMD Demo](/assets/images/growi-create.gif)
+    ![HackMD Demo](/assets/images/growi-note.gif)
 
 ### Full-text search in a workspace
 

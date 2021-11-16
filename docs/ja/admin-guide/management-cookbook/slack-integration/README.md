@@ -103,7 +103,7 @@ Incoming Webhook も Slack 連携する手段の一つですが、GROWI bot と�
 
 1. `/growi note` を入力すると GROWI 内に新規ページが作成されます。
 
-![HackMD Demo](/assets/images/growi-create.gif)
+![HackMD Demo](/assets/images/growi-note.gif)
 
 ### ワークスペース内の全文検索
 
