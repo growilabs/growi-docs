@@ -9,8 +9,8 @@ This chapter introduces how to backup and restore GROWI data using [weseek/mongo
 ### Requirements
 
 * Docker
-* AWS S3 Bucket to upload backup files
-  * Access key and secret key for a user authorized to access S3 Bucket.
+* AWS S3 bucket to upload backup files
+  * Access key and secret key for a user authorized to access S3 bucket.
 
 ## Using AWS S3
 
@@ -62,7 +62,7 @@ Add `--network host` to use the same network with the host.
       -e S3_TARGET_BUCKET_URL=<Target S3 Bucket URL (s3://...)> \
       weseek/mongodb-awesome-backup
     ```
-2. The command creates a backup for all databases in the target MongoDB server, and upload it as `backup-YYYYMMdd.tar.bz2` in the S3 Bucket.
+2. The command creates a backup for all databases in the target MongoDB server, and upload it as `backup-YYYYMMdd.tar.bz2` in the S3 bucket.
 
 ::: tip
 See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options.
@@ -81,7 +81,7 @@ See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-ba
       weseek/mongodb-awesome-backup restore
     ```
 <!-- textlint-disable weseek/sentence-length -->
-2. The command restores the specified file \(`backup-YYYYMMdd.tar.bz2` in the example above \) in the S3 Bucket.
+2. The command restores the specified file \(`backup-YYYYMMdd.tar.bz2` in the example above \) in the S3 bucket.
 <!-- textlint-enable weseek/sentence-length -->
 3. Restart GROWI.
 

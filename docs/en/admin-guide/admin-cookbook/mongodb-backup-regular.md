@@ -9,8 +9,8 @@ This chapter introduces how to set up auto backup for GROWI data using [weseek/m
 #### Requirements
 
 * Docker
-* AWS S3 Bucket to upload backup files
-  * Access key and secret key for a user authorized to access S3 Bucket.
+* AWS S3 bucket to upload backup files
+  * Access key and secret key for a user authorized to access S3 bucket.
 
 ::: tip
 See [MongoDB Backup & Restore](/en/admin-guide/admin-cookbook/mongodb-backup.html) before you start.
