@@ -108,8 +108,8 @@ Set up will follow these instructions [README.md](https://github.com/weseek/grow
 
 - Check whether the correct value is set for the GROWI Site URL
 - When making changes to existing HackMD/CodiMD, check whether
-    - Content inserted into head.ejs and foot.ejs are correct
-    - The URL from the src attribute of the script tag inserted into the source code of HackMD/CodiMD can be accessed successfully (can load the CSS and JavaScript).
+    - content inserted into head.ejs and foot.ejs are correct
+    - the URL from the src attribute of the script tag inserted into the source code of HackMD/CodiMD can be accessed successfully (can load the CSS and JavaScript).
 
 
 
