@@ -11,14 +11,18 @@ There are three types of GROWI bots available.
 
 #### Official bot 【Recommended】
 
+<!-- textlint-disable weseek/no-dead-link -->
 The official bot is a free GROWI bot provided and operated by the GROWI development team. It is available at the [slack app directory](https://wsgrowi.slack.com/apps) and anyone can use this service.
+<!-- textlint-enable weseek/no-dead-link -->
 
 【Diagram】
 ![diagram-for-official-bot](/assets/images/slack-bot-outline-official.png)
 
 #### Custom bot without proxy
 
+<!-- textlint-disable weseek/ja-no-inappropriate-words -->
 The custom bot without proxy allows you to create a Slack bot by yourself and link it to your GROWI. So that you can use some of GROWI's features from Slack.
+<!-- textlint-enable weseek/ja-no-inappropriate-words -->
 
 【Diagram】
 ![diagram-for-custom-bot-without-proxy](/assets/images/slack-bot-outline-custom-without-proxy.png)
@@ -45,15 +49,15 @@ For more information, please click link below:
 
 ### Official bot
 
-Click [here](/en/admin-guide/management-cookbook/slack-integration/official-bot-settings.md) to see how to set it up.
+Click [here](/en/admin-guide/management-cookbook/slack-integration/official-bot-settings.html) to see how to set it up.
 
 ### Custom bot without proxy
 
-Click [here](/en/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md) to see how to set it up.
+Click [here](/en/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.html) to see how to set it up.
 
 ### Custom bot with proxy
 
-Click [here](/en/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md) to see how to set it up.
+Click [here](/en/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.html) to see how to set it up.
 
 ## Icon
 

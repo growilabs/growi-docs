@@ -17,7 +17,7 @@ NCHAN_URI=http://nchan
 
 ### More info
 
-See `S2SMSG_PUBSUB_NCHAN_*` of [Environment Variables](./env-vars.md).
+See `S2SMSG_PUBSUB_NCHAN_*` of [Environment Variables](/en/admin-guide/admin-cookbook/env-vars.html).
 
 ## Cautionary points about importing/exporting data
 
@@ -28,9 +28,9 @@ In case of load balancing multiple GROWI apps, data imports/exports may not work
 
 Data imports/exports expand the following data on the file system.
 
-- "GROWI Archive File" uploaded by "Import GROWI archive" on the "Import Data" page(`/admin/importer`)
-- "Exported Archive Data" on the "Export Archive Data" page(`/admin/export`)
+- "GROWI Archive File" uploaded by "Import GROWI archive" on the "Import Data" page (`/admin/importer`)
+- "Exported Archive Data" on the "Export Archive Data" page (`/admin/export`)
 
 Therefore, data imports/exports are not recommended with load balancing multiple GROWI apps.
 
-When backing up data, [mongodb-awesome-backup](./mongodb-backup.md) is recommended instead of exporting the archive.
+When backing up data, [mongodb-awesome-backup](/en/admin-guide/admin-cookbook/mongodb-backup.html) is recommended instead of exporting the archive.

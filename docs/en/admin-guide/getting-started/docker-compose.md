@@ -67,7 +67,7 @@ environment:
 
 The following page introduces the processes to upgrade GROWI to v3.4.x from v3.3.x or below.
 
-[Upgrading GROWI to v3.4.x](../upgrading/34x.html).
+[Upgrading GROWI to v3.4.x](/en/admin-guide/upgrading/34x.html).
 
 ::: danger
 In upgrading any other version, please check the upgrade guide for the appropriate version first.
@@ -98,22 +98,22 @@ docker-compose build
 docker-compose up
 ```
 
-After containers are built, access to the admin page and build ES index again on full text search management( `/admin/search` ).
+After containers are built, access to the admin page and build ES index again on full text search management ( `/admin/search` ).
 
 ## Related Pages
 
 - Launch Multiple GROWIs
 
-[Multiple Sites](../admin-cookbook/multi-app.html)
+[Multiple Sites](/en/admin-guide/admin-cookbook/multi-app.html)
 
 - HTTPS proxy
 
-[HTTPS with Let's Encript](../admin-cookbook/lets-encrypt.html)
+[HTTPS with Let's Encript](/en/admin-guide/admin-cookbook/lets-encrypt.html)
 
 - Backup data about page and user in MongoDB
 
-[MongoDB Auto Backup](../admin-cookbook/mongodb-backup-regular.html#manage-with-docker-compose)
+[MongoDB Auto Backup](/en/admin-guide/admin-cookbook/mongodb-backup-regular.html#manage-with-docker-compose)
 
 - Use HackMD(CodiMD) to simultaneous editing
 
-[HackMD(CodiMD) Integration](../admin-cookbook/integrate-with-hackmd.html#%E6%97%A2%E5%AD%98%E3%81%AE-hackmd-codimd-%E3%81%A8%E9%80%A3%E6%90%BA%E3%81%99%E3%82%8B)
+[HackMD(CodiMD) Integration](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html)

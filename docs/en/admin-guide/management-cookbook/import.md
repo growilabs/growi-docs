@@ -15,12 +15,12 @@ Imports data from a GROWI archive data zip file.
 
 :::danger
 
-- Since the data for the import function uses the file system, it may not work properly when the GROWI server is load balanced. For details, see [here](../admin-cookbook/loadbalance.md#cautionary-points-about-importing-exporting-data).
+- Since the data for the import function uses the file system, it may not work properly when the GROWI server is load balanced. For details, see [here](/en/admin-guide/admin-cookbook/loadbalance.html#cautionary-points-about-importing-exporting-data).
 :::
 
 ### Importable data
 
-The list of data that can be imported can be found in [Archive Data](./export.md#archivable-mongodb-collections). It is possible to select and import only the data collections you need from a single zip file.
+The list of data that can be imported can be found in [Archive Data](/en/admin-guide/management-cookbook/export.html#archivable-mongodb-collections). It is possible to select and import only the data collections you need from a single zip file.
 
 ### Modes
 
@@ -75,7 +75,7 @@ Importing data from esa.io using [API v1](https://docs.esa.io/posts/102) publish
   - tag
   - comment
   - WIP/Ship it
-  - revisions and change log
+  - revisions and changelog
 - Attachment will be displayed by accessing the attachment URL managed by esa.io. Therefore, if the file is deleted on esa.io, the page will be broken.
 :::
 

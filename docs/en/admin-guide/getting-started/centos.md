@@ -8,7 +8,7 @@ This chapter introduces the installation process for GROWI on CentOS 7. Installa
 
 Software needed for Setup are listed below.
 
-* node.js 14.x \(DO NOT USE 14.x\)
+* Node.js 14.x \(DO NOT USE 14.x\)
 * npm 6.x
 * yarn
 * MongoDB 4.x
@@ -22,7 +22,9 @@ Software listed as 'Optional' are not required, but in this document all are use
 
 ### Use the NodeSource repository
 
+<!-- textlint-disable weseek/no-dead-link -->
 Download the Node.js installation script from [https://rpm.nodesource.com/](https://rpm.nodesource.com/). The working directory is the home directory.
+<!-- textlint-enable weseek/no-dead-link -->
 
 ```text
 $ cd ~
@@ -63,7 +65,7 @@ $ yarn -v
 
 ### Installation
 
-Follow the [Official Website](https://www.elastic.co/guide/en/elasticsearch/reference/current/rpm.html) to proceed installation. Here we make a few changes to install Elasticsearch 5.x
+Follow the [Official site](https://www.elastic.co/guide/en/elasticsearch/reference/current/rpm.html) to proceed installation. Here we make a few changes to install Elasticsearch 5.x
 
 ::: warning
 This document is outdated. GROWI currently supports the most recent version of Elasticsearch 6.x (updated 05/2019)
@@ -100,7 +102,7 @@ Now Elasticsearch can be installed via yum. Install.
 $ sudo yum install -y elasticsearch
 ```
 
-Once the installation is complete, specifiy the memory allocation pool size for Elasticsearch. If the usage is for individual use, 256MB should be enough for memory allocation. Make changes based on the scale of the team and the amount of pages.
+Once the installation is complete, specify the memory allocation pool size for Elasticsearch. If the usage is for individual use, 256MB should be enough for memory allocation. Make changes based on the scale of the team and the amount of pages.
 
 ```text
 $ sudo vim /etc/elasticsearch/jvm.options
@@ -166,7 +168,7 @@ $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 
 ### Installation
 
-Follow the [Official Website](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-red-hat/) to proceed installation. In this section MongoDB 3.6 is used.
+Follow the [Official site](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-red-hat/) to proceed installation. In this section MongoDB 3.6 is used.
 
 ::: warning
 This document is outdated. GROWI currently supports the version of MongoDB 4.x (updated 07/2021)
@@ -278,11 +280,11 @@ Access `http://<hostname or ip address>:3000/` and check whether the initial set
 
 ### Setting autoboot using systemd
 
-See "[Autostart using systemd](../admin-cookbook/launch-with-systemd.md)".
+See "[Autostart using systemd](/en/admin-guide/admin-cookbook/launch-with-systemd.html)".
 
 ## Reverse Proxy Settings
 
-Shown below is an example to setting up a reverse proxy to an activated GROWI.
+Shown below is an example of setting up a reverse proxy to an activated GROWI.
 
 ### Apache
 

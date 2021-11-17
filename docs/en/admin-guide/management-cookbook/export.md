@@ -13,7 +13,7 @@ Creates a zipped GROWI archive data for migrating GROWI data to another GROWI.
 
 :::danger
 
-- Since the data for the export function uses the file system, it may not work properly when the GROWI server is load balanced. For details, see [here](../admin-cookbook/loadbalance.html#cautionary-points-about-importing-exporting-data).
+- Since the data for the export function uses the file system, it may not work properly when the GROWI server is load balanced. For details, see [here](/en/admin-guide/admin-cookbook/loadbalance.html#cautionary-points-about-importing-exporting-data).
 :::
 
 ### Archivable MongoDB Collections
