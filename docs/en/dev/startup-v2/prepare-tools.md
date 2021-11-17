@@ -26,7 +26,7 @@ related considerations
 :::
 
 1. Install SourceTree
-    * Download and install SourceTree here: [https://ja.atlassian.com/software/sourcetree](https://ja.atlassian.com/software/sourcetree)
+    * Download and install SourceTree here: [https://www.atlassian.com/software/sourcetree](https://www.atlassian.com/software/sourcetree)
     * If you recive a dialog saying "Unable to find Git", select "Download Git for use with SourceTree only"
 2. Set up SourceTree
     1. Open a terminal using SourceTree
@@ -58,7 +58,7 @@ related considerations
 ※These settings are not compatible with Virtualbox
 
 1. Set up the environment for use with WSL2
-    1. Install the [WSL2 Linux Kernel Package](https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-kernel)
+    1. Install the [WSL2 Linux Kernel Package](https://docs.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)
     1. Open PowerShell with administrator privileges and execute the following:
 
         ```bash
@@ -126,7 +126,7 @@ These settings must be set up on the host side.
     ```
 
 1. In order to use the credential helper, you will need the following settings:
-    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
+    <https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git>
 
 :::
 
@@ -141,7 +141,7 @@ These settings must be set up on the host side.
     ```
 
 1. In order to use the credential helper, you will need the following settings:
-    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
+    <https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git>
 
 :::
 

@@ -17,9 +17,9 @@ DO NOT USE `npm install` or `yarn`
 :::
 
 
-### Launch Front-end and Back-end Server
+### Launch Frontend and Backend Server
 
-In 2 separate terminals, run the front end client and back end server.  
+In 2 separate terminals, run the frontend client and backend server.  
 Either process can be terminated with `Ctrl-C`.
 
 ### Server for developing frontend
@@ -52,7 +52,7 @@ yarn lerna bootstrap
 Execute the following steps from the [First Time](#first-time) section.
 
 1. Install dependencies
-1. Build the front end client for production and activate the backend server
+1. Build the frontend client for production and activate the backend server
 
     ```bash
     yarn start

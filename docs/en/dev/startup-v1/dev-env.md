@@ -1,9 +1,9 @@
 # (Deprecated) Construct Development Environment
 
 ::: warning
-This page introduces how to construct development environment with node running on host OS, has been deprecated.
+This page introduces how to construct development environment with Node.js running on host OS, has been deprecated.
 
-In order to develop with the better environment, use [Getting Started v2](../startup-v2/dev-env.md) applying "Dev in Container".
+In order to develop with the better environment, use [Getting Started v2](/en/dev/startup-v2/dev-env.html) applying "Dev in Container".
 :::
 
 ::: tip
@@ -20,7 +20,7 @@ Generally, some of the tools and configurations are not required for developing 
     * On Diff tab, select any 2 files and press "OK".
     * Edit -&gt; Preferences
         * For "Character encoding", select either "Unicode (UTF-8, no BOM)" or "Unicode(UTF-8)".
-        * For "Line ending type", select "UNIX (LF).
+        * For "Line ending type", select "UNIX (LF)".
 
 ## Set up Git Client
 
@@ -39,7 +39,9 @@ Generally, some of the tools and configurations are not required for developing 
         * In "External Diff / Merge" section, select "P4Merge" for "Merge Tool".
     5. Set Default Encoding
         * Tool &gt; Options &gt; General
+        <!-- textlint-disable weseek/terminology -->
         * In "Repo Settings" section, select "utf-8" for "Default text encoding".
+        <!-- textlint-enable weseek/terminology -->
 
 ## Set up Node.js Environment
 
@@ -51,7 +53,7 @@ Test environment (CI) uses `node:12`. Use the version Node.js, npm, and Yarn com
 
 1. Install "nvm-windows" (version manager for Node.js, npm)
     * Download `nvm-setup.zip` from [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases) and execute
-1. Install Node.js and npm (lookup latest version of 12.x from <https://nodejs.org/en/download/releases/)>
+1. Install Node.js and npm (lookup latest version of 12.x from <https://nodejs.org/en/download/releases/>)
 
     ``` cmd
     nvm install 12.x.x
@@ -60,7 +62,7 @@ Test environment (CI) uses `node:12`. Use the version Node.js, npm, and Yarn com
 
 1. Install Yarn
 
-    * Download and install Yarn from [https://yarnpkg.com/ja/docs/install](https://yarnpkg.com/ja/docs/install)
+    * Download and install Yarn from [https://classic.yarnpkg.com/en/docs/install#windows-stable](https://classic.yarnpkg.com/en/docs/install#windows-stable)
 
 :::
 
@@ -77,7 +79,7 @@ Test environment (CI) uses `node:12`. Use the version Node.js, npm, and Yarn com
 
 * Install Yarn
 
-  * Install according to the manual from [https://classic.yarnpkg.com/en/docs/install/#mac-stable](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
+  * Install according to the manual from [https://classic.yarnpkg.com/en/docs/install#mac-stable](https://classic.yarnpkg.com/en/docs/install#mac-stable)
 
 :::
 
@@ -112,7 +114,7 @@ Only if your environment does not support Docker, go through the following steps
         * Version `6.0.8`
     * No Extension Packs are required.
 2. Install Vagrant
-    * nload and install Vagrant from [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html).
+    * nload and install Vagrant from [https://www.vagrantup.com/downloads](https://www.vagrantup.com/downloads).
     * Create Vagrantfile
 
         ```ruby
