@@ -1,8 +1,7 @@
 ## Preparing Tools
 
 ::: tip Note
-The below documentation details our development environment at WESEEK Inc.  It may include some tools
-that are not necessary for your use case.
+The below documentation details our development environment at WESEEK Inc.  It may include some tools that are not necessary for your use case.
 :::
 
 
@@ -21,8 +20,7 @@ that are not necessary for your use case.
 
 ::: tip WESEEK Rule
 Developers who are not used to Git functionality (branches, reset, rebase) should use a GUI client.
-GUI clients make it easy to develop while keeping in mind the tree structure of the Git repository and
-related considerations
+GUI clients make it easy to develop while keeping in mind the tree structure of the Git repository and related considerations.
 :::
 
 1. Install SourceTree
@@ -81,7 +79,7 @@ related considerations
             ```
 
         * If the VERSION says 1, execute `wsl --set-version Ubuntu 2` to change the distribution.
-    1. Limit memory size due to the issue that WSL 2 consumes massive amounts of RAM ([microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))
+    1. Limit memory size due to the issue that WSL 2 consumes massive amounts of RAM ([Microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))
         * Edit or create `C:\Users\YourAccount\.wslconfig`
 
         ```

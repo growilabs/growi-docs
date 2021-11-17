@@ -1,13 +1,13 @@
 # (Deprecated) Construct Development Environment
 
 ::: warning
-This page introduces how to construct development environment with Node.js running on host OS, has been deprecated.
+This page introduces how to construct a development environment with Node.js running on host OS, which has been deprecated.
 
-In order to develop with the better environment, use [Getting Started v2](/en/dev/startup-v2/dev-env.html) applying "Dev in Container".
+To develop in a better environment, use [Getting Started v2](/en/dev/startup-v2/dev-env.html) applying "Dev in Container".
 :::
 
 ::: tip
-This chapter introduces development environment **specifically used in WESEEK, Inc**.
+This chapter introduces a development environment **specifically used in WESEEK, Inc**.
 Generally, some of the tools and configurations are not required for developing GROWI.
 :::
 

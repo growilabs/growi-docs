@@ -1,8 +1,7 @@
 # Preparing a Workspace
 
 ::: tip Note
-The below documentation details our development environment at WESEEK Inc.  It may include some tools
-that are not necessary for your use case.
+The below documentation details our development environment at WESEEK Inc.  It may include some tools that are not necessary for your use case.
 :::
 
 In order to develop using devcontainer, you need to set up a directory tree as follows:
