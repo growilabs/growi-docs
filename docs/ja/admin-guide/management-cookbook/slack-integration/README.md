@@ -101,9 +101,9 @@ Incoming Webhook も Slack 連携する手段の一つですが、GROWI bot と�
 
 ### ページの作成
 
-1. `/growi create` を入力すると GROWI 内に新規ページが作成されます。
+1. `/growi note` を入力すると GROWI 内に新規ページが作成されます。
 
-![HackMD Demo](/assets/images/growi-create.gif)
+![HackMD Demo](/assets/images/growi-note.gif)
 
 ### ワークスペース内の全文検索
 
@@ -127,12 +127,12 @@ Incoming Webhook も Slack 連携する手段の一つですが、GROWI bot と�
 
 ### Slack チャンネル内の会話からページを作成する (Alpha)
 
-1. `/growi togetter` を入力します。
+1. `/growi keep` を入力します。
 2. `Oldest datetime` にページで使用したい最も古いメッセージの時刻を入力します。
 3. `Newest datetime` にページで使用したい最も新しいメッセージの時刻を入力します。
 4. `Page path` にページの作成パスを入力し、`Create page` します。 `Oldest datetime` から `Newest datetime` の間の会話が作成されるページに反映されます。
 
-![HackMD Demo](/assets/images/growi-togetter.gif)
+![HackMD Demo](/assets/images/growi-keep.gif)
 
 ### 接続中の GROWI を確認する
 

@@ -20,7 +20,6 @@
     "url": "https://github.com/weseek/growi-docs/issues"
   },
   "watch": {
-    "commons:dev": "../growi-commons/src",
     "apiv3:dev": {
       "patterns": [
         "../growi/packages/app/config/swagger-definition.js",
@@ -37,9 +36,6 @@
     "apiv3:build": "run-s apiv3:jsdoc:build apiv3:redoc",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "commons:base": "vuepress-jsdoc --jsDocConfigPath jsdoc.config.json --title \"GROWI Commons Libraries\" --readme en/api/commons/README.md --dist docs --folder en/api/commons --exclude test,*.test.js",
-    "commons:dev": "npm run commons:base -- --source ../growi-commons/src",
-    "commons:build": "npm run commons:base -- --source ./node_modules/growi-commons/src",
     "start": "npm run docs:dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npm-watch"
@@ -50,7 +46,6 @@
     "eslint": "^5.15.1",
     "eslint-config-weseek": "^1.0.1",
     "eslint-plugin-import": "^2.16.0",
-    "growi-commons": "^5.0.2",
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-task-lists": "^2.1.1",
     "npm-run-all": "^4.1.5",
