@@ -1,9 +1,9 @@
 # (Deprecated) Launch
 
 ::: warning
-This page introduces how to construct development environment with node running on host OS, has been deprecated.
+This page introduces how to construct a development environment with Node.js running on host OS, which has been deprecated.
 
-In order to develop with the better environment, use [Getting Started v2](../startup-v2/dev-env.md) applying "Dev in Container".
+To develop in a better environment, use [Getting Started v2](/en/dev/startup-v2/dev-env.html) applying "Dev in Container".
 :::
 
 ## First Time
@@ -16,14 +16,14 @@ git clone https://github.com/weseek/growi.git
 
 ### Confirm Versions
 
-See [Getting Started#Confirm Versions](dev-env.md#confirm-versions)
+See [Getting Started#Confirm Versions](/en/dev/startup-v1/dev-env.html#confirm-versions)
 
 ### Set up Datastore for Development
 
 Execute the following command in Docker environment.
 
 ::: tip
-For Windows, execute the command in the Linux VM set up in [Getting Started#Set up Dependent Middlewares](dev-env.md#set-up-dependent-middlewares).
+For Windows, execute the command in the Linux VM set up in [Getting Started#Set up Dependent Middlewares](/en/dev/startup-v1/dev-env.html#set-up-dependent-middlewares).
 
 Install if there is no docker-compose command.  
 [docker docs Install Docker Compose](https://docs.docker.com/compose/install/)
@@ -41,7 +41,7 @@ The following containers should be launched.
 | :--- | :--- | :--- |
 | MongoDB | 27017 |  |
 | ElasticSearch | 9200 |  |
-| [elasticsearch-head](https://github.com/mobz/elasticsearch-head) | 9100 | A web front end for an Elasticsearch cluster |
+| [elasticsearch-head](https://github.com/mobz/elasticsearch-head) | 9100 | A web frontend for an Elasticsearch cluster |
 
 ### Install Dependencies
 
@@ -59,7 +59,7 @@ DO NOT USE `npm install`
 npm run migrate
 ```
 
-### Launch Front-end and Back-end Server
+### Launch Frontend and Backend Server
 
 1. `yarn build` does the following.
    1. Build clients assets and launch webpack-dev-server.
@@ -78,7 +78,7 @@ See [First Time](#first-time), and follow the step below.
 2. Set up Datastore for Development
 3. Install Dependencies
 4. Migration
-5. Launch Front-end and Back-end Server
+5. Launch Frontend and Backend Server
 
 ## List of npm Commands
 

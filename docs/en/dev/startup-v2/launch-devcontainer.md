@@ -1,8 +1,7 @@
 # Launch devcontainer
 
 ::: tip Note
-The below documentation details our development environment at WESEEK Inc.  It may include some tools
-that are not necessary for your use case.
+The below documentation details our development environment at WESEEK Inc. It may include some tools that are not necessary for your use case.
 :::
 
 ## Launch
@@ -20,8 +19,7 @@ that are not necessary for your use case.
 
 ## Confirmation
 
-To ensure there were no errors in setup, confirm the following information
-in the GROWI-Dev devcontainer window.
+To ensure there were no errors in setup, confirm the following information in the GROWI-Dev devcontainer window.
 
 
 ### Git Settings

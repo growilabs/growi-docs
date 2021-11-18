@@ -1,3 +1,3 @@
-# Walk Through the Boilerplate
+# Walkthrough the Boilerplate
 
 (TBD)
