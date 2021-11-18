@@ -1,7 +1,7 @@
 ## Preparing Tools
 
 ::: tip Note
-The below documentation details our development environment at WESEEK Inc.  It may include some tools that are not necessary for your use case.
+The below documentation details our development environment at WESEEK Inc. It may include some tools that are not necessary for your use case.
 :::
 
 
