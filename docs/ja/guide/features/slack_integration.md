@@ -1,5 +1,8 @@
 # Slack 連携
 
+GROWI は Slack と連携することによって様々なコマンドを実行することができます。
+セットアップについては[管理者ガイド](/ja/admin-guide/management-cookbook/slack-integration)をご参照ください。
+
 ## GROWI bot でできること
 
 ### ヘルプコマンド
