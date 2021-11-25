@@ -1,4 +1,9 @@
-# Launch System
+# Let's start development
+
+::: tip WESEEK Rule
+Developers who are not used to Git functionality (branches, reset, rebase) should use a GUI client.
+GUI clients make it easy to develop while keeping in mind the tree structure of the Git repository and related considerations.
+:::
 
 ## First Time
 
@@ -47,20 +52,11 @@ Section [Install Dependencies](#install-dependencies) can be executed with yarn 
 yarn lerna bootstrap
 ```
 
-## Production Build and Execution
-
-Execute the following steps from the [First Time](#first-time) section.
-
-1. Install dependencies
-1. Build the frontend client for production and activate the backend server
-
-    ```bash
-    yarn start
-    ```
-
 ## List of npm Commands
 
-Here are the main commands used in development.
+Here are the main commands used in development.  
+Check also the script section of `packages/app/package.json`
+to see all commands you can use.
 
 :::tip
 Execute the following command under the `packages / app` directory.
@@ -77,3 +73,29 @@ Execute the following command under the `packages / app` directory.
 |`migrate:up`|Apply all pending migrations.|
 |`migrate:down`|Revert (only) the last applied migration.|
 |`migrate`|*[Alias]* Invoke `migrate:up`.|
+
+
+## Production Build and Execution
+
+::: tip
+Execute the following command under the root directory of the repository.
+:::
+
+1. Install dependencies
+
+    ```bash
+    npx lerna bootstrap
+    ```
+
+1. Build the frontend client for production
+
+    ```bash
+    yarn app:build
+    ```
+
+1. Launch the backend server
+
+    ```bash
+    yarn app:server
+    ```
+
