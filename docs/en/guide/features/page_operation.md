@@ -6,4 +6,4 @@ GROWI allows you to move, copy, or delete pages flexibly using the menu tab to t
 
 ![](./images/page_operation.png)
 
-For more details, please check the respective pages for moving, [duplicating](../tutorial/duplicate_page.md), or [deleting](../tutorial/delete_page.md) a page.
+For more details, please check the respective pages for moving, [duplicating](/en/guide/tutorial/duplicate_page.html), or [deleting](/en/guide/tutorial/delete_page.html) a page.

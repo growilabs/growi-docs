@@ -5,11 +5,11 @@ sidebarDepth: 0
 # About GROWI
 
 Here is a brief introduction to GROWI.
-If you want to start anyway, please go to [5 Minutes GROWI Tutorial](/en/guide/getting-started/five_minutes.md)
+If you want to start anyway, please go to [5 Minutes GROWI Tutorial](/en/guide/getting-started/five_minutes.html)
 
 ## A wiki that can be written in Markdown
 
-You can write a document with markdown while previewing in real time on the left and right screens.
+You can write a document with Markdown while previewing in real time on the left and right screens.
 
 Code highlights, pictograms, annotations (footnotes), task lists, and HTML codes by Bootstrap for each programming language are also supported.
 
@@ -35,14 +35,13 @@ Comments can be threaded for each page. Of course, comments can also be written 
 |Microsoft Edge| Recommendation (latest version)<br />Excluded (version 79 or below) |
 |Microsoft Internet Explorer| Excluded |
 
-GROWI screens will not be displayed properly
-on unsupported browsers and cannot be used.
+GROWI screens will not be displayed properly on unsupported browsers and cannot be used.
 
 Be sure to use the recommended browser.
 
-GROWI is available on PCs, smartphones and tablets.
+GROWI is available on PCs, mobile phones and tablets.
 
 ## Other features
 
 There are many features that cannot be introduced here.
-For details, refer to "Features”.
+For details, refer to "Features".
