@@ -5,48 +5,6 @@
 そのため、開発にあたって必須ではない設定やツールの指定が含まれています。
 :::
 
-## 3way-merge ツール
-
-ホストPCで作業します。
-
-1. P4Merge (Helix Visual Client (P4V)) インストール
-    * [https://www.perforce.com/downloads/helix-visual-client-p4v](https://www.perforce.com/downloads/helix-visual-client-p4v) からDLしてインストールする
-    * ユーザ登録は適宜実施する
-2. P4Merge 設定
-    * Diff タブで適当にファイルを2つ選択して OK
-    * Edit -&gt; Preferences...
-        * 「Character encoding」で「Unicode (UTF-8, no BOM)」または BOM 表記のない「Unicode(UTF-8)」を選択
-        * 「Line ending type」で「UNIX (LF)」を選択
-
-## Git のための GUI クライアント
-
-::: tip WESEEK Rule
-ブランチ操作、reset, rebase 操作に慣れていない人は必ず GUI クライアントをセットアップし、樹形図を常に確認しながら開発を進めましょう。
-:::
-
-ホストPCで作業します。
-
-1. SourceTreeインストール
-    * [https://www.atlassian.com/ja/software/sourcetree](https://www.atlassian.com/ja/software/sourcetree) からDLしてインストールする
-    * 「Git が見つかりませんでした」というダイアログが表示された場合は、「システム全体でなく、SourceTree 単独で使うためだけの内蔵用の Git をダウンロードする。」を選択
-2. SourceTree設定
-    1. SourceTree からターミナルを開く
-    2. autoCRLF を無効化する
-        * 以下をコピペして実行 `git config --global core.autoCRLF false`
-    3. 自身のアカウント情報を設定
-        * 「ツール &gt; オプション &gt; 全般」...
-        * 「デフォルトのユーザ情報」を適宜設定
-    4. P4Merge を設定
-        * 「ツール &gt; オプション &gt; Diff」...
-        * 「外部Diffツール」「マージツール」で「P4Merge」を選択
-    5. デフォルトの文字コード設定
-        * 「ツール &gt; オプション &gt; 全般」...
-        * 「デフォルトの文字コード」で「utf-8」を選択
-
-## MongoDB のための GUI クライアント
-
-1. [Robo 3T](https://robomongo.org/download) をインストール
-
 
 
 ## docker, docker-compose 実行環境のインストール
@@ -108,7 +66,34 @@
 
 
 
-## Git 設定
+## Git のインストール
+
+ホストPCで作業します。
+
+:::: tabs
+
+::: tab "Windows" id="tab-git-win"
+
+1. [Git for Windows](https://gitforwindows.org/) のインストール
+    * 基本的に初期設定でよいが、Vim を触ったことがない人、あるいは慣れていない人は以下のオプションを変更する
+        1. Chooseing the default editor used by Git
+            * 他のエディタに変更する
+
+:::
+
+::: tab "Mac" id="tab-git-mac"
+
+```bash
+brew install git
+brew install git-lfs
+git lfs install
+```
+
+:::
+
+::::
+
+### 設定
 
 devcontainer は 自動的に docker ホストの設定を参照します。  
 
@@ -126,12 +111,11 @@ devcontainer は 自動的に docker ホストの設定を参照します。
     # name, email の設定
     git config --global user.name "Your Name"
     git config --global user.email "yourname@example.com"
+    # autocrlf 無効化
+    git config --global core.autocrlf false
     # Windows の場合は、WSL 内から更にホストPCの credential helper を参照する設定を行う
     git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
     ```
-
-1. ホスト PC で credential helper を利用するため、以下を設定する
-    <https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git>
 
 :::
 
@@ -143,9 +127,11 @@ devcontainer は 自動的に docker ホストの設定を参照します。
     # name, email の設定
     git config --global user.name "Your Name"
     git config --global user.email "yourname@example.com"
+    # autocrlf 無効化
+    git config --global core.autocrlf false
     ```
 
-1. credential helper を利用するため、以下を設定する
+1. Git Credential Helper (GCM) を設定する
     <https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git>
 
 :::
@@ -159,5 +145,11 @@ devcontainer は 自動的に docker ホストの設定を参照します。
 1. [Visual Studio Code](https://code.visualstudio.com/download) をインストール
 2. 拡張機能をインストール
     * 「Remote - Development」extension のインストール
-    * 「Docker」extension のインストール
+
+
+
+## MongoDB のための GUI クライアント
+
+1. [Robo 3T](https://robomongo.org/download) をインストール
+
 

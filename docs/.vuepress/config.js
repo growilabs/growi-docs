@@ -240,9 +240,8 @@ module.exports = {
               children: [
                 '/en/dev/startup-v3/dev-env.md',
                 '/en/dev/startup-v3/prepare-tools.md',
-                '/en/dev/startup-v3/prepare-workspace.md',
                 '/en/dev/startup-v3/launch-devcontainer.md',
-                '/en/dev/startup-v3/launch-system.md',
+                '/en/dev/startup-v3/start-development.md',
               ],
             },
             {
@@ -482,9 +481,8 @@ module.exports = {
               children: [
                 '/ja/dev/startup-v3/dev-env.md',
                 '/ja/dev/startup-v3/prepare-tools.md',
-                '/ja/dev/startup-v3/prepare-workspace.md',
                 '/ja/dev/startup-v3/launch-devcontainer.md',
-                '/ja/dev/startup-v3/launch-system.md',
+                '/ja/dev/startup-v3/start-development.md',
               ],
             },
             {

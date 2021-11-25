@@ -1,4 +1,10 @@
-# システムの起動
+# 開発を始める
+
+## Git の操作について
+
+::: tip WESEEK Rule
+ブランチ操作、reset, rebase 操作に慣れていない人は必ず Git Graph を利用し、樹形図を常に確認しながら開発を進めるようにしてください。
+:::
 
 ## 初回起動
 
@@ -48,20 +54,10 @@ monorepo を採用しているため、依存関係の管理には [lerna](https
 yarn lerna bootstrap
 ```
 
-## production 用の成果物をビルドして起動
-
-上記の [初回起動](#初回起動) のセクションを参考に、以下を実行してください。
-
-1. 依存ライブラリの取得
-1. production 用にフロントエンドをビルドし、バックエンドサーバーを起動
-
-    ```bash
-    yarn start
-    ```
-
 ## npm コマンドリスト
 
-開発で使う主なコマンド紹介です。
+開発で使う主なコマンド紹介です。  
+全てのコマンドは `packages/app/package.json` の script セクションを参照してください。
 
 ::: tip
 以下のコマンドは `packages/app` ディレクトリ下で実行してください。
@@ -78,3 +74,28 @@ yarn lerna bootstrap
 |`migrate:up`|全ての未適用のマイグレーションを適用します。|
 |`migrate:down`|適用済みのマイグレーションのうち、最新のもの1つを適用前の状態に戻します。|
 |`migrate`|*[エイリアス]* `migrate:up` を実行します|
+
+
+## production 用の成果物をビルドして起動
+
+::: tip
+以下のコマンドはリポジトリのルートディレクトリで実行してください。
+:::
+
+1. 依存ライブラリの取得
+
+    ``` bash
+    npx lerna bootstrap
+    ```
+
+1. production 用にフロントエンドをビルドし、バックエンドサーバーを起動
+
+    ```bash
+    yarn app:build
+    ```
+
+1. production 用バックエンドサーバーを起動
+
+    ```bash
+    yarn app:server
+    ```
