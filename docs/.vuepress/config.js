@@ -263,13 +263,6 @@ module.exports = {
               ],
             },
             {
-              title: 'Slack Bot',
-              collapsable: false,
-              children: [
-                '/en/dev/slack-bot/setup.md',
-              ],
-            },
-            {
               title: 'Tips',
               collapsable: false,
               children: [
@@ -501,13 +494,6 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/dev/repository/directories.md',
-              ],
-            },
-            {
-              title: 'Slack Bot',
-              collapsable: false,
-              children: [
-                '/ja/dev/slack-bot/setup.md',
               ],
             },
             {
