@@ -1,6 +1,6 @@
 # Quick-Start Guide
 
-This guide will walk through how to quickly create a page, create a child page, and navigate between parent and child pages.
+This guide will walkthrough how to quickly create a page, create a child page, and navigate between parent and child pages.
 
 [[toc]]
 
@@ -76,7 +76,7 @@ When you’re done, press the Create button at the bottom right of the screen to
 
 ## View parent page
 
-You can easily navigate to the parent page from its child page by clicking the name of the parent page at the top of the the child page.
+You can easily navigate to the parent page from its child page by clicking the name of the parent page at the top of the child page.
 
 ![](./images/title_click.png)
 

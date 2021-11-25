@@ -1,4 +1,4 @@
-# Create diagrams with [draw.io](https://draw.io)
+# Create diagrams with [draw.io](https://app.diagrams.net/)
 
 In GROWI, you can create draw.io diagrams by using the draw.io integration.
 

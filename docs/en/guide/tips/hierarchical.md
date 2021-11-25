@@ -1,36 +1,25 @@
 # Add a page hierarchy using lsx
 
-You can add a page hierarchy of the current page or of another
-page using `$lsx()`, as shown below.
+You can add a page hierarchy of the current page or of another page using `$lsx()`, as shown below.
 
 ![lsx](./images/lsx_gif.gif)
 
-This is useful for parent pages with large child hierarchy
-structures.
+This is useful for parent pages with large child hierarchy structures.
 
 ## Add a page hierarchy
 
-By default, the command `$lsx()` will produce the hierarchy
-of the current page.  You can also add hierarchies of other pages:
+By default, the command `$lsx()` will produce the hierarchy of the current page.  You can also add hierarchies of other pages:
 
-By supplying a page name beginning with `/`, you can provide a
-page path from your wiki's main page.  For example, if you 
-enter `$lsx(/user)`, the hierarchy of the main page's direct child
-called "user" will be produced.
+By supplying a page name beginning with `/`, you can provide a page path from your wiki's main page.  For example, if you enter `$lsx(/user)`, the hierarchy of the main page's direct child called "user" will be produced.
 
-By beginning your page name with `.`, you can provide a page
-path from the current page.  For example, `$lsx (./sample)` will
-provide the hierarchy under the current page's child called "sample".
+By beginning your page name with `.`, you can provide a page path from the current page.  For example, `$lsx (./sample)` will provide the hierarchy under the current page's child called "sample".
 
 [//]: <> (TODO: 紹介してるエラーメッセージの例を表そう。)
-If the provided page name does not correspond to a page in the wiki,
-an error message will be displayed.
+If the provided page name does not correspond to a page in the wiki, an error message will be displayed.
 
 ## Additional features of lsx
 
-`$lsx()` allows you to set many additional options to customize your
-page hierarchy display.  You can use any combination of them, each
-separated by a comma, for example:
+`$lsx()` allows you to set many additional options to customize your page hierarchy display.  You can use any combination of them, each separated by a comma, for example:
 
 `$lsx(/page, depth=1, sort=createdAt, reverse=true)`
 
@@ -56,11 +45,9 @@ You can also specify a page range using `num`:
 
 - `$lsx(num=1:10)` will display the 1st to the 10th result.
 
-- `$lsx(num=2:)` will display the 2nd result to the end of the hierarchy
-(skipping the first result).
+- `$lsx(num=2:)` will display the 2nd result to the end of the hierarchy (skipping the first result).
 
-- `$lsx(num=5+2)` will display the 5th result, and then the next 2 results
-(5th, 6th, 7th).
+- `$lsx(num=5+2)` will display the 5th result, and then the next 2 results (5th, 6th, 7th).
 
 ### `depth`
 
@@ -95,18 +82,15 @@ The order of the page list can be specified as follows:
 
 Example: `$lsx(sort=updatedAt, reverse=true)`
 
-In this example, the hierarchy will be displayed in order of
-page last updated date, with the most recently updated page first.
+In this example, the hierarchy will be displayed in order of page last updated date, with the most recently updated page first.
 
 ### `filter`
 
-- Filter the hierarchy to display only pages containing a specified
-  text in the title
+- Filter the hierarchy to display only pages containing a specified text in the title
 
 Example: `$lsx(filter=2019)`
 
-In this example, only pages with `2019` in the page name are displayed
-in the list.
+In this example, only pages with `2019` in the page name are displayed in the list.
 
 ## GitHub
 
