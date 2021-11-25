@@ -4,7 +4,7 @@
   },
   "rules": {
     "preset-weseek": {
-      // 英文用ルールだが、精度が悪いので一時的にfalseにする
+      // 英文用ルールだが、精度が低いので一時的にfalseにする
       // 将来的にはpreset-weseekから除外する予定
       "ginger": false,
       "no-dead-link": {
