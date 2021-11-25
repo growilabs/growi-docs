@@ -1,3 +1,5 @@
+# Slack Integration
+
 ## What you can do with a Slack bot?
 
 ### Help command
