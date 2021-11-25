@@ -235,22 +235,25 @@ module.exports = {
           '/en/dev/': [
             '/en/dev/',
             {
-              title: 'Getting Started v2',
+              title: 'Getting Started v3',
               collapsable: false,
+              children: [
+                '/en/dev/startup-v3/dev-env.md',
+                '/en/dev/startup-v3/prepare-tools.md',
+                '/en/dev/startup-v3/prepare-workspace.md',
+                '/en/dev/startup-v3/launch-devcontainer.md',
+                '/en/dev/startup-v3/launch-system.md',
+              ],
+            },
+            {
+              title: '(Deprecated) Getting Started v2',
+              collapsable: true,
               children: [
                 '/en/dev/startup-v2/dev-env.md',
                 '/en/dev/startup-v2/prepare-tools.md',
                 '/en/dev/startup-v2/prepare-workspace.md',
                 '/en/dev/startup-v2/launch-devcontainer.md',
                 '/en/dev/startup-v2/launch-system.md',
-              ],
-            },
-            {
-              title: '(Deprecated) Getting Started v1',
-              collapsable: true,
-              children: [
-                '/en/dev/startup-v1/dev-env.md',
-                '/en/dev/startup-v1/launch.md',
               ],
             },
             {
@@ -474,22 +477,25 @@ module.exports = {
           '/ja/dev/': [
             '/ja/dev/',
             {
-              title: '開発スタートアップ v2',
+              title: '開発スタートアップ v3',
               collapsable: false,
+              children: [
+                '/ja/dev/startup-v3/dev-env.md',
+                '/ja/dev/startup-v3/prepare-tools.md',
+                '/ja/dev/startup-v3/prepare-workspace.md',
+                '/ja/dev/startup-v3/launch-devcontainer.md',
+                '/ja/dev/startup-v3/launch-system.md',
+              ],
+            },
+            {
+              title: '(旧版) 開発スタートアップ v2',
+              collapsable: true,
               children: [
                 '/ja/dev/startup-v2/dev-env.md',
                 '/ja/dev/startup-v2/prepare-tools.md',
                 '/ja/dev/startup-v2/prepare-workspace.md',
                 '/ja/dev/startup-v2/launch-devcontainer.md',
                 '/ja/dev/startup-v2/launch-system.md',
-              ],
-            },
-            {
-              title: '(旧版) 開発スタートアップ v1',
-              collapsable: true,
-              children: [
-                '/ja/dev/startup-v1/dev-env.md',
-                '/ja/dev/startup-v1/launch.md',
               ],
             },
             {
