@@ -134,6 +134,16 @@ Incoming Webhook も Slack 連携する手段の一つですが、GROWI bot と�
 
 ![HackMD Demo](/assets/images/growi-keep.gif)
 
+### Slack 内で GROWI ページのプレビュー (Unfurl 機能)
+
+Unfurl 機能を利用することで Slack に GROWI のリンクを共有した際にスニペットを表示できます。
+デフォルトでは無効のため、管理画面から有効化する必要があります。
+
+![slack-bot-unfurl](/assets/images/slack-bot-unfurl.png)
+
+Public ではないページのスニペットは表示されません。
+![slack-bot-unfurl-private-page](/assets/images/slack-bot-unfurl-private-page.png)
+
 ### 接続中の GROWI を確認する
 
 `/growi status` と入力することで、Slack ワークスペースと連携している GROWI を確認できます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)

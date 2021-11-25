@@ -177,6 +177,16 @@ For details on how to configure User Trigger Notification, please refer [here](/
 
 ![HackMD Demo](/assets/images/growi-keep.gif)
 
+### Show previews of GROWI page on Slack (Unfurl Feature)
+
+With the unfurl feature, a snippet of the GROWI page can be shown when GROWI links are shared on Slack.
+The unfurl feature is disabled by default and can be enabled from the admin page.
+![slack-bot-unfurl](/assets/images/slack-bot-unfurl.png)
+
+Snippets will not be shown on non public pages.
+![slack-bot-unfurl-private-page](/assets/images/slack-bot-unfurl-private-page.png)
+
+
 ### Check the connected GROWI
 
 By typing `/growi status`, you can see the GROWI App(s) that are connected to the Slack workspace. (This is only available when the Bot type is Official bot or Custom bot with proxy.)
