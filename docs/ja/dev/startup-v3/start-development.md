@@ -1,4 +1,4 @@
-# 開発を始める
+# 開発を始めましょう
 
 ## Git の操作について
 
@@ -88,7 +88,7 @@ yarn lerna bootstrap
     npx lerna bootstrap
     ```
 
-1. production 用にフロントエンドをビルドし、バックエンドサーバーを起動
+1. production 用にフロントエンドをビルド
 
     ```bash
     yarn app:build
