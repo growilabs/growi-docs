@@ -108,7 +108,6 @@ module.exports = {
               title: 'Features',
               collapsable: false,
               children: [
-                '/en/guide/features/slack_integration.md',
                 '/en/guide/features/page_layout.md',
                 '/en/guide/features/copy_to_clipboard.md',
                 '/en/guide/features/table.md',
@@ -125,7 +124,8 @@ module.exports = {
                 '/en/guide/features/search.md',
                 '/en/guide/features/tag.md',
                 '/en/guide/features/template.md',
-                '/en/guide/features/hackmd.md'
+                '/en/guide/features/hackmd.md',
+                '/en/guide/features/slack_integration.md',
               ]
             },
             {
@@ -348,7 +348,6 @@ module.exports = {
               title: '機能紹介',
               collapsable: false,
               children: [
-                '/ja/guide/features/slack_integration.md',
                 '/ja/guide/features/page_layout.md',
                 '/ja/guide/features/copy_to_clipboard.md',
                 '/ja/guide/features/table.md',
@@ -365,7 +364,8 @@ module.exports = {
                 '/ja/guide/features/search.md',
                 '/ja/guide/features/tag.md',
                 '/ja/guide/features/template.md',
-                '/ja/guide/features/hackmd.md'
+                '/ja/guide/features/hackmd.md',
+                '/ja/guide/features/slack_integration.md',
               ]
             },
             {
