@@ -1,7 +1,7 @@
 # Slack Integration
 
-GROWI can be integrated to Slack to perform various commands.
-See [Admin Guide](/en/admin-guide/management-cookbook/slack-integration) for details on how to configure.
+GROWI bot can be installed to Slack to perform various commands.
+See [Admin Guide](/en/admin-guide/management-cookbook/slack-integration/) for details on how to configure.
 
 ## What you can do with a Slack bot?
 
