@@ -179,7 +179,9 @@ For details on how to configure User Trigger Notification, please refer [here](/
 
 ### Show previews of GROWI page on Slack (Unfurl Feature)
 
-With the unfurl feature, a preview of GROWI pages can be shown when GROWI links are shared in Slack.
+With the unfurl feature, a snippet of the GROWI page can be shown when GROWI links are shared in Slack.
+The unfurl feature is disabled by default and can be enabled from the admin page.
+![slack-bot-unfurl](/assets/images/slack-bot-unfurl.png)
 
 ### Check the connected GROWI
 
