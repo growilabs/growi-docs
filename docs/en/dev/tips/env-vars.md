@@ -2,7 +2,10 @@
 
 ## Setting File
 
-* `config/env.dev.js`
+* `packages/app/.env*`
+* `packages/slackbot-proxy/.env*`
+
+See [dotenv-flow](https://github.com/kerimdzhanov/dotenv-flow).
 
 ## Environment Variables Only Available in Development
 

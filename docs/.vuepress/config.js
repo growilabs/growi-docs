@@ -235,8 +235,18 @@ module.exports = {
           '/en/dev/': [
             '/en/dev/',
             {
-              title: 'Getting Started v2',
+              title: 'Getting Started v3',
               collapsable: false,
+              children: [
+                '/en/dev/startup-v3/dev-env.md',
+                '/en/dev/startup-v3/prepare-tools.md',
+                '/en/dev/startup-v3/launch-devcontainer.md',
+                '/en/dev/startup-v3/start-development.md',
+              ],
+            },
+            {
+              title: '(Deprecated) Getting Started v2',
+              collapsable: true,
               children: [
                 '/en/dev/startup-v2/dev-env.md',
                 '/en/dev/startup-v2/prepare-tools.md',
@@ -246,25 +256,10 @@ module.exports = {
               ],
             },
             {
-              title: '(Deprecated) Getting Started v1',
-              collapsable: true,
-              children: [
-                '/en/dev/startup-v1/dev-env.md',
-                '/en/dev/startup-v1/launch.md',
-              ],
-            },
-            {
               title: 'GROWI Repository',
               collapsable: false,
               children: [
                 '/en/dev/repository/directories.md',
-              ],
-            },
-            {
-              title: 'Slack Bot',
-              collapsable: false,
-              children: [
-                '/en/dev/slack-bot/setup.md',
               ],
             },
             {
@@ -474,8 +469,18 @@ module.exports = {
           '/ja/dev/': [
             '/ja/dev/',
             {
-              title: '開発スタートアップ v2',
+              title: '開発スタートアップ v3',
               collapsable: false,
+              children: [
+                '/ja/dev/startup-v3/dev-env.md',
+                '/ja/dev/startup-v3/prepare-tools.md',
+                '/ja/dev/startup-v3/launch-devcontainer.md',
+                '/ja/dev/startup-v3/start-development.md',
+              ],
+            },
+            {
+              title: '(旧版) 開発スタートアップ v2',
+              collapsable: true,
               children: [
                 '/ja/dev/startup-v2/dev-env.md',
                 '/ja/dev/startup-v2/prepare-tools.md',
@@ -485,25 +490,10 @@ module.exports = {
               ],
             },
             {
-              title: '(旧版) 開発スタートアップ v1',
-              collapsable: true,
-              children: [
-                '/ja/dev/startup-v1/dev-env.md',
-                '/ja/dev/startup-v1/launch.md',
-              ],
-            },
-            {
               title: 'GROWI リポジトリー',
               collapsable: false,
               children: [
                 '/ja/dev/repository/directories.md',
-              ],
-            },
-            {
-              title: 'Slack Bot',
-              collapsable: false,
-              children: [
-                '/ja/dev/slack-bot/setup.md',
               ],
             },
             {
