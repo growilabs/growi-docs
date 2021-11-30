@@ -42,6 +42,8 @@
           "/^[a-zA-Z0-9!#$%'\"&()*+,.:;<=>▲→?@\\[\\]^_{|}~-\\s`\\/]+$/"
         ]
       },
+      //現在 Github Actions で辞書ファイルを参照できないので、解決するまで無効化する
+      //https://github.com/hata6502/textlint-rule-no-hoso-kinshi-yogo/issues/4
       "no-hoso-kinshi-yogo": false,
     }
   }
