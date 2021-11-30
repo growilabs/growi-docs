@@ -36,6 +36,7 @@
     "apiv3:build": "run-s apiv3:jsdoc:build apiv3:redoc",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "lint": "textlint \"docs/ja/**/*.md\" \"docs/en/**/*.md\" README.md",
     "start": "npm run docs:dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npm-watch"
@@ -57,7 +58,7 @@
     "swagger-jsdoc": "^3.4.0",
     "textlint": "^12.0.2",
     "textlint-filter-rule-comments": "^1.2.2",
-    "textlint-rule-preset-weseek": "^1.0.2",
+    "textlint-rule-preset-weseek": "^1.0.3",
     "vue-tabs-component": "^1.5.0",
     "vuepress": "^1.8.2",
     "vuepress-jsdoc": "^3.0.0",

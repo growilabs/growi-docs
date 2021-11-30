@@ -12860,10 +12860,10 @@ textlint-rule-max-ten@^4.0.2:
     textlint-rule-helper "^2.0.0"
     textlint-util-to-string "^3.1.1"
 
-textlint-rule-no-dead-link@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/textlint-rule-no-dead-link/-/textlint-rule-no-dead-link-4.7.0.tgz#087332fa0b10f6bf13434a5317c5eefc3702ff1a"
-  integrity sha512-enqn5JHR7Xa5vtkrYBAwa1POuKoi4j2hY7RKrPX+mWgQGIFapPrxfy7Bw+2pEHfV2nLqXrLQuPo4H6/D9FvzSw==
+textlint-rule-no-dead-link@^4.8.0:
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/textlint-rule-no-dead-link/-/textlint-rule-no-dead-link-4.8.0.tgz#5cda5f57143d99d6ff754c1190c30bb8b346d1fd"
+  integrity sha512-jB45mvIhKdgLFs4kDzfn8Q3C1WBv+BGI6At07ZJd9YmM/+dm+P8W9urisBSXFeQcYoGcaXqDiKZwK9BpdnpciQ==
   dependencies:
     fs-extra "^8.1.0"
     get-url-origin "^1.0.1"
@@ -12971,10 +12971,10 @@ textlint-rule-prefer-tari-tari@^1.0.3:
     textlint-rule-helper "^2.0.0"
     textlint-util-to-string "^2.1.1"
 
-textlint-rule-preset-weseek@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/textlint-rule-preset-weseek/-/textlint-rule-preset-weseek-1.0.2.tgz#038b107cd4e472722e238cf365279ddd1d9db8e2"
-  integrity sha512-j3KAysJUvVM4LIVYg1Bgm5evDJEKUfnLi54YfLX2eHMimOwUYb6+YnlES7ty87U4jARizznb0blyaFfwPqTZDg==
+textlint-rule-preset-weseek@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/textlint-rule-preset-weseek/-/textlint-rule-preset-weseek-1.0.3.tgz#29095989b6eea8fd9bc3aba924ff8da4791a5d2f"
+  integrity sha512-rnh+uHu7K4QRkNLUzP0grWGgVDVgKo4+nQ85iiSZky7+wSx1LbIbKYWrPt9imoqhEbMMOQvo2JVHgCGBVI79Vg==
   dependencies:
     "@textlint-rule/textlint-rule-no-invalid-control-character" "^2.0.0"
     "@textlint-rule/textlint-rule-no-unmatched-pair" "^1.0.8"
@@ -12989,7 +12989,7 @@ textlint-rule-preset-weseek@^1.0.2:
     textlint-rule-max-comma "^2.0.2"
     textlint-rule-max-kanji-continuous-len "^1.1.1"
     textlint-rule-max-ten "^4.0.2"
-    textlint-rule-no-dead-link "^4.7.0"
+    textlint-rule-no-dead-link "^4.8.0"
     textlint-rule-no-double-negative-ja "^2.0.0"
     textlint-rule-no-doubled-conjunction "^2.0.2"
     textlint-rule-no-doubled-joshi "^4.0.0"
