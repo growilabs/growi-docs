@@ -7,18 +7,25 @@
       // 英文用ルールだが、精度が低いので一時的にfalseにする
       // 将来的にはpreset-weseekから除外する予定
       "ginger": false,
-      "no-dead-link": {
-        "checkRelative": true,
-        "baseURI": "https://docs.growi.org/",
-        "ignore": [
-          // 以下のURLはリンク切れ、またはリダイレクトされる場合でも無視する
-          "http://localhost*",
-          "https://slack.com/services/new/incoming-webhook",
-          "https://s3.console.aws.amazon.com/s3",
-          "https://api.slack.com/apps/\[AppID*",
-          "https://api.slack.com/apps/\[AppID*\/*"
-          ],
-      },
+      "no-dead-link": false,
+//     Github Actions で全ファイルを同時に lint した場合、リクエスト過多で不安定になるため無効にする
+//      "no-dead-link": {
+//        "checkRelative": true,
+//        "baseURI": "https://docs.growi.org/",
+//        "ignore": [
+//          // 以下のURLはリンク切れ、またはリダイレクトされる場合でも無視する
+//          "http://localhost*",
+//          "https://slack.com/services/new/incoming-webhook",
+//          "https://s3.console.aws.amazon.com/s3",
+//          "https://api.slack.com/apps/\[AppID*",
+//          "https://api.slack.com/apps/\[AppID*\/*",
+//          ],
+//        // 以下のオプションはリクエスト過多に対応するための実験的パラメーターなので、ローカルで使う場合は不要
+//        "maxRetryTime": 10,
+//        "concurrency": 1, // {number} Concurrency count of linting link [Experimental]
+//        "interval": 1000, // The length of time in milliseconds before the interval count resets. Must be finite. [Experimental]
+//        "intervalCap": 2, // The max number of runs in the given interval of time. [Experimental]
+//      },
       "ja-no-mixed-period": {
         // :を日本語と認識してしまうので、句点として許可する
         "allowPeriodMarks": ":",
