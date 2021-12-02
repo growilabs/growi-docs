@@ -240,6 +240,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/en/dev/startup-v3/dev-env.md',
+                '/en/dev/startup-v3/launch-devcontainer.md',
                 '/en/dev/startup-v3/start-development.md',
               ],
             },
@@ -473,6 +474,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/dev/startup-v3/dev-env.md',
+                '/ja/dev/startup-v3/launch-devcontainer.md',
                 '/ja/dev/startup-v3/start-development.md',
               ],
             },
