@@ -17,7 +17,7 @@ NCHAN_URI=http://nchan
 
 ### 詳細設定
 
-[環境変数](./env-vars.md) ページの `S2SMSG_PUBSUB_NCHAN_*` を参照してください。
+[環境変数](/ja/admin-guide/admin-cookbook/env-vars.html) ページの `S2SMSG_PUBSUB_NCHAN_*` を参照してください。
 
 ## インポート・エクスポート機能に関する注意点
 
@@ -32,4 +32,4 @@ NCHAN_URI=http://nchan
 
 そのためインポート・エクスポート機能はロードバランスしない環境での利用を推奨します。
 
-また、データのバックアップを行いたい場合はアーカイブのエクスポートではなく [mongodb-awesome-backup](./mongodb-backup.md) の利用を推奨します。
+また、データのバックアップを行いたい場合はアーカイブのエクスポートではなく [mongodb-awesome-backup](/ja/admin-guide/admin-cookbook/mongodb-backup.html) の利用を推奨します。

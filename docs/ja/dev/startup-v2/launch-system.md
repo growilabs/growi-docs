@@ -13,7 +13,7 @@ npx lerna bootstrap
 ```
 
 ::: danger
-monorepo を採用しているため、依存関係管理には [lerna](https://lerna.js.org/) を使います。
+monorepo を採用しているため、依存関係の管理には [lerna](https://lerna.js.org/) を使います。
 `yarn install` または、`npm install` は利用しないでください
 :::
 
@@ -21,7 +21,7 @@ monorepo を採用しているため、依存関係管理には [lerna](https://
 ### フロントエンド・バックエンドサーバーの起動
 
 新たに2つのターミナルを作成し、それぞれフロントエンドビルドのサーバー、バックエンドのサーバーを起動します。  
-それぞれ、`Ctrl-C`で終了することが出来ます。
+それぞれ、`Ctrl-C`で終了できます。
 
 #### フロントエンド開発用サーバー
 

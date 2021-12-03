@@ -16,7 +16,7 @@ By linking with HackMD, GROWI allows multiple people to edit a document within G
 
 In order to use HackMD, GROWI and HackMD must be linked and configured in advance.
 
-Refer to the separate [Administrator Guide page](/admin-guide/admin-cookbook/integrate-with-hackmd.html) for this configuration.
+Refer to the separate [Administrator Guide page](en/admin-guide/admin-cookbook/integrate-with-hackmd.html) for this configuration.
 
 The following explanation assumes that the GROWI environment has been configured to use HackMD.
 
@@ -53,8 +53,7 @@ User B will then join this page as a second editor.
 
 ### Second and subsequent participants
 
-When user B opens the page, the following message appears at the bottom of the screen  
-`This page has a draft on HackMD >> Open HackMD Editor`.
+When user B opens the page, the following message appears at the bottom of the screen `This page has a draft on HackMD >> Open HackMD Editor`.
 
 ![](./images/HackMD4.png)
 
@@ -134,10 +133,8 @@ In this situation, you will not be able to start editing in HackMD mode even aft
 
 ![](./images/HackMD8.png)
 
-If this message appears,
-  click the `Discard it` link or the `Discard changes of HackMD` button
-and start editing from the latest version of the page.
-because the update (saving) in normal editing mode takes precedence over editing in HackMD mode.  
+If this message appears, click the `Discard it` link or the `Discard changes of HackMD` button and start editing from the latest version of the page.
+Because the update (saving) in normal editing mode takes precedence over editing in HackMD mode.  
 
 **This will discard any edits made on HackMD.**
 :::

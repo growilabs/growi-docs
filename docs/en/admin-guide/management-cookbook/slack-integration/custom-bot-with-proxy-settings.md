@@ -11,7 +11,7 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
 
   ![slack-custom-bot1](/assets/images/slack-custom-bot1.png)
 
-1. In the **Create a Slack App** section, ① input the name of your app in the **App Name** field and ② select the workspace where you want to add the GROWI bots in the **Development Slack Workspace**.
+1. In the **Create a Slack App** section, 1. input the name of your app in the **App Name** field and 2. select the workspace where you want to add the GROWI bots in the **Development Slack Workspace**.
 
 1. Click the **Create App** button.
 
@@ -40,8 +40,7 @@ SLACK_SIGNING_SECRET={ Signing Secret }
 4. Start both the GROWI main server and the proxy server(`slackbot-proxy`).  
   You can start the proxy server with `yarn` and `yarn dev` commands.
 
-5. Select **Custom bot with proxy** from the Slack Integration section
- of the admin panel.
+5. Select **Custom bot with proxy** from the Slack Integration section of the admin panel.
 ![slack-bot-selecting-custom-bot-with-proxy](/assets/images/slack-bot-selecting-custom-bot-with-proxy.png)
 
 ## Set Custom bot with proxy Scopes
@@ -79,7 +78,7 @@ The scope setting is complete if the following is displayed.
 
 - `https:// your GROWI domain /\_api/v3/slack-integration/interactions`
 
-  - e.g. **<https://example.com/_api/v3/slack-integration/interactions>**
+  - e.g. `https://example.com/slack/interactions`
 
      ![slack-bot-interactivity-shortcuts-creation](/assets/images/slack-bot-interactivity-shortcuts-creation.png)
 

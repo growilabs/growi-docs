@@ -9,7 +9,7 @@ pageClass: admin-cookbook-env-vars
 | ------------------- | ---------- | ------------- |
 | `MONGO_URI` | 接続する MongoDB サーバーの URI | `mongodb://localhost/growi` |
 | `NO_CDN` | `true` の場合、システムは CDN を使用しません。代わりに全てのリソースはクライアントビルド時に CDN からダウンロードされ、利用時は GROWI Express serverからのみ提供されるようになります。 | `false` |
-| `ELASTICSEARCH_URI` | 接続する Elasticearch サーバーの URI | |
+| `ELASTICSEARCH_URI` | 接続する Elasticsearch サーバーの URI | |
 | `ELASTICSEARCH_REQUEST_TIMEOUT` | リクエスト時のタイムアウト(msec) | 8000 |
 | `REDIS_URI` | 接続する Redis サーバーの URI (Redis を MongoDB の代わりにセッションストアとして利用する場合に設定してください） | |
 | `PASSWORD_SEED` | パスワードハッシュ生成時に使用されるパスワードシード | |
@@ -46,8 +46,8 @@ pageClass: admin-cookbook-env-vars
 | `HACKMD_URI` | 接続する [HackMD(CodiMD)](https://hackmd.io/) サーバーの URI | |
 | | このサーバーは GROWI エージェントをロードする必要があります。 セットアップ方法は[こちら](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html)。| |
 | `HACKMD_URI_FOR_SERVER` | GROWI Express サーバーが参照する [HackMD(CodiMD)](https://hackmd.io/) のURI。 未設定の場合は `HACKMD_URI` が使用されます。 | |
-| `PLANTUML_URI` | 接続する [PlantUML](http://plantuml.com/) サーバーの URI | |
-| `BLOCKDIAG_URI` | 接続する [blockdiag](http://http://blockdiag.com/) サーバーの URI | |
+| `PLANTUML_URI` | 接続する [PlantUML](https://plantuml.com/ja/) サーバーの URI | |
+| `BLOCKDIAG_URI` | 接続する [blockdiag](http://blockdiag.com/ja/) サーバーの URI | |
 | `DRAWIO_URI` | 接続する [diagrams.net(draw.io)](https://www.diagrams.net/) サーバーの URI | |
 | `S2SMSG_PUBSUB_SERVER_TYPE` |  | |
 | | : `nchan` Nginx [Nchan](https://nchan.io/) を利用します | |

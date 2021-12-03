@@ -17,14 +17,10 @@ services:
       context: .
       dockerfile: Dockerfile
 
-    ports:
-      - 8080:8080
-
     volumes:
       - ..:/workspace/growi-docs:delegated
       - node_modules:/workspace/growi-docs/node_modules
       - ../../growi:/workspace/growi:delegated
-      - ../../growi-commons:/workspace/growi-commons:delegated
 
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity

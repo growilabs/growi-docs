@@ -66,7 +66,7 @@ Only accounts that do not have the Active status can be deleted. Please note tha
 
 1. Click User Management from the sidebar on the left.
 
-![](./images/user-management6.png)
+    ![](./images/user-management6.png)
 
 2. Click Temporary Issuance for new users.
 
@@ -74,7 +74,7 @@ Only accounts that do not have the Active status can be deleted. Please note tha
 
 4. Click issue.
 
-<img src="./images/user-management7.png" width="50%">
+    <img src="./images/user-management7.png" width="50%">
 
 5. A notification of the email and password is displayed on the screen.
 

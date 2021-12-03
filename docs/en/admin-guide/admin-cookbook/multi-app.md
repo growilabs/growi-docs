@@ -1,7 +1,7 @@
 # Multiple Sites
 
 ::: tip
-This cookbook supposes the usage of [docker-compose](../getting-started/docker-compose.md).
+This cookbook supposes the usage of [docker-compose](/en/admin-guide/getting-started/docker-compose.html).
 :::
 
 ## Overview
@@ -109,7 +109,7 @@ volumes:
 ```
 
 ### Start
-Execute this command and access to each sites.
+Execute this command and access to each site.
 
 ```bash
 docker-compose up

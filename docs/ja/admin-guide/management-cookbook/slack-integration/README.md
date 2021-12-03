@@ -6,10 +6,8 @@ GROWI では、 Slack 連携の方法として、1. GROWI bot と 2. Incoming We
 
 ### 1. GROWI bot
 
-GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。任意の Slack ワークスペースにインストールすること
-で、GROWI からの通知だけでなくチャットからの全文検索実行や会話まとめなど
-様々な機能を利用することができるようになります。
-提供されている GROWI bot は以下の 3 種類があります。
+GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。任意の Slack ワークスペースにインストールすることで、GROWI からの通知だけでなくチャットからの全文検索や会話まとめなど
+様々な機能を利用できるようになります。提供されている GROWI bot は以下の 3 種類があります。
 
 #### Official bot (推奨)
 
@@ -17,7 +15,9 @@ GROWI bot は GROWI 開発チーム が開発した Slack App の一つです。
 ![diagram-for-official-bot](/assets/images/slack-bot-outline-official.png)
 
 Official GROWI bot は GROWI 開発チーム が無償で提供・運用している GROWI bot です。
+<!-- textlint-disable weseek/no-dead-link -->
 [Slack app directory](https://wsgrowi.slack.com/apps) で公開されており、どなたでも利用できます。
+<!-- textlint-enable weseek/no-dead-link -->
 
 #### Custom bot without proxy
 
@@ -25,34 +25,35 @@ Official GROWI bot は GROWI 開発チーム が無償で提供・運用して�
 ![diagram-for-custom-bot-without-bot](/assets/images/slack-bot-outline-custom-without-proxy.png)
 
 Custom bot without proxy は 自身で Slack bot を作成し、お使いの GROWI と紐付けを行うことで、
-Slack から GROWI の 機能の一部を使用することができます。
+Slack から GROWI の 機能の一部を使用できます。
 
 #### Custom bot with proxy
 
 【概念図】
 ![diagram-for-custom-bot-with-proxy](/assets/images/slack-bot-outline-custom-with-proxy.png)
 
+<!-- textlint-disable weseek/sentence-length -->
 Custom bot with proxy は 自身で Slack bot を作成し、proxy サーバーを立ち上げ・設定することで、
-Official bot と同様の手順で GROWI の機能の一部を使用することができます。
-
+Official bot と同様の手順で GROWI の機能の一部を使用できます。
+<!-- textlint-enable weseek/sentence-length -->
 ### 2. Incoming Webhooks
 
-Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot とは異なり、Slack への通知に特化しています。
+Incoming Webhook も Slack 連携する手段の一つですが、GROWI bot とは異なり、Slack への通知に特化しています。
 チャットからの全文検索など GROWI bot にある機能の多くは使うことができませんが、その分簡単にセットアップできます。詳しくは[通知の種類/設定方法](/ja/admin-guide/management-cookbook/external-notification.html#通知の種類-設定方法)をご覧ください。
 
 ## 各種 Bot の設定方法
 
 ### Official bot
 
-設定方法は[こちら](/ja/admin-guide/management-cookbook/slack-integration/official-bot-settings.md)をご覧ください。
+設定方法は[こちら](/ja/admin-guide/management-cookbook/slack-integration/official-bot-settings.html)をご覧ください。
 
 ### Custom bot without proxy
 
-設定方法は[こちら](/ja/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md)をご覧ください。
+設定方法は[こちら](/ja/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.html)をご覧ください。
 
 ### Custom bot with proxy
 
-設定方法は[こちら](/ja/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md)をご覧ください。
+設定方法は[こちら](/ja/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.html)をご覧ください。
 
 ## 接続テスト時のエラーログ
 
@@ -72,11 +73,9 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 1. **Request failed with status code 500**  
    すでに Access Token を登録された後、Access Token を再発行してテストを実行した可能性があります。
-   [接続中の GROWI を確認する](/ja/admin-guide/management-cookbook/slack-integration/#接続中の-growi-を確認する)を参照して、
-   現在どの GROWI App と連携しているのかを確認してください。
-   確認ができたら、[Slack ワークスペースと GROWI App との連携を解除する](/ja/admin-guide/management-cookbook/slack-integration/#slack-ワークスペースと-growi-app-との連携を解除する)
-   を参照し、GROWI App との連携を解除してください。
-   連携を解除することができたら、再度登録し直してください。
+   [接続中の GROWI を確認する](/ja/admin-guide/management-cookbook/slack-integration/#接続中の-growi-を確認する)を参照して、現在どの GROWI App と連携しているのかを確認してください。
+   確認後、[Slack ワークスペースと GROWI App との連携を解除する](/ja/admin-guide/management-cookbook/slack-integration/#slack-ワークスペースと-growi-app-との連携を解除する)
+   を参照し、GROWI App との連携を解除してください。連携の解除後、再度登録し直してください。
    ![slack-bot-errors-500](/assets/images/slack-bot-errors-500.png)
 
 1. **The scopes is not appropriate**  
@@ -95,64 +94,7 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 ## GROWI bot でできること
 
-### ヘルプコマンド
-
-1. `/growi help` を入力すると GROWI bot で使うことができる、コマンド一覧が表示されます。
-   ![HackMD Demo](/assets/images/growi-help.gif)
-
-### ページの作成
-
-1. `/growi create` を入力すると GROWI 内に新規ページが作成されます。
-
-![HackMD Demo](/assets/images/growi-create.gif)
-
-### ワークスペース内の全文検索
-
-1. `/growi search [キーワード]` を入力すると検索結果が表示されます。
-
-   - 例: `/growi search example`
-     ![slack-bot-full-text-search-display-result-command](/assets/images/slack-bot-full-text-search-display-result-command.png)
-   - 検索結果
-     ![slack-bot-full-text-search-display-result](/assets/images/slack-bot-full-text-search-display-result.png)
-   - **Next** ボタンをクリックすると、次の検索結果を表示します。
-     ![slack-bot-full-text-search-click-next](/assets/images/slack-bot-full-text-search-click-next.png)
-   - **Share** ボタンをクリックすると、チャンネル内に共有されます。
-     ![slack-bot-full-text-search-click-share](/assets/images/slack-bot-full-text-search-click-share.png)
-
-1. Slack ワークスペースを複数の GROWI に登録している場合、複数の GROWI から横断検索することができます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
-
-   - 例: `/growi search example`
-     ![slack-bot-full-text-search-display-result-command](/assets/images/slack-bot-full-text-search-display-result-command.png)
-   - 検索結果
-     ![slack-bot-search-multi-growi](/assets/images/slack-bot-search-multi-growi.png)
-
-### Slack チャンネル内の会話からページを作成する (Alpha)
-
-1. `/growi togetter` を入力します。
-2. `Oldest datetime` にページに使用したいメッセージで最も古いものの時刻を入力します。
-3. `Newest datetime` にページに使用したいメッセージで最も新しいものの時刻を入力します。
-4. 最後に `Page path` にページの作成パスを入力し、`Create page` します。 `Oldest datetime` から `Newest datetime` の間の会話が作成されるページに反映されます。
-
-![HackMD Demo](/assets/images/growi-togetter.gif)
-
-### 接続中の GROWI を確認する
-
-`/growi status` と入力することで、Slack ワークスペースと連携している GROWI を確認することができます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
-![slack-bot-growi-status](/assets/images/slack-bot-growi-status.png)
-
-### Slack ワークスペースと GROWI App との連携を解除する
-
-1. `/growi unregister [連携解除したい GROWI App の URL1] [連携解除したい GROWI App の URL2] ...` と入力するとモーダルが表示されます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
-
-   - 入力例: `growi unregister http://example.com http://growi.jp`
-     ![slack-bot-unregister-input-eg](/assets/images/slack-bot-unregister-input-eg.png)
-
-   - 表示されるモーダル
-     ![slack-bot-unregister-modal](/assets/images/slack-bot-unregister-modal.png)
-
-1. **Submit** ボタンをクリックします。
-1. 以下のように表示されたら、連携解除が完了しています。
-   ![slack-bot-unregister-completed](/assets/images/slack-bot-unregister-completed.png)
+GROWI bot の機能については[ユーザーガイド](/ja/guide/features/slack_integration)をご参照ください。
 
 ## アイコン
 
@@ -161,10 +103,9 @@ Incoming Webhook も Slack 連携を行う手段の一つですが、GROWI bot �
 
 ## Incoming webhook 設定
 
-TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる
 Incoming Webhook による連携は v4.2 系までの推奨機能でしたが、v4.3 系以降は前述の GROWI bot による連携を推奨しています。
 
-通知を行う Slack ワークスペースを設定します。
+通知する Slack ワークスペースを設定します。
 
 1. 管理画面のセキュリティ設定ページ(/admin/notification)にアクセスします。
 2. Slack Incoming Webhooks 設定の必要事項を入力し、更新ボタンを押します。
@@ -178,7 +119,6 @@ Incoming Webhook による連携は v4.2 系までの推奨機能でしたが、
 
 ![slack1](/assets/images/slack1.png)
 
-ページの保存・更新時に 入力したチャンネルに Slack 通知が届きます。  
-この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
+ページの保存・更新時に、入力したチャンネルへ Slack 通知が届きます。この方法で通知することを GROWI では **User Trigger Notification** といいます。
 
 User Trigger Notification の設定方法は[こちら](/ja/admin-guide/management-cookbook/external-notification.html#user-trigger-notification-設定)を参照してください。

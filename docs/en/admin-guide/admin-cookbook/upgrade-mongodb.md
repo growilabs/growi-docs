@@ -5,12 +5,11 @@
 ::: warning
 This page content may be needed when you upgrade GROWI version to the following.
 
-- [Upgrading to v4.2.x](../upgrading/42x.md)
-- [Upgrading to v3.4.x](../upgrading/34x.md)
+- [Upgrading to v4.2.x](/en/admin-guide/upgrading/42x.html)
+- [Upgrading to v3.4.x](/en/admin-guide/upgrading/34x.html)
 :::
 
-When you upgrade GROWI version from v4.1.x to v4.2.x,
-please execute the operations of the following sections in order from the top.
+When you upgrade GROWI version from v4.1.x to v4.2.x, please execute the operations of the following sections in order from the top.
 
 ## Upgrade MongoDB from v3.4 to v3.6
 

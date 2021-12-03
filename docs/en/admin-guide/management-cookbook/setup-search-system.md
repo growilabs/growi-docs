@@ -10,11 +10,11 @@ Please refer to system management page for instructions on activating and connec
   - Users of [weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose)
   will automatically have Elasticsearch activated by default.  No additional setup is required.
 - ubuntu
-  - Please find instructions for setting up and using Elasticsearch [here](../../admin-guide/getting-started/ubuntu-server.html#elasticsearch).
+  - Please find instructions for setting up and using Elasticsearch [here](/en/admin-guide/getting-started/ubuntu-server.html#elasticsearch).
   - Please set the environment variable `ELASTICSEARCH_URI` to the URI of the Elasticsearch instance.
   you will use for GROWI.
 - centOS
-  - Please find instructions for setting up and using Elasticsearch [here](../../admin-guide/getting-started/centos.html#elasticsearch).
+  - Please find instructions for setting up and using Elasticsearch [here](/en/admin-guide/getting-started/centos.html#elasticsearch).
   - Please set the environment variable `ELASTICSEARCH_URI` to the URI of the Elasticsearch instance.
 
 ## Confirming your Elasticsearch connection

@@ -1,8 +1,7 @@
 ## Preparing Tools
 
 ::: tip Note
-The below documentation details our development environment at WESEEK Inc.  It may include some tools
-that are not necessary for your use case.
+The below documentation details our development environment at WESEEK Inc. It may include some tools that are not necessary for your use case.
 :::
 
 
@@ -21,12 +20,11 @@ that are not necessary for your use case.
 
 ::: tip WESEEK Rule
 Developers who are not used to Git functionality (branches, reset, rebase) should use a GUI client.
-GUI clients make it easy to develop while keeping in mind the tree structure of the Git repository and
-related considerations
+GUI clients make it easy to develop while keeping in mind the tree structure of the Git repository and related considerations.
 :::
 
 1. Install SourceTree
-    * Download and install SourceTree here: [https://ja.atlassian.com/software/sourcetree](https://ja.atlassian.com/software/sourcetree)
+    * Download and install SourceTree here: [https://www.atlassian.com/software/sourcetree](https://www.atlassian.com/software/sourcetree)
     * If you recive a dialog saying "Unable to find Git", select "Download Git for use with SourceTree only"
 2. Set up SourceTree
     1. Open a terminal using SourceTree
@@ -58,7 +56,7 @@ related considerations
 ※These settings are not compatible with Virtualbox
 
 1. Set up the environment for use with WSL2
-    1. Install the [WSL2 Linux Kernel Package](https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-kernel)
+    1. Install the [WSL2 Linux Kernel Package](https://docs.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)
     1. Open PowerShell with administrator privileges and execute the following:
 
         ```bash
@@ -81,8 +79,8 @@ related considerations
             ```
 
         * If the VERSION says 1, execute `wsl --set-version Ubuntu 2` to change the distribution.
-    1. Limit memory size due to the issue that WSL 2 consumes massive amounts of RAM ([microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))
-        * Edit or create `C:\Users\YourAccout\.wslconfig`
+    1. Limit memory size due to the issue that WSL 2 consumes massive amounts of RAM ([Microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))
+        * Edit or create `C:\Users\YourAccount\.wslconfig`
 
         ```
         [wsl2]
@@ -126,7 +124,7 @@ These settings must be set up on the host side.
     ```
 
 1. In order to use the credential helper, you will need the following settings:
-    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
+    <https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git>
 
 :::
 
@@ -141,7 +139,7 @@ These settings must be set up on the host side.
     ```
 
 1. In order to use the credential helper, you will need the following settings:
-    <https://help.github.com/en/github/using-git/caching-your-github-password-in-git>
+    <https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git>
 
 :::
 

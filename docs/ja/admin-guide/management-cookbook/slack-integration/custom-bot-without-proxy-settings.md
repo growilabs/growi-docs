@@ -90,7 +90,7 @@ GROWI 本体サーバーを立ち上げてください。
 
 ## Signing Secret と Bot User OAuth Token の設定
 
-Signing Secret と Bot User OAuth Token の設定を行う前に、作成した Bot でそれぞれの値を確認します。
+Signing Secret と Bot User OAuth Token を設定する前に、作成した Bot でそれぞれの値を確認します。
 
 ### Signing Secret の確認方法
 

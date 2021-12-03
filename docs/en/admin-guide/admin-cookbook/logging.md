@@ -2,9 +2,9 @@
 
 Logger can provide more detailed information if configured. Logger configuration may be helpful in investigating a system clash and authentication failure.
 
-## Change Log Level
+## Changelog Level
 
-Add log namespaces separated with a comma to the environment vairable `DEBUG` and restart GROWI.
+Add log namespaces separated with a comma to the environment variable `DEBUG` and restart GROWI.
 
 ### Example
 
