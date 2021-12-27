@@ -76,6 +76,9 @@ GROWI 本体サーバーを立ち上げてください。
     token_rotation_enabled: false
   ```
 
+  1. アプリの概要を確認したら「Create」をクリックしてアプリを作成します。
+  ![slack-custom-bot5](/assets/images/slack-custom-bot5.png)
+
 ## スコープを設定する
 
 1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
