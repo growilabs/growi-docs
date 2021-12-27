@@ -79,50 +79,6 @@ GROWI 本体サーバーを立ち上げてください。
   1. アプリの概要を確認したら「Create」をクリックしてアプリを作成します。
   ![slack-custom-bot5](/assets/images/slack-custom-bot5.png)
 
-## スコープを設定する
-
-1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
-  ![slack-bot-oauth-and-permissions-introduction-no-check](/assets/images/slack-bot-oauth-and-permissions-introduction-no-check.png)
-1. **Add an OAuth Scope** をクリックします。
-  ![slack-bot-scope-add-oauth-click](/assets/images/slack-bot-scope-add-oauth-click.png)
-1. **commands**, **chat:write**, **team:read** を選択します。
-  以下のように表示されたら、スコープの設定は完了です。  
-  ![slack-bot-scope-selected](/assets/images/slack-bot-scope-selected.png)
-
-## Interactivity & Shortcuts の Request URL を設定する
-
-1. 作成した Slack App の **Features** から **Interactivity Shortcuts** をクリックします。
-  ![slack-bot-interactivity-shortcuts-introduction](/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
-
-1. **Interactivity** 右側にあるボタンを On にします。
-  ![slack-bot-interactivity-shortcuts-enable-button](/assets/images/slack-bot-interactivity-shortcuts-enable-button.png)
-
-1. Request URL を以下のように入力してください。
-
-- https://{連携させたい GROWI のドメイン名}/\_api/v3/slack-integration/interactions
-- 例 `https://example.com/_api/v3/slack-integration/interactions`
-
-  ![slack-bot-interactivity-shortcuts-creation](/assets/images/slack-bot-interactivity-shortcuts-creation.png)
-
-1. 入力が完了したら、**Save Changes** をクリックしてください。
-
-## スラッシュコマンドの作成
-
-1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
-  ![slash-commands-introduction](/assets/images/slash-commands-introduction.png)
-
-1. **Create New Command** をクリックします。
-  ![slash-commands-create-new-command](/assets/images/slash-commands-create-new-command.png)
-
-    - Command に /growi と入力してください。
-    - Request URL には、`https://example.com/_api/v3/slack-integration/commands` と入力してください
-    - Short Description も入力必須のため、適当なご説明を入力してください。
-    - Usage Hint に関しては任意なので、適宜入力してください。
-    - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
-    - 入力が完了したら、**Save** をクリックしてください。
-
-  ![slash-commands-create](/assets/images/slash-commands-create.png)
-
 ## Custom bot without proxy を Slack のワークスペースへインストールする
 
 1. 作成した Slack App の **Settings** から **Basic Information** をクリックします。
