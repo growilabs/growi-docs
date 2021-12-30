@@ -19,7 +19,7 @@ Registering an LDAP server allows users to login via LDAP.
 - Bind DN
   - Enter the account DN to be used when authenticating to the directory service.
   - Use the format <code v-pre>{{username}}</code> for User Bind to use the username entered at login.
-    - Example: <code v-pre>uid={{username}},dc=domain,dc=com</code>
+    - Example: <code v-pre>uid={{username}},dc=example,dc=com</code>
 - Bind DN Password
   - For Manager Bind only, enter the password to use. (Note: MongoDB will store the plaintext password for the DN in MongoDB).
   - For User Bind, the login password is used.
@@ -54,7 +54,7 @@ To automatically associate a newly logged-in user with a local account whose `us
 Enables login only if a posixGroup exists that meets the specified criteria. To enable this feature, set the following values in the LDAP tag in the authentication mechanism settings on the security settings page.
 
 - Group Search Base DN: The DN to be treated as the base DN when searching for groups.
-  Example: `ou=group,dc=domain,dc=com`
+  Example: `ou=group,dc=example,dc=com`
 - Group Search Filter: The query to use for group filtering. Only when a group hits this query will the LDAP login succeed. Use <code v-pre>{{dn}}</code> to replace with the properties of the user object to be logged in.
   Example: <code v-pre>(&(cn=group1)(memberUid={{dn}}))</code>  will hit a group with `cn=group1` and a `memberUid` that contains the user's `uid` (if the `User DN property` has not been changed from the default `uid`)
 - User DN property: Properties of the user object that will be replaced by <code v-pre>{{dn}}</code> in the group search filter.
