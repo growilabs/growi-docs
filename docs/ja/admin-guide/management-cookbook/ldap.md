@@ -14,20 +14,20 @@ LDAP サーバーを登録することで、LDAP によるログインが可能�
     - User Bind: GROWI のログインフォームに入力したユーザー名から動的に DN を作成し、それを用いて LDAP ユーザーを検索するモード。
   - Bind DN
     - ディレクトリサービスに認証する際のアカウント DN を入力してください。
-    - User Bind にて、ログイン時に入力されるユーザー名を使用するには `{{username}}` の形式を使用してください。
-      - 例: `uid={{username}},dc=domain,dc=com`
+    - User Bind にて、ログイン時に入力されるユーザー名を使用するには<code v-pre>{{username}}</code>の形式を使用してください。
+      - 例: <code v-pre>uid={{username}},dc=domain,dc=com</code>
   - Bind DN パスワード
     - Manager Bind の場合のみ、使用するパスワードを入力してください。（注: MongoDB 内には当該 DN の平文パスワードが保存されます）
     - User Bind の場合は、ログイン時のパスワードが使用されます。
   - 検索フィルター
     - 検索フィルターを用いると、認証されるユーザーを一意に決定させることができます。
-    - ログイン時のユーザー名を使用するには `{{username}}` の形式を使用してください。
-    - 空欄の場合は `(uid={{username}})` が使用されます。
-    - 例1: `(uid={{username}})`
+    - ログイン時のユーザー名を使用するには <code v-pre>{{username}}</code> の形式を使用してください。
+    - 空欄の場合は <code v-pre>(uid={{username}})</code> が使用されます。
+    - 例1: <code v-pre>(uid={{username}})</code>
       - ログインフォームに入力したユーザー名が uid 属性と一致する LDAP ユーザーをピックアップ
-    - 例2: `(|(uid={{username}})(mail={{username}}))`
+    - 例2: <code v-pre>(|(uid={{username}})(mail={{username}}))</code>
       - ログインフォームに入力したユーザー名が uid 属性または mail 属性と一致する LDAP ユーザーをピックアップ
-    - 例3: `(&(uid={{username}})(memberOf=cn=manager,ou=group,dc=example,dc=com))`
+    - 例3: <code v-pre>(&(uid={{username}})(memberOf=cn=manager,ou=group,dc=example,dc=com))</code>
       - アクセス可能なユーザーを絞る
 3. 設定が反映されているか確認します。
   - ログアウトし、ログイン画面(/login)にアクセスします。
@@ -48,10 +48,10 @@ LDAP アカウントをもとに GROWI アカウントを新規作成する際�
 指定した条件を満たす posixGroup が存在した場合のみログインできるようにします。この機能を有効にする場合は、セキュリティ設定ページの認証機構設定の LDAP タグにて、以下の値を設定してください。
 
 - グループ検索ベース DN: グループを検索する際にベース DN として扱われる DN
-  - 例: `ou=group,dc=domain,dc=com`
-- グループ検索フィルター: グループフィルターに用いるクエリです。このクエリにヒットするグループがあった時のみ、LDAP でのログインが成功します。ログイン対象ユーザーオブジェクトのプロパティーで置換する場合は `{{dn}}` を用いてください。
+  例: `ou=group,dc=domain,dc=com`
+- グループ検索フィルター: グループフィルターに用いるクエリです。このクエリにヒットするグループがあった時のみ、LDAP でのログインが成功します。ログイン対象ユーザーオブジェクトのプロパティーで置換する場合は <code v-pre>{{dn}}</code> を用いてください。
 <!-- textlint-disable weseek/sentence-length -->
-  - 例: `(&(cn=group1)(memberUid={{dn}}))` とすると `cn=group1` と、ユーザーの `uid` を含む `memberUid` を持つグループにヒットします(`ユーザーの DN プロパティー` がデフォルトの `uid` から変更されていない場合)
+  例: <code v-pre>(&(cn=group1)(memberUid={{dn}}))</code> とすると `cn=group1` と、ユーザーの `uid` を含む `memberUid` を持つグループにヒットします(`ユーザーの DN プロパティー` がデフォルトの `uid` から変更されていない場合)
 <!-- textlint-enable weseek/sentence-length -->
-- ユーザーの DN プロパティー: グループ検索フィルター内の `{{dn}}` に置換される、ユーザーオブジェクトのプロパティー
-  - デフォルト: uid
+- ユーザーの DN プロパティー: グループ検索フィルター内の <code v-pre>{{dn}}</code> に置換される、ユーザーオブジェクトのプロパティー
+  デフォルト: uid
