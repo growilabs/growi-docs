@@ -8,27 +8,26 @@ Welcome to GROWI Docs.
 This site consists of the following sections.
 
 ## Admin's Guide
-### [Installation](getting-started/docker-compose.md)
 
-Introducing various ways to install GROWI.
+### [Installation](/en/admin-guide/getting-started/docker-compose.html)
 
-If you are just trying out, [Heroku](getting-started/heroku.md) might be your fit.
-If you are committed to GROWI, [docker-compose](getting-started/docker-compose.md) is the best fit.
+Introducing to install GROWI.
+See [docker-compose](/en/admin-guide/getting-started/docker-compose.html).
 
-### [Upgrade](upgrading/34x.md)
+### [Upgrade](/en/admin-guide/upgrading/42x.html)
 
 Upgrade guide from old versions of GROWI.
 About data integrity and other things to note.
 
-### [Migration](migration-guide/from-crowi-plus-onpremise.md)
+### [Migration](/en/admin-guide/migration-guide/from-crowi-plus-onpremise.html)
 
-Migration guide from crowi-plus or [Crowi](http://site.crowi.wiki/)
+Migration guide from crowi-plus or [Crowi](https://site.crowi.wiki/)
 
-### [System Admin Cookbook](admin-cookbook/launch-with-systemd.md)
+### [System Admin Cookbook](/en/admin-guide/admin-cookbook/launch-with-systemd.html)
 
-Cookbook for the server, container clusters, and network. For system admininistrators.
+Cookbook for the server, container clusters, and network. For system administrators.
 
-### [GROWI Admin Cookbook](management-cookbook/line-breaks.md)
+### [GROWI Admin Cookbook](/en/admin-guide/management-cookbook/line-breaks.html)
 
 Cookbook for GROWI itself. For GROWI administrators.
 

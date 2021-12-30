@@ -20,7 +20,9 @@ To backup/restore MongoDBs, [weseek/mongodb-awesome-backup](https://github.com/w
 
 #### When MongoDB Is Running as a Docker Container
 
+<!-- textlint-disable weseek/sentence-length -->
 Run a command to find out the container name, and add an option `--link ${container}:mongo` with the container name \(`${container}`\).
+<!-- textlint-enable weseek/sentence-length -->
 
 ##### e.g.
 
@@ -78,7 +80,9 @@ See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-ba
       -e S3_TARGET_FILE=backup-YYYYMMdd.tar.bz2 \
       weseek/mongodb-awesome-backup restore
     ```
+<!-- textlint-disable weseek/sentence-length -->
 2. The command restores the specified file \(`backup-YYYYMMdd.tar.bz2` in the example above \) in the S3 bucket.
+<!-- textlint-enable weseek/sentence-length -->
 3. Restart GROWI.
 
 ::: tip

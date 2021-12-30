@@ -38,8 +38,7 @@ Copy the following Markdown code and paste it into the editing box.
 2. Number list
 ```
 
-When pasting, a preview reflecting the contents in real time is displayed
-on the right side of the screen, as shown below.
+When pasting, a preview reflecting the contents in real time is displayed on the right side of the screen, as shown below.
 
 ![create](./images/tutorial_page1.png)
 
@@ -91,8 +90,7 @@ You can create an unordered list of information using any of the following symbo
     - Move up one level
 ```
 
-To create a line break in a hierarchical structure,
-put two spaces or a tab at the beginning of the new line.
+To create a line break in a hierarchical structure, put two spaces or a tab at the beginning of the new line.
 
 You can confirm the hierarchy on the preview screen.
 
@@ -102,8 +100,7 @@ Organize the content of the document by adding and removing hierarchies.
 
 ![create](./images/view_text.png)
 
-Using hierarchies to organize information is a good practice for creating wikis
-that are easy to read even with a lot of text.
+Using hierarchies to organize information is a good practice for creating wikis that are easy to read even with a lot of text.
 
 ## Link to an external web page
 
@@ -121,10 +118,9 @@ Put the link text in the square brackets the page URL in the round brackets.
 ## Insert an image
 
 An image can be inserted using the insert image button in the edit toolbar.
-You can also insert an image by prepending an exclamation mark (`!`) to the 
-link format (`[]()`) discussed above.
+You can also insert an image by prepending an exclamation mark (`!`) to the link format (`[]()`) discussed above.
 
-``` 
+```
 ### Insert an image
   ![growi](https://growi.org/assets/images/logo.png)
 ```
@@ -138,8 +134,12 @@ You can upload your own images using the Attach function at the bottom of the ed
 The Attach function allows you to upload files to AWS or GCS.
 
 To attach files to your pages, you may need to configure settings on your wiki management page.
-Click [here](/en/admin-guide/management-cookbook/attachment.html#mongodb-gridfs-%E3%81%B8%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89)
-for instructions.
+Click [here](/en/admin-guide/admin-cookbook/attachment.html) for instructions.
+
+::: tip
+When you upload an image on the new page, the page is automatically saved and the disclosure range is automatically changed to **Only for me**.
+Click [here](/en/guide/features/authority.html#%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E9%96%B2%E8%A6%A7%E3%83%BB%E7%B7%A8%E9%9B%86%E6%A8%A9%E9%99%90%E3%81%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95) for the disclosure range.
+:::
 
 ## Use emoji
 
@@ -211,8 +211,7 @@ You can also create a table by clicking the table button in the edit toolbar.
 ![emoji](./images/edit_table2.png)
 
 You even can edit the created table in View mode.
-When you place the cursor on the table in View mode, the edit icon 
-is displayed.
+When you place the cursor on the table in View mode, the edit icon is displayed.
 
 ![emoji](./images/edit_table3.png)
 
@@ -236,5 +235,4 @@ The child page list is generated automatically.
 
 Additional details can be found [here](/en/guide/tips/hierarchical.html).
 
-Now that you have completed this tutorial,
-you can create pages and grow your wiki.
+Now that you have completed this tutorial, you can create pages and grow your wiki.

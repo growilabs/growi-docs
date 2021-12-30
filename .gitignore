@@ -8,6 +8,7 @@ npm-debug.log.*
 .Trash-*
 ehthumbs.db
 Thumbs.db
+*.Zone.Identifier
 
 # Node Files #
 /node_modules/
@@ -18,7 +19,6 @@ package-lock.json
 # Dist #
 docs/.vuepress/dist
 docs/.vuepress/public/redoc.html
-docs/en/api/commons
 tmp
 
 # Doc #
@@ -27,3 +27,4 @@ tmp
 .idea
 *.orig
 *.code-workspace
+docs/.vuepress/temp

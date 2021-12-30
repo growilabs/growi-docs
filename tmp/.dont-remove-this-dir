@@ -1,0 +1,3 @@
+!! DO NOT REMOVE tmp/ DIRECTORY !!
+
+It's needed by creating tmp/swagger.json.

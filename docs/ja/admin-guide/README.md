@@ -8,27 +8,27 @@ GROWI Docs へようこそ。
 このサイトは以下のセクションで構成されています。
 
 ## 管理者ガイド
-### [インストール](getting-started/docker-compose.md)
 
-様々な方法による GROWI のインストール手順の紹介です。
+### [インストール](/ja/admin-guide/getting-started/docker-compose.html)
 
-ちょっとしたお試しには起動までの手順が少ない [Heroku](getting-started/heroku.md) が便利です。
-本格的な利用を考えている場合は [docker-compose](getting-started/docker-compose.md) をお勧めします。
+GROWI のインストール手順の紹介です。
 
-### [アップグレード](upgrading/34x.md)
+[docker-compose](/ja/admin-guide/getting-started/docker-compose.html) をご覧ください。
+
+### [アップグレード](/ja/admin-guide/upgrading/42x.html)
 
 過去のバージョンの GROWI からのアップグレードマニュアルです。
 データの整合性や、その他気をつけるべきことなどを載せています。
 
-### [他システムからの移行](migration-guide/from-crowi-plus-onpremise.md)
+### [他システムからの移行](/ja/admin-guide/migration-guide/from-crowi-plus-onpremise.html)
 
-GROWI の前身である crowi-plus からの移行や、フォーク元である [Crowi](http://site.crowi.wiki/) からの移行方法を紹介します。
+GROWI の前身である crowi-plus からの移行や、フォーク元である [Crowi](https://site.crowi.wiki/) からの移行方法を紹介します。
 
-### [システム管理者のクックブック](admin-cookbook/launch-with-systemd.md)
+### [システム管理者のクックブック](/ja/admin-guide/admin-cookbook/launch-with-systemd.html)
 
 GROWI システムを動作させているサーバー・コンテナクラスタ・ネットワーク管理者向けのクックブックです。
 
-### [GROWI 管理者のクックブック](management-cookbook/line-breaks.md)
+### [GROWI 管理者のクックブック](/ja/admin-guide/management-cookbook/line-breaks.html)
 
 GROWI システム本体の管理者向けのクックブックです。
 

@@ -1,6 +1,6 @@
 # Creating checkboxes
 
-In GROWI, you can create check boxes using Markdown.
+In GROWI, you can create checkboxes using Markdown.
 
 ```markdown
 # TODO confirmation
@@ -10,7 +10,6 @@ In GROWI, you can create check boxes using Markdown.
     - [ ] Invoice creation
 ```
 
-When the above Markdown code is written into a GROWI wiki page,
-it will create checkboxes as shown in the image below.
+When the above Markdown code is written into a GROWI wiki page, it will create checkboxes as shown in the image below.
 
 ![checkbox](./images/checkbox.png)

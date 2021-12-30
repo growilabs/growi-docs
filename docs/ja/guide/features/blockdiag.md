@@ -2,9 +2,9 @@
 
 ![blockdiag](./images/blockdiag.png)
 
-下記のような形式で記述することで blockdiag を用いたダイアグラムの記述をすることができます。
+下記のような形式で記述することで blockdiag を用いたダイアグラムを記述できます。
 
-[blockdiag についてはこちら](http://blockdiag.com/en/)を参考にしてください
+[blockdiag についてはこちら](http://blockdiag.com/en/)を参考にしてください。
 
 
 ```markdown

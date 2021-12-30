@@ -1,7 +1,7 @@
 # HTTPS with Let's Encrypt
 
 ::: tip
-This cookbook supposes the usage of [docker-compose](../getting-started/docker-compose.md).
+This cookbook supposes the usage of [docker-compose](/en/admin-guide/getting-started/docker-compose.html).
 :::
 
 ## Overview
@@ -12,7 +12,7 @@ This chapter introduces how to launch GROWI with the HTTPS server with Let's Enc
 
 ### Copy docker-compose.override.yml
 
-Execute the follow command to copy `./exmaples/https-portal/docker-compose.override.yml` into the base directory of GROWI.
+Execute the following command to copy `./exmaples/https-portal/docker-compose.override.yml` into the base directory of GROWI.
 
 ```text
 $ cd growi // the base directory of GROWI
@@ -21,7 +21,7 @@ $ cp examples/https-portal/docker-compose.override.yml .
 
 ### Launch GROWI
 
-Launch GROWI and acess to the site.
+Launch GROWI and access to the site.
 
 ```bash
 docker-compose up

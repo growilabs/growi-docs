@@ -1,0 +1,50 @@
+{
+  "filters": {
+    "comments": true
+  },
+  "rules": {
+    "preset-weseek": {
+      // 英文用ルールだが、精度が低いので一時的にfalseにする
+      // 将来的にはpreset-weseekから除外する予定
+      "ginger": false,
+      "no-dead-link": false,
+//     Github Actions で全ファイルを同時に lint した場合、リクエスト過多で不安定になるため無効にする
+//      "no-dead-link": {
+//        "checkRelative": true,
+//        "baseURI": "https://docs.growi.org/",
+//        "ignore": [
+//          // 以下のURLはリンク切れ、またはリダイレクトされる場合でも無視する
+//          "http://localhost*",
+//          "https://slack.com/services/new/incoming-webhook",
+//          "https://s3.console.aws.amazon.com/s3",
+//          "https://api.slack.com/apps/\[AppID*",
+//          "https://api.slack.com/apps/\[AppID*\/*",
+//          ],
+//        // 以下のオプションはリクエスト過多に対応するための実験的パラメーターなので、ローカルで使う場合は不要
+//        "maxRetryTime": 10,
+//        "concurrency": 1, // {number} Concurrency count of linting link [Experimental]
+//        "interval": 1000, // The length of time in milliseconds before the interval count resets. Must be finite. [Experimental]
+//        "intervalCap": 2, // The max number of runs in the given interval of time. [Experimental]
+//      },
+      "ja-no-mixed-period": {
+        // :を日本語と認識してしまうので、句点として許可する
+        "allowPeriodMarks": ":",
+      },
+      "max-kanji-continuous-len": {
+        // 以下は6字以上の漢字の連続を許可する
+        "allow": ["証明書文字列","同時接続数上限","同時多人数編集","自動起動設定","全文検索管理","外部認証機構","通知詳細設定","最終更新日時","認証機構設定","全文検索機能", "個人設定画面","識別子生成器","開発環境構築","自己署名証明書","検索結果一覧画面","強調赤字背景反転","編集画面下部","編集画面上部","利用推奨環境"]
+      },
+      // 単位を扱う文章が少なく、ソフトウェアのバージョン記載でエラーを検知してしまうので無効にする
+      "use-si-units": false,
+      "sentence-length": {
+        "skipPatterns": [
+          // 英文は文字数制限の対象外にする
+          "/^[a-zA-Z0-9!#$%'\"&()*+,.:;<=>▲→?@\\[\\]^_{|}~-\\s`\\/]+$/"
+        ]
+      },
+      //現在 Github Actions で辞書ファイルを参照できないので、解決するまで無効化する
+      //https://github.com/hata6502/textlint-rule-no-hoso-kinshi-yogo/issues/4
+      "no-hoso-kinshi-yogo": false,
+    }
+  }
+}

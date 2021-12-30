@@ -7,12 +7,12 @@ This guide will walk you through the basic parts of a GROWI page.
 ## Page Title
 
 The title of the page is displayed here.
-You can [copy the page title and URL](./copy_to_clipboard.md) and [create a tag for the page](./tag.md) using the buttons located here.
+You can [copy the page title and URL](/en/guide/features/copy_to_clipboard.html) and [create a tag for the page](/en/guide/features/tag.html) using the buttons located here.
 
 ## Page Toolbar
 
 This toolbar allows you to perform various operations on this page.
-In addition to editing the page, you can also [check the page's update history](./history.md) and [move, copy, or delete this page](./page_operation.md) using this toolbar.
+In addition to editing the page, you can also [check the page's update history](/en/guide/features/history.html) and [move, copy, or delete this page](/en/guide/features/page_operation.html) using this toolbar.
 
 ## Page Sidebar
 

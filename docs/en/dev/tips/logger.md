@@ -49,7 +49,7 @@ There are 2 ways to edit the log setting.
 ### Edit Log Setting with Environmental Variables
 
 ::: warning
-Enviroment variables override the setting files.
+Environment variables override the setting files.
 :::
 
 #### Format
