@@ -1,8 +1,13 @@
-const { sidebarTree: growiCommonsSidebarTree } = require('../en/api/commons/config');
+const path = require('path');
 
 module.exports = {
   title: 'GROWI Docs',
   serviceWorker: true,
+
+  // fix hot reload
+  // https://github.com/vuejs/vuepress/issues/2392#issuecomment-651903508
+  temp: path.resolve(__dirname, 'temp'),
+
   plugins: [
     'tabs',
     [
@@ -47,11 +52,11 @@ module.exports = {
   locales: {
     '/en/': {
       lang: 'en-US',
-      description: 'GROWI Documentation Site',
+      description: 'GROWI Document',
     },
     '/ja/': {
       lang: 'ja',
-      description: 'GROWI ドキュメンテーション',
+      description: 'GROWI ドキュメント',
     },
   },
   themeConfig: {
@@ -79,7 +84,7 @@ module.exports = {
             ]
           }
         ],
-        sidebar: Object.assign(growiCommonsSidebarTree('Overview'), {
+        sidebar: {
           '/en/guide/': [
             '/en/guide/',
             {
@@ -119,7 +124,8 @@ module.exports = {
                 '/en/guide/features/search.md',
                 '/en/guide/features/tag.md',
                 '/en/guide/features/template.md',
-                '/en/guide/features/hackmd.md'
+                '/en/guide/features/hackmd.md',
+                '/en/guide/features/slack_integration.md',
               ]
             },
             {
@@ -150,7 +156,6 @@ module.exports = {
               collapsable: false,
               children: [
                 '/en/admin-guide/getting-started/docker-compose.md',
-                '/en/admin-guide/getting-started/heroku.md',
                 '/en/admin-guide/getting-started/ubuntu-server.md',
                 '/en/admin-guide/getting-started/centos.md'
               ]
@@ -159,6 +164,11 @@ module.exports = {
               title: 'Upgrading',
               collapsable: false,
               children: [
+                '/en/admin-guide/upgrading/45x.md',
+                '/en/admin-guide/upgrading/44x.md',
+                '/en/admin-guide/upgrading/43x.md',
+                '/en/admin-guide/upgrading/42x.md',
+                '/en/admin-guide/upgrading/41x.md',
                 '/en/admin-guide/upgrading/40x.md',
                 '/en/admin-guide/upgrading/38x.md',
                 '/en/admin-guide/upgrading/37x.md',
@@ -168,7 +178,7 @@ module.exports = {
               ]
             },
             {
-              title: 'Migration form other system',
+              title: 'Migration from other system',
               collapsable: true,
               children: [
                 '/en/admin-guide/migration-guide/from-crowi-plus-onpremise.md',
@@ -185,9 +195,11 @@ module.exports = {
                 '/en/admin-guide/admin-cookbook/logging.md',
                 '/en/admin-guide/admin-cookbook/launch-with-systemd.md',
                 '/en/admin-guide/admin-cookbook/multi-app.md',
+                '/en/admin-guide/admin-cookbook/loadbalance.md',
                 '/en/admin-guide/admin-cookbook/lets-encrypt.md',
                 '/en/admin-guide/admin-cookbook/attachment.md',
                 '/en/admin-guide/admin-cookbook/mongodb-backup.md',
+                '/en/admin-guide/admin-cookbook/upgrade-mongodb.md',
                 '/en/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/en/admin-guide/admin-cookbook/integrate-with-hackmd.md',
               ]
@@ -202,9 +214,19 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/group.md',
                 '/en/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
                 '/en/admin-guide/management-cookbook/ldap.md',
+                {
+                  title: 'Slack Integration',
+                  path: '/en/admin-guide/management-cookbook/slack-integration/',
+                  collapsable: false,
+                  children: [
+                    '/en/admin-guide/management-cookbook/slack-integration/official-bot-settings.md',
+                    '/en/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md',
+                    '/en/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
+                  ],
+                },
                 '/en/admin-guide/management-cookbook/active-directory.md',
                 '/en/admin-guide/management-cookbook/google-analytics.md',
-                '/en/admin-guide/management-cookbook/slack.md',
+                '/en/admin-guide/management-cookbook/external-notification.md',
                 '/en/admin-guide/management-cookbook/import.md',
                 '/en/admin-guide/management-cookbook/export.md',
                 '/en/admin-guide/management-cookbook/setup-search-system.md',
@@ -214,19 +236,23 @@ module.exports = {
           '/en/dev/': [
             '/en/dev/',
             {
-              title: 'Getting Started v2',
+              title: 'Getting Started v3',
               collapsable: false,
               children: [
-                '/en/dev/startup-v2/dev-env.md',
-                '/en/dev/startup-v2/launch.md',
+                '/en/dev/startup-v3/dev-env.md',
+                '/en/dev/startup-v3/launch-devcontainer.md',
+                '/en/dev/startup-v3/start-development.md',
               ],
             },
             {
-              title: '(Deprecated) Getting Started v1',
+              title: '(Deprecated) Getting Started v2',
               collapsable: true,
               children: [
-                '/en/dev/startup-v1/dev-env.md',
-                '/en/dev/startup-v1/launch.md',
+                '/en/dev/startup-v2/dev-env.md',
+                '/en/dev/startup-v2/prepare-tools.md',
+                '/en/dev/startup-v2/prepare-workspace.md',
+                '/en/dev/startup-v2/launch-devcontainer.md',
+                '/en/dev/startup-v2/launch-system.md',
               ],
             },
             {
@@ -269,11 +295,10 @@ module.exports = {
           ],
           '/en/api/': [
             ['/en/api/', 'Introduction'],
-            '/en/api/commons/',
             '/en/api/rest-v3.md',
             '/en/api/rest-v1.md',
           ],
-        }),
+        },
       },
       '/ja/': {
         label: '日本語',
@@ -334,7 +359,8 @@ module.exports = {
                 '/ja/guide/features/search.md',
                 '/ja/guide/features/tag.md',
                 '/ja/guide/features/template.md',
-                '/ja/guide/features/hackmd.md'
+                '/ja/guide/features/hackmd.md',
+                '/ja/guide/features/slack_integration.md',
               ]
             },
             {
@@ -365,7 +391,6 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/admin-guide/getting-started/docker-compose.md',
-                '/ja/admin-guide/getting-started/heroku.md',
                 '/ja/admin-guide/getting-started/ubuntu-server.md',
                 '/ja/admin-guide/getting-started/centos.md'
               ]
@@ -374,6 +399,11 @@ module.exports = {
               title: 'アップグレード',
               collapsable: false,
               children: [
+                '/ja/admin-guide/upgrading/45x.md',
+                '/ja/admin-guide/upgrading/44x.md',
+                '/ja/admin-guide/upgrading/43x.md',
+                '/ja/admin-guide/upgrading/42x.md',
+                '/ja/admin-guide/upgrading/41x.md',
                 '/ja/admin-guide/upgrading/40x.md',
                 '/ja/admin-guide/upgrading/38x.md',
                 '/ja/admin-guide/upgrading/37x.md',
@@ -400,9 +430,11 @@ module.exports = {
                 '/ja/admin-guide/admin-cookbook/logging.md',
                 '/ja/admin-guide/admin-cookbook/launch-with-systemd.md',
                 '/ja/admin-guide/admin-cookbook/multi-app.md',
+                '/ja/admin-guide/admin-cookbook/loadbalance.md',
                 '/ja/admin-guide/admin-cookbook/lets-encrypt.md',
                 '/ja/admin-guide/admin-cookbook/attachment.md',
                 '/ja/admin-guide/admin-cookbook/mongodb-backup.md',
+                '/ja/admin-guide/admin-cookbook/upgrade-mongodb.md',
                 '/ja/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/ja/admin-guide/admin-cookbook/integrate-with-hackmd.md',
               ]
@@ -416,9 +448,19 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/user-management.md',
                 '/ja/admin-guide/management-cookbook/group.md',
                 '/ja/admin-guide/management-cookbook/ldap.md',
+                {
+                  title: 'Slack 連携',
+                  path: '/ja/admin-guide/management-cookbook/slack-integration/',
+                  collapsable: false,
+                  children: [
+                    '/ja/admin-guide/management-cookbook/slack-integration/official-bot-settings.md',
+                    '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md',
+                    '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
+                  ],
+                },
                 '/ja/admin-guide/management-cookbook/active-directory.md',
                 '/ja/admin-guide/management-cookbook/google-analytics.md',
-                '/ja/admin-guide/management-cookbook/slack.md',
+                '/ja/admin-guide/management-cookbook/external-notification.md',
                 '/ja/admin-guide/management-cookbook/import.md',
                 '/ja/admin-guide/management-cookbook/export.md',
                 '/ja/admin-guide/management-cookbook/setup-search-system.md',
@@ -428,19 +470,23 @@ module.exports = {
           '/ja/dev/': [
             '/ja/dev/',
             {
-              title: '開発スタートアップ v2',
+              title: '開発スタートアップ v3',
               collapsable: false,
               children: [
-                '/ja/dev/startup-v2/dev-env.md',
-                '/ja/dev/startup-v2/launch.md',
+                '/ja/dev/startup-v3/dev-env.md',
+                '/ja/dev/startup-v3/launch-devcontainer.md',
+                '/ja/dev/startup-v3/start-development.md',
               ],
             },
             {
-              title: '(旧版) 開発スタートアップ v1',
+              title: '(旧版) 開発スタートアップ v2',
               collapsable: true,
               children: [
-                '/ja/dev/startup-v1/dev-env.md',
-                '/ja/dev/startup-v1/launch.md',
+                '/ja/dev/startup-v2/dev-env.md',
+                '/ja/dev/startup-v2/prepare-tools.md',
+                '/ja/dev/startup-v2/prepare-workspace.md',
+                '/ja/dev/startup-v2/launch-devcontainer.md',
+                '/ja/dev/startup-v2/launch-system.md',
               ],
             },
             {

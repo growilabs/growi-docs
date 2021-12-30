@@ -1,0 +1,21 @@
+name: Textlint
+on: pull_request
+jobs:
+  textlint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    # setup Node.js
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        cache: 'yarn'
+        cache-dependency-path: '**/yarn.lock'
+
+    # Run scripts
+    - name: Install dependencies
+      run: yarn install
+    - name: linting markdown files
+      run: yarn run lint
+

@@ -29,4 +29,4 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 (c) copyright 2008, Blender Foundation / www.bigbuckbunny.org
 ```
 
-上記の iframe 記述を GROWI 記事に貼りつけると、画像のように Youtube を画面に組み込む事が出来ます。
+上記の iframe 記述を GROWI 記事に貼りつけると、画像のように YouTube を画面に組み込む事ができます。

@@ -15,7 +15,7 @@ yarn
 yarn start
 ```
 
-Then, access to the url that VuePress will print like below.
+Then, access to the URL that VuePress will print like below.
 
 ``` bash
 > VuePress dev server listening at http://localhost:8080/
@@ -23,6 +23,6 @@ Then, access to the url that VuePress will print like below.
 
 ## How to write docs
 
-Add markdown file to `docs` dir.
+Add Markdown file to `docs` dir.
 
 For detail, please reference [VuePress Documents](https://vuepress.vuejs.org/).

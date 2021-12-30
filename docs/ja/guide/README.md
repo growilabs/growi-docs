@@ -5,15 +5,15 @@ sidebarDepth: 0
 # GROWI について
 
 ここでは GROWI について簡単に紹介します。
-とにかく始めたい方は [5分で始める GROWI](/ja/guide/getting-started/five_minutes.md) へどうぞ
+とにかく始めたい方は [5分で始める GROWI](/ja/guide/getting-started/five_minutes.html) をご参照ください。
 
 ## Markdown で書ける wiki
 
-左右2画面でリアルタイムにプレビューをしながら markdown でドキュメントを執筆することができます。
+左右2画面でリアルタイムにプレビューをしながら Markdown でドキュメントを執筆できます。
 
 プログラミング言語ごとのコードハイライトや絵文字や注釈(footnotes)、タスクリスト、Bootstrap による HTML コードにも対応しています。
 
-また、ページに階層を持たせることができ、カテゴリ毎にページを分けたいときなど、用途に応じてページの整理を行うことができます。
+また、ページに階層を持たせることができ、カテゴリ毎にページを分けたいときなど、用途に応じてページを整理できます。
 
 ## 高速な検索
 
@@ -29,11 +29,11 @@ ElasticSearch を利用したページタイトルのインクリメンタルサ
 
 |ブラウザ|説明|
 |---|---|
-|Chrome| 推奨（最新version）|
-|FireFox|推奨（最新version）|
-|Safari|推奨（最新version）|
-|InternetExplorer|対象外|
-|Edge|対象外|
+|Google Chrome| 推奨（最新version）|
+|Mozilla FireFox| 推奨（最新version）|
+|Safari| 推奨（最新version）|
+|Microsoft Edge| 推奨 (最新version)<br />対象外 (version 79以前) |
+|Microsoft Internet Explorer| 対象外 |
 
 対象外のブラウザでは GROWI の各画面は正常に表示されず、ご利用いただけません。
 

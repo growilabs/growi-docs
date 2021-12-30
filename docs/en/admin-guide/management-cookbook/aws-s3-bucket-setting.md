@@ -6,7 +6,7 @@
 
 This chapter introduces how to integrate AWS S3 Bucket with GROWI.
 
-This setting makes uploading attachment files and profile images to AWS S3 Bucket available. If SMTP settings are not completed, e-mails will be sent via SES. You need to verify From e-mail address and production settings.
+This setting makes uploading attachment files and profile images to AWS S3 Bucket available. If SMTP settings are not completed, emails will be sent via SES. You need to verify From email address and production settings.
   
 ## How to Configure
 
@@ -16,7 +16,7 @@ This setting makes uploading attachment files and profile images to AWS S3 Bucke
 
 ![aws-setting-1](./images/aws-setting-1.png)
 
-2. In the "Access keys (access key ID and secret access key)" tab, create new access key.
+2. In the "Access keys (access key ID and secret access key)" tab, create a new access key.
 3. In the "Account identifiers" tab, check your Canonical User ID.
 
 ### Get AWS S3 Bucket Information 

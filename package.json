@@ -20,37 +20,33 @@
     "url": "https://github.com/weseek/growi-docs/issues"
   },
   "watch": {
-    "commons:dev": "../growi-commons/src",
     "apiv3:dev": {
       "patterns": [
-        "../growi/config/swagger-definition.js",
-        "../growi/src/server/routes/apiv3"
+        "../growi/packages/app/config/swagger-definition.js",
+        "../growi/packages/app/src/server/routes/apiv3"
       ]
     }
   },
   "scripts": {
     "apiv3:jsdoc:base": "swagger-jsdoc -o tmp/swagger.json",
-    "apiv3:jsdoc:dev": "npm run apiv3:jsdoc:base -- -d ../growi/config/swagger-definition.js \"../growi/src/server/**/*.js\"",
-    "apiv3:jsdoc:build": "npm run apiv3:jsdoc:base -- -d tmp/growi/config/swagger-definition.js \"tmp/growi/src/server/**/*.js\"",
+    "apiv3:jsdoc:dev": "npm run apiv3:jsdoc:base -- -d ../growi/packages/app/config/swagger-definition.js \"../growi/packages/app/src/server/**/*.js\"",
+    "apiv3:jsdoc:build": "npm run apiv3:jsdoc:base -- -d tmp/growi/packages/app/config/swagger-definition.js \"tmp/growi/packages/app/src/server/**/*.js\"",
     "apiv3:redoc": "redoc-cli bundle -o docs/.vuepress/public/redoc.html tmp/swagger.json",
     "apiv3:dev": "run-s apiv3:jsdoc:dev apiv3:redoc",
     "apiv3:build": "run-s apiv3:jsdoc:build apiv3:redoc",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "commons:base": "vuepress-jsdoc --jsDocConfigPath jsdoc.config.json --title \"GROWI Commons Libraries\" --readme en/api/commons/README.md --dist docs --folder en/api/commons --exclude test,*.test.js",
-    "commons:dev": "npm run commons:base -- --source ../growi-commons/src",
-    "commons:build": "npm run commons:base -- --source ./node_modules/growi-commons/src",
+    "lint": "textlint \"docs/ja/**/*.md\" \"docs/en/**/*.md\" README.md",
     "start": "npm run docs:dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npm-watch"
   },
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "^1.2.0",
+    "@vuepress/plugin-google-analytics": "^1.8.2",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.15.1",
     "eslint-config-weseek": "^1.0.1",
     "eslint-plugin-import": "^2.16.0",
-    "growi-commons": "^5.0.2",
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-task-lists": "^2.1.1",
     "npm-run-all": "^4.1.5",
@@ -60,19 +56,22 @@
     "stylelint": "^13.6.0",
     "stylelint-config-recess-order": "^2.0.4",
     "swagger-jsdoc": "^3.4.0",
+    "textlint": "^12.0.2",
+    "textlint-filter-rule-comments": "^1.2.2",
+    "textlint-rule-preset-weseek": "^1.0.3",
     "vue-tabs-component": "^1.5.0",
-    "vuepress": "^1.5.2",
+    "vuepress": "^1.8.2",
     "vuepress-jsdoc": "^3.0.0",
     "vuepress-plugin-tabs": "^0.3.0"
   },
   "engines": {
-    "node": ">=12.18 <15",
-    "npm": ">=6.14.0 <7",
-    "yarn": ">=1.22"
+    "node": "^12 || ^14",
+    "npm": ">=6.11.3 <7",
+    "yarn": ">=1.19.1 <2"
   },
   "dependencies": {
-    "vuepress-plugin-medium-zoom": "^1.1.6",
-    "vuepress-plugin-redirect": "^1.1.2",
-    "vuepress-plugin-sitemap": "^2.3.0"
+    "vuepress-plugin-medium-zoom": "^1.1.9",
+    "vuepress-plugin-redirect": "^1.2.5",
+    "vuepress-plugin-sitemap": "^2.3.1"
   }
 }
