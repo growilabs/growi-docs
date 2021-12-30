@@ -21,57 +21,63 @@ GROWI 本体サーバーを立ち上げてください。
 1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
   ![slack-custom-bot1](/assets/images/slack-custom-bot1.png)
 
-
-1. 「Create a Slack App」の ①「App Name」にはアプリの名前を、②「Development Slack Workspace」には
-  GROWI bot を追加したいワークスペースを選択します。
-
-1. 「Create App」をクリックします。
+2. 「From an app manifest」をクリックします。
   ![slack-custom-bot2](/assets/images/slack-custom-bot2.png)
 
+3. アプリをインストールするワークスペースを選択して、「Next」をクリックします。
+  ![slack-custom-bot3](/assets/images/slack-custom-bot3.png)
 
-## スコープを設定する
+4. 「YAML」タブに以下の App Manifest を貼り付けて、「Next」をクリックします。
+  ![slack-custom-bot4](/assets/images/slack-custom-bot4.png)
 
-1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
-  ![slack-bot-oauth-and-permissions-introduction-no-check](/assets/images/slack-bot-oauth-and-permissions-introduction-no-check.png)
-1. **Add an OAuth Scope** をクリックします。
-  ![slack-bot-scope-add-oauth-click](/assets/images/slack-bot-scope-add-oauth-click.png)
-1. **commands**, **chat:write**, **team:read** を選択します。
-  以下のように表示されたら、スコープの設定は完了です。  
-  ![slack-bot-scope-selected](/assets/images/slack-bot-scope-selected.png)
+  ```yaml
+  _metadata:
+    major_version: 1
+    minor_version: 1
+    display_information:
+    name: GROWI BOT
+  features:
+    bot_user:
+      display_name: GROWI BOT
+      always_online: false
+    slash_commands:
+      - command: /growi
+      url: https://{GROWI のドメイン名}/_api/v3/slack-integration/commands
+      description: Test Bot
+      should_escape: false
+    unfurl_domains:
+      - {GROWI のドメイン名}
+  oauth_config:
+    redirect_urls:
+      - https://{GROWI のドメイン名}/slack/oauth_redirect
+    scopes:
+      bot:
+        - channels:history
+        - channels:join
+        - chat:write
+        - chat:write.public
+        - commands
+        - groups:history
+        - im:history
+        - links:read
+        - links:write
+        - mpim:history
+        - team:read
+  settings:
+    event_subscriptions:
+      request_url: https://{GROWI のドメイン名}/_api/v3/slack-integration/events
+      bot_events:
+        - link_shared
+    interactivity:
+      is_enabled: true
+      request_url: https://{GROWI のドメイン名}/_api/v3/slack-integration/interactions
+    org_deploy_enabled: false
+    socket_mode_enabled: false
+    token_rotation_enabled: false
+  ```
 
-## Interactivity & Shortcuts の Request URL を設定する
-
-1. 作成した Slack App の **Features** から **Interactivity Shortcuts** をクリックします。
-  ![slack-bot-interactivity-shortcuts-introduction](/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
-
-1. **Interactivity** 右側にあるボタンを On にします。
-  ![slack-bot-interactivity-shortcuts-enable-button](/assets/images/slack-bot-interactivity-shortcuts-enable-button.png)
-
-1. Request URL を以下のように入力してください。
-
-- https://{連携させたい GROWI のドメイン名}/\_api/v3/slack-integration/interactions
-- 例 `https://example.com/_api/v3/slack-integration/interactions`
-
-  ![slack-bot-interactivity-shortcuts-creation](/assets/images/slack-bot-interactivity-shortcuts-creation.png)
-
-1. 入力が完了したら、**Save Changes** をクリックしてください。
-
-## スラッシュコマンドの作成
-
-1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
-  ![slash-commands-introduction](/assets/images/slash-commands-introduction.png)
-
-1. **Create New Command** をクリックします。
-  ![slash-commands-create-new-command](/assets/images/slash-commands-create-new-command.png)
-
-    - Command に /growi と入力してください。
-    - Request URL には、`https://example.com/_api/v3/slack-integration/commands` と入力してください
-    - Short Description も入力必須のため、適当なご説明を入力してください。
-    - Usage Hint に関しては任意なので、適宜入力してください。
-    - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
-    - 入力が完了したら、**Save** をクリックしてください。
-
-  ![slash-commands-create](/assets/images/slash-commands-create.png)
+5. アプリの概要を確認したら「Create」をクリックしてアプリを作成します。
+  ![slack-custom-bot5](/assets/images/slack-custom-bot5.png)
 
 ## Custom bot without proxy を Slack のワークスペースへインストールする
 
