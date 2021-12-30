@@ -9,33 +9,35 @@ Registering an LDAP server allows users to login via LDAP.
 1. Access the Security Settings page (/admin/security) on the administration page and open the LDAP tag in the Authentication Mechanism Settings.
 
 2. Turn on the "Enable LDAP" switch and enter the necessary information.
-  - Server URL: Enter the URL in the format `ldaps://host:port/BaseDN`.
-    - Schema should be `ldap` or `ldaps`.
-    - Port is optional.
-  - Binding mode: Choose the behavior when connecting to an LDAP server to search for users.
-    - Manager Bind: This mode allows you to set a specific DN in advance and use it to search for LDAP users. Select this mode to have permissions such as `uid=admin`.
-    - User Bind: A mode in which a DN is dynamically created from the username entered in the GROWI login form and used to search for LDAP users.
-  - Bind DN
-    - Enter the account DN to be used when authenticating to the directory service.
-    - Use the format `{{username}}` for User Bind to use the username entered at login.
-      - Example: `uid={{username}},dc=domain,dc=com`
-  - Bind DN Password
-    - For Manager Bind only, enter the password to use. (Note: MongoDB will store the plaintext password for the DN in MongoDB).
-    - For User Bind, the login password is used.
-  - Search Filter
-    - Search filters can be used to uniquely determine the user to be authenticated.
-    - Use the format `{{username}}` to use the login username.
-    - If left blank, `(uid={{username}})` will be used.
-    - Example 1: `(uid={{username}})`
-      - Selects LDAP users whose username entered in the login form matches the uid attribute.
-    - Example 2: `(|(uid={{username}})(mail={{username}}))`
-      - Selects LDAP users whose username entered in the login form matches the uid or mail attribute.
-    - Example 3: `(&(uid={{username}})(memberOf=cn=manager,ou=group,dc=example,dc=com))`
-      - Narrow down the accessible users.
+
+- Server URL: Enter the URL in the format `ldaps://host:port/BaseDN`.
+  - Schema should be `ldap` or `ldaps`.
+  - Port is optional.
+- Binding mode: Choose the behavior when connecting to an LDAP server to search for users.
+  - Manager Bind: This mode allows you to set a specific DN in advance and use it to search for LDAP users. Select this mode to have permissions such as `uid=admin`.
+  - User Bind: A mode in which a DN is dynamically created from the username entered in the GROWI login form and used to search for LDAP users.
+- Bind DN
+  - Enter the account DN to be used when authenticating to the directory service.
+  - Use the format <code v-pre>{{username}}</code> for User Bind to use the username entered at login.
+    - Example: <code v-pre>uid={{username}},dc=domain,dc=com</code>
+- Bind DN Password
+  - For Manager Bind only, enter the password to use. (Note: MongoDB will store the plaintext password for the DN in MongoDB).
+  - For User Bind, the login password is used.
+- Search Filter
+  - Search filters can be used to uniquely determine the user to be authenticated.
+  - Use the format <code v-pre>{{username}}</code> to use the login username.
+  - If left blank, <code v-pre>(uid={{username}})</code> will be used.
+  - Example 1: <code v-pre>(uid={{username}})</code>
+    - Selects LDAP users whose username entered in the login form matches the uid attribute.
+  - Example 2: <code v-pre>(|(uid={{username}})(mail={{username}}))</code>
+    - Selects LDAP users whose username entered in the login form matches the uid or mail attribute.
+  - Example 3: <code v-pre>(&(uid={{username}})(memberOf=cn=manager,ou=group,dc=example,dc=com))</code>
+    - Narrow down the accessible users.
 
 3. Confirm that the settings have been applied.
-  - Log out and access the login screen (/login).
-  - If you can login with the account registered in the LDAP, the configuration is complete.
+
+- Log out and access the login screen (/login).
+- If you can login with the account registered in the LDAP, the configuration is complete.
 
 ## Attribute Mapping (optional)
 
@@ -53,7 +55,7 @@ Enables login only if a posixGroup exists that meets the specified criteria. To 
 
 - Group Search Base DN: The DN to be treated as the base DN when searching for groups.
   Example: `ou=group,dc=domain,dc=com`
-- Group Search Filter: The query to use for group filtering. Only when a group hits this query will the LDAP login succeed. Use `{{dn}}` to replace with the properties of the user object to be logged in.
-  Example: `(&(cn=group1)(memberUid={{dn}}))` will hit a group with `cn=group1` and a `memberUid` that contains the user's `uid` (if the `User DN property` has not been changed from the default `uid`)
-- User DN property: Properties of the user object that will be replaced by `{{dn}}` in the group search filter.
+- Group Search Filter: The query to use for group filtering. Only when a group hits this query will the LDAP login succeed. Use <code v-pre>{{dn}}</code> to replace with the properties of the user object to be logged in.
+  Example: <code v-pre>(&(cn=group1)(memberUid={{dn}}))</code>  will hit a group with `cn=group1` and a `memberUid` that contains the user's `uid` (if the `User DN property` has not been changed from the default `uid`)
+- User DN property: Properties of the user object that will be replaced by <code v-pre>{{dn}}</code> in the group search filter.
   Default: uid
