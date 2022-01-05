@@ -35,7 +35,7 @@ Select Custom bot without proxy in Slack Integration of the Management page.
   _metadata:
     major_version: 1
     minor_version: 1
-    display_information:
+  display_information:
     name: GROWI BOT
   features:
     bot_user:
@@ -43,9 +43,9 @@ Select Custom bot without proxy in Slack Integration of the Management page.
       always_online: false
     slash_commands:
       - command: /growi
-      url: https://{GROWI domain name}/_api/v3/slack-integration/commands
-      description: Test Bot
-      should_escape: false
+        url: https://{GROWI domain name}/_api/v3/slack-integration/commands
+        description: Test Bot
+        should_escape: false
     unfurl_domains:
       - {GROWI domain name}
   oauth_config:

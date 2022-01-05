@@ -18,23 +18,23 @@ GROWI 本体サーバーを立ち上げてください。
 
 ## Slack app を作成する
 
-1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
-  ![slack-custom-bot1](/assets/images/slack-custom-bot1.png)
+1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し **Create an App** をクリックします。
+   ![slack-custom-bot1](/assets/images/slack-custom-bot1.png)
 
-2. 「From an app manifest」をクリックします。
+2. **From an app manifest** をクリックします。
   ![slack-custom-bot2](/assets/images/slack-custom-bot2.png)
 
-3. アプリをインストールするワークスペースを選択して、「Next」をクリックします。
+3. アプリをインストールするワークスペースを選択して **Next** をクリックします。
   ![slack-custom-bot3](/assets/images/slack-custom-bot3.png)
 
-4. 「YAML」タブに以下の App Manifest を貼り付けて、「Next」をクリックします。
+4. **YAML** タブに以下の App Manifest を貼り付けて **Next** をクリックします。
   ![slack-custom-bot4](/assets/images/slack-custom-bot4.png)
 
   ```yaml
   _metadata:
     major_version: 1
     minor_version: 1
-    display_information:
+  display_information:
     name: GROWI BOT
   features:
     bot_user:
@@ -42,9 +42,9 @@ GROWI 本体サーバーを立ち上げてください。
       always_online: false
     slash_commands:
       - command: /growi
-      url: https://{GROWI のドメイン名}/_api/v3/slack-integration/commands
-      description: Test Bot
-      should_escape: false
+        url: https://{GROWI のドメイン名}/_api/v3/slack-integration/commands
+        description: Test Bot
+        should_escape: false
     unfurl_domains:
       - {GROWI のドメイン名}
   oauth_config:
@@ -76,7 +76,7 @@ GROWI 本体サーバーを立ち上げてください。
     token_rotation_enabled: false
   ```
 
-5. アプリの概要を確認したら「Create」をクリックしてアプリを作成します。
+5. アプリの概要を確認したら **Create** をクリックしてアプリを作成します。
   ![slack-custom-bot5](/assets/images/slack-custom-bot5.png)
 
 ## Custom bot without proxy を Slack のワークスペースへインストールする
