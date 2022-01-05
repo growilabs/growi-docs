@@ -7,15 +7,67 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
 
 ## Create a Custom bot with proxy
 
-1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click the **Create New App** button.
-
+1. Go to the [App Page](https://api.slack.com/apps) of the Slack API and click **Create An App** button.
   ![slack-custom-bot1](/assets/images/slack-custom-bot1.png)
 
-1. In the **Create a Slack App** section, 1. input the name of your app in the **App Name** field and 2. select the workspace where you want to add the GROWI bots in the **Development Slack Workspace**.
-
-1. Click the **Create App** button.
-
+2. Click **From an app manifest**.
   ![slack-custom-bot2](/assets/images/slack-custom-bot2.png)
+
+3. Select the workspace where you want to install the app and click **Next**.
+  ![slack-custom-bot3](/assets/images/slack-custom-bot3.png)
+
+4. Paste the following App Manifest into the [YAML] tab, and click **Next**.
+  ![slack-custom-bot4](/assets/images/slack-custom-bot4.png)
+
+```yaml
+  _metadata:
+    major_version: 1
+    minor_version: 1
+  display_information:
+    name: GROWI BOT
+  features:
+    bot_user:
+      display_name: GROWI BOT
+      always_online: false
+    slash_commands:
+      - command: /growi
+        url: https://{GROWI domain name}/slack/commands
+        description: Test Bot
+        should_escape: false
+    unfurl_domains:
+      - {GROWI domain name}
+  oauth_config:
+    redirect_urls:
+      - https://{GROWI domain name}/slack/oauth_redirect
+    scopes:
+      bot:
+        - channels:history
+        - channels:join
+        - chat:write
+        - chat:write.public
+        - commands
+        - groups:history
+        - im:history
+        - links:read
+        - links:write
+        - mpim:history
+        - team:read
+  settings:
+    event_subscriptions:
+      request_url: https://{GROWI domain name}/slack/events
+      bot_events:
+        - link_shared
+    interactivity:
+      is_enabled: true
+      request_url: https://{GROWI domain name}/slack/interactions
+    org_deploy_enabled: false
+    socket_mode_enabled: false
+    token_rotation_enabled: false
+  ```
+
+5. After reviewing the app overview, click **Create** to create the app.
+  ![slack-custom-bot5](/assets/images/slack-custom-bot5.png)
+
 
 ## Start Slackbot Proxy
 
@@ -42,83 +94,6 @@ SLACK_SIGNING_SECRET={ Signing Secret }
 
 5. Select **Custom bot with proxy** from the Slack Integration section of the admin panel.
 ![slack-bot-selecting-custom-bot-with-proxy](/assets/images/slack-bot-selecting-custom-bot-with-proxy.png)
-
-## Set Custom bot with proxy Scopes
-
-1. In the Slack App you created, go to **Features** and click **OAuth & Permissions**.
-  ![slack-bot-oauth-and-permissions-introduction](/assets/images/slack-bot-oauth-and-permissions-introduction.png)
-1. Click the **Add an OAuth Scope** button.
-  ![slack-bot-scope-add-oauth-click](/assets//images/slack-bot-scope-add-oauth-click.png)
-
-1. Add all following data:
-   - `commands`
-   - `team:read`
-   - `chat:write`
-   - `chat:write.public`
-   - `channels:join`
-   - `channels:history`
-   - `groups:history`
-   - `im:history`
-   - `mpim:history`
-
-The scope setting is complete if the following is displayed.
-![slack-bot-scope-selected](/assets/images/slack-bot-scope-selected.png)
-
-## Request URL settings
-
-### Interactivity & Shortcuts
-
-1. In the Slack App you created, go to **Features** and click **Interactivity Shortcuts**.
-   ![slack-bot-interactivity-shortcuts-introduction](/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
-
-1. Turn on the button on the right side of **Interactivity**.
-   ![slack-bot-interactivity-shortcuts-enable-button](/assets/images/slack-bot-interactivity-shortcuts-enable-button.png)
-
-1. Input the Request URL as follows.
-
-- `https:// your GROWI domain /\_api/v3/slack-integration/interactions`
-
-  - e.g. `https://example.com/slack/interactions`
-
-     ![slack-bot-interactivity-shortcuts-creation](/assets/images/slack-bot-interactivity-shortcuts-creation.png)
-
-     1. When the Request URL has been correctly entered, click the **Save Changes** button.
-
-### Slash Commands
-
-1. In the Slack App you created, go to **Features** and click **Slash Commands**.
-  ![slash-commands-introduction](/assets/images/slash-commands-introduction.png)
-
-1. Click the **Create New Command** button.
-    ![slash-commands-create-new-command](/assets/images/slash-commands-create-new-command.png)
-
-  - Input `/growi` for Command.
-  - For RequestURL, input `https://example.com/_api/v3/slack-integration/commands`.
-  - Short Description is also required, so please input an appropriate description.
-  - The Usage Hint is optional, so please input it accordingly.
-  - The Escape channels, users, and links sent to your app is optional,
-   so input them accordingly.
-  - When you are done, click **Save** button.
-
-![slash-commands-create](/assets/images/slash-commands-create.png)
-
-
-## Redirect URL setting
-
-### OAuth & Permissions
-
-1. In the Slack App you created, go to **Features** and click **OAuth & Permissions**.
-1. Click on the **Add New Redirect URL** button of **Redirect URLs**.
-  ![slash-commands-introduction](/assets/images/slack-bot-auth-and-permisions1.png)
-
-1. When displayed input form, please input `https://{your proxy domain name}/slack/oauth_redirect`.
-
-    - e.g. `https://example.com/slack/oauth_redirect`
-
-    ![slash-commands-introduction](/assets/images/slack-bot-auth-and-permisions2.png)
-
-1. Click on the **Add** button.
-1. Save the URL by clicking on the **Save URLs** button.
 
 
 ## Install Custom bot with proxy in your Slack workspace
