@@ -93,84 +93,6 @@ SLACK_SIGNING_SECRET={ Signing Secret }
 5. 管理画面の Slack 連携 にて **Custom bot with proxy** を選択してください。
    ![slack-bot-selecting-custom-bot-with-proxy](/assets/images/slack-bot-selecting-custom-bot-with-proxy.png)
 
-## Custom bot with proxy のスコープを設定する
-
-1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
-
-![slack-bot-oauth-and-permissions-introduction-no-check](/assets/images/slack-bot-oauth-and-permissions-introduction-no-check.png)
-
-1. **Add an OAuth Scope** をクリックします。
-
-![slack-bot-scope-add-oauth-click](/assets/images/slack-bot-scope-add-oauth-click.png)
-
-1. 以下を全て追加します
-   - `commands`
-   - `team:read`
-   - `chat:write`
-   - `chat:write.public`
-   - `channels:join`
-   - `channels:history`
-   - `groups:history`
-   - `im:history`
-   - `mpim:history`
-
-以下のように表示されたら、スコープの設定は完了です。
-![slack-bot-scope-selected](/assets/images/slack-bot-scope-selected.png)
-
-## Request URL 設定
-
-### Interactivity & Shortcuts
-
-1. 作成した Slack App の **Features** から **Interactivity Shortcuts** をクリックします。
-   ![slack-bot-interactivity-shortcuts-introduction](/assets/images/slack-bot-interactivity-shortcuts-introduction.png)
-
-1. **Interactivity** 右側にあるボタンを On にします。
-   ![slack-bot-interactivity-shortcuts-enable-button](/assets/images/slack-bot-interactivity-shortcuts-enable-button.png)
-
-1. Request URL を以下のように入力してください。
-
-- `https://{連携させたい proxy のドメイン名}/slack/interactions`
-
-  - 例 `https://example.com/slack/interactions`
-
-    ![slack-bot-interactiviry-shortcuts-for-with-proxy](/assets/images/slack-bot-interactiviry-shortcuts-for-with-proxy.png)
-
-    1. 入力が完了したら、右下の **Save Changes** ボタンをクリックしてください。
-
-### Slash Commands
-
-1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
-   ![slash-commands-introduction](/assets/images/slash-commands-introduction.png)
-
-1. **Create New Command** をクリックします。
-   ![slash-commands-create-new-command](/assets/images/slash-commands-create-new-command.png)
-
-   - Command に /growi と入力してください。
-   - Request URL には、`https://example.com/slack/commands` と入力してください
-   - Short Description も入力必須のため、適当なご説明を入力してください。
-   - Usage Hint に関しては任意なので、適宜入力してください。
-   - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
-   - 入力が完了したら、右下の **Save** ボタンをクリックしてください。
-
-![slash-commands-create](/assets/images/slash-commands-create.png)
-
-## Redirect URL 設定
-
-### OAuth & Permissions
-
-1. 作成した Slack App の **Features** から **OAuth & Permissions** をクリックします。
-1. **Redirect URLs** の **Add New Redirect URL** ボタンをクリックします。
-   ![slash-commands-introduction](/assets/images/slack-bot-auth-and-permisions1.png)
-
-1. 入力欄が表示されるので、`https://{連携させたい proxy のドメイン名}/slack/oauth_redirect` を入力してください。
-
-   - 例 `https://example.com/slack/oauth_redirect`
-
-   ![slash-commands-introduction](/assets/images/slack-bot-auth-and-permisions2.png)
-
-1. 入力したら **Add** ボタン をクリックしてください。
-1. **Save URLs** ボタンをクリックして 入力した URL を保存します。
-
 ## Custom bot with proxy を Slack のワークスペースへインストールする
 
 1. 作成した Slack App の **Settings** から **Manage distribution** をクリックします。
@@ -185,6 +107,7 @@ SLACK_SIGNING_SECRET={ Signing Secret }
    ![slack-bot-install-your-app-introduction-to-channel](/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
 
 ::: warning
+
 - `Illegal state, try it again.` と表示される場合は、**Go to install page** を押し、 **Add to Slack** から再度インストールしてください。
 - `GROWI Bot installation failed..` と表示される場合は、**Add to Slack** ボタンから再度インストールしてください。
 :::
