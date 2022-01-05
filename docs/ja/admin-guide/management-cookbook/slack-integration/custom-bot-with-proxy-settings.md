@@ -7,19 +7,17 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 
 ## Custom bot with proxy を作成する
 
-1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create an App」をクリックします。
-
+1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し **Create an App** をクリックします。
    ![slack-custom-bot1](/assets/images/slack-custom-bot1.png)
 
-2. 「From an app manifest」をクリックします。
+2. **From an app manifest** をクリックします。
   ![slack-custom-bot2](/assets/images/slack-custom-bot2.png)
 
-3. アプリをインストールするワークスペースを選択して、「Next」をクリックします。
+3. アプリをインストールするワークスペースを選択して **Next** をクリックします。
   ![slack-custom-bot3](/assets/images/slack-custom-bot3.png)
 
-4. 「YAML」タブに以下の App Manifest を貼り付けて、「Next」をクリックします。
+4. **YAML** タブに以下の App Manifest を貼り付けて **Next** をクリックします。
   ![slack-custom-bot4](/assets/images/slack-custom-bot4.png)
-
 
   ```yaml
   _metadata:
@@ -66,6 +64,9 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
     socket_mode_enabled: false
     token_rotation_enabled: false
   ```
+
+5. アプリの概要を確認したら **Create** をクリックしてアプリを作成します。
+  ![slack-custom-bot5](/assets/images/slack-custom-bot5.png)
 
 ## Slackbot Proxy を立ち上げる
 
