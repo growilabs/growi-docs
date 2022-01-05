@@ -7,17 +7,65 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 
 ## Custom bot with proxy を作成する
 
-1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create New App」をクリックします。
+1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し、「Create an App」をクリックします。
 
    ![slack-custom-bot1](/assets/images/slack-custom-bot1.png)
 
-1. 「Create a Slack App」の ①「App Name」にアプリの名前を入力します。
+2. 「From an app manifest」をクリックします。
+  ![slack-custom-bot2](/assets/images/slack-custom-bot2.png)
 
-1. ②「Development Slack Workspace」から GROWI bot を追加したいワークスペースを選択します。
+3. アプリをインストールするワークスペースを選択して、「Next」をクリックします。
+  ![slack-custom-bot3](/assets/images/slack-custom-bot3.png)
 
-1. 「Create App」をクリックします。
+4. 「YAML」タブに以下の App Manifest を貼り付けて、「Next」をクリックします。
+  ![slack-custom-bot4](/assets/images/slack-custom-bot4.png)
 
-   ![slack-custom-bot2](/assets/images/slack-custom-bot2.png)
+
+  ```yaml
+  _metadata:
+    major_version: 1
+    minor_version: 1
+  display_information:
+    name: GROWI BOT
+  features:
+    bot_user:
+      display_name: GROWI BOT
+      always_online: false
+    slash_commands:
+      - command: /growi
+        url: https://{GROWI のドメイン名}/slack/commands
+        description: Test Bot
+        should_escape: false
+    unfurl_domains:
+      - {GROWI のドメイン名}
+  oauth_config:
+    redirect_urls:
+      - https://{GROWI のドメイン名}/slack/oauth_redirect
+    scopes:
+      bot:
+        - channels:history
+        - channels:join
+        - chat:write
+        - chat:write.public
+        - commands
+        - groups:history
+        - im:history
+        - links:read
+        - links:write
+        - mpim:history
+        - team:read
+  settings:
+    event_subscriptions:
+      request_url: https://{GROWI のドメイン名}/slack/events
+      bot_events:
+        - link_shared
+    interactivity:
+      is_enabled: true
+      request_url: https://{GROWI のドメイン名}/slack/interactions
+    org_deploy_enabled: false
+    socket_mode_enabled: false
+    token_rotation_enabled: false
+  ```
 
 ## Slackbot Proxy を立ち上げる
 
@@ -137,8 +185,8 @@ SLACK_SIGNING_SECRET={ Signing Secret }
    ![slack-bot-install-your-app-introduction-to-channel](/assets/images/slack-bot-install-your-app-introduction-to-channel.png)
 
 ::: warning
-* `Illegal state, try it again.` と表示される場合は、**Go to install page** を押し、 **Add to Slack** から再度インストールしてください。
-* `GROWI Bot installation failed..` と表示される場合は、**Add to Slack** ボタンから再度インストールしてください。
+- `Illegal state, try it again.` と表示される場合は、**Go to install page** を押し、 **Add to Slack** から再度インストールしてください。
+- `GROWI Bot installation failed..` と表示される場合は、**Add to Slack** ボタンから再度インストールしてください。
 :::
 
 ## GROWI Custom Bot with proxy サービスへの登録
