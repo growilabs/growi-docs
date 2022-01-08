@@ -6,11 +6,11 @@ GROWI allows you to receive notifications for pages you have subscribed to. Clic
 
 Click ***See Alll*** in the dropdown to see all notifications.
 
-![](/assets/images/in-app-notification-list-1.png)
+![](/assets/images/in-app-notification-list1.png)
 
 The ***Unread*** tab allows you to see unread notifications. Click ***Mark all as read*** to mark all notifications as read.
 
-![](/assets/images/in-app-notification-list-2.png)
+![](/assets/images/in-app-notification-list2.png)
 
 
 ## Subscribe to a page

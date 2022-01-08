@@ -6,11 +6,11 @@ GROWI ではサブスクライブしているページの通知を受け取る�
 
 ドロップダウンの ***See Alll*** をクリックすると、全ての通知を見ることができます。
 
-![](/assets/images/in-app-notification-list-1.png)
+![](/assets/images/in-app-notification-list1.png)
 
 ***Unread*** タブでは未読の通知を見ることができます。***Mark all as read*** をクリックすると全ての通知に既読をつけることができます。
 
-![](/assets/images/in-app-notification-list-2.png)
+![](/assets/images/in-app-notification-list2.png)
 
 
 ## ページをサブスクライブする
