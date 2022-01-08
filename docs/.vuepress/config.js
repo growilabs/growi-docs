@@ -125,6 +125,7 @@ module.exports = {
                 '/en/guide/features/tag.md',
                 '/en/guide/features/template.md',
                 '/en/guide/features/hackmd.md',
+                '/en/guide/features/in-app-notification.md',
                 '/en/guide/features/slack_integration.md',
               ]
             },
