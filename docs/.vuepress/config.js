@@ -360,6 +360,7 @@ module.exports = {
                 '/ja/guide/features/tag.md',
                 '/ja/guide/features/template.md',
                 '/ja/guide/features/hackmd.md',
+                '/ja/guide/features/in-app-notification.md',
                 '/ja/guide/features/slack_integration.md',
               ]
             },
