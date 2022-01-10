@@ -1,6 +1,6 @@
 # Receive In-App Notifications
 
-GROWI allows you to receive notifications for pages you have subscribed to. Click on the bell symbol on the screen to open a drop-down and see up to six notifications.
+GROWI allows you to receive notifications for pages you have subscribed to. Click on the bell button on the screen to open a drop-down and see up to 6 notifications.
 
 ![](/assets/images/in-app-notification-dropdown.png)
 
@@ -15,7 +15,7 @@ The ***Unread*** tab allows you to see unread notifications. Click ***Mark all a
 
 ## Subscribe to a page
 
-Go to the page you want to receive notifications from, and click the eyeball button to subscribe to it.
+Go to the page you want to receive notifications from, and click the eye button to subscribe to it.
 
 ![](/assets/images/in-app-notification-subscribe-button.png)
 
