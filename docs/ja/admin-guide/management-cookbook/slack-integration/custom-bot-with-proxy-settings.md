@@ -31,14 +31,14 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
       always_online: false
     slash_commands:
       - command: /growi
-        url: https://{GROWI のドメイン名}/slack/commands
+        url: https://{Slackbot Proxy のドメイン名}/slack/commands
         description: Test Bot
         should_escape: false
     unfurl_domains:
-      - {GROWI のドメイン名}
+      - {Slackbot Proxy の URL}
   oauth_config:
     redirect_urls:
-      - https://{GROWI のドメイン名}/slack/oauth_redirect
+      - https://{Slackbot Proxy のドメイン名}/slack/oauth_redirect
     scopes:
       bot:
         - channels:history
@@ -54,12 +54,12 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
         - team:read
   settings:
     event_subscriptions:
-      request_url: https://{GROWI のドメイン名}/slack/events
+      request_url: https://{Slackbot Proxy のドメイン名}/slack/events
       bot_events:
         - link_shared
     interactivity:
       is_enabled: true
-      request_url: https://{GROWI のドメイン名}/slack/interactions
+      request_url: https://{Slackbot Proxy のドメイン名}/slack/interactions
     org_deploy_enabled: false
     socket_mode_enabled: false
     token_rotation_enabled: false
