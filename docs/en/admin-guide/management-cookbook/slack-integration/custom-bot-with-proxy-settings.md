@@ -31,14 +31,14 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
       always_online: false
     slash_commands:
       - command: /growi
-        url: https://{GROWI domain name}/slack/commands
+        url: https://{Slackbot Proxy domain name}/slack/commands
         description: Test Bot
         should_escape: false
     unfurl_domains:
       - {GROWI domain name}
   oauth_config:
     redirect_urls:
-      - https://{GROWI domain name}/slack/oauth_redirect
+      - https://{Slackbot Proxy domain name}/slack/oauth_redirect
     scopes:
       bot:
         - channels:history
@@ -54,12 +54,12 @@ To deploy a custom bot without proxy in your Slack workspace, you need to create
         - team:read
   settings:
     event_subscriptions:
-      request_url: https://{GROWI domain name}/slack/events
+      request_url: https://{Slackbot Proxy domain name}/slack/events
       bot_events:
         - link_shared
     interactivity:
       is_enabled: true
-      request_url: https://{GROWI domain name}/slack/interactions
+      request_url: https://{Slackbot Proxy domain name}/slack/interactions
     org_deploy_enabled: false
     socket_mode_enabled: false
     token_rotation_enabled: false
