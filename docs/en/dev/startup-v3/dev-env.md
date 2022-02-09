@@ -142,3 +142,29 @@ cd ~/Projects/GROWI
 git clone https://github.com/weseek/growi.git
 git clone https://github.com/weseek/growi-docker-compose.git
 ```
+
+# Elasticsearh version
+
+By default elasticsearch version is v6.8.x, if you are developing with elasticsearch v7 you need to change `.devcontainer/docker-compose.yml`
+
+```CoffeeScript
+  ...
+  elasticsearch:
+    build:
+      context: ../../growi-docker-compose/elasticsearch
+      dockerfile: ./Dockerfile
+      args:
+        - version=6.8.22 # change this line to elasticsearch v7, eg: 7.16.0
+  ...
+```
+
+In the same file, you need to adjust Kibana version based on elasticsearch version
+```CoffeeScript
+  ...
+  kibana:
+  image: docker.elastic.co/kibana/kibana:6.8.22 
+  ...
+```
+
+
+then in .env file `packages/app/.env.development`, set `USE_ELASTICSEARCH_V6=false`
