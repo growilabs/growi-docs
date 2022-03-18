@@ -212,6 +212,7 @@ module.exports = {
               children: [
                 '/en/admin-guide/management-cookbook/app-settings.md',
                 '/en/admin-guide/management-cookbook/line-breaks.md',
+                '/en/admin-guide/management-cookbook/security.md',
                 '/en/admin-guide/management-cookbook/user-management.md',
                 '/en/admin-guide/management-cookbook/group.md',
                 '/en/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
@@ -449,6 +450,7 @@ module.exports = {
               children: [
                 '/ja/admin-guide/management-cookbook/app-settings.md',
                 '/ja/admin-guide/management-cookbook/line-breaks.md',
+                '/ja/admin-guide/management-cookbook/security.md',
                 '/ja/admin-guide/management-cookbook/user-management.md',
                 '/ja/admin-guide/management-cookbook/group.md',
                 '/ja/admin-guide/management-cookbook/ldap.md',
