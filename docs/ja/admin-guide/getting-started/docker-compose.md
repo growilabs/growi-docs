@@ -87,7 +87,7 @@ docker-compose stop
 
 ```text
 docker-compose rm app mongo elasticsearch
-docker rmi weseek/growi:3
+docker rmi weseek/growi:5
 ```
 
 最新版を pull し、Docker イメージを作成した後、コンテナを立ち上げます。

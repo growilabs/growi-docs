@@ -87,7 +87,7 @@ Remove Docker containers and Docker images.
 
 ```text
 docker-compose rm app mongo elasticseach
-docker rmi weseek/growi:3
+docker rmi weseek/growi:5
 ```
 
 Pull latest GROWI, and create a fresh Docker image and build up containers.
@@ -102,18 +102,18 @@ After containers are built, access to the admin page and build ES index again on
 
 ## Related Pages
 
-- Launch Multiple GROWIs
+* Launch Multiple GROWIs
 
 [Multiple Sites](/en/admin-guide/admin-cookbook/multi-app.html)
 
-- HTTPS proxy
+* HTTPS proxy
 
 [HTTPS with Let's Encript](/en/admin-guide/admin-cookbook/lets-encrypt.html)
 
-- Backup data about page and user in MongoDB
+* Backup data about page and user in MongoDB
 
 [MongoDB Auto Backup](/en/admin-guide/admin-cookbook/mongodb-backup-regular.html#manage-with-docker-compose)
 
-- Use HackMD(CodiMD) to simultaneous editing
+* Use HackMD(CodiMD) to simultaneous editing
 
 [HackMD(CodiMD) Integration](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html)
