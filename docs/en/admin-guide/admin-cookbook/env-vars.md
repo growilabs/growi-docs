@@ -10,8 +10,10 @@ pageClass: admin-cookbook-env-vars
 | ------------------- | ----------  | ------------- |
 | `MONGO_URI` | URI to connect to MongoDB. | `mongodb://localhost/growi` |
 | `NO_CDN` | If `true`, system doesn't use CDN, all resources will be downloaded from CDN when building a client, and served by the GROWI Express server. | `false` |
+| `ELASTICSEARCH_VERSION` | Elasticsearch major version that system connects to. (`6` or `7` can be specified) | `7` |
 | `ELASTICSEARCH_URI` | URI to connect to Elasticsearch. | |
 | `ELASTICSEARCH_REQUEST_TIMEOUT` | Max request timeout in milliseconds for each request.(msec) | 8000 |
+| `ELASTICSEARCH_REJECT_UNAUTHORIZED` | Turn off certificate verification when connecting with HTTPS schema. | `false` |
 | `REDIS_URI` | URI to connect to Redis (use it as a session store instead of MongoDB). | |
 | `PASSWORD_SEED` | A password seed used by the password hash generator. | |
 | `SECRET_TOKEN` | A secret key for verifying the integrity of signed cookies. | |

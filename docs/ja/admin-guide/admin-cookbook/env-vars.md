@@ -9,8 +9,10 @@ pageClass: admin-cookbook-env-vars
 | ------------------- | ---------- | ------------- |
 | `MONGO_URI` | 接続する MongoDB サーバーの URI | `mongodb://localhost/growi` |
 | `NO_CDN` | `true` の場合、システムは CDN を使用しません。代わりに全てのリソースはクライアントビルド時に CDN からダウンロードされ、利用時は GROWI Express serverからのみ提供されるようになります。 | `false` |
+| `ELASTICSEARCH_VERSION` | 接続する Elasticsearch のメジャーバージョン。(`6` または `7` を指定可能) | `7` |
 | `ELASTICSEARCH_URI` | 接続する Elasticsearch サーバーの URI | |
 | `ELASTICSEARCH_REQUEST_TIMEOUT` | リクエスト時のタイムアウト(msec) | 8000 |
+| `ELASTICSEARCH_REJECT_UNAUTHORIZED` | HTTPS スキーマでの接続時に証明書の検証を行うかどうか | `false` |
 | `REDIS_URI` | 接続する Redis サーバーの URI (Redis を MongoDB の代わりにセッションストアとして利用する場合に設定してください） | |
 | `PASSWORD_SEED` | パスワードハッシュ生成時に使用されるパスワードシード | |
 | `SECRET_TOKEN` | 発行された cookie の正当性を検証するためのシークレットトークン | |
