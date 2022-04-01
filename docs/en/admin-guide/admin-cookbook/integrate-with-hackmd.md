@@ -111,5 +111,8 @@ Set up will follow these instructions [README.md](https://github.com/weseek/grow
     - content inserted into head.ejs and foot.ejs are correct
     - the URL from the src attribute of the script tag inserted into the source code of HackMD/CodiMD can be accessed successfully (can load the CSS and JavaScript).
 
+### Error when pressing "Update", and GROWI session expires ("/login" appears when you move to another page)
 
+- The session cookie names `connect.sid` are conflicting between GROWI and HackMD/CodiMD
+  - Set the environment variable `SESSION_NAME` in GROWI to change the cookie name
 
