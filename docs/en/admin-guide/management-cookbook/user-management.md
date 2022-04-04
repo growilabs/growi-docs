@@ -37,14 +37,15 @@ A user's password can be reset from the drop-down menu on the right side of the 
 
 ![](./images/user-management2.png)
 
-When the "Reset Password" from the drop-down menu has been clicked, a modal with the target user for the password reset will be displayed.
+After clicking "Reset Password" from the drop-down menu, a modal popup will display the target user for the password reset.
 
 <img src="./images/user-management3.png" width="50%">
 
-When the "Reset Password" button on the modal is pressed, a new password will be issued. It tells the user to log in using this password, and then reset the password from the password settings in the user settings ( `/me` ).
+When the "Reset Password" button on the modal popup is clicked, a new password will be issued and sent to the user.
+
+It prompts the user to log in using this temporary password, and then reset their password in the user settings page ( `/me` ).
 
 <img src="./images/user-management4.png" width="50%">
-
 
 #### Granting administrative privileges
 
@@ -58,7 +59,7 @@ Accounts that are pending approval or suspended can be granted approval. Approvi
 
 Accounts that have been approved can also be suspended. If the account is suspended, the account information will remain, but the user will not be able to log in. The administrator has to reapprove in order for that user to log in.
 
-#### Delete account
+#### Delete accounts
 
 Only accounts that do not have the Active status can be deleted. Please note that deleted users cannot be restored.
 
@@ -66,7 +67,7 @@ Only accounts that do not have the Active status can be deleted. Please note tha
 
 1. Click User Management from the sidebar on the left.
 
-    ![](./images/user-management6.png)
+   ![](./images/user-management6.png)
 
 2. Click Temporary Issuance for new users.
 
@@ -74,15 +75,16 @@ Only accounts that do not have the Active status can be deleted. Please note tha
 
 4. Click issue.
 
-    <img src="./images/user-management7.png" width="50%">
+<img src="./images/user-management7.png" width="50%">
 
-5. A notification of the email and password is displayed on the screen.
+5. A notification of the email and password will be displayed on the screen.
 
 <img src="./images/user-management8.png" width="50%">
 
 ::: tip
-[Email settings from management screen](https://docs.growi.org/en/admin-guide/management-cookbook/app-settings.html#email-settings) is required when delivering a notification email from GROWI.
+[Email settings from the management screen](https://docs.growi.org/en/admin-guide/management-cookbook/app-settings.html#email-settings) are required when delivering a notification email from GROWI.
 :::
+
 ## Manage external accounts
 
 This function manages external accounts. An external account holds information that is associated with a GROWI account when it is registered using the external OAuth. When a GROWI account is deleted, the external account associated with it is also deleted automatically.
