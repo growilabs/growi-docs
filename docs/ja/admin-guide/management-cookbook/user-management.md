@@ -66,7 +66,7 @@ Active ステータスでないアカウントのみ削除できます。削除�
 
 1. 左のサイドバーから「ユーザー管理」をクリックします。
 
-  ![](./images/user-management6.png)
+![](/assets/images/user-management6.png)
 
 2. **新規ユーザーの仮発行** ボタンを押します。
 
@@ -74,11 +74,11 @@ Active ステータスでないアカウントのみ削除できます。削除�
 
 4. 発行ボタンを押します
 
-<img src="./images/user-management7.png" width="50%">
+<img src="/assets/images/user-management7.png" width="50%">
 
 5. 画面上にメールアドレスと仮のパスワードが表示されます
 
-<img src="./images/user-management8.png" width="50%">
+<img src="/assets/images/user-management8.png" width="50%">
 
 ::: tip
 GROWIから通知メールを配信する場合は、[管理画面からのメール設定](https://docs.growi.org/ja/admin-guide/management-cookbook/app-settings.html#メールの設定) が必要です。
