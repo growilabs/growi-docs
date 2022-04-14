@@ -23,11 +23,11 @@ GROWI では、IFTTT を利用して、その他の Web サービスに通知で
      - 詳しくは、[メール設定](/ja/admin-guide/management-cookbook/app-settings.html#メールの設定)をご覧ください。
   1. GROWI 管理画面の「通知設定」 から Global notification をクリックする。
 
-     ![ifttt-global-notification-introduction](./images/ifttt-global-notification-introduction.png)
+     ![ifttt-global-notification-introduction](/assets/images/ifttt-global-notification-introduction.png)
 
   1. **通知設定を追加** をクリックする。
 
-     ![ifttt-global-notification-addition](./images/ifttt-global-notification-addition.png)
+     ![ifttt-global-notification-addition](/assets/images/ifttt-global-notification-addition.png)
 
   1. トリガーパスを設定してください。
   1. リンクから IFTTT のアプレットをお好みで作成してください。
@@ -35,7 +35,7 @@ GROWI では、IFTTT を利用して、その他の Web サービスに通知で
      - 例: IFTTT の **email** をご利用の場合、trigger@applet.ifttt.com と入力します。
   1. GROWI 上での トリガーイベントを設定してください。
 
-     ![ifttt-global-notification-detail-settings](./images/ifttt-global-notification-detail-settings.png)
+     ![ifttt-global-notification-detail-settings](/assets/images/ifttt-global-notification-detail-settings.png)
 
   1. 必要事項を入力したら、**更新**を押してください。
 
@@ -64,7 +64,7 @@ User Trigger Notification は、GROWI を利用するユーザーがページの
 `/event/忘年会のお知らせ`というパスのページを作成すると Slack 通知フォームに `general` が設定された状態で編集モードに遷移します。
 <!-- textlint-enable weseek/sentence-length -->
 
-![slack2](./images/slack2.png)
+![slack2](/assets/images/slack2.png)
 
 チェックボックスを有効にした状態でページを更新した場合、 `general` チャンネルに Slack 通知が届きます。
 

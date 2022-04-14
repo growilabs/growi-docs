@@ -8,39 +8,39 @@
 
 1. 管理メニューの「グループ管理」に移動します。
 
-![group1](./images/group1.png)
+![group1](/assets/images/group1.png)
 
 2. 「新規グループの作成」ボタンをクリックし、グループ名を入力して「作成」ボタンをクリックしてください。
 
-![group2](./images/group2.png)
+![group2](/assets/images/group2.png)
 
 3. Success 表示され、一覧にグループが追加されます。
 
-![group3](./images/group3.png)
+![group3](/assets/images/group3.png)
 
 ## グループへのユーザーの追加
 
 1. グループ一覧に表示されているグループを選択します。
 
-![group4](./images/group4.png)
+![group4](/assets/images/group4.png)
 
 2. グループの設定としてユーザー一覧を操作することでグループにユーザーを追加できます。
 
-![group5](./images/group5.png)
+![group5](/assets/images/group5.png)
 
 3. ユーザー名の欄の「＋」をクリックすると、グループへのユーザー追加の入力欄が表示されます。
 
-![group6](./images/group6.png)
+![group6](/assets/images/group6.png)
 
 4. GROWI にユーザーとして登録されているユーザー名を入力します。
 
-![group7](./images/group7.png)
+![group7](/assets/images/group7.png)
 
-![group8](./images/group8.png)
+![group8](/assets/images/group8.png)
 
 ※登録されているユーザー名ではない場合、以下の画像のようにエラーとなりグループにユーザー追加できません。
 
-![group9](./images/group9.png)
+![group9](/assets/images/group9.png)
 
 ## ページに対する閲覧権限の設定
 
@@ -48,26 +48,26 @@
 
 1. ページの編集モードで、以下の画像のように「特定のグループのみ」を設定します。
 
-![group10](./images/group10.png)
+![group10](/assets/images/group10.png)
 
 2. グループ選択メニューに自分の所属しているグループの一覧が表示されます。
 
-![group11](./images/group11.png)
+![group11](/assets/images/group11.png)
 
 3. 対象のグループを選択し、ページを更新ボタンをクリックします。
 
-![group12](./images/group12.png)
+![group12](/assets/images/group12.png)
 
 4. 画像のように、ページ上部に権限が付加されている表記が出ていれば、権限設定は完了です。
 
-![group13](./images/group13.png)
+![group13](/assets/images/group13.png)
 
 グループに所属していないアカウントで該当のページを参照すると、ページの内容を閲覧・編集できないようになっています。
 
-![group14](./images/group14.png)
+![group14](/assets/images/group14.png)
 
 ## グループ管理画面上での権限付与ページの参照
 
 ページに対して閲覧・編集権限を設定すると、グループ管理の画面上から、対象のグループに権限設定されたページ一覧を確認できます。
 
-![group15](./images/group15.png)
+![group15](/assets/images/group15.png)

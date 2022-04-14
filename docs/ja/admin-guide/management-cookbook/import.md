@@ -89,11 +89,11 @@ esa.io が公開している [API v1](https://docs.esa.io/posts/102) を利用�
 2. [Personal access tokens] の [Generate new token] ボタンをクリックし、GROWI から esa.io にアクセスするためのトークンを発行します。
 3. トークン名を入力し、[Select scopes] の [Read] にチェックを入れ、[Save] します。
 
-  ![import1](./images/import1.png)
+  ![import1](/assets/images/import1.png)
 
 4. 生成されたトークンを保存します。
 
-  ![import2](./images/import2.png)
+  ![import2](/assets/images/import2.png)
 
 5. GROWI に管理者アカウントでログインし、[管理/データインポート] (`/admin/importer`) にアクセスします。
 6. [esa.io からのインポート] において、esa.io のチーム名とアクセストークン（先ほど保存したトークン）を入力し、更新します。
@@ -135,7 +135,7 @@ Qiita:Team が公開している [API v2](https://qiita.com/api/v2/docs) を利�
 2. ユーザーアカウントの [アプリケーション] タブを開き、[個人用アクセストークン] にて [新しくトークンを発行する] をクリックします。
 3. [アクセストークンの説明] を入力し、[スコープ] の [Read_qiita_team] にチェックを入れ、[発行する] をクリックします。
 
-![import3](./images/import3.png)
+![import3](/assets/images/import3.png)
 
 4. 生成されたトークンを保存します。
 5. GROWI に管理者アカウントでログインし、[管理/データインポート] (`/admin/importer`) にアクセスします。

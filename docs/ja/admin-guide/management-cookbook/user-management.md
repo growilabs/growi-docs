@@ -8,7 +8,7 @@
 
 パスワードのリセット、アカウントの削除、停止、管理画面へのアクセス権限の変更等の操作もこのテーブル上で行うことができます。
 
-![](./images/user-management1.png)
+![](/assets/images/user-management1.png)
 
 ### ステータス
 
@@ -35,15 +35,15 @@
 
 ユーザーテーブル右側のドロップダウンから、ユーザーのパスワードをリセットできます。
 
-![](./images/user-management2.png)
+![](/assets/images/user-management2.png)
 
 ドロップダウンの編集メニューから、パスワードのリセットを選択するとモーダルが表示されるので、そこに表示されるパスワードリセットの対象ユーザーを確認してください。
 
-<img src="./images/user-management3.png" width="50%">
+<img src="/assets/images/user-management3.png" width="50%">
 
 パスワードのリセットを押すと新規のパスワードが発行されます。対象ユーザーはこのパスワードを用いてログインしたのち、ユーザー設定( `/me` )のパスワード設定からパスワードを再設定するよう伝えてください。
 
-<img src="./images/user-management4.png" width="50%">
+<img src="/assets/images/user-management4.png" width="50%">
 
 
 #### 管理者権限の付与
@@ -88,7 +88,7 @@ GROWIから通知メールを配信する場合は、[管理画面からのメ�
 
 外部アカウントを管理します。外部アカウントとは外部認証機構を利用して登録した時に GROWI アカウントと紐づけられる情報で、紐づくGROWIアカウントが削除されるとそれに紐づく外部アカウントも自動で削除されます。
 
-![](./images/user-management5.png)
+![](/assets/images/user-management5.png)
 
 GROWI アカウントのパスワードが未設定の場合、パスワードの設定ステータスが「未設定」と表示されます。その状態の外部アカウントに紐づいた GROWI アカウントは ID/Pass によるログインはできません。その外部アカウントでログインし、個人設定画面からパスワードを設定するか、管理者がそのアカウントのパスワードをリセットすると「設定済み」になります。
 

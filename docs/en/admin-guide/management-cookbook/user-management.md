@@ -8,7 +8,7 @@ Displays a list of users. Use the search filter to narrow down the users by user
 
 This table can also be used to reset passwords, delete or suspend accounts, and change access privileges to the admin page.
 
-![](./images/user-management1.png)
+![](/assets/images/user-management1.png)
 
 ### Status
 
@@ -35,17 +35,17 @@ This table can also be used to reset passwords, delete or suspend accounts, and 
 
 A user's password can be reset from the drop-down menu on the right side of the user table.
 
-![](./images/user-management2.png)
+![](/assets/images/user-management2.png)
 
 After clicking "Reset Password" from the drop-down menu, a modal popup will display the target user for the password reset.
 
-<img src="./images/user-management3.png" width="50%">
+<img src="/assets/images/user-management3.png" width="50%">
 
 When the "Reset Password" button on the modal popup is clicked, a new password will be issued and sent to the user.
 
 It prompts the user to log in using this temporary password, and then reset their password in the user settings page ( `/me` ).
 
-<img src="./images/user-management4.png" width="50%">
+<img src="/assets/images/user-management4.png" width="50%">
 
 #### Granting administrative privileges
 
@@ -89,7 +89,7 @@ Only accounts that do not have the Active status can be deleted. Please note tha
 
 This function manages external accounts. An external account holds information that is associated with a GROWI account when it is registered using the external OAuth. When a GROWI account is deleted, the external account associated with it is also deleted automatically.
 
-![](./images/user-management5.png)
+![](/assets/images/user-management5.png)
 
 If the password for the GROWI account is not set, the password setting status is displayed as "Not Set". The GROWI account associated with the external account in this state cannot log in using a regular ID and password. Log in with the external account and set the password from the personal settings screen, or let the administrator reset the password to change the status to "Set".
 
