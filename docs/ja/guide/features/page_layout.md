@@ -1,6 +1,6 @@
 # GROWI のページレイアウト
 
-![](./images/page_layout.png)
+![](/assets/images/page_layout.png)
 
 GROWI を快適に操作するために、まずは基本レイアウトを把握しましょう。
 

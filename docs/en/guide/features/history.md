@@ -1,6 +1,6 @@
 # Check page update history
 
-![](./images/history.png)
+![](/assets/images/history.png)
 
 Update history for a page can be viewed by selecting the “Update History” tab.
 

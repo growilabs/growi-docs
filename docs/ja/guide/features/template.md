@@ -1,6 +1,6 @@
 # ページテンプレートを使ってページの作成を楽にする
 
-![](./images/template_01.png)
+![](/assets/images/template_01.png)
 
 GROWI ではテンプレートを利用したページを作ることができます。
 
@@ -10,11 +10,11 @@ GROWI ではテンプレートを利用したページを作ることができ�
 
 ## テンプレートページを作成する
 
-![](./images/template_02.png)
+![](/assets/images/template_02.png)
 
 ページツールバーから、「テンプレートページの作成/編集」を選択します。
 
-![](./images/template_01.png)
+![](/assets/images/template_01.png)
 
 表示されたダイアログから、「同一階層テンプレート」を選択します。
 
@@ -41,13 +41,13 @@ GROWI ではテンプレートを利用したページを作ることができ�
 
 次に、テンプレートページを作成した同一階層のページに新規ページを作成します。
 
-![](./images/template_03.png)
+![](/assets/images/template_03.png)
 
 そうすると下記のようにテンプレートが適用された状態でページが作成されます。
 
 編集画面に遷移するので適宜書き換えてください。
 
-![](./images/template_04.png)
+![](/assets/images/template_04.png)
 
 ## 下位層テンプレートの使い方
 

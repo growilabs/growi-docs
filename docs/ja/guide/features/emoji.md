@@ -1,6 +1,6 @@
 # 絵文字(emoji) を使う
 
-![](./images/emoji.png)
+![](/assets/images/emoji.png)
 
 GROWI では絵文字を使うことができます。
 絵文字の単語をコロンで囲うことによって絵文字と認識されます。

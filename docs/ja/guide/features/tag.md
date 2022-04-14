@@ -11,44 +11,44 @@ GROWI ではページパスという階層構造でページを管理するの�
 タグを付けたいページへ移動します。  
 下記の画像の通り、ページ左上側に「タグを付ける　＋」のリンクがあります。
 
-![](./images/tag1.png)
+![](/assets/images/tag1.png)
 
 
 ページの「タグを付ける +」のリンクをクリックして、タグを追加できます。  
 リンクをクリックすると下記の画像のようにタグ編集用のウィンドウが表示されます。
 
-![](./images/tag2.png)
+![](/assets/images/tag2.png)
 
 この入力欄で、タグとして利用したい単語を入力し、下記の画像の赤丸部分をクリックするか、Enter キーを入力します。
 
-![](./images/tag3.png)
+![](/assets/images/tag3.png)
 
 
 すると、下記の画像のように、単語が色付けされます。
 
-![](./images/tag4.png)
+![](/assets/images/tag4.png)
 
 
 この状態がタグとして設定可能な状態です。日本語のタグも利用できます。  
 複数同時にタグとして追加可能で、各タグの×ボタンでタグの削除編集もできます。
 
-![](./images/tag5.png)
+![](/assets/images/tag5.png)
 
 ページに付けたいタグの設定ができたら、下記の画像の通り Done ボタンをクリックします。
 
-![](./images/tag6.png)
+![](/assets/images/tag6.png)
 
 Done ボタンクリックにより、ページにタグが設定されます。
 ページに付いたタグは、クリックすると検索が実行されます。
 
-![](./images/tag7.png)
+![](/assets/images/tag7.png)
 
 ページに付いたタグをクリックした結果、タグを対象にページ検索が実行されます。
 <!-- textlint-disable weseek/no-doubled-joshi -->
 検索結果には、同じタグが付いたページが表示されます。
 <!-- textlint-enable weseek/no-doubled-joshi -->
 
-![](./images/tag8.png)
+![](/assets/images/tag8.png)
 
 
 ## タグで検索する
@@ -56,17 +56,17 @@ Done ボタンクリックにより、ページにタグが設定されます。
 ナビゲーションバーにある検索ボックスからも、タグを対象に検索が可能です。  
 検索ボックスにカーソルを当てると、下記の画像にある通り検索のヘルプが表示されます。  
 
-![](./images/tagsearch1.png)
+![](/assets/images/tagsearch1.png)
 
 tag 検索の使い方として `tag:日本語` などの入力形式でタグを対象とした検索が可能です。
 
-![](./images/tagsearch2.png)
+![](/assets/images/tagsearch2.png)
 
 <!-- textlint-disable weseek/no-doubled-joshi -->
 先ほど設定したタグが付いたページが検索結果に表示されます。
 <!-- textlint-enable weseek/no-doubled-joshi -->
 
-![](./images/tagsearch3.png)
+![](/assets/images/tagsearch3.png)
 
 
 タグ機能も使いこなして、GROWI をより発展させましょう。

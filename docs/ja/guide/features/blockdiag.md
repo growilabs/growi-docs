@@ -1,6 +1,6 @@
 # Blockdiag を使ってダイアグラムを描く
 
-![blockdiag](./images/blockdiag.png)
+![blockdiag](/assets/images/blockdiag.png)
 
 下記のような形式で記述することで blockdiag を用いたダイアグラムを記述できます。
 
