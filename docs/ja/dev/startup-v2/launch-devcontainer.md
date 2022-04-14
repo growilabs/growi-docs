@@ -9,13 +9,13 @@
 
 1. VSCode を起動
 1. リモート接続用インジケーターから、devcontainer でリポジトリを開く
-    * ![indicator](./images/vscode-remote-button.png)
+    * ![indicator](/assets/images/vscode-remote-button.png)
     * Remote-Containers: Open folder in Container...
     * weseek/growi ローカルリポジトリを選択
         * Windows の場合は WSL のパス: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
 1. 初回は各種コンテナイメージのダウンロードとビルドのため、5～10分待つ
 1. エラーなく起動したら、サイドバーの Docker メニューで5つのコンテナの起動を確認する
-    * ![ready](./images/growi-dev-ready.png)
+    * ![ready](/assets/images/growi-dev-ready.png)
 
 
 ## 確認
