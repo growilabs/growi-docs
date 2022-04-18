@@ -165,7 +165,7 @@ GROWI は、wiki ページを作成するシステムです。
 
 ```
 
-![image](./images/add_image.png)
+![image](/assets/images/add_image.png)
 
 - 編集画面下部の Attach 機能を利用する
 
@@ -293,7 +293,7 @@ $lsx()
 
 ```
 
-![lsx](./images/lsx_sample.png)
+![lsx](assets/images/lsx_sample.png)
 
 すると、編集中の記事の配下のページ一覧が出力されます。
 
