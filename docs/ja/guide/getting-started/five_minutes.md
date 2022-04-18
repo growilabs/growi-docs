@@ -11,11 +11,11 @@ GROWI はデモサイトがあるため、簡単に始めることができま�
 ## ページを作成する
 
 画面右上にある「作成」ボタンからページの作成をしてみましょう。
-![](./images/create_page_button.png)
+![](/assets/images/create_page_button.png)
 
 ここでのタイトルは `/お試し/はじめてのページ` とします。すでに作成されている場合には、違うページ名で作成してみてください。
 
-![](./images/create_page_dialog.png)
+![](/assets/images/create_page_dialog.png)
 
 
 その後に下記の内容をコピーします。
@@ -35,11 +35,11 @@ GROWI はデモサイトがあるため、簡単に始めることができま�
 
 貼り付けると下記のように内容がリアルタイムに反映されたプレビューが画面右側に表示されます。
 
-![作成ボタン](./images/begin_create_page.png)
+![作成ボタン](/assets/images/begin_create_page.png)
 
 画面右下の「作成」ボタンを押して、ページを保存しましょう。
 
-![作成ダイアログ](./images/save_button.png)
+![作成ダイアログ](/assets/images/save_button.png)
 
 ::: tip
 ショートカットキーとして、 **Ctrl+s** でページを保存できます。
@@ -51,7 +51,7 @@ GROWI はデモサイトがあるため、簡単に始めることができま�
 
 今度はページ名を `/お試し/はじめてのページ/入れ子のページ` とします。
 
-![](./images/create_nest_page_dialog.png)
+![](/assets/images/create_nest_page_dialog.png)
 
 その後に下記の内容をコピーします。
 
@@ -70,16 +70,16 @@ GROWI はデモサイトがあるため、簡単に始めることができま�
 
 入力が完了したら、画面右下の「作成」ボタンを押してページを保存しましょう。
 
-![](./images/save_button.png)
+![](/assets/images/save_button.png)
 
 ## 親のページに移動する
 
 上記作業が終わった後、表示されたページ内の「はじめてのページ」をクリックすることで、親のページに簡単に移動できます。
 
-![](./images/title_click.png)
+![](/assets/images/title_click.png)
 
 ## ページ配下に作成したページ一覧を確認する
 
 ページ配下に作成したページ一覧はページ内の下の方に表示されています。
 
-![](./images/page_list.png  )
+![](/assets/images/page_list.png  )
