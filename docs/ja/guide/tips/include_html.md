@@ -1,6 +1,6 @@
 # HTML タグを組み込み
 
-![html](./images/include_html.png)
+![html](/assets/images/include_html.png)
 
 ```markdown
 <div class="row">
@@ -19,7 +19,7 @@ GROWI では、記事の編集画面に直接 HTML を埋め込む事も可能�
 
 ## iframe 組み込み
 
-![iframe](./images/include_iframe.png)
+![iframe](/assets/images/include_iframe.png)
 
 ```markdown
 <iframe width="30%" height="30%" src="https://www.youtube.com/embed/YE7VzlLtp-4"

@@ -1,6 +1,6 @@
 # チェックボックスの利用
 
-![checkbox](./images/checkbox.png)
+![checkbox](/assets/images/checkbox.png)
 
 GROWI では、マークダウン記法でチェックボックスを記述できます。
 

@@ -6,7 +6,7 @@
 GROWI.Cloud 上で立ち上げている GROWI の場合、インストールは不要です。
 :::
 
-![lsx](./images/lsx_gif.gif)
+![lsx](/assets/images/lsx_gif.gif)
 
 GROWI では 作成したページを一覧表示する機能があります。
 

@@ -26,7 +26,7 @@ GROWI では、注釈（脚注）を記述できます。
 
 ### 参考
 
-![footnote](./images/footnote.png)
+![footnote](/assets/images/footnote.png)
 
 
 ```markdown

@@ -51,4 +51,4 @@ sample
 
 When you create a GROWI page with the above Markdown text, the page created will look like the image below.
 
-![footnote](./images/footnote.png)
+![footnote](/assets/images/footnote.png)
