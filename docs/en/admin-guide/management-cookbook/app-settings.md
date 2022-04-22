@@ -225,7 +225,7 @@ Please refer to [Attachment reference method](/en/admin-guide/admin-cookbook/att
 Enable/Disable installed plugins on GROWI by setting `Load Plugins` to ON/OFF in this field.  
 When OFF, plugins installed in GROWI are not applied.
 
-![appsettings17](/assets/appsettings17.png)
+![appsettings17](/assets/images/appsettings17.png)
 
 GROWI uses the module resolution mechanism of Node.js to automatically detect packages with the `growi-plugin-` prefix.  
 

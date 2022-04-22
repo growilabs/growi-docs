@@ -138,7 +138,7 @@ GROWI は、wiki ページを作成するシステムです。
   [GROWI Docs](https://docs.growi.org/)
   ```
 
-![link](/images/add_link.png)
+![link](/assets/images/add_link.png)
 
 
 - 手書きで文字とリンクを作成
@@ -252,8 +252,6 @@ GROWI では、本文の編集時に多数のテクニックで文章を読み�
   バッククオート3つで囲います。
 ```
 
-![emoji](/assets/images/edit_text2.png)
-
 ## テーブルを作成する
 
 以下の2種類の方法で、テーブルを作成できます。
@@ -293,7 +291,7 @@ $lsx()
 
 ```
 
-![lsx](assets/images/lsx_sample.png)
+![lsx](/assets/images/lsx_sample.png)
 
 すると、編集中の記事の配下のページ一覧が出力されます。
 
