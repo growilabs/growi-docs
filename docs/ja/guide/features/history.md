@@ -1,6 +1,6 @@
 # ページの更新履歴を確認する
 
-![](./images/history.png)
+![](/assets/images/history.png)
 
 GROWI ではページの更新履歴を確認できます。
 

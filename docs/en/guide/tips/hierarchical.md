@@ -2,7 +2,7 @@
 
 You can add a page hierarchy of the current page or of another page using `$lsx()`, as shown below.
 
-![lsx](./images/lsx_gif.gif)
+![lsx](/assets/images/lsx_gif.gif)
 
 This is useful for parent pages with large child hierarchy structures.
 
@@ -94,9 +94,9 @@ In this example, only pages with `2019` in the page name are displayed in the li
 
 ## GitHub
 
-The `$lsx()` function used in GROWI originated as the 
+The `$lsx()` function used in GROWI originated as the
 [Pukiwiki lsx plugin](http://ukiya.sakura.ne.jp/index.php?PukiWiki%2F1.4%2F%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%2F%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%2F%E7%8B%AC%E8%87%AA%E3%81%AB%E8%BF%BD%E5%8A%A0%E3%81%97%E3%81%9F%E3%82%82%E3%81%AE%2Flsx)
 
-The GROWI implementation can be found on our 
+The GROWI implementation can be found on our
 [GitHub](https://github.com/weseek/growi-plugin-lsx)
 

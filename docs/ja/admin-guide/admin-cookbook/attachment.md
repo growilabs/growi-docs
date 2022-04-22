@@ -70,7 +70,7 @@ Relay Mode に変更してください。
 ### Relay Mode (オプショナル / v4.2.2 以前のデフォルト仕様)
 
 <!-- https://dev.growi.org/5fd8424f2271ae00481ed2e8 -->
-![fileUpload1](../management-cookbook/images/fileUpload1.png)
+![fileUpload1](/assets/images/fileUpload1.png)
 
 Relay Mode では GROWI サーバーが Cloud Service との通信を中継し、クライアントにデータをリレー配信します。
 
@@ -82,7 +82,7 @@ Relay Mode では GROWI サーバーが Cloud Service との通信を中継し�
 ### Redirect Mode (v4.2.3 以降のデフォルト仕様)
 
 <!-- https://dev.growi.org/5fd8424f2271ae00481ed2e8 -->
-![fileUpload2](../management-cookbook/images/fileUpload2.png)
+![fileUpload2](/assets/images/fileUpload2.png)
 
 Redirect Mode では Cloud Service にファイル参照用の署名付きURLの発行を依頼し、  
 それをクライアントに知らせ、リダイレクトを促します。

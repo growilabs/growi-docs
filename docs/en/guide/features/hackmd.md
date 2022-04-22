@@ -25,7 +25,7 @@ The following explanation assumes that the GROWI environment has been configured
 
 By selecting the HackMD tab under the reference/editing menu tab (encircled in red in the image below), the page will be opened in HackMD mode.
 
-![](./images/HackMD1.png)
+![](/assets/images/HackMD1.png)
 
 HackMD can be used by one person, but the following section explains how to use HackMD with two user accounts to edit a page.
 
@@ -38,13 +38,13 @@ User A and User B will edit the same page at the same time.
 
    When clicked, the message `HackMD is READY!` and the button `Start to edit with HackMD` will be displayed.
 
-   ![](./images/HackMD2-6.png)
+   ![](/assets/images/HackMD2-6.png)
 
 2. Click on the `Start to edit with HackMD` button
 
    Click on it to start editing in HackMD mode, as shown in the image below.
 
-   ![](./images/HackMD3.png)
+   ![](/assets/images/HackMD3.png)
 
 This is all it takes to edit the page in HackMD mode.
 
@@ -55,17 +55,17 @@ User B will then join this page as a second editor.
 
 When user B opens the page, the following message appears at the bottom of the screen `This page has a draft on HackMD >> Open HackMD Editor`.
 
-![](./images/HackMD4.png)
+![](/assets/images/HackMD4.png)
 
 At this point, select the HackMD part in the view/edit/HackMD tab, or click the `Open HackMD Editor` link at the bottom of the screen.  
 
-![](./images/HackMD5.png)
+![](/assets/images/HackMD5.png)
 
 The same `Start to edit with HackMD` button as for user A will then appear, or a screen with a `Resume to edit with HackMD` button and a `Discard changes of HackMD` button will appear.
 
-![](./images/HackMD2-6.png)
+![](/assets/images/HackMD2-6.png)
 
-![](./images/HackMD7.png)
+![](/assets/images/HackMD7.png)
 
 
 ### `Start to edit with HackMD` button appears
@@ -105,12 +105,12 @@ When two users operate at the same time, it will look like the following.
 
 ### User A's editing screen
 
-![](./images/HackMD_editing1.gif)
+![](/assets/images/HackMD_editing1.gif)
 
 
 ### User B's editing screen
 
-![](./images/HackMD_editing2.gif)
+![](/assets/images/HackMD_editing2.gif)
 
 Multiple cursors will appear and the document could be edited at the same time.
 
@@ -131,7 +131,7 @@ If a user is editing a page in HackMD mode and another user saves the page in th
 
 In this situation, you will not be able to start editing in HackMD mode even after updating the page, and you will get a `DRAFT MAY BE OUTDATED` alert.
 
-![](./images/HackMD8.png)
+![](/assets/images/HackMD8.png)
 
 If this message appears, click the `Discard it` link or the `Discard changes of HackMD` button and start editing from the latest version of the page.
 Because the update (saving) in normal editing mode takes precedence over editing in HackMD mode.  

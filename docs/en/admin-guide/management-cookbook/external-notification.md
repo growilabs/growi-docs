@@ -23,11 +23,11 @@ GROWI can use IFTTT to send notifications to other web services.
      - For details, see [Email Settings](en/admin-guide/management-cookbook/app-settings.html#email-settings-tbd).
   1. Click [Global notification] from [Notification settings] in the GROWI Management page.
 
-     ![ifttt-global-notification-introduction](./images/ifttt-global-notification-introduction.png)
+     ![ifttt-global-notification-introduction](/assets/images/ifttt-global-notification-introduction.png)
 
   1. Click **Add Notification Settings**.
 
-     ![ifttt-global-notification-addition](./images/ifttt-global-notification-addition.png)
+     ![ifttt-global-notification-addition](/assets/images/ifttt-global-notification-addition.png)
 
   1. Set the trigger path.
   1. Create your original IFTTT applet from the link.
@@ -35,7 +35,7 @@ GROWI can use IFTTT to send notifications to other web services.
      - Example: If you are using **email** for IFTTT, enter trigger@applet.ifttt.com.
   1. Set the trigger event on GROWI.
 
-     ![ifttt-global-notification-detail-settings](./images/ifttt-global-notification-detail-settings.png)
+     ![ifttt-global-notification-detail-settings](/assets/images/ifttt-global-notification-detail-settings.png)
 
   1. Once you have entered the required information, press **Update** button.
 
@@ -57,12 +57,12 @@ Basically, it is necessary to enter the channel to be notified each time, but it
 - The path to display the configuration value is called pattern. For example, if you set `/event/*`, only pages under event will show the default pattern you set.
 - If you want to display the default pattern on all pages, please type `/*`.
 
-### Check if the default pattern settings are reflected.
+### Check if the default pattern settings are reflected
 
 For example, if you set the pattern to `/event/*` and the channel to `general`, then
 If you create a page with the path `/event/announcement`, it will go to edit mode with `general` set in the Slack notification form.
 
-![slack2](./images/slack2.png)
+![slack2](/assets/images/slack2.png)
 
 If the checkbox is enabled and the page is refreshed, the `general` channel will receive a Slack notification.
 

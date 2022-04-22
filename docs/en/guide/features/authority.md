@@ -8,7 +8,7 @@ This section describes the access control methods that can be set for pages.
 
 In the edit mode, click the "Public" on the lower-right button, then you can see options as shown in the image below.
 
-![authority1](./images/authority1.png)
+![authority1](/assets/images/authority1.png)
 
 After selecting this option, click the "Create / Update" button to apply view / edit access control for the page.
 
@@ -80,7 +80,7 @@ In v5.0, pages with this setting are displayed only to users who know the path l
 
 However, if you create a page with permissions other than this setting (public, specific group only, etc.) with a path that is under the page with this setting, it will be displayed in the page tree.
 
-For example, if you have a `/Page1` with "Anyone With The Link" set and you create a` /Page1/Page2` with a "Public" permission, you can create a `/Page1` in the page tree. And `/Page1/Page2` are both displayed.
+For example, if you have a `/Page1` with "Anyone With The Link" set and you create a`/Page1/Page2` with a "Public" permission, you can create a `/Page1` in the page tree. And `/Page1/Page2` are both displayed.
 
 Be careful with the path of the page when using "Anyone With The Link" setting.
 
@@ -104,7 +104,7 @@ The following example is for the subordinate page `/Page1/child` when the "Engin
 
 If you do not want to display the page to people who do not have view / edit permission when displaying the search results and page list of GROWI, switch the on / off function of the corresponding setting in the `security setting` of the management menu.
 
-![security](./images/security.png)
+![security](/assets/images/security.png)
 
 ### Show Page List and Restricted Pages as 'Only Me'
 
@@ -132,7 +132,7 @@ For cases where you want to manage all privileges at once to pages in the hierar
 
 Please click "▲" next to the "Create / Update" button which appears in the lower right corner of the screen when in create/edit. Then, click "Update and Overwrite scopes of all descendants".
 
-![authority2](./images/authority2.png)
+![authority2](/assets/images/authority2.png)
 
 By performing this action, you are able to apply same permission settings to all pages under the corresponding page.
 

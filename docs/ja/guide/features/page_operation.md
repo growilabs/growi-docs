@@ -1,6 +1,6 @@
 # ページの移動/複製/削除
 
-![](./images/page_operation.png)
+![](/assets/images/page_operation.png)
 
 GROWI では柔軟にページを移動/複製/削除できます。ページツールバーの「更新履歴」タブの横に配置されています。
 

@@ -1,6 +1,6 @@
 # タイトルや URL をクリップボードにコピーする
 
-![](./images/copy_to_clipboard.png)
+![](/assets/images/copy_to_clipboard.png)
 
 ページタイトル横にあるクリップボードのアイコンをクリックすることで、ページタイトルや、ページの URL をクリップボードにコピーできます。
 

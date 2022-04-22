@@ -1,6 +1,6 @@
 # UML を記述する
 
-![](./images/uml_diagrams.png)
+![](/assets/images/uml_diagrams.png)
 
 GROWI では [PlantUML](https://plantuml.com/) を利用して、UML 図を書くことができます。
 

@@ -15,12 +15,12 @@ GROWI の **サイト URL 設定は必ず行ってください**。
 保有するドメインの向き先として `growi.example.com` などに DNS レコードを指定している場合は、ここに設定します。  
 ドメインを DNS 設定していない場合は、任意のURLで良いので値を設定してください。
 
-![appsettings10](./images/appsettings10.png)
+![appsettings10](/assets/images/appsettings10.png)
 
 環境変数 `APP_SITE_URL` に値が設定されていると、右側の `Environment variables` の欄に設定値が表示されます。  
 
 
-![appsettings11](./images/appsettings11.png)
+![appsettings11](/assets/images/appsettings11.png)
 
 管理画面で編集する `Database` の欄に値が入力されていると、`Database` の欄に設定した値が`Environment variables` の欄より優先されます。  
 
@@ -30,9 +30,9 @@ GROWI の **サイト URL 設定は必ず行ってください**。
 管理画面の設定欄、ページのヘッダ部に以下のようにエラーメッセージが表示されます。  
 GROWI の **サイト URL 設定は必ず行ってください**。
 
-![appsettings12](./images/appsettings12.png)
+![appsettings12](/assets/images/appsettings12.png)
 
-![appsettings13](./images/appsettings13.png)
+![appsettings13](/assets/images/appsettings13.png)
 :::
 
 
@@ -40,42 +40,42 @@ GROWI の **サイト URL 設定は必ず行ってください**。
 
 サイト名に設定をした内容は、GROWI のログイン画面及びタイトルとして表示されます。
 
-![appsettings1](./images/appsettings1.png)
+![appsettings1](/assets/images/appsettings1.png)
 
-![appsettings2](./images/appsettings2.png)
+![appsettings2](/assets/images/appsettings2.png)
 
 ### コンフィデンシャル表示
 
 コンフィデンシャル表示欄に記載した内容は、GROWI のヘッダーに表示されます。
 
-![appsettings3](./images/appsettings3.png)
+![appsettings3](/assets/images/appsettings3.png)
 
 ### 新規ユーザーのデフォルト言語設定
 
 この欄では、英語・日本語・中国語のいずれかを選択します。
 
-![appsettings4](./images/appsettings4.png)
+![appsettings4](/assets/images/appsettings4.png)
 
 上記の設定により、GROWI で新規ユーザーを作成する際の、デフォルト設定言語が切り替わります。
 
-![appsettings5](./images/appsettings5.png)
+![appsettings5](/assets/images/appsettings5.png)
 
 
 ### ファイルアップロード
 
 GROWI では、ページへの画像以外のファイルのアップロードを可能とするための設定があります。
 
-![appsettings6](./images/appsettings6.png)
+![appsettings6](/assets/images/appsettings6.png)
 
 こちらにチェックをしないと、wiki ページの編集時には画像以外のファイルはアップロードできません。
 
 ファイルアップロードを設定することで、ファイルがアップロードできるようになります。
 
-![appsettings8](./images/appsettings8.png)
+![appsettings8](/assets/images/appsettings8.png)
 
 以下の表示となっている場合は、ファイルアップロードは機能していません。
 
-![appsettings9](./images/appsettings9.png)
+![appsettings9](/assets/images/appsettings9.png)
 
 
 ## メールの設定
@@ -85,7 +85,7 @@ GROWI からのメール送信 は、次のどちらかの設定パターンを�
   1. SMTP サーバーを設定する
   2. AWS の SES を利用する
 
-![appsettings14](./images/appsettings14.png)
+![appsettings14](/assets/images/appsettings14.png)
 
 **メール設定がセットアップされていません。** というアラートが表示されている場合、設定フォームが不十分であることを示します。  
 
@@ -109,7 +109,7 @@ SMTP サーバー設定の更新後、**テストメールを送信**ボタン�
 
 以下はユーザー管理メニューの**新規ユーザーの仮発行**ウィンドウです。
 
-![appsettings15](./images/appsettings15.png)
+![appsettings15](/assets/images/appsettings15.png)
 
 **招待をメールで送信** にチェックをするとメールが機能します。  
 メール設定が正しくできていない場合はメールが機能しません。
@@ -155,7 +155,7 @@ GROWI サーバーから見たローカルファイルシステムにファイ�
 ファイル保存先を途中で変更すると、これまでにアップロードしたファイル等へのアクセスができなくなりますのでご注意ください。
 :::
 
-![appsettings18](./images/appsettings18.png)
+![appsettings18](/assets/images/appsettings18.png)
 
 ::: warning
 <!-- textlint-disable weseek/sentence-length -->
@@ -191,7 +191,7 @@ Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介し
 
 2. MinIO など、S3 互換 API を持つ他のオブジェクトストレージサービスを使用する場合は、そのエンドポイントの URL をカスタムエンドポイントに入力してください。
 
-![appsettings19](./images/appsettings19.png)
+![appsettings19](/assets/images/appsettings19.png)
 
 ### Google Cloud Storage のセットアップ
 
@@ -199,7 +199,7 @@ Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介し
 
 2. GROWI のアプリ設定のファイルアップロード設定にて GCS を選択し、上記過程で確認した情報を設定してください。
 
-![appsettings20](./images/appsettings20.png)
+![appsettings20](/assets/images/appsettings20.png)
 
 - API Key Json Path: [(GROWIのルートディレクトリから見た) GCP サービスアカウントキー の JSON ファイルのパス]
 - バケット名: [GCS のバケット名]
@@ -216,7 +216,7 @@ Amazon S3, Google Cloud Storage を利用する場合、添付ファイル参照
 この欄で `プラグインを読み込む` を ON / OFF に設定することで、GROWI にインストールされたプラグインを有効化/無効化します。  
 OFF の場合、GROWI にインストールされたプラグインは反映されません。
 
-![appsettings17](./images/appsettings17.png)
+![appsettings17](/assets/images/appsettings17.png)
 
 GROWI では、Node.js のモジュール解決の仕組みを利用し、 `growi-plugin-` プレフィクスを持つパッケージを自動検出します。  
 

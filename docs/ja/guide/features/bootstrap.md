@@ -1,6 +1,6 @@
 # Bootstrap を使ってページを装飾する
 
-![](./images/bootstrap.png)
+![](/assets/images/bootstrap.png)
 
 GROWI では bootstrap を用いてページを装飾できます。
 

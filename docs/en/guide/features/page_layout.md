@@ -2,7 +2,7 @@
 
 This guide will walk you through the basic parts of a GROWI page.
 
-![](./images/page_layout.png)
+![](/assets/images/page_layout.png)
 
 ## Page Title
 

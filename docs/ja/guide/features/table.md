@@ -1,6 +1,6 @@
 # テーブルの編集
 
-![](./images/table.png)
+![](/assets/images/table.png)
 
 GROWI では WYSIWYG (見たままのものを実際に作成出力) でテーブルを作成・編集できます。
 
@@ -8,16 +8,16 @@ GROWI では WYSIWYG (見たままのものを実際に作成出力) でテー�
 
 ページ上部にあるツールバーからテーブルアイコンをクリックすることでテーブルを作ることができます。
 
-![](./images/table_button.png)
+![](/assets/images/table_button.png)
 
 ## 行と列の追加
 
 また、テーブル編集ダイアログ上で各行(ぎょう)と列(れつ)を右クリックすることで、行と列を追加できます。
 
-![](./images/insert_columns.png)
+![](/assets/images/insert_columns.png)
 
 ## すでに書かれているテーブルを編集する
 
 画面左側のテーブル表記の箇所にカーソルを合わせた状態でテーブルアイコンをクリックすると、すでに書かれているテーブルを編集できます。
 
-![](./images/edit_exists_table.png)
+![](/assets/images/edit_exists_table.png)

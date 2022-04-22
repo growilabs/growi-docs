@@ -1,6 +1,7 @@
 # ページリンクを記述する
 
 GROWI では、各ページへのリンクの書き方として、以下のように参照形式で記述できます。
+
 - Markdown 標準方式
 - GROWI 独自方式
 - Pukiwiki like linker方式
@@ -29,7 +30,7 @@ GROWI では、各ページへのリンクの書き方として、以下のよ�
 &lt;/user/admin1>
 ```
 
-![page_linker1](./images/linker_growi.png)
+![page_linker1](/assets/images/linker_growi.png)
 
 ## Pukiwiki like linker
 
@@ -46,4 +47,4 @@ GROWI では、各ページへのリンクの書き方として、以下のよ�
 Bootstrap3のExampleは[[こちら>./Bootstrap3]]
 ```
 
-![page_linker2](./images/linker_pukiwiki.png)
+![page_linker2](/assets/images/linker_pukiwiki.png)

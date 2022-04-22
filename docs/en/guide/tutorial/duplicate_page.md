@@ -8,9 +8,9 @@ First, create a page hierarchy that you will use to store your duplicated pages.
 
 Press the "create" button to create a new page which will serve as the parent page for your page hierarchy.  For this example, we will create our parent page under the `/tutorial` page:
 
-![duplicate1](./images/duplicate1.png)
+![duplicate1](/assets/images/duplicate1.png)
 
-![duplicate2](./images/duplicate2.png)
+![duplicate2](/assets/images/duplicate2.png)
 
 ## Duplicate a page
 
@@ -24,17 +24,17 @@ Duplicate page
 
 Next, click “Duplicate” in the menu as shown below.
 
-![duplicate3](./images/duplicate3.png)
+![duplicate3](/assets/images/duplicate3.png)
 
-![duplicate4](./images/duplicate4.png)
+![duplicate4](/assets/images/duplicate4.png)
 
 Enter the page name “20191102” and click the "Duplicate page" button.
 
-![duplicate5](./images/duplicate5.png)
+![duplicate5](/assets/images/duplicate5.png)
 
 The page will be duplicated as shown below.
 
-![duplicate6](./images/duplicate6.png)
+![duplicate6](/assets/images/duplicate6.png)
 
 By duplicating pages, you can easily populate your wiki with copied pages.
 
@@ -49,7 +49,7 @@ When you create a template for all descendant pages, it applies to all lower-lev
 
 In this tutorial, we will use a template for child pages.
 
-![template1](./images/template1.png)
+![template1](/assets/images/template1.png)
 
 Click the create template button as shown above to select your template type.
 
@@ -57,7 +57,7 @@ Click the create template button as shown above to select your template type.
 Click the Select button under "Template for children".
 The page creation screen will appear, with the page name "_template" already created.
 
-![template2](./images/template2.png)
+![template2](/assets/images/template2.png)
 
 Paste the following Markdown code into the edit box and save the page.
 
@@ -69,7 +69,7 @@ Paste the following Markdown code into the edit box and save the page.
 ## remarks
 ```
 
-![template3](./images/template3.png)
+![template3](/assets/images/template3.png)
 
 Now this template is ready to use.
 
@@ -77,12 +77,12 @@ Now this template is ready to use.
 
 On the page where the template was created, click “Create” to create a child page.
 
-![template4](./images/template4.png)
+![template4](/assets/images/template4.png)
 
 The settings from the template are automatically imported into the new page.
 
-![template5](./images/template5.png)
+![template5](/assets/images/template5.png)
 
-![template6](./images/template6.png)
+![template6](/assets/images/template6.png)
 
 This can be very useful when creating pages with similar formatting.
