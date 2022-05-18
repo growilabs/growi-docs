@@ -1,5 +1,9 @@
 # Creating a Development Environment
 
+::: warning
+As of 2022.05, building a development environment on a Mac with M1 is not recommended.
+:::
+
 ## Preparing Tools
 
 ::: tip Note
@@ -13,7 +17,34 @@ The below documentation details our development environment at WESEEK Inc. It ma
 
 ::: tab "Windows" id="tab-docker-win"
 
-※These settings are not compatible with Virtualbox
+1. Install Ubuntu on WSL2
+
+    ```bash
+    > wsl --install
+    ```
+
+    * Confirmation
+
+        ```bash
+        > wsl -l -v
+        NAME      STATE           VERSION
+        * Ubuntu    Stopped         2
+        ```
+
+    1. Limit memory size due to the issue that WSL 2 consumes massive amounts of RAM ([Microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))
+        * Edit or create `C:\Users\YourAccount\.wslconfig`
+
+        ```properties
+        [wsl2]
+        memory=6GB
+        swap=0
+        ```
+
+1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
+
+:::
+
+::: tab "Old Windows 10" id="tab-docker-win10"
 
 1. Set up the environment for use with WSL2
     1. Install the [WSL2 Linux Kernel Package](https://docs.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)
@@ -42,7 +73,7 @@ The below documentation details our development environment at WESEEK Inc. It ma
     1. Limit memory size due to the issue that WSL 2 consumes massive amounts of RAM ([Microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))
         * Edit or create `C:\Users\YourAccount\.wslconfig`
 
-        ```
+        ```properties
         [wsl2]
         memory=6GB
         swap=0

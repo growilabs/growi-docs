@@ -1,5 +1,9 @@
 # 開発環境の構築
 
+::: warning
+2022.05 現在、M1 搭載の Mac での開発環境構築は非推奨です
+:::
+
 ## 各種ツールの準備
 
 ::: tip Note
@@ -15,7 +19,34 @@
 
 ::: tab "Windows" id="tab-docker-win"
 
-※下記手順は、Virtualbox を併用しない手順です。
+1. Ubuntu on WSL2 のインストール
+
+    ```bash
+    > wsl --install
+    ```
+
+    * 確認
+
+        ```bash
+        > wsl -l -v
+        NAME      STATE           VERSION
+        * Ubuntu    Stopped         2
+        ```
+
+    1. ホストのメモリを消費しすぎてしまう問題([microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))への対処として、メモリサイズを制限する
+        * `C:\Users\YourAccount\.wslconfig` を編集(ファイルが存在しない場合は作成)
+
+        ```properties
+        [wsl2]
+        memory=6GB
+        swap=0
+        ```
+
+1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
+
+:::
+
+::: tab "Old Windows 10" id="tab-docker-win10"
 
 1. WSL2 を利用できる状態にする
     1. [WSL2 Linux カーネル更新プログラム パッケージ](https://docs.microsoft.com/ja-jp/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package) をインストール
@@ -44,7 +75,7 @@
     1. ホストのメモリを消費しすぎてしまう問題([microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))への対処として、メモリサイズを制限する
         * `C:\Users\YourAccount\.wslconfig` を編集(ファイルが存在しない場合は作成)
 
-        ```
+        ```properties
         [wsl2]
         memory=6GB
         swap=0
@@ -54,7 +85,7 @@
 
 :::
 
-::: tab "Mac" id="tab-docker-mac"
+::: tab "Mac (Intel)" id="tab-docker-mac"
 
 1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
     1. メモリ利用量上限がデフォルトでは 2GB に設定されているので変更する
