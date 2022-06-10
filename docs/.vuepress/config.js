@@ -127,6 +127,7 @@ module.exports = {
                 '/en/guide/features/hackmd.md',
                 '/en/guide/features/in-app-notification.md',
                 '/en/guide/features/slack_integration.md',
+                '/en/guide/features/textlint.md',
               ]
             },
             {
@@ -365,6 +366,7 @@ module.exports = {
                 '/ja/guide/features/hackmd.md',
                 '/ja/guide/features/in-app-notification.md',
                 '/ja/guide/features/slack_integration.md',
+                '/ja/guide/features/textlint.md',
               ]
             },
             {
