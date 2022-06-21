@@ -1,5 +1,9 @@
 # CentOS
 
+:::warning
+この記事は公開されてから時間が経っています。
+:::
+
 [[toc]]
 
 ## 概要
@@ -29,27 +33,27 @@ Optional となっているものは必須ではありません。ただし、�
 <!-- textlint-enable weseek/no-dead-link -->
 
 ```text
-$ cd ~
-$ curl -sL https://rpm.nodesource.com/setup_8.x -o nodesource_setup.sh
+cd ~
+curl -sL https://rpm.nodesource.com/setup_8.x -o nodesource_setup.sh
 ```
 
 取得したスクリプトを実行します。
 
 ```text
-$ sudo bash nodesource_setup.sh
+sudo bash nodesource_setup.sh
 ```
 
 これにより `yum` 経由で node.js が取得できるようになったので、 `yum` コマンドでインストールを行います。
 
 ```text
-$ sudo yum install -y nodejs
+sudo yum install -y nodejs
 ```
 
 GROWI では yarn を用いたパッケージインストールを利用するため、ここで `yarn` コマンドをインストールしておきます。
 
 ```text
-$ curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
-$ sudo yum install -y yarn
+curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+sudo yum install -y yarn
 ```
 
 Node.js, npm, yarn のインストールが完了したら、インストールしたバージョンを確認しましょう。
@@ -76,13 +80,13 @@ $ yarn -v
 まず、 Elasticsearch を実行できるように JDK8 をインストールします。
 
 ```text
-$ sudo yum install java-1.8.0-openjdk
+sudo yum install java-1.8.0-openjdk
 ```
 
 パッケージをインストールするために、Elasticsearch レポジトリの GPG キーを追加します。
 
 ```text
-$ sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 ```
 
 Elasticsearch のレポジトリを追加します。以下の内容を`/etc/yum.repos.d/elasticsearch.repo` に書き込みます。
@@ -101,7 +105,7 @@ type=rpm-md
 これで、yum 経由で Elasticsearch がインストールできるようになったため、インストールを行います。
 
 ```text
-$ sudo yum install -y elasticsearch
+sudo yum install -y elasticsearch
 ```
 
 インストールが完了したら、Elasticsearch に割り当てるメモリを調整します。メモリの割り当ては個人ユースであれば 256MB で十分です。チーム規模、ページの量に応じて変更してください。
@@ -127,19 +131,19 @@ elasticsearch.noarch                 5.6.16-1                        @elasticsea
 `systemctl` コマンドを使って、Elasticsearch を起動します。
 
 ```text
-$ sudo systemctl start elasticsearch
+sudo systemctl start elasticsearch
 ```
 
 elsticsearch の自動起動設定を有効化します。
 
 ```text
-$ sudo systemctl enable elasticsearch
+sudo systemctl enable elasticsearch
 ```
 
 正常に起動しているか確認します。
 
 ```text
-$ sudo systemctl status elasticsearch
+sudo systemctl status elasticsearch
 ```
 
 ### GROWI に必要な Elasticsearch プラグインのインストール
@@ -186,7 +190,7 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc
 これで、yum 経由で MongoDB がインストールできるようになったため、インストールを行います。
 
 ```text
-$ sudo yum install -y mongodb-org
+sudo yum install -y mongodb-org
 ```
 
 インストールが完了したら、 パッケージのバージョンを確認します。
@@ -203,19 +207,19 @@ mongodb-org-tools.x86_64             3.6.11-1.el7               @mongodb-org-3.6
 `systemctl` コマンドを使って、MongoDB を起動します。
 
 ```text
-$ sudo systemctl start mongod
+sudo systemctl start mongod
 ```
 
 MongoDB の自動起動設定を有効化します。
 
 ```text
-$ sudo systemctl enable mongod
+sudo systemctl enable mongod
 ```
 
 正常に起動しているか確認します。
 
 ```text
-$ sudo systemctl status mongod
+sudo systemctl status mongod
 ```
 
 ## GROWI
@@ -250,8 +254,8 @@ $ sudo git checkout -b v3.4.2 refs/tags/v3.4.2
 ソースコードを clone した後に、`yarn` コマンドを利用して、 GROWI に必要なパッケージをインストールします。
 
 ```text
-$ cd /opt/growi
-$ sudo yarn
+cd /opt/growi
+sudo yarn
 ```
 
 ### 起動確認
@@ -289,7 +293,7 @@ npm start
 #### インストール
 
 ```text
-$ sudo yum install httpd
+sudo yum install httpd
 ```
 
 #### リバースプロキシの設定例
@@ -328,7 +332,7 @@ $ sudo yum install httpd
 #### 自動起動の設定
 
 ```text
-$ sudo systemctl enable httpd
+sudo systemctl enable httpd
 ```
 
 ### Nginx のインストールと設定
@@ -348,7 +352,7 @@ enabled=1
 これで、yum 経由で nginx がインストールできるようになったため、インストールを行います。
 
 ```text
-$ sudo yum install -y nginx
+sudo yum install -y nginx
 ```
 
 #### リバースプロキシの設定例
@@ -395,5 +399,5 @@ server {
 #### 自動起動の設定
 
 ```text
-$ sudo systemctl enable nginx
+sudo systemctl enable nginx
 ```

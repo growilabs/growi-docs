@@ -1,5 +1,9 @@
 # CentOS
 
+:::warning
+This article has been in the public domain for some time.
+:::
+
 [[toc]]
 
 ## Overview
@@ -27,27 +31,27 @@ Download the Node.js installation script from [https://rpm.nodesource.com/](http
 <!-- textlint-enable weseek/no-dead-link -->
 
 ```text
-$ cd ~
-$ curl -sL https://rpm.nodesource.com/setup_14.x -o nodesource_setup.sh
+cd ~
+curl -sL https://rpm.nodesource.com/setup_14.x -o nodesource_setup.sh
 ```
 
 Run the retrieved script.
 
 ```text
-$ sudo bash nodesource_setup.sh
+sudo bash nodesource_setup.sh
 ```
 
 Now that node.js can be retrieved via `yum`, use the `yum` command to install.
 
 ```text
-$ sudo yum install -y nodejs
+sudo yum install -y nodejs
 ```
 
 Since GROWI uses yarn for package installation, install the `yarn` command.
 
 ```text
-$ curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
-$ sudo yum install -y yarn
+curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+sudo yum install -y yarn
 ```
 
 Once installation for Node.js, npm, yarn is completed, check the installed versions.
@@ -74,13 +78,13 @@ This document is outdated. GROWI currently supports the most recent version of E
 First, install JDK8 to make Elasticsearch runnable.
 
 ```text
-$ sudo yum install java-1.8.0-openjdk
+sudo yum install java-1.8.0-openjdk
 ```
 
 To install the package, import the Elasticsearch repository's GPG key.
 
 ```text
-$ sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 ```
 
 Add the Elasticsearch repository. Insert the following into `/etc/yum.repos.d/elasticsearch.repo`.
@@ -99,7 +103,7 @@ type=rpm-md
 Now Elasticsearch can be installed via yum. Install.
 
 ```text
-$ sudo yum install -y elasticsearch
+sudo yum install -y elasticsearch
 ```
 
 Once the installation is complete, specify the memory allocation pool size for Elasticsearch. If the usage is for individual use, 256MB should be enough for memory allocation. Make changes based on the scale of the team and the amount of pages.
@@ -125,19 +129,19 @@ elasticsearch.noarch                 5.6.16-1                        @elasticsea
 Using the `systemctl` command, launch Elasticsearch.
 
 ```text
-$ sudo systemctl start elasticsearch
+sudo systemctl start elasticsearch
 ```
 
 Enable the autoboot setting of elasticsearch
 
 ```text
-$ sudo systemctl enable elasticsearch
+sudo systemctl enable elasticsearch
 ```
 
 Check the status to verify it is running properly.
 
 ```text
-$ sudo systemctl status elasticsearch
+sudo systemctl status elasticsearch
 ```
 
 ### Installation for Elasticsearch plugins needed for GROWI
@@ -188,7 +192,7 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc
 Now MongoDB can be installed via yum. Install.
 
 ```text
-$ sudo yum install -y mongodb-org
+sudo yum install -y mongodb-org
 ```
 
 Once installation is complete, check the package version.
@@ -205,19 +209,19 @@ mongodb-org-tools.x86_64             3.6.11-1.el7               @mongodb-org-3.6
 Using the `systemctl` command, launch MongoDB.
 
 ```text
-$ sudo systemctl start mongod
+sudo systemctl start mongod
 ```
 
 Enable the autoboot setting of MongoDB.
 
 ```text
-$ sudo systemctl enable mongod
+sudo systemctl enable mongod
 ```
 
 Check the status to verify it is running properly.
 
 ```text
-$ sudo systemctl status mongod
+sudo systemctl status mongod
 ```
 
 ## GROWI
@@ -252,8 +256,8 @@ $ sudo git checkout -b v4.3.1 refs/tags/v4.3.1
 After cloning the source code, use the `npx lerna` command to install packages needed for GROWI.
 
 ```text
-$ cd /opt/growi
-$ sudo npx lerna bootstrap
+cd /opt/growi
+sudo npx lerna bootstrap
 ```
 
 ### Check Startup
@@ -291,7 +295,7 @@ Shown below is an example of setting up a reverse proxy to an activated GROWI.
 #### Installation
 
 ```text
-$ sudo yum install httpd
+sudo yum install httpd
 ```
 
 #### Reverse Proxy Settings Example
@@ -330,7 +334,7 @@ Shown below is a part related to reverse proxy
 #### Autoboot Settings
 
 ```text
-$ sudo systemctl enable httpd
+sudo systemctl enable httpd
 ```
 
 ### Nginx Installation and Settings
@@ -350,7 +354,7 @@ enabled=1
 Now nginx can be installed via yum. Install.
 
 ```text
-$ sudo yum install -y nginx
+sudo yum install -y nginx
 ```
 
 #### Reverse Proxy Settings Example
@@ -397,5 +401,5 @@ server {
 #### Autoboot Settings
 
 ```text
-$ sudo systemctl enable nginx
+sudo systemctl enable nginx
 ```

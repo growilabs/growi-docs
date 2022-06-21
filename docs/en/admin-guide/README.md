@@ -11,8 +11,16 @@ This site consists of the following sections.
 
 ### [Installation](/en/admin-guide/getting-started/docker-compose.html)
 
-Introducing to install GROWI.
-See [docker-compose](/en/admin-guide/getting-started/docker-compose.html).
+Here are the installation instructions for GROWI.
+You can install on docker-compose, Ubuntu Server, and CentOS.
+
+- [docker-compose](https://docs.growi.org/en/admin-guide/getting-started/docker-compose.html)
+- [Ubuntu Server](https://docs.growi.org/en/admin-guide/getting-started/ubuntu-server.html)
+- [CentOS](https://docs.growi.org/en/admin-guide/getting-started/centos.html)
+
+::: tip
+We recommend installing with docker-compose to use the latest version.
+:::
 
 ### [Upgrade](/en/admin-guide/upgrading/42x.html)
 
