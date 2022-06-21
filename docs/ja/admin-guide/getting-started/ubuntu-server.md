@@ -33,26 +33,26 @@ Optional となっているものは必須ではありません。ただし、�
 <!-- textlint-enable weseek/no-dead-link -->
 
 ```text
-cd ~
-curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+$ cd ~
+$ curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
 ```
 
 取得したスクリプトを実行します。
 
 ```text
-sudo bash nodesource_setup.sh
+$ sudo bash nodesource_setup.sh
 ```
 
 これにより `apt-get` 経由で node.js が取得できるようになったので、 `apt-get` コマンドでインストールを行います。
 
 ```text
-sudo apt-get install nodejs
+$ sudo apt-get install nodejs
 ```
 
 GROWI では yarn を用いたパッケージインストールを利用するため、ここで `yarn` コマンドをインストールしておきます。
 
 ```text
-sudo npm install -g yarn
+$ sudo npm install -g yarn
 ```
 
 Node.js, npm, yarn のインストールが完了したら、インストールしたバージョンを確認しましょう。
@@ -79,31 +79,31 @@ $ yarn -v
 まず、Elasticsearch を実行できるように JDK8 をインストールします。
 
 ```text
-sudo apt-get install openjdk-8-jdk
+$ sudo apt-get install openjdk-8-jdk
 ```
 
 パッケージをインストールするために、Elasticsearch レポジトリの GPG キーを追加します。
 
 ```text
-wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+$ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 ```
 
 HTTPS 経由で apt コマンドによるインストールを行うために、 `apt-transport-https` パッケージをインストールします。
 
 ```text
-sudo apt-get install apt-transport-https
+$ sudo apt-get install apt-transport-https
 ```
 
 Elasticsearch のレポジトリを追加します。
 
 ```text
-echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
+$ echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
 ```
 
 これで、apt-get 経由で Elasticsearch がインストールできるようになったため、インストールを行います。
 
 ```text
-sudo apt-get update && sudo apt-get install elasticsearch
+$ sudo apt-get update && sudo apt-get install elasticsearch
 ```
 
 インストールが完了したら、Elasticsearch に割り当てるメモリを調整します。メモリの割り当ては個人ユースであれば 256MB で十分です。チーム規模、ページの量に応じて変更してください。
@@ -129,19 +129,19 @@ ii  elasticsearch                    5.6.10                                     
 `systemctl` コマンドを使って、Elasticsearch を起動します。
 
 ```text
-sudo systemctl start elasticsearch
+$ sudo systemctl start elasticsearch
 ```
 
 elasticsearch の自動起動設定を有効化します。
 
 ```text
-sudo systemctl enable elasticsearch
+$ sudo systemctl enable elasticsearch
 ```
 
 正常に起動しているか確認します。
 
 ```text
-sudo systemctl status elasticsearch
+$ sudo systemctl status elasticsearch
 ```
 
 ### GROWI に必要な Elasticsearch プラグインのインストール
@@ -185,19 +185,19 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF50
 **Ubuntu 14.04**
 
 ```text
-echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+$ echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
 ```
 
 **Ubuntu 16.04**
 
 ```text
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
 ```
 
 レポジトリの追加まで完了したため、MongoDB のインストールを行います。
 
 ```text
-sudo apt-get update && sudo apt-get install mongodb-server
+$ sudo apt-get update && sudo apt-get install mongodb-server
 ```
 
 インストールが完了したら、 パッケージのバージョンを確認します。
@@ -213,19 +213,19 @@ ii  mongodb-org-tools                3.6.6                                      
 `systemctl` コマンドを使って、MongoDB を起動します。
 
 ```text
-sudo systemctl start mongod
+$ sudo systemctl start mongod
 ```
 
 MongoDB の自動起動設定を有効化します。
 
 ```text
-sudo systemctl enable mongod
+$ sudo systemctl enable mongod
 ```
 
 正常に起動しているか確認します。
 
 ```text
-sudo systemctl status mongod
+$ sudo systemctl status mongod
 ```
 
 ## GROWI
@@ -260,8 +260,8 @@ $ sudo git checkout -b v3.1.9 refs/tags/v3.1.9
 ソースコードを clone した後に、`yarn` コマンドを利用して、 GROWI に必要なパッケージをインストールします。
 
 ```text
-cd /opt/growi
-sudo yarn
+$ cd /opt/growi
+$ sudo yarn
 ```
 
 ### 起動確認
@@ -299,7 +299,7 @@ npm start
 #### インストール
 
 ```text
-sudo apt-get update && sudo apt-get -y install apache2
+$ sudo apt-get update && sudo apt-get -y install apache2
 ```
 
 #### 必要なモジュールの有効化
@@ -307,7 +307,7 @@ sudo apt-get update && sudo apt-get -y install apache2
 proxy, proxy\_http, proxy\_wstunnel module をインストールします。
 
 ```text
-sudo a2enmod proxy proxy_http proxy_wstunnel
+$ sudo a2enmod proxy proxy_http proxy_wstunnel
 ```
 
 #### リバースプロキシの設定例
@@ -346,7 +346,7 @@ sudo a2enmod proxy proxy_http proxy_wstunnel
 #### 自動起動の設定
 
 ```text
-sudo systemctl enable apache2
+$ sudo systemctl enable apache2
 ```
 
 ### Nginx のインストールと設定
@@ -354,7 +354,7 @@ sudo systemctl enable apache2
 #### インストール
 
 ```text
-sudo apt-get update && sudo apt-get -y install nginx
+$ sudo apt-get update && sudo apt-get -y install nginx
 ```
 
 #### リバースプロキシの設定例
@@ -400,5 +400,5 @@ server {
 #### 自動起動の設定
 
 ```text
-sudo systemctl enable nginx
+$ sudo systemctl enable nginx
 ```
