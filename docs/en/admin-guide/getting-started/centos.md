@@ -1,5 +1,9 @@
 # CentOS
 
+:::warning
+This article has been in the public domain for some time.
+:::
+
 [[toc]]
 
 ## Overview

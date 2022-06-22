@@ -11,9 +11,18 @@ GROWI Docs へようこそ。
 
 ### [インストール](/ja/admin-guide/getting-started/docker-compose.html)
 
-GROWI のインストール手順の紹介です。
+GROWIのインストールの手順をご紹介します。
 
-[docker-compose](/ja/admin-guide/getting-started/docker-compose.html) をご覧ください。
+docker-compose、Ubuntu Server、CentOSにインストール頂けます。
+
+- [docker-compose](https://docs.growi.org/ja/admin-guide/getting-started/docker-compose.html)
+- [Ubuntu Server](https://docs.growi.org/ja/admin-guide/getting-started/ubuntu-server.html)
+- [CentOS](https://docs.growi.org/ja/admin-guide/getting-started/centos.html)
+
+::: tip
+最新版をご利用いただくには、docker-composeでのインストールをおすすめしています。
+:::
+
 
 ### [アップグレード](/ja/admin-guide/upgrading/42x.html)
 
