@@ -272,7 +272,7 @@ module.exports = {
               children: [
                 '/en/dev/tips/env-vars.md',
                 '/en/dev/tips/logger.md',
-                '/en/dev/tips/debug-with-vscode.md',
+                '/en/dev/tips/debugging.md',
               ],
             },
             {
@@ -510,7 +510,7 @@ module.exports = {
               children: [
                 '/ja/dev/tips/env-vars.md',
                 '/ja/dev/tips/logger.md',
-                '/ja/dev/tips/debug-with-vscode.md',
+                '/ja/dev/tips/debugging.md',
               ],
             },
             {
