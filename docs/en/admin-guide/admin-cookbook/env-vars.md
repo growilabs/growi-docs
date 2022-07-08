@@ -30,6 +30,11 @@ pageClass: admin-cookbook-env-vars
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Maximum number of connections for all clients that receive push messages. | 5000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Maximum number of connections for guest clients that receive push messages. | 2000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_ADMIN` | Maximum number of connections for admin users in admin pages.<br>(This is isolated from `S2CMSG_PUBSUB_CONNECTIONS_LIMIT`)  | 100 |
+| `AUDIT_LOG_ENABLED` | If `true`, the Audit Log feature is enabled | `false` |
+| `ACTIVITY_EXPIRATION_SECONDS` | Number of seconds to keep the audit log. Audit logs are automatically deleted after a set number of seconds have elapsed since they were created. | `2592000` |
+| `AUDIT_LOG_ACTION_GROUP_SIZE` |  Size of action groups to be collected in the audit log (can be `SMALL`, `MEDIUM`, or `LARGE`) | `SMALL` |
+| `AUDIT_LOG_ADDITIONAL_ACTIONS` | Add individual actions not included in the action group specified by `AUDIT_LOG_ACTION_GROUP_SIZE` | |
+| `AUDIT_LOG_EXCLUDE_ACTIONS` | Exclude individual actions contained in the action group specified by `AUDIT_LOG_ACTION_GROUP_SIZE` | |
 | **Option for file uploading** | | |
 | `FILE_UPLOAD` | Attached files storage. | `aws` |
 | | : `aws` Amazon Web Service S3 (needs AWS settings on Admin page) | |

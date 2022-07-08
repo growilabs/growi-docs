@@ -234,6 +234,7 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/import.md',
                 '/en/admin-guide/management-cookbook/export.md',
                 '/en/admin-guide/management-cookbook/setup-search-system.md',
+                '/en/admin-guide/management-cookbook/audit-log.md',
               ]
             },
           ],
