@@ -82,7 +82,7 @@ If you set a breakpoint but still get an Unbound breakpoint, check the following
 
 - Verify that it is imported/required from Express code.
 - Among the files under `packages/app/src/pages`, the file with the extension `*.page.ts` is [Pages Component of Next.js](https://nextjs.org/docs/basic-features/pages).
-Since these files have not yet been compiled immediately after the development server is started, breakpoints cannot be set. Please compile them by accessing the relevant page from your browser.
+Since these files have not yet been compiled immediately after the development server is started, breakpoints cannot be set. Please compile a page component by accessing the relevant page from your browser.
 - If you are experiencing instability with your breakpoints being enabled or disabled (unbound breakpoints), consider setting the `--nolazy` option to your Node.js process.    
 Reference: [Breakpoint validation](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_breakpoint-validation)
 :::
