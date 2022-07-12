@@ -16,7 +16,7 @@ You can debug client-side code by using DevTools in your browser.
 
 1. Start development server `yarn dev`.
 1. [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
-    - You can debug client-side code by using [Sources panel](https://developer.chrome.com/docs/devtools/javascript/sources/).
+    - You can debug client-side code by using the [Sources panel](https://developer.chrome.com/docs/devtools/javascript/sources/).
     - If you open a TypeScript file by `Ctrl + P`, you should choose files under `webpack://_N_E/`.
 
 ![Chrome source panel](/assets/images/debugging-chrome-source-panel.png)
@@ -26,7 +26,7 @@ You can debug client-side code by using DevTools in your browser.
 1. Start development server `yarn dev`.
 1. [Firefox DevTools](https://developer.mozilla.org/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)
     - You can debug client-side code by using [JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/).
-    - If you open a TypeScript file by `Ctrl + P`, a original source file is a file of the name with a random suffix such as `?xxxx`.
+    - If you open a TypeScript file by `Ctrl + P`, an original source file is a file of the name with a random suffix such as `?xxxx`.
         - Or you can select a file under the `Webpack` folder from the source file tree in the left column.
 
 ![Firefox debugger panel](/assets/images/debugging-firefox-debugger-panel.png)
@@ -75,7 +75,7 @@ The VS Code debugger can be attached to the development server in two ways.
 
         ![VSCode Server debugger](/assets/images/debugging-vscode-server-debugger.png)
 
-If the debugger attached successfully, the status bar of VS Code turns orange color. In this state, you can debug by setting breakpoints in any server-side code.
+If the debugger is attached successfully, the status bar of VS Code turns an orange color. In this state, you can debug by setting breakpoints in any server-side code.
 
 ::: tip Handling Unbound Breakpoints
 If you set a breakpoint but still get an Unbound breakpoint, check the following.
