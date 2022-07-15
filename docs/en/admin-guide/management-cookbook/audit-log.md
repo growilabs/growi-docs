@@ -4,6 +4,14 @@ Actions taken by users, such as login, logout, and create page, can be viewed an
 
 ![audit-log](/assets/images/audit-log.png)
 
+## Information displayed in table
+
+- Username
+- Time the action was performed
+- Action
+- IP Address
+- URL
+
 ## Enabling the Audit Log
 
 To enable the Audit Log, set the environment variable `AUDIT_LOG_ENABLED` to `true` From the moment you set it to `true`, log collection, display and search will be enabled.
