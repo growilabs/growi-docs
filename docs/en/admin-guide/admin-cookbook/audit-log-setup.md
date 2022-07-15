@@ -10,11 +10,11 @@ To enable the Audit Log, set the environment variable `AUDIT_LOG_ENABLED` to `tr
 
 The logs collected by GROWI are divided into three groups: `SMALL`, `MEDIUM`, and `LARGE`. The default is `SMALL`, which can be changed from the environment variable `AUDIT_LOG_ACTION_GROUP_SIZE`.
 
-| value | action to collect |
-| ------------------- | ---------- |
-| `SMALL` | login, logout, create page, delete page |
-| `MEDIUM` | `SMALL` + all actions performed by regular users - viewing pages |
-| `LARGE` | `MEDIUM` + all operations performed by admin users - view pages |
+| | Login, Logout, Create Page, Delete Page | All operations performed by ordinary users - page view | All operations performed by the admin user |
+| ------------------- | ---------- | ---------- | ---------- |
+| `SMALL` | ⭕️ | ❌ | ❌ |
+| `MEDIUM` | ⭕️ | ⭕️ | ❌ |
+| `LARGE` | ⭕️ | ⭕️ | ⭕️ |
 
 ## Add/Exclude logs to be collected
 
