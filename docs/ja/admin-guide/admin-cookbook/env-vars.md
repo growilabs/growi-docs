@@ -31,8 +31,8 @@ pageClass: admin-cookbook-env-vars
 | `AUDIT_LOG_ENABLED` | `true` の場合、監査ログ機能が有効になります。| `false` |
 | `ACTIVITY_EXPIRATION_SECONDS` | 監査ログの保持期間の秒数。監査ログが作成されてから設定された秒数経過すると自動で削除されます。 | `2592000` |
 | `AUDIT_LOG_ACTION_GROUP_SIZE` | 監査ログで収集するアクショングループのサイズ（`SMALL`, `MEDIUM`, `LARGE` が指定可能） | `SMALL` |
-| `AUDIT_LOG_ADDITIONAL_ACTIONS` | `AUDIT_LOG_ACTION_GROUP_SIZE` で指定されたアクショングループに含まれないアクションを個別に追加 | |
-| `AUDIT_LOG_EXCLUDE_ACTIONS` | `AUDIT_LOG_ACTION_GROUP_SIZE` で指定されたアクショングループに含まれているアクションを個別に除外 | |
+| `AUDIT_LOG_ADDITIONAL_ACTIONS` | `AUDIT_LOG_ACTION_GROUP_SIZE` で指定されたアクショングループに含まれないアクションを個別に追加します。CSV形式（カンマ区切りの文字列）で指定します。 | |
+| `AUDIT_LOG_EXCLUDE_ACTIONS` | `AUDIT_LOG_ACTION_GROUP_SIZE` で指定されたアクショングループに含まれているアクションを個別に除外します。CSV形式（カンマ区切りの文字列）で指定します。| |
 | **ファイルアップロードオプション** | | |
 | `FILE_UPLOAD` | ファイルアップロード先のストレージ | `aws` |
 | | : `aws` Amazon Web Service S3 を使用します。(管理ページにて AWS 設定を行う必要があります。) | |

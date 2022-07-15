@@ -33,8 +33,8 @@ pageClass: admin-cookbook-env-vars
 | `AUDIT_LOG_ENABLED` | If `true`, the Audit Log feature is enabled | `false` |
 | `ACTIVITY_EXPIRATION_SECONDS` | Number of seconds to keep the audit log. Audit logs are automatically deleted after a set number of seconds have elapsed since they were created. | `2592000` |
 | `AUDIT_LOG_ACTION_GROUP_SIZE` |  Size of action groups to be collected in the audit log (can be `SMALL`, `MEDIUM`, or `LARGE`) | `SMALL` |
-| `AUDIT_LOG_ADDITIONAL_ACTIONS` | Add individual actions not included in the action group specified by `AUDIT_LOG_ACTION_GROUP_SIZE` | |
-| `AUDIT_LOG_EXCLUDE_ACTIONS` | Exclude individual actions contained in the action group specified by `AUDIT_LOG_ACTION_GROUP_SIZE` | |
+| `AUDIT_LOG_ADDITIONAL_ACTIONS` | Add individual actions not included in the action group specified by `AUDIT_LOG_ACTION_GROUP_SIZE`, in CSV format (comma-separated string). | |
+| `AUDIT_LOG_EXCLUDE_ACTIONS` | Exclude individual actions in the action group specified by `AUDIT_LOG_ACTION_GROUP_SIZE`, in CSV format (comma-separated string). | |
 | **Option for file uploading** | | |
 | `FILE_UPLOAD` | Attached files storage. | `aws` |
 | | : `aws` Amazon Web Service S3 (needs AWS settings on Admin page) | |
