@@ -37,7 +37,7 @@ You can search for a specific date or range of dates.
 
 You can narrow down the search to a specific action.
 
-<!-- TODO image Insert image after i18n conversion -->
+![audit-log-search2](/assets/images/audit-log-search3.png)
 
 ## Type of logs
 

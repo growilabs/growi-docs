@@ -37,7 +37,7 @@
 
 特定のアクションを絞り込んで検索できます。
 
-<!-- TODO 画像 i18n 化が終わったら画像を挿入 -->
+![audit-log-search2](/assets/images/audit-log-search3.png)
 
 ## ログの種類
 
