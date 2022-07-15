@@ -1,6 +1,6 @@
 # 監査ログ
 
-ログイン、ログアウト、ページの作成、ページの削除などのアクションをいつ、だれが行ったかのを一覧表示できる機能です。
+ログイン、ログアウト、ページの作成など、ユーザーが行ったアクションを管理画面から 表示 / 検索 できる機能です。
 
 ![audit-log](/assets/images/audit-log.png)
 
@@ -10,12 +10,11 @@
 
 ## 検索
 
-ユーザーネーム、日付、アクション名 で検索できます。
+ユーザー名、日付、アクション名で監査ログを検索することができます。
 
-### ユーザーネーム
+### ユーザ名
 
-検索欄へ入力された文字に部分一致したユーザーネームを検索できます。
-検索結果は3種類に分類されます。
+ユーザ名で検索できます。検索結果は3種類に分類されます。
 
 - Active User
   - アクティブなユーザー
@@ -60,7 +59,4 @@ GROWI が収集するログは `SMALL、MEDIUM、LARGE` の3種類のグルー�
 
 ## 対応しているアクション一覧
 
-- [全てのアクション名](https://github.com/weseek/growi/blob/master/packages/app/src/interfaces/activity.ts#L161)
-- [スモールアクショングループ](https://github.com/weseek/growi/blob/master/packages/app/src/interfaces/activity.ts#L312)
-- [ミディアムアクショングループ](https://github.com/weseek/growi/blob/master/packages/app/src/interfaces/activity.ts#L328)
-- [ラージアクショングループ](https://github.com/weseek/growi/blob/master/packages/app/src/interfaces/activity.ts#L370)
+- [収集できるアクション名](https://github.com/weseek/growi/blob/master/packages/app/src/interfaces/activity.ts#L9)

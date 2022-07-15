@@ -1,6 +1,6 @@
 # Audit Log
 
-This function allows you to list who performed actions such as login, logout, page creation, and page deletion, and when.
+Actions taken by users, such as login, logout, and create page, can be viewed and searched from the administration screen.
 
 ![audit-log](/assets/images/audit-log.png)
 
@@ -10,12 +10,11 @@ To enable the Audit Log, set the environment variable `AUDIT_LOG_ENABLED` to `tr
 
 ## Search
 
-You can search by username, date, or action name.
+You can search the audit log by user name, date, or action name.
 
 ### Username
 
-You can search for usernames that partially match the characters entered in the search field.
-Search results are categorized into 3 types.
+You can search by username. Search results are categorized into three types.
 
 - Active User
   - Active User
@@ -33,7 +32,7 @@ You can search for a specific date or range of dates.
 ![audit-log-search2](/assets/images/audit-log-search2.png)
 
 
-### action-name
+### Action
 
 You can narrow down the search to a specific action.
 
@@ -60,7 +59,4 @@ You can also add/exclude actions that are included/excluded in the group set by 
 
 ## List of supported actions
 
-- [name of all actions](https://github.com/weseek/growi/blob/master/packages/app/src/interfaces/activity.ts#L161)
-- [small action group](https://github.com/weseek/growi/blob/master/packages/app/src/interfaces/activity.ts#L312)
-- [medium action group](https://github.com/weseek/growi/blob/master/packages/app/src/interfaces/activity.ts#L328)
-- [Large Action Group](https://github.com/weseek/growi/blob/master/packages/app/src/interfaces/activity.ts#L370)
+- [Collectable Action Name](https://github.com/weseek/growi/blob/master/packages/app/src/interfaces/activity.ts#L161)
