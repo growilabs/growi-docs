@@ -28,6 +28,11 @@ pageClass: admin-cookbook-env-vars
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Push 通知を行う全クライアントの同時接続数上限 | 5000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Push 通知を行うことのできるゲストユーザーの同時接続数上限 | 2000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_ADMIN` | 管理画面で Push 通知を行うことのできる管理者ユーザーの同時接続数上限<br>(`S2CMSG_PUBSUB_CONNECTIONS_LIMIT`からは独立した値です) | 100 |
+| `AUDIT_LOG_ENABLED` | `true` の場合、監査ログ機能が有効になります。| `false` |
+| `ACTIVITY_EXPIRATION_SECONDS` | 監査ログの保持期間の秒数。監査ログが作成されてから設定された秒数経過すると自動で削除されます。 | `2592000` |
+| `AUDIT_LOG_ACTION_GROUP_SIZE` | 監査ログで収集するアクショングループのサイズ（`SMALL`, `MEDIUM`, `LARGE` が指定可能） | `SMALL` |
+| `AUDIT_LOG_ADDITIONAL_ACTIONS` | `AUDIT_LOG_ACTION_GROUP_SIZE` で指定されたアクショングループに含まれないアクションを個別に追加します。CSV形式（カンマ区切りの文字列）で指定します。 | |
+| `AUDIT_LOG_EXCLUDE_ACTIONS` | `AUDIT_LOG_ACTION_GROUP_SIZE` で指定されたアクショングループに含まれているアクションを個別に除外します。CSV形式（カンマ区切りの文字列）で指定します。| |
 | **ファイルアップロードオプション** | | |
 | `FILE_UPLOAD` | ファイルアップロード先のストレージ | `aws` |
 | | : `aws` Amazon Web Service S3 を使用します。(管理ページにて AWS 設定を行う必要があります。) | |
@@ -86,5 +91,3 @@ pageClass: admin-cookbook-env-vars
 | `OAUTH_GITHUB_CLIENT_SECRET` | OAuth ログインで使用する GitHub API のクライアント シークレット | |
 | `OAUTH_TWITTER_CONSUMER_KEY` | OAuth ログインで使用する Twitter カスタマーキー (API キー) | |
 | `OAUTH_TWITTER_CONSUMER_SECRET` | OAuth ログインで使用する Twitter カスタマーシークレット(API シークレット) | |
-
-

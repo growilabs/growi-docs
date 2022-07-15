@@ -205,6 +205,8 @@ module.exports = {
                 '/en/admin-guide/admin-cookbook/upgrade-mongodb.md',
                 '/en/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/en/admin-guide/admin-cookbook/integrate-with-hackmd.md',
+                '/en/admin-guide/admin-cookbook/audit-log-setup.md',
+                '/en/admin-guide/admin-cookbook/trust-proxy.md',
               ]
             },
             {
@@ -234,6 +236,7 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/import.md',
                 '/en/admin-guide/management-cookbook/export.md',
                 '/en/admin-guide/management-cookbook/setup-search-system.md',
+                '/en/admin-guide/management-cookbook/audit-log.md',
               ]
             },
           ],
@@ -444,6 +447,8 @@ module.exports = {
                 '/ja/admin-guide/admin-cookbook/upgrade-mongodb.md',
                 '/ja/admin-guide/admin-cookbook/mongodb-backup-regular.md',
                 '/ja/admin-guide/admin-cookbook/integrate-with-hackmd.md',
+                '/ja/admin-guide/admin-cookbook/audit-log-setup.md',
+                '/ja/admin-guide/admin-cookbook/trust-proxy.md',
               ]
             },
             {
@@ -472,6 +477,7 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/import.md',
                 '/ja/admin-guide/management-cookbook/export.md',
                 '/ja/admin-guide/management-cookbook/setup-search-system.md',
+                '/ja/admin-guide/management-cookbook/audit-log.md',
               ]
             },
           ],
