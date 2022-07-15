@@ -13,7 +13,7 @@ Actions taken by users, such as login, logout, and create page, can be viewed an
 - Username
 - Time the action was performed
 - Action
-- IP Address
+- [IP Address](/en/admin-guide/admin-cookbook/trust-proxy.html)
 - URL
 
 ## Search

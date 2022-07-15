@@ -13,7 +13,7 @@
 - ユーザー名
 - アクションが行われた時間
 - アクション
-- IP アドレス
+- [IP アドレス](/ja/admin-guide/admin-cookbook/trust-proxy.html)
 - URL
 
 ## 検索
