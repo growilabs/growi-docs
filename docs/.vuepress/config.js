@@ -166,6 +166,7 @@ module.exports = {
               title: 'Upgrading',
               collapsable: false,
               children: [
+                '/en/admin-guide/upgrading/51x.md',
                 '/en/admin-guide/upgrading/50x.md',
                 '/en/admin-guide/upgrading/45x.md',
                 '/en/admin-guide/upgrading/44x.md',
@@ -207,6 +208,7 @@ module.exports = {
                 '/en/admin-guide/admin-cookbook/integrate-with-hackmd.md',
                 '/en/admin-guide/admin-cookbook/audit-log-setup.md',
                 '/en/admin-guide/admin-cookbook/trust-proxy.md',
+                '/en/admin-guide/admin-cookbook/custom-rate-limit.md'
               ]
             },
             {
@@ -408,6 +410,7 @@ module.exports = {
               title: 'アップグレード',
               collapsable: false,
               children: [
+                '/ja/admin-guide/upgrading/51x.md',
                 '/ja/admin-guide/upgrading/50x.md',
                 '/ja/admin-guide/upgrading/45x.md',
                 '/ja/admin-guide/upgrading/44x.md',
@@ -449,6 +452,7 @@ module.exports = {
                 '/ja/admin-guide/admin-cookbook/integrate-with-hackmd.md',
                 '/ja/admin-guide/admin-cookbook/audit-log-setup.md',
                 '/ja/admin-guide/admin-cookbook/trust-proxy.md',
+                '/ja/admin-guide/admin-cookbook/custom-rate-limit.md'
               ]
             },
             {
