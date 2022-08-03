@@ -4,10 +4,9 @@ This section introduces the rate limit of the API in GROWI.
 
 ## Summary
 
-Limits can be placed on the number of requests within a certain time period for endpoints and request methods.
-If the `/GET` method in `/login` has a limit of 10 requests in 60 seconds,
-it will return a `419 too many requests` error if more than 11 requests are sent within 60 seconds.
-After 60 seconds has elapsed, the request can be sent again.
+The maximum number of requests per rate limit window (second) can be set per endpoint and per user (IP for guest users).
+The rate limit window is 60 seconds and has a fixed value.
+If more than the maximum number of requests are received by the same user within the rate-limit window, an error `419 too many requests` is returned.
 
 
 ### For logged-in users
@@ -17,47 +16,56 @@ Requests from the same IP address can also be distinguished for each user.
 
 ### For non-logged-in users
 
-In the case of an un-logged-in user, the key to limit is a hash of a string containing the **endpoint**, **request method**, and **IP address**.
-The maximum number of requests is multiplied by the expected number of users per IP address, which defaults to 5 users/ip.
-The expected number of users per IP address can be customized for each endpoint and method using environment variables.
+For un-logged-in users, the key to restrict is a hash value of a string containing the **endpoint**, **request method**, and **IP address**.
+At this time, the maximum number of requests is multiplied by the expected number of people per IP address.
+The default number of people assumed per IP address is 5 people/ip.
+The number of people assumed per IP address can be customized for each endpoint and method using environment variables.
 
 ## Default Settings
 
 
 Endpoints are restricted by default in the table below.
 
-| duration(sec) | max requests（times） | Assumed number of people per IP address |
+| window(sec) | max requests(times) | Assumed number of people per IP address |
 | -------- | ---------------------- | -------------------------- |
 | 60       | 500                    | 5                          |
 
 
 ### Endpoints with customized initial values
 
-Other endpoints that require restrictions have customized default values set as restrictions by default, as shown in the table below.
+Other endpoints that require restrictions have default customized initial values set as restrictions by the following configuration file.
 
-| endpoint            | method | duration(sec) | max requests（times） | Assumed number of people per IP address |
-| ------------------------- | -------- | -------- | ---------------------- | -------------------------- |
-| /_api/v3/healthcheck      | POST     | 60       | 60                     | 1                          |
-| /installer                | POST     | 60       | 5                      | 1                          |
-| /login                    | POST     | 60       | 5                      | 100                        |
-| /login/activateInvited    | POST     | 60       | 20                     | 5                          |
-| /register                 | POST     | 60       | 5                      | 20                         |
-| /user-activation/register | POST     | 60       | 5                      | 20                         |
-| /_api/login/testLdap      | POST     | 60       | 20                     | 1                          |
-| /_api/check_username      | GET      | 60       | 50                     | 5                          |
-| /forgot-password/.*       | ALL      | 60       | 5                      | 5                          |
-| /user-activation/.*       | GET      | 60       | 5                      | 5                          |
-| /attachment/[0-9a-z]{24}  | GET      | 60       | 100                    | 5                          |
-| /download/[0-9a-z]{24}    | GET      | 60       | 100                    | 5                          |
-| /share/[0-9a-z]{24}       | GET      | 60       | 100                    | 5                          |
-
-
+<https://github.com/weseek/growi/blob/master/packages/app/config/rate-limiter.ts>
 
 ## Limit Customization
 
 To override the default restrictions and customize the system, use environment variables to set them.
 
 ### Setting Example
+
+The following four items are set by environment variables.
+
+- Endpoint (required)
+- request methods
+- Maximum number of requests per rate-limit window (required)
+- Assumed number of people per IP address
+
+You can set environment variables as shown below.
+
+``` bash
+API_RATE_LIMIT_[KEY]_ENDPOINT=/_api/v3/foo // Endpoint
+API_RATE_LIMIT_[KEY]_METHODS=GET,POST // request methods
+API_RATE_LIMIT_[KEY]_MAX_REQUESTS=10 // Maximum number of requests per rate-limit window
+API_RATE_LIMIT_[KEY]_USERS_PER_IP=2 // Assumed number of people per IP address
+```
+
+Settings other than the request method are optional.
+If not set, restrictions are placed on all methods for that endpoint.
+The number of people assumed per IP address is set to the default value of 5 if not set.
+
+The `[key]` part is an arbitrary string.
+However, if a limit is set for the same endpoint, the setting for the key that comes later will take precedence
+when the `[key]` part is sorted by the in-place algorithm (JavaScript's sort() method).
 
 ``` bash
 API_RATE_LIMIT_010_FOO_ENDPOINT=/_api/v3/foo
@@ -66,37 +74,26 @@ API_RATE_LIMIT_010_FOO_MAX_REQUESTS=10
 API_RATE_LIMIT_010_FOO_USERS_PER_IP=2
 ```
 
-#### Setting items
+When environment variables are set in this manner, the following restrictions apply
 
-The following four items are set by environment variables.
+- For logged-in users
 
-- Endpoint (required)
-- Request Method
-- Maximum number of requests per 60 seconds (required)
-- Number of people expected per IP address
+If you send more than 11 `GET` or `POST` requests in 60 seconds to the endpoint `/_api/v3/foo`,
+an error will occur and you will not be able to send requests after the 11th request.
+After 60 seconds have elapsed, the request can be sent again.
 
-Settings other than the request methods are optional. If not set, restrictions are placed on all methods for that endpoint.
-The number of people assumed per IP address is set to the default value of 5 if not set.
+- For non-logged-in users
 
-#### About environment variable key
-
-``` bash
-API_RATE_LIMIT_[KEY]_ENDPOINT=/_api/v3/foo
-API_RATE_LIMIT_[KEY]_METHODS=GET,POST
-API_RATE_LIMIT_[KEY]_MAX_REQUESTS=10
-API_RATE_LIMIT_[KEY]_USERS_PER_IP=2
-```
-
-Set the environment variable key to a string like the one above.The `[key]` part is an arbitrary string.
-However, if a limit is set for the same endpoint, the setting for the key that comes later will take precedence
-when the `[key]` part is sorted by the in-place algorithm (JavaScript's sort() method).
+If you send more than 21 `GET` or `POST` requests from the same IP address to the endpoint `/_api/v3/foo`,
+an error will occur and you will not be able to send requests after the 21st request.
+After 60 seconds have elapsed, the request can be sent again.
 
 
 ### Customize environment variables using regular expressions
 
 ``` bash
 GET '/62df87c8539c3090b8cc7621' // get page
-GET '/share/62e2256f19e932f82eebe830' // ge share page
+GET '/share/62e2256f19e932f82eebe830' // get share page
 ```
 
 Variable endpoint restrictions, such as those above, can be customized using regular expressions and environment variables.
@@ -109,4 +106,3 @@ API_RATE_LIMIT_010_SHARE_METHODS=GET
 API_RATE_LIMIT_010_SHARE_MAX_REQUESTS=20
 API_RATE_LIMIT_010_SHARE_USERS_PER_IP=2
 ```
-
