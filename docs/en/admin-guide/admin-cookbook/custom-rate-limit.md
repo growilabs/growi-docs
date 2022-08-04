@@ -4,20 +4,20 @@ This section introduces the rate limit of the API in GROWI.
 
 ## Summary
 
-The maximum number of requests per rate limit window (second) can be set per endpoint and per user (IP for guest users).
+The maximum number of requests that are allowed per rate limit window (second) can be set per endpoint and per user (IP for guest users).
 The rate limit window is 60 seconds and has a fixed value.
-If more than the maximum number of requests are received by the same user within the rate-limit window, an error `419 too many requests` is returned.
+If more than the maximum number of requests that are allowed are received by the same user within the rate-limit window, an error `419 too many requests` is returned.
 
 
 ### For logged-in users
 
-For logged-in users, the key to restrict is a hash value of a string containing the **endpoint**, **request method**, and **user ID**.
+For logged-in users, the key to identify the user is a hash value of a string containing the **endpoint**, **request method**, and **user ID**.
 Requests from the same IP address can also be distinguished for each user.
 
 ### For non-logged-in users
 
-For un-logged-in users, the key to restrict is a hash value of a string containing the **endpoint**, **request method**, and **IP address**.
-At this time, the maximum number of requests is multiplied by the expected number of people per IP address.
+For non-logged-in users, the key to identify the user is a hash value of a string containing the **endpoint**, **request method**, and **IP address**.
+At this time, the maximum number of requests that are allowed is multiplied by the expected number of people per IP address.
 The default number of people assumed per IP address is 5 people/ip.
 The number of people assumed per IP address can be customized for each endpoint and method using environment variables.
 
