@@ -11,14 +11,14 @@ If more than the maximum number of requests that are allowed are received by the
 
 ### For logged-in users
 
-For logged-in users, the key to identify the user is a hash value of a string containing the **endpoint**, **request method**, and **user ID**.
+For logged-in users, the key to identifying the user is a hash value of a string containing the **endpoint**, **request method**, and **user ID**.
 Requests from the same IP address can also be distinguished for each user.
 
 ### For non-logged-in users
 
-For non-logged-in users, the key to identify the user is a hash value of a string containing the **endpoint**, **request method**, and **IP address**.
+For non-logged-in users, the key to identifying the user is a hash value of a string containing the **endpoint**, **request method**, and **IP address**.
 At this time, the maximum number of requests that are allowed is multiplied by the expected number of people per IP address.
-The default number of people assumed per IP address is 5 people/ip.
+The default number of people assumed per IP address is 5 people/IP.
 The number of people assumed per IP address can be customized for each endpoint and method using environment variables.
 
 ## Default Settings
