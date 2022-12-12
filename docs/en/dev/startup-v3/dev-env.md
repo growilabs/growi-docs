@@ -1,7 +1,8 @@
 # Creating a Development Environment
 
-::: warning
-As of 2022.05, building a development environment on a Mac with M1 is not recommended.
+::: danger
+**This page is written for GROWI v5.x or below.**  
+For developping GROWI v6.x or above, read the latest startup documents.
 :::
 
 ## Preparing Tools
