@@ -419,6 +419,7 @@ module.exports = {
               title: 'アップグレード',
               collapsable: false,
               children: [
+                '/ja/admin-guide/upgrading/60x.md',
                 '/ja/admin-guide/upgrading/51x.md',
                 '/ja/admin-guide/upgrading/50x.md',
                 '/ja/admin-guide/upgrading/45x.md',
