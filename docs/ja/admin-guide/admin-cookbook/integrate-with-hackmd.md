@@ -99,4 +99,8 @@
   - head.ejs, foot.ejs に記述した内容が正しいこと
   - HackMD/CodiMD のソース中に挿入された script タグの src のURLに正常にアクセスできる(css, JavaScript をロードできる)こと
 
+### 編集後の「更新」ボタン押下時にエラー、加えて GROWI のセッションが切れる(ページ遷移するとログイン画面に戻される)
+
+- GROWI と HackMD/CodiMD のセッション情報を保持するCookie名が `connect.sid` で被っていることが原因です
+  - GROWI の環境変数 `SESSION_NAME` を変更してください
 
