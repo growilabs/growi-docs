@@ -12,7 +12,7 @@
 
 ```
 S2SMSG_PUBSUB_SERVER_TYPE=nchan
-NCHAN_URI=http://nchan
+NCHAN_URI=ws://nchan
 ```
 
 ### More info
