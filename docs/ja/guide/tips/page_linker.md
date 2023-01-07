@@ -1,50 +1,86 @@
 # ページリンクを記述する
 
-GROWI では、各ページへのリンクの書き方として、以下のように参照形式で記述できます。
-
-- Markdown 標準方式
-- GROWI 独自方式
-- Pukiwiki like linker方式
+GROWI では、各ページへのリンクの書き方として、以下の2つの形式で記述できます。
 
 ## Markdown 標準方式
 
 ``[表示テキスト](URL)``でリンクに変換されます。
 
-- 例
+
+### 例1: 内部ページ
+
+#### Markdown
+
+```markdown
+[/Sandbox](/5a8b15576cf1e900242e0f43)
+```
+
+#### HTML
+
+```html
+<a href="/5a8b15576cf1e900242e0f43">/Sandbox</a>
+```
+
+### 例2: 外部サイト
+
+#### Markdown
 
 ```markdown
 [Google](https://www.google.co.jp/)
 ```
 
-[Google](https://www.google.co.jp/)
+#### HTML
 
-## GROWI 独自方式
-
-書き方は、`[` と `]` のあいだに、パスを記載します。
-`&lt;`の後に配下ページを`/`をつけて記載します。
-
-- 例
-
-```markdown
-[/Sandbox]
-&lt;/user/admin1>
+```html
+<a href="https://www.google.co.jp/" target="_blank">Google</a>
 ```
 
-![page_linker1](/assets/images/linker_growi.png)
+
 
 ## Pukiwiki like linker
 
-書き方は、`[[` と `]]` のあいだに、タイトルとパスを記載します。
+`[[` と `]]` のあいだに、タイトルとパスを記載します。
 
 `タイトル` と `参照ページ` は `>` 記号で区切り `タイトル>参照ページ` のように記述します。
 
 タイトルは省略可能です。参照ページは、記述中のページを基点とした相対リンクで記載できます。
 
-- 例
+### 例3: 内部ページ
+
+#### Markdown
 
 ```markdown
-[[./Bootstrap3]]
-Bootstrap3のExampleは[[こちら>./Bootstrap3]]
+[[/Sandbox]]
 ```
 
-![page_linker2](/assets/images/linker_pukiwiki.png)
+#### HTML
+
+```html
+<a href="/Sandbox">/Sandbox</a>
+```
+
+#### Markdown
+
+```markdown
+数式のExampleは[[こちら>./Math]]
+```
+
+#### HTML
+
+```html
+数式のExampleは<a href="/Sandbox/Math">こちら</a>
+```
+
+### 例4: 外部サイト
+
+#### Markdown
+
+```markdown
+[[Google>https://www.google.co.jp]]
+```
+
+#### HTML
+
+```html
+<a href="https://www.google.co.jp/" target="_blank">Google</a>
+```

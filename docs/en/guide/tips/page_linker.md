@@ -1,23 +1,42 @@
 # Write a page link
 
-![page_linker](/assets/images/page_linker.png)
+In GROWI, it is possible to write a link by the following two ways.
 
-In GROWI, it is possible to describe in the reference form as follows how to write a link to each page.
+## Markdown 標準方式
 
-## How to write page links
+The syntax is ``[Label](URL)``.
+
+
+### Example 1: Inner page
+
+#### Markdown
 
 ```markdown
-## How to write page links
-- Writing with title
-
-[[this is title>../samplepage]]
-
-- writing reference path
-
-[[../../GROWI]]
+[/Sandbox](/5a8b15576cf1e900242e0f43)
 ```
 
-If you paste the above description into a GROWI article, a link will be generated like an image.
+#### HTML
+
+```html
+<a href="/5a8b15576cf1e900242e0f43">/Sandbox</a>
+```
+
+### Example 2: External site
+
+#### Markdown
+
+```markdown
+[Google](https://www.google.co.jp/)
+```
+
+#### HTML
+
+```html
+<a href="https://www.google.co.jp/" target="_blank">Google</a>
+```
+
+
+## Pukiwiki like linker
 
 The format is the title and path between `[[` and `]]`.
 
@@ -27,8 +46,42 @@ The title is optional.
 The reference page can be described as a relative link based on the page being described.
 
 
-### GitHub
+### Example 3: Inner page
 
-How to write this link is a function that is built into GROWI as a Pukiwiki like linker.
+#### Markdown
 
-[GitHub](https://github.com/weseek/growi-plugin-pukiwiki-like-linker)
+```markdown
+[[/Sandbox]]
+```
+
+#### HTML
+
+```html
+<a href="/Sandbox">/Sandbox</a>
+```
+
+#### Markdown
+
+```markdown
+The example for math is [[HERE>./Math]]
+```
+
+#### HTML
+
+```html
+The example for math is <a href="/Sandbox/Math">HERE</a>
+```
+
+### Example 4: External site
+
+#### Markdown
+
+```markdown
+[[Google>https://www.google.co.jp]]
+```
+
+#### HTML
+
+```html
+<a href="https://www.google.co.jp/" target="_blank">Google</a>
+```
