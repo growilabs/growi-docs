@@ -42,7 +42,7 @@ To modify the look and feel of a preset theme while coding on the development se
 You can exit with `Ctrl-C`.
 
 1. `cd packages/preset-themes`
-1. `yarn build:w`
+1. `yarn dev`
 
 
 ## Additional Launches
