@@ -41,7 +41,7 @@ monorepo を採用しているため、依存関係の管理には [lerna](https
 `Ctrl-C`で終了できます。
 
 1. `cd packages/preset-themes`
-1. `yarn build:w`
+1. `yarn dev`
 
 
 ## 2回目以降の起動
