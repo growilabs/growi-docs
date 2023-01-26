@@ -2,7 +2,7 @@
 sidebarDepth: 0
 ---
 
-# Welcome
+# Welcome!!
 
 Welcome to GROWI Docs.
 This site consists of the following sections.
