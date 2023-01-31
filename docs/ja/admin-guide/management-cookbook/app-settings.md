@@ -235,6 +235,50 @@ GROWI では、Node.js のモジュール解決の仕組みを利用し、 `grow
 
 `growi-plugin-xxx` の部分を使用するプラグインに書き換えてください。
 
-```
+```bash
 npm install --save growi-plugin-xxx
 ```
+
+## アンケート設定
+
+アンケートを有効にして、GROWI 開発チームからアンケートを受け取って回答できます。
+
+管理者は `アプリ設定` > `アンケート設定` からアンケートを有効/無効に設定できます。また、ユーザーは設定画面から個別にアンケート機能を有効/無効に設定できます。
+
+送信されるデータにユーザーの個人情報は一切含まれません。
+実際に開発チームに送信される回答データは以下のような json 形式のデータです。
+
+```json
+{
+  "growiInfo": {
+    "version": "6.1.0",
+    "osInfo": {
+      "type": "Linux",
+      "platform": "linux",
+      "arch": "x64",
+      "totalmem": 8349097984
+    },
+    "appSiteUrl": "https://dev.growi.org",
+    "appSiteUrlHashed": "f1de9e489ba88cb15968b97f40f59e8ef0da5ca03ad1f37fc13a2aa45a2512a9",
+    "type": "cloud",
+    "currentUsersCount": 1,
+    "currentActiveUsersCount": 1,
+    "wikiType": "open",
+    "attachmentType": "gcs"
+  },
+  "userInfo": {
+    "userIdHash": "491cc0533ef24a97cdab23ae634b5c4822586087383e9e3e59ddd464876cecbb",
+    "type": "admin",
+    "userCreatedAt": "2023-01-24T04:50:59.249Z"
+  },
+  "answers": [ { "question": "63d75bde2cc143ee8250106a", "value": "3" } ],
+  "answeredAt": "2023-01-31T06:00:07.707Z"
+}
+```
+
+### サイトURLについて
+
+デフォルト設定では、GROWI アプリケーション運用している URL とそのハッシュ値を、それぞれ `appSiteUrl`, `appSiteUrlHashed` というキーで含みます。
+運用しているサイトの URL が GROWI 開発チームに特定されることを避けたい場合は、`サイト URL を匿名化して送信する` オプションを有効にしてください。
+このオプションにより、送信されるのは `appSiteUrlHashed` の値のみになります。
+
