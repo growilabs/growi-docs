@@ -235,7 +235,7 @@ GROWI では、Node.js のモジュール解決の仕組みを利用し、 `grow
 
 `growi-plugin-xxx` の部分を使用するプラグインに書き換えてください。
 
-```
+```bash
 npm install --save growi-plugin-xxx
 ```
 
@@ -247,12 +247,6 @@ npm install --save growi-plugin-xxx
 
 送信されるデータにユーザーの個人情報は一切含まれません。
 実際に開発チームに送信される回答データは以下のような json 形式のデータです。
-
-### サイトURLについて
-
-デフォルト設定では、GROWI アプリケーション運用している URL とそのハッシュ値を、それぞれ `appSiteUrl`, `appSiteUrlHashed` というキーで含みます。
-運用しているサイトの URL が GROWI 開発チームに特定されることを避けたい場合は、`サイト URL を匿名化して送信する` オプションを有効にしてください。
-このオプションにより、送信されるのは `appSiteUrlHashed` の値のみになります。
 
 ```json
 {
@@ -281,3 +275,10 @@ npm install --save growi-plugin-xxx
   "answeredAt": "2023-01-31T06:00:07.707Z"
 }
 ```
+
+### サイトURLについて
+
+デフォルト設定では、GROWI アプリケーション運用している URL とそのハッシュ値を、それぞれ `appSiteUrl`, `appSiteUrlHashed` というキーで含みます。
+運用しているサイトの URL が GROWI 開発チームに特定されることを避けたい場合は、`サイト URL を匿名化して送信する` オプションを有効にしてください。
+このオプションにより、送信されるのは `appSiteUrlHashed` の値のみになります。
+
