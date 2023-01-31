@@ -255,9 +255,12 @@ Administrators can enable/disable surveys from `App Settings` > `Survey Settings
 
 The data sent will not contain any personal information of the user.
 The actual response data sent to the development team is in json format as shown below.
-However, the `growiInfo.appSiteUrl` property will not be sent if the `site URL is anonymized and sent` option is enabled. By enabling this option, the GROWI application from which the survey response data is sent will not be identified.
 
-Translated with www.DeepL.com/Translator (free version)
+### About the App Site URL
+
+The default configuration includes the URL of the operational GROWI application and its hash value with the keys `appSiteUrl` and `appSiteUrlHashed`, respectively.
+If you do not want the GROWI development team to be able to identify the URL of your site, please enable the `send anonymized site URL` option.
+With this option, only the value of `appSiteUrlHashed` will be sent.
 
 ```json
 {
