@@ -220,33 +220,6 @@ When using Amazon S3 or Google Cloud Storage, an attachment reference method can
 
 Please refer to [Attachment reference method](/en/admin-guide/admin-cookbook/attachment.html#how-to-refer-to-attached-files) for the delivery method.
 
-## Plugin Settings
-
-Enable/Disable installed plugins on GROWI by setting `Load Plugins` to ON/OFF in this field.  
-When OFF, plugins installed in GROWI are not applied.
-
-![appsettings17](/assets/images/appsettings17.png)
-
-GROWI uses the module resolution mechanism of Node.js to automatically detect packages with the `growi-plugin-` prefix.  
-
-See [Development Guide](/en/dev/plugin/architecture.html) for details.
-
-### List of official plugins
-
-- [growi-plugin-attachment-refs](https://github.com/weseek/growi-plugin-attachment-refs)
-  - Plugin for displaying a list or gallery of attached images.
-- [growi-plugin-lsx](https://github.com/weseek/growi-plugin-lsx)
-  - Plugin to apply pukiwiki's original plugin lsx.
-- [growi-plugin-pukiwiki-like-linker](https://github.com/weseek/growi-plugin-pukiwiki-like-linker)
-  - Plugin to apply Pukiwiki's Linker formatting.
-
-### How to install
-
-Replace `growi-plugin-xxx` with the name of the plugin to install.
-
-```bash
-npm install --save growi-plugin-xxx
-```
 
 ## Questionnaire Settings
 

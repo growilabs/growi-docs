@@ -211,33 +211,6 @@ Amazon S3, Google Cloud Storage を利用する場合、添付ファイル参照
 
 配信方法については [添付ファイル参照方法](/ja/admin-guide/admin-cookbook/attachment.html#添付ファイル参照方法) を参照ください。
 
-## プラグイン設定
-
-この欄で `プラグインを読み込む` を ON / OFF に設定することで、GROWI にインストールされたプラグインを有効化/無効化します。  
-OFF の場合、GROWI にインストールされたプラグインは反映されません。
-
-![appsettings17](/assets/images/appsettings17.png)
-
-GROWI では、Node.js のモジュール解決の仕組みを利用し、 `growi-plugin-` プレフィクスを持つパッケージを自動検出します。  
-
-詳細は[開発ガイド](/ja/dev/plugin/architecture.html) を参照してください。
-
-### 公式プラグイン一覧
-
-- [growi-plugin-attachment-refs](https://github.com/weseek/growi-plugin-attachment-refs)
-  - 添付画像のリスト表示やギャラリー表示用のプラグイン
-- [growi-plugin-lsx](https://github.com/weseek/growi-plugin-lsx)
-  - pukiwiki 独自プラグインの lsx を適用するプラグイン
-- [growi-plugin-pukiwiki-like-linker](https://github.com/weseek/growi-plugin-pukiwiki-like-linker)
-  - Pukiwiki の Linker 書式を適用するプラグイン
-
-### インストール方法
-
-`growi-plugin-xxx` の部分を使用するプラグインに書き換えてください。
-
-```bash
-npm install --save growi-plugin-xxx
-```
 
 ## アンケート設定
 
