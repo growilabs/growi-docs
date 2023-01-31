@@ -247,3 +247,43 @@ Replace `growi-plugin-xxx` with the name of the plugin to install.
 ```
 npm install --save growi-plugin-xxx
 ```
+
+## Questionnaire Settings
+Enabling surveys allows you to receive and respond to surveys from the GROWI development team.
+
+Administrators can enable/disable surveys from `App Settings` > `Survey Settings`. Users can also enable/disable the survey feature individually from the settings screen.
+
+The data sent will not contain any personal information of the user.
+The actual response data sent to the development team is in json format as shown below.
+However, the `growiInfo.appSiteUrl` property will not be sent if the `site URL is anonymized and sent` option is enabled. By enabling this option, the GROWI application from which the survey response data is sent will not be identified.
+
+Translated with www.DeepL.com/Translator (free version)
+
+```json
+{
+  "growiInfo": {
+    "version": "6.1.0",
+    "osInfo": {
+      "type": "Linux",
+      "platform": "linux",
+      "arch": "x64",
+      "totalmem": 8349097984
+    },
+    "appSiteUrl": "https://dev.growi.org",
+    "appSiteUrlHashed": "f1de9e489ba88cb15968b97f40f59e8ef0da5ca03ad1f37fc13a2aa45a2512a9",
+    "type": "cloud",
+    "currentUsersCount": 1,
+    "currentActiveUsersCount": 1,
+    "wikiType": "open",
+    "attachmentType": "gcs"
+  },
+  "userInfo": {
+    "userIdHash": "491cc0533ef24a97cdab23ae634b5c4822586087383e9e3e59ddd464876cecbb",
+    "type": "admin",
+    "userCreatedAt": "2023-01-24T04:50:59.249Z"
+  },
+  "answers": [ { "question": "63d75bde2cc143ee8250106a", "value": "3" } ],
+  "answeredAt": "2023-01-31T06:00:07.707Z"
+}
+```
+
