@@ -52,13 +52,3 @@ GROWI から別の GROWI へ簡単にデータの移行ができる機能です�
 - 重複するデータが存在していた場合、**移行元** のデータを尊重して上書きします。ただし、Config だけは `Flush and insert` されます。
 
 ![g2g-4](/assets/images/g2g-transfer-4.png)
-
-
-
-
-
-
-
-
-
-
