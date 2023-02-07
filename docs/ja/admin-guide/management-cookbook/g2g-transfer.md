@@ -1,6 +1,5 @@
-<!-- markdownlint-disable MD033  -->
 # GROWI お引越し機能
-
+<!-- markdownlint-disable MD033  -->
 ## 概要
 
 GROWI から別の GROWI へ簡単にデータの移行ができる機能です。
