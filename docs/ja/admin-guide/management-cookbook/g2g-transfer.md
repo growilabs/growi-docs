@@ -8,28 +8,28 @@ GROWI から別の GROWI へ簡単にデータの移行ができる機能です�
 
 以下の条件を満たしていることが必要です。
 
-- <Badge text="移行先" vertical='middle'/> と <Badge text="移行元" vertical='middle' type="warning"/> の両 GROWI のバージョンが一致している
+- 移行先と移行元の両 GROWI のバージョンが一致している
 - **v6 以上であり、同一のバージョン**である
 - 環境変数: `USER_UPPER_LIMIT` を設定している場合
-  - <Badge text="移行先" vertical='middle'/> の USER_UPPER_LIMIT に <Badge text="移行元" vertical='middle' type="warning"/> の USER_UPPER_LIMIT よりも大きな値を設定している
+  - 移行先の USER_UPPER_LIMIT に移行元の USER_UPPER_LIMIT よりも大きな値を設定している
 
 ## 移行フロー
 
-1. <Badge text="移行先" vertical='middle'/> の GROWI で認証に使用するための移行キーを発行します。
-1. <Badge text="移行元" vertical='middle' type="warning"/> の GROWI の管理画面で移行キーをコピペし、移行開始ボタン押下します。
+1. <Badge text="移行先" vertical='middle'/> GROWI で認証に使用するための移行キーを発行します。
+1. <Badge text="移行元" vertical='middle' type="warning"/> GROWI の管理画面で移行キーをコピペし、移行開始ボタン押下します。
 
 ## 移行先の操作フロー
 
 ### 移行キーの発行
 
-- <Badge text="移行先" vertical='middle'/> の GROWI はインストールの有無関係なく、移行キーが発行できます。
+- 移行先の GROWI はインストールの有無関係なく、移行キーが発行できます。
   - インストールしている場合は、管理画面から移行キーを発行します。
 
-![g2g-1](/assets/images/g2g-transfer-1.png)
+![g2g-transfer-1](/assets/images/g2g-transfer-1.png)
 
 - インストールしていない場合は、インストーラー画面から移行キーを発行します。
 
-![g2g-2](/assets/images/g2g-transfer-2.png)
+![g2g-transfer-2](/assets/images/g2g-transfer-2.png)
 
 ### 移行キーの期限
 
@@ -40,15 +40,23 @@ GROWI から別の GROWI へ簡単にデータの移行ができる機能です�
 
 ### 移行キーの入力と移行ボタンの押下
 
-- <Badge text="移行先" vertical='middle'/> で発行した移行キーを <Badge text="移行元" vertical='middle' type="warning"/> の管理画面へ入力し、移行開始ボタンを押すと移行を開始します。
+- 移行先で発行した移行キーを移行元の管理画面へ入力し、移行開始ボタンを押すと移行を開始します。
 
-![g2g-3](/assets/images/g2g-transfer-3.png)
+![g2g-transfer-3](/assets/images/g2g-transfer-3.png)
 
 
 ### 移行するコレクション、高度なオプションを選択する
 
 - 詳細オプションボタンをクリックすると移行するコレクションとコレクションごとの詳細な設定が可能です。
-- デフォルトはすべてのコレクションを移行し <Badge text="移行元" vertical='middle' type="warning"/> と <Badge text="移行先" vertical='middle'/> のデータベースの中身が同じになります。
-- 重複するデータが存在していた場合 <Badge text="移行元" vertical='middle' type="warning"/> のデータを尊重して上書きします。ただし、Config だけは `Flush and insert` されます。
+- デフォルトはすべてのコレクションを移行し移行元と移行先のデータベースの中身が同じになります。
+- 重複するデータが存在していた場合、移行元のデータを尊重して上書きします。ただし、Config だけは `Flush and insert` されます。
 
-![g2g-4](/assets/images/g2g-transfer-4.png)
+![g2g-transfer-4](/assets/images/g2g-transfer-4.png)
+
+### ファイルアップロード設定の優先度
+
+**移行先**の添付ファイル設定が優先されます。
+
+::: tip
+**移行元**でファイルアップロード設定を選択することが可能になる予定です。
+:::
