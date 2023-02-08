@@ -36,7 +36,7 @@ GROWI から別の GROWI へ簡単にデータの移行ができる機能です�
 - 発行した移行キーの有効期限は発行から1時間です。
 - 一度移行に利用した移行キーは、再利用できません。
 
-### <Badge text="from" vertical='middle' type="warning"/> 移行元の操作フロー
+## <Badge text="from" vertical='middle' type="warning"/> 移行元の操作フロー
 
 ### 移行キーの入力と移行ボタンの押下
 
@@ -51,34 +51,40 @@ GROWI から別の GROWI へ簡単にデータの移行ができる機能です�
 - デフォルトはすべてのコレクションを移行し移行元と移行先のデータベースの中身が同じになります。
 - 重複するデータが存在していた場合、移行元のデータで上書きします。ただし、Config だけは `Flush and insert` されます。
 
-
 ![g2g-transfer-4](/assets/images/g2g-transfer-4.png)
 
-### 移行先のファイルアップロード設定
+## 移行先のファイルアップロード設定
 
 v6.0.5 現在では **移行先** の設定値がそのまま使用されます。
 
 ::: tip
-今後のアップデートにより **移行元** でファイルアップロード設定を選択することが可能になる予定です。
+今後のアップデートにより **移行元** でファイルアップロード設定を選択し移行先の設定を上書きできるようになる予定です。
 :::
 
-### 添付ファイル転送の対応表
+## 添付ファイル転送の転送可否
 
-| <Badge text="from" vertical='middle' type="warning"/> \ <Badge text="to" vertical='middle'/> | Local                       | Cloud(S3)                                          | Cloud(GCS)                                         | GridFS                      | 未設定(none)                               |
-| :----------: | --------------------------- | :------------------------------------------------- | :------------------------------------------------- | --------------------------- | ------------------------------------------ |
-| Local        | :white_check_mark: 転送する | :white_check_mark: 転送する                        | :white_check_mark: 転送する                        | :white_check_mark: 転送する | 移行元で明示的に指定しない限り転送できない |
-| Cloud(S3)    | :white_check_mark: 転送する | :triangular_flag_on_post: 設定が異なる場合は転送する | :white_check_mark: 転送する                        | :white_check_mark: 転送する | 移行元で明示的に指定しない限り転送できない |
-| Cloud(GCS)   | :white_check_mark: 転送する | :white_check_mark: 転送する                        | :triangular_flag_on_post: 設定が異なる場合は転送する | :white_check_mark: 転送する | 移行元で明示的に指定しない限り転送できない |
-| GridFS       | :white_check_mark: 転送する | :white_check_mark: 転送する                        | :white_check_mark: 転送する                        | :white_check_mark: 転送する | 移行元で明示的に指定しない限り転送できない |
-| 未設定(none) | :x: 転送不能                | :x: 転送不能                                       | :x: 転送不能                                       | :x: 転送不能                | :x: 転送不能                               |
+| from/to      | Local                       | AWS(S3)                                         | GCP(GCS)                                        | MongoDB(GridFS)                      | 未設定(none)                               |
+| :----------: | :-------------------------- | :------------------------------------------------- | :------------------------------------------------- | :--------------------------- | :------------------------------------------ |
+| Local        | :white_check_mark: 転送する | :white_check_mark: 転送する                        | :white_check_mark: 転送する                        | :white_check_mark: 転送する | :x: 転送不能  |
+| Cloud(S3)    | :white_check_mark: 転送する | :triangular_flag_on_post: 設定が異なる場合は転送する  | :white_check_mark: 転送する                        | :white_check_mark: 転送する | :x: 転送不能  |
+| Cloud(GCS)   | :white_check_mark: 転送する | :white_check_mark: 転送する                        | :triangular_flag_on_post: 設定が異なる場合は転送する | :white_check_mark: 転送する | :x: 転送不能  |
+| GridFS       | :white_check_mark: 転送する | :white_check_mark: 転送する                        | :white_check_mark: 転送する                        | :white_check_mark: 転送する | :x: 転送不能  |
+| 未設定(none)  | :x: 転送不能                | :x: 転送不能                                       | :x: 転送不能                                       | :x: 転送不能                | :x: 転送不能                               |
 
 - Cloud(S3/GCS) -> Cloud(GCS/S3)
   - サービス/バケット名が一致している場合
-    - 添付ファイルは転送されません
+    - 転送は行われず、移行元でアップロードした画像が閲覧できます
   - サービス/バケット名が異なる場合
-    - 転送します
-- Cloud(S3/GCS) -> 未設定
-  - 添付ファイルは転送されません
-- Local -> 未設定
-  - 移行先のファイルアップロード設定が Local に設定されます
-  - 添付ファイルは転送されます
+    - 転送されます
+- 移行先が未インストール
+  - 移行先の環境変数 `FILE_UPLOAD` に 'aws' が設定されている場合（デフォルト）
+    - v6.0.5 現在では転送されません
+    - 今後のアップデートにより転送可能になる予定です
+  - 移行先の環境変数 `FILE_UPLOAD` に 'mongodb' か 'local' 設定されている場合
+    - 転送されます
+  - 移行先の環境変数 `FILE_UPLOAD` に 'gcp' が設定されており、GCP 関連の環境変数(`GCS_API_KEY_JSON_PATH`, `GCS_BUCKET`, `GCS_UPLOAD_NAMESPACE`)が設定されている場合
+    - 転送されます
+
+::: warning
+移行先で環境変数 `FILE_UPLOAD_DISABLED=true` が設定されている場合は添付ファイルの移行はできません。
+:::
