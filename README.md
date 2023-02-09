@@ -1,6 +1,6 @@
 # growi-docs
 
-[![wercker status](https://app.wercker.com/status/ac72ddc31b1e63f61717bcc1633b7c7f/s/master "wercker status")](https://app.wercker.com/project/byKey/ac72ddc31b1e63f61717bcc1633b7c7f)
+[![Deploy](https://github.com/weseek/growi-docs/actions/workflows/deploy.yml/badge.svg)](https://github.com/weseek/growi-docs/actions/workflows/deploy.yml)
 
 ## Requirements
 
