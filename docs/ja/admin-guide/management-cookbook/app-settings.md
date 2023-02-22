@@ -211,7 +211,8 @@ Amazon S3, Google Cloud Storage を利用する場合、添付ファイル参照
 
 配信方法については [添付ファイル参照方法](/ja/admin-guide/admin-cookbook/attachment.html#添付ファイル参照方法) を参照ください。
 
-
+<!-- TODO: アンケート機能がマージされたら表示する -->
+<!-- 
 ## アンケート設定
 
 アンケートを有効にして、GROWI 開発チームからアンケートを受け取って回答できます。
@@ -254,4 +255,4 @@ Amazon S3, Google Cloud Storage を利用する場合、添付ファイル参照
 デフォルト設定では、GROWI アプリケーション運用している URL とそのハッシュ値を、それぞれ `appSiteUrl`, `appSiteUrlHashed` というキーで含みます。
 運用しているサイトの URL が GROWI 開発チームに特定されることを避けたい場合は、`サイト URL を匿名化して送信する` オプションを有効にしてください。
 このオプションにより、送信されるのは `appSiteUrlHashed` の値のみになります。
-
+-->

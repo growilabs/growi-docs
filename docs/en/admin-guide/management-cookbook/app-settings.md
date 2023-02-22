@@ -220,7 +220,8 @@ When using Amazon S3 or Google Cloud Storage, an attachment reference method can
 
 Please refer to [Attachment reference method](/en/admin-guide/admin-cookbook/attachment.html#how-to-refer-to-attached-files) for the delivery method.
 
-
+<!-- TODO: アンケート機能がマージされたら表示する -->
+<!-- 
 ## Questionnaire Settings
 
 Enabling surveys allows you to receive and respond to surveys from the GROWI development team.
@@ -263,3 +264,4 @@ The actual response data sent to the development team is in json format as shown
 The default configuration includes the URL of the operational GROWI application and its hash value with the keys `appSiteUrl` and `appSiteUrlHashed`, respectively.
 If you do not want the GROWI development team to be able to identify the URL of your site, please enable the `send anonymized site URL` option.
 With this option, only the value of `appSiteUrlHashed` will be sent.
+-->
