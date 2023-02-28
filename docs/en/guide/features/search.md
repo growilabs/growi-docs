@@ -29,8 +29,6 @@ Enter a keyword in the search bar and press the Enter (return) key to move to th
   - Click the icon on the right side of the list to go to the page.
   - Click "Delete All" in the upper left corner of the list to delete all pages marked with a checkmark at once.
 
-  ![search4](/assets/images/search4.png)
-
 - Page previews
   - The previews of the pages that were found in the search are displayed on the right side of the screen.
   - Click the page name to move to that page.
