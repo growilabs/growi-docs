@@ -27,7 +27,7 @@ Enter a keyword in the search bar and press the Enter (return) key to move to th
   - On the right side of the page name, meta information such as the number of likes, comments, and privacy settings is displayed as an icon.
     - Visibility of the restricted pages can be configured from security settings in the admin page.
   - Click the icon on the right side of the list to go to the page.
-  - Click "DeletionMode" in the upper left corner of the list to enter the page deletion mode and delete the checked pages.
+  - Click "Delete All" in the upper left corner of the list to delete all pages marked with a checkmark at once.
 
   ![search4](/assets/images/search4.png)
 
