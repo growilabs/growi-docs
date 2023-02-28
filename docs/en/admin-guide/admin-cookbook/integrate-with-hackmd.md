@@ -6,11 +6,11 @@
 
 - [HackMD](https://hackmd.io) is an excellent tool for concurrent editing on a single Markdown with multiple users.
 - [CodiMD](https://github.com/hackmdio/codimd) is an OSS forked from HackMD.
-- Integrating HackMD/CodiMD into Growi allows documents managed under GROWI to simultaneously be edited by multiple people.
+- Integrating HackMD/CodiMD into GROWI allows documents managed under GROWI to simultaneously be edited by multiple people.
 
 ## Structure
 
-- By integrating HackMD/CodiMD into Growi allows HackMD/CodiMD editors to be borrowed and shown in iframe.
+- By integrating HackMD/CodiMD into GROWI allows HackMD/CodiMD editors to be borrowed and shown in iframe.
 - Page data is shared through the medium of [window.postMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
 
 
