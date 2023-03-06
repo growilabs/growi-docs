@@ -128,6 +128,7 @@ module.exports = {
                 '/en/guide/features/in-app-notification.md',
                 '/en/guide/features/slack_integration.md',
                 '/en/guide/features/textlint.md',
+                '/en/guide/features/file_upload',
               ]
             },
             {
@@ -382,6 +383,7 @@ module.exports = {
                 '/ja/guide/features/in-app-notification.md',
                 '/ja/guide/features/slack_integration.md',
                 '/ja/guide/features/textlint.md',
+                '/ja/guide/features/file_upload',
               ]
             },
             {
