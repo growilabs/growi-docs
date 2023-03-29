@@ -63,7 +63,7 @@ jobs:
       uses: jenkey2011/vuepress-deploy@v1.8.1
       env:
         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_SCRIPT: yarn apiv3:build && yarn docs:build
+        BUILD_SCRIPT: yarn apiv3:build && yarn growi-org:build
         BUILD_DIR: docs/.vuepress/dist/
         CNAME: docs.growi.org
 

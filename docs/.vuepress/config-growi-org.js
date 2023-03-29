@@ -26,25 +26,25 @@ module.exports = {
       {
         // provide i18n redirection
         // it will automatically redirect `/foo/bar/` to `/:locale/foo/bar/` if exists
-        locales: true
+        locales: true,
       },
     ],
     [
       '@vuepress/google-analytics',
       {
-        'ga': 'UA-55480073-15' // UA-00000000-0
-      }
+        ga: 'UA-55480073-15', // UA-00000000-0
+      },
     ],
     [
       'sitemap',
       {
-        'hostname': 'https://docs.growi.org'
-      }
-    ]
+        hostname: 'https://docs.growi.org',
+      },
+    ],
   ],
   markdown: {
     toc: { includeLevel: [2] },
-    extendMarkdown: md => {
+    extendMarkdown: (md) => {
       md.use(require('markdown-it-task-lists'));
       md.use(require('markdown-it-footnote'));
     },
@@ -81,8 +81,8 @@ module.exports = {
               { text: 'GROWI.org', link: 'https://growi.org' },
               { text: 'GROWI.cloud', link: 'https://growi.cloud' },
               { text: 'Blog', link: 'https://weseek.co.jp/tech/category/growi/' },
-            ]
-          }
+            ],
+          },
         ],
         sidebar: {
           '/en/guide/': [
@@ -93,7 +93,7 @@ module.exports = {
               children: [
                 '/en/guide/getting-started/five_minutes.md',
                 '/en/guide/getting-started/markdown.md',
-              ]
+              ],
             },
             {
               title: 'Tutorial',
@@ -102,7 +102,7 @@ module.exports = {
                 '/en/guide/tutorial/create_page.md',
                 '/en/guide/tutorial/duplicate_page.md',
                 '/en/guide/tutorial/delete_page.md',
-              ]
+              ],
             },
             {
               title: 'Features',
@@ -129,7 +129,7 @@ module.exports = {
                 '/en/guide/features/slack_integration.md',
                 '/en/guide/features/textlint.md',
                 '/en/guide/features/file_upload',
-              ]
+              ],
             },
             {
               title: 'Tips',
@@ -139,8 +139,8 @@ module.exports = {
                 '/en/guide/tips/include_html.md',
                 '/en/guide/tips/checkbox.md',
                 '/en/guide/tips/page_linker.md',
-                '/en/guide/tips/footnote.md'
-              ]
+                '/en/guide/tips/footnote.md',
+              ],
             },
             {
               title: 'Other Documents',
@@ -149,7 +149,7 @@ module.exports = {
                 ['/en/admin-guide/', 'Admin Guide'],
                 ['/en/dev/', 'Developers Guide'],
                 ['/en/api/', 'API Reference'],
-              ]
+              ],
             },
           ],
           '/en/admin-guide/': [
@@ -160,8 +160,8 @@ module.exports = {
               children: [
                 '/en/admin-guide/getting-started/docker-compose.md',
                 '/en/admin-guide/getting-started/ubuntu-server.md',
-                '/en/admin-guide/getting-started/centos.md'
-              ]
+                '/en/admin-guide/getting-started/centos.md',
+              ],
             },
             {
               title: 'Upgrading',
@@ -181,7 +181,7 @@ module.exports = {
                 '/en/admin-guide/upgrading/36x.md',
                 '/en/admin-guide/upgrading/35x.md',
                 '/en/admin-guide/upgrading/34x.md',
-              ]
+              ],
             },
             {
               title: 'Migration from other system',
@@ -191,7 +191,7 @@ module.exports = {
                 '/en/admin-guide/migration-guide/from-crowi-plus-docker-compose.md',
                 '/en/admin-guide/migration-guide/from-crowi-onpremise.md',
                 '/en/admin-guide/migration-guide/from-bakudankun-crowi.md',
-              ]
+              ],
             },
             {
               title: 'System Admin Cookbook',
@@ -210,8 +210,8 @@ module.exports = {
                 '/en/admin-guide/admin-cookbook/integrate-with-hackmd.md',
                 '/en/admin-guide/admin-cookbook/audit-log-setup.md',
                 '/en/admin-guide/admin-cookbook/trust-proxy.md',
-                '/en/admin-guide/admin-cookbook/custom-rate-limit.md'
-              ]
+                '/en/admin-guide/admin-cookbook/custom-rate-limit.md',
+              ],
             },
             {
               title: 'GROWI App Admin Cookbook',
@@ -241,7 +241,7 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/export.md',
                 '/en/admin-guide/management-cookbook/setup-search-system.md',
                 '/en/admin-guide/management-cookbook/audit-log.md',
-              ]
+              ],
             },
           ],
           '/en/dev/': [
@@ -310,7 +310,7 @@ module.exports = {
               children: [
                 ['/en/guide/', 'Users Guide'],
                 ['/en/api/', 'API Reference'],
-              ]
+              ],
             },
           ],
           '/en/api/': [
@@ -336,8 +336,8 @@ module.exports = {
               { text: 'GROWI.org', link: 'https://growi.org' },
               { text: 'GROWI.cloud', link: 'https://growi.cloud' },
               { text: 'Blog', link: 'https://weseek.co.jp/tech/category/growi/' },
-            ]
-          }
+            ],
+          },
         ],
         sidebar: {
           '/ja/guide/': [
@@ -348,7 +348,7 @@ module.exports = {
               children: [
                 '/ja/guide/getting-started/five_minutes.md',
                 '/ja/guide/getting-started/markdown.md',
-              ]
+              ],
             },
             {
               title: 'チュートリアル',
@@ -357,7 +357,7 @@ module.exports = {
                 '/ja/guide/tutorial/create_page.md',
                 '/ja/guide/tutorial/duplicate_page.md',
                 '/ja/guide/tutorial/delete_page.md',
-              ]
+              ],
             },
             {
               title: '機能紹介',
@@ -384,7 +384,7 @@ module.exports = {
                 '/ja/guide/features/slack_integration.md',
                 '/ja/guide/features/textlint.md',
                 '/ja/guide/features/file_upload',
-              ]
+              ],
             },
             {
               title: 'Tips (活用例)',
@@ -394,8 +394,8 @@ module.exports = {
                 '/ja/guide/tips/include_html.md',
                 '/ja/guide/tips/checkbox.md',
                 '/ja/guide/tips/page_linker.md',
-                '/ja/guide/tips/footnote.md'
-              ]
+                '/ja/guide/tips/footnote.md',
+              ],
             },
             {
               title: 'その他のドキュメント',
@@ -404,7 +404,7 @@ module.exports = {
                 ['/ja/admin-guide/', '管理者ガイド'],
                 ['/ja/dev/', '開発ガイド'],
                 ['/en/api/', 'API リファレンス (英語)'],
-              ]
+              ],
             },
           ],
           '/ja/admin-guide/': [
@@ -415,8 +415,8 @@ module.exports = {
               children: [
                 '/ja/admin-guide/getting-started/docker-compose.md',
                 '/ja/admin-guide/getting-started/ubuntu-server.md',
-                '/ja/admin-guide/getting-started/centos.md'
-              ]
+                '/ja/admin-guide/getting-started/centos.md',
+              ],
             },
             {
               title: 'アップグレード',
@@ -436,7 +436,7 @@ module.exports = {
                 '/ja/admin-guide/upgrading/36x.md',
                 '/ja/admin-guide/upgrading/35x.md',
                 '/ja/admin-guide/upgrading/34x.md',
-              ]
+              ],
             },
             {
               title: '他システムからの移行',
@@ -446,7 +446,7 @@ module.exports = {
                 '/ja/admin-guide/migration-guide/from-crowi-plus-docker-compose.md',
                 '/ja/admin-guide/migration-guide/from-crowi-onpremise.md',
                 '/ja/admin-guide/migration-guide/from-bakudankun-crowi.md',
-              ]
+              ],
             },
             {
               title: 'システム管理者のクックブック',
@@ -465,8 +465,8 @@ module.exports = {
                 '/ja/admin-guide/admin-cookbook/integrate-with-hackmd.md',
                 '/ja/admin-guide/admin-cookbook/audit-log-setup.md',
                 '/ja/admin-guide/admin-cookbook/trust-proxy.md',
-                '/ja/admin-guide/admin-cookbook/custom-rate-limit.md'
-              ]
+                '/ja/admin-guide/admin-cookbook/custom-rate-limit.md',
+              ],
             },
             {
               title: 'GROWI 管理者のクックブック',
@@ -496,7 +496,7 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/g2g-transfer.md',
                 '/ja/admin-guide/management-cookbook/setup-search-system.md',
                 '/ja/admin-guide/management-cookbook/audit-log.md',
-              ]
+              ],
             },
           ],
           '/ja/dev/': [
@@ -565,11 +565,11 @@ module.exports = {
               children: [
                 ['/ja/guide/', 'ユーザーズガイド'],
                 ['/en/api/', 'API リファレンス (英語)'],
-              ]
+              ],
             },
           ],
-        }
+        },
       },
     },
   },
-}
+};

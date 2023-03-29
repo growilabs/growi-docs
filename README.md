@@ -12,7 +12,12 @@
 
 ``` bash
 yarn
-yarn start
+
+# Start dev server (growi-org)
+yarn growi-org:dev
+
+# Or start dev server (help-growi-cloud) 
+yarn help-growi-cloud:dev
 ```
 
 Then, access to the URL that VuePress will print like below.
