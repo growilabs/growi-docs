@@ -81,6 +81,12 @@ Only accounts that do not have the Active status can be deleted. Please note tha
 
 <img src="/assets/images/user-management8.png" width="50%">
 
+#### Resend Email Invitation
+
+You can resend an invitation email to users who have already been provisionally issued a new user and have not yet logged in with their account.
+
+<img src="/assets/images/user-management9.png" width="50%">
+
 ::: tip
 [Email settings from the management screen](https://docs.growi.org/en/admin-guide/management-cookbook/app-settings.html#email-settings) are required when delivering a notification email from GROWI.
 :::
