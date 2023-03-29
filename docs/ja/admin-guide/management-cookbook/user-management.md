@@ -80,6 +80,12 @@ Active ステータスでないアカウントのみ削除できます。削除�
 
 <img src="/assets/images/user-management8.png" width="50%">
 
+#### 招待メールの再送信
+
+新規ユーザーの仮発行が完了済み、かつアカウントによるログインが未完了のユーザーに対して招待メールを再送できます。
+
+<img src="/assets/images/user-management9.png" width="50%">
+
 ::: tip
 GROWIから通知メールを配信する場合は、[管理画面からのメール設定](https://docs.growi.org/ja/admin-guide/management-cookbook/app-settings.html#メールの設定) が必要です。
 :::
