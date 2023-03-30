@@ -7,6 +7,16 @@ module.exports = {
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
 
+  // Markdown of build target
+  patterns: [
+    '**/*.md',
+    '**/*.vue',
+    // Folders to ignore at build: https://github.com/vuejs/vuepress/issues/1558
+    '!(ja|en)/admin-guide/(admin-cookbook|downgrading|getting-started|migration-guide)/**',
+    '!(ja|en)/api/**',
+    '!(ja|en)/dev/**',
+  ],
+
   /**
    * Extra tags to be injected to the page HTML `<head>`
    *
