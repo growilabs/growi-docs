@@ -8,6 +8,7 @@ module.exports = options => ({
     return {
       BASEURL: options.baseURL || '',
       STRIPURL: options.stripExtension || false,
+      EXCLUDE_PATH_PATTERN: options.excludePathPattern || undefined,
     }
   },
   enhanceAppFiles () {
