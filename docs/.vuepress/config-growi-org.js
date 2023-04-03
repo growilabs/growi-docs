@@ -1,4 +1,5 @@
 const path = require('path');
+const Canonical = require('./plugins/canonical');
 
 module.exports = {
   title: 'GROWI Docs',
@@ -47,6 +48,13 @@ module.exports = {
       {
         hostname: 'https://docs.growi.org',
       },
+    ],
+    [
+      // self-referencing canonical
+      Canonical,
+      {
+        baseURL: 'https://docs.growi.org',
+      }
     ],
   ],
   markdown: {
