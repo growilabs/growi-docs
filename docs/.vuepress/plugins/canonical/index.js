@@ -1,3 +1,6 @@
+// This is a fork of: https://github.com/IOriens/vuepress-plugin-canonical
+// Insert canonical tags into any page during build time.
+
 const { resolve } = require('path');
 
 module.exports = options => ({
