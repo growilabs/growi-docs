@@ -6,7 +6,7 @@ const { resolve } = require('path');
 module.exports = options => ({
   define () {
     return {
-      BASEURL: options.baseURL || '',
+      BASE_URL: options.baseURL || '',
       EXCLUDE_PATH_PATTERN: options.excludePathPattern || undefined,
     }
   },

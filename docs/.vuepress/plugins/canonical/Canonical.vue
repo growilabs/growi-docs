@@ -1,8 +1,7 @@
 <template></template>
 
 <script>
-/* global BASEURL */
-/* global STRIPURL */
+/* global BASE_URL */
 /* global EXCLUDE_PATH_PATTERN */
 export default {
   created() {
@@ -13,7 +12,7 @@ export default {
       : false;
 
     if (typeof this.$ssrContext !== "undefined" && !isExcludePath) {
-      const computeURL = BASEURL + pagePath;
+      const computeURL = BASE_URL + pagePath;
       this.$ssrContext.userHeadTags += `<link rel='canonical' href='${computeURL}'/>`;
     }
   },
