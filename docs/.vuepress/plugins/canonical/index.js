@@ -7,7 +7,6 @@ module.exports = options => ({
   define () {
     return {
       BASEURL: options.baseURL || '',
-      STRIPURL: options.stripExtension || false,
       EXCLUDE_PATH_PATTERN: options.excludePathPattern || undefined,
     }
   },
