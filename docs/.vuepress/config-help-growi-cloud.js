@@ -78,7 +78,7 @@ module.exports = {
       {
         baseURL: 'https://docs.growi.org',
         // Exclude the directory /cloud (temporary) from the canonical insertion for pages that exist only in help-growi-cloud
-        excludePathPattern: '(ja|en)\/cloud\/.*\.html$',
+        excludePathPatterns: ['(ja|en)\/cloud\/.*\.html$'],
       }
     ],
     '@vuepress/plugin-back-to-top',

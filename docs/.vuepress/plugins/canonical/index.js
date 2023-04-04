@@ -7,7 +7,7 @@ module.exports = options => ({
   define () {
     return {
       BASE_URL: options.baseURL || '',
-      EXCLUDE_PATH_PATTERN: options.excludePathPattern || undefined,
+      EXCLUDE_PATH_PATTERNS: options.excludePathPatterns || undefined,
     }
   },
   enhanceAppFiles () {

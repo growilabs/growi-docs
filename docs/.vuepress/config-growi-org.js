@@ -54,6 +54,11 @@ module.exports = {
       Canonical,
       {
         baseURL: 'https://docs.growi.org',
+        excludePathPatterns: [
+          '(ja|en)\/admin-guide\/(admin-cookbook|downgrading|getting-started|migration-guide)\/.*\.html$',
+          '(ja|en)\/api\/.*\.html$',
+          '(ja|en)\/dev\/.*\.html$',
+        ]
       }
     ],
   ],
