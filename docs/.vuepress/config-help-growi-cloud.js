@@ -1,4 +1,4 @@
-// const Canonical = require('./plugins/canonical');
+const Canonical = require('./plugins/canonical');
 
 module.exports = {
   /**
@@ -73,14 +73,10 @@ module.exports = {
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
-    // [
-    //   Canonical,
-    //   {
-    //     baseURL: 'https://docs.growi.org',
-    //     // Exclude the directory /cloud (temporary) from the canonical insertion for pages that exist only in help-growi-cloud
-    //     excludePathPatterns: ['(ja|en)\/cloud\/.*\.html$'],
-    //   }
-    // ],
+    [Canonical , {
+      canonicalBase: 'https://docs.growi.org',
+      excludePathPatterns: ['(ja|en)\/cloud\/.*'],
+    }],
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
   ],
