@@ -14,7 +14,8 @@
           <li class="nav-item p-2 p-md-0 ml-md-3">
             <a
               href="/"
-              class="nav-link text-dark fw-bold">
+              class="nav-link text-dark fw-bold"
+            >
               <span class="pb-1">
                 ホーム
               </span>
@@ -24,7 +25,7 @@
           <li class="nav-item p-2 p-md-0 ml-md-3">
             <a
               href="/price-and-features"
-              class="nav-link border-follow text-dark fw-bold"
+              class="nav-link text-dark fw-bold"
             >
               <span class="pb-1">
                 料金・機能
@@ -35,7 +36,8 @@
           <li class="nav-item p-2 p-md-0 ml-md-3">
             <a
               href="/introductions"
-              class="nav-link text-dark fw-bold">
+              class="nav-link text-dark fw-bold"
+            >
               <span class="pb-1">
                 導入事例
               </span>
@@ -45,7 +47,8 @@
           <li class="nav-item p-2 p-md-0 ml-md-3">
             <a
               href="/blog"
-              class="nav-link text-dark fw-bold">
+              class="nav-link text-dark fw-bold"
+            >
               <span class="pb-1">
                 ブログ記事
               </span>
@@ -80,7 +83,7 @@
               href="/signup?contractType=CORPORATION"
             >
               無料でトライアル
-              <i class="ml-2 fas fa-angle-right"></i>
+            <i class="ml-2 fas fa-angle-right"></i>
             </a>
           </li>
 
@@ -106,7 +109,6 @@
         </ul>
       </div>
     </div>
-
   </header>
 </template>
 
