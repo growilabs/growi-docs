@@ -7,6 +7,103 @@
           <span class="text-dark align-middle">GROWI</span><span class="gc-brandlogo-second-level-domain align-middle">.cloud</span>
         </span>
       </a>
+
+      <div class="navbar-expand-lg navbar-static-top">
+        <div class="navbar-main">
+          <ul class="nav navbar-nav flex-md-row">
+
+            <li class="nav-item p-2 p-md-0 ml-md-3">
+              <a
+                href="/"
+                class="nav-link text-dark fw-bold">
+                <span class="pb-1">
+                  ホーム
+                </span>
+              </a>
+            </li>
+
+            <li class="nav-item p-2 p-md-0 ml-md-3">
+              <a
+                href="/price-and-features"
+                class="nav-link border-follow text-dark fw-bold"
+              >
+                <span class="pb-1">
+                  料金・機能
+                </span>
+              </a>
+            </li>
+
+            <li class="nav-item p-2 p-md-0 ml-md-3">
+              <a
+                href="/introductions"
+                class="nav-link text-dark fw-bold">
+                <span class="pb-1">
+                  導入事例
+                </span>
+              </a>
+            </li>
+
+            <li class="nav-item p-2 p-md-0 ml-md-3">
+              <a
+                href="/blog/"
+                class="nav-link text-dark fw-bold">
+                <span class="pb-1">
+                  ブログ
+                </span>
+              </a>
+            </li>
+
+            <li class="nav-item p-2 p-md-0 ml-md-3 gc-active">
+              <a
+                href="/help"
+                class="nav-link text-dark fw-bold"
+              >
+                ヘルプ
+              </a>
+            </li>
+
+
+            <li class="nav-item p-2 p-md-0 ml-md-3">
+              <a
+                href="/help"
+                class="nav-link text-dark fw-bold"
+              >
+                お問い合わせ
+              </a>
+            </li>
+
+            <li class="nav-item p-2 p-md-0 ml-md-3">
+              <a
+                type="button"
+                class="btn gc-bg-gradation-skyblue text-white fw-bold  mt-md-0 py-md-2 px-md-3"
+                href="signup?contractType=CORPORATION"
+              >
+                無料でトライアル
+                <i class="ml-2 fas fa-angle-right"></i>
+              </a>
+            </li>
+
+            <li class="nav-item p-2 p-md-0 ml-md-3">
+              <a
+                href="/help"
+                class="nav-link text-dark fw-bold"
+              >
+                資料請求
+              </a>
+            </li>
+
+            <li class="nav-item p-2 p-md-0 ml-md-3">
+              <a
+                href="/login"
+                class="nav-link text-dark fw-bold"
+              >
+                ログイン
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </header>
   </div>
 </template>
@@ -29,4 +126,17 @@
   height: 40px;
   margin-right: 12px;
 }
+
+.gc-active ::after {
+  display: block;
+  height: 3px;
+  font-size: 1px;
+  content: '';
+  background: transparent linear-gradient(105deg, #11c5dd 0%, #008dc1 100%) 0% 0% no-repeat padding-box;
+}
+
+.gc-bg-gradation-skyblue {
+  background: transparent linear-gradient(105deg, #11c5dd 0%, #008dc1 100%) 0% 0% no-repeat padding-box;
+}
+
 </style>
