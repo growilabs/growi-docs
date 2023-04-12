@@ -38,6 +38,7 @@
           </div>
         </div>
         <div class="col-12 col-md-2">
+          <!-- TODO: 120065 -->
           <div class="dropdown">
             <p class="text-white fw-bold gc-footer-title my-4">
               <span aria-haspopup="true" class="dropdown-toggle gc-change-laguage-dropdown" aria-expanded="false">言語選択</span>
