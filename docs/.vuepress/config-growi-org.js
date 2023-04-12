@@ -1,4 +1,5 @@
 const path = require('path');
+const Canonical = require('./plugins/canonical');
 
 module.exports = {
   title: 'GROWI Docs',
@@ -48,7 +49,19 @@ module.exports = {
         hostname: 'https://docs.growi.org',
       },
     ],
+    [
+      // self-referencing canonical
+      Canonical , {
+        canonicalBase: 'https://docs.growi.org',
+        excludePathPatterns: [
+          '(ja|en)\/api\/.*',
+          '(ja|en)\/dev\/.*',
+          '(ja|en)\/admin-guide\/(admin-cookbook|downgrading|getting-started|migration-guide)\/.*',
+        ]
+      }
+    ]
   ],
+
   markdown: {
     toc: { includeLevel: [2] },
     extendMarkdown: (md) => {

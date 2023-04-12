@@ -1,3 +1,5 @@
+const Canonical = require('./plugins/canonical');
+
 module.exports = {
   title: 'help-growi-cloud',
 
@@ -20,6 +22,10 @@ module.exports = {
   },
 
   plugins: [
+    [Canonical , {
+      canonicalBase: 'https://docs.growi.org',
+      excludePathPatterns: ['(ja|en)\/cloud\/.*'],
+    }],
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
   ],
