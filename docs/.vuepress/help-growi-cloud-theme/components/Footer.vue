@@ -60,12 +60,10 @@
 </template>
 
 <style scoped>
-/* Override .bg-dark */
 .gc-bg-dark {
   background-color: #254459 !important;
 }
 
-/* Override .text-right */
 .gc-text-right {
   text-align: right !important;
 }
