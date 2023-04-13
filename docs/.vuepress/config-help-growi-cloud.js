@@ -2,6 +2,7 @@ const Canonical = require('./plugins/canonical');
 
 module.exports = {
   title: 'help-growi-cloud',
+  base: '/help',
 
   // Markdown of build target
   patterns: [
