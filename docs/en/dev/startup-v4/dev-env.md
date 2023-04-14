@@ -27,7 +27,7 @@ The below documentation details our development environment at WESEEK Inc. It ma
         * Ubuntu    Stopped         2
         ```
 
-1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
 :::
 
