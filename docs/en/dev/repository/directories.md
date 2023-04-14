@@ -5,21 +5,19 @@
 ```text
 ├── packages
 │   ├── app
-│   ├── app-next
-│   ├── codemirror-textlint
+│   └── slackbot-proxy
+├── packages
 │   ├── core
-│   ├── plugin-attachment-refs
 │   ├── plugin-lsx
-│   ├── plugin-pukiwiki-like-linker
-│   ├── slack
-│   ├── slackbot-proxy
-│   └── ui
+│   ├── ...
+│
 ├── tsconfig.base.json
 ├── package.json
+├── turbo.json
 └── yarn.lock
 ```
 
-## packages/app
+## apps/app
 
 ```text
 ├── .next
@@ -46,8 +44,8 @@
 ├── src
 │   ├── client
 │   ├── components
+│   ├── features
 │   ├── interfaces
-│   ├── lib
 │   ├── migrations
 │   ├── models
 │   ├── pages
@@ -55,10 +53,7 @@
 │   ├── services
 │   ├── stores
 │   ├── styles
-│   ├── styles-hackmd
-│   ├── utils
-│   └── next-i18next.config.ts
-├── styles
+│   └── utils
 ├── test
 │   ├── cypress
 │   ├── integration
@@ -69,8 +64,5 @@
 ├── next.config.js
 ├── package.json
 ├── regconfig.json
-├── tsconfig.base.json
-├── tsconfig.build.client.json
-├── tsconfig.build.server.json
 └── tsconfig.json
 ```
