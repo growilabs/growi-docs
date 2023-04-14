@@ -12,16 +12,17 @@ GROWI-Dev devcontainer 内のターミナルで作業します。
 
 ### 依存ライブラリの取得
 
-プロジェクトルートで `yarn` コマンドを実行してください。
-
-``` bash
-yarn
-```
-
-代わりに、`turbo` コマンドを使うこともできます。この方法では、実行場所を選びません。
+`turbo` コマンドで `bootstrap` スクリプトを実行してください。
 
 ``` bash
 turbo run bootstrap
+```
+
+代わりに、`yarn` コマンドを使うこともできます。ただし、その場合はプロジェクトルートで実行する必要があります。
+
+``` bash
+cd ${project root dir}
+yarn
 ```
 
 ::: danger
@@ -77,7 +78,7 @@ turbo run bootstrap
 |`cy:run`|Cypress によるテストを実行します。|
 
 
-## production 用の成果物をビルドして起動
+## Production 用の成果物をビルドして起動
 
 ::: tip
 以下のコマンドは `apps/app` ディレクトリ下で実行してください。
@@ -89,7 +90,7 @@ turbo run bootstrap
     turbo run bootstrap
     ```
 
-1. production 用にビルド
+1. Production 用にビルド
 
     ```bash
     turbo run build

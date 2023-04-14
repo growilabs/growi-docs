@@ -11,16 +11,17 @@ Perform the following steps in a terminal inside your GROWI-Dev devcontainer.
 
 ### Install Dependencies
 
-Execute `yarn` at the project root.
-
-``` bash
-yarn
-```
-
-Instead of using `yarn`, you can `turbo` command, which allows you to execute at any directory.
+Execute the `bootstrap` script with `turbo`.
 
 ``` bash
 turbo run bootstrap
+```
+
+Alternatively, you can use the `yarn` command. But then you have to run it in the project root.
+
+``` bash
+cd ${project root dir}
+yarn
 ```
 
 ::: danger
