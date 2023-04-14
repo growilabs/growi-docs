@@ -30,7 +30,7 @@ DO NOT USE `npm install`.
 
 ### Launch Development Server
 
-Open a terminal, run the development server.  
+Open a terminal, and launch the development server.  
 You can exit with `Ctrl-C`.
 
 ### Server for developing frontend
@@ -41,68 +41,59 @@ You can exit with `Ctrl-C`.
    - Run `dev` scripts of dependent sub-packages, followed by the main `dev` script.
    - Detect changes in the `apps/app` directory and auto-restart the server.
 
+### Auto-build for sub-packages
 
+Sub-packages are managed in package `packages/*` which is separate from the main app package (`apps/app`),
+and neither change detection nor auto restarting does not work with the `dev` script of the app.
+To code on the development server with change detection for sub-packages, open a new terminal and run the following command.
 
+The following example is for watching `packages/core`. You can exit with `Ctrl-C`.
 
-
-
-### Auto-build preset themes
-
-Preset theme source (scss) is managed in package `packages/preset-themes` which is separate from the main app package (`packages/app`),
-and is built only once when you run `yarn dev`.
-To modify the look and feel of a preset theme while coding on the development server with change detection, open a new terminal and run the following command:
-You can exit with `Ctrl-C`.
-
-1. `cd packages/preset-themes`
-1. `yarn dev`
+1. `cd packages/core`
+1. `turbo run watch`
 
 
 ## Additional Launches
 
 Each time the application is launched, repeat the steps under [First Time](#first-time).
 
-Section [Install Dependencies](#install-dependencies) can be executed with yarn if the lerna package is installed in node_modules.
-
-``` bash
-yarn lerna bootstrap
-```
-
-## List of npm Commands
+## List of npm Scripts
 
 Here are the main commands used in development.  
-Check also the script section of `packages/app/package.json`
+Check also the script section of `apps/app/package.json`
 to see all commands you can use.
 
 :::tip
-Execute the following command under the `packages / app` directory.
+Execute the following command under the `apps/app` directory.
 :::
 
 |command|desc|
 |--|--|
-|`dev`|Launch Express server for development.<br>Watching file chages and rebuild automatically.|
-|`test`|Run unit/integration tests.|
+|`dev`|Launch Express server for development.<br>Watch file changes and rebuild automatically.|
+|`dev:migrate:create`|Create a new migration file.|
+|`dev:migrate:status`|Check which migrations are applied (or not.|
+|`dev:migrate:up`|Apply all pending migrations.|
+|`dev:migrate:down`|Revert (only) the last applied migration.|
+|`dev:migrate`|*[Alias]* Invoke `migrate:up`.|
 |`lint`|Run code linting.|
-|`migrate:create`|Create a new migration file.|
-|`migrate:status`|Check which migrations are applied (or not.|
-|`migrate:up`|Apply all pending migrations.|
-|`migrate:down`|Revert (only) the last applied migration.|
-|`migrate`|*[Alias]* Invoke `migrate:up`.|
+|`test`|Run unit/integration tests.|
+|`cy:run`|Run tests with Cypress.|
 
 
 ## Production Build and Execution
 
 ::: tip
-Execute the following command under the root directory of the repository.
+Execute the following command under the `apps/app` directory.
 :::
 
 1. Install dependencies
 
     ```bash
-    npx lerna bootstrap
+    turbo run bootstrap
     ```
 
 1. Build for production
 
     ```bash
-    yarn lerna run build
+    turbo run build
     ```
