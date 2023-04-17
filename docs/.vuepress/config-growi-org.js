@@ -267,8 +267,17 @@ module.exports = {
           '/en/dev/': [
             '/en/dev/',
             {
-              title: 'Getting Started v4',
+              title: 'Getting Started v5',
               collapsable: false,
+              children: [
+                '/en/dev/startup-v5/dev-env.md',
+                '/en/dev/startup-v5/launch-devcontainer.md',
+                '/en/dev/startup-v5/start-development.md',
+              ],
+            },
+            {
+              title: '(Deprecated) Getting Started v4',
+              collapsable: true,
               children: [
                 '/en/dev/startup-v4/dev-env.md',
                 '/en/dev/startup-v4/launch-devcontainer.md',
@@ -522,8 +531,17 @@ module.exports = {
           '/ja/dev/': [
             '/ja/dev/',
             {
-              title: '開発スタートアップ v4',
+              title: '開発スタートアップ v5',
               collapsable: false,
+              children: [
+                '/ja/dev/startup-v5/dev-env.md',
+                '/ja/dev/startup-v5/launch-devcontainer.md',
+                '/ja/dev/startup-v5/start-development.md',
+              ],
+            },
+            {
+              title: '(旧版) 開発スタートアップ v4',
+              collapsable: true,
               children: [
                 '/ja/dev/startup-v4/dev-env.md',
                 '/ja/dev/startup-v4/launch-devcontainer.md',

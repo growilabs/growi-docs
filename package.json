@@ -22,15 +22,15 @@
   "watch": {
     "apiv3:dev": {
       "patterns": [
-        "../growi/packages/app/config/swagger-definition.js",
-        "../growi/packages/app/src/server/routes/apiv3"
+        "../growi/apps/app/config/swagger-definition.js",
+        "../growi/apps/app/src/server/routes/apiv3"
       ]
     }
   },
   "scripts": {
     "apiv3:jsdoc:base": "swagger-jsdoc -o tmp/swagger.json",
-    "apiv3:jsdoc:dev": "npm run apiv3:jsdoc:base -- -d ../growi/packages/app/config/swagger-definition.js \"../growi/packages/app/src/server/**/*.js\"",
-    "apiv3:jsdoc:build": "npm run apiv3:jsdoc:base -- -d tmp/growi/packages/app/config/swagger-definition.js \"tmp/growi/packages/app/src/server/**/*.js\"",
+    "apiv3:jsdoc:dev": "npm run apiv3:jsdoc:base -- -d ../growi/apps/app/config/swagger-definition.js \"../growi/apps/app/src/server/**/*.js\"",
+    "apiv3:jsdoc:build": "npm run apiv3:jsdoc:base -- -d tmp/growi/apps/app/config/swagger-definition.js \"tmp/growi/apps/app/src/server/**/*.js\"",
     "apiv3:redoc": "redoc-cli bundle -o docs/.vuepress/public/redoc.html tmp/swagger.json",
     "apiv3:dev": "run-s apiv3:jsdoc:dev apiv3:redoc",
     "apiv3:build": "run-s apiv3:jsdoc:build apiv3:redoc",
