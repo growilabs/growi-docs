@@ -3,7 +3,7 @@
     <GcHeader />
     <!-- TODO: 119321 -->
     <!-- <Content /> -->
-    <Home />
+    <Top />
     <GcFooter />
   </div>
 </template>
