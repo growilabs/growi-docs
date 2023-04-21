@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import GcHeader from '@theme/components/Header.vue'
-import GcFooter from '@theme/components/Footer.vue'
+import Header from '@theme/components/Header.vue'
+import Footer from '@theme/components/Footer.vue'
 
 export default {
-  components: { GcHeader,GcFooter },
+  components: { Header,Footer },
 }
 </script>
