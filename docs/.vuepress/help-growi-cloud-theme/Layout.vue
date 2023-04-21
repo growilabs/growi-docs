@@ -11,9 +11,9 @@
 <script>
 import Header from '@theme/components/Header.vue'
 import Footer from '@theme/components/Footer.vue'
-import Home from '@theme/components/Home.vue'
+import Top from '@theme/components/Home.vue'
 
 export default {
-  components: { Header,Footer, Home },
+  components: { Header,Footer, Top },
 }
 </script>
