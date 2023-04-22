@@ -3,7 +3,7 @@
     <a class="navbar-brand" href="/" title="Home">
       <span class="gc-brandlogo-midium py-2 fw-bold gc-text-lato">
         <img src="/assets/images/gc-logo.png">
-        <span class="text-dark align-middle">GROWI</span><span class="gc-brandlogo-second-level-domain align-middle">.cloud</span>
+        <span class="gc-text-dark align-middle">GROWI</span><span class="gc-brandlogo-second-level-domain align-middle">.cloud</span>
       </span>
     </a>
 
@@ -11,30 +11,30 @@
       <div class="navbar-main">
         <ul class="nav navbar-nav flex-md-row">
           <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="/" class="nav-link text-dark fw-bold">
+            <a href="/" class="nav-link gc-text-dark fw-bold">
               <span class="pb-1">ホーム</span>
             </a>
           </li>
           <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="/price-and-features" class="nav-link text-dark fw-bold">
+            <a href="/price-and-features" class="nav-link gc-text-dark fw-bold">
               <span class="pb-1">料金・機能</span>
             </a>
           </li>
           <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="/introductions" class="nav-link text-dark fw-bold">
+            <a href="/introductions" class="nav-link gc-text-dark fw-bold">
               <span class="pb-1">導入事例</span>
             </a>
           </li>
           <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="/blog" class="nav-link text-dark fw-bold">
+            <a href="/blog" class="nav-link gc-text-dark fw-bold">
               <span class="pb-1">ブログ記事</span>
             </a>
           </li>
           <li class="nav-item p-2 p-md-0 ml-md-3 gc-active">
-            <a href="/help" class="nav-link text-dark fw-bold">ヘルプ</a>
+            <a href="/help" class="nav-link gc-text-dark fw-bold">ヘルプ</a>
           </li>
           <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="/contact" target="_blank" rel="noopener noreferrer" class="nav-link text-dark fw-bold">お問い合わせ</a>
+            <a href="/contact" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">お問い合わせ</a>
           </li>
           <li class="nav-item p-2 p-md-0 ml-md-3">
             <a
@@ -46,10 +46,10 @@
             </a>
           </li>
           <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="/catalog-request" target="_blank" rel="noopener noreferrer" class="nav-link text-dark fw-bold">資料請求</a>
+            <a href="/catalog-request" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">資料請求</a>
           </li>
           <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="/login" class="nav-link text-dark fw-bold">ログイン</a>
+            <a href="/login" class="nav-link gc-text-dark fw-bold">ログイン</a>
           </li>
         </ul>
       </div>
@@ -58,6 +58,10 @@
 </template>
 
 <style scoped>
+.gc-text-dark {
+  color: #254459;
+}
+
 .gc-brandlogo-midium {
   font-size: 20px;
 }
