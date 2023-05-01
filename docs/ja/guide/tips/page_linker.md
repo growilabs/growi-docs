@@ -73,11 +73,15 @@ GROWI では、各ページへのリンクの書き方として、以下の2つ�
 
 ### 例4: 外部サイト
 
+<!--
+機能していないため、一時的に非公開
+
 #### Markdown
 
 ```markdown
 [[Google>https://www.google.co.jp]]
 ```
+-->
 
 #### HTML
 
