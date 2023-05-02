@@ -27,11 +27,11 @@ The options you can set include:
 
 | Parameter name    | Default value    |  Explanation   | Additional details |
 | --- | --- | --- | --- |
-|  num   |  not set(< growi-plugin-lsx 4.0.0), 50(>= growi-plugin-lsx 4.0.0)   | Specify the number of pages in the hierarchy.| [num option details](#num-option) |
-|  depth   |  not set   | Specify the maximum hierarchy depth to display.| [depth option details](#depth-option) |
-|  sort   |  path   | Specify the sort order of the hierarchy. | [sort option details](#sort-option) |
-|  reverse   |  false   | Reverse the order of the hierarchy.| [reverse option details](#reverse-option) |
-|  filter   |  not set   | Filter the hierarchy according to some parameters. | [filter option details](#filter-option) |
+|  num   |  not set(< growi-plugin-lsx 4.0.0), 50(>= growi-plugin-lsx 4.0.0)   | Specify the number of pages in the hierarchy.| [num option details](./hierarchical.html#num) |
+|  depth   |  not set   | Specify the maximum hierarchy depth to display.| [depth option details](./hierarchical.html#depth) |
+|  sort   |  path   | Specify the sort order of the hierarchy. | [sort option details](./hierarchical.html#sort) |
+|  reverse   |  false   | Reverse the order of the hierarchy.| [reverse option details](./hierarchical.html#reverse) |
+|  filter   |  not set   | Filter the hierarchy according to some parameters. | [filter option details](./hierarchical.html#filter) |
 
 Additional details are as follows.
 
