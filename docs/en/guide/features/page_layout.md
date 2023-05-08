@@ -6,7 +6,7 @@ This page describes the page layout of GROWI.
 
 ## 1. GROWI logo
 
-You can click on this logo to go to the home page.
+If you want to go to the top page quickly, click this logo.
 
 ## 2. Search bar
 
@@ -19,26 +19,26 @@ See [Receive in-app notifications](/en/guide/features/in-app-notification.html) 
 
 ## 4. Create page button
 
-You can create a new page. You can easily create a journal-like page that includes the date in the path, or a page using the template.
+You can easily create a journal-like page that includes the date in the path, or a page using the template.
 
 ## 5. Settings button
 
-You can configure the following settings.
+You can configure the following settings：
 
 - Show/Hide sidebar
 - Color mode
 
 ## 6. User icon
 
-You can do the following actions.
+You can do the following actions：
 
-- go to your home page
-- set up your account
-- log out
+- Go to your home page
+- Set up your account
+- Logout
 
 ## 7. Left sidebar
 
-You can do the following actions.
+You can do the following actions：
 
 - View the page tree
 - View and edit custom sidebars
@@ -51,12 +51,11 @@ You can add tags to a page.
 
 ## 9. Page title
 
-The title of the page is displayed here.
-You can [copy the page path or URL to the clipboard](/en/guide/features/copy_to_clipboard.html) from the button next to the title.
+The title of the page is displayed here. You can [copy the page path or URL to the clipboard](/en/guide/features/copy_to_clipboard.html) from the button next to the title.
 
 ## 10. Page tools button
 
-You can do the following operations on the displayed page.
+You can do the following operations on the displayed page：
 
 - [Subscribe to a page](/en/guide/features/in-app-notification.html)
 - Like
@@ -78,12 +77,12 @@ You can switch between View mode, Edit mode, and [HackMD mode](/en/guide/feature
 
 ## 12. Page list button
 
-You can display the child pages of the page you are viewing.
+Displays pages under the child pages.
 
 ## 13. Comment button
 
-You can shortcut to the comment view/add field at the bottom of the page.
+Shortcut button to the comment field at the bottom of the page.
 
 ## 14. Right page sidebar
 
-You can see a list of headings in the page. You can jump to the target heading quickly by clicking on the heading in the sidebar.
+The list of headings in the page is displayed. You can jump to the target heading quickly by clicking on the heading in the sidebar.
