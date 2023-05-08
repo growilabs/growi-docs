@@ -23,14 +23,14 @@ You can easily create a journal-like page that includes the date in the path, or
 
 ## 5. Settings button
 
-You can configure the following settings：
+You can configure the following settings:
 
 - Show/Hide sidebar
 - Color mode
 
 ## 6. User icon
 
-You can do the following actions：
+You can do the following actions:
 
 - Go to your home page
 - Set up your account
@@ -38,12 +38,12 @@ You can do the following actions：
 
 ## 7. Left sidebar
 
-You can do the following actions：
+You can do the following actions:
 
 - View the page tree
 - View and edit custom sidebars
 - View the history of updates
-- View a list of tags and search pages by tag
+- View a list of tags and search pages by tags
 
 ## 8. Add tag button
 
@@ -53,9 +53,9 @@ You can add tags to a page.
 
 The title of the page is displayed here. You can [copy the page path or URL to the clipboard](/en/guide/features/copy_to_clipboard.html) from the button next to the title.
 
-## 10. Page tools button
+## 10. Page tools buttons
 
-You can do the following operations on the displayed page：
+You can do the following operations on the displayed page:
 
 - [Subscribe to a page](/en/guide/features/in-app-notification.html)
 - Like
@@ -73,7 +73,7 @@ You can do the following operations on the displayed page：
 
 ## 11. Page toolbar
 
-You can switch between View mode, Edit mode, and [HackMD mode](/en/guide/features/hackmd.html)
+You can switch between View mode, Edit mode, and [HackMD mode](/en/guide/features/hackmd.html).
 
 ## 12. Page list button
 
