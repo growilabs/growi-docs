@@ -36,7 +36,7 @@ You can do the following actions:
 - Set up your account
 - Logout
 
-## 7. Left sidebar
+## 7. Sidebar
 
 You can do the following actions:
 
@@ -83,6 +83,6 @@ Displays pages under the child pages.
 
 Shortcut button to the comment field at the bottom of the page.
 
-## 14. Right page sidebar
+## 14. Table of contents
 
-The list of headings in the page is displayed. You can jump to the target heading quickly by clicking on the heading in the sidebar.
+You can jump to the target heading quickly.
