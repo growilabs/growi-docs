@@ -60,7 +60,7 @@ jobs:
         curl -SL $GROWI_ARCHIVE_URL | tar -xz -C tmp/growi --strip-components 1
 
     - name: Build and deploy
-      uses: jenkey2011/vuepress-deploy@v1.8.1
+      uses: jenkey2011/vuepress-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BUILD_SCRIPT: yarn apiv3:build && yarn docs:build
