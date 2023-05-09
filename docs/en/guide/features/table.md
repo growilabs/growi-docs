@@ -1,25 +1,39 @@
-# Managing tables with Handsontable
+# Create and edit tables
 
-GROWI allows you to create and edit tables directly using a tool called Handsontable.
+GROWI allows you to create tables using Handsontable, a JavaScript library that brings spreadsheet-like table management.
 
 ![](/assets/images/table.png)
 
-## Create table
+## Create a table
 
-You can create a table by selecting the table icon from the toolbar at the top of the page.
+1. Click the table icon on the toolbar to open the Edit Table dialog box.
 
 ![](/assets/images/table_button.png)
 
-## Add rows and columns
-
-You can add a column to your table by right-clicking either the column preceding or following the column you want to add and then selecting "Insert column left" or "Insert column right".
+2. Right-click on the table in the dialog to add rows and columns, etc.
 
 ![](/assets/images/insert_columns.png)
 
-Rows can also be added in a similar way, by right-clicking the row below or above and selecting "Insert row above" or "Insert row below".
+3. Click the Done button to insert the table.
 
-## Edit a table after it is written
+## Edit an already existing table in the dialog
 
-If you navigate to an already-written table in the editor, you will see the table icon appear beside your cursor.  This icon indicates that you are editing the table.
+### Edit mode
+
+1. Move the cursor to the table in editor.
+
+2. Confirm that the table icon is appeared beside your cursor and click on the table icon on the toolbar.
 
 ![](/assets/images/edit_exists_table.png)
+
+3. The dialog box will appear and you can edit the table.
+
+### View mode
+
+1. Move the cursor to the table in editor.
+
+2. Click the edit button that appears in the upper right corner of the table.
+
+![](/assets/images/edit_exists_table_view.png)
+
+3. The dialog box will appear and you can edit the table.
