@@ -1,17 +1,30 @@
 # UML を記述する
 
-![](/assets/images/uml_diagrams.png)
-
 GROWI では [PlantUML](https://plantuml.com/) を利用して、UML 図を書くことができます。
 
-具体的な記述例は [Real World UML](https://real-world-plantuml.com/) を参考にすると便利です。
+具体的な記述例は [Real World UML](https://real-world-plantuml.com/) などをご参照ください。
 
-**例:**
+![](/assets/images/uml_diagrams.png)
 
-```markdown
+
+## 記法1
+
+~~~ plantuml
+``` plantuml
+class RemarkPlugin {
+    + transform(syntaxTree: AST): AST
+}
+```
+~~~
+
+## 記法2
+
+~~~ plantuml
+``` plantuml
 @startuml
-
-(PlantUML の内容)
-
+class RemarkPlugin {
+    + transform(syntaxTree: AST): AST
+}
 @enduml
 ```
+~~~
