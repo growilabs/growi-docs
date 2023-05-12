@@ -1,43 +1,32 @@
-# Create diagrams with [draw.io](https://app.diagrams.net/)
+# Create diagrams using draw.io
 
-In GROWI, you can create draw.io diagrams by using the draw.io integration.
+GROWI allows you to create a variety of diagrams using draw.io.
 
-draw.io is a free drawing tool that can create mock-ups, flowcharts, network diagrams, etc.
+[draw.io](https://app.diagrams.net/) is a free drawing tool that allows you to intuitively create mock-ups, flowcharts, network diagrams, etc.
 
 ![drawio](/assets/images/drawio.png)
 
-## Add a draw.io diagram to a GROWI page
+## Insert a diagram
 
-You can add a draw.io diagram to your page using the draw.io icon (![drawio-icon](/assets/images/drawio-icon.png)) in the toolbar.
+1. Click the flowchart icon on the toolbar to open the draw.io editor.
 
 ![drawio-create](/assets/images/drawio-create.png)
 
-Click the toolbar icon (![drawio-icon](/assets/images/drawio-icon.png)) to display the draw.io editor. Use this editor to draw the diagram you want to create.
-
-![drawio-editor](/assets/images/drawio-editor.png)
-
-You can save the diagram by pressing the "Save" button at the top right of the screen.
+2. Click the Save button in the upper right corner of the screen to insert the diagram.
 
 ![drawio-editor-save](/assets/images/drawio-editor-save.png)
 
-## Edit a diagram
+## Edit an already inserted diagram
 
-A draw.io diagram can be edited from the page preview or page editor screen.
+### Edit in view mode
 
-### Edit the diagram from the page preview screen
+You can edit a diagram by clicking the Edit button in the upper right corner of the diagram.
 
-A diagram can be edited by clicking the "Edit" button at the top right of the diagram.
+![drawio-edit-view](/assets/images/drawio-edit-view.png)
+
+### Edit in edit mode
+
+You can edit it by pressing the flowchart icon on the toolbar with the cursor over the ```` ```drawio  ``` ```` block.
 
 ![drawio-edit](/assets/images/drawio-edit.png)
 
-### Editing diagrams from the page editor screen
-
-From the page edit screen, you can edit the diagram by moving the cursor inside the draw.io code block and clicking the draw.io icon (![drawio-icon](/assets/images/drawio-icon.png)) on the toolbar.
-
-The draw.io code block will begin with three colons and the word "drawio" and end with 3 colons, as follows:
-
-```
-::: drawio
-(draw.io data format)
-:::
-```
