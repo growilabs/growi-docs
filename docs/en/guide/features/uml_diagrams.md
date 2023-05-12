@@ -8,10 +8,22 @@ Refer to [Real World UML](https://real-world-plantuml.com/) for some examples on
 
 **Example:**
 
-```markdown
+~~~ plantuml
+``` plantuml
+class RemarkPlugin {
+    + transform(syntaxTree: AST): AST
+}
+```
+~~~
+
+or
+
+~~~ plantuml
+``` plantuml
 @startuml
-
-(PlantUML content)
-
+class RemarkPlugin {
+    + transform(syntaxTree: AST): AST
+}
 @enduml
 ```
+~~~

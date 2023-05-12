@@ -37,11 +37,11 @@ lsx にはページ指定だけでなく、複数のオプションの設定も�
 
 | パラメータ    | デフォルト値    |  説明   | 詳細 |
 | --- | --- | --- | --- |
-|  num   |  未設定(< growi-plugin-lsx 4.0.0), 50(>= growi-plugin-lsx 4.0.0)   | ページ一覧の出力数を指定。| [numオプション詳細](#num-オプション) |
-|  depth   |  未設定   | 階層を指定してページ一覧を出力。| [depthオプション詳細](#depth-オプション) |
-|  sort   |  path   | ページ一覧の並び順を指定。| [sortオプション詳細](#sort-オプション) |
-|  reverse   |  false   | ページ一覧の並び順を逆にする。| [reverseオプション詳細](#reverse-オプション) |
-|  filter   |  未設定   | ページ一覧に出力する内容をフィルタする。 | [filterオプション詳細](#filter-オプション) |
+|  num   |  未設定(< growi-plugin-lsx 4.0.0), 50(>= growi-plugin-lsx 4.0.0)   | ページ一覧の出力数を指定。| [numオプション詳細](./hierarchical.html#num-オプション) |
+|  depth   |  未設定   | 階層を指定してページ一覧を出力。| [depthオプション詳細](./hierarchical.html#depth-オプション) |
+|  sort   |  path   | ページ一覧の並び順を指定。| [sortオプション詳細](./hierarchical.html#sort-オプション) |
+|  reverse   |  false   | ページ一覧の並び順を逆にする。| [reverseオプション詳細](./hierarchical.html#reverse-オプション) |
+|  filter   |  未設定   | ページ一覧に出力する内容をフィルタする。 | [filterオプション詳細](./hierarchical.html#filter-オプション) |
 
 
 ### num オプション

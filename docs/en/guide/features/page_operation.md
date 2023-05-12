@@ -1,9 +1,38 @@
-# Move / Duplicate / Delete a page
+# Move/Duplicate/Delete a page
 
-GROWI allows you to move, copy, or delete pages flexibly using the menu tab to the right of the Update History tab on the page toolbar.
-
-[//]: <> (TODO: 英語で、presentationという言葉はその意味が表していないので変わってください)
+Clicking the three dot leader of the page tool button opens a menu of operations on the current page.
 
 ![](/assets/images/page_operation.png)
 
-For more details, please check the respective pages for moving, [duplicating](/en/guide/tutorial/duplicate_page.html), or [deleting](/en/guide/tutorial/delete_page.html) a page.
+## Move/Rename a page
+
+1. Click the three dot leader of the page tool button and select "Move/Rename".
+2. Enter the new page path in the dialog box that appears.
+3. Check the options if necessary.
+4. Click "Rename" button.
+
+## Duplicate a page
+
+1. Click the three dot leader of the page tool button and, and select "Duplicate".
+2. Enter the new page path in the dialog box that appears.
+3. Check "Recursively" if necessary.
+4. Click "Duplicate page" button.
+
+
+## Delete a page
+
+1. Click the three dot leader of the page tool button and, and select "Delete".
+2. Check the necessary items in the dialog box.
+3. Click "Delete page" button.
+
+### Restoring a deleted page
+
+Deleted pages can be viewed and restored from the Trash, except when "Delete completely" is checked.
+
+1. Click the trash icon on the sidebar.
+2. Click on the page you wish to restore.
+3. Click the "Put back" button.
+
+![](/assets/images/trash.png)
+
+![](/assets/images/put_back_page.png)
