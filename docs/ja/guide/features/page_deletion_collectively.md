@@ -1,18 +1,20 @@
 # ページを一括削除する
 
-検索結果一覧画面で、複数のページを一括で削除する方法を紹介します。
-
 :::warning
-この機能は検索機能を利用しているため、検索機能がセットアップされている必要があります。
+ページを一括で削除するためには、検索機能をセットアップする必要があります。セットアップ方法は、[こちら](/ja/admin-guide/management-cookbook/setup-search-system)をご参照ください。
 :::
 
-1. ページトップバーの検索バーから削除したいページがヒットするような検索キーワードを入力し、Enter (return) を押します。
-2. 検索結果一覧画面に遷移します。
-3. 削除したいページのチェックボックスにチェックを入れ、「Delete All」ボタンを押します。
-  ![page_deletion_collectively_1](/assets/images/page_deletion_collectively_1.png)
+1. 検索バーに削除したいページに関するキーワードを入力します。
+  ![enter-keywords](/assets/images/enter-keywords.png)
 
-4. モーダルに削除するページのリストが表示されるので、確認して「Delete」ボタンを押すとページが削除されます。
-  ![page_deletion_collectively_2](/assets/images/page_deletion_collectively_2.png)
+2. 検索結果が表示されるので、削除したいページのチェックボックスにチェックを入れます。
+  ![check-the-checkboxes](/assets/images/check-the-checkboxes.png)
 
-- 「Delete completely」にチェックを入れて削除すると、完全削除が実行されます。
-- 削除権限がないページの削除はスキップされます。
+3. Delete ALL ボタンを押します。
+  ![click-deleteall](/assets/images/click-deleteall.png)
+
+4. ダイアログに表示された削除するページの一覧を確認し、Delete page ボタンを押します。
+
+- 「Delete completely」にチェックを入れると、ゴミ箱を経由せずに完全削除が実行されます。
+- 削除権限がないページの削除はスキップします。
+  ![delete-page-dialog](/assets/images/delete-page-dialog.png)
