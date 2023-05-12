@@ -1,4 +1,4 @@
-# UML を記述する
+# UML 図を作成する
 
 GROWI では [PlantUML](https://plantuml.com/) を利用して、UML 図を書くことができます。
 
