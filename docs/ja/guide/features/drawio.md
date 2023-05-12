@@ -24,7 +24,7 @@ GROWI では draw.io を利用して、さまざまな図を作成できます�
 
 図の右上にある Edit ボタンから編集できます。
 
-![drawio-edit](/assets/images/drawio-edit-view.png)
+![drawio-edit-view](/assets/images/drawio-edit-view.png)
 
 ### 編集モードで編集する
 

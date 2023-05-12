@@ -22,7 +22,7 @@ GROWI allows you to create a variety of diagrams using draw.io.
 
 You can edit a diagram by clicking the Edit button in the upper right corner of the diagram.
 
-![drawio-edit](/assets/images/drawio-edit-view.png)
+![drawio-edit-view](/assets/images/drawio-edit-view.png)
 
 ### Edit in edit mode
 
