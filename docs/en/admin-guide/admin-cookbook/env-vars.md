@@ -8,9 +8,9 @@ pageClass: admin-cookbook-env-vars
 
 | Enviroment Variable | Description | Default Value |
 | ------------------- | ----------  | ------------- |
+| `APP_SITE_URL` | Site URL. e.g. `https://example.com`, `https://example.com:8080` | |
 | `MONGO_URI` | URI to connect to MongoDB. | `mongodb://localhost/growi` |
-| `NO_CDN` | If `true`, system doesn't use CDN, all resources will be downloaded from CDN when building a client, and served by the GROWI Express server. | `false` |
-| `ELASTICSEARCH_VERSION` | Elasticsearch major version that system connects to. (`6` or `7` can be specified) | `7` |
+| `ELASTICSEARCH_VERSION` | Elasticsearch major version that system connects to. (`7` or `8` can be specified) | `8` |
 | `ELASTICSEARCH_URI` | URI to connect to Elasticsearch. | |
 | `ELASTICSEARCH_REQUEST_TIMEOUT` | Max request timeout in milliseconds for each request.(msec) | 8000 |
 | `ELASTICSEARCH_REJECT_UNAUTHORIZED` | Turn off certificate verification when connecting with HTTPS schema. | `false` |
@@ -77,7 +77,6 @@ pageClass: admin-cookbook-env-vars
 | `SLACKBOT_WITH_PROXY_SALT_FOR_GTOP` | Salt (for GROWI to Proxy) when generating tokens for the Official Bot or Custom Bot with proxy environment | `gtop` |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_PTOG` | Salt (for GROWI to Proxy) when generating tokens for the Official Bot or Custom Bot with proxy environment | `ptog` |
 | **Option (Overwritable in admin page)** | | |
-| `APP_SITE_URL` | Site URL. e.g. `https://example.com`, `https://example.com:8080` | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | Prioritize env vars over values in DB for Site URL | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` | Prioritize env var over value in DB for File Upload Type | `false` |
 | `LOCAL_STRATEGY_ENABLED` | Enable or disable ID/Pass login | |
