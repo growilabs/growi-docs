@@ -25,7 +25,7 @@ pageClass: admin-cookbook-env-vars
 | `DISABLE_LINK_SHARING` | Disable link sharing feature | `false` |
 | `FORMAT_NODE_LOG` | If `false`, Output server log as JSON. (Enabled only when `NODE_ENV=production`) | `true` |
 | `USER_UPPER_LIMIT` | (TBD) | |
-| `MIN_PASSWORD_LENGTH` | Minimum password length that users can set. | `8` |
+| `MIN_PASSWORD_LENGTH` | Minimum password length that users can set. | 8 |
 | `DEFAULT_EMAIL_PUBLISHED` | Default setting for publishing new user email addresses. | `true` |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Maximum number of connections for all clients that receive push messages. | 5000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Maximum number of connections for guest clients that receive push messages. | 2000 |

@@ -24,7 +24,7 @@ pageClass: admin-cookbook-env-vars
 | `DISABLE_LINK_SHARING` | シェアリンク機能を無効化します。 | `false` |
 | `FORMAT_NODE_LOG` |  `false`の場合、サーバーログを JSON 形式で出力します。(`NODE_ENV=production` の時のみ可能) | `true` |
 | `USER_UPPER_LIMIT` | (TBD) | |
-| `MIN_PASSWORD_LENGTH` | ユーザーが設定可能なパスワードの最短文字数 | `8` |
+| `MIN_PASSWORD_LENGTH` | ユーザーが設定可能なパスワードの最短文字数 | 8 |
 | `DEFAULT_EMAIL_PUBLISHED` | 新規作成されたユーザーのデフォルトの email 公開設定 | `true` |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Push 通知を行う全クライアントの同時接続数上限 | 5000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Push 通知を行うことのできるゲストユーザーの同時接続数上限 | 2000 |
