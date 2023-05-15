@@ -53,7 +53,7 @@ pageClass: admin-cookbook-env-vars
 | `GCS_BUCKET` | Name of the GCS bucket | |
 | `GCS_UPLOAD_NAMESPACE` | Directory name to create in the bucket | |
 | `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL` | Time to keep the cache of signed URLs (number of seconds)| 120 |
-| `GCS_REFERENCE_FILE_WITH_RELAY_MODE` | If `true`, the GROWI server sends the attachment data (relay mode). In the case of `false` (default value), the users download data from GCS directly by [Signed Urls](https://cloud.google.com/storage/docs/access-control/signed-urls) created by the server. | `false` |
+| `GCS_REFERENCE_FILE_WITH_RELAY_MODE` | If `true`, the GROWI server sends the attachment data (relay mode). In the case of `false` (default value), the users download data from GCS directly by [Signed URLs](https://cloud.google.com/storage/docs/access-control/signed-urls) created by the server. | `false` |
 | `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars over values in DB for some GCS options. | `false` |
 | **Option to integrate with external systems** | | |
 | `NCHAN_URI` | URI to connect to Nginx [Nchan](https://nchan.io/) server. | |
