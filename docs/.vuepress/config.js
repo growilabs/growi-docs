@@ -386,7 +386,6 @@ module.exports = {
                 '/ja/guide/features/bootstrap.md',
                 '/ja/guide/features/uml_diagrams.md',
                 '/ja/guide/features/drawio.md',
-                '/ja/guide/features/mermaid.md',
                 '/ja/guide/features/search.md',
                 '/ja/guide/features/tag.md',
                 '/ja/guide/features/template.md',
