@@ -30,7 +30,7 @@ Clicking the three dot leader of the page tool button opens a menu of operations
 Deleted pages can be viewed and restored from the Trash, except when "Delete completely" is checked.
 
 1. Click the trash icon on the sidebar.
-2. Click on the page you wish to restore.
+2. Click on the page you want to restore.
 3. Click the "Put back" button.
   ![](/assets/images/trash.png)
   ![](/assets/images/put_back_page.png)
