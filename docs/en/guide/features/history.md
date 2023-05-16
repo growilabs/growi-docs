@@ -1,9 +1,22 @@
-# Check page update history
+# View the history of page updates
 
-![](/assets/images/history.png)
+GROWI makes it easy to view the update history, past versions, and differences between versions.
 
-Update history for a page can be viewed by selecting the “Update History” tab.
 
-By clicking "View this version" for a particular page version, you can view the page as it existed at that time.
+## View past versions
 
-This is useful when you want to rollback content to a previous state.
+1. Click the three dot leader of the page tool button and select "History".
+  ![](/assets/images/click-history.png)
+
+2. Click "View this version" of the version you want to view.
+  ![](/assets/images/history.png)
+
+## View differences between versions
+
+1. Click the three dot leader of the page tool button and select "History".
+  ![](/assets/images/click-history.png)
+
+2. Select the source and target of the version you want to check for differences.
+
+- You can easily set the source and target by using the "Compare latest revision" and "Compare previous revision" buttons.
+  ![](/assets/images/compare-previous-revision.png)

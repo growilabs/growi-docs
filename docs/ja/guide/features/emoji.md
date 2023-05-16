@@ -1,17 +1,7 @@
-# 絵文字(emoji) を使う
+# 絵文字を使う
+
+1. Edit モードで絵文字を挿入したい場所にカーソルを合わせます。
+2. ツールバーの絵文字アイコン押すか、`:{文字列}` を入力します。
+3. 挿入したい絵文字を選択します。
 
 ![](/assets/images/emoji.png)
-
-GROWI では絵文字を使うことができます。
-絵文字の単語をコロンで囲うことによって絵文字と認識されます。
-利用できる Emoji 一覧は [markdown-it/markdown-it-emoji](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/light.json) から確認できます。
-
-**例:**
-
-```markdown
-:smiley:
-:smile:
-:laughing:
-:innocent:
-:drooling_face:
-```

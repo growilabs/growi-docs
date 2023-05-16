@@ -1,19 +1,21 @@
-# Delete Pages Collectively
-
-This section shows how to delete multiple pages at once on the search results list screen.
+# Delete pages at once
 
 :::warning
-This function uses the search function, so a search function must be set up.
+To delete pages at once, you need to set up a search function. Please refer to [here](/en/admin-guide/management-cookbook/setup-search-system) for setup instructions.
 :::
 
-1. From the search bar on the page top bar, enter search terms that will find the page you wish to delete and press Enter (return).
-2. Moves to the search results list screen.
-3. Check the checkboxes of the pages you wish to delete and press the "Delete All" button.
-  ![page_deletion_collectively_1](/assets/images/page_deletion_collectively_1.png)
+1. Enter keywords in the search bar regarding the page you want to delete.
+  ![enter-keywords](/assets/images/enter-keywords.png)
 
-4. A list of pages to be deleted will appear in the modal, so check it and press the "Delete" button to delete the page.
-  ![page_deletion_collectively_2](/assets/images/page_deletion_collectively_2.png)
+2. Check the checkbox of the page you want to delete.
+  ![check-the-checkboxes](/assets/images/check-the-checkboxes.png)
 
-- Check "Delete completely" to execute complete deletion.
-- Deletion of pages for which you do not have permission to delete will be skipped.
+3. Click the Delete ALL button.
+  ![click-deleteall](/assets/images/click-deleteall.png)
+
+4. Confirm the list of pages to be deleted in the dialog box and press the Delete page button.
+
+- If "Delete completely" is checked, complete deletion will be performed without going through the trash.
+- Deletion of pages that you do not have the authority to delete will be skipped.
+  ![delete-page-dialog](/assets/images/delete-page-dialog.png)
 

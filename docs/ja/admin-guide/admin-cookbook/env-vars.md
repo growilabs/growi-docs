@@ -7,9 +7,9 @@ pageClass: admin-cookbook-env-vars
 
 | 環境変数名 | 説明 | デフォルト値 |
 | ------------------- | ---------- | ------------- |
+| `APP_SITE_URL` | サイト URL (例: `https://example.com` 、 `https://example.com:8080`) | |
 | `MONGO_URI` | 接続する MongoDB サーバーの URI | `mongodb://localhost/growi` |
-| `NO_CDN` | `true` の場合、システムは CDN を使用しません。代わりに全てのリソースはクライアントビルド時に CDN からダウンロードされ、利用時は GROWI Express serverからのみ提供されるようになります。 | `false` |
-| `ELASTICSEARCH_VERSION` | 接続する Elasticsearch のメジャーバージョン。(`6` または `7` を指定可能) | `7` |
+| `ELASTICSEARCH_VERSION` | 接続する Elasticsearch のメジャーバージョン。(`7` または `8` を指定可能) | `8` |
 | `ELASTICSEARCH_URI` | 接続する Elasticsearch サーバーの URI | |
 | `ELASTICSEARCH_REQUEST_TIMEOUT` | リクエスト時のタイムアウト(msec) | 8000 |
 | `ELASTICSEARCH_REJECT_UNAUTHORIZED` | HTTPS スキーマでの接続時に証明書の検証を行うかどうか | `false` |
@@ -21,9 +21,10 @@ pageClass: admin-cookbook-env-vars
 | | : `undefined` 閲覧権限は管理画面のセキュリティ設定に従います。 | |
 | | : `public` 全てのページを強制的にパブリックにします。 | |
 | | : `private` 全てのページを強制的に非公開にします。 | |
+| `DISABLE_LINK_SHARING` | シェアリンク機能を無効化します。 | `false` |
 | `FORMAT_NODE_LOG` |  `false`の場合、サーバーログを JSON 形式で出力します。(`NODE_ENV=production` の時のみ可能) | `true` |
-| `MATHJAX` | (TBD) | |
 | `USER_UPPER_LIMIT` | (TBD) | |
+| `MIN_PASSWORD_LENGTH` | ユーザーが設定可能なパスワードの最短文字数 | 8 |
 | `DEFAULT_EMAIL_PUBLISHED` | 新規作成されたユーザーのデフォルトの email 公開設定 | `true` |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Push 通知を行う全クライアントの同時接続数上限 | 5000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Push 通知を行うことのできるゲストユーザーの同時接続数上限 | 2000 |
@@ -33,6 +34,9 @@ pageClass: admin-cookbook-env-vars
 | `AUDIT_LOG_ACTION_GROUP_SIZE` | 監査ログで収集するアクショングループのサイズ（`SMALL`, `MEDIUM`, `LARGE` が指定可能） | `SMALL` |
 | `AUDIT_LOG_ADDITIONAL_ACTIONS` | `AUDIT_LOG_ACTION_GROUP_SIZE` で指定されたアクショングループに含まれないアクションを個別に追加します。CSV形式（カンマ区切りの文字列）で指定します。 | |
 | `AUDIT_LOG_EXCLUDE_ACTIONS` | `AUDIT_LOG_ACTION_GROUP_SIZE` で指定されたアクショングループに含まれているアクションを個別に除外します。CSV形式（カンマ区切りの文字列）で指定します。| |
+| `TRUST_PROXY_BOOL` | [Express の `trust proxy` に設定可能](https://expressjs.com/ja/guide/behind-proxies.html)な boolean 形式の値。`TRUST_PROXY_CSV` 及び `TRUST_PROXY_HOPS` よりも優先されます。 | |
+| `TRUST_PROXY_CSV` | [Express の `trust proxy` に設定可能](https://expressjs.com/ja/guide/behind-proxies.html)な CSV 形式の値。 `TRUST_PROXY_HOPS` よりも優先されます。 | |
+| `TRUST_PROXY_HOPS` | [Express の `trust proxy` に設定可能](https://expressjs.com/ja/guide/behind-proxies.html)な number 形式の値。 | |
 | **ファイルアップロードオプション** | | |
 | `FILE_UPLOAD` | ファイルアップロード先のストレージ | `aws` |
 | | : `aws` Amazon Web Service S3 を使用します。(管理ページにて AWS 設定を行う必要があります。) | |
@@ -47,7 +51,9 @@ pageClass: admin-cookbook-env-vars
 | `GCS_API_KEY_JSON_PATH` |  [GCP API 認証用のサービスアカウントキー](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) を含む JSON ファイルのパス | |
 | `GCS_BUCKET` | 利用する GCS バケット名 | |
 | `GCS_UPLOAD_NAMESPACE` | バケット内に作成するファイルアップロード用のディレクトリ名 | |
-| `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL` | 署名付きURLのキャッシュを保持する期間(秒数)| 120|
+| `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL` | 署名付きURLのキャッシュを保持する期間(秒数)| 120 |
+| `GCS_REFERENCE_FILE_WITH_RELAY_MODE` | `true` の場、GROWI サーバーが添付ファイルデータを送信します(relay mode). `false` (デフォルト値)の場合は、その場合ユーザーはサーバーによって作成された [署名付き URL](https://cloud.google.com/storage/docs/access-control/signed-urls) によって GCS から直接データをダウンロードします。| `false` |
+| `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、GCS 関連設定の一部はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | **外部システム連携オプション** | | |
 | `NCHAN_URI` | 接続する Nginx [Nchan](https://nchan.io/) サーバーの URI | |
 | `HACKMD_URI` | 接続する [HackMD(CodiMD)](https://hackmd.io/) サーバーの URI | |
@@ -55,7 +61,6 @@ pageClass: admin-cookbook-env-vars
 | `HACKMD_URI_FOR_SERVER` | GROWI Express サーバーが参照する [HackMD(CodiMD)](https://hackmd.io/) のURI。 未設定の場合は `HACKMD_URI` が使用されます。 | |
 | `PLANTUML_URI` | 接続する [PlantUML](https://plantuml.com/ja/) サーバーの URI | |
 | `BLOCKDIAG_URI` | 接続する [blockdiag](http://blockdiag.com/ja/) サーバーの URI | |
-| `DRAWIO_URI` | 接続する [diagrams.net(draw.io)](https://www.diagrams.net/) サーバーの URI | |
 | `S2SMSG_PUBSUB_SERVER_TYPE` |  | |
 | | : `nchan` Nginx [Nchan](https://nchan.io/) を利用します | |
 | | : `redis` (未実装) | |
@@ -71,10 +76,10 @@ pageClass: admin-cookbook-env-vars
 | `SLACKBOT_WITH_PROXY_SALT_FOR_GTOP` | Official bot または Custom bot with proxy 環境下で利用するトークンを生成する際の salt (GROWI to Proxy 向き) | `gtop` |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_PTOG` | Official bot または Custom bot with proxy 環境下で利用するトークンを生成する際の salt (GROWI to Proxy 向き) | `ptog` |
 | **管理設定を上書きする環境変数** | | |
-| `APP_SITE_URL` | サイト URL (例: `https://example.com` 、 `https://example.com:8080`) | |
+| `APP_SITE_URL_USES_ONLY_ENV_VARS` | `true` の場合、サイト URL の設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` |`true` の場合、ファイルアップロードタイプの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。|`false`|
 | `LOCAL_STRATEGY_ENABLED` | `true` の場合、ID/Pass ログインが有効になります。 | |
-| `LOCAL_STRATEGY_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、ID/Pass オプションの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | |
+| `LOCAL_STRATEGY_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、ID/Pass オプションの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | `SAML_ENABLED` | `true` の場合、SAML 連携を有効にします。 | |
 | `SAML_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、SAML オプションの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | `SAML_ENTRY_POINT` | IdP のエントリーポイント | |

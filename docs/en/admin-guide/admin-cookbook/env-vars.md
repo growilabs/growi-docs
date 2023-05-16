@@ -8,9 +8,9 @@ pageClass: admin-cookbook-env-vars
 
 | Enviroment Variable | Description | Default Value |
 | ------------------- | ----------  | ------------- |
+| `APP_SITE_URL` | Site URL. e.g. `https://example.com`, `https://example.com:8080` | |
 | `MONGO_URI` | URI to connect to MongoDB. | `mongodb://localhost/growi` |
-| `NO_CDN` | If `true`, system doesn't use CDN, all resources will be downloaded from CDN when building a client, and served by the GROWI Express server. | `false` |
-| `ELASTICSEARCH_VERSION` | Elasticsearch major version that system connects to. (`6` or `7` can be specified) | `7` |
+| `ELASTICSEARCH_VERSION` | Elasticsearch major version that system connects to. (`7` or `8` can be specified) | `8` |
 | `ELASTICSEARCH_URI` | URI to connect to Elasticsearch. | |
 | `ELASTICSEARCH_REQUEST_TIMEOUT` | Max request timeout in milliseconds for each request.(msec) | 8000 |
 | `ELASTICSEARCH_REJECT_UNAUTHORIZED` | Turn off certificate verification when connecting with HTTPS schema. | `false` |
@@ -18,14 +18,14 @@ pageClass: admin-cookbook-env-vars
 | `PASSWORD_SEED` | A password seed used by the password hash generator. | |
 | `SECRET_TOKEN` | A secret key for verifying the integrity of signed cookies. | |
 | `SESSION_NAME` | The name of the session ID cookie to set in the response by Express. | `connect.sid` |
-| `SAML_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | If `true`, the system uses only the value of the environment variable as the value of the SAML option that can be set via the environment variable. | `false` |
 | `FORCE_WIKI_MODE` | Forces wiki mode. | `undefined` |
 | | : `undefined` Publicity will be configured by the admin security page settings | |
 | | : `public` Forces all pages to become public | |
 | | : `private` Forces all pages to become private | |
+| `DISABLE_LINK_SHARING` | Disable link sharing feature | `false` |
 | `FORMAT_NODE_LOG` | If `false`, Output server log as JSON. (Enabled only when `NODE_ENV=production`) | `true` |
-| `MATHJAX` | (TBD) | |
 | `USER_UPPER_LIMIT` | (TBD) | |
+| `MIN_PASSWORD_LENGTH` | Minimum password length that users can set. | 8 |
 | `DEFAULT_EMAIL_PUBLISHED` | Default setting for publishing new user email addresses. | `true` |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Maximum number of connections for all clients that receive push messages. | 5000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Maximum number of connections for guest clients that receive push messages. | 2000 |
@@ -35,6 +35,9 @@ pageClass: admin-cookbook-env-vars
 | `AUDIT_LOG_ACTION_GROUP_SIZE` |  Size of action groups to be collected in the audit log (can be `SMALL`, `MEDIUM`, or `LARGE`) | `SMALL` |
 | `AUDIT_LOG_ADDITIONAL_ACTIONS` | Add individual actions not included in the action group specified by `AUDIT_LOG_ACTION_GROUP_SIZE`, in CSV format (comma-separated string). | |
 | `AUDIT_LOG_EXCLUDE_ACTIONS` | Exclude individual actions in the action group specified by `AUDIT_LOG_ACTION_GROUP_SIZE`, in CSV format (comma-separated string). | |
+| `TRUST_PROXY_BOOL` | A boolean [that can be set to the `trust proxy` settings for Express](https://expressjs.com/en/guide/behind-proxies.html) prioritized than `TRUST_PROXY_CSV` and `TRUST_PROXY_HOPS`. | |
+| `TRUST_PROXY_CSV` | A CSV value [that can be set to the `trust proxy` settings for Express](https://expressjs.com/en/guide/behind-proxies.html) prioritized than `TRUST_PROXY_HOPS`. | |
+| `TRUST_PROXY_HOPS` | A number value [that can be set to the `trust proxy` settings for Express](https://expressjs.com/en/guide/behind-proxies.html). | |
 | **Option for file uploading** | | |
 | `FILE_UPLOAD` | Attached files storage. | `aws` |
 | | : `aws` Amazon Web Service S3 (needs AWS settings on Admin page) | |
@@ -49,14 +52,15 @@ pageClass: admin-cookbook-env-vars
 | `GCS_API_KEY_JSON_PATH` | Path of the JSON file that contains [service account key to authenticate to GCP API](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) | |
 | `GCS_BUCKET` | Name of the GCS bucket | |
 | `GCS_UPLOAD_NAMESPACE` | Directory name to create in the bucket | |
-| `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL` | time to keep the cache of signed URLs (number of seconds)| 120|
+| `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL` | Time to keep the cache of signed URLs (number of seconds)| 120 |
+| `GCS_REFERENCE_FILE_WITH_RELAY_MODE` | If `true`, the GROWI server sends the attachment data (relay mode). In the case of `false` (default value), the users download data from GCS directly by [Signed URLs](https://cloud.google.com/storage/docs/access-control/signed-urls) created by the server. | `false` |
+| `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars over values in DB for some GCS options. | `false` |
 | **Option to integrate with external systems** | | |
 | `NCHAN_URI` | URI to connect to Nginx [Nchan](https://nchan.io/) server. | |
 | `HACKMD_URI` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server. | |
 | | This server must load the GROWI agent. [Here's how to prepare it](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html). | |
 | `HACKMD_URI_FOR_SERVER` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server from GROWI Express server. If not set, `HACKMD_URI` will be used. | |
 | `PLANTUML_URI` | URI to connect to [PlantUML](https://plantuml.com/en/) server. | |
-| `BLOCKDIAG_URI` | URI to connect to [blockdiag](http://blockdiag.com/en/) server. | |
 | `DRAWIO_URI` | URI to connect to [diagrams.net(draw.io)](https://www.diagrams.net/) server. | |
 | `S2SMSG_PUBSUB_SERVER_TYPE` |  | |
 | | : `nchan` Nginx [Nchan](https://nchan.io/) | |
@@ -73,12 +77,12 @@ pageClass: admin-cookbook-env-vars
 | `SLACKBOT_WITH_PROXY_SALT_FOR_GTOP` | Salt (for GROWI to Proxy) when generating tokens for the Official Bot or Custom Bot with proxy environment | `gtop` |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_PTOG` | Salt (for GROWI to Proxy) when generating tokens for the Official Bot or Custom Bot with proxy environment | `ptog` |
 | **Option (Overwritable in admin page)** | | |
-| `APP_SITE_URL` | Site URL. e.g. `https://example.com`, `https://example.com:8080` | |
+| `APP_SITE_URL_USES_ONLY_ENV_VARS` | Prioritize env vars over values in DB for Site URL | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` | Prioritize env var over value in DB for File Upload Type | `false` |
 | `LOCAL_STRATEGY_ENABLED` | Enable or disable ID/Pass login | |
-| `LOCAL_STRATEGY_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars over values in DB for some ID/Pass login options | |
+| `LOCAL_STRATEGY_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars over values in DB for some ID/Pass login options | `false` |
 | `SAML_ENABLED` | Enable or disable SAML | |
-| `SAML_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars over values in DB for some SAML options | |
+| `SAML_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars over values in DB for some SAML options | `false` |
 | `SAML_ENTRY_POINT` | IdP entry point | |
 | `SAML_ISSUER` | Issuer string to supply to IdP | |
 | `SAML_ATTR_MAPPING_ID` | Attribute map for ID | |
