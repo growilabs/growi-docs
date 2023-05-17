@@ -121,6 +121,7 @@ module.exports = {
                 '/en/guide/features/bootstrap.md',
                 '/en/guide/features/uml_diagrams.md',
                 '/en/guide/features/drawio.md',
+                '/en/guide/features/mermaid.md',
                 '/en/guide/features/search.md',
                 '/en/guide/features/tag.md',
                 '/en/guide/features/template.md',
