@@ -45,7 +45,7 @@ When the "Reset Password" button on the modal popup is clicked, a new password w
 
 It prompts the user to log in using this temporary password, and then reset their password in the user settings page ( `/me` ).
 
-<img src="/assets/images/user-management4.png" width="20%">
+<img src="/assets/images/user-management4.png" width="50%">
 
 #### Granting administrative privileges
 
@@ -59,7 +59,7 @@ Users with read-only access rights cannot create, delete, update, or comment on 
 
 You can grant or revoke read-only access rights to users from the drop-down on the right side of the user table.
 
-<img src="/assets/images/user-management-read-only.png" width="50%">
+<img src="/assets/images/user-management-read-only.png" width="20%">
 
 #### Account Approval and Suspension
 
