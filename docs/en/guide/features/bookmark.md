@@ -31,8 +31,8 @@
 
 ![](/assets/images/bookmark.png)
 
-### Hamburger Menu in Page Tre
-- You can bookmark pages from the hamburger menu of any page displayed in the page tree.
+### Vertical three point leader in Page Tree
+- You can bookmark pages from the vertical three point leader of any page displayed in the page tree.
 
 ![](/assets/images/bookmark_page_tree.png)
 
@@ -41,8 +41,8 @@
 ### Bookmark icon in the upper right corner of the page
 - Click the bookmark icon in the upper right corner of the page and select "Un-bookmark this page."
 
-### Hamburger Menu in page tree or bookmarks sidebar
-- Select "Remove from Bookmarks" from the page hamburger menu in the page tree or bookmarks sidebar.
+### Vertical three point leader in page tree or bookmarks sidebar
+- Select "Remove from Bookmarks" from the page vertical three point leader in the page tree or bookmarks sidebar.
 
 ## Check the list of bookmarks
 
@@ -67,7 +67,7 @@ Up to two levels of bookmark folders can be created (as of v6.1.0 release).
 ![](/assets/images/bookmark_page_tree_plus.png)
 
 ### Rename/Delete bookmark folder
-- You can rename or delete a bookmark folder from the hamburger menu of the bookmark folder in the bookmarks sidebar or user's home page.
+- You can rename or delete a bookmark folder from the vertical three point leader of the bookmark folder in the bookmarks sidebar or user's home page.
 
 ::: warning
 Deleting a folder will delete all folders under that folder and cancel all bookmarks.
