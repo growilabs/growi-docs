@@ -24,3 +24,31 @@
 ::: tip
 v4.5 以前で「ページの完全削除」として設定していたオプションは、v5.0 以降では「ページを完全削除する(単体のみの操作)」として引き継がれます
 :::
+
+## 認証機構設定
+
+### ID/Password
+
+#### 登録の制限
+
+- `公開 (だれでも登録可能)`
+  - ユーザー登録画面から ID/Password で新規登録ができます。
+
+  ![](/assets/images/register.png)
+
+- `制限 (登録完了には管理者の承認が必要)`
+  - ユーザー登録画面から ID/Password で新規登録してもすぐにはログインできません。管理者による対象のユーザーの承認が必要になります。
+  - 新規登録すると管理者へアプリ内通知が送信されます。
+
+  ![](/assets/images/in-app-notification-requested-registration-approval.png)
+
+  ::: tip
+  [メールの設定](/ja/admin-guide/management-cookbook/app-settings.html#%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E8%A8%AD%E5%AE%9A)がセットアップされている場合は管理者へメールを送信します。
+  :::
+
+  - 管理者はユーザー管理から対象のユーザーを承認してください。
+
+  ![](/assets/images/user-management-user-approval-pending.png)
+
+- `非公開 (登録には管理者による招待が必要)`
+  - ユーザー登録画面から ID/Password で新規登録できなくなります。
