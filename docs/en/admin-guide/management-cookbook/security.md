@@ -53,3 +53,4 @@ The option that was set as "Permanently delete a page" in v4.5 or earlier is inh
 
 - `Closed (Invitation Only)`
   - The user will not be able to register a new user with ID/Password from the user registration screen.
+  - To register a new user, please [Temporary issuance of a new user](/en/admin-guide/management-cookbook/user-management.html#temporary-issuance-of-a-new-user) to invite you.
