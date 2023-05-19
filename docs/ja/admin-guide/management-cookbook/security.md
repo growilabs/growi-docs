@@ -52,4 +52,4 @@ v4.5 以前で「ページの完全削除」として設定していたオプシ
 
 - `非公開 (登録には管理者による招待が必要)`
   - ユーザー登録画面から ID/Password で新規登録できなくなります。
-  - 新規ユーザーを登録するには[新規ユーザーの仮発行](/ja/admin-guide/management-cookbook/user-management.html#%E6%96%B0%E8%A6%8F%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E3%83%BC%E3%81%AE%E4%BB%AE%E7%99%BA%E8%A1%8C) から招待してください。
+  - 新規ユーザーを登録するには[新規ユーザーの仮発行](/ja/admin-guide/management-cookbook/user-management.html#%E6%96%B0%E8%A6%8F%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E3%83%BC%E3%81%AE%E4%BB%AE%E7%99%BA%E8%A1%8C)から招待してください。
