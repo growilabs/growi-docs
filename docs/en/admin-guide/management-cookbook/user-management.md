@@ -53,6 +53,14 @@ Users with administrator status can access the administration screen and adjust 
 
 Administrative privileges can be granted or removed from the drop-down menu on the right side of the user table.
 
+#### Granting read-only access rights
+
+Users with read-only access rights cannot create, delete, update, or comment on pages.
+
+You can grant or revoke read-only access rights to users from the drop-down on the right side of the user table.
+
+<img src="/assets/images/user-management-read-only.png" width="20%">
+
 #### Account Approval and Suspension
 
 Accounts that are pending approval or suspended can be granted approval. Approving an account allows the user to log in with that account.
