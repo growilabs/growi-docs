@@ -1,26 +1,25 @@
-# Set Page View / Edit Permission
+# Set permissions to view/edit pages
 
-GROWI has a function where only permitted users can view and edit the pages.
+## How to set up
 
-This section describes the access control methods that can be set for pages.
-
-## How To Set View / Edit Permission for Pages
-
-In the edit mode, click the "Public" on the lower-right button, then you can see options as shown in the image below.
+In Edit mode, click the Public button in the lower right corner to show the permission setting options.
 
 ![authority1](/assets/images/authority1.png)
 
-After selecting this option, click the "Create / Update" button to apply view / edit access control for the page.
+Select the option and click the Create/Update button to apply the permission to the page.
 
-## View / Edit Permission Options That Can Be Modified
+## Types of permissions
 
-You can select one of the following options to set page restrictions.
+The following four types of permissions can be set.
 
 ### Public
 
-There is no restriction for pages with this setting. Anyone can view and edit. This is selected by default.
+- This is the default setting.
+- Anyone can view/edit.
 
-If the entire GROWI is set to `cannot be viewed without logging in`, even if the page is set to be public, it cannot be viewed / edited without logging in, and even if the page is accessed, it will be redirected to the login screen. Any logged-in user can view and edit it.
+::: tip
+If GROWI is configured to `cannot be viewed without logging in`, even if the page is set to `Public`, you cannot view it. If you access without login, you will be redirected to the login page.
+:::
 
 ### Anyone With The Link
 
