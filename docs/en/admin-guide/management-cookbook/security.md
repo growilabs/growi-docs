@@ -2,6 +2,12 @@
 
 [[toc]]
 
+## Configure pages to show in page lists and search results
+
+You can configure pages whose publication range is set to `Only me` or `Only inside the group` to show/hide in the page list and search results.
+
+Note that if you set `Displayed`, pages whose viewing is restricted will be displayed in the page list and search results for other users.
+
 ## Page Deletion Permission
 
 Specify the page deletion permission according to the four types of deletion methods.

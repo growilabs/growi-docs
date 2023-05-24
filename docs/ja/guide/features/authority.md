@@ -39,12 +39,12 @@ Edit モードの画面右下の Public (公開) と表示されたボタンを�
 ### 3. Only me (自分のみ)
 
 - 自分のみが閲覧/編集できます。
-- 初期設定では、他のユーザーのページリストや検索結果に表示されます。設定の変更方法は、 [こちら](/ja/admin-guide/management-cookbook/security.html)をご参照ください。
+- 初期設定では、他のユーザーのページリストや検索結果に表示されます。設定の変更方法は、 [こちら](/ja/admin-guide/management-cookbook/security.html#ページリストと検索結果に表示するページを制御する)をご参照ください。
 
 ### 4. Only inside the group (特定グループのみ)
 
 - 設定したグループに属するユーザーのみが閲覧/編集できます。
-- 初期設定では、他のユーザーのページリストや検索結果に表示されます。設定の変更方法は、[こちら](/ja/admin-guide/management-cookbook/security.html)をご参照ください。
+- 初期設定では、他のユーザーのページリストや検索結果に表示されます。設定の変更方法は、[こちら](/ja/admin-guide/management-cookbook/security.html#ページリストと検索結果に表示するページを制御する)をご参照ください。
 - グループ管理機能については [こちら](/ja/admin-guide/management-cookbook/group.html)をご参照ください。
 
 ## 配下ページに設定できる権限
