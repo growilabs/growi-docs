@@ -85,7 +85,7 @@ Edit モードの画面右下の Public (公開) と表示されたボタンを�
 あるページのすべての配下ページに対して、一括で権限を設定できます。
 
 1. ページの作成/更新時に、画面右下に表示される Create/Update (作成/更新) ボタンの「▲」をクリックしてください。
-2. Update and Overwrite scopes of all descendants (作成/更新と同時に全ての配下ページのスコープを上書き)をクリックしてください。
+2. Create/Update and Overwrite scopes of all descendants (作成/更新と同時に全ての配下ページのスコープを上書き)をクリックしてください。
 
 ![authority2](/assets/images/authority2.png)
 
