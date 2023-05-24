@@ -4,9 +4,9 @@
 
 In Edit mode, click the Public button in the lower right corner to show the permission setting options.
 
-![authority1](/assets/images/authority1.png)
-
 Select the option and click the Create/Update button to apply the permission to the page.
+
+![authority1](/assets/images/authority1.png)
 
 ## Types of permissions
 
@@ -21,42 +21,37 @@ The following four types of permissions can be set.
 If GROWI is configured to `cannot be viewed without logging in`, even if the page is set to `Public`, you cannot view it. If you access without login, you will be redirected to the login page.
 :::
 
-### Anyone With The Link
+### Anyone with the link
 
-Pages with this setting will not be displayed in the page list or page search results.
+- Only users who know the URL of the page can view/edit it.
+- It will not be displayed in the page list or search results.
 
-Only users who know the page URL can view and edit the page.
+  ::: tip
+  If you are unsure of the page path of a page you have created, you can use the Recently Created button on the user's home page to find the page.
+  :::
 
-When you don't remember where the page is, follow from "Recently Created" on the home screen.
+  ::: warning
+  Since v5.0, if a `Public` or `Specific Group Only` page exists under a page with `Anyone with the link`, `Anyone with the link` page will also be displayed in the page tree.
+  For example, if you create `/Page1/Page2` with `Public` settings while `/Page1` with `Anyone with the link` settings exists, both `/Page1` and `/Page1/Page2` will appear in the page tree.
+  If you set `Anyone with the link`, please be careful with the page settings.
+  :::
 
-If it's the page you created, it will be displayed in the page list.
+### Only me
 
-::: warning
-On v5.0 or later, you need to be careful when handling pages with this setting.
-For more information, please read [Anyone with the Link](#anyone-with-the-link).
-:::
+- Only you can view and edit this page.
+- By default, it will display in other users' page lists and search results. Please refer to [here](/en/admin-guide/management-cookbook/security.html) for how to change the setting.
 
-### Only Me
+### Specific group only
 
-Pages with this setting cannot be viewed or edited by anyone except you.
+- Only users who belong to the specified group can view/edit.
+- By default, it is displayed in other users' page lists and search results. Please refer to [here](/en/admin-guide/management-cookbook/security.html) for how to change the setting.
+- Please refer to [here](/en/admin-guide/management-cookbook/group.html) for information on group management functions.
 
-Whether the page is displayed or not in the page list and page search results of users except you, depends on the settings in the security settings of the management page. (described later)
+## Permissions for subordinate pages
 
-By default, the page you created appears in the page list and page search results.
+Pages under `/Page1` can only have the same or stronger permissions. ( since v5.0 )
 
-### Specific Group Only
-
-Pages with this setting can only be viewed and edited by users belonging to a specific group.
-
-Whether it's displayed or not on the page list and page search results of users who don't belong to the group, depends on the settings in the security settings of the management page. (described later)
-
-By default, the page you created appears in the page list and page search results.
-
-## View Permissions That Can Be Set on The Page
-
-Descendant pages of a page `/Page1` can only have the same or more restrictive viewing permissions. (v5.0 or later).
-
-The following example is a table showing what kind of viewing permission can be granted to the descendant page `/Page1/child` by the viewing permission of`/Page1`.
+The following table shows what permissions can be set on subordinate pages `/Page1/child`, depending on the permissions of `/Page1`.
 
 | View Permission for `/Page1` | View Permission That Can Be Set on `/Page1/child` |                  Possible/Not Possible                  |
 | :--------------------------- | :-----------------------------------------------: | :-----------------------------------------------------: |
@@ -73,25 +68,11 @@ The following example is a table showing what kind of viewing permission can be 
 | Specific Group Only          |                Specific Group Only                | (Depends on the parent-child relationship of the group) |
 | Specific Group Only          |               Anyone With The Link                |                   :white_check_mark:                    |
 
-## About Page Handling for Anyone With The Link
+### If a page is set to `Specific group only`
 
-In v5.0, pages with this setting are displayed only to users who know the path link or permalink.
+If you set `Specified group only`, the subordinate pages can only have the same or stronger permissions (a group with a narrower range of members).
 
-However, if you create a page with permissions other than this setting (public, specific group only, etc.) with a path that is under the page with this setting, it will be displayed in the page tree.
-
-For example, if you have a `/Page1` with "Anyone With The Link" set and you create a`/Page1/Page2` with a "Public" permission, you can create a `/Page1` in the page tree. And `/Page1/Page2` are both displayed.
-
-Be careful with the path of the page when using "Anyone With The Link" setting.
-
-## About Group Management Feature
-
-Click [here](/en/admin-guide/management-cookbook/group.html) for more details.
-
-## Control Showing Page List and Search Results for Restricted Pages
-
-Even with "Specific Group Only" setting, the child pages can only have the same viewing permissions as the parent page, or only applying permissions with more restrictions (groups with a narrower range of members).
-
-The following example is for the subordinate page `/Page1/child` when the "Engineering Department" group is created in the child group of the "Company" group and the "UI / UX Team" group is created in the child group. On the other hand, it is a table showing what kind of viewing permission can be granted.
+The following table shows what permissions can be set on the subordinate page `/Page1/child` in the case where there is a "Engineering Department" group as a child group of the "Company" group and the "UI / UX Team" group as a child group of the "Engineering Department" group.
 
 | Browsing Permission for `/Page1`             | Permission That Can Be Set For`/Page1/child` | Possible/Not possible |
 | :------------------------------------------- | :------------------------------------------: | :-------------------: |
@@ -99,52 +80,22 @@ The following example is for the subordinate page `/Page1/child` when the "Engin
 | Specific Group Only (Engineering Department) |         Specific Group Only(Company)         |          :x:          |
 | Specific Group Only (Engineering Department) |       Specific Group Only(UI/UX Team)        |  :white_check_mark:   |
 
-## Controlling The Display of Search Results and List Display for Permitted Pages
+## Set view/edit permissions at once
 
-If you do not want to display the page to people who do not have view / edit permission when displaying the search results and page list of GROWI, switch the on / off function of the corresponding setting in the `security setting` of the management menu.
+You can set permissions on all subordinate pages of a page at once
 
-![security](/assets/images/security.png)
-
-### Show Page List and Restricted Pages as 'Only Me'
-
-- When this Feature is Turned ON
-
-  List and search results of restricted pages are shown to people who don't have permission to see the page details.
-
-- When this Feature is Turned OFF
-
-  List and search results of restricted pages are not shown to people who don't have permission to see the page details.
-
-### Show Page List and Restricted Pages as 'Specific Group'
-
-- When this Feature is Turned ON
-
-  It will show restricted pages that applied as search result or page lists for the users who do not belong to any groups.
-
-- When this Feature is Turned OFF
-
-  It will not show restricted pages that applied as search result or page lists for the users who do not belong to any groups.
-
-## Set Viewing and Editing Permissions at once Under the Page
-
-For cases where you want to manage all privileges at once to pages in the hierarchical structure:
-
-Please click "▲" next to the "Create / Update" button which appears in the lower right corner of the screen when in create/edit. Then, click "Update and Overwrite scopes of all descendants".
+1. In edit mode, click on ▲ next to the Create/Update button.
+2. Click "Create/Update and Overwrite scopes of all descendants".
 
 ![authority2](/assets/images/authority2.png)
 
-By performing this action, you are able to apply same permission settings to all pages under the corresponding page.
+::: tip
+Pages that require authorization settings can be organized into groups, and management can be simplified by setting authorization settings for all of them at once.
 
-## Example of Setting Permissions
+Example:
 
-You can easily manage pages together which need viewing and editing permissions, and then update at once under the corresponding pages.
-
-Move the pages that need permission changes, as shown in the example below, if updating the structures of the page has no problem.
-
-- Create a group name page.
-
-- Move the page for which you want to have view / edit permission only for the specific group to the descendants of that page.
-
-  Click [here](/en/guide/features/page_operation.html) for how to move pages.
-
-- Set permission for group name pages at once.
+1. Create a page with a specific group name.
+2. Move the pages which you want to set the permission to view/edit only for this group to under the page created in step 1.
+(Please refer to [here](/en/guide/features/page_operation.html) for details on moving pages.)
+3. Set permissions at once on the page created in step 1.
+:::

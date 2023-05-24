@@ -8,6 +8,8 @@ You can configure pages whose publication range is set to `Only me` or `Only ins
 
 Note that if you set `Displayed`, pages whose viewing is restricted will be displayed in the page list and search results for other users.
 
+![security](/assets/images/security.png)
+
 ## Page Deletion Permission
 
 Specify the page deletion permission according to the four types of deletion methods.
