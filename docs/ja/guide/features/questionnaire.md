@@ -28,7 +28,7 @@ GROWI 開発チームからのアンケートを受け取ることができま�
 
 ![](/assets/images/questionnaire_cron.png)
 
-- モーダルに表示されたアンケートに回答し「回答する」を押してください。GROWI 開発チームにアンケート内容が送付されます。
+- 表示されたアンケートに回答し「回答する」を押してください。GROWI 開発チームにアンケート内容が送付されます。
 
 ![](/assets/images/questionnaire_cron_form.png)
 
