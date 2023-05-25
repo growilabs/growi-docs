@@ -63,6 +63,10 @@
 | 公開 | 自分のみ | :white_check_mark: |
 | 公開 | 特定グループのみ | :white_check_mark: |
 | 公開 | リンクを知っている人のみ | :white_check_mark: |
+| リンクを知っている人のみ | 公開 | :white_check_mark: |
+| リンクを知っている人のみ | 自分のみ | :white_check_mark: |
+| リンクを知っている人のみ | 特定グループのみ | :white_check_mark: |
+| リンクを知っている人のみ | リンクを知っている人のみ | :white_check_mark: |
 | 自分のみ | 公開 | :x: |
 | 自分のみ | 自分のみ | :white_check_mark: |
 | 自分のみ | 特定グループのみ | :x: |

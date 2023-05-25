@@ -63,6 +63,10 @@ The following table shows what permissions can be set on subordinate pages `/Pag
 | Public                       |                      Only me                      |                   :white_check_mark:                    |
 | Public                       |                Specific group only                |                   :white_check_mark:                    |
 | Public                       |               Anyone with the link                |                   :white_check_mark:                    |
+| Anyone with the link         |                      Public                       |                   :white_check_mark:                    |
+| Anyone with the link         |                      Only me                      |                   :white_check_mark:                    |
+| Anyone with the link         |                Specific group only                |                   :white_check_mark:                    |
+| Anyone with the link         |               Anyone with the link                |                   :white_check_mark:                    |
 | Only me                      |                      Public                       |                           :x:                           |
 | Only me                      |                      Only me                      |                   :white_check_mark:                    |
 | Only me                      |                Specific group only                |                           :x:                           |
