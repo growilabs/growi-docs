@@ -39,12 +39,12 @@ If GROWI is configured to `cannot be viewed without logging in`, even if the pag
 ### Only me
 
 - Only you can view and edit this page.
-- By default, it will display in other users' page lists and search results. Please refer to [here](/en/admin-guide/management-cookbook/security.html) for how to change the setting.
+- By default, it will display in other users' page lists and search results. Please refer to [here](/en/admin-guide/management-cookbook/security.html#configure-pages-to-show-in-page-lists-and-search-results) for how to change the setting.
 
 ### Specific group only
 
 - Only users who belong to the specified group can view/edit.
-- By default, it is displayed in other users' page lists and search results. Please refer to [here](/en/admin-guide/management-cookbook/security.html) for how to change the setting.
+- By default, it is displayed in other users' page lists and search results. Please refer to [here](/en/admin-guide/management-cookbook/security.html#configure-pages-to-show-in-page-lists-and-search-results) for how to change the setting.
 - Please refer to [here](/en/admin-guide/management-cookbook/group.html) for information on group management functions.
 
 ## Permissions for subordinate pages
