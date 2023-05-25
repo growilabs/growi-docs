@@ -12,7 +12,7 @@ Please refer to [Questionnaire Settings](/en/admin-guide/management-cookbook/app
 
 You can send your comments and requests to the GROWI development team.
 
-- Please click on your user name in the upper right corner of the screen and select "Feedback" from the drop-down that appears.
+- Please click on your username in the upper right corner of the screen and select "Feedback" from the drop-down that appears.
 
 ![](/assets/images/questionnaire_feedback.png)
 
