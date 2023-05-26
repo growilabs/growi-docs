@@ -1,14 +1,13 @@
 # Questionnaire
 
-Starting with v6.1.0, a questionnaire feature has been added to GROWI. Users can send [Active Questionnaire](/en/guide/features/questionnaire.html#active-questionnaire) at their own convenience. and [Passive Questionnaire](/en/guide/features/questionnaire.html#passive-questionnaire).
+Starting with v6.1.0, a questionnaire feature has been added to GROWI. Users can send [Feedback](/en/guide/features/questionnaire.html#feedback) and fill out a [Questionnaire](/en/guide/features/questionnaire.html#questionnaire-2).
 
 ::: warning
 The data sent will not contain any personal information of the user.
 Please refer to [Questionnaire Settings](/en/admin-guide/management-cookbook/app-settings.html#questionnaire-settings).
 :::
 
-
-## Active Questionnaire
+## Feedback
 
 You can send your comments and requests to the GROWI development team.
 
@@ -16,11 +15,11 @@ You can send your comments and requests to the GROWI development team.
 
 ![](/assets/images/questionnaire_feedback.png)
 
-- Fill in the information in the form that appears and press "Submit" to have the questionnaire sent to the GROWI development team.
+- Fill in the information in the form that appears and press "Submit" to have the feedback sent to the GROWI development team.
 
 ![](/assets/images/questionnaire_form.png)
 
-## Passive Questionnaire
+## Questionnaire
 
 You will receive a questionnaire from the GROWI development team.
 
@@ -34,6 +33,6 @@ You will receive a questionnaire from the GROWI development team.
 ![](/assets/images/questionnaire_cron_form.png)
 
 ::: tip
-The passive questionnaire feature can be enabled/disabled system-wide by the administrator or individually by the user.
+The questionnaire feature can be enabled/disabled system-wide by the administrator or individually by the user.
 Please see [Questionnaire Settings](/en/admin-guide/management-cookbook/app-settings.html#questionnaire-settings).
 :::

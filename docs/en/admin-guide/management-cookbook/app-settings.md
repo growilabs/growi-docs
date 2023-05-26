@@ -260,5 +260,5 @@ The actual response data sent to the development team is in json format as shown
 ### About the App Site URL
 
 The default configuration includes the URL of the operational GROWI application and its hash value with the keys `appSiteUrl` and `appSiteUrlHashed`, respectively.
-If you do not want the GROWI development team to be able to identify the URL of your site, please enable the `send anonymized site URL` option.
+If you wish to keep the URL of your site confidential from the GROWI development team, please enable the option `Send anonymized site URLs`.
 With this option, only the value of `appSiteUrlHashed` will be sent.
