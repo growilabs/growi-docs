@@ -21,7 +21,7 @@ You can send your comments and requests to the GROWI development team.
 
 ## Questionnaire
 
-You will receive a questionnaire from the GROWI development team.
+You can answer questionnaire distributed by the GROWI development team.
 
 - When GROWI receives a questionnaire, the questionnaire will appear at the bottom of the screen.
 - To answer the questionnaire, press "Answer".
