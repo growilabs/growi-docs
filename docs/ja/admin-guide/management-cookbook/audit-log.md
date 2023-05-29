@@ -4,16 +4,19 @@
 
 ![audit-log](/assets/images/audit-log.png)
 
+<HiddenOnHelp>
 ## セットアップ
 
 [監査ログのセットアップ](/ja/admin-guide/admin-cookbook/audit-log-setup.html)
+
+</HiddenOnHelp>
 
 ## テーブルに表示される情報
 
 - ユーザー名
 - アクションが行われた時間
 - アクション
-- [IP アドレス](/ja/admin-guide/admin-cookbook/trust-proxy.html)
+<HiddenOnHelp><li>[IP アドレス](/ja/admin-guide/admin-cookbook/trust-proxy.html)</li></HiddenOnHelp>
 - URL
 
 ## 検索

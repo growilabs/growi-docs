@@ -4,16 +4,19 @@ Actions taken by users, such as login, logout, and create page, can be viewed an
 
 ![audit-log](/assets/images/audit-log.png)
 
+<HiddenOnHelp>
 ## Setup
 
 [Audit Log Setup](/en/admin-guide/admin-cookbook/audit-log-setup.html)
+
+</HiddenOnHelp>
 
 ## Information displayed in table
 
 - Username
 - Time the action was performed
 - Action
-- [IP Address](/en/admin-guide/admin-cookbook/trust-proxy.html)
+<HiddenOnHelp><li>[IP Address](/en/admin-guide/admin-cookbook/trust-proxy.html)</li></HiddenOnHelp>
 - URL
 
 ## Search
