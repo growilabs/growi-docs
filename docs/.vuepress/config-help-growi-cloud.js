@@ -20,6 +20,7 @@ module.exports = {
     docsDir: 'docs',
     editLinkText: '',
     lastUpdated: false,
+    isHelpGrowiCloud: true,
   },
 
   plugins: [
