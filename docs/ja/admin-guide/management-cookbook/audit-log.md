@@ -5,6 +5,7 @@
 ![audit-log](/assets/images/audit-log.png)
 
 <HiddenOnHelp>
+
 ## セットアップ
 
 [監査ログのセットアップ](/ja/admin-guide/admin-cookbook/audit-log-setup.html)
