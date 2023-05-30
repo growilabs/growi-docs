@@ -4,20 +4,20 @@
 
 ![audit-log](/assets/images/audit-log.png)
 
-<HiddenOnHelp>
+<span v-if="!$themeConfig.isHelpGrowiCloud">
 
 ## セットアップ
 
 [監査ログのセットアップ](/ja/admin-guide/admin-cookbook/audit-log-setup.html)
 
-</HiddenOnHelp>
+</span>
 
 ## テーブルに表示される情報
 
 - ユーザー名
 - アクションが行われた時間
 - アクション
-<HiddenOnHelp><li>[IP アドレス](/ja/admin-guide/admin-cookbook/trust-proxy.html)</li></HiddenOnHelp>
+<span v-if="!$themeConfig.isHelpGrowiCloud"><li>[IP アドレス](/ja/admin-guide/admin-cookbook/trust-proxy.html)</li></span>
 - URL
 
 ## 検索

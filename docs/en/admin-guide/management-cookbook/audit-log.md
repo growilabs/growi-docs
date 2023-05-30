@@ -4,20 +4,20 @@ Actions taken by users, such as login, logout, and create page, can be viewed an
 
 ![audit-log](/assets/images/audit-log.png)
 
-<HiddenOnHelp>
+<span v-if="!$themeConfig.isHelpGrowiCloud">
 
 ## Setup
 
 [Audit Log Setup](/en/admin-guide/admin-cookbook/audit-log-setup.html)
 
-</HiddenOnHelp>
+</span>
 
 ## Information displayed in table
 
 - Username
 - Time the action was performed
 - Action
-<HiddenOnHelp><li>[IP Address](/en/admin-guide/admin-cookbook/trust-proxy.html)</li></HiddenOnHelp>
+<span v-if="!$themeConfig.isHelpGrowiCloud"><li>[IP Address](/en/admin-guide/admin-cookbook/trust-proxy.html)</li></span>
 - URL
 
 ## Search
