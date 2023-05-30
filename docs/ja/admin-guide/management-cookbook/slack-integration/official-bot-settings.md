@@ -52,7 +52,7 @@
   **Successfully sent to Slack workspace.** が Logs に表示され、
   赤丸で囲った部分に緑色のチェックマークが表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
   - GROWI 側
-   ![slack-bot-test-success](/assets/images/slack-bot-test.png)
+   ![slack-bot-test-success](/assets/images/slack-bot-test-success.png)
   - Slack 側
    ![slack-bot-test-success](/assets/images/slack-bot-test-success-at-slack-app.png)
 
