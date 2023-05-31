@@ -80,6 +80,7 @@ module.exports = {
     },
   },
   themeConfig: {
+    context: 'docs-growi-org',
     repo: 'weseek/growi-docs',
     docsDir: 'docs',
     editLinks: true,

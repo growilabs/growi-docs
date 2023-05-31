@@ -15,12 +15,12 @@ module.exports = {
   ],
 
   themeConfig: {
+    context: 'help-growi-cloud',
     repo: '',
     editLinks: false,
     docsDir: 'docs',
     editLinkText: '',
     lastUpdated: false,
-    isHelpGrowiCloud: true,
   },
 
   plugins: [
