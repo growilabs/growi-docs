@@ -4,16 +4,20 @@ Actions taken by users, such as login, logout, and create page, can be viewed an
 
 ![audit-log](/assets/images/audit-log.png)
 
+<ContextualBlock context="docs-growi-org">
+
 ## Setup
 
 [Audit Log Setup](/en/admin-guide/admin-cookbook/audit-log-setup.html)
+
+</ContextualBlock>
 
 ## Information displayed in table
 
 - Username
 - Time the action was performed
 - Action
-- [IP Address](/en/admin-guide/admin-cookbook/trust-proxy.html)
+<ContextualBlock context="docs-growi-org"><li>[IP Address](/en/admin-guide/admin-cookbook/trust-proxy.html)</li></ContextualBlock>
 - URL
 
 ## Search
