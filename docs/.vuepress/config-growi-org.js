@@ -149,7 +149,8 @@ module.exports = {
                 '/en/guide/features/in-app-notification.md',
                 '/en/guide/features/slack_integration.md',
                 '/en/guide/features/file_upload',
-              ],
+                '/en/guide/features/questionnaire.md',
+              ]
             },
             {
               title: 'Tips',
@@ -414,7 +415,8 @@ module.exports = {
                 '/ja/guide/features/in-app-notification.md',
                 '/ja/guide/features/slack_integration.md',
                 '/ja/guide/features/file_upload',
-              ],
+                '/ja/guide/features/questionnaire.md',
+              ]
             },
             {
               title: 'Tips (活用例)',
