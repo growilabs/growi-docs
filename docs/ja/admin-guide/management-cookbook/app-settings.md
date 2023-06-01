@@ -2,6 +2,8 @@
 
 [[toc]]
 
+<ContextualBlock context="docs-growi-org">
+
 ## サイトURL設定
 
 この欄では、GROWI に URL を設定します。
@@ -35,6 +37,7 @@ GROWI の **サイト URL 設定は必ず行ってください**。
 ![appsettings13](/assets/images/appsettings13.png)
 :::
 
+</ContextualBlock>
 
 ### サイト名
 

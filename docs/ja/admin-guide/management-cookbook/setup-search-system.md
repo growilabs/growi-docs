@@ -2,6 +2,8 @@
 
 Elasticsearch による全文検索機能を利用するための設定方法を紹介します。
 
+<ContextualBlock context="docs-growi-org">
+
 ## 各環境における Elasticsearch の起動と接続
 
 Elasticsearch サーバーの起動と接続に関しては、システム管理者のページを参考にしてください。
@@ -15,6 +17,7 @@ Elasticsearch サーバーの起動と接続に関しては、システム管理
   - [こちら](/ja/admin-guide/getting-started/centos.html#elasticsearch)を参考にインストールおよび起動してください。
   - 起動した Elasticsearch の URI を GROWI の環境変数 `ELASTICSEARCH_URI` に設定してください。
 
+</ContextualBlock>
 
 ## アプリ上で接続確認
 
