@@ -1,8 +1,12 @@
 # ページを検索する
 
+<ContextualBlock context="docs-growi-org">
+
 :::warning
 この機能を利用するには、検索用DBとして Elasticsearch をセッティングする必要があります。設定方法は [こちら](/ja/admin-guide/management-cookbook/setup-search-system.html)
 :::
+
+</ContextualBlock>
 
 ナビゲーションバーの検索バーから、ページパス、本文、タグによりページを検索できます。(検索のための環境が未完了の場合は表示されません。)
 
