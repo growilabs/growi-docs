@@ -96,7 +96,7 @@ You can resend an invitation email to users who have already been provisionally 
 <img src="/assets/images/user-management9.png" width="50%">
 
 ::: tip
-[Email settings from the management screen](https://docs.growi.org/en/admin-guide/management-cookbook/app-settings.html#email-settings) are required when delivering a notification email from GROWI.
+[Email settings from the management screen](/en/admin-guide/management-cookbook/app-settings.html#email-settings) are required when delivering a notification email from GROWI.
 :::
 
 ## Manage external accounts

@@ -2,6 +2,8 @@
 
 [[toc]]
 
+<ContextualBlock context="docs-growi-org">
+
 ## Site URL Settings
 
 In this field, a URL could be set for GROWI.
@@ -35,6 +37,7 @@ Please be sure to set the **Site URL setting for GROWI**.
 ![appsettings13](/assets/images/appsettings13.png)
 :::
 
+</ContextualBlock>
 
 ## App Settings
 

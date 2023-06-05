@@ -1,8 +1,12 @@
 # Search pages
 
+<ContextualBlock context="docs-growi-org">
+
 :::warning
 To use this function, setting up Elasticsearch as a search-engine database is required. Check [this](/en/admin-guide/management-cookbook/setup-search-system.html) page to find out how.
 :::
+
+</ContextualBlock>
 
 From the search bar on the Navbar, enter a page path, text body, or tags to search for pages. (It will not be displayed if the setup is incomplete.)
 
