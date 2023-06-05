@@ -1,5 +1,7 @@
 # Set permissions to view/edit pages
 
+View/Edit permissions can be set for each page. Newly created pages are automatically set to the permissions of the parent page.
+
 ## How to set up
 
 1. In Edit mode, click the Public button in the lower right corner.
@@ -14,7 +16,6 @@ The following four types of permissions can be set.
 
 ### Public
 
-- This is the default setting.
 - Anyone can view/edit.
 
 ::: tip
