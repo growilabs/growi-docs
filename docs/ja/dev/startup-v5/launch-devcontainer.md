@@ -8,9 +8,9 @@
 ## 起動
 
 1. VSCode を起動
-1. リモート接続用インジケーターから、devcontainer でリポジトリを開く
-    * ![indicator](/assets/images/vscode-remote-button.png)
-    * Remote-Containers: Open folder in Container...
+1. コマンドパレットから、devcontainer でリポジトリを開く
+    * コマンドパレットを開く: `Ctrl + Shift + P` or `<F1>`
+    * `Dev Containers: Open folder in Container...`
     * weseek/growi ローカルリポジトリを選択
         * Windows の場合は WSL のパス: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
             * `{your account}` は自身のアカウント名に置き換えてください
