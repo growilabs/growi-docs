@@ -13,8 +13,8 @@
 ``` bash
 yarn
 
-# Start dev server (growi-org)
-yarn growi-org:dev
+# Start dev server (docs-growi-org)
+yarn docs-growi-org:dev
 
 # Or start dev server (help-growi-cloud) 
 yarn help-growi-cloud:dev
