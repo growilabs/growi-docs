@@ -34,13 +34,13 @@ module.exports = {
         },
         {
           title: 'Tips',
-          collapsable: false,
+          key: 'tips',
           children: [
-            '/en/guide/tips/hierarchical.md',
-            '/en/guide/tips/include_html.md',
-            '/en/guide/tips/checkbox.md',
-            '/en/guide/tips/page_linker.md',
-            '/en/guide/tips/footnote.md',
+            '/ja/guide/tips/hierarchical.md',
+            '/ja/guide/tips/include_html.md',
+            '/ja/guide/tips/checkbox.md',
+            '/ja/guide/tips/page_linker.md',
+            '/ja/guide/tips/footnote.md',
           ],
         },
         {
