@@ -33,6 +33,17 @@ module.exports = {
           ],
         },
         {
+          title: 'Tips',
+          collapsable: false,
+          children: [
+            '/en/guide/tips/hierarchical.md',
+            '/en/guide/tips/include_html.md',
+            '/en/guide/tips/checkbox.md',
+            '/en/guide/tips/page_linker.md',
+            '/en/guide/tips/footnote.md',
+          ],
+        },
+        {
           title: '機能紹介',
           key: 'feature-introduction',
           children: [

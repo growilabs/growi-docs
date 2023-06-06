@@ -1,6 +1,8 @@
 <template>
    <div class="container mt-4">
 
+    <PageLinks categoryName="Docs" :pageItems="getPageItems(['tutorial', 'tips', 'feature-introduction'])" />
+
       <!-- ▼ 共通, よくある質問 ▼  -->
       <div class="mb-5">
         <div class="row">
@@ -210,14 +212,11 @@ export default {
   },
 
   methods: {
-    getPageItem(itemName) {
-      for (let pageItem of this.topPageItems) {
-        if (pageItem.key === itemName) {
-          return pageItem
-        }
-      }
+    getPageItems(itemKeys) {
+      return this.topPageItems.filter(item => {
+        return itemKeys.includes(item.key);
+      });
     },
-
   }
 }
 </script>
