@@ -192,6 +192,36 @@
     </div>
 </template>
 
+<script>
+import { resolveTopPageItems } from '../../utils';
+import PageLinks from '@theme/components/PageLinks.vue';
+
+export default {
+  components: { PageLinks },
+
+  data() {
+    return {
+      topPageItems: null,
+    };
+  },
+
+  beforeMount() {
+    this.topPageItems = resolveTopPageItems(this.$site, 'ja');
+  },
+
+  methods: {
+    getPageItem(itemName) {
+      for (let pageItem of this.topPageItems) {
+        if (pageItem.key === itemName) {
+          return pageItem
+        }
+      }
+    },
+
+  }
+}
+</script>
+
 <style scoped>
 .gc-page-link {
   color: black;

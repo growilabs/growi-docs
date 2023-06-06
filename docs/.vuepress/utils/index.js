@@ -109,6 +109,7 @@ function resolveItem (item, pages, base, groupDepth = 1) {
     }
     return {
       type: 'group',
+      key: item.key,
       path: item.path,
       title: item.title,
       sidebarDepth: item.sidebarDepth,
