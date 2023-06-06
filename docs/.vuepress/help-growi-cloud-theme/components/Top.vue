@@ -1,6 +1,7 @@
 <template>
    <div class="container mt-4">
 
+    <!-- TODO: i18n categoryName -->
     <PageLinks categoryName="Docs" :pageItems="getPageItems(['tutorial', 'tips', 'feature-introduction'])" />
 
       <!-- ▼ 共通, よくある質問 ▼  -->
@@ -208,6 +209,7 @@ export default {
   },
 
   beforeMount() {
+    // TODO: i18n
     this.topPageItems = resolveTopPageItems(this.$site, 'ja');
   },
 
