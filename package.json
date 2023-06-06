@@ -55,6 +55,8 @@
     "npm-watch": "^0.6.0",
     "prettier": "^2.0.5",
     "redoc-cli": "^0.8.6",
+    "sass": "^1.62.1",
+    "sass-loader": "^v10.3.1",
     "stylelint": "^13.6.0",
     "stylelint-config-recess-order": "^2.0.4",
     "swagger-jsdoc": "^3.4.0",
