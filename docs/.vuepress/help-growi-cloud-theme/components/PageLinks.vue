@@ -1,7 +1,9 @@
 <template>
   <div class="mb-5">
-    <h3 class="fw-bold">{{ this.categoryName }}</h3>
-    <hr class="mt-3 mb-4">
+    <div v-if="this.categoryName != null">
+      <h3 class="fw-bold">{{ this.categoryName }}</h3>
+      <hr class="mt-3 mb-4">
+    </div>
 
     <div class="row mb-5">
       <div class="col-md-6" v-for="pageItem in this.pageItems" :key="pageItem.key" >
