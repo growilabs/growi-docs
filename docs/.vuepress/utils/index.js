@@ -94,7 +94,6 @@ function resolvePath (relative, base, append) {
 }
 
 function resolveItem (item, pages, base, groupDepth = 1) {
-  console.log('item', item);
   if (typeof item === 'string') {
     return resolvePage(pages, item, base)
   } else if (Array.isArray(item)) {
@@ -127,9 +126,9 @@ function resolveItem (item, pages, base, groupDepth = 1) {
  */
 export function resolveTopPageItems (site, lang) {
   const { pages, themeConfig } = site
-  const sidebarConfig = themeConfig.sidebar[`/help/${lang}`]
+  const links = themeConfig.links[`/help/${lang}`]
 
-  return sidebarConfig != null
-    ? sidebarConfig.map(item => resolveItem(item, pages, sidebarConfig))
+  return links != null
+    ? links.map(item => resolveItem(item, pages, links))
     : []
 }
