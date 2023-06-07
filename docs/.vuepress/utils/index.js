@@ -1,6 +1,6 @@
 /**
  * Utils forked from the official VuePress repository
- * @see https://github.com/vuejs/vuepress/blob/master/packages/%40vuepress/theme-default/util/index.js
+ * @see https://github.com/vuejs/vuepress/blob/9044f142f9253c9d120e03abd74f12de0113cf1f/packages/%40vuepress/theme-default/util/index.js
  */
 
 const hashRE = /#.*$/
