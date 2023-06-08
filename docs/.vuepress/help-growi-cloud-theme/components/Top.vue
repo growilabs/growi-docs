@@ -1,6 +1,9 @@
 <template>
    <div class="container mt-4">
 
+    <!-- TODO: i18n categoryName -->
+    <PageLinks categoryName="Docs" :pageItems="getPageItems(['tutorial', 'tips', 'feature-introduction'])" />
+
       <!-- ▼ 共通, よくある質問 ▼  -->
       <div class="mb-5">
         <div class="row">
@@ -191,6 +194,34 @@
       </div>
     </div>
 </template>
+
+<script>
+import { resolveTopPageItems } from '../../utils';
+import PageLinks from '@theme/components/PageLinks.vue';
+
+export default {
+  components: { PageLinks },
+
+  data() {
+    return {
+      topPageItems: null,
+    };
+  },
+
+  beforeMount() {
+    // TODO: i18n
+    this.topPageItems = resolveTopPageItems(this.$site, 'ja');
+  },
+
+  methods: {
+    getPageItems(itemKeys) {
+      return this.topPageItems.filter(item => {
+        return itemKeys.includes(item.key);
+      });
+    },
+  }
+}
+</script>
 
 <style scoped>
 .gc-page-link {
