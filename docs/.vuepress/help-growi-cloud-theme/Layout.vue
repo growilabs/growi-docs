@@ -7,7 +7,7 @@
       <div v-else class="bg-cloud right-flip py-5">
         <div class="container" id="header">
           <div class="row">
-            <h1 class="col-12 col-md-8 fs-2 border-0 mb-4 mb-md-0 pb-0 fw-bold text-center text-md-start">
+            <h1 class="col-12 col-md-8 fs-2 mb-4 mb-md-0 fw-bold text-center text-md-start">
               <a href="/help/ja" class="text-blue-dark text-decoration-none">
                 GROWI.cloud ヘルプページ
               </a>
@@ -35,7 +35,7 @@
           </p>
             <Content class="article" />
           <div class="text-center fw-bold return">
-            <a href="/help/ja" class="fs-4 text-decolation-none text-blue-dark">
+            <a href="/help/ja" class="fs-4 text-decoration-none text-blue-dark">
               <i class="fa fa-angle-left me-3" />
               ヘルプ一覧に戻る
             </a>
@@ -82,6 +82,7 @@ $light-gray: #f6f8fa;
 .article {
   img {
     width: 100%;
+    margin: 24px 0;
   }
 
   .header-anchor {
@@ -95,12 +96,12 @@ $light-gray: #f6f8fa;
 
   h1 {
     padding-bottom: 8px;
-    margin: 24px 0 36px;
+    margin: 24px 0 24px;
     border-bottom: solid 1px $border-light;
   }
 
   h2 {
-    margin: 48px 0 24px;
+    margin: 40px 0 24px;
   }
 
   h3,h4,h5,h6 {
@@ -113,6 +114,10 @@ $light-gray: #f6f8fa;
 
   h3 {
     font-size: 20px;
+  }
+
+  h4 {
+    line-height: 2rem;
   }
 
   li,p {
