@@ -56,7 +56,6 @@ module.exports = {
             '/ja/guide/features/emoji.md',
             '/ja/guide/features/history.md',
             '/ja/guide/features/authority.md',
-            '/ja/guide/features/blockdiag.md',
             '/ja/guide/features/bootstrap.md',
             '/ja/guide/features/uml_diagrams.md',
             '/ja/guide/features/drawio.md',

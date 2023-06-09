@@ -9,7 +9,7 @@
       <div class="col-md-6" v-for="pageItem in this.pageItems" :key="pageItem.key" >
         <h4 class="fw-bold mb-4">{{ pageItem.title }}</h4>
         <ul class="gc-page-ul" v-for="child in pageItem.children" :key="child.key" >
-          <li><a class="gc-page-link" :href="child.regularPath" >{{ child.title }}</a></li>
+          <li><router-link class="gc-page-link" :to="child.regularPath" >{{ child.title }}</router-link></li>
         </ul>
       </div>
     </div>

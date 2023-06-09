@@ -23,10 +23,19 @@ export default {
       isTopPage: false
     };
   },
-  mounted() {
-    if (location.pathname.match('^\/help\/(ja|en)\/?$')) {
-      this.isTopPage = true
+  methods: {
+    validateTopPageURL() {
+      console.log(this.route);
+      return location.pathname.match('^\/help\/(ja|en)\/?$') != null;
     }
-  }
+  },
+  mounted() {
+    this.isTopPage = this.validateTopPageURL()
+  },
+  watch: {
+    $route() {
+      this.isTopPage = this.validateTopPageURL();
+    },
+},
 }
 </script>
