@@ -79,6 +79,9 @@ module.exports = {
       canonicalBase: 'https://docs.growi.org',
       excludePathPatterns: ['(ja|en)\/cloud\/.*'],
     }],
+    ['@vuepress/search', {
+      searchMaxSuggestions: 10
+    }],
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
   ],
