@@ -9,8 +9,8 @@
     </div>
 
     <div v-else>
-      <div class="container py-5">
-        <!-- TODO Article component にまとめる -->
+      <!-- TODO Article component にまとめる -->
+        <div class="container py-5">
         <p class="text-muted d-none d-md-block">
           <a href="https://growi.cloud/" class="fa fa-house me-2 text-muted"/>
           <i class="fa fa-angle-right me-2" />
@@ -20,10 +20,9 @@
           <a>{{ this.$page.title }}</a>
         </p>
         <Content />
-        <!-- TODO Article component にまとめる -->
       </div>
-
-    </div>
+      <!-- TODO Article component にまとめる -->
+  </div>
   <Footer />
   </div>
 </template>

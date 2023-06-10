@@ -1,3 +1,4 @@
+// TODO: i18n
 <template>
   <header class="navbar d-flex align-items-center justify-content-between py-3 px-4 w-auto">
     <a class="navbar-brand" href="https://growi.cloud" title="Home">

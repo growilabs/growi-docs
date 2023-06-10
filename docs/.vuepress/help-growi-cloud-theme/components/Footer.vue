@@ -1,3 +1,4 @@
+// TODO: i18n
 <template>
   <footer class="pt-5 gc-bg-dark position-relative">
     <img class="d-none d-lg-inline position-absolute gc-footer-img" src="/assets/images/gc-footer-background.svg" />
