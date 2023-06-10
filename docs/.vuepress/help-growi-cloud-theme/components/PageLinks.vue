@@ -1,8 +1,7 @@
 <template>
   <div class="mb-5">
     <div v-if="this.categoryName != null">
-      <h3 class="fw-bold">{{ this.categoryName }}</h3>
-      <hr class="mt-3 mb-4">
+      <h3 class="mb-4">{{ this.categoryName }}</h3>
     </div>
 
     <div class="row mb-5">
@@ -26,6 +25,12 @@ export default {
 </script>
 
 <style scoped>
+h3 {
+  padding-bottom: 20px;
+  color:#18354A;
+  border-bottom: 1px solid #E0E0E0;
+}
+
 .gc-page-link {
   color: black;
   text-decoration: none;
