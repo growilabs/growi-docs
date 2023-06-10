@@ -7,34 +7,34 @@
           <h5 class="text-white fw-bold gc-footer-title my-4">GROWI.cloud について</h5>
           <div class="d-flex">
             <div class="d-flex flex-column mr-5">
-              <a href="/price-and-features" class="gc-footer-link">料金・機能</a>
-              <a href="/introductions" class="gc-footer-link">導入事例</a>
-              <a href="/blog/" class="gc-footer-link">ブログ記事</a>
-              <a href="/media" class="gc-footer-link">メディア紹介実績</a>
+              <a href="https://growi.cloud/price-and-features" class="gc-footer-link">料金・機能</a>
+              <a href="https://growi.cloud/introductions" class="gc-footer-link">導入事例</a>
+              <a href="https://growi.cloud/blog/" class="gc-footer-link">ブログ記事</a>
+              <a href="https://growi.cloud/media" class="gc-footer-link">メディア紹介実績</a>
             </div>
             <div class="d-flex flex-column text-white">
-              <a class="gc-footer-link" href="/signup?contractType=CORPORATION">フリートライアル</a>
-              <a class="gc-footer-link" href="/contact" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
-              <a class="gc-footer-link" href="/catalog-request" target="_blank" rel="noopener noreferrer">資料請求</a>
+              <a class="gc-footer-link" href="https://growi.cloud/signup?contractType=CORPORATION">フリートライアル</a>
+              <a class="gc-footer-link" href="https://growi.cloud/contact" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
+              <a class="gc-footer-link" href="https://growi.cloud/catalog-request" target="_blank" rel="noopener noreferrer">資料請求</a>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-3">
           <p class="text-white fw-bold gc-footer-title my-4">会社概要・規約</p>
           <div class="d-flex flex-column text-white mr-5">
-            <a class="gc-footer-link" href="https://weseek.co.jp/ja" target="_blank" rel="noopener noreferrer">会社概要</a>
-            <a class="gc-footer-link" href="/terms-of-service">利用規約</a>
-            <a class="gc-footer-link" href="/privacy-policy">プライバシーポリシー</a>
-            <a class="gc-footer-link" href="/asct">特定商取引法に基づく表記</a>
+            <a class="gc-footer-link" :href="`https://weseek.co.jp/${this.$lang}`" target="_blank" rel="noopener noreferrer">会社概要</a>
+            <a class="gc-footer-link" href="https://growi.cloud/terms-of-service">利用規約</a>
+            <a class="gc-footer-link" href="https://growi.cloud/privacy-policy">プライバシーポリシー</a>
+            <a class="gc-footer-link" href="https://growi.cloud/asct">特定商取引法に基づく表記</a>
           </div>
         </div>
         <div class="col-12 col-md-3">
           <p class="text-white fw-bold gc-footer-title my-4">サポート・コミュニティ</p>
           <div class="d-flex flex-column text-white mr-5">
-            <a class="gc-footer-link" href="/login">サービズへログイン</a>
-            <a class="gc-footer-link" href="/help">ヘルプ</a>
-            <a class="gc-footer-link" href="https://growi.org" target="_blank" rel="noopener noreferrer">GROWI.org</a>
-            <a class="gc-footer-link" href="https://docs.growi.org" target="_blank" rel="noopener noreferrer">GROWI Docs</a>
+            <a class="gc-footer-link" href="https://growi.cloud/login">サービズへログイン</a>
+            <router-link class="gc-footer-link" :to="`/${this.$lang}`">ヘルプ</router-link>
+            <a class="gc-footer-link" :href="`https://growi.org/${this.$lang}`" target="_blank" rel="noopener noreferrer">GROWI.org</a>
+            <a class="gc-footer-link" :href="`https://docs.growi.org/${this.$lang}`" target="_blank" rel="noopener noreferrer">GROWI Docs</a>
           </div>
         </div>
         <div class="col-12 col-md-2">
