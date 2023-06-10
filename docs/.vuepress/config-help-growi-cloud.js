@@ -4,6 +4,17 @@ module.exports = {
   title: 'GROWI.Cloud Help',
   base: '/help',
 
+  locales: {
+    '/en/': {
+      lang: 'en',
+      description: 'GROWI.cloud Help',
+    },
+    '/ja/': {
+      lang: 'ja',
+      description: 'GROWI.cloud ヘルプ',
+    },
+  },
+
   // Markdown of build target
   patterns: [
     '**/*.md',
@@ -87,6 +98,6 @@ module.exports = {
   ],
 
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.15.4/css/all.css'}],
+    ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v6.2.0/css/all.css'}],
   ],
 };
