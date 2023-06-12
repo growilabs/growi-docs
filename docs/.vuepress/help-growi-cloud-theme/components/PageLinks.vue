@@ -5,8 +5,8 @@
       <hr class="mt-3 mb-4">
     </div>
 
-    <div class="row mb-5">
-      <div class="col-md-6" v-for="pageItem in this.pageItems" :key="pageItem.key" >
+    <div class="row">
+      <div class="col-md-6 mb-5" v-for="pageItem in this.pageItems" :key="pageItem.key" >
         <h4 class="fw-bold mb-4">{{ pageItem.title }}</h4>
         <ul class="gc-page-ul" v-for="child in pageItem.children" :key="child.key" >
           <li><a class="gc-page-link" :href="child.regularPath" >{{ child.title }}</a></li>

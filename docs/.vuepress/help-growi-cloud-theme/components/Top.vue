@@ -2,7 +2,7 @@
    <div class="container mt-4">
 
     <!-- TODO: i18n categoryName -->
-    <PageLinks categoryName="Docs" :pageItems="getPageItems(['tutorial', 'tips', 'feature-introduction'])" />
+    <PageLinks categoryName="Docs" :pageItems="getPageItems(['tutorial', 'tips', 'feature-introduction', 'management-cookbook', 'upgrading'])" />
 
       <!-- ▼ 共通, よくある質問 ▼  -->
       <div class="mb-5">
@@ -209,8 +209,7 @@ export default {
   },
 
   beforeMount() {
-    // TODO: i18n
-    this.topPageItems = resolveTopPageItems(this.$site, 'ja');
+    this.topPageItems = resolveTopPageItems(this.$site, this.$lang);
   },
 
   methods: {
