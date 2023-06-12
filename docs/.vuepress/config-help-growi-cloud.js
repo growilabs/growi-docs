@@ -15,14 +15,16 @@ module.exports = {
     },
   },
 
-  // Markdown of build target
   patterns: [
-    '**/*.md',
     '**/*.vue',
+    // Markdown of build target
+    '(ja|en)/index.md',
+    '(ja|en)/cloud/**',
+    '(ja|en)/guide/**',
+    '(ja|en)/admin-guide/(management-cookbook|upgrading)/**',
     // Folders to ignore at build: https://github.com/vuejs/vuepress/issues/1558
-    '!(ja|en)/admin-guide/(admin-cookbook|downgrading|getting-started|migration-guide)/**',
-    '!(ja|en)/api/**',
-    '!(ja|en)/dev/**',
+    '!**/README.md',
+    '!(ja|en)/admin-guide/upgrading/(34x|35x|36x||37x|38x).md'
   ],
 
   themeConfig: {
