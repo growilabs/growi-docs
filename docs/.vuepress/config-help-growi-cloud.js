@@ -35,11 +35,13 @@ module.exports = {
     editLinkText: '',
     lastUpdated: false,
     links: {
-      '/help/ja': [
+      'ja': [
         {
           title: 'チュートリアル',
           key: 'tutorial',
           children: [
+            '/ja/guide/getting-started/five_minutes.md',
+            '/ja/guide/getting-started/markdown.md',
             '/ja/guide/tutorial/create_page.md',
             '/ja/guide/tutorial/duplicate_page.md',
             '/ja/guide/tutorial/delete_page.md',
@@ -84,8 +86,137 @@ module.exports = {
             '/ja/guide/features/questionnaire.md',
           ]
         },
+        {
+          title: 'GROWI 管理者のクックブック',
+          key: 'management-cookbook',
+          children: [
+            '/ja/admin-guide/management-cookbook/app-settings.md',
+            '/ja/admin-guide/management-cookbook/line-breaks.md',
+            '/ja/admin-guide/management-cookbook/security.md',
+            '/ja/admin-guide/management-cookbook/user-management.md',
+            '/ja/admin-guide/management-cookbook/group.md',
+            '/ja/admin-guide/management-cookbook/ldap.md',
+            '/ja/admin-guide/management-cookbook/slack-integration/official-bot-settings.md',
+            '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md',
+            '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
+            '/ja/admin-guide/management-cookbook/active-directory.md',
+            '/ja/admin-guide/management-cookbook/google-analytics.md',
+            '/ja/admin-guide/management-cookbook/external-notification.md',
+            '/ja/admin-guide/management-cookbook/import.md',
+            '/ja/admin-guide/management-cookbook/export.md',
+            '/ja/admin-guide/management-cookbook/g2g-transfer.md',
+            '/ja/admin-guide/management-cookbook/setup-search-system.md',
+            '/ja/admin-guide/management-cookbook/audit-log.md',
+          ]
+        },
+        {
+          'title': 'アップグレード',
+          'key': 'upgrading',
+          'children': [
+            '/ja/admin-guide/upgrading/61x.md',
+            '/ja/admin-guide/upgrading/60x.md',
+            '/ja/admin-guide/upgrading/51x.md',
+            '/ja/admin-guide/upgrading/50x.md',
+            '/ja/admin-guide/upgrading/45x.md',
+            '/ja/admin-guide/upgrading/44x.md',
+            '/ja/admin-guide/upgrading/43x.md',
+            '/ja/admin-guide/upgrading/42x.md',
+            '/ja/admin-guide/upgrading/41x.md',
+            '/ja/admin-guide/upgrading/40x.md',
+          ]
+        }
       ],
-    }
+      'en': [
+        {
+          title: 'Tutorial',
+          key: 'tutorial',
+          children: [
+            '/en/guide/getting-started/five_minutes.md',
+            '/en/guide/getting-started/markdown.md',
+            '/en/guide/tutorial/create_page.md',
+            '/en/guide/tutorial/duplicate_page.md',
+            '/en/guide/tutorial/delete_page.md',
+          ],
+        },
+        {
+          title: 'Tips',
+          key: 'tips',
+          children: [
+            '/en/guide/tips/hierarchical.md',
+            '/en/guide/tips/include_html.md',
+            '/en/guide/tips/checkbox.md',
+            '/en/guide/tips/page_linker.md',
+            '/en/guide/tips/footnote.md',
+          ],
+        },
+        {
+          title: 'Feature introduction',
+          key: 'feature-introduction',
+          children: [
+            '/en/guide/features/page_layout.md',
+            '/en/guide/features/copy_to_clipboard.md',
+            '/en/guide/features/table.md',
+            '/en/guide/features/bookmark.md',
+            '/en/guide/features/page_operation.md',
+            '/en/guide/features/page_deletion_collectively.md',
+            '/en/guide/features/emoji.md',
+            '/en/guide/features/history.md',
+            '/en/guide/features/authority.md',
+            '/en/guide/features/bootstrap.md',
+            '/en/guide/features/uml_diagrams.md',
+            '/en/guide/features/drawio.md',
+            '/en/guide/features/mermaid.md',
+            '/en/guide/features/search.md',
+            '/en/guide/features/tag.md',
+            '/en/guide/features/template.md',
+            '/en/guide/features/hackmd.md',
+            '/en/guide/features/in-app-notification.md',
+            '/en/guide/features/slack_integration.md',
+            '/en/guide/features/file_upload',
+            '/en/guide/features/questionnaire.md',
+          ]
+        },
+        {
+          title: 'Management cookbook',
+          key: 'management-cookbook',
+          children: [
+            '/en/admin-guide/management-cookbook/app-settings.md',
+            '/en/admin-guide/management-cookbook/line-breaks.md',
+            '/en/admin-guide/management-cookbook/security.md',
+            '/en/admin-guide/management-cookbook/user-management.md',
+            '/en/admin-guide/management-cookbook/group.md',
+            '/en/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
+            '/en/admin-guide/management-cookbook/ldap.md',
+            '/en/admin-guide/management-cookbook/slack-integration/official-bot-settings.md',
+            '/en/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md',
+            '/en/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
+            '/en/admin-guide/management-cookbook/active-directory.md',
+            '/en/admin-guide/management-cookbook/google-analytics.md',
+            '/en/admin-guide/management-cookbook/external-notification.md',
+            '/en/admin-guide/management-cookbook/import.md',
+            '/en/admin-guide/management-cookbook/export.md',
+            '/en/admin-guide/management-cookbook/setup-search-system.md',
+            '/en/admin-guide/management-cookbook/audit-log.md',
+          ]
+        },
+        {
+          'title': 'Upgrading',
+          'key': 'upgrading',
+          'children': [
+            '/en/admin-guide/upgrading/61x.md',
+            '/en/admin-guide/upgrading/60x.md',
+            '/en/admin-guide/upgrading/51x.md',
+            '/en/admin-guide/upgrading/50x.md',
+            '/en/admin-guide/upgrading/45x.md',
+            '/en/admin-guide/upgrading/44x.md',
+            '/en/admin-guide/upgrading/43x.md',
+            '/en/admin-guide/upgrading/42x.md',
+            '/en/admin-guide/upgrading/41x.md',
+            '/en/admin-guide/upgrading/40x.md',
+          ]
+        }
+      ]
+    },
   },
 
   plugins: [
