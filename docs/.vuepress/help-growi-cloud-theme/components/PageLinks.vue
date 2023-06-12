@@ -4,8 +4,8 @@
       <h3 class="mb-4">{{ this.categoryName }}</h3>
     </div>
 
-    <div class="row mb-5">
-      <div class="col-md-6" v-for="pageItem in this.pageItems" :key="pageItem.key" >
+    <div class="row">
+      <div class="col-md-6 mb-5" v-for="pageItem in this.pageItems" :key="pageItem.key" >
         <h4 class="fw-bold mb-4">{{ pageItem.title }}</h4>
         <ul class="gc-page-ul" v-for="child in pageItem.children" :key="child.key" >
           <li><router-link class="gc-page-link" :to="child.regularPath" >{{ child.title }}</router-link></li>
