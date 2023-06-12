@@ -222,7 +222,7 @@ module.exports = {
   plugins: [
     [Canonical , {
       canonicalBase: 'https://docs.growi.org',
-      excludePathPatterns: ['(ja|en)\/cloud\/.*'],
+      excludePathPatterns: ['(ja|en)\/$', '(ja|en)\/cloud\/.*'],
     }],
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
