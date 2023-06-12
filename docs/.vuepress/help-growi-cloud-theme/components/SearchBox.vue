@@ -25,11 +25,19 @@ export default {
 }
 </script>
 
+
 <style lang="scss" scoped>
 @use '../../styles/bootsrap-init.scss' as bs;
 
 $light-blue: #edf9ff;
 $text-blue-dark: #34495e;
+
+.text-blue-dark {
+  color: $text-blue-dark;
+  &:hover {
+    color: lighten($text-blue-dark, 10%);
+  }
+}
 
 .bg-cloud {
   background-color: $light-blue;
@@ -44,18 +52,10 @@ $text-blue-dark: #34495e;
   }
 }
 
-.text-blue-dark {
-  color: $text-blue-dark;
-  &:hover {
-    color: lighten($text-blue-dark, 10%);
-  }
-}
-
 ::v-deep {
   .search-box {
     input {
-      width: 100%;
-      padding: 100px, 100px, 100px, 100px;
+      width: 220px;
       border-radius: 0px;
       &:focus {
         border-color: gray;
