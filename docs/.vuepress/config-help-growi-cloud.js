@@ -1,4 +1,7 @@
 const Canonical = require('./plugins/canonical');
+const localeDataJa = require('./localeDataJa');
+const localeDataEn = require('./localeDataEn');
+
 
 module.exports = {
   title: 'GROWI.Cloud Help',
@@ -34,6 +37,10 @@ module.exports = {
     docsDir: 'docs',
     editLinkText: '',
     lastUpdated: false,
+    locales: {
+      '/ja/': localeDataJa,
+      '/en/': localeDataEn
+    },
     links: {
       'ja': [
         {
