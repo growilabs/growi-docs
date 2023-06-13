@@ -5,6 +5,7 @@ actionText: Get Started
 actionLink: /guide/
 footer: © 2018 WESEEK, Inc.
 ---
+<!-- for docs-growi-org root-->
 
 <div align="center">
   <a href="https://github.com/weseek/growi/" target="_blank"><img src="https://img.shields.io/github/stars/weseek/growi.svg?style=social&label=Stars"></a>

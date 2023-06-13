@@ -9,11 +9,13 @@ module.exports = {
   // https://github.com/vuejs/vuepress/issues/2392#issuecomment-651903508
   temp: path.resolve(__dirname, 'temp'),
 
-  // Markdown of build target
-  // TODO: Ignore Help-growi-cloud content
   patterns: [
-    '**/*.md',
     '**/*.vue',
+    // Markdown of build target
+    '**/*.md',
+    // Folders to ignore at build: https://github.com/vuejs/vuepress/issues/1558
+    '!**/index.md',
+    '!(ja|en)/cloud/**',
   ],
 
   plugins: [

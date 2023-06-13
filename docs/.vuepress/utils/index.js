@@ -127,7 +127,7 @@ function resolveItem (item, pages, base, groupDepth = 1) {
  */
 export function resolveTopPageItems (site, lang) {
   const { pages, themeConfig } = site
-  const links = themeConfig.links[`/help/${lang}`]
+  const links = themeConfig.links[lang];
 
   return links != null
     ? links.map(item => resolveItem(item, pages, links))

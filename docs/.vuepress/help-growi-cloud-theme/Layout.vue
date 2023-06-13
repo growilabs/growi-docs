@@ -1,74 +1,75 @@
 <template>
   <div>
     <Header />
-      <div v-if="isTopPage">
-        <Top />
-      </div>
-      <div v-else class="bg-cloud right-flip py-5">
-        <div class="container" id="header">
-          <div class="row">
-            <h1 class="col-12 col-md-8 fs-2 mb-4 mb-md-0 fw-bold text-center text-md-start">
-              <a href="/help/ja" class="text-blue-dark text-decoration-none">
-                GROWI.cloud ヘルプページ
-              </a>
-            </h1>
-            <div class="col-11 col-md-4 mx-auto">
-                <!-- TODO:検索ができるようにする -->
-              <form class="d-flex">
-                <input class="form-control py-2 my-auto me-2" type="search" name="search" placeholder="ヘルプページ内検索"/>
-                <!-- TODO:ボタンの色や調整をする -->
-                <a class="btn btn-primary d-flex align-items-center px-4"><i class="fa fa-search" /></a>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cloud-help-bg">
-        <div class="container px-3 px-md-auto py-5">
-          <!-- TODO:対応するパンくずリストが表示されるようにする -->
-          <p class="text-muted d-none d-md-block">
-            <i class="fa fa-house me-2" />
-              <i class="fa fa-angle-right me-2" />
-            <a class="me-2 text-decoration-none text-muted">helpTop</a>
-            <i class="fa fa-angle-right me-2" />
-            <a>page</a>
-          </p>
-            <Content class="article" />
-          <div class="text-center fw-bold return">
+
+    <SearchBox />
+
+    <div v-if="isTopPage">
+      <Top />
+    </div>
+
+    <div v-else>
+      <!-- TODO Article component にまとめる -->
+      <div class="container py-5">
+        <p class="text-muted d-none d-md-block">
+          <a href="https://growi.cloud/" class="fa fa-house me-2 text-muted"/>
+          <i class="fa fa-angle-right me-2" />
+          <!-- TODO: i18n -->
+          <router-link :to="`/${this.$lang}`" class="me-2 text-decoration-none text-muted">ヘルプトップ</router-link >
+          <i class="fa fa-angle-right me-2" />
+          <a>{{ this.$page.title }}</a>
+        </p>
+        <Content class="article" />
+        <div class="text-center fw-bold return">
             <a href="/help/ja" class="fs-4 text-decoration-none text-blue-dark">
               <i class="fa fa-angle-left me-3" />
               ヘルプ一覧に戻る
             </a>
           </div>
         </div>
-       </div>
+    </div>
+    <!-- TODO Article component にまとめる -->
     <Footer />
   </div>
+
 </template>
 
 <script>
 import Header from '@theme/components/Header.vue'
 import Footer from '@theme/components/Footer.vue'
 import Top from '@theme/components/Top.vue'
+import SearchBox from '@theme/components/SearchBox'
 
 export default {
-  components: { Header,Footer, Top },
+  components: { Header,Footer, Top, SearchBox },
+
   data() {
     return {
       isTopPage: false
     };
   },
-  mounted() {
-    if (location.pathname.match('^\/help\/(ja|en)\/?$')) {
-      this.isTopPage = true
+
+  methods: {
+    validateTopPageURL() {
+      return location.pathname.match('^\/help\/(ja|en)\/?$') != null;
     }
-  }
+  },
+
+  mounted() {
+    this.isTopPage = this.validateTopPageURL()
+  },
+
+  watch: {
+    $route() {
+      this.isTopPage = this.validateTopPageURL();
+    },
+  },
 }
 </script>
 
 >
 <style lang="scss">
-@import '../styles/style.scss';
+@use '../styles/style.scss';
 
 $light-blue: #EDF9FF;
 $border-light: #E0E0E0;
