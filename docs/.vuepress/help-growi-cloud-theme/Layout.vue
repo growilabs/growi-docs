@@ -9,7 +9,7 @@
     </div>
 
     <div v-else>
-      <!-- TODO Article component にまとめる -->
+      <!-- TODO: Consolidate into Article component -->
       <div class="container py-5">
         <p class="text-muted d-none d-md-block">
           <a href="https://growi.cloud/" class="fa fa-house me-2 text-muted"/>
@@ -28,10 +28,9 @@
           </div>
         </div>
     </div>
-    <!-- TODO Article component にまとめる -->
+    <!-- TODO: Consolidate into Article component -->
     <Footer />
   </div>
-
 </template>
 
 <script>
@@ -67,7 +66,6 @@ export default {
 }
 </script>
 
->
 <style lang="scss">
 @use '../styles/style.scss';
 
@@ -161,5 +159,4 @@ $light-gray: #f6f8fa;
 .return {
   margin: 72px 0 56px;
 }
-
 </style>
