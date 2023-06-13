@@ -1,4 +1,3 @@
-// TODO: i18n
 <template>
   <header class="navbar d-flex align-items-center justify-content-between py-3 px-4 w-auto">
     <a class="navbar-brand" href="https://growi.cloud" title="Home">
@@ -14,34 +13,34 @@
 
           <li class="nav-item p-2 p-md-0 ml-md-3">
             <a href="https://growi.cloud" class="nav-link gc-text-dark fw-bold">
-              <span class="pb-1">ホーム</span>
+              <span class="pb-1">{{ this.$themeLocaleConfig.home }}</span>
             </a>
           </li>
 
           <li class="nav-item p-2 p-md-0 ml-md-3">
             <a href="https://growi.cloud/price-and-features/jpn" class="nav-link gc-text-dark fw-bold">
-              <span class="pb-1">料金・機能</span>
+              <span class="pb-1">{{ this.$themeLocaleConfig.price_and_features }}</span>
             </a>
           </li>
 
           <li class="nav-item p-2 p-md-0 ml-md-3">
             <a href="https://growi.cloud/introductions" class="nav-link gc-text-dark fw-bold">
-              <span class="pb-1">導入事例</span>
+              <span class="pb-1">{{ this.$themeLocaleConfig.case_study}}</span>
             </a>
           </li>
 
           <li class="nav-item p-2 p-md-0 ml-md-3">
             <a href="https://growi.cloud/blog/" class="nav-link gc-text-dark fw-bold">
-              <span class="pb-1">ブログ記事</span>
+              <span class="pb-1">{{ this.$themeLocaleConfig.blog }}</span>
             </a>
           </li>
 
           <li class="nav-item p-2 p-md-0 ml-md-3 gc-active">
-            <router-link :to="`/${this.$lang}`" class="nav-link gc-text-dark fw-bold">ヘルプ</router-link>
+            <router-link :to="`/${this.$lang}`" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.help }}</router-link>
           </li>
 
           <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="https://growi.cloud/contact" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">お問い合わせ</a>
+            <a href="https://growi.cloud/contact" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.contact }}</a>
           </li>
 
           <li class="nav-item p-2 p-md-0 ml-md-3">
@@ -49,17 +48,17 @@
               type="button"
               class="btn gc-bg-gradation-skyblue text-white fw-bold  mt-md-0 py-md-2 px-md-3"
               href="https://growi.cloud/signup?contractType=CORPORATION">
-                無料でトライアル
+                {{ this.$themeLocaleConfig.free_trial }}
               <i class="ml-2 fas fa-angle-right"></i>
             </a>
           </li>
 
           <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="https://growi.cloud/catalog-request" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">資料請求</a>
+            <a href="https://growi.cloud/catalog-request" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.catalog_request }}</a>
           </li>
 
           <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="https://growi.cloud/login" class="nav-link gc-text-dark fw-bold">ログイン</a>
+            <a href="https://growi.cloud/login" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.login }}</a>
           </li>
         </ul>
       </div>

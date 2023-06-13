@@ -4,8 +4,7 @@
       <div class="row">
         <h1 class="col-12 col-md-8 fs-2 mb-4 mb-md-0 fw-bold text-center text-md-start">
           <router-link :to="`/${this.$lang}`"  class="text-blue-dark text-decoration-none">
-            <!-- TODO: i18n -->
-            GROWI.cloud ヘルプページ
+            {{ this.$themeLocaleConfig.help_page }}
           </router-link>
         </h1>
         <div class="col-11 col-md-4">
@@ -21,7 +20,10 @@
 import VuePressSearchBox from '@SearchBox';
 
 export default {
-  components: { VuePressSearchBox }
+  components: { VuePressSearchBox },
+  created() {
+    this.$site.themeConfig.searchPlaceholder = this.$themeLocaleConfig.search_page;
+  },
 }
 </script>
 
