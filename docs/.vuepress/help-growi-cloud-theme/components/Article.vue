@@ -10,18 +10,18 @@
     </p>
     <Content class="article" />
     <div class="text-center fw-bold return">
-      <a href="/help/ja" class="fs-4 text-decoration-none text-blue-dark">
+      <router-link :to="`/${this.$lang}`" class="fs-4 text-decoration-none text-blue-dark">
         <i class="fa fa-angle-left me-3" />
         <!-- TODO: i18n -->
         ヘルプ一覧に戻る
-      </a>
+      </router-link>
     </div>
   </div>
 </template>>
 
+
 <style lang="scss">
-@use '../styles/style.scss';
-@use '../stules/index.stly';
+@use '../../styles/style.scss';
 
 $light-blue: #EDF9FF;
 $border-light: #E0E0E0;
