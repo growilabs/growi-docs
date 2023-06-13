@@ -39,7 +39,7 @@
             <router-link :to="`/${this.$lang}`" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.help }}</router-link>
           </li>
 
-          <div v-if="this.$lang==='ja'">
+          <template v-if="this.$lang==='ja'">
             <li class="nav-item p-2 p-md-0 ml-md-3">
               <a href="https://growi.cloud/contact" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.contact }}</a>
             </li>
@@ -57,7 +57,7 @@
             <li class="nav-item p-2 p-md-0 ml-md-3">
               <a href="https://growi.cloud/catalog-request" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.catalog_request }}</a>
             </li>
-          </div>
+          </template>
 
           <li class="nav-item p-2 p-md-0 ml-md-3">
             <a href="https://growi.cloud/login" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.login }}</a>
