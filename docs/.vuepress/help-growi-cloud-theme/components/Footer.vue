@@ -4,6 +4,7 @@
     <img class="d-none d-lg-inline position-absolute gc-footer-img" src="/assets/images/gc-footer-background.svg" />
     <div class="container">
       <div class="row">
+
         <div class="col-12 col-md-4">
           <h5 class="text-white fw-bold gc-footer-title my-4">GROWI.cloud について</h5>
           <div class="d-flex">
@@ -20,6 +21,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-12 col-md-3">
           <p class="text-white fw-bold gc-footer-title my-4">会社概要・規約</p>
           <div class="d-flex flex-column text-white mr-5">
@@ -29,6 +31,7 @@
             <a class="gc-footer-link" href="https://growi.cloud/asct">特定商取引法に基づく表記</a>
           </div>
         </div>
+
         <div class="col-12 col-md-3">
           <p class="text-white fw-bold gc-footer-title my-4">サポート・コミュニティ</p>
           <div class="d-flex flex-column text-white mr-5">
@@ -38,14 +41,19 @@
             <a class="gc-footer-link" :href="`https://docs.growi.org/${this.$lang}`" target="_blank" rel="noopener noreferrer">GROWI Docs</a>
           </div>
         </div>
+
         <div class="col-12 col-md-2">
-          <!-- TODO: 120065 -->
           <div class="dropdown">
-            <p class="text-white fw-bold gc-footer-title my-4">
+            <p @click="changeLanguageDropdownClickHandler" class="text-white fw-bold gc-footer-title my-4" id="change-language-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
               <span aria-haspopup="true" class="dropdown-toggle gc-change-laguage-dropdown" aria-expanded="false">言語選択</span>
             </p>
+            <ul :class="`dropdown-menu ${this.isOpenChangeLanguageDropdown ? 'show' : ''}`" aria-labelledby="change-language-dropdown">
+              <li><a class="dropdown-item" :href="changeLanguageDropdownItemClickHandler('ja')">Japanese</a></li>
+              <li><a class="dropdown-item" :href="changeLanguageDropdownItemClickHandler('en')">English</a></li>
+            </ul>
           </div>
         </div>
+
         <div class="col-12 gc-text-right">
           <a href="https://twitter.com/weseek_inc" class="btn btn-lg fa-lg btn-rounded mr-2" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-twitter gc-footer-sns-icon" />
@@ -54,11 +62,33 @@
             <i class="fab fa-facebook-f gc-footer-sns-icon" />
           </a>
         </div>
+
       </div>
     </div>
     <div class="text-center gc-copyright py-2">©WESEEK, Inc. All Rights Reserved.</div>
   </footer>
 </template>
+
+
+<script>
+export default {
+  data() {
+    return {
+      isOpenChangeLanguageDropdown: false
+    };
+  },
+
+  methods: {
+    changeLanguageDropdownClickHandler() {
+      this.isOpenChangeLanguageDropdown = !this.isOpenChangeLanguageDropdown
+    },
+    changeLanguageDropdownItemClickHandler(targetLang) {
+      return location.pathname.replace(`/${this.$lang}/`, `/${targetLang}/`);
+    }
+  },
+}
+</script>
+
 
 <style scoped>
 .gc-bg-dark {
@@ -102,6 +132,7 @@
 }
 
 .gc-change-laguage-dropdown {
-  cursor: 'pointer'
+  margin-bottom: 0px;
+  cursor: 'pointer';
 };
 </style>
