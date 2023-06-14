@@ -43,12 +43,16 @@
 
         <div class="col-12 col-md-2">
           <div class="dropdown">
-            <button type="button" class="btn border-0 text-white fw-bold gc-footer-title pt-4" id="change-language-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-              <span aria-haspopup="true" class="dropdown-toggle gc-change-laguage-dropdown" aria-expanded="false">{{ this.$themeLocaleConfig.select_language }}</span>
-            </button>
+            <div class="text-white fw-bold gc-footer-title my-4 dropdown-toggle gc-change-laguage-dropdown"
+              :style="{ cursor: 'pointer' }"
+              id="change-language-dropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              {{ this.$themeLocaleConfig.select_language }}
+            </div>
             <ul class="dropdown-menu" aria-labelledby="change-language-dropdown">
-              <li><a :class="`dropdown-item ${isDisabledLanguageItem('ja') ? 'disabled' : ''}`" @click.prevent="changeLanguage('ja')">{{ this.$themeLocaleConfig.japanese }}</a></li>
-              <li><a :class="`dropdown-item ${isDisabledLanguageItem('en') ? 'disabled' : ''}`" @click.prevent="changeLanguage('en')">{{ this.$themeLocaleConfig.english }}</a></li>
+              <li><a :class="`dropdown-item ${isDisabledLanguageItem('ja') ? 'disabled' : ''}`" :style="{ cursor: 'pointer' }" @click.prevent="changeLanguage('ja')">{{ this.$themeLocaleConfig.japanese }}</a></li>
+              <li><a :class="`dropdown-item ${isDisabledLanguageItem('en') ? 'disabled' : ''}`" :style="{ cursor: 'pointer' }" @click.prevent="changeLanguage('en')">{{ this.$themeLocaleConfig.english }}</a></li>
             </ul>
           </div>
         </div>
@@ -86,7 +90,6 @@ export default {
   },
 }
 </script>
-
 
 
 <style lang="scss" scoped>
@@ -129,8 +132,4 @@ export default {
   color: #cce3e6;
   border-top: #2e556f 1px solid;
 }
-
-.gc-change-laguage-dropdown {
-  cursor: 'pointer';
-};
 </style>
