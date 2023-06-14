@@ -88,7 +88,8 @@ export default {
 </script>
 
 
-<style scoped>
+
+<style lang="scss" scoped>
 .gc-bg-dark {
   background-color: #254459 !important;
 }
@@ -99,6 +100,7 @@ export default {
 
 .gc-footer-img {
   right: 0;
+  pointer-events: none;
   mix-blend-mode: multiply;
   opacity: 0.8;
 }
@@ -112,11 +114,10 @@ export default {
   font-size: 14px;
   color: #bdd8ea;
   text-decoration: none;
-}
-
-.gc-footer-link:hover {
-  color: #bdd8ea;
-  text-decoration: underline;
+  &:hover {
+    color: #bdd8ea;
+    text-decoration: underline;
+  }
 }
 
 .gc-footer-sns-icon {
