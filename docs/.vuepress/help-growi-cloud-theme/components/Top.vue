@@ -209,16 +209,26 @@ export default {
   },
 
   beforeMount() {
-    this.topPageItems = resolveTopPageItems(this.$site, this.$lang);
+    this.getTopPageItems();
   },
 
   methods: {
+    getTopPageItems() {
+      this.topPageItems = resolveTopPageItems(this.$site, this.$lang);
+    },
+
     getPageItems(itemKeys) {
       return this.topPageItems.filter(item => {
         return itemKeys.includes(item.key);
       });
     },
-  }
+  },
+
+  watch: {
+    $lang() {
+      this.getTopPageItems();
+    }
+  },
 }
 </script>
 

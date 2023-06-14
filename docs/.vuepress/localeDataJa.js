@@ -1,6 +1,7 @@
 // help-growi-cloud
 module.exports = {
   help_page: 'GROWI.cloud ヘルプページ',
+  help_top: 'ヘルプトップ',
   search_page: 'ヘルプページ内検索',
   home: 'ホーム',
   price_and_features: '料金・機能',
