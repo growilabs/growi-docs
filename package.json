@@ -75,6 +75,7 @@
     "yarn": ">=1.22 <2"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "vuepress-plugin-medium-zoom": "^1.1.9",
     "vuepress-plugin-redirect": "^1.2.5",
     "vuepress-plugin-sitemap": "^2.3.1"
