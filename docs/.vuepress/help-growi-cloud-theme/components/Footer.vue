@@ -43,12 +43,12 @@
 
         <div class="col-12 col-md-2">
           <div class="dropdown">
-            <p @click="changeLanguageDropdownClickHandler" class="text-white fw-bold gc-footer-title my-4" id="change-language-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <button @click="changeLanguageDropdownClickHandler" type="button" class="btn border-0 text-white fw-bold gc-footer-title pt-4" id="change-language-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
               <span aria-haspopup="true" class="dropdown-toggle gc-change-laguage-dropdown" aria-expanded="false">{{ this.$themeLocaleConfig.select_language }}</span>
-            </p>
+            </button>
             <ul :class="`dropdown-menu ${this.isOpenChangeLanguageDropdown ? 'show' : ''}`" aria-labelledby="change-language-dropdown">
-              <li><a class="dropdown-item" :href="changeLanguageDropdownItemClickHandler('ja')">{{ this.$themeLocaleConfig.japanese }}</a></li>
-              <li><a class="dropdown-item" :href="changeLanguageDropdownItemClickHandler('en')">{{ this.$themeLocaleConfig.english }}</a></li>
+              <li><a :class="`dropdown-item ${isDisabledLanguageItem('ja') ? 'disabled' : ''}`" @click.prevent="changeLanguage('ja')">{{ this.$themeLocaleConfig.japanese }}</a></li>
+              <li><a :class="`dropdown-item ${isDisabledLanguageItem('en') ? 'disabled' : ''}`" @click.prevent="changeLanguage('en')">{{ this.$themeLocaleConfig.english }}</a></li>
             </ul>
           </div>
         </div>
@@ -81,8 +81,14 @@ export default {
     changeLanguageDropdownClickHandler() {
       this.isOpenChangeLanguageDropdown = !this.isOpenChangeLanguageDropdown
     },
-    changeLanguageDropdownItemClickHandler(targetLang) {
-      return location.pathname.replace(`/${this.$lang}/`, `/${targetLang}/`);
+
+    changeLanguage(targetLang) {
+      const path = location.pathname.replace(`/help/${this.$lang}/`, `/${targetLang}/`);
+      this.$router.replace({ path });
+    },
+
+    isDisabledLanguageItem(lang) {
+      return lang === this.$lang;
     }
   },
 }
@@ -131,7 +137,6 @@ export default {
 }
 
 .gc-change-laguage-dropdown {
-  margin-bottom: 0px;
   cursor: 'pointer';
 };
 </style>
