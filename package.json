@@ -43,6 +43,7 @@
     "watch": "npm-watch"
   },
   "devDependencies": {
+    "@popperjs/core": "^2.11.8",
     "@vuepress/plugin-google-analytics": "^1.8.2",
     "@vuepress/plugin-search": "^1.9.9",
     "babel-eslint": "^10.0.1",
@@ -75,7 +76,6 @@
     "yarn": ">=1.22 <2"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.8",
     "vuepress-plugin-medium-zoom": "^1.1.9",
     "vuepress-plugin-redirect": "^1.2.5",
     "vuepress-plugin-sitemap": "^2.3.1"

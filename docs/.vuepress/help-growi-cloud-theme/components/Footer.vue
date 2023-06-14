@@ -43,10 +43,10 @@
 
         <div class="col-12 col-md-2">
           <div class="dropdown">
-            <button @click="changeLanguageDropdownClickHandler" type="button" class="btn border-0 text-white fw-bold gc-footer-title pt-4" id="change-language-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn border-0 text-white fw-bold gc-footer-title pt-4" id="change-language-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
               <span aria-haspopup="true" class="dropdown-toggle gc-change-laguage-dropdown" aria-expanded="false">{{ this.$themeLocaleConfig.select_language }}</span>
             </button>
-            <ul :class="`dropdown-menu ${this.isOpenChangeLanguageDropdown ? 'show' : ''}`" aria-labelledby="change-language-dropdown">
+            <ul class="dropdown-menu" aria-labelledby="change-language-dropdown">
               <li><a :class="`dropdown-item ${isDisabledLanguageItem('ja') ? 'disabled' : ''}`" @click.prevent="changeLanguage('ja')">{{ this.$themeLocaleConfig.japanese }}</a></li>
               <li><a :class="`dropdown-item ${isDisabledLanguageItem('en') ? 'disabled' : ''}`" @click.prevent="changeLanguage('en')">{{ this.$themeLocaleConfig.english }}</a></li>
             </ul>
@@ -70,18 +70,11 @@
 
 
 <script>
+// eslint-disable-next-line no-unused-vars
+import { Dropdown } from 'bootstrap';
+
 export default {
-  data() {
-    return {
-      isOpenChangeLanguageDropdown: false
-    };
-  },
-
   methods: {
-    changeLanguageDropdownClickHandler() {
-      this.isOpenChangeLanguageDropdown = !this.isOpenChangeLanguageDropdown
-    },
-
     changeLanguage(targetLang) {
       const path = location.pathname.replace(`/help/${this.$lang}/`, `/${targetLang}/`);
       this.$router.replace({ path });
