@@ -8,7 +8,7 @@
           </router-link>
         </h1>
         <div class="col-11 col-md-4">
-          <VuePressSearchBox />
+          <VuePressSearchBox :key="resetKey" />
         </div>
       </div>
     </div>
@@ -21,8 +21,32 @@ import VuePressSearchBox from '@SearchBox';
 
 export default {
   components: { VuePressSearchBox },
+
+  data() {
+    return {
+      resetKey: 0,
+    }
+  },
+
+  methods: {
+    refresh() {
+      this.resetKey++
+    }
+  },
+
   created() {
-    this.$site.themeConfig.searchPlaceholder = this.$themeLocaleConfig.search_page;
+    this.$themeConfig.searchPlaceholder = this.$themeLocaleConfig.search_page;
+  },
+
+  watch: {
+    $lang() {
+      this.$themeConfig.searchPlaceholder = this.$themeLocaleConfig.search_page;
+      // The value of the placeholder in "VuePressSearchBox" references $themeConfig.searchPlaceholder during the mounted() lifecycle hook.
+      // To force a re-mount of the "VuePressSearchBox" component when the language setting is changed, you can use the refresh() method.
+      // qiita: https://qiita.com/kubotak/items/1cb472cfb64df91b45c1
+      // VuePressSearchBox: https://github.com/vuejs/vuepress/blob/9044f142f9253c9d120e03abd74f12de0113cf1f/packages/%40vuepress/plugin-search/SearchBox.vue#L122
+      this.refresh();
+    }
   },
 }
 </script>
