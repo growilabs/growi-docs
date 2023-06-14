@@ -39,25 +39,23 @@
             <router-link :to="`/${this.$lang}`" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.help }}</router-link>
           </li>
 
-          <template v-if="this.$lang==='ja'">
-            <li class="nav-item p-2 p-md-0 ml-md-3">
-              <a href="https://growi.cloud/contact" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.contact }}</a>
-            </li>
+          <li class="nav-item p-2 p-md-0 ml-md-3">
+            <a href="https://growi.cloud/contact" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.contact }}</a>
+          </li>
 
-            <li class="nav-item p-2 p-md-0 ml-md-3">
-              <a
-                type="button"
-                class="btn gc-bg-gradation-skyblue text-white fw-bold  mt-md-0 py-md-2 px-md-3"
-                href="https://growi.cloud/signup?contractType=CORPORATION">
-                  {{ this.$themeLocaleConfig.free_trial }}
-                <i class="ml-2 fas fa-angle-right"></i>
-              </a>
-            </li>
+          <li class="nav-item p-2 p-md-0 ml-md-3">
+            <a
+              type="button"
+              class="btn gc-bg-gradation-skyblue text-white fw-bold  mt-md-0 py-md-2 px-md-3"
+              href="https://growi.cloud/signup?contractType=CORPORATION">
+                {{ this.$themeLocaleConfig.free_trial }}
+              <i class="ml-2 fas fa-angle-right"></i>
+            </a>
+          </li>
 
-            <li class="nav-item p-2 p-md-0 ml-md-3">
-              <a href="https://growi.cloud/catalog-request" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.catalog_request }}</a>
-            </li>
-          </template>
+          <li class="nav-item p-2 p-md-0 ml-md-3">
+            <a href="https://growi.cloud/catalog-request" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.catalog_request }}</a>
+          </li>
 
           <li class="nav-item p-2 p-md-0 ml-md-3">
             <a href="https://growi.cloud/login" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.login }}</a>
