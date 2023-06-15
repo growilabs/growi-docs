@@ -7,7 +7,7 @@
             {{ this.$themeLocaleConfig.help_page }}
           </router-link>
         </h1>
-        <div class="col-11 col-md-4">
+        <div class="col-11 col-md-4 text-center">
           <VuePressSearchBox :key="resetKey" />
         </div>
       </div>

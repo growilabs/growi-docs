@@ -70,15 +70,15 @@
   font-family: Lato;
 }
 
+.gc-bg-gradation-skyblue {
+  background: transparent linear-gradient(105deg, #11c5dd 0%, #008dc1 100%) 0% 0% no-repeat padding-box;
+}
+
 .gc-active ::after {
   display: block;
   height: 3px;
   font-size: 1px;
   content: '';
-  background: transparent linear-gradient(105deg, #11c5dd 0%, #008dc1 100%) 0% 0% no-repeat padding-box;
-}
-
-.gc-bg-gradation-skyblue {
-  background: transparent linear-gradient(105deg, #11c5dd 0%, #008dc1 100%) 0% 0% no-repeat padding-box;
+  @extend .gc-bg-gradation-skyblue;
 }
 </style>
