@@ -1,51 +1,62 @@
-// TODO: i18n
 <template>
   <footer class="pt-5 gc-bg-dark position-relative">
     <img class="d-none d-lg-inline position-absolute gc-footer-img" src="/assets/images/gc-footer-background.svg" />
     <div class="container">
       <div class="row">
+
         <div class="col-12 col-md-4">
-          <h5 class="text-white fw-bold gc-footer-title my-4">GROWI.cloud について</h5>
+          <h5 class="text-white fw-bold gc-footer-title my-4">{{ this.$themeLocaleConfig.about_growi_cloud }}</h5>
           <div class="d-flex">
             <div class="d-flex flex-column mr-5">
-              <a href="https://growi.cloud/price-and-features" class="gc-footer-link">料金・機能</a>
-              <a href="https://growi.cloud/introductions" class="gc-footer-link">導入事例</a>
-              <a href="https://growi.cloud/blog/" class="gc-footer-link">ブログ記事</a>
-              <a href="https://growi.cloud/media" class="gc-footer-link">メディア紹介実績</a>
+              <a href="https://growi.cloud/price-and-features" class="gc-footer-link">{{ this.$themeLocaleConfig.price_and_features }}</a>
+              <a href="https://growi.cloud/introductions" class="gc-footer-link">{{ this.$themeLocaleConfig.case_study }}</a>
+              <a href="https://growi.cloud/blog/" class="gc-footer-link">{{ this.$themeLocaleConfig.blog }}</a>
+              <a href="https://growi.cloud/media" class="gc-footer-link">{{ this.$themeLocaleConfig.media_introduction_results }}</a>
             </div>
             <div class="d-flex flex-column text-white">
-              <a class="gc-footer-link" href="https://growi.cloud/signup?contractType=CORPORATION">フリートライアル</a>
-              <a class="gc-footer-link" href="https://growi.cloud/contact" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
-              <a class="gc-footer-link" href="https://growi.cloud/catalog-request" target="_blank" rel="noopener noreferrer">資料請求</a>
+              <a class="gc-footer-link" href="https://growi.cloud/signup?contractType=CORPORATION">{{ this.$themeLocaleConfig.free_trial }}</a>
+              <a class="gc-footer-link" href="https://growi.cloud/contact" target="_blank" rel="noopener noreferrer">{{ this.$themeLocaleConfig.contact }}</a>
+              <a class="gc-footer-link" href="https://growi.cloud/catalog-request" target="_blank" rel="noopener noreferrer">{{ this.$themeLocaleConfig.catalog_request }}</a>
             </div>
           </div>
         </div>
+
         <div class="col-12 col-md-3">
-          <p class="text-white fw-bold gc-footer-title my-4">会社概要・規約</p>
+          <p class="text-white fw-bold gc-footer-title my-4">{{ this.$themeLocaleConfig.company_profile_terms_of_use }}</p>
           <div class="d-flex flex-column text-white mr-5">
-            <a class="gc-footer-link" :href="`https://weseek.co.jp/${this.$lang}`" target="_blank" rel="noopener noreferrer">会社概要</a>
-            <a class="gc-footer-link" href="https://growi.cloud/terms-of-service">利用規約</a>
-            <a class="gc-footer-link" href="https://growi.cloud/privacy-policy">プライバシーポリシー</a>
-            <a class="gc-footer-link" href="https://growi.cloud/asct">特定商取引法に基づく表記</a>
+            <a class="gc-footer-link" :href="`https://weseek.co.jp/${this.$lang}`" target="_blank" rel="noopener noreferrer">{{ this.$themeLocaleConfig.about_us }}</a>
+            <a class="gc-footer-link" href="https://growi.cloud/terms-of-service">{{ this.$themeLocaleConfig.terms_of_service }}</a>
+            <a class="gc-footer-link" href="https://growi.cloud/privacy-policy">{{ this.$themeLocaleConfig.privacy_policy }}</a>
+            <a class="gc-footer-link" href="https://growi.cloud/asct">{{ this.$themeLocaleConfig.notation_based_on_the_act_on_specified_commercial_transactions }}</a>
           </div>
         </div>
+
         <div class="col-12 col-md-3">
-          <p class="text-white fw-bold gc-footer-title my-4">サポート・コミュニティ</p>
+          <p class="text-white fw-bold gc-footer-title my-4">{{ this.$themeLocaleConfig.community_support }}</p>
           <div class="d-flex flex-column text-white mr-5">
-            <a class="gc-footer-link" href="https://growi.cloud/login">サービズへログイン</a>
-            <router-link class="gc-footer-link" :to="`/${this.$lang}`">ヘルプ</router-link>
+            <a class="gc-footer-link" href="https://growi.cloud/login">{{ this.$themeLocaleConfig.login_to_service }}</a>
+            <router-link class="gc-footer-link" :to="`/${this.$lang}`">{{ this.$themeLocaleConfig.help }}</router-link>
             <a class="gc-footer-link" :href="`https://growi.org/${this.$lang}`" target="_blank" rel="noopener noreferrer">GROWI.org</a>
             <a class="gc-footer-link" :href="`https://docs.growi.org/${this.$lang}`" target="_blank" rel="noopener noreferrer">GROWI Docs</a>
           </div>
         </div>
+
         <div class="col-12 col-md-2">
-          <!-- TODO: 120065 -->
           <div class="dropdown">
-            <p class="text-white fw-bold gc-footer-title my-4">
-              <span aria-haspopup="true" class="dropdown-toggle gc-change-laguage-dropdown" aria-expanded="false">言語選択</span>
-            </p>
+            <div class="text-white fw-bold gc-footer-title my-4 dropdown-toggle gc-change-laguage-dropdown"
+              :style="{ cursor: 'pointer' }"
+              id="change-language-dropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              {{ this.$themeLocaleConfig.select_language }}
+            </div>
+            <ul class="dropdown-menu" aria-labelledby="change-language-dropdown">
+              <li><a :class="`dropdown-item ${isDisabledLanguageItem('ja') ? 'disabled' : ''}`" :style="{ cursor: 'pointer' }" @click.prevent="changeLanguage('ja')">{{ this.$themeLocaleConfig.japanese }}</a></li>
+              <li><a :class="`dropdown-item ${isDisabledLanguageItem('en') ? 'disabled' : ''}`" :style="{ cursor: 'pointer' }" @click.prevent="changeLanguage('en')">{{ this.$themeLocaleConfig.english }}</a></li>
+            </ul>
           </div>
         </div>
+
         <div class="col-12 gc-text-right">
           <a href="https://twitter.com/weseek_inc" class="btn btn-lg fa-lg btn-rounded mr-2" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-twitter gc-footer-sns-icon" />
@@ -54,11 +65,32 @@
             <i class="fab fa-facebook-f gc-footer-sns-icon" />
           </a>
         </div>
+
       </div>
     </div>
     <div class="text-center gc-copyright py-2">©WESEEK, Inc. All Rights Reserved.</div>
   </footer>
 </template>
+
+
+<script>
+// eslint-disable-next-line no-unused-vars
+import { Dropdown } from 'bootstrap';
+
+export default {
+  methods: {
+    changeLanguage(targetLang) {
+      const path = location.pathname.replace(`/help/${this.$lang}/`, `/${targetLang}/`);
+      this.$router.replace({ path });
+    },
+
+    isDisabledLanguageItem(lang) {
+      return lang === this.$lang;
+    }
+  },
+}
+</script>
+
 
 <style lang="scss" scoped>
 .gc-bg-dark {
@@ -100,8 +132,4 @@
   color: #cce3e6;
   border-top: #2e556f 1px solid;
 }
-
-.gc-change-laguage-dropdown {
-  cursor: 'pointer';
-};
 </style>
