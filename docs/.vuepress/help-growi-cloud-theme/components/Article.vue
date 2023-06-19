@@ -3,8 +3,7 @@
     <p class="text-muted d-none d-md-block">
       <a href="https://growi.cloud/" class="fa fa-house me-2 text-muted"/>
       <i class="fa fa-angle-right me-2" />
-      <!-- TODO: i18n -->
-      <router-link :to="`/${this.$lang}`" class="me-2 text-decoration-none text-muted">ヘルプトップ</router-link >
+      <router-link :to="`/${this.$lang}`" class="me-2 text-decoration-none text-muted">{{ this.$themeLocaleConfig.help_top }}</router-link >
       <i class="fa fa-angle-right me-2" />
       <a>{{ this.$page.title }}</a>
     </p>
@@ -12,8 +11,7 @@
     <div class="text-center fw-bold mt-5">
       <router-link :to="`/${this.$lang}`" class="fs-4 text-decoration-none text-blue-dark">
         <i class="fa fa-angle-left me-3" />
-        <!-- TODO: i18n -->
-        ヘルプ一覧に戻る
+        {{  this.$themeLocaleConfig.back_to_top }}
       </router-link>
     </div>
   </div>
