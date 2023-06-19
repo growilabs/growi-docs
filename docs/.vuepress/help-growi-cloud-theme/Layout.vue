@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeaderMenu />
+    <Header />
 
     <SearchBox />
 
@@ -26,14 +26,15 @@
   </div>
 </template>
 
+
 <script>
-import HeaderMenu from '@theme/components/HeaderMenu.vue'
+import Header from '@theme/components/Header'
 import Footer from '@theme/components/Footer.vue'
 import Top from '@theme/components/Top.vue'
 import SearchBox from '@theme/components/SearchBox'
 
 export default {
-  components: { HeaderMenu,Footer, Top, SearchBox },
+  components: { Header, Footer, Top, SearchBox },
 
   data() {
     return {
