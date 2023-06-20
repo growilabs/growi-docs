@@ -3,13 +3,7 @@
     <div class="navbar-main">
       <ul class="nav navbar-nav flex-md-row">
 
-        <li class="nav-item p-2 p-md-0 ml-md-3">
-          <a href="https://growi.cloud" class="nav-link gc-text-dark fw-bold">
-            <span class="pb-1">{{ this.$themeLocaleConfig.home }}</span>
-          </a>
-        </li>
-
-        <li class="nav-item p-2 p-md-0 ml-md-3">
+        <li class="nav-item p-2 p-md-0 ml-md-">
           <a href="https://growi.cloud/price-and-features/jpn" class="nav-link gc-text-dark fw-bold">
             <span class="pb-1">{{ this.$themeLocaleConfig.price_and_features }}</span>
           </a>

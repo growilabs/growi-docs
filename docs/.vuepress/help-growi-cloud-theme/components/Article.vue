@@ -5,7 +5,7 @@
     <p class="text-muted d-none d-md-block">
       <a href="https://growi.cloud/" class="fa fa-house me-2 text-muted"/>
       <i class="fa fa-angle-right me-2" />
-      <router-link :to="`/${this.$lang}`" class="me-2 text-decoration-none text-muted">{{ this.$themeLocaleConfig.help_top }}</router-link >
+      <router-link :to="`/${this.$lang}`" class="me-2 text-decoration-none text-muted">{{ this.$themeLocaleConfig.help }}</router-link >
       <i class="fa fa-angle-right me-2" />
       <a>{{ this.$page.title }}</a>
     </p>

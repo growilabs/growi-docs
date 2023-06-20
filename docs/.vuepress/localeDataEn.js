@@ -1,10 +1,8 @@
 // for help-growi-cloud
 module.exports = {
-  help_page: 'GROWI.cloud Help Page',
-  help_top: 'Help Top',
-  search_page: 'Search in Help Pages',
+  help_page: 'GROWI.cloud Help',
+  search_page: 'Search in Help',
   back_to_top: 'Go back to the help menu',
-  home: 'Home',
   price_and_features: 'Price & Features',
   case_study: 'Study Cases',
   media_introduction_results: 'Media Introduction Results',
