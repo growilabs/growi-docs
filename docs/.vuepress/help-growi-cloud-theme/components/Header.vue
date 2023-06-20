@@ -87,6 +87,7 @@ export default {
   position: fixed;
   top: 0;
   right: -100%;
+  // To be displayed more fully than bootstrap elements
   z-index: 1300;
   width: 100%;
   height: 100vh;
@@ -103,6 +104,7 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
+  // To be displayed behind the mobile version of the menu
   z-index: 1299;
   background-color: rgba(0, 0, 0, 0.6);
   transition: all 0.6s;

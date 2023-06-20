@@ -103,7 +103,6 @@
 }
 
 .gc-global-menu-button {
-  -webkit-appearance: none;
   @include media-breakpoint-down(sm) {
     width: 100%;
   }
