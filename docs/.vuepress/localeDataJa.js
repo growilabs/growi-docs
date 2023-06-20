@@ -3,6 +3,7 @@ module.exports = {
   help_page: 'GROWI.cloud ヘルプページ',
   help_top: 'ヘルプトップ',
   search_page: 'ヘルプページ内検索',
+  back_to_top: 'ヘルプ一覧に戻る',
   home: 'ホーム',
   price_and_features: '料金・機能',
   case_study: '導入事例',

@@ -1,0 +1,24 @@
+// forked: https://github.com/vuejs/vuepress/blob/9044f142f9253c9d120e03abd74f12de0113cf1f/packages/%40vuepress/theme-default/styles/arrow.styl
+
+@require './config'
+
+.arrow
+  display inline-block
+  width 0
+  height 0
+  &.up
+    border-left 4px solid transparent
+    border-right 4px solid transparent
+    border-bottom 6px solid $arrowBgColor
+  &.down
+    border-left 4px solid transparent
+    border-right 4px solid transparent
+    border-top 6px solid $arrowBgColor
+  &.right
+    border-top 4px solid transparent
+    border-bottom 4px solid transparent
+    border-left 6px solid $arrowBgColor
+  &.left
+    border-top 4px solid transparent
+    border-bottom 4px solid transparent
+    border-right 6px solid $arrowBgColor

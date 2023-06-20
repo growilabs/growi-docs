@@ -54,35 +54,13 @@ export default {
 
 <style lang="scss" scoped>
 @use '../../styles/bootsrap-init.scss' as bs;
-
-$light-blue: #edf9ff;
-$text-blue-dark: #34495e;
-
-.text-blue-dark {
-  color: $text-blue-dark;
-  &:hover {
-    color: lighten($text-blue-dark, 10%);
-  }
-}
-
-.bg-cloud {
-  background-color: $light-blue;
-  background-image: url('/assets/images/cloud-background-abstract-right.png');
-  background-repeat: no-repeat;
-  background-position: right -50px bottom -16px;
-  background-size: 100%;
-  @include bs.media-breakpoint-up(md) {
-    background-image: url('/assets/images/cloud-background-abstract-left.png'), url('/assets/images/cloud-background-abstract-right.png');
-    background-position: left -50% bottom -3vw, right -50% bottom -3vw;
-    background-size: 50%;
-  }
-}
+@use '../../styles/style.scss';
 
 ::v-deep {
   .search-box {
     input {
-      width: 220px;
-      border-radius: 0px;
+      width: 310px;
+      border-radius: 2px;
       &:focus {
         border-color: gray;
       }
