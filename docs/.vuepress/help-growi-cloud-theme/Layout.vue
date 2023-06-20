@@ -15,8 +15,9 @@
   </div>
 </template>
 
+
 <script>
-import Header from '@theme/components/Header.vue'
+import Header from '@theme/components/Header'
 import Footer from '@theme/components/Footer.vue'
 import Top from '@theme/components/Top.vue'
 import Article from '@theme/components/Article';
