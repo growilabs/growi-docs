@@ -1,78 +1,60 @@
 <template>
-  <header class="navbar d-flex align-items-center justify-content-between py-3 px-4 w-auto">
-    <a class="navbar-brand" href="https://growi.cloud" title="Home">
-      <span class="gc-brandlogo-midium py-2 fw-bold gc-text-lato">
-        <img src="/assets/images/gc-logo.png">
-        <span class="gc-text-dark align-middle">GROWI</span><span class="gc-brandlogo-second-level-domain align-middle">.cloud</span>
-      </span>
-    </a>
+  <div data-toggle="sticky" class="sticky-top">
+    <header class="navbar d-flex align-items-center justify-content-between py-2 px-4">
 
-    <div class="navbar-expand-lg navbar-static-top">
-      <div class="navbar-main">
-        <ul class="nav navbar-nav flex-md-row">
+      <!-- Brand logo -->
+      <a class="navbar-brand" href="https://growi.cloud" title="Home">
+        <span class="gc-brandlogo-midium py-2 fw-bold gc-text-lato">
+          <img src="/assets/images/gc-logo.png"><span class="gc-text-dark align-middle">GROWI</span><span class="gc-brandlogo-second-level-domain align-middle">.cloud</span>
+        </span>
+      </a>
 
-          <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="https://growi.cloud" class="nav-link gc-text-dark fw-bold">
-              <span class="pb-1">{{ this.$themeLocaleConfig.home }}</span>
-            </a>
-          </li>
-
-          <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="https://growi.cloud/price-and-features/jpn" class="nav-link gc-text-dark fw-bold">
-              <span class="pb-1">{{ this.$themeLocaleConfig.price_and_features }}</span>
-            </a>
-          </li>
-
-          <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="https://growi.cloud/introductions" class="nav-link gc-text-dark fw-bold">
-              <span class="pb-1">{{ this.$themeLocaleConfig.case_study}}</span>
-            </a>
-          </li>
-
-          <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="https://growi.cloud/blog/" class="nav-link gc-text-dark fw-bold">
-              <span class="pb-1">{{ this.$themeLocaleConfig.blog }}</span>
-            </a>
-          </li>
-
-          <li class="nav-item p-2 p-md-0 ml-md-3 gc-active">
-            <router-link :to="`/${this.$lang}`" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.help }}</router-link>
-          </li>
-
-          <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="https://growi.cloud/contact" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.contact }}</a>
-          </li>
-
-          <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a
-              type="button"
-              class="btn gc-bg-gradation-skyblue text-white fw-bold  mt-md-0 py-md-2 px-md-3"
-              href="https://growi.cloud/signup?contractType=CORPORATION">
-                {{ this.$themeLocaleConfig.free_trial }}
-              <i class="ml-2 fas fa-angle-right"></i>
-            </a>
-          </li>
-
-          <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="https://growi.cloud/catalog-request" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.catalog_request }}</a>
-          </li>
-
-          <li class="nav-item p-2 p-md-0 ml-md-3">
-            <a href="https://growi.cloud/login" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.login }}</a>
-          </li>
-        </ul>
+      <!-- PC mode -->
+      <div class="d-none d-md-block">
+         <GlobalHeaderMenu />
       </div>
-    </div>
-  </header>
+
+      <!-- SP mode -->
+      <button type="button" class="btn btn-icon header-btn d-md-none p-0" @click="() => {this.isDisplayGlobalHeaderManu = true}">
+        <i class="fa fa-lg fa-bars"></i>
+      </button>
+
+      <div :class="`gc-global-menu-wrapper ${this.isDisplayGlobalHeaderManu ? 'gc-global-menu-active' : ''}`" @click="() => {this.isDisplayGlobalHeaderManu = false}">
+        <div class="gc-global-menu h-100 gc-w-80 bg-white p-3">
+          <GlobalHeaderMenu />
+        </div>
+      </div>
+
+      <template v-if="this.isDisplayGlobalHeaderManu">
+        <div class="gc-global-menu-transparent"></div>
+      </template>
+    </header>
+  </div>
 </template>
 
-<style scoped>
+
+<script>
+import GlobalHeaderMenu from '@theme/components/GlobalHeaderMenu.vue';
+
+export default {
+  components: { GlobalHeaderMenu },
+
+  data() {
+    return {
+      isDisplayGlobalHeaderManu: false,
+    }
+  },
+};
+</script>
+
+
+<style lang="scss" scoped>
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins/breakpoints';
+
 .gc-text-dark {
   color: #254459;
-}
-
-.gc-brandlogo-midium {
-  font-size: 20px;
 }
 
 .gc-brandlogo-second-level-domain {
@@ -83,21 +65,57 @@
   font-family: Lato;
 }
 
-.gc-brandlogo-midium img {
-  width: auto;
-  height: 40px;
-  margin-right: 12px;
+.gc-brandlogo-midium {
+  font-size: 20px;
+  img {
+    width: auto;
+    height: 40px;
+    margin-right: 8px;
+    @include media-breakpoint-down(sm) {
+      height: 32px;
+      margin-right: 8px;
+    }
+  }
 }
 
-.gc-active ::after {
-  display: block;
-  height: 3px;
-  font-size: 1px;
-  content: '';
-  background: transparent linear-gradient(105deg, #11c5dd 0%, #008dc1 100%) 0% 0% no-repeat padding-box;
+.gc-global-menu {
+  position: absolute;
+  right: 0;
 }
 
-.gc-bg-gradation-skyblue {
-  background: transparent linear-gradient(105deg, #11c5dd 0%, #008dc1 100%) 0% 0% no-repeat padding-box;
+.gc-global-menu-wrapper {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  // To be displayed more fully than bootstrap elements
+  z-index: 1300;
+  width: 100%;
+  height: 100vh;
+  transition: all 0.6s;
+}
+
+.gc-global-menu-active {
+  right: 0;
+}
+
+.gc-global-menu-transparent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  // To be displayed behind the mobile version of the menu
+  z-index: 1299;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.6s;
+}
+
+.gc-w-80 {
+  width: 80% !important;
+}
+
+.navbar {
+  background-color: $white;
+  box-shadow: 0px 2px 4px #0000003c;
 }
 </style>
