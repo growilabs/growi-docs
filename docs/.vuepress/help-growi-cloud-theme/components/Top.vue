@@ -1,10 +1,7 @@
 <template>
   <div class="container mt-4">
-    <!-- TODO: i18n categoryName -->
-    <PageLinks categoryName="Help" :pageItems="getPageItems(['application-settings', 'service', 'payment-contract', 'trouble-shooting', 'others'])" />
-
-    <!-- TODO: i18n categoryName -->
-    <PageLinks categoryName="Docs" :pageItems="getPageItems(['tutorial', 'tips', 'feature-introduction', 'management-cookbook', 'upgrading'])" />
+    <PageLinks :categoryName="this.$themeLocaleConfig.category.about_growi_cloud" :pageItems="getPageItems(['application-settings', 'service', 'payment-contract', 'trouble-shooting', 'others'])" />
+    <PageLinks :categoryName="this.$themeLocaleConfig.category.about_growi_app" :pageItems="getPageItems(['tutorial', 'examples', 'feature', 'management-settings', 'upgrade-guide'])" />
   </div>
 </template>
 

@@ -22,5 +22,9 @@ module.exports = {
   login_to_service: 'Login to Service',
   select_language: 'Select language',
   japanese: 'Japanese',
-  english: 'English'
+  english: 'English',
+  category: {
+    about_growi_cloud: 'About GROWI.cloud',
+    about_growi_app: 'About GROWI App'
+  }
 }

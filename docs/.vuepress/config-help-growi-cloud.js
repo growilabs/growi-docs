@@ -129,8 +129,8 @@ module.exports = {
           ],
         },
         {
-          title: 'Tips',
-          key: 'tips',
+          title: '活用例',
+          key: 'examples',
           children: [
             '/ja/guide/tips/hierarchical.md',
             '/ja/guide/tips/include_html.md',
@@ -140,8 +140,8 @@ module.exports = {
           ],
         },
         {
-          title: '機能紹介',
-          key: 'feature-introduction',
+          title: '機能',
+          key: 'feature',
           children: [
             '/ja/guide/features/page_layout.md',
             '/ja/guide/features/copy_to_clipboard.md',
@@ -167,8 +167,8 @@ module.exports = {
           ]
         },
         {
-          title: 'GROWI 管理者のクックブック',
-          key: 'management-cookbook',
+          title: '管理者向け設定',
+          key: 'management-settings',
           children: [
             '/ja/admin-guide/management-cookbook/app-settings.md',
             '/ja/admin-guide/management-cookbook/line-breaks.md',
@@ -190,8 +190,8 @@ module.exports = {
           ]
         },
         {
-          'title': 'アップグレード',
-          'key': 'upgrading',
+          'title': 'アップグレードガイド',
+          'key': 'upgrade-guide',
           'children': [
             '/ja/admin-guide/upgrading/61x.md',
             '/ja/admin-guide/upgrading/60x.md',
@@ -280,8 +280,8 @@ module.exports = {
           ],
         },
         {
-          title: 'Tips',
-          key: 'tips',
+          title: 'Examples',
+          key: 'examples',
           children: [
             '/en/guide/tips/hierarchical.md',
             '/en/guide/tips/include_html.md',
@@ -291,8 +291,8 @@ module.exports = {
           ],
         },
         {
-          title: 'Feature introduction',
-          key: 'feature-introduction',
+          title: 'Feature',
+          key: 'feature',
           children: [
             '/en/guide/features/page_layout.md',
             '/en/guide/features/copy_to_clipboard.md',
@@ -318,8 +318,8 @@ module.exports = {
           ]
         },
         {
-          title: 'Management cookbook',
-          key: 'management-cookbook',
+          title: 'Management settings',
+          key: 'management-settings',
           children: [
             '/en/admin-guide/management-cookbook/app-settings.md',
             '/en/admin-guide/management-cookbook/line-breaks.md',
@@ -341,8 +341,8 @@ module.exports = {
           ]
         },
         {
-          'title': 'Upgrading',
-          'key': 'upgrading',
+          'title': 'Uupgrade guide',
+          'key': 'upgrade-guide',
           'children': [
             '/en/admin-guide/upgrading/61x.md',
             '/en/admin-guide/upgrading/60x.md',
