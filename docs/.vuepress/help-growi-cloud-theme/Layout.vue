@@ -11,6 +11,7 @@
     <div v-else>
       <Article />
     </div>
+
     <Footer />
   </div>
 </template>
