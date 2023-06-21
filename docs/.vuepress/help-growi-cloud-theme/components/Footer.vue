@@ -74,10 +74,12 @@
 
 
 <script>
-// eslint-disable-next-line no-unused-vars
-import { Dropdown } from 'bootstrap';
-
 export default {
+  mounted () {
+    // see: https://vuepress.vuejs.org/guide/using-vue.html#browser-api-access-restrictions
+    import('bootstrap')
+  },
+
   methods: {
     changeLanguage(targetLang) {
       const path = location.pathname.replace(`/help/${this.$lang}/`, `/${targetLang}/`);
