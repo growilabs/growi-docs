@@ -68,6 +68,7 @@
     "vue-tabs-component": "^1.5.0",
     "vuepress": "^1.8.2",
     "vuepress-jsdoc": "^3.0.0",
+    "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-tabs": "^0.3.0"
   },
   "engines": {
