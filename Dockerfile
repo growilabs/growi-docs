@@ -5,7 +5,7 @@
 #
 #  Build Stage
 #
-FROM node:16-slim AS builder
+FROM node:16-alpine AS builder
 
 WORKDIR /growi-docs
 
