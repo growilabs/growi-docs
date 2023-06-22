@@ -27,6 +27,10 @@ import SearchBox from '@theme/components/SearchBox'
 export default {
   components: { Header, Footer, Top, Article, SearchBox },
 
+  beforeMount() {
+    this.prependGoogleTagManagerScript();
+  },
+
   data() {
     return {
       isTopPage: false
@@ -34,6 +38,12 @@ export default {
   },
 
   methods: {
+    prependGoogleTagManagerScript() {
+      const recaptchaScript = document.createElement('noscript')
+      recaptchaScript.innerHTML = '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMNSMCF" height="0" width="0" style="display:none;visibility:hidden"></iframe>'
+      document.body.prepend(recaptchaScript)
+    },
+
     validateTopPageURL() {
       return location.pathname.match('^\/help\/(ja|en)\/?$') != null;
     }
