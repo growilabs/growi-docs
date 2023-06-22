@@ -238,7 +238,6 @@ module.exports = {
   ],
 
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v6.2.0/css/all.css'}],
     ['script', {}, `
       (function(w,d,s,l,i){
         w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -247,6 +246,7 @@ module.exports = {
         j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
         f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-MMNSMCF');
-    `]
+    `],
+    ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v6.2.0/css/all.css'}]
   ],
 };
