@@ -1,11 +1,12 @@
 # Security Document
+
 ## Answers to Security Document
 
 If you need a check sheet to verify your security status when using GROWI.cloud, please see below.
 
 ### Customers Can Fill In The Check Sheet by Themselves by Referring To The Completed Check Sheet
 
-You can download a security checklist that conforms to the "Cloud Service Level Checklist" by Japan's Ministry of Economy, Trade and Industry and the "How to Create a Secure Website 7th Edition Revised" by the Information-technology Promotion Agency, Japan (IPA).  
+You can download a security checklist that conforms to the "Cloud Service Level Checklist" by Japan's Ministry of Economy, Trade and Industry and the "How to Create a Secure site 7th Edition Revised" by the Information-technology Promotion Agency, Japan (IPA).  
 The downloaded documents are written in Japanese.  
 
 - [Security Check Sheet - Ministry of Economy, Trade and Industry（GROWI.cloud）](/attachment/62a81eb085dede40856615b0)

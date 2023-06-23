@@ -1,18 +1,18 @@
 # Plan Change
- 
+
 ## Procedure
 
 1. See the [**Dashboard page**](https://growi.cloud/my) after logging in to GROWI.cloud.
 1. Select "**Organization**" on the left side of the page, then **select the organization you want to change the plan** for from the list displayed to display the organization details page.
 1. Select "**Change**" on the second page from the top, to the right of the plan.  
 ![planchange_1.png](/assets/images/en/planchange_1.png)
-    
+
 1. Moves to the plan selection page
-1. Select the plan of your choice from the Plan Selection. 
+1. Select the plan of your choice from the Plan Selection.
 ![planchange_2.png](/assets/images/en/planchange_2.png)
 
-    
-For more information about plans, click		**[Price Plan](/en/cloud/price.html)**
+
+For more information about plans, click  **[Price Plan](/en/cloud/price.html)**
 
 
 1. Select "**Proceed to Confirm**" at the bottom right of the page.  

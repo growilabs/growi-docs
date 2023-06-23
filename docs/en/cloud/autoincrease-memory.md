@@ -17,7 +17,7 @@ When the above cases occur, this function automatically increases the amount of 
 
 ## Behavior Until The Amount of Memory is Increased
 
-In some cases, it may take 10 to 20 minutes to increase the amount of memory. 
+In some cases, it may take 10 to 20 minutes to increase the amount of memory.
 Therefore, even if the system restarts after the first operation, please wait for a while and then perform the same operation again.
 
 Also, if the operation continues to fail after some time has elapsed, please wait for a while and then perform the same operation again.
