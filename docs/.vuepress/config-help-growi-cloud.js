@@ -53,6 +53,7 @@ module.exports = {
             '/ja/cloud/domain.md',
             '/ja/cloud/growiapp.md',
             '/ja/cloud/organization.md',
+            '/ja/cloud/passwordseed.md',
             '/ja/cloud/status.md',
             '/ja/cloud/url.md',
             '/ja/cloud/useraccount.md',
