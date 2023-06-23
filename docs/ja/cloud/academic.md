@@ -16,9 +16,7 @@
 ## アカデミックプラン対象者と必要書類
 
 - 対象
-  <!-- textlint-disable weseek/max-kanji-continuous-len -->
   - 学生、教員、または教育関係団体
-  <!-- textlint-enable weseek/max-kanji-continuous-len -->
 - 必要書類
   - 学生証、在学証明書、在勤証明書、教育機関の団体による申込である事を証明できる書類
 
@@ -48,9 +46,7 @@
     <!-- textlint-disableweseek/no-doubled-joshi -->
     1. 引継ぎ元のユーザーで GROWI.cloud にログインし [ダッシュボード](https://growi.cloud/my) にアクセスする
     <!-- textlint-enable weseek/no-doubled-joshi -->
-    <!-- textlint-disable weseek/max-kanji-continuous-len -->
     2. 組織詳細画面のメンバー一覧から引継ぎ先のユーザーのユーザー操作を展開し プライマリーオーナーに変更する ボタンを押す。  
-    <!-- textlint-enable weseek/max-kanji-continuous-len -->
 
 ![academic_1.png](/assets/images/ja/academic_1.png)
     3. Primary Owner のラベルが変更されていることを確認する。

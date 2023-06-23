@@ -2,10 +2,9 @@
 
 ## 同時多人数編集（HackMD）とは
 
-<!-- textlint-disable weseek/ja-no-redundant-expression -->
-- HackMD は Markdown 同時多人数編集を行うためのとても優れたツールです。
+- HackMD は Markdown 同時多人数編集をするためのとても優れたツールです。
   - 詳細は [GROWI Docs](https://docs.growi.org/ja/admin-guide/admin-cookbook/integrate-with-hackmd.html) をご参照ください。
-<!-- textlint-enable weseek/ja-no-redundant-expression -->
+
 ## HackMD をご利用いただけるプラン
 
 - ベーシック

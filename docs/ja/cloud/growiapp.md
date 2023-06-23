@@ -17,13 +17,9 @@
 
 ### GROWI アプリの作成導線
 
-<!-- textlint-disable weseek/max-kanji-continuous-len -->
 GROWI.cloud にログイン後、組織詳細画面もしくはダッシュボード画面から GROWI アプリを作成できます。  
-<!-- textlint-enable weseek/max-kanji-continuous-len -->
 
-<!-- textlint-disable weseek/max-kanji-continuous-len -->
 #### 組織詳細画面
-<!-- textlint-enable weseek/max-kanji-continuous-len -->
 
 ![growiapp_1.png](/assets/images/ja/growiapp_1.png)
 
@@ -41,9 +37,7 @@ GROWI へアカウント登録した情報、ページ内容・GCP へアップ�
 ### アクセスがない場合のアプリの停止について
 
 <!-- textlint-disable weseek/no-doubled-joshi -->
-<!-- textlint-disable weseek/max-kanji-continuous-len -->
-- GROWI.cloud 上で立ち上げられた GROWI App へのアクセス有無をチェックし、1週間以上継続してアクセスが無い状態が続いた場合は、ご利用いただいていない状態と判定しアプリを停止いたします。
-<!-- textlint-enable weseek/max-kanji-continuous-len -->
+- GROWI.cloud 上で立ち上げられた GROWI App へのアクセス有無をチェックし、1週間以上、継続してアクセスが無い状態が続いた場合は、ご利用いただいていない状態と判定しアプリを停止いたします。
 <!-- textlint-enable weseek/no-doubled-joshi -->
 - **アプリの停止によって wiki 上のデータが削除されることはありません。**
 - 停止されたアプリは、アプリの管理画面またはアプリを所有する組織の管理画面から、該当のアプリの「再起動」ボタンを押下していただければ、簡単に復旧できます。

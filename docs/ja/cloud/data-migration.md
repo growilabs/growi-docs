@@ -124,7 +124,7 @@ GROWI から別の GROWI へ簡単にデータの移行ができる機能です�
 ただし、弊社サポートでは基本的にお客様管理の環境へアクセスして行うデータ取得作業には対応しておりませんを行うことはありませんので、 dump データおよび添付ファイルの取得は、お客様ご自身によるご準備をお願いしております。
 
 #### ご依頼の流れ
-<!-- textlint-disable weseek/max-kanji-continuous-len -->
+
 1. 窓口へ問い合わせ  
    弊社お問い合わせ窓口より [こちら](https://growi.cloud/contact) より  
    GROWI(OSS)→GROWI.cloudの移行を旨ご依頼をお願いいたします。  
@@ -133,11 +133,10 @@ GROWI から別の GROWI へ簡単にデータの移行ができる機能です�
 3. お見積もり  
    お伺いした内容をもとに、弊社担当からお見積もりをご提案させていただきます。
 4. 作業日のご調整と実施</span><br><br>
-　　内容に問題なければ作業日確定後、<br>
+　　内容に問題なければ作業日の確定後、<br>
 　　2.でお預かりしたデータをもとに移行作業を実施させていただく
-5. お客様側実機確認  
+5. お客様側の実機確認  
 　　お客様側でGROWI環境をご確認いただき、動作に問題がないことをご確認いただく。
-<!-- textlint-enable weseek/max-kanji-continuous-len -->
 
 #### お客様ご準備
 
@@ -153,9 +152,8 @@ GROWI から別の GROWI へ簡単にデータの移行ができる機能です�
 - GROWI の mongodump データ
 - 添付ファイルの実体　(必要に応じて)
 
-<!-- textlint-disable weseek/max-kanji-continuous-len -->
 ##### 移行元GROWIの環境設定情報
-<!-- textlint-enable weseek/max-kanji-continuous-len -->
+
 - ファイルアップロード先
 - PASSWORD_SEED 値
 - GROWI のバージョン

@@ -33,9 +33,8 @@
 HackMD を有効にされており、HackMD で編集中に添付ファイルをご利用される場合、以下の事項にご注意ください。
 
 1. HackMD で添付したファイルは、**GROWI が再起動すると消滅**してしまいます。
-<!-- textlint-disable weseek/max-kanji-continuous-len -->
-2. HackMD で添付したファイルは、GROWI のページ閲覧権限設定が反映されず、**誰でも URL を知れればアクセス可能**になってしまいます。
-<!-- textlint-enable weseek/max-kanji-continuous-len -->
+2. HackMD で添付したファイルは、GROWI のページ閲覧権限の設定が反映されず、**誰でも URL を知れればアクセス可能**になってしまいます。
+
 ## 「ファイル保存先」に指定したストレージにファイルを保存する場合
 <!-- textlint-disable weseek/no-doubled-joshi -->
 GROWI で添付ファイルをアップロードされる場合は、HackMD エディタではなく、ビルトインエディタで添付ファイルをアップロードしていただくことで「ファイル保存先」に指定したストレージにファイルを保存できます。
