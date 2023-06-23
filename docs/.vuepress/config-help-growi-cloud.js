@@ -102,7 +102,6 @@ module.exports = {
             '/ja/cloud/recovery-byuser.md',
             '/ja/cloud/servicedesk.md',
             '/ja/cloud/trouble.md',
-
           ],
         },
         {
@@ -114,7 +113,6 @@ module.exports = {
             '/ja/cloud/request.md',
             '/ja/cloud/resale.md',
             '/ja/cloud/securitycheck.md',
-
           ]
         },
 
