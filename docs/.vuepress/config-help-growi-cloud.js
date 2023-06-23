@@ -4,15 +4,16 @@ const localeDataEn = require('./localeDataEn');
 
 
 module.exports = {
-  title: 'GROWI.Cloud Help',
-  base: '/help',
+  base: '/help/',
 
   locales: {
     '/en/': {
+      title: 'Help | In-house wiki Service ',
       lang: 'en',
       description: 'GROWI.cloud Help',
     },
     '/ja/': {
+      title: 'ヘルプ | ナレッジベースの GROWI.cloud',
       lang: 'ja',
       description: 'GROWI.cloud ヘルプ',
     },
@@ -373,6 +374,16 @@ module.exports = {
   ],
 
   head: [
+    ['script', {}, `
+      (function(w,d,s,l,i){
+        w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MMNSMCF');
+    `],
     ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v6.2.0/css/all.css'}],
+    ['link', { rel: 'icon', href: '/assets/help-growi-cloud/favicon.ico' }],
   ],
 };

@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy docs-growi-org
 
 on:
   push:
@@ -63,7 +63,7 @@ jobs:
       uses: jenkey2011/vuepress-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_SCRIPT: yarn apiv3:build && yarn growi-org:build
+        BUILD_SCRIPT: yarn apiv3:build && yarn dev-growi-org:build
         BUILD_DIR: docs/.vuepress/dist/
         CNAME: docs.growi.org
 
