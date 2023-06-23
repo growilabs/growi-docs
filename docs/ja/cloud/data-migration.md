@@ -1,4 +1,3 @@
-<!-- textlint-disable weseek/max-kanji-continuous-len) -->
 # GROWI.cloud へのデータ移行
 
 ## 移行方法
