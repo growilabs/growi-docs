@@ -5,7 +5,7 @@ const localeDataEn = require('./localeDataEn');
 
 module.exports = {
   title: 'GROWI.Cloud Help',
-  base: '/help',
+  base: '/help/',
 
   locales: {
     '/en/': {
