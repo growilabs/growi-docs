@@ -1,0 +1,36 @@
+@use 'bootsrap-init.scss' as bs;
+
+$white: #ffffff;
+$light-blue: #edf9ff;
+$text-blue-dark: #34495e;
+$cloud-btn-primary: #17a2b8;
+
+.bg-cloud {
+  background-color: $light-blue;
+  background-image: url('/assets/images/cloud-background-abstract-right.png');
+  background-repeat: no-repeat;
+  background-position: right -50px bottom -16px;
+  background-size: 100%;
+  @include bs.media-breakpoint-up(md) {
+    background-image: url('/assets/images/cloud-background-abstract-left.png'), url('/assets/images/cloud-background-abstract-right.png');
+    background-position: left -50% bottom -3vw, right -50% bottom -3vw;
+    background-size: 50%;
+  }
+}
+
+.text-blue-dark {
+  color: $text-blue-dark;
+  &:hover {
+    color: lighten($text-blue-dark, 10%);
+  }
+}
+
+.btn-primary {
+  background-color: $cloud-btn-primary;
+  border-color: $cloud-btn-primary;
+  &:hover {
+    color: darken($white, 10%);
+    background-color: darken($cloud-btn-primary, 10%);
+    border-color: darken($cloud-btn-primary, 10%);
+  }
+}

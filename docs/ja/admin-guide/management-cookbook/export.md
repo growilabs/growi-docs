@@ -9,14 +9,18 @@ GROWI データを別の GROWI に移行するための zip 形式の GROWI ア�
 - ユーザーデータをインポートする場合は、以下に注意してください。
 
 <!-- textlint-disable weseek/sentence-length -->
-  - インポートを行う管理者ユーザーの username が admin1 だった場合、エクスポートされた旧環境のデータ内に同じ admin1 を username とするユーザーが存在すると、正常にインポートできません。また、 email でも同様の挙動となります。そのため、インポートを行うときは、旧環境のデータには存在しないユーザーを新たに作成することをお勧めします。
+- インポートを行う管理者ユーザーの username が admin1 だった場合、エクスポートされた旧環境のデータ内に同じ admin1 を username とするユーザーが存在すると、正常にインポートできません。また、 email でも同様の挙動となります。そのため、インポートを行うときは、旧環境のデータには存在しないユーザーを新たに作成することをお勧めします。
 <!-- textlint-enable weseek/sentence-length -->
 :::
+
+<ContextualBlock context="docs-growi-org">
 
 :::danger
 
 - エクスポート機能のデータはファイルシステムを利用するため、GROWI サーバーをロードバランスしている場合は正常動作しない可能性があります。詳細は[こちら](/ja/admin-guide/admin-cookbook/loadbalance.html#インポート・エクスポート機能に関する注意点)を確認してください。
 :::
+
+</ContextualBlock>
 
 ### アーカイブ可能な MongoDB Collections
 

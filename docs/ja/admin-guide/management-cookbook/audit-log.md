@@ -4,16 +4,20 @@
 
 ![audit-log](/assets/images/audit-log.png)
 
+<ContextualBlock context="docs-growi-org">
+
 ## セットアップ
 
 [監査ログのセットアップ](/ja/admin-guide/admin-cookbook/audit-log-setup.html)
+
+</ContextualBlock>
 
 ## テーブルに表示される情報
 
 - ユーザー名
 - アクションが行われた時間
 - アクション
-- [IP アドレス](/ja/admin-guide/admin-cookbook/trust-proxy.html)
+<ContextualBlock context="docs-growi-org"><li>[IP アドレス](/ja/admin-guide/admin-cookbook/trust-proxy.html)</li></ContextualBlock>
 - URL
 
 ## 検索

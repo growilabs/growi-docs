@@ -28,3 +28,5 @@ tmp
 *.orig
 *.code-workspace
 docs/.vuepress/temp
+docs/.vuepress/config.js
+docs/.vuepress/theme/*

@@ -2,6 +2,8 @@
 
 This guide will explain how to set up and manage Elasticsearch for full text search
 
+<ContextualBlock context="docs-growi-org">
+
 ## Activating and connecting to Elasticsearch using various environments
 
 Please refer to system management page for instructions on activating and connecting to Elasticsearch.
@@ -16,6 +18,8 @@ Please refer to system management page for instructions on activating and connec
 - centOS
   - Please find instructions for setting up and using Elasticsearch [here](/en/admin-guide/getting-started/centos.html#elasticsearch).
   - Please set the environment variable `ELASTICSEARCH_URI` to the URI of the Elasticsearch instance.
+
+</ContextualBlock>
 
 ## Confirming your Elasticsearch connection
 

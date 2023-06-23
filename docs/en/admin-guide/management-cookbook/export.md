@@ -11,10 +11,14 @@ Creates a zipped GROWI archive data for migrating GROWI data to another GROWI.
   - If the username of the administrator user performing the import operation is admin1, and there is a user with the same username as admin1 in the exported data of the old environment, the data cannot be imported correctly. The same behavior will occur with email. For this reason, it is recommended to create a new user that does not exist in the old environment data when performing the import operation.
 :::
 
+<ContextualBlock context="docs-growi-org">
+
 :::danger
 
 - Since the data for the export function uses the file system, it may not work properly when the GROWI server is load balanced. For details, see [here](/en/admin-guide/admin-cookbook/loadbalance.html#cautionary-points-about-importing-exporting-data).
 :::
+
+</ContextualBlock>
 
 ### Archivable MongoDB Collections
 
