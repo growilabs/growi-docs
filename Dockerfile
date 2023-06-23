@@ -5,7 +5,7 @@
 #
 #  Build Stage
 #
-FROM node:16-alpine AS builder
+FROM node:16-slim AS builder
 
 WORKDIR /growi-docs
 
@@ -17,7 +17,7 @@ RUN yarn help-growi-cloud:build
 #
 # Production Stage
 #
-FROM nginx:alpine
+FROM nginx:latest
 
 COPY --from=builder /growi-docs/docs/.vuepress/dist /usr/share/nginx/html/help
 COPY --from=builder /growi-docs/docs/.vuepress/dist/assets/images /usr/share/nginx/html/assets/images
