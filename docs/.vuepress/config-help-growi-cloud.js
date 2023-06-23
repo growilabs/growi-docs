@@ -44,6 +44,79 @@ module.exports = {
     },
     links: {
       'ja': [
+        // help
+        {
+          title: 'アプリ設定',
+          key: 'application-settings',
+          children: [
+            '/ja/cloud/attachment.md',
+            '/ja/cloud/domain.md',
+            '/ja/cloud/growiapp.md',
+            '/ja/cloud/organization.md',
+            '/ja/cloud/passwordseed.md',
+            '/ja/cloud/status.md',
+            '/ja/cloud/url.md',
+            '/ja/cloud/useraccount.md',
+            '/ja/cloud/version.md',
+          ]
+        },
+        {
+          title: 'サービス',
+          key: 'service',
+          children: [
+            '/ja/cloud/authentication.md',
+            '/ja/cloud/autoincrease-memory.md',
+            '/ja/cloud/backup.md',
+            '/ja/cloud/forcedstart-growi.md',
+            '/ja/cloud/hackmd.md',
+            '/ja/cloud/login.md',
+            '/ja/cloud/prevent-publication.md',
+            '/ja/cloud/private-wiki.md',
+            '/ja/cloud/singlesignon.md',
+            '/ja/cloud/ssl.md',
+          ]
+        },
+        {
+          title: '契約・支払い',
+          key: 'payment-contract',
+          children: [
+            '/ja/cloud/academic.md',
+            '/ja/cloud/enterprise.md',
+            '/ja/cloud/freeplan.md',
+            '/ja/cloud/freetrial.md',
+            '/ja/cloud/option.md',
+            '/ja/cloud/payment.md',
+            '/ja/cloud/planchange.md',
+            '/ja/cloud/price.md',
+            '/ja/cloud/private-cloud.md',
+            '/ja/cloud/withdrawal.md',
+          ]
+        },
+        {
+          title: 'トラブルシューティング',
+          key: 'trouble-shooting',
+          children: [
+            '/ja/cloud/dataimport-error.md',
+            '/ja/cloud/noaccess.md',
+            '/ja/cloud/noeditnotice.md',
+            '/ja/cloud/recovery-byuser.md',
+            '/ja/cloud/servicedesk.md',
+            '/ja/cloud/trouble.md',
+          ],
+        },
+        {
+          title: 'その他',
+          key: 'others',
+          children: [
+            '/ja/cloud/data-migration.md',
+            '/ja/cloud/logopost.md',
+            '/ja/cloud/request.md',
+            '/ja/cloud/resale.md',
+            '/ja/cloud/securitycheck.md',
+          ]
+        },
+
+        // Docs
         {
           title: 'チュートリアル',
           key: 'tutorial',
@@ -56,8 +129,8 @@ module.exports = {
           ],
         },
         {
-          title: 'Tips',
-          key: 'tips',
+          title: '活用例',
+          key: 'examples',
           children: [
             '/ja/guide/tips/hierarchical.md',
             '/ja/guide/tips/include_html.md',
@@ -67,8 +140,8 @@ module.exports = {
           ],
         },
         {
-          title: '機能紹介',
-          key: 'feature-introduction',
+          title: '機能',
+          key: 'feature',
           children: [
             '/ja/guide/features/page_layout.md',
             '/ja/guide/features/copy_to_clipboard.md',
@@ -94,8 +167,8 @@ module.exports = {
           ]
         },
         {
-          title: 'GROWI 管理者のクックブック',
-          key: 'management-cookbook',
+          title: '管理者向け設定',
+          key: 'management-settings',
           children: [
             '/ja/admin-guide/management-cookbook/app-settings.md',
             '/ja/admin-guide/management-cookbook/line-breaks.md',
@@ -117,8 +190,8 @@ module.exports = {
           ]
         },
         {
-          'title': 'アップグレード',
-          'key': 'upgrading',
+          'title': 'アップグレードガイド',
+          'key': 'upgrade-guide',
           'children': [
             '/ja/admin-guide/upgrading/61x.md',
             '/ja/admin-guide/upgrading/60x.md',
@@ -134,6 +207,67 @@ module.exports = {
         }
       ],
       'en': [
+        // help
+        {
+          title: 'Application Settings',
+          key: 'application-settings',
+          children: [
+            '/en/cloud/attachment.md',
+            '/en/cloud/domain.md',
+            '/en/cloud/growiapp.md',
+            '/en/cloud/organization.md',
+            '/en/cloud/status.md',
+            '/en/cloud/url.md',
+            '/en/cloud/useraccount.md',
+            '/en/cloud/version.md',
+          ]
+        },
+        {
+          title: 'Service',
+          key: 'service',
+          children: [
+            '/en/cloud/authentication.md',
+            '/en/cloud/autoincrease-memory.md',
+            '/en/cloud/backup.md',
+            '/en/cloud/hackmd.md',
+            '/en/cloud/login.md',
+            '/en/cloud/prevent-publication.md',
+            '/en/cloud/private-wiki.md',
+            '/en/cloud/ssl.md',
+          ]
+        },
+        {
+          title: 'Payment・Contract',
+          key: 'payment-contract',
+          children: [
+            '/en/cloud/freetrial.md',
+            '/en/cloud/option.md',
+            '/en/cloud/payment.md',
+            '/en/cloud/planchange.md',
+            '/en/cloud/price.md',
+            '/en/cloud/withdrawal.md',
+          ]
+        },
+        {
+          title: 'Trouble Shooting',
+          key: 'trouble-shooting',
+          children: [
+            '/en/cloud/dataimport-error.md',
+            '/en/cloud/noaccess.md',
+            '/en/cloud/recovery-byuser.md',
+            '/en/cloud/trouble.md',
+          ],
+        },
+        {
+          title: 'Others',
+          key: 'others',
+          children: [
+            '/en/cloud/request.md',
+            '/en/cloud/securitycheck.md',
+          ]
+        },
+
+        // docs
         {
           title: 'Tutorial',
           key: 'tutorial',
@@ -146,8 +280,8 @@ module.exports = {
           ],
         },
         {
-          title: 'Tips',
-          key: 'tips',
+          title: 'Examples',
+          key: 'examples',
           children: [
             '/en/guide/tips/hierarchical.md',
             '/en/guide/tips/include_html.md',
@@ -157,8 +291,8 @@ module.exports = {
           ],
         },
         {
-          title: 'Feature introduction',
-          key: 'feature-introduction',
+          title: 'Feature',
+          key: 'feature',
           children: [
             '/en/guide/features/page_layout.md',
             '/en/guide/features/copy_to_clipboard.md',
@@ -184,8 +318,8 @@ module.exports = {
           ]
         },
         {
-          title: 'Management cookbook',
-          key: 'management-cookbook',
+          title: 'Management settings',
+          key: 'management-settings',
           children: [
             '/en/admin-guide/management-cookbook/app-settings.md',
             '/en/admin-guide/management-cookbook/line-breaks.md',
@@ -207,8 +341,8 @@ module.exports = {
           ]
         },
         {
-          'title': 'Upgrading',
-          'key': 'upgrading',
+          'title': 'Uupgrade guide',
+          'key': 'upgrade-guide',
           'children': [
             '/en/admin-guide/upgrading/61x.md',
             '/en/admin-guide/upgrading/60x.md',
