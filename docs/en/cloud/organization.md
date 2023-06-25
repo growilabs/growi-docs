@@ -8,13 +8,13 @@
 
 - When you log in for the first time, an organization named `default` will be created.
 - You can also create a new organization from the Organization List panel on the [GROWI.cloud dashboard](https://growi.cloud/my) .  
-<img :src="$withBase('/assets/images/en/Organization_1.png')" alt="organization_1.png">
+<img :src="$withBase('/assets/images/en/organization_1.png')" alt="organization_1.png">
 
 ## Modifying an Organization
 
 - Basic information about an organization, such as its name, can be edited from each organization's detail screen.
 - You can also change plans, register server certificates and credit cards, and perform other operations from the same screen.  
-<img :src="$withBase('/assets/images/en/Organization_2.png')" alt="organization_2.png">
+<img :src="$withBase('/assets/images/en/organization_2.png')" alt="organization_2.png">
 
 ## About Organizations and Users
 
