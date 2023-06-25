@@ -160,11 +160,15 @@ GROWI サーバーから見たローカルファイルシステムにファイ�
 
 <img :src="$withBase('/assets/images/appsettings18.png')" alt="appsettings18">
 
+<ContextualBlock context="docs-growi-org">
+
 ::: warning
 <!-- textlint-disable weseek/sentence-length -->
 ファイルアップロード先が環境変数 `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` によって固定されている場合、ここでのファイルアップロード先の変更はできません。詳細は[こちら](/ja/admin-guide/admin-cookbook/attachment)を参照してください。
 <!-- textlint-enable weseek/sentence-length -->
 :::
+
+</ContextualBlock>
 
 Amazon S3, Google Cloud Storage を利用する場合はそれぞれ設定が必要です。下記を参照に設定を完了してください。
 
@@ -208,11 +212,15 @@ Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介し
 - バケット名: [GCS のバケット名]
 - Name Space: [バケット内に作成するファイルアップロード用のディレクトリ名]
 
+<ContextualBlock context="docs-growi-org">
+
 ### 添付ファイル参照方法
 
 Amazon S3, Google Cloud Storage を利用する場合、添付ファイル参照方法を設定できます。
 
 配信方法については [添付ファイル参照方法](/ja/admin-guide/admin-cookbook/attachment.html#添付ファイル参照方法) を参照ください。
+
+</ContextualBlock>
 
 ## アンケート設定
 

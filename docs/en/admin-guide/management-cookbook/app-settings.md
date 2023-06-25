@@ -163,11 +163,15 @@ Please note that by changing the file upload method in the middle,
 
 <img :src="$withBase('/assets/images/appsettings18.png')" alt="appsettings18">
 
+<ContextualBlock context="docs-growi-org">
+
 ::: warning
 If the file upload method is fixed by the environment variable
  `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE`, the file upload method cannot be changed here.
   See [here](/en/admin-guide/admin-cookbook/attachment) for more information.
 :::
+
+</ContextualBlock>
 
 Settings are required when using Amazon S3 and Google Cloud Storage.
  Please refer to the following to complete it.
@@ -217,11 +221,15 @@ for more GCS information.
 - Bucket Name: [Bucket Name of GCS]
 - Name Space: [Directory name for uploading files created in the bucket]
 
+<ContextualBlock context="docs-growi-org">
+
 ## How to refer to attached files
 
 When using Amazon S3 or Google Cloud Storage, an attachment reference method can be set.
 
 Please refer to [Attachment reference method](/en/admin-guide/admin-cookbook/attachment.html#how-to-refer-to-attached-files) for the delivery method.
+
+</ContextualBlock>
 
 ## Questionnaire Settings
 
