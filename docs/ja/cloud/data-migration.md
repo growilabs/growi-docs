@@ -107,10 +107,10 @@ GROWI から別の GROWI へ簡単にデータの移行ができる機能です�
 <p class="text-danger">※ ユーザーの移行を行う場合は、[/機能/GROWIアプリ詳細/PASSWORD_SEED] も事前にご確認ください。</p>
 
 1. <span class="alert alert-success p-1" role="alert">to:</span>　GROWI のインストール画面で「データ移行」の認証に使用するための移行キーを発行します  
-![data-migration_1.png](/assets/images/ja/data-migration_1.png)
+<img :src="$withBase('/assets/images/ja/data-migration_1.png')" alt="data-migration_1.png">
 
 2. <span class="alert alert-warning p-2" role="alert">from:</span>　 GROWI の管理者により、 管理画面の「データ移行」メニューで移行先からコピーしてきた移行キーをペーストし、移行開始ボタンを押下します  
-![data-migration_2.png](/assets/images/ja/data-migration_2.png)
+<img :src="$withBase('/assets/images/ja/data-migration_2.png')" alt="data-migration_2.png">
 
 上記の詳しい手順は [こちら](https://docs.growi.org/ja/admin-guide/management-cookbook/g2g-transfer.html) をご覧ください。
 <br>

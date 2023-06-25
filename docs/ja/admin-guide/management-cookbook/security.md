@@ -8,7 +8,7 @@
 
 `表示` 設定の場合、閲覧が制限されているページが自分以外のユーザーのページリストや検索結果に表示されるので注意してください。
 
-![security](/assets/images/security.png)
+<img :src="$withBase('/assets/images/security.png')" alt="security">
 
 ## ページの削除権限
 
@@ -42,13 +42,13 @@ v4.5 以前で「ページの完全削除」として設定していたオプシ
 - `公開 (だれでも登録可能)`
   - ユーザー登録画面から ID/Password で新規登録ができます。
 
-  ![](/assets/images/register.png)
+  <img :src="$withBase('/assets/images/register.png')" alt="">
 
 - `制限 (登録完了には管理者の承認が必要)`
   - ユーザー登録画面から ID/Password で新規登録してもすぐにはログインできません。管理者による対象ユーザーへの承認が必要になります。
   - 新規登録すると管理者へアプリ内通知が送信されます。
 
-  ![](/assets/images/in-app-notification-requested-registration-approval.png)
+  <img :src="$withBase('/assets/images/in-app-notification-requested-registration-approval.png')" alt="">
 
   ::: tip
   [メールの設定](/ja/admin-guide/management-cookbook/app-settings.html#%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E8%A8%AD%E5%AE%9A)がセットアップされている場合は管理者へメールを送信します。
@@ -56,7 +56,7 @@ v4.5 以前で「ページの完全削除」として設定していたオプシ
 
   - 管理者はユーザー管理から対象のユーザーを承認してください。
 
-  ![](/assets/images/user-management-user-approval-pending.png)
+  <img :src="$withBase('/assets/images/user-management-user-approval-pending.png')" alt="">
 
 - `非公開 (登録には管理者による招待が必要)`
   - ユーザー登録画面から ID/Password で新規登録できなくなります。

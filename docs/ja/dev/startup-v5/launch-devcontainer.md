@@ -16,7 +16,7 @@
             * `{your account}` は自身のアカウント名に置き換えてください
 1. 初回は各種コンテナイメージのダウンロードとビルドのため、5～10分待つ
 1. エラーなく起動したら、サイドバーの Remote Explorer でコンテナの起動を確認する
-    * ![ready](/assets/images/growi-dev-ready.png)
+    * <img :src="$withBase('/assets/images/growi-dev-ready.png')" alt="ready">
 
 
 ## 確認

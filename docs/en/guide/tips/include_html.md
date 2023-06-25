@@ -1,6 +1,6 @@
 # Include HTML
 
-![html](/assets/images/include_html.png)
+<img :src="$withBase('/assets/images/include_html.png')" alt="html">
 
 ```markdown
 <div class="row">
@@ -22,7 +22,7 @@ If you paste the above HTML description into a GROWI article, the HTML will be r
 ## iframe embedded
 
 
-![iframe](/assets/images/include_iframe.png)
+<img :src="$withBase('/assets/images/include_iframe.png')" alt="iframe">
 
 ```markdown
 <iframe width="30%" height="30%" src="https://www.youtube.com/embed/YE7VzlLtp-4h"

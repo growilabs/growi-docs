@@ -4,7 +4,7 @@ GROWI では [PlantUML](https://plantuml.com/) を利用して、UML 図を書�
 
 具体的な記述例は [Real World UML](https://real-world-plantuml.com/) などをご参照ください。
 
-![](/assets/images/uml_diagrams.png)
+<img :src="$withBase('/assets/images/uml_diagrams.png')" alt="">
 
 
 ## 記法1

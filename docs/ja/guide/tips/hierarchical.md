@@ -1,6 +1,6 @@
 # ページを階層で整理する lsx 機能
 
-![lsx](/assets/images/lsx_gif.gif)
+<img :src="$withBase('/assets/images/lsx_gif.gif')" alt="lsx">
 
 GROWI では 作成したページを一覧表示する機能があります。
 

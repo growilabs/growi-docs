@@ -23,7 +23,7 @@
 - 画面右側の「正式トライアル」より、ご希望の登録方法を選択してアカウントの作成を進めてください
   - メールアドレス登録を選択した場合は、ご登録のメールアドレス宛に届くメールよりアカウント作成をお進めください  
 
-![freetrial_1.png](/assets/images/ja/freetrial_1.png)
+<img :src="$withBase('/assets/images/ja/freetrial_1.png')" alt="freetrial_1.png">
 
 ### 2. 組織情報入力ページ
 
@@ -31,7 +31,7 @@
 - 組織とは、GROWI のアプリを作成するうえで必要となる要素です
   - 組織の中に GROWI アプリを立ち上げていただく形となります
 
-![freetrial_2.png](/assets/images/ja/freetrial_2.png)
+<img :src="$withBase('/assets/images/ja/freetrial_2.png')" alt="freetrial_2.png">
 
 
 ### 3. GROWI アプリ新規作成ページ
@@ -41,22 +41,22 @@
 
 ※その他の設定をトライアル環境でお試しされたい方はご自由にご入力ください。
 
-![freetrial_3.png](/assets/images/ja/freetrial_.png)
+<img :src="$withBase('/assets/images/ja/freetrial_.png')" alt="freetrial_3.png">
 
 ### 4. GROWI アプリ作成中・作成完了ページ
 
 - GROWI アプリが立ち上がるまで数分の時間を要するためお待ちください
 - GROWI アプリの作成が完了次第「GROWI をひらく」を押下してください
 
-![freetrial_4.png](/assets/images/ja/freetrial_4.png)  
-![freetrial_5.png](/assets/images/ja/freetrial_5.png)
+<img :src="$withBase('/assets/images/ja/freetrial_4.png')" alt="freetrial_4.png">  
+<img :src="$withBase('/assets/images/ja/freetrial_5.png')" alt="freetrial_5.png">
 
 ### 5. GROWI アカウント作成ページ
 
 - 作成した GROWI の管理者となるユーザーのアカウント情報を入力ください
 - アカウント情報の入力が完了次第「作成」押下で GROWI の操作を開始できます。
 
-![freetrial_6.png](/assets/images/ja/freetrial_6.png)
+<img :src="$withBase('/assets/images/ja/freetrial_6.png')" alt="freetrial_6.png">
 
 ### トライアル期間中のプランについて
 

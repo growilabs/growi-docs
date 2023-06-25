@@ -8,10 +8,10 @@ GROWI.cloud では**法人向けプラン4つ**、**個人向けプラン3つ**�
 
 #### 法人向けプラン表<br>
 
-![price_1.png](/assets/images/ja/price_1.png)
+<img :src="$withBase('/assets/images/ja/price_1.png')" alt="price_1.png">
 
 #### 個人向けプラン表<br>
 
-![price_2.png](/assets/images/ja/price_2.png)
+<img :src="$withBase('/assets/images/ja/price_2.png')" alt="price_2.png">
 
 **※個人向けプランは、個人で利用する方限定のプランのため、法人のお客様は法人向けプランをご利用ください**

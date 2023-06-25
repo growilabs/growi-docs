@@ -8,7 +8,7 @@ GROWI は、ページごとに閲覧/編集権限を設定できます。新し�
 2. 表示された選択肢の中から、設定したい権限を選びます。
 3. Create/Update (作成/更新) ボタンをクリックします。
 
-![authority1](/assets/images/authority1.png)
+<img :src="$withBase('/assets/images/authority1.png')" alt="authority1">
 
 ## 権限の種類
 
@@ -96,7 +96,7 @@ GROWI は、ページごとに閲覧/編集権限を設定できます。新し�
 1. Edit モードで、画面右下に表示される Create/Update (作成/更新) ボタンの「▲」をクリックします。
 2. Create/Update and Overwrite scopes of all descendants (作成/更新と同時に全ての配下ページのスコープを上書き)をクリックします。
 
-![authority2](/assets/images/authority2.png)
+<img :src="$withBase('/assets/images/authority2.png')" alt="authority2">
 
 ::: tip
 権限設定が必要なページはまとめて整理し、一括で権限設定すると管理が簡単になります。

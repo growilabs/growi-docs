@@ -2,7 +2,7 @@
 
 ## GROWI.cloudで立ち上げたGROWIのファイル保存先について
 
-![attachment_1.png](/assets/images/ja/attachment_1.png)
+<img :src="$withBase('/assets/images/ja/attachment_1.png')" alt="attachment_1.png">
 
 - **【Hosted】GCP** : GROWI.cloud で用意している GROWI のファイル保存先です。
 - **【Owned】GCP/AWS** : お客様に用意していただく GROWI のファイル保存先です。
@@ -23,7 +23,7 @@
 
 ## ファイル保存先の確認方法
 
-![attachment_2.png](/assets/images/ja/attachment_2.png)
+<img :src="$withBase('/assets/images/ja/attachment_2.png')" alt="attachment_2.png">
 
 1. アプリの**詳細ページ**にアクセスし、「ファイル保存先」を確認
 2. ファイル保存先を変更される場合は右にある「編集」をクリック
@@ -48,4 +48,4 @@ GROWI で添付ファイルをアップロードされる場合は、HackMD エ�
 <!-- textlint-disable weseek/ja-no-mixed-period -->
 `GROWI` の管理画面のアプリ設定で「ファイルアップロード」欄の「画像以外のファイルアップロードを許可」にチェックを入れ更新  
 <!-- textlint-enable weseek/ja-no-mixed-period -->
-![attachment_3.png](/assets/images/ja/attachment_3.png)
+<img :src="$withBase('/assets/images/ja/attachment_3.png')" alt="attachment_3.png">

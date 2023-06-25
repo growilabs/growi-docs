@@ -73,7 +73,7 @@ In case of the system requires advanced security, change to Relay Mode from [App
 ### Relay Mode (optional / default specification before v4.2.2)
 
 <!-- https://dev.growi.org/5fd8424f2271ae00481ed2e8 -->
-![fileUpload1](/assets/images/fileUpload1.png)
+<img :src="$withBase('/assets/images/fileUpload1.png')" alt="fileUpload1">
 
 In Relay Mode, Cloud Service issues a signed URL for file references as a result of a request from the GROWI server.
 
@@ -83,7 +83,7 @@ However, due to the characteristics of the relay, there is a disadvantage that t
 
 ### Redirect Mode (default specification after v4.2.3)
 <!-- https://dev.growi.org/5fd8424f2271ae00481ed2e8 -->
-![fileUpload2](/assets/images/fileUpload2.png)
+<img :src="$withBase('/assets/images/fileUpload2.png')" alt="fileUpload2">
 
 In Redirect Mode, Cloud Service issues a signed URL for file references as a result of a request from the GROWI server.
 Also, the server notifies the client and prompts for a redirection.

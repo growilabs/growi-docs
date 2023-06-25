@@ -14,8 +14,8 @@ You can upload files in two ways.
 
 1. click on the area circled in red in the image below, select the file and upload it Click on the area circled in red in the image below, select a file and upload it.
 
-![file_upload1](/assets/images/file_upload1.png)
+<img :src="$withBase('/assets/images/file_upload1.png')" alt="file_upload1">
 
 2. Upload the file by drag & drop
 
-![file_upload2](/assets/images/file_upload2.png)
+<img :src="$withBase('/assets/images/file_upload2.png')" alt="file_upload2">

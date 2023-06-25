@@ -17,12 +17,12 @@ GROWI の **サイト URL 設定は必ず行ってください**。
 保有するドメインの向き先として `growi.example.com` などに DNS レコードを指定している場合は、ここに設定します。  
 ドメインを DNS 設定していない場合は、任意のURLで良いので値を設定してください。
 
-![appsettings10](/assets/images/appsettings10.png)
+<img :src="$withBase('/assets/images/appsettings10.png')" alt="appsettings10">
 
 環境変数 `APP_SITE_URL` に値が設定されていると、右側の `Environment variables` の欄に設定値が表示されます。  
 
 
-![appsettings11](/assets/images/appsettings11.png)
+<img :src="$withBase('/assets/images/appsettings11.png')" alt="appsettings11">
 
 管理画面で編集する `Database` の欄に値が入力されていると、`Database` の欄に設定した値が`Environment variables` の欄より優先されます。  
 
@@ -32,9 +32,9 @@ GROWI の **サイト URL 設定は必ず行ってください**。
 管理画面の設定欄、ページのヘッダ部に以下のようにエラーメッセージが表示されます。  
 GROWI の **サイト URL 設定は必ず行ってください**。
 
-![appsettings12](/assets/images/appsettings12.png)
+<img :src="$withBase('/assets/images/appsettings12.png')" alt="appsettings12">
 
-![appsettings13](/assets/images/appsettings13.png)
+<img :src="$withBase('/assets/images/appsettings13.png')" alt="appsettings13">
 :::
 
 </ContextualBlock>
@@ -43,42 +43,42 @@ GROWI の **サイト URL 設定は必ず行ってください**。
 
 サイト名に設定をした内容は、GROWI のログイン画面及びタイトルとして表示されます。
 
-![appsettings1](/assets/images/appsettings1.png)
+<img :src="$withBase('/assets/images/appsettings1.png')" alt="appsettings1">
 
-![appsettings2](/assets/images/appsettings2.png)
+<img :src="$withBase('/assets/images/appsettings2.png')" alt="appsettings2">
 
 ### コンフィデンシャル表示
 
 コンフィデンシャル表示欄に記載した内容は、GROWI のヘッダーに表示されます。
 
-![appsettings3](/assets/images/appsettings3.png)
+<img :src="$withBase('/assets/images/appsettings3.png')" alt="appsettings3">
 
 ### 新規ユーザーのデフォルト言語設定
 
 この欄では、英語・日本語・中国語のいずれかを選択します。
 
-![appsettings4](/assets/images/appsettings4.png)
+<img :src="$withBase('/assets/images/appsettings4.png')" alt="appsettings4">
 
 上記の設定により、GROWI で新規ユーザーを作成する際の、デフォルト設定言語が切り替わります。
 
-![appsettings5](/assets/images/appsettings5.png)
+<img :src="$withBase('/assets/images/appsettings5.png')" alt="appsettings5">
 
 
 ### ファイルアップロード
 
 GROWI では、ページへの画像以外のファイルのアップロードを可能とするための設定があります。
 
-![appsettings6](/assets/images/appsettings6.png)
+<img :src="$withBase('/assets/images/appsettings6.png')" alt="appsettings6">
 
 こちらにチェックをしないと、wiki ページの編集時には画像以外のファイルはアップロードできません。
 
 ファイルアップロードを設定することで、ファイルがアップロードできるようになります。
 
-![appsettings8](/assets/images/appsettings8.png)
+<img :src="$withBase('/assets/images/appsettings8.png')" alt="appsettings8">
 
 以下の表示となっている場合は、ファイルアップロードは機能していません。
 
-![appsettings9](/assets/images/appsettings9.png)
+<img :src="$withBase('/assets/images/appsettings9.png')" alt="appsettings9">
 
 
 ## メールの設定
@@ -88,7 +88,7 @@ GROWI からのメール送信 は、次のどちらかの設定パターンを�
   1. SMTP サーバーを設定する
   2. AWS の SES を利用する
 
-![appsettings14](/assets/images/appsettings14.png)
+<img :src="$withBase('/assets/images/appsettings14.png')" alt="appsettings14">
 
 **メール設定がセットアップされていません。** というアラートが表示されている場合、設定フォームが不十分であることを示します。  
 
@@ -112,7 +112,7 @@ SMTP サーバー設定の更新後、**テストメールを送信**ボタン�
 
 以下はユーザー管理メニューの**新規ユーザーの仮発行**ウィンドウです。
 
-![appsettings15](/assets/images/appsettings15.png)
+<img :src="$withBase('/assets/images/appsettings15.png')" alt="appsettings15">
 
 **招待をメールで送信** にチェックをするとメールが機能します。  
 メール設定が正しくできていない場合はメールが機能しません。
@@ -158,7 +158,7 @@ GROWI サーバーから見たローカルファイルシステムにファイ�
 ファイル保存先を途中で変更すると、これまでにアップロードしたファイル等へのアクセスができなくなりますのでご注意ください。
 :::
 
-![appsettings18](/assets/images/appsettings18.png)
+<img :src="$withBase('/assets/images/appsettings18.png')" alt="appsettings18">
 
 ::: warning
 <!-- textlint-disable weseek/sentence-length -->
@@ -194,7 +194,7 @@ Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介し
 
 2. MinIO など、S3 互換 API を持つ他のオブジェクトストレージサービスを使用する場合は、そのエンドポイントの URL をカスタムエンドポイントに入力してください。
 
-![appsettings19](/assets/images/appsettings19.png)
+<img :src="$withBase('/assets/images/appsettings19.png')" alt="appsettings19">
 
 ### Google Cloud Storage のセットアップ
 
@@ -202,7 +202,7 @@ Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介し
 
 2. GROWI のアプリ設定のファイルアップロード設定にて GCS を選択し、上記過程で確認した情報を設定してください。
 
-![appsettings20](/assets/images/appsettings20.png)
+<img :src="$withBase('/assets/images/appsettings20.png')" alt="appsettings20">
 
 - API Key Json Path: [(GROWIのルートディレクトリから見た) GCP サービスアカウントキー の JSON ファイルのパス]
 - バケット名: [GCS のバケット名]

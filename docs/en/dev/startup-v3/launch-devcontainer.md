@@ -8,14 +8,14 @@ The below documentation details our development environment at WESEEK Inc. It ma
 
 1. Open Visual Studio Code
 1. From the Remote Connection indicator, open the devcontainer repository
-    * ![indicator](/assets/images/vscode-remote-button.png)
+    * <img :src="$withBase('/assets/images/vscode-remote-button.png')" alt="indicator">
     * Remote-Containers: Open folder in Container...
     * Select the weseek/growi repository
         * WSL path for Windows: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
             * Replace `{your account}` with your own account name
 1. For first time users wait 5-10 minutes for the download and building of various docker container images.
 1. If there was no error, you should see docker containers in Remote Explorer in the sidebar
-    * ![ready](/assets/images/growi-dev-ready.png)
+    * <img :src="$withBase('/assets/images/growi-dev-ready.png')" alt="ready">
 
 
 ## Confirmation

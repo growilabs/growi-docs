@@ -2,7 +2,7 @@
 
 In GROWI, you can use [Mermaid](https://mermaid.js.org/) to create various diagrams. For specific syntax and configuration, please refer to [Syntax and Configuration](https://mermaid.js.org/intro/n00b-syntaxReference.html) for more information.
 
-![](/assets/images/mermaid.png)
+<img :src="$withBase('/assets/images/mermaid.png')" alt="">
 
 ### Example 1
 

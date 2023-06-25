@@ -4,7 +4,7 @@
 
 - Click the bookmark icon in the upper right corner of the page to bookmark your favorite pages.
 
-![](/assets/images/bookmark.png)
+<img :src="$withBase('/assets/images/bookmark.png')" alt="">
 
 ## Cancel a bookmark
 
@@ -14,11 +14,11 @@
 
 - You can view the bookmarks you have added on the user's home page.
 
-![](/assets/images/user_home_bookmark.png)
+<img :src="$withBase('/assets/images/user_home_bookmark.png')" alt="">
 
 - The user's home screen can be accessed from the user icon in the upper right corner of the screen.
 
-![](/assets/images/user_home.png)
+<img :src="$withBase('/assets/images/user_home.png')" alt="">
 
 
 # Bookmark a page
@@ -29,12 +29,12 @@
 - Click the bookmark icon in the upper right corner of the page to bookmark your favorite pages.
 - By selecting a folder, you can bookmark to that folder.
 
-![](/assets/images/bookmark.png)
+<img :src="$withBase('/assets/images/bookmark.png')" alt="">
 
 ### Vertical three point leader in Page Tree
 - You can bookmark pages from the vertical three point leader of any page displayed in the page tree.
 
-![](/assets/images/bookmark_page_tree.png)
+<img :src="$withBase('/assets/images/bookmark_page_tree.png')" alt="">
 
 ## Cancel a bookmark
 
@@ -50,7 +50,7 @@
     - User's home page
     - Bookmarks sidebar
 
-![](/assets/images/bookmark_user_home.png)
+<img :src="$withBase('/assets/images/bookmark_user_home.png')" alt="">
 
 ## Bookmark folder
 
@@ -64,7 +64,7 @@ Up to two levels of bookmark folders can be created (as of v6.1.0 release).
 
 - You can create a child folder from the bookmarks sidebar or from the user's home page by clicking the plus button of the bookmark folder.
 
-![](/assets/images/bookmark_page_tree_plus.png)
+<img :src="$withBase('/assets/images/bookmark_page_tree_plus.png')" alt="">
 
 ### Rename/Delete bookmark folder
 - You can rename or delete a bookmark folder from the vertical three point leader of the bookmark folder in the bookmarks sidebar or user's home page.

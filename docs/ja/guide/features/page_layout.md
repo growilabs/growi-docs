@@ -2,7 +2,7 @@
 
 GROWI のページレイアウトを紹介します。
 
-![](/assets/images/page_layout.png)
+<img :src="$withBase('/assets/images/page_layout.png')" alt="">
 
 ## 1. GROWI のロゴ
 

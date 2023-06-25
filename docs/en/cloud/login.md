@@ -6,7 +6,7 @@
   - GitHub Account
 - If you do not have a GROWI.cloud account, please click [here](https://growi.cloud/signup?contractType=CORPORATION) to create a new account.
 
-![login_1.png](/assets/images/en/login_1.png)
+<img :src="$withBase('/assets/images/en/login_1.png')" alt="login_1.png">
 
 ## Acceptance of Terms of Use and Privacy Policy
 

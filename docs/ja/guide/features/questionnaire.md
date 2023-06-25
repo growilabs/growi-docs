@@ -13,11 +13,11 @@ GROWI 開発チームにご意見やご要望を送付できます。
 
 - 画面右上のユーザー名をクリックすると表示されるドロップダウンから「ご意見・ご要望」を選択してください。
 
-![](/assets/images/questionnaire_feedback.png)
+<img :src="$withBase('/assets/images/questionnaire_feedback.png')" alt="">
 
 - 表示されたフォームに情報を入力し「送信」を押してください。GROWI 開発チームにご意見・ご要望が送付されます。
 
-![](/assets/images/questionnaire_form.png)
+<img :src="$withBase('/assets/images/questionnaire_form.png')" alt="">
 
 ## アンケート
 
@@ -26,11 +26,11 @@ GROWI 開発チームから配信されたアンケートに回答できます�
 - GROWI がアンケートを受け取ると画面下部にアンケートが表示されます。
 - アンケートを回答する場合は「回答する」を押してください。
 
-![](/assets/images/questionnaire_cron.png)
+<img :src="$withBase('/assets/images/questionnaire_cron.png')" alt="">
 
 - 表示されたアンケートに回答し「回答する」を押してください。GROWI 開発チームに回答内容が送付されます。
 
-![](/assets/images/questionnaire_cron_form.png)
+<img :src="$withBase('/assets/images/questionnaire_cron_form.png')" alt="">
 
 ::: tip
 管理者はシステム全体に、各ユーザーは個別に、アンケートの有効/無効を設定できます。

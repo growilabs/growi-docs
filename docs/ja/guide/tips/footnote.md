@@ -18,7 +18,7 @@ GROWI では、注釈（脚注）を記述できます。
 
 ### 参考
 
-![footnote](/assets/images/footnote.png)
+<img :src="$withBase('/assets/images/footnote.png')" alt="footnote">
 
 
 ```markdown

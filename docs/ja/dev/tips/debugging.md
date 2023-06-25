@@ -21,7 +21,7 @@
     - [Sources panel](https://developer.chrome.com/docs/devtools/javascript/sources/) を使ってデバッグできます。
     - `Ctrl + P` で TypeScript ファイルを開く場合は、`webpack://_N_E/` 配下のファイルを選んでください。
 
-![Chrome source panel](/assets/images/debugging-chrome-source-panel.png)
+<img :src="$withBase('/assets/images/debugging-chrome-source-panel.png')" alt="Chrome source panel">
 
 ### Firefox
 
@@ -31,7 +31,7 @@
     - `Ctrl + P` で TypeScript ファイルを開く場合は、少しわかりにくいですが同名のファイルのうち末尾に `?xxxx` といったランダムな接尾辞を持つファイルがオリジナルソースです。
         - 或いは左カラムのソースファイルツリーから `Webpack` 配下のファイルを選んでください。
 
-![Firefox debugger panel](/assets/images/debugging-firefox-debugger-panel.png)
+<img :src="$withBase('/assets/images/debugging-firefox-debugger-panel.png')" alt="Firefox debugger panel">
 
 
 ## VSCode によるリモートデバッグ
@@ -47,13 +47,13 @@ VSCode 上で編集しているソースコードに対してブレークポイ�
     1. `yarn dev` で開発用サーバーを起動します。
     1. Run and Debug パネルから「Debug: Chrome」を選択します。
 
-    ![VSCode Chrome debugger](/assets/images/debugging-vscode-chrome-debugger.png)
+    <img :src="$withBase('/assets/images/debugging-vscode-chrome-debugger.png')" alt="VSCode Chrome debugger">
 
 - Firefox
     1. `yarn dev` で開発用サーバーを起動します。
     1. Run and Debug パネルから「Debug: Firefox」を選択します。
 
-    ![VSCode Firefox debugger](/assets/images/debugging-vscode-firefox-debugger.png)
+    <img :src="$withBase('/assets/images/debugging-vscode-firefox-debugger.png')" alt="VSCode Firefox debugger">
 
 ### サーバーサイドコードのデバッグ
 
@@ -65,18 +65,18 @@ VSCode 上で編集しているソースコードに対してブレークポイ�
         1. 予め `yarn dev` で開発用サーバーを起動します。
             - Ports パネルで `9229` ポートのフォワーディングが表示されていることを確認します。
 
-            ![Portforwarding](/assets/images/debugging-portforwarding.png)
+            <img :src="$withBase('/assets/images/debugging-portforwarding.png')" alt="Portforwarding">
 
         1. Run and Debug パネルから「Debug: Attach Debugger to Server」を選択します。
 
-        ![VSCode Attach Debugger to Server debugger](/assets/images/debugging-vscode-attach-debugger-to-server-debugger.png)
+        <img :src="$withBase('/assets/images/debugging-vscode-attach-debugger-to-server-debugger.png')" alt="VSCode Attach Debugger to Server debugger">
 
 - デバッガーを attach したサーバーを起動する
     - **特徴: サーバー起動時の処理に対してもブレークポイントを設定できる**
     - attach 手順:
         1. Run and Debug パネルから「Debug: Server」を選択します。
 
-        ![VSCode Server debugger](/assets/images/debugging-vscode-server-debugger.png)
+        <img :src="$withBase('/assets/images/debugging-vscode-server-debugger.png')" alt="VSCode Server debugger">
 
 attach が正常に完了すると、VSCode のステータスバーの色がオレンジになります。この状態で任意のサーバーサイドコードにブレークポイントを設定してデバッグできます。
 

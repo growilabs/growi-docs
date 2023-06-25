@@ -14,8 +14,8 @@
 
 1. 下記画像の赤丸で囲んだ部分をクリック、ファイルを選択してアップロード
 
-![file_upload1](/assets/images/file_upload1.png)
+<img :src="$withBase('/assets/images/file_upload1.png')" alt="file_upload1">
 
 2. ドラッグ & ドロップでアップロード
 
-![file_upload2](/assets/images/file_upload2.png)
+<img :src="$withBase('/assets/images/file_upload2.png')" alt="file_upload2">

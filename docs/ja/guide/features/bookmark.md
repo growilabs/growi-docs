@@ -6,12 +6,12 @@
 - ページ右上のブックマークアイコンをクリックすると、お気に入りのページをブックマークできます。
 - フォルダを選択することでそのフォルダにブックマークできます。
 
-![](/assets/images/bookmark.png)
+<img :src="$withBase('/assets/images/bookmark.png')" alt="">
 
 ### ページツリーの縦三点リーダー
 - ページツリーに表示されているページの縦三点リーダーから、ページをブックマークできます。
 
-![](/assets/images/bookmark_page_tree.png)
+<img :src="$withBase('/assets/images/bookmark_page_tree.png')" alt="">
 
 ## ブックマークを取り消す
 
@@ -27,7 +27,7 @@
     - ユーザーのホーム画面
     - ブックマークサイドバー
 
-![](/assets/images/bookmark_user_home.png)
+<img :src="$withBase('/assets/images/bookmark_user_home.png')" alt="">
 
 ## ブックマークフォルダ
 
@@ -41,7 +41,7 @@
 
 - ブックマークサイドバーもしくはユーザーのホーム画面からブックマークフォルダのプラスボタンから子フォルダを作成できます。
 
-![](/assets/images/bookmark_page_tree_plus.png)
+<img :src="$withBase('/assets/images/bookmark_page_tree_plus.png')" alt="">
 
 ### ブックマークフォルダのリネーム/削除
 - ブックマークサイドバーもしくはユーザーのホーム画面からブックマークフォルダの縦三点リーダーからリネームと削除ができます。

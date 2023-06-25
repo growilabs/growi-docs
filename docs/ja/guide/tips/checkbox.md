@@ -1,6 +1,6 @@
 # チェックボックスの利用
 
-![checkbox](/assets/images/checkbox.png)
+<img :src="$withBase('/assets/images/checkbox.png')" alt="checkbox">
 
 GROWI では、マークダウン記法でチェックボックスを記述できます。
 

@@ -10,7 +10,7 @@
 
 - GROWI.cloud では、アプリ詳細画面の高度な設定から GROWI アプリ毎に PASSWORD_SEED を設定できます。
   - PASSWORD_SEED を更新すると GROWI アプリは再起動されます。  
-![passwordseed_1.png](/assets/images/ja/passwordseed_1.png)
+<img :src="$withBase('/assets/images/ja/passwordseed_1.png')" alt="passwordseed_1.png">
 - オンプレミスで構築した GROWI からユーザーデータを移行する場合には、移行元の PASSWORD_SEED が必要になります。
   - 移行の手順については [オンプレミスから GC への移行](/ja/cloud/ompremise-growi.html) をご参照ください。
   - もし、移行時に PASSWORD_SEED を設定しない場合、移行したユーザーは以前のパスワードではログインできなくなります。

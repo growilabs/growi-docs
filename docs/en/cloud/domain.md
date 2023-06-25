@@ -37,15 +37,15 @@ Please follow the steps below when changing the domain of the GROWI app.
 ### Operation Procedure
 
 1. Access Keycloak created on GROWI.cloud
-![domain_1.png](/assets/images/en/domain_1.png)
+<img :src="$withBase('/assets/images/en/domain_1.png')" alt="domain_1.png">
 2. Click on `Administration Console`
 3. Login
 4. Click `Clients` from the left menu
 5. Find the domain of the linked GROWI app and click `Edit`  on the right side.
     - The image below shows an example of Keycloak running with the domain name growi.example.com.  
-![domain_2.png](/assets/images/en/domain_2.png)
+<img :src="$withBase('/assets/images/en/domain_2.png')" alt="domain_2.png">
 6. Rewrite the values set in`Client ID`、`Root URL`、`Valid Redirect URIs` to the new domain of the linked GROWI app.  
-![domain_3.png](/assets/images/en/domain_3.png)
+<img :src="$withBase('/assets/images/en/domain_3.png')" alt="domain_3.png">
 7. Click`Save` on the bottom
 
 

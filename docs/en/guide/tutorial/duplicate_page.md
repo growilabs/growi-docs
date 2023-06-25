@@ -8,9 +8,9 @@ First, create a page hierarchy that you will use to store your duplicated pages.
 
 Press the "create" button to create a new page which will serve as the parent page for your page hierarchy.  For this example, we will create our parent page under the `/tutorial` page:
 
-![duplicate1](/assets/images/duplicate1.png)
+<img :src="$withBase('/assets/images/duplicate1.png')" alt="duplicate1">
 
-![duplicate2](/assets/images/duplicate2.png)
+<img :src="$withBase('/assets/images/duplicate2.png')" alt="duplicate2">
 
 ## Duplicate a page
 
@@ -24,17 +24,17 @@ Duplicate page
 
 Next, click “Duplicate” in the menu as shown below.
 
-![duplicate3](/assets/images/duplicate3.png)
+<img :src="$withBase('/assets/images/duplicate3.png')" alt="duplicate3">
 
-![duplicate4](/assets/images/duplicate4.png)
+<img :src="$withBase('/assets/images/duplicate4.png')" alt="duplicate4">
 
 Enter the page name “20191102” and click the "Duplicate page" button.
 
-![duplicate5](/assets/images/duplicate5.png)
+<img :src="$withBase('/assets/images/duplicate5.png')" alt="duplicate5">
 
 The page will be duplicated as shown below.
 
-![duplicate6](/assets/images/duplicate6.png)
+<img :src="$withBase('/assets/images/duplicate6.png')" alt="duplicate6">
 
 By duplicating pages, you can easily populate your wiki with copied pages.
 
@@ -49,7 +49,7 @@ When you create a template for all descendant pages, it applies to all lower-lev
 
 In this tutorial, we will use a template for child pages.
 
-![template1](/assets/images/template1.png)
+<img :src="$withBase('/assets/images/template1.png')" alt="template1">
 
 Click the create template button as shown above to select your template type.
 
@@ -57,7 +57,7 @@ Click the create template button as shown above to select your template type.
 Click the Select button under "Template for children".
 The page creation screen will appear, with the page name "_template" already created.
 
-![template2](/assets/images/template2.png)
+<img :src="$withBase('/assets/images/template2.png')" alt="template2">
 
 Paste the following Markdown code into the edit box and save the page.
 
@@ -69,7 +69,7 @@ Paste the following Markdown code into the edit box and save the page.
 ## remarks
 ```
 
-![template3](/assets/images/template3.png)
+<img :src="$withBase('/assets/images/template3.png')" alt="template3">
 
 Now this template is ready to use.
 
@@ -77,12 +77,12 @@ Now this template is ready to use.
 
 On the page where the template was created, click “Create” to create a child page.
 
-![template4](/assets/images/template4.png)
+<img :src="$withBase('/assets/images/template4.png')" alt="template4">
 
 The settings from the template are automatically imported into the new page.
 
-![template5](/assets/images/template5.png)
+<img :src="$withBase('/assets/images/template5.png')" alt="template5">
 
-![template6](/assets/images/template6.png)
+<img :src="$withBase('/assets/images/template6.png')" alt="template6">
 
 This can be very useful when creating pages with similar formatting.

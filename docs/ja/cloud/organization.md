@@ -9,14 +9,14 @@
 - 無料トライアルを開始する際に組織の作成画面が表示され、任意の組織を作成できます。
 - また [GROWI.cloud のダッシュボード](https://growi.cloud/my) の組織一覧パネルからも任意の組織を新たに作成できます。  
 
-![organization_1.png](/assets/images/ja/organization_1.png)
+<img :src="$withBase('/assets/images/ja/organization_1.png')" alt="organization_1.png">
 
 ## 組織の変更
 
 - 組織名など組織の基本情報は、各組織の詳細画面から編集できます。
 - また、同画面からプランの変更やサーバー証明書、クレジットカードの登録等の各種操もできます。  
 
-![organization_2.png](/assets/images/ja/organization_2.png)
+<img :src="$withBase('/assets/images/ja/organization_2.png')" alt="organization_2.png">
 
 ## 組織とメンバーについて
 

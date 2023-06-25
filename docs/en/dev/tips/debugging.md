@@ -19,7 +19,7 @@ You can debug client-side code by using DevTools in your browser.
     - You can debug client-side code by using the [Sources panel](https://developer.chrome.com/docs/devtools/javascript/sources/).
     - If you open a TypeScript file by `Ctrl + P`, you should choose files under `webpack://_N_E/`.
 
-![Chrome source panel](/assets/images/debugging-chrome-source-panel.png)
+<img :src="$withBase('/assets/images/debugging-chrome-source-panel.png')" alt="Chrome source panel">
 
 ### Firefox
 
@@ -29,7 +29,7 @@ You can debug client-side code by using DevTools in your browser.
     - If you open a TypeScript file by `Ctrl + P`, an original source file is a file of the name with a random suffix such as `?xxxx`.
         - Or you can select a file under the `Webpack` folder from the source file tree in the left column.
 
-![Firefox debugger panel](/assets/images/debugging-firefox-debugger-panel.png)
+<img :src="$withBase('/assets/images/debugging-firefox-debugger-panel.png')" alt="Firefox debugger panel">
 
 ## Debugging with VS Code
 
@@ -44,13 +44,13 @@ Breakpoints can be set for source code being edited on VS Code.
     1. Start development server `yarn dev`.
     1. Choose [**Debug: Chrome**] from the **Run and Debug** panel.
 
-    ![VSCode Chrome debugger](/assets/images/debugging-vscode-chrome-debugger.png)
+    <img :src="$withBase('/assets/images/debugging-vscode-chrome-debugger.png')" alt="VSCode Chrome debugger">
 
 - Firefox
     1. Start development server `yarn dev`.
     1. Choose [**Debug: Firefox**] from the **Run and Debug** panel.
 
-    ![VSCode Firefox debugger](/assets/images/debugging-vscode-firefox-debugger.png)
+    <img :src="$withBase('/assets/images/debugging-vscode-firefox-debugger.png')" alt="VSCode Firefox debugger">
 
 ### Server-side code
 
@@ -62,18 +62,18 @@ The VS Code debugger can be attached to the development server in two ways.
         1. Start development server `yarn dev` first.
             - Verify that the `9229` port forwarding is listed in the Ports panel.
 
-            ![Portforwarding](/assets/images/debugging-portforwarding.png)
+            <img :src="$withBase('/assets/images/debugging-portforwarding.png')" alt="Portforwarding">
 
         1. Choose [**Debug: Attach Debugger to Server**] from the **Run and Debug** panel.
 
-        ![VSCode Attach Debugger to Server debugger](/assets/images/debugging-vscode-attach-debugger-to-server-debugger.png)
+        <img :src="$withBase('/assets/images/debugging-vscode-attach-debugger-to-server-debugger.png')" alt="VSCode Attach Debugger to Server debugger">
 
 - Use [Debug: Server]
     - **Feature: You can set breakpoints for the server startup process**
     - Follow the steps below:
         1. Select [**Debug: Server**] from the **Run and Debug** panel.
 
-        ![VSCode Server debugger](/assets/images/debugging-vscode-server-debugger.png)
+        <img :src="$withBase('/assets/images/debugging-vscode-server-debugger.png')" alt="VSCode Server debugger">
 
 If the debugger is attached successfully, the status bar of VS Code turns an orange color. In this state, you can debug by setting breakpoints in any server-side code.
 
