@@ -8,7 +8,7 @@ module.exports = {
 
   locales: {
     '/en/': {
-      title: 'Help | In-house wiki Service ',
+      title: 'Help | In-house wiki Service',
       lang: 'en',
       description: 'GROWI.cloud Help',
     },
