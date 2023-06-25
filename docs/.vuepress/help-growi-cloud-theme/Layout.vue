@@ -1,18 +1,23 @@
 <template>
   <div>
-    <Header />
+    <!-- Originally, it should be written in the head tag -->
+    <!-- If you write https://fonts.googleapis.com/css?family=Lato:700 in config.head, -->
+    <!-- it will be converted to https://fonts.googleapis.com/css?family=Lato, so you have no choice but to put it in body. in the body. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:700" />
 
-    <SearchBox />
+    <Header/>
+
+    <SearchBox/>
 
     <div v-if="isTopPage">
-      <Top />
+      <Top/>
     </div>
 
     <div v-else>
-      <Article />
+      <Article/>
     </div>
 
-    <Footer />
+    <Footer/>
   </div>
 </template>
 
@@ -26,10 +31,6 @@ import SearchBox from '@theme/components/SearchBox'
 
 export default {
   components: { Header, Footer, Top, Article, SearchBox },
-
-  beforeMount() {
-    this.prependGoogleTagManagerScript();
-  },
 
   data() {
     return {
@@ -47,6 +48,10 @@ export default {
     validateTopPageURL() {
       return location.pathname.match('^\/help\/(ja|en)\/?$') != null;
     }
+  },
+
+  beforeMount() {
+    this.prependGoogleTagManagerScript();
   },
 
   mounted() {

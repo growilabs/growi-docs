@@ -1,8 +1,8 @@
 <template>
-  <div class="container py-5">
+  <div class="container px-4 mb-5">
 
     <!-- Breadcrumbs -->
-    <p class="text-muted d-none d-md-block">
+    <p class="text-muted d-none d-md-block mt-5">
       <a href="https://growi.cloud/" class="fa fa-house me-2 text-muted"/>
       <i class="fa fa-angle-right me-2" />
       <router-link :to="`/${this.$lang}`" class="me-2 text-decoration-none text-muted">{{ this.$themeLocaleConfig.help }}</router-link >
