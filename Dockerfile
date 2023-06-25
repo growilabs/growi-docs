@@ -20,8 +20,6 @@ RUN yarn help-growi-cloud:build
 FROM nginx:latest
 
 COPY --from=builder /growi-docs/docs/.vuepress/dist /usr/share/nginx/html/help
-COPY --from=builder /growi-docs/docs/.vuepress/dist/assets/images /usr/share/nginx/html/assets/images
-RUN rm -rf /usr/share/nginx/html/help/assets/images
 
 EXPOSE 80
 
