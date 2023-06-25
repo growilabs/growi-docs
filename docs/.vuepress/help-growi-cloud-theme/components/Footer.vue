@@ -1,6 +1,6 @@
 <template>
   <footer class="pt-5 gc-bg-dark position-relative">
-    <img class="d-none d-lg-inline position-absolute gc-footer-img" src="/assets/images/gc-footer-background.svg" />
+    <img class="d-none d-lg-inline position-absolute gc-footer-img" src="/help/assets/help-growi-cloud/gc-footer-background.svg" />
     <div class="container">
       <div class="row">
 

@@ -7,12 +7,12 @@ $cloud-btn-primary: #17a2b8;
 
 .bg-cloud {
   background-color: $light-blue;
-  background-image: url('/assets/images/cloud-background-abstract-right.png');
+  background-image: url('/help/assets/help-growi-cloud/cloud-background-abstract-right.png');
   background-repeat: no-repeat;
   background-position: right -50px bottom -16px;
   background-size: 100%;
   @include bs.media-breakpoint-up(md) {
-    background-image: url('/assets/images/cloud-background-abstract-left.png'), url('/assets/images/cloud-background-abstract-right.png');
+    background-image: url('/help/assets/help-growi-cloud/cloud-background-abstract-left.png'), url('/help/assets/help-growi-cloud/cloud-background-abstract-right.png');
     background-position: left -50% bottom -3vw, right -50% bottom -3vw;
     background-size: 50%;
   }
