@@ -1,35 +1,35 @@
 <template>
-  <div class="navbar-expand-lg">
-    <div class="navbar-main">
+  <div class="navbar-expand-lg navbar-static-top">
+    <div>
       <ul class="nav navbar-nav flex-md-row">
 
-        <li class="nav-item p-2 p-md-0 ml-md-">
+        <li class="nav-item p-2 p-md-0 ms-md-3">
           <a href="https://growi.cloud/price-and-features/jpn" class="nav-link gc-text-dark fw-bold">
             <span class="pb-1">{{ this.$themeLocaleConfig.price_and_features }}</span>
           </a>
         </li>
 
-        <li class="nav-item p-2 p-md-0 ml-md-3">
+        <li class="nav-item p-2 p-md-0 ms-md-3">
           <a href="https://growi.cloud/introductions" class="nav-link gc-text-dark fw-bold">
             <span class="pb-1">{{ this.$themeLocaleConfig.case_study}}</span>
           </a>
         </li>
 
-        <li class="nav-item p-2 p-md-0 ml-md-3">
+        <li class="nav-item p-2 p-md-0 ms-md-3">
           <a href="https://growi.cloud/blog/" class="nav-link gc-text-dark fw-bold">
             <span class="pb-1">{{ this.$themeLocaleConfig.blog }}</span>
           </a>
         </li>
 
-        <li class="nav-item p-2 p-md-0 ml-md-3 gc-active">
+        <li class="nav-item p-2 p-md-0  ms-md-3 gc-active">
           <router-link :to="`/${this.$lang}`" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.help }}</router-link>
         </li>
 
-        <li class="nav-item p-2 p-md-0 ml-md-3">
+        <li class="nav-item p-2 p-md-0 ms-md-3">
           <a href="https://growi.cloud/contact" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.contact }}</a>
         </li>
 
-        <li class="nav-item p-2 p-md-0 ml-md-3">
+        <li class="nav-item p-2 p-md-0 ms-md-3">
           <a
             type="button"
             class="btn gc-bg-gradation-skyblue gc-global-menu-button text-white fw-bold  mt-md-0 py-md-2 px-md-3"
@@ -39,7 +39,7 @@
           </a>
         </li>
 
-        <li class="nav-item p-2 p-md-0 ml-md-3">
+        <li class="nav-item p-2 p-md-0 ms-md-3">
           <!-- SP mode -->
           <a href="https://growi.cloud/catalog-request"
              target="_blank"
@@ -58,7 +58,7 @@
           </a>
         </li>
 
-        <li class="nav-item p-2 p-md-0 ml-md-3">
+        <li class="nav-item p-2 p-md-0 ms-md-3">
           <a href="https://growi.cloud/login" class="gc-global-nav-link d-block nav-link gc-text-dark fw-bold text-center">{{ this.$themeLocaleConfig.login }}</a>
         </li>
       </ul>
@@ -74,14 +74,6 @@
 
 .gc-text-dark {
   color: #254459;
-}
-
-.gc-brandlogo-second-level-domain {
-  color: #33b0c1;
-}
-
-.gc-text-lato {
-  font-family: Lato;
 }
 
 .gc-bg-gradation-skyblue {
