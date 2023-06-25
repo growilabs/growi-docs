@@ -11,5 +11,12 @@ export default {
   props: {
     context: String
   },
+
+  mounted() {
+    const isSupported = this.context === 'docs-growi-org' || this.context === 'help-growi-cloud'
+    if (!isSupported) {
+      console.error(`${this.context} is not supported`);
+    }
+  },
 }
 </script>

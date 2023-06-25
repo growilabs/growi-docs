@@ -21,14 +21,16 @@ module.exports = {
 
   patterns: [
     '**/*.vue',
-    // Markdown of build target
+    // Markdonw file to be built
     '(ja|en)/index.md',
     '(ja|en)/cloud/**',
     '(ja|en)/guide/**',
     '(ja|en)/admin-guide/(management-cookbook|upgrading)/**',
-    // Folders to ignore at build: https://github.com/vuejs/vuepress/issues/1558
+    // Markdonw files not included in the build: https://github.com/vuejs/vuepress/issues/1558
     '!**/README.md',
-    '!(ja|en)/admin-guide/upgrading/(34x|35x|36x||37x|38x).md'
+    '!(ja|en)/admin-guide/upgrading/(34x|35x|36x||37x|38x).md',
+    // The following should also be included in README.md
+    '(ja|en)/admin-guide/management-cookbook/slack-integration/README.md'
   ],
 
   themeConfig: {

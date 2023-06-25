@@ -11,9 +11,9 @@ module.exports = {
 
   patterns: [
     '**/*.vue',
-    // Markdown of build target
+    // Markdown file to be built
     '**/*.md',
-    // Folders to ignore at build: https://github.com/vuejs/vuepress/issues/1558
+    // Markdown files not included in the build: https://github.com/vuejs/vuepress/issues/1558
     '!**/index.md',
     '!(ja|en)/cloud/**',
   ],
