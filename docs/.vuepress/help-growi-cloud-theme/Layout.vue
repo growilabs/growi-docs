@@ -1,18 +1,18 @@
 <template>
   <div>
-    <Header />
+    <Header/>
 
-    <SearchBox />
+    <SearchBox/>
 
     <div v-if="isTopPage">
-      <Top />
+      <Top/>
     </div>
 
     <div v-else>
-      <Article />
+      <Article/>
     </div>
 
-    <Footer />
+    <Footer/>
   </div>
 </template>
 
@@ -26,10 +26,6 @@ import SearchBox from '@theme/components/SearchBox'
 
 export default {
   components: { Header, Footer, Top, Article, SearchBox },
-
-  beforeMount() {
-    this.prependGoogleTagManagerScript();
-  },
 
   data() {
     return {
@@ -47,6 +43,10 @@ export default {
     validateTopPageURL() {
       return location.pathname.match('^\/help\/(ja|en)\/?$') != null;
     }
+  },
+
+  beforeMount() {
+    this.prependGoogleTagManagerScript();
   },
 
   mounted() {
