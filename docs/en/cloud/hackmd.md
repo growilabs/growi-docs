@@ -21,11 +21,11 @@
     - If you use your own domain, you will need to issue a separate domain to access the HackMD app, just like on-premises.
 4. Select "Update" in the upper right corner.<br>
 
- <img :src="$withBase('/assets/images/en/hackmd_2.png')" alt="HackMD"_2.png">
+ <img :src="$withBase('/assets/images/en/hackmd_2.png')" alt="HackMD_2.png">
 
 
 5. The app will automatically restart with HackMD enabled.
 6. After the restart is complete, you will be able to use HackMD with the GROWI app on the same domain as before.
 7. To use the HackMD functionality, click `HackMD` in the tab next to `View` Edit in GROWI to start editing.<br〉
-  <img :src="$withBase('/assets/images/en/hackmd_3_png')" alt="HackMD"_3png">
+  <img :src="$withBase('/assets/images/en/hackmd_3_png')" alt="HackMD_3png">
 
