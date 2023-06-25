@@ -1,5 +1,10 @@
 <template>
   <div>
+    <!-- Originally, it should be written in the head tag -->
+    <!-- If you write https://fonts.googleapis.com/css?family=Lato:700 in config.head, -->
+    <!-- it will be converted to https://fonts.googleapis.com/css?family=Lato, so you have no choice but to put it in body. in the body. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:700" />
+
     <Header/>
 
     <SearchBox/>
