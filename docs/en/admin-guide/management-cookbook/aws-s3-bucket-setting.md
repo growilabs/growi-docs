@@ -14,7 +14,7 @@ This setting makes uploading attachment files and profile images to AWS S3 Bucke
 
 1. Sign-in [AWS Management Console](https://aws.amazon.com/console/), and click [My Security Credentials](https://console.aws.amazon.com/iam/home?#/security_credentials) in drop-down list of account information on the left side of the top bar.
 
-![aws-setting-1](/assets/images/aws-setting-1.png)
+<img :src="$withBase('/assets/images/aws-setting-1.png')" alt="aws-setting-1">
 
 2. In the "Access keys (access key ID and secret access key)" tab, create a new access key.
 3. In the "Account identifiers" tab, check your Canonical User ID.

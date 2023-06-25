@@ -30,7 +30,7 @@
         3. 「独自ドメインを利用する」トグルボタンをオンにする
         4. 「SSLサーバー証明書」プルダウンで、先ほどアップロードした SSL サーバー証明書を選択
         5. 「GROWIに使用する独自ドメイン」の入力欄で利用したい独自ドメインを入力し、「更新する」ボタンをクリック  
-![domain_1.png](/assets/images/ja/domain_1.png)
+<img :src="$withBase('/assets/images/ja/domain_1.png')" alt="domain_1.png">
 
 上記の手順をご対応いただくことで、独自ドメインを有効化できます。
 
@@ -42,14 +42,14 @@
 ### 操作手順
 <!-- textlint-disable weseek/ja-no-mixed-period -->
 1. GROWI.cloud で作成した Keycloak へアクセスする  
-![domain_2.png](/assets/images/ja/domain_2.png)
+<img :src="$withBase('/assets/images/ja/domain_2.png')" alt="domain_2.png">
 2. `Administration Console` をクリックする
 3. ログインする
 4. 左メニューより `Clients` クリックする
 5. 連携されている GROWI アプリのドメインを探し、右側の `Edit` をクリックする
     - 以下画像は、growi.example.com というドメイン名で Keycloak を起動させている例です  
-![domain_3.png](/assets/images/ja/domain_3.png)
+<img :src="$withBase('/assets/images/ja/domain_3.png')" alt="domain_3.png">
 6. `Client ID`、`Root URL`、`Valid Redirect URIs` に設定されている値を連携されている GROWI アプリの新しいドメインに書き換える  
-![domain_4.png](/assets/images/ja/domain_4.png)
+<img :src="$withBase('/assets/images/ja/domain_4.png')" alt="domain_4.png">
 7. 下部 `Save` をクリックする
 <!-- textlint-enable weseek/ja-no-mixed-period -->

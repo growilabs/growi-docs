@@ -8,7 +8,7 @@ View/Edit permissions can be set for each page. Newly created pages are automati
 2. Click on the permission you want to set from the options.
 3. Click the Create/Update button.
 
-![authority1](/assets/images/authority1.png)
+<img :src="$withBase('/assets/images/authority1.png')" alt="authority1">
 
 ## Types of permissions
 
@@ -96,7 +96,7 @@ You can set permissions on all subordinate pages of a page at once
 1. In edit mode, click on ▲ next to the Create/Update button.
 2. Click "Create/Update and Overwrite scopes of all descendants".
 
-![authority2](/assets/images/authority2.png)
+<img :src="$withBase('/assets/images/authority2.png')" alt="authority2">
 
 ::: tip
 Pages that require authorization settings can be organized into groups, and management can be simplified by setting authorization settings for all of them at once.

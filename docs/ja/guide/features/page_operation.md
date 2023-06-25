@@ -2,7 +2,7 @@
 
 ページツールボタンの3点リーダーをクリックすると、表示されているページに関する操作メニューが表示されます。
 
-![](/assets/images/page_operation.png)
+<img :src="$withBase('/assets/images/page_operation.png')" alt="">
 
 ## 移動/名前変更する
 
@@ -31,5 +31,5 @@
 1. サイドバーのゴミ箱アイコンをクリックします。
 2. 削除したページの一覧が表示されるので、復元したいページをクリックします。
 3. Put back ボタンを押します。
-  ![](/assets/images/trash.png)
-  ![](/assets/images/put_back_page.png)
+  <img :src="$withBase('/assets/images/trash.png')" alt="">
+  <img :src="$withBase('/assets/images/put_back_page.png')" alt="">

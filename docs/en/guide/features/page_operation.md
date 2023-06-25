@@ -2,7 +2,7 @@
 
 Clicking the three dot leader of the page tool button opens a menu of operations on the current page.
 
-![](/assets/images/page_operation.png)
+<img :src="$withBase('/assets/images/page_operation.png')" alt="">
 
 ## Move/Rename a page
 
@@ -32,5 +32,5 @@ Deleted pages can be viewed and restored from the Trash, except when "Delete com
 1. Click the trash icon on the sidebar.
 2. Click on the page you want to restore.
 3. Click the "Put back" button.
-  ![](/assets/images/trash.png)
-  ![](/assets/images/put_back_page.png)
+  <img :src="$withBase('/assets/images/trash.png')" alt="">
+  <img :src="$withBase('/assets/images/put_back_page.png')" alt="">

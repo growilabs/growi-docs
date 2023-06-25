@@ -10,8 +10,8 @@
 
 チュートリアルのページなど、目安となるページで「作成」ボタンを押して、複製ページを作成しましょう。
 
-![duplicate1](/assets/images/duplicate1.png)
-![duplicate2](/assets/images/duplicate2.png)
+<img :src="$withBase('/assets/images/duplicate1.png')" alt="duplicate1">
+<img :src="$withBase('/assets/images/duplicate2.png')" alt="duplicate2">
 
 ## ページを複製する
 
@@ -27,17 +27,17 @@
 
 その後、作成した「20191101」のページの画面で、画像のメニューにある「複製」をクリックしてください。
 
-![duplicate3](/assets/images/duplicate3.png)
+<img :src="$withBase('/assets/images/duplicate3.png')" alt="duplicate3">
 
-![duplicate4](/assets/images/duplicate4.png)
+<img :src="$withBase('/assets/images/duplicate4.png')" alt="duplicate4">
 
 ページ名を「20191102」と入力して、「Duplicate page」ボタンを押しましょう。
 
-![duplicate5](/assets/images/duplicate5.png)
+<img :src="$withBase('/assets/images/duplicate5.png')" alt="duplicate5">
 
 画像のように、ページが複製されます。
 
-![duplicate6](/assets/images/duplicate6.png)
+<img :src="$withBase('/assets/images/duplicate6.png')" alt="duplicate6">
 
 このように、ページを複製することで、記述内容をコピーした wiki ページを簡単に作成できます。
 
@@ -57,13 +57,13 @@
 
 ここでは同一階層テンプレートを利用します。
 
-![template1](/assets/images/template1.png)
+<img :src="$withBase('/assets/images/template1.png')" alt="template1">
 
 画像のように、テンプレートを作成のボタンをクリックすると、テンプレート選択欄になります。
 
 同一階層テンプレートの編集ボタンをクリックします。すると、「_template」というページ名のページ作成画面になります。
 
-![template2](/assets/images/template2.png)
+<img :src="$withBase('/assets/images/template2.png')" alt="template2">
 
 この画面で、以下の Markdown 記述を貼り付けて、ページを保存しましょう。
 
@@ -82,7 +82,7 @@
 ## 備考
 ```
 
-![template3](/assets/images/template3.png)
+<img :src="$withBase('/assets/images/template3.png')" alt="template3">
 
 これでテンプレート作成は完了です。
 
@@ -92,13 +92,13 @@
 
 テンプレート作成をしたページにて、「作成」をクリックしてページを作成します。
 
-![template4](/assets/images/template4.png)
+<img :src="$withBase('/assets/images/template4.png')" alt="template4">
 
 すると、ページ作成直後に既にテンプレートで設定した内容が反映されています。
 
-![template5](/assets/images/template5.png)
+<img :src="$withBase('/assets/images/template5.png')" alt="template5">
 
-![template6](/assets/images/template6.png)
+<img :src="$withBase('/assets/images/template6.png')" alt="template6">
 
 繰り返しページ作成する時にとても便利に活用できます。
 

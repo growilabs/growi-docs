@@ -18,9 +18,9 @@
 - 以下の手順で証明書をご登録ください
     1. GROWI.cloud のマイページにあるサイドバーから SSL サーバー証明書を登録したい組織を選択
     1. 手順 1 で選択した組織の詳細ページにある「 SSL サーバー証明書 」の「追加する」を選択  
-![ssl_1.png](/assets/images/ja/ssl_1.png)
+<img :src="$withBase('/assets/images/ja/ssl_1.png')" alt="ssl_1.png">
     1. 「 SSL サーバー証明書 」と「 秘密鍵 」に、ご用意いただいたファイルを選択し「 追加 」ボタンを押下  
-![ssl_2.png](/assets/images/ja/ssl_2.png)
+<img :src="$withBase('/assets/images/ja/ssl_2.png')" alt="ssl_2.png">
 
 ### 中間証明書がある場合
 

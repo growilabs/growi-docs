@@ -2,7 +2,7 @@
 
 Click the icon next to the page title to copy the page path and/or URL. This is useful for sharing page content with others or inserting links within a page.
 
-![](/assets/images/copy_to_clipboard.png)
+<img :src="$withBase('/assets/images/copy_to_clipboard.png')" alt="">
 
 - Page path
   - Copy the page path

@@ -2,7 +2,7 @@
 
 You can add a page hierarchy of the current page or of another page using `$lsx()`, as shown below.
 
-![lsx](/assets/images/lsx_gif.gif)
+<img :src="$withBase('/assets/images/lsx_gif.gif')" alt="lsx">
 
 This is useful for parent pages with large child hierarchy structures.
 

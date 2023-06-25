@@ -43,4 +43,4 @@ sample
 
 When you create a GROWI page with the above Markdown text, the page created will look like the image below.
 
-![footnote](/assets/images/footnote.png)
+<img :src="$withBase('/assets/images/footnote.png')" alt="footnote">

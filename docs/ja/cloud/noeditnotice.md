@@ -9,8 +9,8 @@
 - GROWI アプリには表示しているページが他人により編集された際に通知を表示する機能があります
   - 同一ユーザーであってもブラウザで表示しているタブと別のタブで編集をすると通知されます  
 
-![noeditnotice_1.png](/assets/images/ja/noeditnotice_1.png)  
-![noeditnotice_2.png](/assets/images/ja/noeditnotice_2.png)  
+<img :src="$withBase('/assets/images/ja/noeditnotice_1.png')" alt="noeditnotice_1.png">  
+<img :src="$withBase('/assets/images/ja/noeditnotice_2.png')" alt="noeditnotice_2.png">  
 
 - 通知が表示されるユーザー数には上限があります  
 

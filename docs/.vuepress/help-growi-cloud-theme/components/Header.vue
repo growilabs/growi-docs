@@ -5,7 +5,7 @@
       <!-- Brand logo -->
       <a class="navbar-brand" href="https://growi.cloud" title="Home">
         <span class="gc-brandlogo-midium py-2 fw-bold gc-text-lato">
-          <img src="/assets/images/gc-logo.png"><span class="gc-text-dark align-middle">GROWI</span><span class="gc-brandlogo-second-level-domain align-middle">.cloud</span>
+          <img src="/help/assets/help-growi-cloud/gc-logo.png"><span class="gc-text-dark align-middle">GROWI</span><span class="gc-brandlogo-second-level-domain align-middle">.cloud</span>
         </span>
       </a>
 

@@ -4,9 +4,9 @@
 
 - You can easily set up the file upload function if you have the following settings.
     1. Select Hosted GCP (Google Cloud Storage) as the file storage destination on the `GROWI.cloud`  administration screen.  
-![attachment_1.png](/assets/images/en/attachment_1.png)
+<img :src="$withBase('/assets/images/en/attachment_1.png')" alt="attachment_1.png">
     2. In the application settings of the `GROWI` administration screen, update the "Allow file uploads other than images" checkbox in the "File Uploads" field.  
-![attachment_2.png](/assets/images/en/attachment_2.png)
+<img :src="$withBase('/assets/images/en/attachment_2.png')" alt="attachment_2.png">
 - After the above settings are made, file uploading will be enabled. [^1]
 
 Users can also upload and manage files through GROWI by preparing their own Amason S3 storage separately from the launched GROWI App and configuring the linkage settings on the GROWI settings screen.
@@ -17,7 +17,7 @@ By purchasing the paid storage option, you will be able to upload files on GROWI
 
 ## Saved Files save location of GROWI Launched by GROWI.cloud
 
-![attachment_3.png](/assets/images/en/attachment_3.png)
+<img :src="$withBase('/assets/images/en/attachment_3.png')" alt="attachment_3.png">
 
 - **[Hosted] GCP** : The destination prepared by GROWI.cloud.
 - **[Owned] GCP/AWS** : The destination prepared by the customer.
@@ -28,7 +28,7 @@ By purchasing the paid storage option, you will be able to upload files on GROWI
 
 ## How to Check the File save Location
 
-![attachment_4.png](/assets/images/en/attachment_4.png)
+<img :src="$withBase('/assets/images/en/attachment_4.png')" alt="attachment_4.png">
 
 1. Access the application's **details page** and check "File save location".
 2. Click "Edit" on the right if you want to change the file save location.

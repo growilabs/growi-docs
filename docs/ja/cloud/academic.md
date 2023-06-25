@@ -48,5 +48,5 @@
     <!-- textlint-enable weseek/no-doubled-joshi -->
     2. 組織詳細画面のメンバー一覧から引継ぎ先のユーザーのユーザー操作を展開し プライマリーオーナーに変更する ボタンを押す。  
 
-![academic_1.png](/assets/images/ja/academic_1.png)
+<img :src="$withBase('/assets/images/ja/academic_1.png')" alt="academic_1.png">
     3. Primary Owner のラベルが変更されていることを確認する。

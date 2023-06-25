@@ -19,13 +19,13 @@
 
 - GROWI アプリ詳細画面 にて Keycloak の編集ボタンを押すと、`Keycloakを新規作成する` が表示されますので、そちらからKeycloakを作成してください。
 
-![singlesignon_1.png](/assets/images/ja/singlesignon_1.png)
+<img :src="$withBase('/assets/images/ja/singlesignon_1.png')" alt="singlesignon_1.png">
 
 
 - Keycloakの作成後、再度GROWI App 詳細画面にて Keycloak の編集ボタンを押すと、`Single Sign On(Keycloak)を有効にする` が表示されますので、そちらをクリックしてください。
   - 有効にしたいKeycloakを選択し、`更新する`を押すと、KeycloakとGROWI Appの連携が完了します。
 
-![singlesignon_2.png](/assets/images/ja/singlesignon_2.png)
+<img :src="$withBase('/assets/images/ja/singlesignon_2.png')" alt="singlesignon_2.png">
 
 
 

@@ -25,7 +25,7 @@ HackMD を使うためには、あらかじめ GROWI と HackMD の連携が設�
 
 ページの View / 編集 / HackMD モード切替タブで、以下の画像で赤丸をつけた HackMD のタブを選択すると、HackMD モードで編集できます。
 
-![](/assets/images/HackMD1.png)
+<img :src="$withBase('/assets/images/HackMD1.png')" alt="">
 
 HackMD は1人でも利用できますが、ここでは2つのユーザーアカウントで HackMD を利用してページ編集する方法を説明します。
 
@@ -38,13 +38,13 @@ HackMD は1人でも利用できますが、ここでは2つのユーザーア�
 
    クリックすると、`HackMD is READY!` という表示と、`Start to edit with HackMD (HacKMDを開始する)` のボタンが表示されます。
 
-   ![](/assets/images/HackMD2-6.png)
+   <img :src="$withBase('/assets/images/HackMD2-6.png')" alt="">
 
 1. `Start to edit with HackMD (HacKMDを開始する)` のボタンをクリック
 
    クリックすると、以下の画像のように、HackMD モードでの編集が開始されます。
 
-   ![](/assets/images/HackMD3.png)
+   <img :src="$withBase('/assets/images/HackMD3.png')" alt="">
 
 
 ### 2人目の編集者が HackMD モードの編集に参加する
@@ -55,11 +55,11 @@ HackMD は1人でも利用できますが、ここでは2つのユーザーア�
 
     画面下部に以下の画像のように `This page has a draft on HackMD >>  Open HackMD Editor` と表示されます。
 
-![](/assets/images/HackMD4.png)
+<img :src="$withBase('/assets/images/HackMD4.png')" alt="">
 
 1. View / 編集 / HackMD のタブで HackMD 部分を選択するか、画面下部の `Open HackMD Editor` リンクをクリックします。
 
-![](/assets/images/HackMD5.png)
+<img :src="$withBase('/assets/images/HackMD5.png')" alt="">
 
 1. 以下のいずれかの画面が表示されます。
 
@@ -67,9 +67,9 @@ HackMD は1人でも利用できますが、ここでは2つのユーザーア�
 
     - `Resume to edit with HackMD (HacKMDで編集を再開する)` のボタンと `Discard changes of HackMD (HacKMDの変更を破棄する)` のボタン
 
-![](/assets/images/HackMD2-6.png)
+<img :src="$withBase('/assets/images/HackMD2-6.png')" alt="">
 
-![](/assets/images/HackMD7.png)
+<img :src="$withBase('/assets/images/HackMD7.png')" alt="">
 
 
 ### 各ボタンについて
@@ -102,11 +102,11 @@ HackMD は1人でも利用できますが、ここでは2つのユーザーア�
 
 #### ユーザーAの操作画面
 
-![](/assets/images/HackMD_editing1.gif)
+<img :src="$withBase('/assets/images/HackMD_editing1.gif')" alt="">
 
 #### ユーザーBの操作画面
 
-![](/assets/images/HackMD_editing2.gif)
+<img :src="$withBase('/assets/images/HackMD_editing2.gif')" alt="">
 
 
 
@@ -129,6 +129,6 @@ HackMD モードで Windows なら Ctrl + S キー、Mac なら Command + S キ�
 
 この表示が出た時には `Discard it` のリンク や `Discard changes of HackMD` ボタンをクリックし、ページの最新 version から新たに編集を開始してください。この時、HackMD 上で編集していた内容は破棄されますので、ご注意ください。
 
-![](/assets/images/HackMD8.png)
+<img :src="$withBase('/assets/images/HackMD8.png')" alt="">
 
 :::

@@ -25,11 +25,11 @@
 - Please follow the steps below
     1. Select "Manage" in the upper right corner of the screen of the wiki you are using.
         - The wiki administration page will appear.  
-![private-wiki_1.png](/assets/images/en/private-wiki_1.png)
+<img :src="$withBase('/assets/images/en/private-wiki_1.png')" alt="private-wiki_1.png">
 
     2. Select "Security Settings" from the items on the left side of the page.  
-![private-wiki_2.png](/assets/images/en/private-wiki_2.png)
+<img :src="$withBase('/assets/images/en/private-wiki_2.png')" alt="private-wiki_2.png">
 
     3. Select "Guest User Access" from the security settings on the page that appears, and select "Deny  
-![private-wiki_3.png](/assets/images/en/private-wiki_3.png)
+<img :src="$withBase('/assets/images/en/private-wiki_3.png')" alt="private-wiki_3.png">
 - This is the end of the procedure for setting up a private wiki.

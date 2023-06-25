@@ -13,11 +13,11 @@ You can send your comments and requests to the GROWI development team.
 
 - Please click on your username in the upper right corner of the screen and select "Feedback" from the drop-down that appears.
 
-![](/assets/images/questionnaire_feedback.png)
+<img :src="$withBase('/assets/images/questionnaire_feedback.png')" alt="">
 
 - Fill in the information in the form that appears and press "Submit" to have the feedback sent to the GROWI development team.
 
-![](/assets/images/questionnaire_form.png)
+<img :src="$withBase('/assets/images/questionnaire_form.png')" alt="">
 
 ## Questionnaire
 
@@ -26,11 +26,11 @@ You can answer questionnaire distributed by the GROWI development team.
 - When GROWI receives a questionnaire, the questionnaire will appear at the bottom of the screen.
 - To answer the questionnaire, press "Answer".
 
-![](/assets/images/questionnaire_cron.png)
+<img :src="$withBase('/assets/images/questionnaire_cron.png')" alt="">
 
 - Answer the modal quesitons and press "Answer" to send the questionnaire to the GROWI development team.
 
-![](/assets/images/questionnaire_cron_form.png)
+<img :src="$withBase('/assets/images/questionnaire_cron_form.png')" alt="">
 
 ::: tip
 The questionnaire feature can be enabled/disabled system-wide by the administrator or individually by the user.

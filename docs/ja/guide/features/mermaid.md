@@ -3,7 +3,7 @@
 GROWI では [Mermaid](https://mermaid.js.org/) を利用して、様々な図を書くことができます。
 具体的な記法は [Syntax and Configuration](https://mermaid.js.org/intro/n00b-syntaxReference.html) などをご参照ください。
 
-![](/assets/images/mermaid.png)
+<img :src="$withBase('/assets/images/mermaid.png')" alt="">
 
 ### 記法例1
 

@@ -31,9 +31,9 @@
 ## プライベート wiki の設定方法
 
 1. ご利用中の wiki の画面左下の 「管理」を選択  
-![private-wiki_1.png](/assets/images/ja/private-wiki_1.png)
+<img :src="$withBase('/assets/images/ja/private-wiki_1.png')" alt="private-wiki_1.png">
 2. ページ左側の項目から「セキュリティ設定」を選択  
-![private-wiki_2.png](/assets/images/ja/private-wiki_2.png)
+<img :src="$withBase('/assets/images/ja/private-wiki_2.png')" alt="private-wiki_2.png">
 3. 表示されたページのセキュリティ設定から「ゲストユーザーのアクセス」を選択し、「拒否」を選択  
-![private-wiki_3.png](/assets/images/ja/private-wiki_3.png)
+<img :src="$withBase('/assets/images/ja/private-wiki_3.png')" alt="private-wiki_3.png">
 

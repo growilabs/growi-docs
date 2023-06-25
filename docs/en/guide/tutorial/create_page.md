@@ -6,7 +6,7 @@ When you visit the GROWI URL for the first time, there will be a dialog to set t
 
 After logging in to GROWI, the following screen will appear.
 
-![start](/assets/images/install.png)
+<img :src="$withBase('/assets/images/install.png')" alt="start">
 
 Start the tutorial here.
 
@@ -14,15 +14,15 @@ Start the tutorial here.
 
 Click the “New” button at the top right of the screen to display the page creation dialog.
 
-![create](/assets/images/create.png)
+<img :src="$withBase('/assets/images/create.png')" alt="create">
 
 Enter "tutorial" in the middle box.
 
-![create](/assets/images/create_page1.png)
+<img :src="$withBase('/assets/images/create_page1.png')" alt="create">
 
 Click the Create button.
 
-![create](/assets/images/create_page2.png)
+<img :src="$withBase('/assets/images/create_page2.png')" alt="create">
 
 You will now be moved to the Edit Page screen.
 
@@ -40,13 +40,13 @@ Copy the following Markdown code and paste it into the editing box.
 
 When pasting, a preview reflecting the contents in real time is displayed on the right side of the screen, as shown below.
 
-![create](/assets/images/tutorial_page1.png)
+<img :src="$withBase('/assets/images/tutorial_page1.png')" alt="create">
 
 You can also try typing into the editing box and checking the preview on the right.
 
 After editing, click the Create button and you will be taken to view your new page as shown below.
 
-![create](/assets/images/tutorial_page2.png)
+<img :src="$withBase('/assets/images/tutorial_page2.png')" alt="create">
 
 You can switch between the View and Edit tabs to view or edit your page.
 
@@ -58,7 +58,7 @@ A space is required immediately after the final pound.
 
 When you create a header, the header is automatically added to the index on the right side of the page.
 
-![create](/assets/images/tutorial_page2.png)
+<img :src="$withBase('/assets/images/tutorial_page2.png')" alt="create">
 
 ## Hierarchical information
 
@@ -94,11 +94,11 @@ To create a line break in a hierarchical structure, put two spaces or a tab at t
 
 You can confirm the hierarchy on the preview screen.
 
-![create](/assets/images/edit_text.png)
+<img :src="$withBase('/assets/images/edit_text.png')" alt="create">
 
 Organize the content of the document by adding and removing hierarchies.
 
-![create](/assets/images/view_text.png)
+<img :src="$withBase('/assets/images/view_text.png')" alt="create">
 
 Using hierarchies to organize information is a good practice for creating wikis that are easy to read even with a lot of text.
 
@@ -106,7 +106,7 @@ Using hierarchies to organize information is a good practice for creating wikis 
 
 A link can be inserted using the link button in the edit toolbar.
 
-![create](/assets/images/add_link.png)
+<img :src="$withBase('/assets/images/add_link.png')" alt="create">
 
 You can also create a link using square brackets (`[]`) and round brackets (`()`).
 Put the link text in the square brackets the page URL in the round brackets.
@@ -125,11 +125,11 @@ You can also insert an image by prepending an exclamation mark (`!`) to the link
   ![growi](https://growi.org/assets/images/logo.png)
 ```
 
-![create](/assets/images/add_image.png)
+<img :src="$withBase('/assets/images/add_image.png')" alt="create">
 
 You can upload your own images using the Attach function at the bottom of the edit screen.
 
-![attach](/assets/images/attach.png)
+<img :src="$withBase('/assets/images/attach.png')" alt="attach">
 
 The Attach function allows you to upload files to AWS or GCS.
 
@@ -149,7 +149,7 @@ You can add emoji to your pages by enclosing emoji words in colons (`:`).
 ## use emoji　:beginner:
 ```
 
-![emoji](/assets/images/emoji.png)
+<img :src="$withBase('/assets/images/emoji.png')" alt="emoji">
 
 You can find a list of supported emoji words [here](/en/guide/features/emoji.html).
 
@@ -198,7 +198,7 @@ Here are some useful ways to format your sentences and paragraphs.
   Surround the paragraph with three `backticks`.
 ```
 
-![emoji](/assets/images/emoji.png)
+<img :src="$withBase('/assets/images/emoji.png')" alt="emoji">
 
 ## Create tables
 
@@ -206,18 +206,18 @@ Use two or more pipes (`|`) and press Enter to create a table.
 
 You can also create a table by clicking the table button in the edit toolbar.
 
-![emoji](/assets/images/edit_table1.png)
+<img :src="$withBase('/assets/images/edit_table1.png')" alt="emoji">
 
-![emoji](/assets/images/edit_table2.png)
+<img :src="$withBase('/assets/images/edit_table2.png')" alt="emoji">
 
 You even can edit the created table in View mode.
 When you place the cursor on the table in View mode, the edit icon is displayed.
 
-![emoji](/assets/images/edit_table3.png)
+<img :src="$withBase('/assets/images/edit_table3.png')" alt="emoji">
 
 Click to edit the table.
 
-![emoji](/assets/images/edit_table4.png)
+<img :src="$withBase('/assets/images/edit_table4.png')" alt="emoji">
 
 ## Create a page list
 
@@ -231,7 +231,7 @@ $lsx()
 
 The child page list is generated automatically.
 
-![lsx](/assets/images/lsx_sample.png)
+<img :src="$withBase('/assets/images/lsx_sample.png')" alt="lsx">
 
 Additional details can be found [here](/en/guide/tips/hierarchical.html).
 

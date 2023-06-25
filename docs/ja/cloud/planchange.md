@@ -28,12 +28,12 @@
 1. GROWI.cloud ログイン後の [**ダッシュボードページ**](https://growi.cloud/my) を表示
 1. ページ左部の「**組織**」を選択し、表示された一覧の中から**プランを変更したい組織**を選択して組織の詳細ページを表示
 1. 組織詳細ページの上から 2 つ目、プランの右側の「**変更する**」を選択  
-![planchange_1.png](/assets/images/ja/planchange_1.png)
+<img :src="$withBase('/assets/images/ja/planchange_1.png')" alt="planchange_1.png">
 1. プラン選択画面に遷移
 1. プランの選択からご希望のプランを選択する  
-![planchange_2.png](/assets/images/ja/planchange_2.png)
+<img :src="$withBase('/assets/images/ja/planchange_2.png')" alt="planchange_2.png">
 1. ページ右下の「**内容の確認に進む**」を選択  
-![planchange_3.png](/assets/images/ja/planchange_3.png)
+<img :src="$withBase('/assets/images/ja/planchange_3.png')" alt="planchange_3.png">
     - **※クレジットカード未登録の場合**
         - 「**クレジットカードを登録して変更**」と表示されますので、クレジットカードをご登録ください。
         - 登録後に「**内容の確認に進む**」を選択します。

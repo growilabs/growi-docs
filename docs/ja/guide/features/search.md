@@ -10,19 +10,19 @@
 
 ナビゲーションバーの検索バーから、ページパス、本文、タグによりページを検索できます。(検索のための環境が未完了の場合は表示されません。)
 
-![search1](/assets/images/search1.png)
+<img :src="$withBase('/assets/images/search1.png')" alt="search1">
 
 検索バーにキーワードを入力すると、以下のようにページパスがキーワードと部分的に一致するページの候補が表示されます。この候補からページにアクセスできます。
 
 また、検索バー内の虫眼鏡アイコンもしくは Enter(return) キー押下により、ページパスまたは本文にキーワードを含むページが一覧表示されます。この時、検索バー左側のドロップダウンから「全てのページ」か「この階層下の子ページ」を選択することで、検索範囲を変更できます。
 
-![search2](/assets/images/search2.png)
+<img :src="$withBase('/assets/images/search2.png')" alt="search2">
 
 ## 検索結果ページ
 
 検索バーでキーワードを入力し、Enter(return) キーを押すと、以下のような検索結果一覧画面に遷移します。
 
-![search3](/assets/images/search3.png)
+<img :src="$withBase('/assets/images/search3.png')" alt="search3">
 
 - ページ名のリスト
   - 画面左側に、検索にヒットしたページ名のリストが表示されます。

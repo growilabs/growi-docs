@@ -21,18 +21,18 @@ GROWI.cloud にログイン後、組織詳細画面もしくはダッシュボ�
 
 #### 組織詳細画面
 
-![growiapp_1.png](/assets/images/ja/growiapp_1.png)
+<img :src="$withBase('/assets/images/ja/growiapp_1.png')" alt="growiapp_1.png">
 
 #### ダッシュボード画面
 
-![growiapp_2.png](/assets/images/ja/growiapp_2.png)
+<img :src="$withBase('/assets/images/ja/growiapp_2.png')" alt="growiapp_2.png">
 
 ## GROWI アプリの削除方法
 
 GROWI.cloud 上の GROWI アプリの管理画面上で「各種操作」プルダウンメニューから「削除する」を選択すると、作成した GROWI アプリを削除できます。  
 
 GROWI へアカウント登録した情報、ページ内容・GCP へアップロードしたファイル等も削除されます。  
-![growiapp_3.png](/assets/images/ja/growiapp_3.png)
+<img :src="$withBase('/assets/images/ja/growiapp_3.png')" alt="growiapp_3.png">
 
 ### アクセスがない場合のアプリの停止について
 
@@ -43,4 +43,4 @@ GROWI へアカウント登録した情報、ページ内容・GCP へアップ�
 - 停止されたアプリは、アプリの管理画面またはアプリを所有する組織の管理画面から、該当のアプリの「再起動」ボタンを押下していただければ、簡単に復旧できます。
   - 復旧されたアプリも、1週間以上アクセスが無い場合は再度、停止対象となりますのでお気を付けください。  
 
-![growiapp_4.png](/assets/images/ja/growiapp_4.png)
+<img :src="$withBase('/assets/images/ja/growiapp_4.png')" alt="growiapp_4.png">

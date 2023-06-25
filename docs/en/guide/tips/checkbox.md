@@ -12,4 +12,4 @@ In GROWI, you can create checkboxes using Markdown.
 
 When the above Markdown code is written into a GROWI wiki page, it will create checkboxes as shown in the image below.
 
-![checkbox](/assets/images/checkbox.png)
+<img :src="$withBase('/assets/images/checkbox.png')" alt="checkbox">

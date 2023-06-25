@@ -15,17 +15,17 @@
 
 
 ### Organization detail screen
-![growiapp_1.png](/assets/images/en/growiapp_1.png)
+<img :src="$withBase('/assets/images/en/growiapp_1.png')" alt="growiapp_1.png">
 
 
 ### Dashboard screen
-![growiapp_2.png](/assets/images/en/growiapp_2.png)
+<img :src="$withBase('/assets/images/en/growiapp_2.png')" alt="growiapp_2.png">
 
 # How to delete an Application
 On the GROWI App details screen, select "Delete GROWI" from the "Various Operations" pull-down menu to delete the GROWI App you created.
 
 Account registration information, page contents, and files uploaded to GCP will also be deleted.  
-![growiapp_3.png](/assets/images/en/growiapp_3.png)
+<img :src="$withBase('/assets/images/en/growiapp_3.png')" alt="growiapp_3.png">
 
 
 (※The image is temporary, but there is no difference in the contents of the pull-down menu.)

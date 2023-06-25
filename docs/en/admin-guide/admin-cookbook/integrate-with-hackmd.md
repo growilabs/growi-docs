@@ -1,6 +1,6 @@
 # HackMD(CodiMD) Integration
 
-![HackMD Demo](/assets/images/hackmd-demo.gif)
+<img :src="$withBase('/assets/images/hackmd-demo.gif')" alt="HackMD Demo">
 
 ## Overview
 

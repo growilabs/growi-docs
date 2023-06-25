@@ -4,4 +4,4 @@
 2. ツールバーの絵文字アイコン押すか、`:{文字列}` を入力します。
 3. 挿入したい絵文字を選択します。
 
-![](/assets/images/emoji.png)
+<img :src="$withBase('/assets/images/emoji.png')" alt="">

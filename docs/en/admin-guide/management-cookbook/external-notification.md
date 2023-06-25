@@ -23,11 +23,11 @@ GROWI can use IFTTT to send notifications to other web services.
      - For details, see [Email Settings](en/admin-guide/management-cookbook/app-settings.html#email-settings-tbd).
   1. Click [Global notification] from [Notification settings] in the GROWI Management page.
 
-     ![ifttt-global-notification-introduction](/assets/images/ifttt-global-notification-introduction.png)
+     <img :src="$withBase('/assets/images/ifttt-global-notification-introduction.png')" alt="ifttt-global-notification-introduction">
 
   1. Click **Add Notification Settings**.
 
-     ![ifttt-global-notification-addition](/assets/images/ifttt-global-notification-addition.png)
+     <img :src="$withBase('/assets/images/ifttt-global-notification-addition.png')" alt="ifttt-global-notification-addition">
 
   1. Set the trigger path.
   1. Create your original IFTTT applet from the link.
@@ -35,7 +35,7 @@ GROWI can use IFTTT to send notifications to other web services.
      - Example: If you are using **email** for IFTTT, enter trigger@applet.ifttt.com.
   1. Set the trigger event on GROWI.
 
-     ![ifttt-global-notification-detail-settings](/assets/images/ifttt-global-notification-detail-settings.png)
+     <img :src="$withBase('/assets/images/ifttt-global-notification-detail-settings.png')" alt="ifttt-global-notification-detail-settings">
 
   1. Once you have entered the required information, press **Update** button.
 
@@ -62,7 +62,7 @@ Basically, it is necessary to enter the channel to be notified each time, but it
 For example, if you set the pattern to `/event/*` and the channel to `general`, then
 If you create a page with the path `/event/announcement`, it will go to edit mode with `general` set in the Slack notification form.
 
-![slack2](/assets/images/slack2.png)
+<img :src="$withBase('/assets/images/slack2.png')" alt="slack2">
 
 If the checkbox is enabled and the page is refreshed, the `general` channel will receive a Slack notification.
 

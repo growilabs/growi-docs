@@ -2,7 +2,7 @@
 
 ページタイトルの横にあるアイコンをクリックすると、ページパスや URL をコピーできます。ページ内容の共有や、ページ内にリンクを記載するときに便利です。
 
-![](/assets/images/copy_to_clipboard.png)
+<img :src="$withBase('/assets/images/copy_to_clipboard.png')" alt="">
 
 - Page path
   - ページのパスをコピーします

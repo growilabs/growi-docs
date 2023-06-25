@@ -9,11 +9,11 @@ This tutorial will walk you through creating a daily report template.
 
 From the page toolbar, select Create/Edit Page Template.
 
-![](/assets/images/template_02.png)
+<img :src="$withBase('/assets/images/template_02.png')" alt="">
 
 Select Create a Page Template at this Hierarchy Level from the displayed dialog.
 
-![](/assets/images/template_01.png)
+<img :src="$withBase('/assets/images/template_01.png')" alt="">
 
 Paste the following content into the template and save the template.
 
@@ -38,12 +38,12 @@ A page template for daily reports has now been created.
 Create a new page at the same level as the template page.
 
 [//]: <> (TODO: 下のイメージは「〜にテンプレートページを作成」フィールドが入ってない。表れると使いやすい？)
-![](/assets/images/template_03.png)
+<img :src="$withBase('/assets/images/template_03.png')" alt="">
 
 You will be taken to the Edit Page screen for your new page, and it will be pre-filled with your template.
 Edit the page as needed, then click Save to create your page.
 
-![](/assets/images/template_04.png)
+<img :src="$withBase('/assets/images/template_04.png')" alt="">
 
 ## Using lower level templates
 

@@ -9,7 +9,7 @@
   - GitHub アカウント
 - すでにお持ちのアカウントをご利用いただくか、アカウントをお持ちでない場合は、[こちら](https://growi.cloud/signup?contractType=CORPORATION) からアカウントを新たに取得してください。
 
-![login_1.png](/assets/images/ja/login_1.png)
+<img :src="$withBase('/assets/images/ja/login_1.png')" alt="login_1.png">
 
 ## 利用規約およびプライバシーポリシーへの同意
 

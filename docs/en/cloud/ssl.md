@@ -17,10 +17,10 @@
 - Please follow the steps below to register a certificate
     1. Select the organization you wish to register an SSL server certificate for from the sidebar on GROWI.cloud's My Page.
     1. Select **Add** from **"SSL server certificate"** on the detail page of the organization you selected in [**1** ].  
-  ![ssl_1.png](/assets/images/en/ssl_1.png)
+  <img :src="$withBase('/assets/images/en/ssl_1.png')" alt="ssl_1.png">
 
     1. Select the files you have prepared for "**SSL Server Certificate**" and "**Private Key**" and click the "**Add**" button.
-  ![ssl_2.png](/assets/images/en/ssl_2.png)
+  <img :src="$withBase('/assets/images/en/ssl_2.png')" alt="ssl_2.png">
 
 ## If you have an Intermediate Certificate
 

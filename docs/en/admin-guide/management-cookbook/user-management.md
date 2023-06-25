@@ -8,7 +8,7 @@ Displays a list of users. Use the search filter to narrow down the users by user
 
 This table can also be used to reset passwords, delete or suspend accounts, and change access privileges to the admin page.
 
-![](/assets/images/user-management1.png)
+<img :src="$withBase('/assets/images/user-management1.png')" alt="">
 
 ### Status
 
@@ -35,17 +35,17 @@ This table can also be used to reset passwords, delete or suspend accounts, and 
 
 A user's password can be reset from the drop-down menu on the right side of the user table.
 
-![](/assets/images/user-management2.png)
+<img :src="$withBase('/assets/images/user-management2.png')" alt="">
 
 After clicking "Reset Password" from the drop-down menu, a modal popup will display the target user for the password reset.
 
-<img src="/assets/images/user-management3.png" width="50%">
+<img :src="$withBase('/assets/images/user-management3.png')" width="50%">
 
 When the "Reset Password" button on the modal popup is clicked, a new password will be issued and sent to the user.
 
 It prompts the user to log in using this temporary password, and then reset their password in the user settings page ( `/me` ).
 
-<img src="/assets/images/user-management4.png" width="50%">
+<img :src="$withBase('/assets/images/user-management4.png')" width="50%">
 
 #### Granting administrative privileges
 
@@ -59,7 +59,7 @@ Users with read-only access rights cannot create, delete, update, or comment on 
 
 You can grant or revoke read-only access rights to users from the drop-down on the right side of the user table.
 
-<img src="/assets/images/user-management-read-only.png" width="20%">
+<img :src="$withBase('/assets/images/user-management-read-only.png')" width="20%">
 
 #### Account Approval and Suspension
 
@@ -75,7 +75,7 @@ Only accounts that do not have the Active status can be deleted. Please note tha
 
 1. Click User Management from the sidebar on the left.
 
-![](/assets/images/user-management6.png)
+<img :src="$withBase('/assets/images/user-management6.png')" alt="">
 
 2. Click Temporary Issuance for new users.
 
@@ -83,17 +83,17 @@ Only accounts that do not have the Active status can be deleted. Please note tha
 
 4. Click issue.
 
-<img src="/assets/images/user-management7.png" width="50%">
+<img :src="$withBase('/assets/images/user-management7.png')" width="50%">
 
 5. A notification of the email and password will be displayed on the screen.
 
-<img src="/assets/images/user-management8.png" width="50%">
+<img :src="$withBase('/assets/images/user-management8.png')" width="50%">
 
 #### Resend Email Invitation
 
 You can resend an invitation email to users who have already been provisionally issued a new user and have not yet logged in with their account.
 
-<img src="/assets/images/user-management9.png" width="50%">
+<img :src="$withBase('/assets/images/user-management9.png')" width="50%">
 
 ::: tip
 [Email settings from the management screen](/en/admin-guide/management-cookbook/app-settings.html#email-settings) are required when delivering a notification email from GROWI.
@@ -103,7 +103,7 @@ You can resend an invitation email to users who have already been provisionally 
 
 This function manages external accounts. An external account holds information that is associated with a GROWI account when it is registered using the external OAuth. When a GROWI account is deleted, the external account associated with it is also deleted automatically.
 
-![](/assets/images/user-management5.png)
+<img :src="$withBase('/assets/images/user-management5.png')" alt="">
 
 If the password for the GROWI account is not set, the password setting status is displayed as "Not Set". The GROWI account associated with the external account in this state cannot log in using a regular ID and password. Log in with the external account and set the password from the personal settings screen, or let the administrator reset the password to change the status to "Set".
 

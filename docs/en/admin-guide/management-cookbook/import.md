@@ -85,11 +85,11 @@ Importing data from esa.io using [API v1](https://docs.esa.io/posts/102) publish
 2. Click the [Generate new token] under [Personal access tokens] to issue a token to access esa.io from GROWI.
 3. Enter the token, check the [Read] box under [Select scopes]  then click [Save].
 
-  ![import1](/assets/images/import1.png)
+  <img :src="$withBase('/assets/images/import1.png')" alt="import1">
 
 4. Save the generated token.
 
-  ![import2](/assets/images/import2.png)
+  <img :src="$withBase('/assets/images/import2.png')" alt="import2">
 
 5. Log in to GROWI with an administrator account and go to [Admin/Data Import] (`/admin/importer`).
 6. In [Import from esa.io] section, enter the esa.io Team name and Access token (the token saved earlier) then update.
@@ -131,7 +131,7 @@ Importing data from Qiita:Team using [API v2](https://qiita.com/api/v2/docs) pub
 2. Open the [Applications] tab on the user account, and under [Personal access tokens], click [Generate new token]
 3. Enter [Description], check [read_qiita_team] in [Scopes], then click [Generate token].
 
-![import3](/assets/images/import3.png)
+<img :src="$withBase('/assets/images/import3.png')" alt="import3">
 
 4. Save the generated token.
 5. Log in to GROWI with an administrator account and go to [Admin/Data Import] (`/admin/importer`).
