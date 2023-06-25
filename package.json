@@ -27,6 +27,7 @@
       ]
     }
   },
+
   "scripts": {
     "apiv3:jsdoc:base": "swagger-jsdoc -o tmp/swagger.json",
     "apiv3:jsdoc:dev": "npm run apiv3:jsdoc:base -- -d ../growi/apps/app/config/swagger-definition.js \"../growi/apps/app/src/server/**/*.js\"",
@@ -34,10 +35,10 @@
     "apiv3:redoc": "redoc-cli bundle -o docs/.vuepress/public/redoc.html tmp/swagger.json",
     "apiv3:dev": "run-s apiv3:jsdoc:dev apiv3:redoc",
     "apiv3:build": "run-s apiv3:jsdoc:build apiv3:redoc",
-    "docs-growi-org:dev": "npx -y shx cp ./docs/.vuepress/config-docs-growi-org.js ./docs/.vuepress/config.js && npx -y shx rm -rf ./docs/.vuepress/theme && vuepress dev docs",
-    "docs-growi-org:build": "npx -y shx cp ./docs/.vuepress/config-docs-growi-org.js ./docs/.vuepress/config.js && npx -y shx rm -rf ./docs/.vuepress/theme && vuepress build docs",
-    "help-growi-cloud:dev": "npx -y shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && npx -y shx mkdir -p ./docs/.vuepress/theme  && npx -y shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme && vuepress dev docs",
-    "help-growi-cloud:build": "npx -y shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && npx -y shx mkdir -p ./docs/.vuepress/theme  && npx -y shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme && vuepress build docs",
+    "docs-growi-org:dev": "npx -y shx cp ./docs/.vuepress/config-docs-growi-org.js ./docs/.vuepress/config.js && npx -y shx rm -rf ./docs/.vuepress/theme && npx -y shx cp ./docs/.vuepress/public/assets/docs-growi-org/index.html ./docs/.vuepress/public/index.html && vuepress dev docs",
+    "docs-growi-org:build": "npx -y shx cp ./docs/.vuepress/config-docs-growi-org.js ./docs/.vuepress/config.js && npx -y shx rm -rf ./docs/.vuepress/theme && npx -y shx cp ./docs/.vuepress/public/assets/docs-growi-org/index.html ./docs/.vuepress/public/index.html && vuepress build docs",
+    "help-growi-cloud:dev": "npx -y shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && npx -y shx mkdir -p ./docs/.vuepress/theme  && npx -y shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme &&  npx -y shx cp ./docs/.vuepress/public/assets/help-growi-cloud/index.html ./docs/.vuepress/public/index.html && vuepress dev docs",
+    "help-growi-cloud:build": "npx -y shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && npx -y shx mkdir -p ./docs/.vuepress/theme  && npx -y shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme &&   npx -y shx cp ./docs/.vuepress/public/assets/help-growi-cloud/index.html ./docs/.vuepress/public/index.html && vuepress build docs",
     "lint": "textlint \"docs/ja/**/*.md\" \"docs/en/**/*.md\" README.md",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npm-watch"
