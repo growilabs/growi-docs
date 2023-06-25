@@ -372,6 +372,12 @@ module.exports = {
     '@vuepress/plugin-medium-zoom',
   ],
 
+  markdown: {
+    extendMarkdown: (md) => {
+      md.use(require('markdown-it-task-lists'));
+    },
+  },
+
   head: [
     ['script', {}, `
       (function(w,d,s,l,i){
