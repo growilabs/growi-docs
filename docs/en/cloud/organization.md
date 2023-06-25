@@ -52,6 +52,6 @@
 - From the "Members" section of the organization details page, check the user who will be set as the primary owner after setting among the members belonging to the organization.
 - You can change it by selecting "Change to Primary Owner" from the "User Actions" drop-down menu on the right side of the corresponding user's display.
 
-<img :src="$withBase('/assets/images/en/Organizationandmember_3.png')" alt="organization_3.png">
+<img :src="$withBase('/assets/images/en/organization_3.png')" alt="organization_3.png">
 
 - The primary owner can only be selected from members belonging to the organization.
