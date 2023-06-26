@@ -28,7 +28,8 @@ module.exports = {
     '(ja|en)/admin-guide/(management-cookbook|upgrading)/**',
     // Markdonw files not included in the build: https://github.com/vuejs/vuepress/issues/1558
     '!**/README.md',
-    '!(ja|en)/admin-guide/upgrading/(34x|35x|36x||37x|38x).md',
+    '!(ja|en)/admin-guide/upgrading/(34x|35x|36x|37x|38x).md',
+    '!(ja|en)/admin-guide/management-cookbook/active-directory.md', // Excluded due to lack of substance
     // The following should also be included in README.md
     '(ja|en)/admin-guide/management-cookbook/slack-integration/README.md'
   ],
@@ -181,7 +182,7 @@ module.exports = {
             '/ja/admin-guide/management-cookbook/slack-integration/official-bot-settings.md',
             '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md',
             '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
-            '/ja/admin-guide/management-cookbook/active-directory.md',
+            // '/ja/admin-guide/management-cookbook/active-directory.md',
             '/ja/admin-guide/management-cookbook/google-analytics.md',
             '/ja/admin-guide/management-cookbook/external-notification.md',
             '/ja/admin-guide/management-cookbook/import.md',
@@ -333,7 +334,7 @@ module.exports = {
             '/en/admin-guide/management-cookbook/slack-integration/official-bot-settings.md',
             '/en/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md',
             '/en/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
-            '/en/admin-guide/management-cookbook/active-directory.md',
+            // '/en/admin-guide/management-cookbook/active-directory.md',
             '/en/admin-guide/management-cookbook/google-analytics.md',
             '/en/admin-guide/management-cookbook/external-notification.md',
             '/en/admin-guide/management-cookbook/import.md',

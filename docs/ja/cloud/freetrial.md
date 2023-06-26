@@ -41,7 +41,7 @@
 
 ※その他の設定をトライアル環境でお試しされたい方はご自由にご入力ください。
 
-<img :src="$withBase('/assets/images/ja/freetrial_.png')" alt="freetrial_3.png">
+<img :src="$withBase('/assets/images/ja/freetrial_3.png')" alt="freetrial_3.png">
 
 ### 4. GROWI アプリ作成中・作成完了ページ
 

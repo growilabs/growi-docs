@@ -19,8 +19,7 @@ GROWI.cloud ではお客様からご依頼をいただいた場合に限り、�
 強制起動中の GROWI を一旦削除し、新規に GROWI を作成しなおすことで、更新を制限されない状態の GROWI をご利用いただけるようになります。  
 GROWI のデータ引き継ぎをご希望の場合は、以下の手順で移行作業を行ってください。
 
-
-[新規GROWIへの移行](/ja/cloud/createandmigrate.html)
+[GROWI.cloud へのデータ移行](/ja/cloud/data-migration.html)
 
 ## 3.有料プランへアップグレードする
 

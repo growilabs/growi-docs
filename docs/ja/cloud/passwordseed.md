@@ -12,7 +12,7 @@
   - PASSWORD_SEED を更新すると GROWI アプリは再起動されます。  
 <img :src="$withBase('/assets/images/ja/passwordseed_1.png')" alt="passwordseed_1.png">
 - オンプレミスで構築した GROWI からユーザーデータを移行する場合には、移行元の PASSWORD_SEED が必要になります。
-  - 移行の手順については [オンプレミスから GC への移行](/ja/cloud/ompremise-growi.html) をご参照ください。
+  - 移行の手順については [GROWI.cloud へのデータ移行](/ja/cloud/data-migration.html) をご参照ください。
   - もし、移行時に PASSWORD_SEED を設定しない場合、移行したユーザーは以前のパスワードではログインできなくなります。
 
 ### 紛失など移行元の PASSWORD_SEED の値が不明な場合
