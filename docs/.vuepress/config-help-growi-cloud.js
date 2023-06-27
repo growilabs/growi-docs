@@ -373,6 +373,27 @@ module.exports = {
     }],
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    ['container', {
+      type: 'tip',
+      defaultTitle: {
+        '/ja/': 'TIP',
+        '/en/': 'TIP'
+      }
+    }],
+    ['container', {
+      type: 'warning',
+      defaultTitle: {
+        '/ja/': 'WARNING',
+        '/en/': 'WARNING'
+      }
+    }],
+    ['container', {
+      type: 'danger',
+      defaultTitle: {
+        '/ja/': 'DANGER',
+        '/en/': 'DANGER'
+      }
+    }],
   ],
 
   markdown: {

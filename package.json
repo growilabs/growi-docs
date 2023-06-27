@@ -27,7 +27,6 @@
       ]
     }
   },
-
   "scripts": {
     "apiv3:jsdoc:base": "swagger-jsdoc -o tmp/swagger.json",
     "apiv3:jsdoc:dev": "npm run apiv3:jsdoc:base -- -d ../growi/apps/app/config/swagger-definition.js \"../growi/apps/app/src/server/**/*.js\"",
@@ -69,7 +68,6 @@
     "vue-tabs-component": "^1.5.0",
     "vuepress": "^1.8.2",
     "vuepress-jsdoc": "^3.0.0",
-    "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-tabs": "^0.3.0"
   },
   "engines": {
