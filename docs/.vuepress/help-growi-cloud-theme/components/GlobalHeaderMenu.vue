@@ -10,7 +10,7 @@
         </li>
 
         <li class="nav-item p-2 p-md-0 ms-md-3">
-          <a href="https://growi.cloud/introductions" class="nav-link gc-text-dark fw-bold">
+          <a href="https://growi.cloud/interviews" class="nav-link gc-text-dark fw-bold">
             <span class="pb-1">{{ this.$themeLocaleConfig.case_study}}</span>
           </a>
         </li>
