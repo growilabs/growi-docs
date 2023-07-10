@@ -372,17 +372,14 @@ module.exports = {
       searchMaxSuggestions: 10
     }],
     '@vuepress/plugin-back-to-top',
-    [
-      'vuepress-plugin-medium-zoom',
-      {
+    ['vuepress-plugin-medium-zoom', {
         selector: '.article img',
         delay: 1000,
         options: {
           margin: 24,
           scrollOffset: 0,
-        },
-      },
-    ],
+        }
+    }],
     ['container', {
       type: 'tip',
       defaultTitle: {
