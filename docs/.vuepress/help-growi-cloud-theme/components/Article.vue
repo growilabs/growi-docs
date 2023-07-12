@@ -26,9 +26,7 @@
 
 <style lang="scss">
 @use '../../styles/style.scss';
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins/breakpoints';
+@use '../../styles/bootsrap-init.scss' as bs;
 
 $text-blue-dark: #34495e;
 $link-text: #00A5B1;
@@ -39,7 +37,7 @@ $code-bg: #eff1f3;
 .article {
   img {
     max-width: 768px;
-    @include media-breakpoint-down(md) {
+    @include bs.media-breakpoint-down(md) {
       max-width: 100%;
     }
   }
