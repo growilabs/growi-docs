@@ -113,6 +113,7 @@ module.exports = {
             '/ja/admin-guide/management-cookbook/g2g-transfer.md',
             '/ja/admin-guide/management-cookbook/setup-search-system.md',
             '/ja/admin-guide/management-cookbook/audit-log.md',
+            '/ja/admin-guide/management-cookbook/plugins.md',
           ]
         },
         {
@@ -203,6 +204,7 @@ module.exports = {
             '/en/admin-guide/management-cookbook/export.md',
             '/en/admin-guide/management-cookbook/setup-search-system.md',
             '/en/admin-guide/management-cookbook/audit-log.md',
+            '/en/admin-guide/management-cookbook/plugins.md',
           ]
         },
         {
