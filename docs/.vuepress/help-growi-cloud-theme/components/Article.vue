@@ -26,6 +26,7 @@
 
 <style lang="scss">
 @use '../../styles/style.scss';
+@use '../../styles/bootsrap-init.scss' as bs;
 
 $text-blue-dark: #34495e;
 $link-text: #00A5B1;
@@ -35,7 +36,10 @@ $code-bg: #eff1f3;
 
 .article {
   img {
-    width: 100%;
+    max-width: 768px;
+    @include bs.media-breakpoint-down(md) {
+      max-width: 100%;
+    }
   }
 
   h1,h2,h3,h4,h5,h6 {
