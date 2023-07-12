@@ -60,15 +60,18 @@ Incoming Webhook も Slack 連携する手段の一つですが、GROWI bot と�
 1. **Channel_not_found**  
    指定したチャンネルに GROWI-Bot を招待していないか、間違ったチャンネルを入力した可能性があります。
    GROWI-Bot が Slack チャンネルに招待されていることを確認の上、適切にチャンネル名を入力してください。
+
    <img :src="$withBase('/assets/images/slack-bot-test-channel-not-found.png')" alt="slack-bot-test-channel-not-found">
 
 1. **Proxy URL is not registered**  
    Proxy URL が設定されていない可能性があります。Proxy URL を入力してください。
+
    <img :src="$withBase('/assets/images/slack-bot-errors-proxy-url-is-not-registered.png')" alt="slack-bot-errors-proxy-url-is-not-registered">
 
 1. **Request failed with status code 400**  
    Slack ワークスペースで `/growi register` で Proxy に情報を登録せずに Test ボタンをクリックした可能性があります。
    Slack ワークスペースで `/growi register` を実行し、必要な情報を Proxy に登録してください。
+
    <img :src="$withBase('/assets/images/slack-bot-errors-400.png')" alt="slack-bot-errors-400">
 
 1. **Request failed with status code 500**  
@@ -76,20 +79,24 @@ Incoming Webhook も Slack 連携する手段の一つですが、GROWI bot と�
    [接続中の GROWI を確認する](/ja/admin-guide/management-cookbook/slack-integration/#接続中の-growi-を確認する)を参照して、現在どの GROWI App と連携しているのかを確認してください。
    確認後、[Slack ワークスペースと GROWI App との連携を解除する](/ja/admin-guide/management-cookbook/slack-integration/#slack-ワークスペースと-growi-app-との連携を解除する)
    を参照し、GROWI App との連携を解除してください。連携の解除後、再度登録し直してください。
+
    <img :src="$withBase('/assets/images/slack-bot-errors-500.png')" alt="slack-bot-errors-500">
 
 1. **The scopes is not appropriate**  
    Slack App を作成した際に設定する Scope が正しくない可能性があります。
    作成した Slack App の OAuth & Permissions から Scope の確認をしてください。
    必要な Scope は **team:read**, **chat:write**, **command** です。
+
    <img :src="$withBase('/assets/images/slack-bot-errors-scopes-not-appropriate.png')" alt="slack-bot-errors-scopes-not-appropriate">
 
 1. **Cannot read property 'includes' of undefined**  
    Signing Secret や Bot User OAuth Token などの情報が登録されていない可能性があります。正しい値を入力してください。
+
    <img :src="$withBase('/assets/images/slack-bot-errors-includes-of-undefined.png')" alt="slack-bot-errors-includes-of-undefined">
 
 1. **invalid_auth**  
    Signing Secret や Bot User OAuth Token の値が間違っている可能性があります。正しい値を入力してください。
+
    <img :src="$withBase('/assets/images/slack-bot-errors-invalid-auth.png')" alt="slack-bot-errors-invalid-auth">
 
 ## GROWI bot でできること
@@ -99,6 +106,7 @@ GROWI bot の機能については[ユーザーガイド](/ja/guide/features/sla
 ## アイコン
 
 よろしければ、以下のイラストを Custom bot 用のアイコンにお使いください。
+
 <img :src="$withBase('/assets/images/growikun-icon-2000_2000.png')" alt="growikun-icon-2000_2000">
 
 ## Incoming webhook 設定

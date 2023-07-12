@@ -15,6 +15,7 @@
 <img :src="$withBase('/assets/images/group2.png')" alt="group2">
 
 3. 「Group name」と「Description」を記入して、「Create」ボタンをクリックします。
+
 <img :src="$withBase('/assets/images/group3.png')" alt="group3">
 
 4. Success 表示され、一覧にグループが追加されます。

@@ -31,5 +31,7 @@
 1. サイドバーのゴミ箱アイコンをクリックします。
 2. 削除したページの一覧が表示されるので、復元したいページをクリックします。
 3. Put back ボタンを押します。
+
   <img :src="$withBase('/assets/images/trash.png')" alt="">
+  
   <img :src="$withBase('/assets/images/put_back_page.png')" alt="">
