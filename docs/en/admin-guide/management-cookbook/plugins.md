@@ -13,8 +13,8 @@ Please check [GROWI plugin site](https://growi.org/plugins) for publicly availab
 
 ::: warning
 
-If you install the plugin again using the same repository URL, the plugin will be overwritten.
-Also, if the URL is the same even if the branch is different, the plugin will be overwritten.
+If a plugin is already installed, reinstalling it from the same repository will overwrite the existing plugin.
+Also, even if the branches are different, if the repositories are the same, the plugin will be overwritten.
 :::
 
 ## Plugin Card
