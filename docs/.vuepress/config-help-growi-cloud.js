@@ -68,6 +68,7 @@ module.exports = {
           key: 'service',
           children: [
             '/ja/cloud/authentication.md',
+            '/ja/cloud/create-account.md',
             '/ja/cloud/autoincrease-memory.md',
             '/ja/cloud/backup.md',
             '/ja/cloud/forcedstart-growi.md',
