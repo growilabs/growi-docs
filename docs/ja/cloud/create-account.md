@@ -1,17 +1,17 @@
 ## アカウントの作成
 
-- 無料トライアルの開始や組織の作成をせず、アカウントのみ作成することが可能です。
-- そのアカウントを、既存の組織に追加することが可能です。
+- 無料トライアルの開始や組織の作成をせず、アカウントのみ作成できます。
+- そのアカウントを、既存の組織に追加できます。
 - アカウントの作成には以下のいずれかが必要です。
   - メールアドレス
   - Google アカウント
-  - Github アカウント
+  - GitHub アカウント
 
 ## 作成方法
 
-### Google または Github アカウントを用いて作成する場合
+### Google または GitHub アカウントを用いて作成する場合
 
- 1. [アカウント作成画面](https://growi.cloud/createaccount_only) から、「Google で登録」または「Github で登録」ボタンをクリックすると、以下画面に移動します
+ 1. [アカウント作成画面](https://growi.cloud/createaccount_only) から、「Google で登録」または「GitHub で登録」ボタンをクリックすると、以下画面に移動します
 <img :src="$withBase('/assets/images/ja/createaccount_3.png')" alt="createaccount_3.png">
 
 - 以上で、GROWI.cloud アカウントの作成は完了しました。
