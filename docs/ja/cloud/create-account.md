@@ -11,7 +11,7 @@
 
 ### Google または GitHub アカウントを用いて作成する場合
 
-1. [GROWI.cloud アカウント作成画面](https://growi.cloud/createaccount_only) にアクセスする
+1. [GROWI.cloud アカウント作成画面](https://growi.cloud/create-account-only) にアクセスする
 1. `Google で登録` または `GitHub で登録` をクリックする
 1. すると、以下ページに移動します。
 
@@ -22,7 +22,7 @@
 
 ### メールアドレスを用いて作成する場合
 
-1. [GROWI.cloud アカウント作成画面](https://growi.cloud/createaccount_only) で、メールアドレスを入力
+1. [GROWI.cloud アカウント作成画面](https://growi.cloud/create-account-only) で、メールアドレスを入力
 
 2. `GROWI.cloud サービス仮登録` メールが届くので、`パスワード登録を完了する` をクリック
 
