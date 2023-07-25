@@ -13,11 +13,12 @@
 
 1. [GROWI.cloud アカウント作成画面](https://growi.cloud/create-account-only) にアクセスする
 1. `Google で登録` または `GitHub で登録` をクリックする
-1. すると、以下ページに移動します。
+
+すると、以下ページに移動します。
 
 <img :src="$withBase('/assets/images/ja/createaccount_1.png')" alt="createaccount_1.png">
 
-- 以上で、GROWI.cloud アカウントの作成は完了しました。
+以上で、GROWI.cloud アカウントの作成は完了しました。
 
 
 ### メールアドレスを用いて作成する場合
@@ -32,11 +33,11 @@
 
 <img :src="$withBase('/assets/images/ja/createaccount_3.png')" alt="createaccount_3.png">
 
-2. すると、以下ページに移動します
+すると、以下ページに移動します。
 
 <img :src="$withBase('/assets/images/ja/createaccount_1.png')" alt="createaccount_1.png">
 
-- 以上で、GROWI.cloud アカウントの作成は完了しました。
+以上で、GROWI.cloud アカウントの作成は完了しました。
 
 ## 組織へのメンバー追加
 
