@@ -28,7 +28,7 @@
 
 <img :src="$withBase('/assets/images/ja/createaccount_2.png')" alt="createaccount_2.png">
 
-3. パスワード登録ページに移動するので、フォームを入力して`パスワードを登録` をクリック
+3. パスワード登録ページに移動するので、フォームに入力して`パスワードを登録` をクリック
 
 <img :src="$withBase('/assets/images/ja/createaccount_3.png')" alt="createaccount_3.png">
 
