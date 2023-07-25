@@ -232,6 +232,7 @@ module.exports = {
           key: 'service',
           children: [
             '/en/cloud/authentication.md',
+            '/en/cloud/create-account.md',
             '/en/cloud/autoincrease-memory.md',
             '/en/cloud/backup.md',
             '/en/cloud/hackmd.md',
