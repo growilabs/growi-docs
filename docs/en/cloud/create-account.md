@@ -16,7 +16,7 @@
 
 Then you will be redirected to the following page.
 
-<img :src="$withBase('/assets/images/ja/createaccount_1.png')" alt="createaccount_1.png">
+<img :src="$withBase('/assets/images/en/createaccount_1.png')" alt="createaccount_1.png">
 
 That's it! The creation of your GROWI.cloud account is now complete.
 
@@ -37,7 +37,7 @@ That's it! The creation of your GROWI.cloud account is now complete.
 
 Then you will be redirected to the following page.
 
-<img :src="$withBase('/assets/images/ja/createaccount_1.png')" alt="createaccount_1.png">
+<img :src="$withBase('/assets/images/en/createaccount_1.png')" alt="createaccount_1.png">
 
 That's it! The creation of your GROWI.cloud account is now complete.
 
