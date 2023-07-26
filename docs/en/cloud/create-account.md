@@ -31,9 +31,9 @@ That's it! The creation of your GROWI.cloud account is now complete.
 <img :src="$withBase('/assets/images/en/createaccount_2.png')" alt="createaccount_2.png">
 
 <!-- 3. パスワード登録ページに移動するので、フォームに入力して`パスワードを登録` をクリック -->
-3. You will be redirected to the password registration page, so enter the information in the form and click Register Password.
+3. You will be redirected to the password registration page, so enter the information in the form and click `Register a Password`.
 
-<img :src="$withBase('/assets/images/ja/createaccount_3.png')" alt="createaccount_3.png">
+<img :src="$withBase('/assets/images/en/createaccount_3.png')" alt="createaccount_3.png">
 
 Then you will be redirected to the following page.
 
