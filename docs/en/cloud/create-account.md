@@ -26,7 +26,7 @@ That's it! The creation of your GROWI.cloud account is now complete.
 
 <!-- 2. `GROWI.cloud サービス仮登録` メールが届くので、`パスワード登録を完了する` をクリック -->
 <!-- TODO:ボタン文言は英語版メール見てかえる -->
-2. You will receive a GROWI.cloud Service Temporary Registration email. Click `Register Password`` to proceed.
+2. You will receive a GROWI.cloud Temporary Service Registration email. Click `Register Password` to proceed.
 
 <img :src="$withBase('/assets/images/en/createaccount_2.png')" alt="createaccount_2.png">
 
