@@ -11,7 +11,7 @@
 
 ### Creating Using Google or GitHub Account
 
-1. Accessing the [Create GROWI.cloud Account Page](https://growi.cloud/create-account-only)
+1. Accessing the [Create a GROWI.cloud Account Page](https://growi.cloud/create-account-only)
 1. Click on `Sign up with Google` or `Sign up with GitHub`
 
 Then you will be redirected to the following page.
@@ -20,23 +20,29 @@ Then you will be redirected to the following page.
 
 That's it! The creation of your GROWI.cloud account is now complete.
 
-### メールアドレスを用いて作成する場合
+### Creating Using email address
 
-1. [GROWI.cloud アカウント作成画面](https://growi.cloud/create-account-only) で、メールアドレスを入力
-2. `GROWI.cloud サービス仮登録` メールが届くので、`パスワード登録を完了する` をクリック
+1. Enter your email address on [Create a GROWI.cloud Account Page](https://growi.cloud/create-account-only)
+
+<!-- 2. `GROWI.cloud サービス仮登録` メールが届くので、`パスワード登録を完了する` をクリック -->
+<!-- TODO:ボタン文言は英語版メール見てかえる -->
+2. You will receive a GROWI.cloud Service Temporary Registration email. Click Complete Password Registration to proceed.
 
 <img :src="$withBase('/assets/images/ja/createaccount_2.png')" alt="createaccount_2.png">
 
-3. パスワード登録ページに移動するので、フォームに入力して`パスワードを登録` をクリック
+<!-- 3. パスワード登録ページに移動するので、フォームに入力して`パスワードを登録` をクリック -->
+3. You will be redirected to the password registration page, so enter the information in the form and click Register Password.
 
 <img :src="$withBase('/assets/images/ja/createaccount_3.png')" alt="createaccount_3.png">
 
-すると、以下ページに移動します。
+Then you will be redirected to the following page.
 
 <img :src="$withBase('/assets/images/ja/createaccount_1.png')" alt="createaccount_1.png">
 
-以上で、GROWI.cloud アカウントの作成は完了しました。
+That's it! The creation of your GROWI.cloud account is now complete.
 
-## 組織へのメンバー追加
+<!-- ## 組織へのメンバー追加 -->
+## Adding Members to an Organization
 
-追加方法は[メンバーの追加](https://growi.cloud/help/ja/cloud/organization.html#%E3%83%A1%E3%83%B3%E3%83%8F%E3%82%99%E3%83%BC%E3%81%AE%E8%BF%BD%E5%8A%A0)をご参照ください。
+<!-- 追加方法は[メンバーの追加](https://growi.cloud/help/ja/cloud/organization.html#%E3%83%A1%E3%83%B3%E3%83%8F%E3%82%99%E3%83%BC%E3%81%AE%E8%BF%BD%E5%8A%A0)をご参照ください。 -->
+For the method of adding, please refer to [the Add Members](https://growi.cloud/help/en/cloud/organization.html#add-members).
