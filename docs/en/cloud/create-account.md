@@ -7,19 +7,18 @@
   - Google Account
   - GitHub Account
 
-## 作成方法
+## How to Create
 
-### Google または GitHub アカウントを用いて作成する場合
+### Creating Using Google or GitHub Account
 
-1. [GROWI.cloud アカウント作成画面](https://growi.cloud/create-account-only) にアクセスする
-1. `Google で登録` または `GitHub で登録` をクリックする
+1. Accessing the [Create GROWI.cloud Account Page](https://growi.cloud/create-account-only)
+1. Click on `Sign up with Google` or `Sign up with GitHub`
 
-すると、以下ページに移動します。
+Then you will be redirected to the following page.
 
 <img :src="$withBase('/assets/images/ja/createaccount_1.png')" alt="createaccount_1.png">
 
-以上で、GROWI.cloud アカウントの作成は完了しました。
-
+That's it! The creation of your GROWI.cloud account is now complete.
 
 ### メールアドレスを用いて作成する場合
 
