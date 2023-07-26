@@ -1,4 +1,4 @@
-## アカウントの作成
+## 組織に参加するアカウントの作成
 
 - 無料トライアルの開始や組織の作成をせず、GROWI.cloud アカウントのみ作成できます。
 - そのアカウントを、既存の組織に追加できます。
@@ -40,4 +40,4 @@
 
 ## 組織へのメンバー追加
 
-- 追加方法は[メンバーの追加](https://growi.cloud/help/ja/cloud/organization.html#%E3%83%A1%E3%83%B3%E3%83%8F%E3%82%99%E3%83%BC%E3%81%AE%E8%BF%BD%E5%8A%A0)をご参照ください。
+追加方法は[メンバーの追加](https://growi.cloud/help/ja/cloud/organization.html#%E3%83%A1%E3%83%B3%E3%83%8F%E3%82%99%E3%83%BC%E3%81%AE%E8%BF%BD%E5%8A%A0)をご参照ください。
