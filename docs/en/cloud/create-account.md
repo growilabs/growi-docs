@@ -12,7 +12,7 @@
 ### Creating Using Google or GitHub Account
 
 1. Accessing the [Create a GROWI.cloud Account Page](https://growi.cloud/create-account-only)
-1. Click on `Sign up with Google` or `Sign up with GitHub`
+1. Click on `Register with Google` or `Register with GitHub`
 
 Then you will be redirected to the following page.
 
@@ -46,3 +46,4 @@ That's it! The creation of your GROWI.cloud account is now complete.
 
 <!-- 追加方法は[メンバーの追加](https://growi.cloud/help/ja/cloud/organization.html#%E3%83%A1%E3%83%B3%E3%83%8F%E3%82%99%E3%83%BC%E3%81%AE%E8%BF%BD%E5%8A%A0)をご参照ください。 -->
 For the method of adding, please refer to [the Add Members](https://growi.cloud/help/en/cloud/organization.html#add-members).
+
