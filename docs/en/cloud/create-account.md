@@ -11,7 +11,7 @@
 
 ### Create Using Google or GitHub Account
 
-1. Accessing the [Create a GROWI.cloud Account Page](https://growi.cloud/create-account-only)
+1. Access the [Create a GROWI.cloud Account Page](https://growi.cloud/create-account-only)
 1. Click on `Register with Google` or `Register with GitHub`
 
 Then you will be redirected to the following page.
