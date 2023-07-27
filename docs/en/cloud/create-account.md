@@ -9,7 +9,7 @@
 
 ## How to Create
 
-### Creating Using Google or GitHub Account
+### Create Using Google or GitHub Account
 
 1. Accessing the [Create a GROWI.cloud Account Page](https://growi.cloud/create-account-only)
 1. Click on `Register with Google` or `Register with GitHub`
@@ -20,7 +20,7 @@ Then you will be redirected to the following page.
 
 That's it! The creation of your GROWI.cloud account is now complete.
 
-### Creating Using email address
+### Create Using email address
 
 1. Enter your email address on [Create a GROWI.cloud Account Page](https://growi.cloud/create-account-only)
 
