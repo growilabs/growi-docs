@@ -25,7 +25,7 @@
 ### メールアドレスを用いて作成する場合
 
 1. [GROWI.cloud アカウント作成画面](https://growi.cloud/create-account-only) で、メールアドレスを入力
-2. `GROWI.cloud サービス仮登録` メールが届くので、`パスワード登録を完了する` をクリック
+2. `GROWI.cloud サービス仮登録` メールが届くので、`パスワードを登録する` をクリック
 
 <img :src="$withBase('/assets/images/ja/createaccount_2.png')" alt="createaccount_2.png">
 
