@@ -1,68 +1,72 @@
 # ページを作成する
 
-## インストール後
+## はじめに
 
-インストール後、GROWI の URL へアクセスすると、管理者 ID を設定する画面が表示されます。
+<ContextualBlock context="docs-growi-org">
 
-管理者 ID を入力し、GROWI へログインすると以下の画面が表示されます。
+GROWI のインストール後、初めて GROWI へアクセスすると、User ID やパスワードなどを設定する初回セットアップ画面が表示されます。
 
-<img :src="$withBase('/assets/images/install.png')" alt="start">
+<img :src="$withBase('/assets/images/installer.png')" alt="start">
 
-ここからチュートリアルを開始します。
+必要な項目を入力し、Create ボタンを押すと以下の画面が表示されます。
+
+<img :src="$withBase('/assets/images/home.png')" alt="start">
+
+</ContextualBlock>
+
+<ContextualBlock context="help-growi-cloud">
+
+GROWI へログインすると以下の画面が表示されます。
+
+<img :src="$withBase('/assets/images/home.png')" alt="start">
+
+</ContextualBlock>
 
 管理者設定については[管理者ガイド](/ja/admin-guide/management-cookbook/app-settings.html)をご参照ください。
 
-## 新規ページ作成
+## 新しいページを作成する
 
 GROWI は、wiki ページを作成するシステムです。
 
-まずは新規ページを作成しましょう。
+まずは新しいページを作成しましょう。
+
+1. 画面右上の「作成」ボタンをクリックすると、ページ作成ダイアログが表示されます。
+
+    <img :src="$withBase('/assets/images/create.png')" alt="create">
+
+    <img :src="$withBase('/assets/images/create_page1.png')" alt="create">
+1. `Create page under below(「ページを以下に作成」)` の入力欄に`tutorial` と入力し、「Create」 ボタンをクリックします。
+
+    - ページの編集画面が表示されます。
+
+    <img :src="$withBase('/assets/images/create_page2.png')" alt="create">
+
+    <img :src="$withBase('/assets/images/create_page3.png')" alt="create">
+
+1. 以下の Markdown 記述の内容をコピーして、編集画面へ貼りつけてみましょう。
+    - 貼り付けると、画面右側にページのプレビューが表示されます。内容はリアルタイムに反映されます。
+
+    ```
+    # First page
+    ## Header1
+    * List1
+    * List2
+    ## Header2
+    1. Number list
+    2. Number list
+    ```
+
+    <img :src="$withBase('/assets/images/tutorial_page1.png')" alt="page">
+
+1. 実際に編集画面で文字を入力し、プレビュー画面に反映されることを確認しましょう。
+1. 編集が終わったら、「Create」ボタンをクリックします。
+    - クリックすると、ページが作成され、画像のようにページが参照できるようになります。
+    - 画面右上のページツールバーで、閲覧モード、編集モード、[HackMD](/ja/guide/features/hackmd.html)モードに切り替えることができます。
+
+    <img :src="$withBase('/assets/images/tutorial_page2.png')" alt="page">
 
 
-<img :src="$withBase('/assets/images/create.png')" alt="create">
-
-画面右上の「作成」ボタンをクリックすると、ページ作成が表示されます。
-
-<img :src="$withBase('/assets/images/create_page1.png')" alt="create">
-
-「ページを以下に作成」の入力欄に「チュートリアル」と入力し、作成ボタンをクリックします。
-
-<img :src="$withBase('/assets/images/create_page2.png')" alt="create">
-
-ページの編集画面が表示されます。
-
-以下の Markdown 記述の内容をコピーして、GROWI の編集画面へ貼りつけてみましょう。
-
-```
-
-# はじめてのページ
-## 見出し1
-
-* 箇条書き1
-* 箇条書き2
-
-## 見出し2
-
-1. 番号リスト  
-2. 番号リスト
-
-```
-
-<img :src="$withBase('/assets/images/tutorial_page1.png')" alt="page">
-
-貼り付けると、下記のように内容がリアルタイムに反映されたプレビューが画面右側に表示されます。
-
-実際に編集画面で文字を入力し、右側のプレビュー画面への反映を確認しましょう。
-
-編集したら、「作成」ボタンをクリックします。
-
-<img :src="$withBase('/assets/images/tutorial_page2.png')" alt="page">
-
-クリックすると、記事が作成され、画像のようにページが参照できるようになります。
-
-「編集」タブと「View」タブを切り替えて、編集モードと View モードにできます。
-
-早速作成したページを編集しましょう。
+作成したページをもっと編集してみましょう。
 
 ## 見出しと階層化
 
@@ -91,21 +95,24 @@ GROWI は、wiki ページを作成するシステムです。
 ページを作成して編集します。
 
 ## 見出しと本文の使い方
+
 見出しと本文の使い方を学びます。
 
 ### 見出し
+
 見出しを作成すると、ページ右側に索引が作成されます。
 
 ### 本文
+
 本文として、文章をページへ記載します。文章は段落にできます。
 
 以下のいずれかの記号と半角スペースで、段落を作成できます。
 
 - 半角ハイフン`-`
 - 半角アスタリスク`*`
-    - さらに階層化
-        - そのまた更に階層化
-    - 階層をひとつ戻す
+  - さらに階層化
+    - そのまた更に階層化
+  - 階層をひとつ戻す
 
 ```
 
@@ -136,6 +143,7 @@ GROWI は、wiki ページを作成するシステムです。
   []()
 
   [GROWI Docs](https://docs.growi.org/)
+
   ```
 
 <img :src="$withBase('/assets/images/add_link.png')" alt="link">
@@ -215,7 +223,9 @@ GROWI では、本文の編集時に多数のテクニックで文章を読み�
 
 
 ```
+
 ### 便利な本文の使い方
+
 いろいろな文章や段落の便利な書き方を紹介します。
 
 - 強調
@@ -250,6 +260,7 @@ GROWI では、本文の編集時に多数のテクニックで文章を読み�
 
   段落として背景反転して協調できます。
   バッククオート3つで囲います。
+
 ```
 
 ## テーブルを作成する
