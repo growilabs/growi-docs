@@ -30,7 +30,7 @@ Please refer to [App Settings](/en/admin-guide/management-cookbook/app-settings.
 
 Let's create a new page.
 
-1. Click the "New" button in the upper right corner of the screen to open the New page dialog box.
+1. Click the "New" button in the upper right corner of the screen to open the New page dialog.
 
     <img :src="$withBase('/assets/images/create.png')" alt="create">
 
@@ -58,7 +58,7 @@ Let's create a new page.
 
     <img :src="$withBase('/assets/images/tutorial_page1.png')" alt="page">
 1. After editing, click the "Create" button.
-    - The page will be created and can be viewed as shown in the image.
+    - The page will be created and can be viewed as shown in the image below.
     - The page toolbar in the upper right corner of the screen allows you to switch between viewing mode, editing mode, and [HackMD](/en/guide/features/hackmd.html) mode.
 
     <img :src="$withBase('/assets/images/tutorial_page2.png')" alt="page">
@@ -70,7 +70,7 @@ Let's edit more of the page you created.
 
 You can use `#` to add headings to your pages.
 
-Each additional `#` allows you to describe a deeper hierarchy of headings.
+Each additional `#` allows you to increase the level of headings.
 
 <img :src="$withBase('/assets/images/header.png')" alt="page">
 
@@ -112,7 +112,7 @@ In this way, you can organize your documents by using headings and bulleted list
 1. In edit mode, click the link icon on the toolbar.
 
      <img   :src="$withBase('/assets/images/add_link.png')" alt="add_link">
-1. The Edit Link dialog box is opened. Enter the Link : `https://docs.growi.org/`, Label: `GROWI Docs`, and click the "Done" button.
+1. The Edit Link dialog is opened. Enter the Link : `https://docs.growi.org/`, Label: `GROWI Docs`, and click the "Done" button.
 
     <img :src="$withBase('/assets/images/edit_link.png')" alt="edit_link">
 1. The link is inserted. Check it in the preview.
@@ -147,7 +147,7 @@ Please refer to [here](/en/admin-guide/admin-cookbook/attachment.html) for detai
 
 ::: tip
 When you attach an image to a new page, the page will be automatically saved and the public area will be changed to **Only Me**.
-For more information on the scope of publication, see [here](/en/guide/features/authority.html#%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E9%96%B2%E8%A6%A7 %E3%83%BB%E7%B7%A8%E9%9B%86%E6%A8%A9%E9%99%90%E3%81%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95).
+For more information on the scope of publication, see [here](/en/guide/features/authority.html).
 :::
 
 ### Writing in Markdown
