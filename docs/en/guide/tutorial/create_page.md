@@ -1,238 +1,264 @@
 # Create page
 
-## Set up GROWI
+[[toc]]
 
-When you visit the GROWI URL for the first time, there will be a dialog to set the administrator ID.
+## Getting started
+
+<ContextualBlock context="docs-growi-org">
+
+When you access GROWI for the first time after installing GROWI, you can see the initial setup screen for setting user ID, password, etc.
+
+<img :src="$withBase('/assets/images/installer.png')" alt="start">
+
+Fill in the required fields and click the "Create" button to display the following screen.
+
+<img :src="$withBase('/assets/images/home.png')" alt="start">
+
+</ContextualBlock>
+
+<ContextualBlock context="help-growi-cloud">
 
 After logging in to GROWI, the following screen will appear.
 
-<img :src="$withBase('/assets/images/install.png')" alt="start">
+<img :src="$withBase('/assets/images/home.png')" alt="start">
 
-Start the tutorial here.
+</ContextualBlock>
 
-## Create new page
+Please refer to [App Settings](/en/admin-guide/management-cookbook/app-settings.html) of the Admin Guide for more information on admin settings.
 
-Click the “New” button at the top right of the screen to display the page creation dialog.
+## Create a new page
 
-<img :src="$withBase('/assets/images/create.png')" alt="create">
+Let's create a new page.
 
-Enter "tutorial" in the middle box.
+1. Click the "New" button in the upper right corner of the screen to open the New page dialog box.
 
-<img :src="$withBase('/assets/images/create_page1.png')" alt="create">
+    <img :src="$withBase('/assets/images/create.png')" alt="create">
 
-Click the Create button.
+    <img :src="$withBase('/assets/images/create_page1.png')" alt="create">
+1. Enter `tutorial` in the `Create page under below` field and click the "Create" button.
 
-<img :src="$withBase('/assets/images/create_page2.png')" alt="create">
+    <img :src="$withBase('/assets/images/create_page2.png')" alt="create">
+1. The edit mode screen is displayed.
 
-You will now be moved to the Edit Page screen.
+    <img :src="$withBase('/assets/images/create_page3.png')" alt="create">
+1. Copy the following sample text written in Markdown and paste it into the page.
+    - After pasting, a preview of the page is shown on the right side of the screen. The content is reflected in real time.
 
-Copy the following Markdown code and paste it into the editing box.
+    ```
+    # First page
+    ## Header1
+    * List1
+    * List2
+    ## Header2
+    1. Number list
+    1. Number list
+    ```
+
+1. Type the text and check that it is reflected in the preview screen.
+
+    <img :src="$withBase('/assets/images/tutorial_page1.png')" alt="page">
+1. After editing, click the "Create" button.
+    - The page will be created and can be viewed as shown in the image.
+    - The page toolbar in the upper right corner of the screen allows you to switch between viewing mode, editing mode, and [HackMD](/en/guide/features/hackmd.html) mode.
+
+    <img :src="$withBase('/assets/images/tutorial_page2.png')" alt="page">
+
+
+Let's edit more of the page you created.
+
+## Add headings
+
+You can use `#` to add headings to your pages.
+
+Each additional `#` allows you to describe a deeper hierarchy of headings.
+
+<img :src="$withBase('/assets/images/header.png')" alt="page">
+
+A table of contents is automatically created on the right side of the page when a heading is described.
+
+<img :src="$withBase('/assets/images/toc.png')" alt="page">
+
+## Use bulleted lists
+
+You can use `-` and `*` to describe text as bulleted lists.
+
+This bullet list can be hierarchical. To start a line that you want to make more deeply hierarchical, type two spaces or press the Tab key.
+
+Let's copy and paste the following sample text written in Markdown into the page.
 
 ```
+
 # First page
 ## Header1
 * List1
+  * List1-1
+    * List1-1-1
 * List2
+  * List2-1
 ## Header2
-1. Number list
-2. Number list
-```
-
-When pasting, a preview reflecting the contents in real time is displayed on the right side of the screen, as shown below.
-
-<img :src="$withBase('/assets/images/tutorial_page1.png')" alt="create">
-
-You can also try typing into the editing box and checking the preview on the right.
-
-After editing, click the Create button and you will be taken to view your new page as shown below.
-
-<img :src="$withBase('/assets/images/tutorial_page2.png')" alt="create">
-
-You can switch between the View and Edit tabs to view or edit your page.
-
-## Headers
-
-You can add a header or subheader to a page by prefixing your header text with a pound (or hash, or sharp) sign (#).
-You can increase the subheader level by adding additional pounds.
-A space is required immediately after the final pound.
-
-When you create a header, the header is automatically added to the index on the right side of the page.
-
-<img :src="$withBase('/assets/images/tutorial_page2.png')" alt="create">
-
-## Hierarchical information
-
-Information in a document can be organized hierarchically using hyphens or asterisks.
-
-Copy the following Markdown code into a new page.
+- List3
+  - List3-1
 
 ```
-# Learn how to use GROWI
-On this page, you will learn how to use GROWI by following the GROWI Docs tutorial.
 
-## Creating and editing pages
-Create and edit pages.
+<img :src="$withBase('/assets/images/list.png')" alt="text">
 
-## Using headers and text
-Learn how to use headers and text.
+In this way, you can organize your documents by using headings and bulleted lists. Use them proactively to create documents that are easy to read.
 
-### Header
-When you create a header, an index is created on the right side of the page.
+## Insert links
 
-### Documents
-Write text to create a document. Sentences can be organized into paragraphs.
+### Using the insert link function on the toolbar
 
-You can create an unordered list of information using any of the following symbols and spaces.
-- hyphen `-`
-- asterisk `*`
-    - Additional hierarchies
-        - Even more additional hierarchies
-    - Move up one level
-```
+1. In edit mode, click the link icon on the toolbar.
 
-To create a line break in a hierarchical structure, put two spaces or a tab at the beginning of the new line.
+     <img   :src="$withBase('/assets/images/add_link.png')" alt="add_link">
+1. The Edit Link dialog box is opened. Enter the Link : `https://docs.growi.org/`, Label: `GROWI Docs`, and click the "Done" button.
 
-You can confirm the hierarchy on the preview screen.
+    <img :src="$withBase('/assets/images/edit_link.png')" alt="edit_link">
+1. The link is inserted. Check it in the preview.
 
-<img :src="$withBase('/assets/images/edit_text.png')" alt="create">
+    <img :src="$withBase('/assets/images/link.png')" alt="link">
 
-Organize the content of the document by adding and removing hierarchies.
+### Writing in Markdown
 
-<img :src="$withBase('/assets/images/view_text.png')" alt="create">
-
-Using hierarchies to organize information is a good practice for creating wikis that are easy to read even with a lot of text.
-
-## Link to an external web page
-
-A link can be inserted using the link button in the edit toolbar.
-
-<img :src="$withBase('/assets/images/add_link.png')" alt="create">
-
-You can also create a link using square brackets (`[]`) and round brackets (`()`).
-Put the link text in the square brackets the page URL in the round brackets.
+- Write in the edit screen as follows.
 
   ```
-  [GROWI Docs](https://docs.growi.org/)
+  [Label](URL or page path)
   ```
 
 ## Insert an image
 
-An image can be inserted using the insert image button in the edit toolbar.
-You can also insert an image by prepending an exclamation mark (`!`) to the link format (`[]()`) discussed above.
+### Using the Attach function
 
-```
-### Insert an image
-  ![growi](https://growi.org/assets/images/logo.png)
-```
+You can insert an image in the following ways
 
-<img :src="$withBase('/assets/images/add_image.png')" alt="create">
-
-You can upload your own images using the Attach function at the bottom of the edit screen.
+- Click the file attachment icon on the toolbar and select the image you want to insert.
+- Drag and drop the image you want to insert.
+- Copy and paste the image you want to insert
 
 <img :src="$withBase('/assets/images/attach.png')" alt="attach">
 
-The Attach function allows you to upload files to AWS or GCS.
-
-To attach files to your pages, you may need to configure settings on your wiki management page.
-Click [here](/en/admin-guide/admin-cookbook/attachment.html) for instructions.
-
 ::: tip
-When you upload an image on the new page, the page is automatically saved and the disclosure range is automatically changed to **Only for me**.
-Click [here](/en/guide/features/authority.html#%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E9%96%B2%E8%A6%A7%E3%83%BB%E7%B7%A8%E9%9B%86%E6%A8%A9%E9%99%90%E3%81%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95) for the disclosure range.
+The Attach function allows you to upload and save files to AWS or GCS.
+
+Please refer to [here](/en/admin-guide/admin-cookbook/attachment.html) for details.
 :::
 
-## Use emoji
+::: tip
+When you attach an image to a new page, the page will be automatically saved and the public area will be changed to **Only Me**.
+For more information on the scope of publication, see [here](/en/guide/features/authority.html#%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E9%96%B2%E8%A6%A7 %E3%83%BB%E7%B7%A8%E9%9B%86%E6%A8%A9%E9%99%90%E3%81%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95).
+:::
 
-You can add emoji to your pages by enclosing emoji words in colons (`:`).
+### Writing in Markdown
+
+- You can insert the following template from the image icon on the toolbar.
+
+  <img :src="$withBase('/assets/images/add_image.png')" alt="image">
+
+- Example
+
+  ```
+  ![growi](https://growi.org/assets/images/logo.png)
+  ```
+
+## Using emoji
+
+Please refer to [here](/en/guide/features/emoji.html).
+
+## Decorate text
+
+You can use Markdown's text decoration techniques to make your text more readable. Some of these can be inserted using the toolbar at the top of the editing screen.
+
+Copy and paste the following sample text into the page and check the preview.
 
 ```
-## use emoji　:beginner:
-```
 
-<img :src="$withBase('/assets/images/emoji.png')" alt="emoji">
+  # Decorate text
 
-You can find a list of supported emoji words [here](/en/guide/features/emoji.html).
+  ## Bold
 
-## Miscellaneous formatting
-
-You can use various types of formatting to format your document:
-
-- Bold
-- Constant-width red text
-- Horizontal Line
-- Strikethrough
-- Constant width text for paragraphs
-
-Paste the following Markdown text into a new page and check the preview.
-
-```
-### Formatting
-Here are some useful ways to format your sentences and paragraphs.
-- Bold
-  Surround the point you want to **emphasize** with two asterisks.
-  
     ```
-    **Emphasis**
+    **Bold**
     ```
-  
-  
-- Constant-width red text
-  Enclose the text you want to emphasize with `backticks`.
-  
+
+  **Bold**
+
+  ## Italic
+
     ```
-    `backticks`
+    *Italic*
     ```
-  
-- Horizontal line
-  
-  Write three hyphens to create a horizontal line.
-  
+
+  *Italic*
+
+  ## Strikethrough
+
+    ```
+    ~~Strikethrough~~
+    ```
+
+  ~~Strikethrough~~
+
+  ## Inline code
+
+    ```
+    `Inline code`
+    ```
+  `Inline code`
+
+  ## Quotation
+
+    ```
+    >Quotation
+    >>Quotation
+    ```
+
+  >Quotation
+  >>Quotation
+
+  ## Horizontal line
+
+    ```
+    ***
+    ---
+    ```
+
+  ***
   ---
-  
-- Strikethrough
-  
-  ~~ Strike out this text ~~ Enclose the text to strike out with two tildes.
+    
+  ## Code block
 
-  
-- Constant-width text for paragraphs
-  Surround the paragraph with three `backticks`.
+    ```
+    Code block
+    ```
+
 ```
 
-<img :src="$withBase('/assets/images/emoji.png')" alt="emoji">
+## Create a table
 
-## Create tables
+Please refer to [here](/en/guide/features/table.html).
 
-Use two or more pipes (`|`) and press Enter to create a table.
+## Display a list of pages
 
-You can also create a table by clicking the table button in the edit toolbar.
+GROWI has a convenient function to display a list of pages that have been created.
 
-<img :src="$withBase('/assets/images/edit_table1.png')" alt="emoji">
+Please refer to [here](/en/guide/tips/hierarchical.html) for details.
 
-<img :src="$withBase('/assets/images/edit_table2.png')" alt="emoji">
+Let's learn just a simple usage.
 
-You even can edit the created table in View mode.
-When you place the cursor on the table in View mode, the edit icon is displayed.
-
-<img :src="$withBase('/assets/images/edit_table3.png')" alt="emoji">
-
-Click to edit the table.
-
-<img :src="$withBase('/assets/images/edit_table4.png')" alt="emoji">
-
-## Create a page list
-
-GROWI has a convenient function to create lists of pages.
-
-Navigate to any parent page (a page with child pages) and add `lsx` as shown below.
+Go to the top page and describe `lsx` as follows.
 
 ```
 $lsx()
 ```
 
-The child page list is generated automatically.
-
 <img :src="$withBase('/assets/images/lsx_sample.png')" alt="lsx">
 
-Additional details can be found [here](/en/guide/tips/hierarchical.html).
+A list of pages under the page being edited is output.
 
-Now that you have completed this tutorial, you can create pages and grow your wiki.
+After outputting the list, you may want to move pages around to organize the document more.
+
+Please refer to [here](/en/guide/features/page_operation.html) for more information on moving pages.
+
+Let's grow the Wiki by creating more and more pages.
