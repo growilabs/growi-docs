@@ -4,8 +4,6 @@
 
 ## Getting started
 
-<ContextualBlock context="docs-growi-org">
-
 When you access GROWI for the first time after installing GROWI, you can see the initial setup screen for setting user ID, password, etc.
 
 <img :src="$withBase('/assets/images/installer.png')" alt="start">
@@ -13,16 +11,6 @@ When you access GROWI for the first time after installing GROWI, you can see the
 Fill in the required fields and click the "Create" button to display the following screen.
 
 <img :src="$withBase('/assets/images/home.png')" alt="start">
-
-</ContextualBlock>
-
-<ContextualBlock context="help-growi-cloud">
-
-After logging in to GROWI, the following screen will appear.
-
-<img :src="$withBase('/assets/images/home.png')" alt="start">
-
-</ContextualBlock>
 
 Please refer to [App Settings](/en/admin-guide/management-cookbook/app-settings.html) of the Admin Guide for more information on admin settings.
 
@@ -127,9 +115,9 @@ In this way, you can organize your documents by using headings and bulleted list
   [Label](URL or page path)
   ```
 
-## Insert an image
+## Insert images and other files
 
-### Using the Attach function
+### Uploading a file
 
 You can insert an image in the following ways
 
@@ -140,7 +128,7 @@ You can insert an image in the following ways
 <img :src="$withBase('/assets/images/attach.png')" alt="attach">
 
 ::: tip
-The Attach function allows you to upload and save files to AWS or GCS.
+Uploading files to AWS or GCS requires settings.
 
 Please refer to [here](/en/admin-guide/admin-cookbook/attachment.html) for details.
 :::

@@ -4,8 +4,6 @@
 
 ## はじめに
 
-<ContextualBlock context="docs-growi-org">
-
 GROWI のインストール後、初めて GROWI へアクセスすると、User ID やパスワードなどを設定する初回セットアップ画面が表示されます。
 
 <img :src="$withBase('/assets/images/installer.png')" alt="start">
@@ -13,16 +11,6 @@ GROWI のインストール後、初めて GROWI へアクセスすると、User
 必要な項目を入力し、「Create」 ボタンを押すと以下の画面が表示されます。
 
 <img :src="$withBase('/assets/images/home.png')" alt="start">
-
-</ContextualBlock>
-
-<ContextualBlock context="help-growi-cloud">
-
-GROWI へログインすると以下の画面が表示されます。
-
-<img :src="$withBase('/assets/images/home.png')" alt="start">
-
-</ContextualBlock>
 
 管理者設定については、管理者ガイドの[アプリ設定](/ja/admin-guide/management-cookbook/app-settings.html)をご参照ください。
 
@@ -127,26 +115,26 @@ GROWI へログインすると以下の画面が表示されます。
   [Label](URL or page path)
   ```
 
-## 画像を挿入する
+## 画像などのファイルを挿入する
 
-### Attach 機能を使う
+### ファイルをアップロードする
 
-以下の3種類の方法で、画像を挿入できます。
+以下の3種類の方法で、ファイルを挿入できます。
 
-- ツールバーのファイル添付アイコンをクリックし、挿入したい画像を選択する
-- 挿入したい画像をドラックアンドドロップする
-- 挿入したい画像をコピーアンドペーストする
+- ツールバーのファイル添付アイコンをクリックし、挿入したいファイルを選択する
+- 挿入したいファイルをドラックアンドドロップする
+- 挿入したいファイルをコピーアンドペーストする
 
 <img :src="$withBase('/assets/images/attach.png')" alt="attach">
 
 ::: tip
-Attach 機能では、ファイルをアップロードし、AWS や GCS へ保存できます。Attache 機能でファイルをアップロードするには管理画面で設定が必要です。
+AWS や GCS へファイルをアップロードするには管理画面で設定が必要です。
 
 設定方法は[こちら](/ja/admin-guide/admin-cookbook/attachment.html)をご参照ください。
 :::
 
 ::: tip
-ページを新規作成する画面で画像を添付すると、自動的にページが保存され、公開範囲が **自分のみ** に変更されます。
+ページを新規作成する画面でファイルを挿入すると、自動的にページが保存され、公開範囲が **自分のみ** に変更されます。
 公開範囲については[こちら](/ja/guide/features/authority.html)をご参照ください。
 :::
 
