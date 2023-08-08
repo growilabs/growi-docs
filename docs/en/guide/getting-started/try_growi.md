@@ -1,4 +1,4 @@
-# Quick-Start Guide
+# Try GROWI on the demo site
 
 This guide will walkthrough how to quickly create a page, create a child page, and navigate between parent and child pages.
 
