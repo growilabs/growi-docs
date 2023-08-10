@@ -403,6 +403,9 @@ module.exports = {
         '/en/': 'DANGER'
       }
     }],
+    ['@vuepress/html-redirect', {
+      countdown: 0
+    }],
   ],
 
   markdown: {

@@ -61,7 +61,12 @@ module.exports = {
           '(ja|en)\/admin-guide\/(admin-cookbook|downgrading|getting-started|migration-guide)\/.*',
         ]
       }
-    ]
+    ],
+    [
+      '@vuepress/html-redirect', {
+        countdown: 0
+      }
+    ],
   ],
 
   markdown: {
