@@ -8,6 +8,7 @@ GROWI を Slack と連携することによって様々なコマンドを実行�
 ### ヘルプコマンド
 
 1. `/growi help` を入力すると GROWI bot で使うことができる、コマンド一覧が表示されます。
+
    <img :src="$withBase('/assets/images/growi-help.gif')" alt="HackMD Demo">
 
 ### ページの作成
@@ -21,19 +22,25 @@ GROWI を Slack と連携することによって様々なコマンドを実行�
 1. `/growi search [キーワード]` を入力すると検索結果が表示されます。
 
    - 例: `/growi search example`
+
      <img :src="$withBase('/assets/images/slack-bot-full-text-search-display-result-command.png')" alt="slack-bot-full-text-search-display-result-command">
    - 検索結果
+
      <img :src="$withBase('/assets/images/slack-bot-full-text-search-display-result.png')" alt="slack-bot-full-text-search-display-result">
    - **Next** ボタンをクリックすると、次の検索結果を表示します。
+
      <img :src="$withBase('/assets/images/slack-bot-full-text-search-click-next.png')" alt="slack-bot-full-text-search-click-next">
    - **Share** ボタンをクリックすると、チャンネル内に共有されます。
+
      <img :src="$withBase('/assets/images/slack-bot-full-text-search-click-share.png')" alt="slack-bot-full-text-search-click-share">
 
 1. Slack ワークスペースを複数の GROWI に登録している場合、複数の GROWI から横断検索できます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
 
    - 例: `/growi search example`
+
      <img :src="$withBase('/assets/images/slack-bot-full-text-search-display-result-command.png')" alt="slack-bot-full-text-search-display-result-command">
    - 検索結果
+
      <img :src="$withBase('/assets/images/slack-bot-search-multi-growi.png')" alt="slack-bot-search-multi-growi">
 
 ### Slack チャンネル内の会話からページを作成する (Alpha)
@@ -53,11 +60,13 @@ Unfurl 機能を利用することで Slack に GROWI のリンクを共有し�
 <img :src="$withBase('/assets/images/slack-bot-unfurl.png')" alt="slack-bot-unfurl">
 
 Public ではないページのスニペットは表示されません。
+
 <img :src="$withBase('/assets/images/slack-bot-unfurl-private-page.png')" alt="slack-bot-unfurl-private-page">
 
 ### 接続中の GROWI を確認する
 
 `/growi status` と入力することで、Slack ワークスペースと連携している GROWI を確認できます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
+
 <img :src="$withBase('/assets/images/slack-bot-growi-status.png')" alt="slack-bot-growi-status">
 
 ### Slack ワークスペースと GROWI App との連携を解除する
@@ -65,12 +74,14 @@ Public ではないページのスニペットは表示されません。
 1. `/growi unregister [連携解除したい GROWI App の URL1] [連携解除したい GROWI App の URL2] ...` と入力するとモーダルが表示されます。(※ Bot type が Official bot と Custom bot with proxy の場合のみ使えます。)
 
    - 入力例: `growi unregister http://example.com http://growi.jp`
+
      <img :src="$withBase('/assets/images/slack-bot-unregister-input-eg.png')" alt="slack-bot-unregister-input-eg">
 
    - 表示されるモーダル
-     <img :src="$withBase('/assets/images/slack-bot-unregister-modal.png')" alt="slack-bot-unregister-modal">
 
+     <img :src="$withBase('/assets/images/slack-bot-unregister-modal.png')" alt="slack-bot-unregister-modal">
 1. **Submit** ボタンをクリックします。
 1. 以下のように表示されたら、連携解除が完了しています。
+
    <img :src="$withBase('/assets/images/slack-bot-unregister-completed.png')" alt="slack-bot-unregister-completed">
 

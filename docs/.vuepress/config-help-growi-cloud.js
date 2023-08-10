@@ -190,6 +190,7 @@ module.exports = {
             '/ja/admin-guide/management-cookbook/g2g-transfer.md',
             '/ja/admin-guide/management-cookbook/setup-search-system.md',
             '/ja/admin-guide/management-cookbook/audit-log.md',
+            '/ja/admin-guide/management-cookbook/plugins.md',
           ]
         },
         {
@@ -341,6 +342,7 @@ module.exports = {
             '/en/admin-guide/management-cookbook/export.md',
             '/en/admin-guide/management-cookbook/setup-search-system.md',
             '/en/admin-guide/management-cookbook/audit-log.md',
+            '/en/admin-guide/management-cookbook/plugins.md',
           ]
         },
         {
@@ -372,7 +374,14 @@ module.exports = {
       searchMaxSuggestions: 10
     }],
     '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
+    ['vuepress-plugin-medium-zoom', {
+      selector: '.article img',
+      delay: 1000,
+      options: {
+        margin: 24,
+        scrollOffset: 0,
+      }
+    }],
     ['container', {
       type: 'tip',
       defaultTitle: {

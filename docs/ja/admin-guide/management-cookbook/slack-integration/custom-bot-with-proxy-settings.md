@@ -8,16 +8,20 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
 ## Custom bot with proxy を作成する
 
 1. Slack API の[アプリページ](https://api.slack.com/apps)に移動し **Create an App** をクリックします。
+
    <img :src="$withBase('/assets/images/slack-custom-bot1.png')" alt="slack-custom-bot1">
 
 2. **From an app manifest** をクリックします。
-  <img :src="$withBase('/assets/images/slack-custom-bot2.png')" alt="slack-custom-bot2">
+
+  <img  :src="$withBase('/assets/images/slack-custom-bot2.png')" alt="slack-custom-bot2">
 
 3. アプリをインストールするワークスペースを選択して **Next** をクリックします。
-  <img :src="$withBase('/assets/images/slack-custom-bot3.png')" alt="slack-custom-bot3">
+
+  <img  :src="$withBase('/assets/images/slack-custom-bot3.png')" alt="slack-custom-bot3">
 
 4. **YAML** タブに以下の App Manifest を貼り付けて **Next** をクリックします。
-  <img :src="$withBase('/assets/images/slack-custom-bot4.png')" alt="slack-custom-bot4">
+
+  <img  :src="$withBase('/assets/images/slack-custom-bot4.png')" alt="slack-custom-bot4">
 
   ```yaml
   _metadata:
@@ -66,7 +70,8 @@ Custom bot with proxy を Slack のワークスペースに導入するには、
   ```
 
 5. アプリの概要を確認したら **Create** をクリックしてアプリを作成します。
-  <img :src="$withBase('/assets/images/slack-custom-bot5.png')" alt="slack-custom-bot5">
+
+  <img  :src="$withBase('/assets/images/slack-custom-bot5.png')" alt="slack-custom-bot5">
 
 ## Slackbot Proxy を立ち上げる
 
@@ -92,18 +97,22 @@ SLACK_SIGNING_SECRET={ Signing Secret }
    プロキシ用サーバーは`yarn`, `yarn dev`で起動できます。
 
 5. 管理画面の Slack 連携 にて **Custom bot with proxy** を選択してください。
+
    <img :src="$withBase('/assets/images/slack-bot-selecting-custom-bot-with-proxy.png')" alt="slack-bot-selecting-custom-bot-with-proxy">
 
 ## Custom bot with proxy を Slack のワークスペースへインストールする
 
 1. 作成した Slack App の **Settings** から **Manage distribution** をクリックします。
 1. **Share Your App with Other Workspaces** の 4 つの項目全てにチェックマークがついたら、**Activate Public Distribution** を押します。
+
    <img :src="$withBase('/assets/images/activate-public-dist.png')" alt="activate-public-dist">
 1. ページ上部の **Add to Slack** ボタンを押します。
 1. 遷移先の画面にて、Allow をクリックします。
+
    <img :src="$withBase('/assets/images/slack-bot-install-your-app-transition-destination.png')" alt="slack-bot-install-your-app-transition-destination">
 1. **Congratulations!** と表示されたら Install が完了です。
 1. GROWI bot を使いたいチャンネルに @example を使用して招待します。
+
    <img :src="$withBase('/assets/images/slack-bot-install-to-workspace-joined-bot.png')" alt="slack-bot-install-to-workspace-joined-bot">
    <img :src="$withBase('/assets/images/slack-bot-install-your-app-introduction-to-channel.png')" alt="slack-bot-install-your-app-introduction-to-channel">
 
@@ -119,6 +128,7 @@ SLACK_SIGNING_SECRET={ Signing Secret }
    **Access Token の発行** に各種トークンにアクセストークンが 2 種生成されていることを確認できます。
    アクセストークンは必要に応じて再発行できます。
 1. Slack 上で `/growi register` と打ちます。
+
    <img :src="$withBase('/assets/images/slack-bot-growi-register.png')" alt="slack-bot-growi-register">
    <img :src="$withBase('/assets/images/slack-bot-register-modal.png')" alt="slack-bot-add-workspace">
 1. 表示されるモーダルの GROWI URL に、対象 GROWI の URL を保存します。
@@ -135,6 +145,7 @@ SLACK_SIGNING_SECRET={ Signing Secret }
 ## Custom bot with proxy の接続テストを実行する
 
 1. 「Test connection」をクリックし、GROWI-Bot を招待した Slack チャンネルを入力します。
+
    <img :src="$withBase('/assets/images/slack-bot-test-introduction-custom-with-proxy.png')" alt="slack-bot-test-introduction">
 
 2. 「Test」 ボタンをクリックします。
@@ -144,8 +155,10 @@ SLACK_SIGNING_SECRET={ Signing Secret }
   赤丸で囲った部分に緑色のチェックマークが表示されます。GROWI-Bot を招待した Slack チャンネルで確認してみましょう。
 
   - GROWI 側
+  
     <img :src="$withBase('/assets/images/slack-bot-test-success-custom-with-proxy.png')" alt="slack-bot-test-success">
   - Slack 側
+
     <img :src="$withBase('/assets/images/slack-bot-test-success-at-slack-app.png')" alt="slack-bot-test-success-at-slack-app">
 
 - 失敗の場合  

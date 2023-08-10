@@ -1,304 +1,252 @@
 # ページを作成する
 
-## インストール後
+[[toc]]
 
-インストール後、GROWI の URL へアクセスすると、管理者 ID を設定する画面が表示されます。
+## はじめに
 
-管理者 ID を入力し、GROWI へログインすると以下の画面が表示されます。
+GROWI のインストール後、初めて GROWI へアクセスすると、User ID やパスワードなどを設定する初回セットアップ画面が表示されます。
 
-<img :src="$withBase('/assets/images/install.png')" alt="start">
+<img :src="$withBase('/assets/images/installer.png')" alt="start">
 
-ここからチュートリアルを開始します。
+必要な項目を入力し、「Create」 ボタンを押すと以下の画面が表示されます。
 
-管理者設定については[管理者ガイド](/ja/admin-guide/management-cookbook/app-settings.html)をご参照ください。
+<img :src="$withBase('/assets/images/home.png')" alt="start">
 
-## 新規ページ作成
+管理者設定については、管理者ガイドの[アプリ設定](/ja/admin-guide/management-cookbook/app-settings.html)をご参照ください。
 
-GROWI は、wiki ページを作成するシステムです。
+## 新しいページを作成する
 
-まずは新規ページを作成しましょう。
+まずは新しいページを作成しましょう。
+
+1. 画面右上の「New」ボタンをクリックすると、ページ作成ダイアログが表示されます。
+
+    <img :src="$withBase('/assets/images/create.png')" alt="create">
+
+    <img :src="$withBase('/assets/images/create_page1.png')" alt="create">
+1. `Create page under below(「ページを以下に作成」)` の入力欄に`tutorial` と入力し、「Create」 ボタンをクリックします。
+
+    <img :src="$withBase('/assets/images/create_page2.png')" alt="create">
+1. ページの編集画面が表示されます。
+
+    <img :src="$withBase('/assets/images/create_page3.png')" alt="create">
+1. 以下の Markdown で記述されたサンプルテキストをコピーして、編集画面へ貼りつけてみましょう。
+    - 貼り付けると、画面右側にページのプレビューが表示されます。内容はリアルタイムに反映されます。
+
+    ```
+    # First page
+    ## Header1
+    * List1
+    * List2
+    ## Header2
+    1. Number list
+    1. Number list
+    ```
+
+1. 実際に編集画面で文字を入力し、プレビュー画面に反映されることを確認しましょう。
+
+    <img :src="$withBase('/assets/images/tutorial_page1.png')" alt="page">
+1. 編集が終わったら、「Create」ボタンをクリックします。
+    - クリックすると、ページが作成され、画像のようにページが参照できるようになります。
+    - 画面右上のページツールバーで、閲覧モード、編集モード、[HackMD](/ja/guide/features/hackmd.html)モードに切り替えることができます。
+
+    <img :src="$withBase('/assets/images/tutorial_page2.png')" alt="page">
 
 
-<img :src="$withBase('/assets/images/create.png')" alt="create">
+作成したページをもっと編集してみましょう。
 
-画面右上の「作成」ボタンをクリックすると、ページ作成が表示されます。
+## 見出しをつけて階層化する
 
-<img :src="$withBase('/assets/images/create_page1.png')" alt="create">
+`#` (半角シャープ) を使ってページに見出しをつけることができます。
 
-「ページを以下に作成」の入力欄に「チュートリアル」と入力し、作成ボタンをクリックします。
+`#` を1つ増やすごとに、深い階層の見出しを記述できます。
 
-<img :src="$withBase('/assets/images/create_page2.png')" alt="create">
+<img :src="$withBase('/assets/images/header.png')" alt="page">
 
-ページの編集画面が表示されます。
+見出しを記述すると、ページ右側に目次が自動で作成されます。積極的に活用しましょう。
 
-以下の Markdown 記述の内容をコピーして、GROWI の編集画面へ貼りつけてみましょう。
+<img :src="$withBase('/assets/images/toc.png')" alt="page">
 
-```
+## 箇条書きリストを使って階層化する
 
-# はじめてのページ
-## 見出し1
+`-` や `*` を使って文章を箇条書きで記述できます。
 
-* 箇条書き1
-* 箇条書き2
+この箇条書きリストは階層化できます。深い階層にしたい行の先頭に、半角スペースを2つまたは Tab キーを入力してください。
 
-## 見出し2
-
-1. 番号リスト  
-2. 番号リスト
-
-```
-
-<img :src="$withBase('/assets/images/tutorial_page1.png')" alt="page">
-
-貼り付けると、下記のように内容がリアルタイムに反映されたプレビューが画面右側に表示されます。
-
-実際に編集画面で文字を入力し、右側のプレビュー画面への反映を確認しましょう。
-
-編集したら、「作成」ボタンをクリックします。
-
-<img :src="$withBase('/assets/images/tutorial_page2.png')" alt="page">
-
-クリックすると、記事が作成され、画像のようにページが参照できるようになります。
-
-「編集」タブと「View」タブを切り替えて、編集モードと View モードにできます。
-
-早速作成したページを編集しましょう。
-
-## 見出しと階層化
-
-ページには半角シャープを使って見出しを付ける事ができます。
-
-半角シャープは 2つ、3つと増やすごとに、階層化されます。
-
-<img :src="$withBase('/assets/images/tutorial_page2.png')" alt="page">
-
-見出しを作成すると、ページ右側に索引が自動的に作成されるので、積極的に活用しましょう。
-
-## 文書と階層化
-
-ページにはテキスト文書を記載できます。また、その文書は階層化ができます。
-
-半角ハイフン、半角アスタリスクのいずれかを利用して、段落を利用してみましょう。
+以下の Markdown で記述されたサンプルテキストをコピーして、編集画面へ貼りつけてみましょう。
 
 ```
 
-# GROWI の使い方を学ぶ
-
-このページでは、GROWI Docs のチュートリアルに沿って GROWI の使い方を学びます。
-
-## ページの作成と編集
-
-ページを作成して編集します。
-
-## 見出しと本文の使い方
-見出しと本文の使い方を学びます。
-
-### 見出し
-見出しを作成すると、ページ右側に索引が作成されます。
-
-### 本文
-本文として、文章をページへ記載します。文章は段落にできます。
-
-以下のいずれかの記号と半角スペースで、段落を作成できます。
-
-- 半角ハイフン`-`
-- 半角アスタリスク`*`
-    - さらに階層化
-        - そのまた更に階層化
-    - 階層をひとつ戻す
+# First page
+## Header1
+* List1
+  * List1-1
+    * List1-1-1
+* List2
+  * List2-1
+## Header2
+- List3
+  - List3-1
 
 ```
 
-一つ目の段落の次の行を開始する時に、半角スペースを2つまたは Tab キーを入力してインデントして文章を書いてください。
+<img :src="$withBase('/assets/images/list.png')" alt="text">
 
+このように、見出しや箇条書きリストを利用することで、文章を整理できます。積極的に利用し、読みやすいドキュメントを作成しましょう。
 
-<img :src="$withBase('/assets/images/edit_text.png')" alt="text">
+## リンクを挿入する
 
-階層化された文書がプレビュー画面で確認できます。
+### ツールバーのリンク挿入機能を使う
 
-本文の階層化で、文書の内容を整理しましょう。
+1. 編集モードで、ツールバーのリンクアイコンをクリックします。
 
-<img :src="$withBase('/assets/images/view_text.png')" alt="text">
+     <img   :src="$withBase('/assets/images/add_link.png')" alt="add_link">
+1. リンク編集ダイアログが表示されます。リンク先: `https://docs.growi.org/`、ラベル: `GROWI Docs` と入力し、「Done」ボタンを押します。
 
-文章が長くなったら、積極的に階層化するのも読みやすい wiki 作成のポイントです。
+    <img :src="$withBase('/assets/images/edit_link.png')" alt="edit_link">
+1. リンクが挿入されます。プレビューで確認してみましょう。
 
-## Web ページへのリンクを作成
+    <img :src="$withBase('/assets/images/link.png')" alt="link">
 
-- Wiki ページへのリンクを作成
-  
-  編集画面上部のボタンで、リンク用の入力欄が挿入されます。 `[]` 括弧と `()` 括弧をつなげるとリンクが作成できます。
+### Markdown で記述する
 
-  `[]` の中にタイトルを、`()` の中にページ URL を作成します。
+- 以下のように編集画面に記述します。
 
   ```
-
-  入力欄
-  []()
-
-  [GROWI Docs](https://docs.growi.org/)
+  [Label](URL or page path)
   ```
 
-<img :src="$withBase('/assets/images/add_link.png')" alt="link">
+## 画像などのファイルを挿入する
 
+### ファイルをアップロードする
 
-- 手書きで文字とリンクを作成
+以下の3種類の方法で、ファイルを挿入できます。
 
-  手書きで `[]` と `()` 記号を組み合わせてリンクを作成できます。
-
-```
-
-  [タイトル](http://growi.org)
-
-```
-
-## 画像を挿入する
-
-- 画像参照ボタンで画像挿入欄が挿入されます。エクスクラメーションと `[]` 括弧と `()` 括弧をつなげると画像挿入ができます。
-
-```
-
-### 画像の挿入
-
-  ![]()
-
-  ![growi](https://growi.org/assets/images/logo.png)
-
-```
-
-<img :src="$withBase('/assets/images/add_image.png')" alt="image">
-
-- 編集画面下部の Attach 機能を利用する
-
+- ツールバーのファイル添付アイコンをクリックし、挿入したいファイルを選択する
+- 挿入したいファイルをドラックアンドドロップする
+- 挿入したいファイルをコピーアンドペーストする
 
 <img :src="$withBase('/assets/images/attach.png')" alt="attach">
 
-  Attach 機能では、ファイルをアップロードし、AWS や GCS へ保存できます。
-  Attache 機能でファイルをアップロードするには管理画面で設定が必要です。
+::: tip
+AWS や GCS へファイルをアップロードするには管理画面で設定が必要です。
 
-  設定方法については[こちら](/ja/admin-guide/admin-cookbook/attachment.html)をご覧ください。
+設定方法は[こちら](/ja/admin-guide/admin-cookbook/attachment.html)をご参照ください。
+:::
 
 ::: tip
-ページを新規作成する画面で画像を添付すると、自動的にページが保存され、公開範囲が **自分のみ** に変更されます。
-公開範囲については[こちら](/ja/guide/features/authority.html#%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E9%96%B2%E8%A6%A7%E3%83%BB%E7%B7%A8%E9%9B%86%E6%A8%A9%E9%99%90%E3%81%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95)をご覧ください。
+ページを新規作成する画面でファイルを挿入すると、自動的にページが保存され、公開範囲が **自分のみ** に変更されます。
+公開範囲については[こちら](/ja/guide/features/authority.html)をご参照ください。
 :::
+
+### Markdown で記述する
+
+- 画像アイコンから以下のような画像挿入テンプレートを挿入できます。
+
+  <img :src="$withBase('/assets/images/add_image.png')" alt="image">
+
+- 記述例
+
+  ```
+  ![growi](https://growi.org/assets/images/logo.png)
+  ```
 
 ## 絵文字(emoji) を使う
 
-GROWI では、絵文字を利用できます。
+[こちら](/ja/guide/features/emoji.html)をご参照ください。
 
-- 使い方
+## テキストを装飾する
 
-```
+Markdown のテキスト装飾記法を使い、文章を読みやすくできます。いくつかの記法は、編集画面上部のツールバーを使って挿入できます。
 
-## 絵文字を使う　:beginner:
-
-```
-
-<img :src="$withBase('/assets/images/use_emoji.png')" alt="emoji">
-
-上記のように、特定の絵文字を `:` で囲い利用できます。
-
-対象の絵文字一覧は[こちら](/ja/guide/features/emoji.html)を参照してください。
-
-## 便利な本文の使い方
-
-GROWI では、本文の編集時に多数のテクニックで文章を読みやすくできます。
-
-- 強調
-- 強調太字
-- 強調赤字背景反転
-- 水平線
-- 取り消し線
-- 段落強調
-
-それぞれ、以下の Markdown 記述をそのまま記事へ貼り付けて、実際にプレビューを確認してみましょう。
-
+以下のサンプルテキストをコピーして編集画面へ貼りつけ、プレビューを確認してみましょう。
 
 ```
-### 便利な本文の使い方
-いろいろな文章や段落の便利な書き方を紹介します。
 
-- 強調
+  # テキストを装飾する
 
-  **強調** したい箇所を半角アスタリスク2つで囲います。
-  
-    ```
-    **強調**
-    ```
-  
-  
-- 強調赤字背景反転
+  ## 太字
 
-  `強調` したい箇所をバッククォートで囲います。
-  
     ```
-    `強調`
+    **太字**
     ```
 
-  
-- 水平線
-  
-  半角ハイフンを3つ連続して書くと、水平線となります。
-  
+  **太字**
+
+  ## 斜体
+
+    ```
+    *斜体*
+    ```
+
+  *斜体*
+
+  ## 取り消し線
+
+    ```
+    ~~取り消し線~~
+    ```
+
+  ~~取り消し線~~
+
+  ## インラインコード
+
+    ```
+    `インラインコード`
+    ```
+  `インラインコード`
+
+  ## 引用
+
+    ```
+    >引用
+    >>引用
+    ```
+
+  >引用
+  >>引用
+
+  ## 水平線
+
+    ```
+    ***
+    ---
+    ```
+
+  ***
   ---
-  
-- 取り消し線
-  
-  文章の中で~~消したい~~取り消し線を付けたい箇所を半角チルダ2つで囲います。
-  
-- 段落強調
+    
+  ## コードブロック
 
-  段落として背景反転して協調できます。
-  バッククオート3つで囲います。
+    ```
+    コードブロック
+    ```
+
 ```
 
 ## テーブルを作成する
 
-以下の2種類の方法で、テーブルを作成できます。
+[こちら](/ja/guide/features/table.html)をご参照ください。
 
-- 半角パイプライン`|` を2つ続けて入力し、Enter キーを押す
-- 編集画面のバーにあるテーブルボタンをクリック
+## ページ一覧を表示する
 
-<img :src="$withBase('/assets/images/edit_table1.png')" alt="table1">
+GROWI には、作成したページの一覧を表示する便利な機能があります。
 
-<img :src="$withBase('/assets/images/edit_table2.png')" alt="table2">
-
-## テーブルを編集する
-
-作成したテーブルを、View モードの画面から編集できます。
-
-View モードでテーブルにカーソルを当てると、下記のようにアイコンが表示されます。
-
-<img :src="$withBase('/assets/images/edit_table3.png')" alt="table3">
-
-クリックすると、下記のようにテーブルを編集できます。
-
-<img :src="$withBase('/assets/images/edit_table4.png')" alt="table4">
-
-## ページ一覧を出力する
-
-GROWI では、作成したページを一覧出力する便利な機能があります。
-
-詳細は[こちら](/ja/guide/tips/hierarchical.html)に記載されています。
+詳細は[こちら](/ja/guide/tips/hierarchical.html)をご参照ください。
 
 簡単な使い方だけ覚えましょう。
 
-トップページへ移動し、下記のように lsx を記載しましょう。
+トップページへ移動し、下記のように `lsx` を記載しましょう。
 
 ```
-
 $lsx()
-
 ```
 
 <img :src="$withBase('/assets/images/lsx_sample.png')" alt="lsx">
 
-すると、編集中の記事の配下のページ一覧が出力されます。
+編集中のページの配下のページリストが出力されます。
 
-一覧出力してみると、ページを移動して階層をもっとカスタマイズしたくなります。
+一覧を出力してみると、ページを移動してもっとドキュメントを整理したくなります。
 
-階層の修正やページの移動については[こちら](/ja/guide/features/page_operation.html)を参照してください。
-
-さまざまな階層を整理して、GROWI での情報共有がもっと手軽になるように、自由に編集できます。
+ページの移動については[こちら](/ja/guide/features/page_operation.html)をご参照ください。
 
 ここまでチュートリアルに沿って進めたら、どんどんページを作成して Wiki を育てていきましょう。

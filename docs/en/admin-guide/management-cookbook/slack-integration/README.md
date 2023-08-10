@@ -16,6 +16,7 @@ The official bot is a free GROWI bot provided and operated by the GROWI developm
 <!-- textlint-enable weseek/no-dead-link -->
 
 【Diagram】
+
 <img :src="$withBase('/assets/images/slack-bot-outline-official.png')" alt="diagram-for-official-bot">
 
 #### Custom bot without proxy
@@ -25,6 +26,7 @@ The custom bot without proxy allows you to create a Slack bot by yourself and li
 <!-- textlint-enable weseek/ja-no-inappropriate-words -->
 
 【Diagram】
+
 <img :src="$withBase('/assets/images/slack-bot-outline-custom-without-proxy.png')" alt="diagram-for-custom-bot-without-proxy">
 
 #### Custom bot with proxy
@@ -32,6 +34,7 @@ The custom bot without proxy allows you to create a Slack bot by yourself and li
 The custom bot with proxy allows you to create a Slack bot by yourself. Set up and configure a proxy server and use some of GROWI's features in the same way as the official bot.
 
 【Diagram】
+
 <img :src="$withBase('/assets/images/slack-bot-outline-custom-with-proxy.png')" alt="diagram-for-custom-bot-with-proxy">
 
 ### 2. Incoming Webhook
@@ -62,6 +65,7 @@ Click [here](/en/admin-guide/management-cookbook/slack-integration/custom-bot-wi
 ## Icon
 
 Feel free to use the following image for the custom bot.
+
 <img :src="$withBase('/assets/images/growikun-icon-2000_2000.png')" alt="growikun-icon-2000_2000">
 
 <!-- TODO: GW-5372 「Slack/Mattermost への通知」の内容を適切なタイトルの下に移動させる -->
@@ -96,10 +100,12 @@ For details on how to configure User Trigger Notification, please refer [here](/
    the wrong channel. The **Channel_not_found** error will be displayed in the logs.
    Please make sure that GROWI-Bot has been invited to the Slack channel,
    and that the channel name has been inputted correctly.
+
    <img :src="$withBase('/assets/images/slack-bot-test-channel-not-found.png')" alt="slack-bot-test-channel-not-found">
 
 2. **Proxy URL is not registered**  
    The Proxy URL hasn't been set yet, please input the Proxy URL.
+
    <img :src="$withBase('/assets/images/slack-bot-errors-proxy-url-is-not-registered.png')" alt="slack-bot-errors-proxy-url-is-not-registered">
 
 3. **Request failed with status code 400**  
@@ -107,6 +113,7 @@ For details on how to configure User Trigger Notification, please refer [here](/
    without registering information to the Proxy with `/growi register`.
    Please run `/growi register` in the Slack workspace
    and register the necessary information to the Proxy.
+
    <img :src="$withBase('/assets/images/slack-bot-errors-400.png')" alt="slack-bot-errors-400">
 
 4. **Request failed with status code 500**  
@@ -118,22 +125,26 @@ For details on how to configure User Trigger Notification, please refer [here](/
    click [Unregister the Slack workspace from the GROWI App(s)](/en/admin-guide/management-cookbook/slack-integration/#unregister-the-slack-workspace-from-the-growi-app-s),
    and then unregister the GROWI App(s). And if you are able to unregister,
    please repeat the registration.
+
    <img :src="$withBase('/assets/images/slack-bot-errors-500.png')" alt="slack-bot-errors-500">
 
 5. **The scopes are not appropriate**  
    You may not set correct Scopes when you create the Slack App.
    Please check the Scopes from OAuth & Permissions of the Slack App you created.
    The required Scopes are **team:read**, **chat:write**, and **command**.
+
    <img :src="$withBase('/assets/images/slack-bot-errors-scopes-not-appropriate.png')" alt="slack-bot-errors-scopes-not-appropriate">
 
 6. **Cannot read property 'includes' of undefined**  
    You may not registered the information of Signing Secret
    and Bot User OAuth Token. Please register the correct values.
+
    <img :src="$withBase('/assets/images/slack-bot-errors-includes-of-undefined.png')" alt="slack-bot-errors-includes-of-undefined">
 
 7. **invalid_auth**  
    You may registered incorrect Signing Secret or Bot User OAuth Token.
    Please check and register the correct values.
+
    <img :src="$withBase('/assets/images/slack-bot-errors-invalid-auth.png')" alt="slack-bot-errors-invalid-auth">
 
 ## What you can do with a Slack bot?
