@@ -45,6 +45,7 @@
   "devDependencies": {
     "@popperjs/core": "^2.11.8",
     "@vuepress/plugin-google-analytics": "^1.8.2",
+    "@vuepress/plugin-html-redirect": "^0.2.1",
     "@vuepress/plugin-search": "^1.9.9",
     "babel-eslint": "^10.0.1",
     "bootstrap": "^5.2.3",
