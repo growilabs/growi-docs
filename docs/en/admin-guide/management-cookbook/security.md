@@ -62,3 +62,17 @@ The option that was set as "Permanently delete a page" in v4.5 or earlier is inh
 - `Closed (Invitation Only)`
   - The user will not be able to register a new user with ID/Password from the user registration screen.
   - To register a new user, please [Temporary issuance of a new user](/en/admin-guide/management-cookbook/user-management.html#temporary-issuance-of-a-new-user) to invite you.
+
+## Two-factor Authentication
+
+  GROWI.cloud does not provide two-factor authentication for user authentication.
+
+- However, GROWI.cloud allows two-factor authentication for external service accounts (Google account, GitHub account) that can be used to login to GROWI.cloud.
+
+  If you register for GROWI.cloud with an external service account that has already been set up for two-factor authentication,
+  you can use two-factor authentication for GROWI.cloud login in a pseudo-authenticated manner.
+
+### The help pages for each service for two-factor authentication (two-step authentication) are as follows
+
+- Google: [Turn on 2-Step Verification - Computer - Google Account Help](https://support.google.com/accounts/answer/185839)
+- GitHub: [Set up two-factor authentication - GitHub Docs](https://docs.github.com/ja/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)

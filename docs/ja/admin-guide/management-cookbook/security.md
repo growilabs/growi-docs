@@ -61,3 +61,18 @@ v4.5 以前で「ページの完全削除」として設定していたオプシ
 - `非公開 (登録には管理者による招待が必要)`
   - ユーザー登録画面から ID/Password で新規登録できなくなります。
   - 新規ユーザーを登録するには[新規ユーザーの仮発行](/ja/admin-guide/management-cookbook/user-management.html#%E6%96%B0%E8%A6%8F%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E3%83%BC%E3%81%AE%E4%BB%AE%E7%99%BA%E8%A1%8C)から招待してください。
+
+## 二要素認証
+
+  GROWI.cloudのユーザー認証について、二要素認証はご提供しておりません。
+
+- 但し、 GROWI.cloud のログインに利用可能な外部サービスアカウント (Google アカウント, GitHub アカウント) では、
+  いずれもログインに二要素認証を設定することが可能となっております。
+
+  二要素認証を設定済みの外部サービスアカウントで GROWI.cloud にご登録いただければ、
+  疑似的に GROWI.cloud のログインに二要素認証をご利用いただけていると言えます。
+
+### 二要素認証(2段階認証)の各サービスのヘルプページは以下となります
+
+- Google: [Turn on 2-Step Verification - Computer - Google Account Help](https://support.google.com/accounts/answer/185839)
+- GitHub: [二要素認証を設定する - GitHub Docs](https://docs.github.com/ja/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)
