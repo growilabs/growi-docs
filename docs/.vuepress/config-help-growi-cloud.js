@@ -153,17 +153,6 @@ module.exports = {
           ]
         },
         {
-          title: '活用例',
-          key: 'examples',
-          children: [
-            '/ja/guide/tips/hierarchical.md',
-            '/ja/guide/tips/include_html.md',
-            '/ja/guide/tips/checkbox.md',
-            '/ja/guide/tips/page_linker.md',
-            '/ja/guide/tips/footnote.md',
-          ],
-        },
-        {
           title: '管理者向け設定',
           key: 'management-settings',
           children: [
@@ -186,6 +175,17 @@ module.exports = {
             '/ja/admin-guide/management-cookbook/audit-log.md',
             '/ja/admin-guide/management-cookbook/plugins.md',
           ]
+        },
+        {
+          title: '活用例',
+          key: 'examples',
+          children: [
+            '/ja/guide/tips/hierarchical.md',
+            '/ja/guide/tips/include_html.md',
+            '/ja/guide/tips/checkbox.md',
+            '/ja/guide/tips/page_linker.md',
+            '/ja/guide/tips/footnote.md',
+          ],
         },
         {
           'title': 'アップグレードガイド',
@@ -299,17 +299,6 @@ module.exports = {
           ]
         },
         {
-          title: 'Examples',
-          key: 'examples',
-          children: [
-            '/en/guide/tips/hierarchical.md',
-            '/en/guide/tips/include_html.md',
-            '/en/guide/tips/checkbox.md',
-            '/en/guide/tips/page_linker.md',
-            '/en/guide/tips/footnote.md',
-          ],
-        },
-        {
           title: 'Management settings',
           key: 'management-settings',
           children: [
@@ -332,6 +321,17 @@ module.exports = {
             '/en/admin-guide/management-cookbook/audit-log.md',
             '/en/admin-guide/management-cookbook/plugins.md',
           ]
+        },
+        {
+          title: 'Examples',
+          key: 'examples',
+          children: [
+            '/en/guide/tips/hierarchical.md',
+            '/en/guide/tips/include_html.md',
+            '/en/guide/tips/checkbox.md',
+            '/en/guide/tips/page_linker.md',
+            '/en/guide/tips/footnote.md',
+          ],
         },
         {
           'title': 'Uupgrade guide',
