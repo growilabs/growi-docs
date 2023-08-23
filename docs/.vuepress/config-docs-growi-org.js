@@ -124,13 +124,6 @@ module.exports = {
               ],
             },
             {
-              title: 'Tutorial',
-              collapsable: false,
-              children: [
-                '/en/guide/tutorial/create_page.md',
-              ],
-            },
-            {
               title: 'How to use',
               collapsable: false,
               children: [
@@ -388,13 +381,6 @@ module.exports = {
               children: [
                 '/ja/guide/getting-started/try_growi.md',
                 '/ja/guide/getting-started/markdown.md',
-              ],
-            },
-            {
-              title: 'チュートリアル',
-              collapsable: false,
-              children: [
-                '/ja/guide/tutorial/create_page.md',
               ],
             },
             {
