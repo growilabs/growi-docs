@@ -121,24 +121,6 @@ module.exports = {
 
         // Docs
         {
-          title: 'チュートリアル',
-          key: 'tutorial',
-          children: [
-            '/ja/guide/tutorial/create_page.md',
-          ],
-        },
-        {
-          title: '活用例',
-          key: 'examples',
-          children: [
-            '/ja/guide/tips/hierarchical.md',
-            '/ja/guide/tips/include_html.md',
-            '/ja/guide/tips/checkbox.md',
-            '/ja/guide/tips/page_linker.md',
-            '/ja/guide/tips/footnote.md',
-          ],
-        },
-        {
           title: '使い方',
           key: 'how-to-use',
           children: [
@@ -169,6 +151,17 @@ module.exports = {
             '/ja/guide/features/slack_integration.md',
             '/ja/guide/features/questionnaire.md',
           ]
+        },
+        {
+          title: '活用例',
+          key: 'examples',
+          children: [
+            '/ja/guide/tips/hierarchical.md',
+            '/ja/guide/tips/include_html.md',
+            '/ja/guide/tips/checkbox.md',
+            '/ja/guide/tips/page_linker.md',
+            '/ja/guide/tips/footnote.md',
+          ],
         },
         {
           title: '管理者向け設定',
@@ -274,24 +267,6 @@ module.exports = {
 
         // docs
         {
-          title: 'Tutorial',
-          key: 'tutorial',
-          children: [
-            '/en/guide/tutorial/create_page.md',
-          ],
-        },
-        {
-          title: 'Examples',
-          key: 'examples',
-          children: [
-            '/en/guide/tips/hierarchical.md',
-            '/en/guide/tips/include_html.md',
-            '/en/guide/tips/checkbox.md',
-            '/en/guide/tips/page_linker.md',
-            '/en/guide/tips/footnote.md',
-          ],
-        },
-        {
           title: 'How to use',
           key: 'how-to-use',
           children: [
@@ -322,6 +297,17 @@ module.exports = {
             '/en/guide/features/slack_integration.md',
             '/en/guide/features/questionnaire.md',
           ]
+        },
+        {
+          title: 'Examples',
+          key: 'examples',
+          children: [
+            '/en/guide/tips/hierarchical.md',
+            '/en/guide/tips/include_html.md',
+            '/en/guide/tips/checkbox.md',
+            '/en/guide/tips/page_linker.md',
+            '/en/guide/tips/footnote.md',
+          ],
         },
         {
           title: 'Management settings',
