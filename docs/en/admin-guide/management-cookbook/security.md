@@ -41,10 +41,12 @@ The option that was set as "Permanently delete a page" in v4.5 or earlier is inh
 When deleting a user, the user homepage (`/user/username`) and its subordinate pages are also completely deleted. If disabled, the user homepage is not deleted when the user is deleted.
 
 ::: warning
+**Initialization of user homepages when a user registers**
 
-- This setting does not change the feature to delete a user's homepage when a new user registers.
-- If a user has a user homepage with the same name as username when a new user registers, the old user homepage and its subordinate pages will be completely deleted and replaced with the newly registered user homepage.
-- If you wish to preserve the information on the user homepage left by the deleted user, please duplicate it in another location.
+- If a user's homepage already exists when the user registers (for example, if the `/user/foo` page already exists when the user `foo` registers), the user homepage will be initialized regardless of whether this setting is ON or OFF.
+  - Once initialized, the `/user/foo` page and its subordinate pages are completely deleted and replaced by the newly registered user.
+  - This specification has been changed since GROWI v6.2.0.
+  - Please also see [Upgrade Guide](link)
 :::
 
 ## Authentication Mechanism Settings
