@@ -2,7 +2,9 @@
 
 [[toc]]
 
-## Configure pages to show in page lists and search results
+## Security Settings
+
+### Configure pages to show in page lists and search results
 
 You can configure pages whose publication range is set to `Only me` or `Only inside the group` to show/hide in the page list and search results.
 
@@ -10,7 +12,7 @@ Note that if you set `Displayed`, pages whose viewing is restricted will be disp
 
 <img :src="$withBase('/assets/images/security.png')" alt="security">
 
-## Page Deletion Permission
+### Page Deletion Permission
 
 Specify the page deletion permission according to the four types of deletion methods.
 
@@ -32,6 +34,17 @@ If you select the `Same as "Only the page"` option for "Including the descendant
 
 ::: tip
 The option that was set as "Permanently delete a page" in v4.5 or earlier is inherited as "Permanently delete a page (Only the page)" in v5.0 or later.
+:::
+
+### User homepage deletion
+
+When deleting a user, the user homepage (`/user/username`) and its subordinate pages are also completely deleted. If disabled, the user homepage is not deleted when the user is deleted.
+
+::: warning
+
+- This setting does not change the feature to delete a user's homepage when a new user registers.
+- If a user has a user homepage with the same name as username when a new user registers, the old user homepage and its subordinate pages will be completely deleted and replaced with the newly registered user homepage.
+- If you wish to preserve the information on the user homepage left by the deleted user, please duplicate it in another location.
 :::
 
 ## Authentication Mechanism Settings
