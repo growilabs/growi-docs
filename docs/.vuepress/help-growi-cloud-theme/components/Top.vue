@@ -1,7 +1,7 @@
 <template>
   <div class="container px-4 mt-5">
     <PageLinks :categoryName="this.$themeLocaleConfig.category.about_growi_cloud" :pageItems="getPageItems(['application-settings', 'service', 'payment-contract', 'trouble-shooting', 'others'])" />
-    <PageLinks :categoryName="this.$themeLocaleConfig.category.about_growi_app" :pageItems="getPageItems(['tutorial', 'examples', 'feature', 'management-settings', 'upgrade-guide'])" />
+    <PageLinks :categoryName="this.$themeLocaleConfig.category.about_growi_app" :pageItems="getPageItems(['how-to-use', 'examples', 'management-settings', 'upgrade-guide'])" />
   </div>
 </template>
 

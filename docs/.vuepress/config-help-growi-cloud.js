@@ -121,37 +121,21 @@ module.exports = {
 
         // Docs
         {
-          title: 'チュートリアル',
-          key: 'tutorial',
+          title: '使い方',
+          key: 'how-to-use',
           children: [
-            '/ja/guide/getting-started/five_minutes.md',
-            '/ja/guide/getting-started/markdown.md',
-            '/ja/guide/tutorial/create_page.md',
-            '/ja/guide/tutorial/duplicate_page.md',
-            '/ja/guide/tutorial/delete_page.md',
-          ],
-        },
-        {
-          title: '活用例',
-          key: 'examples',
-          children: [
-            '/ja/guide/tips/hierarchical.md',
-            '/ja/guide/tips/include_html.md',
-            '/ja/guide/tips/checkbox.md',
-            '/ja/guide/tips/page_linker.md',
-            '/ja/guide/tips/footnote.md',
-          ],
-        },
-        {
-          title: '機能',
-          key: 'feature',
-          children: [
+            '/ja/guide/getting-started/try_growi.md',
+            '/ja/guide/features/setup.md',
             '/ja/guide/features/page_layout.md',
+            '/ja/guide/getting-started/markdown.md',
+            '/ja/guide/features/create_page.md',
+            '/ja/guide/features/page_operation.md',
+            '/ja/guide/features/page_deletion_collectively.md',
+            '/ja/guide/features/insert_links.md',
+            '/ja/guide/features/insert_files.md',
             '/ja/guide/features/copy_to_clipboard.md',
             '/ja/guide/features/table.md',
             '/ja/guide/features/bookmark.md',
-            '/ja/guide/features/page_operation.md',
-            '/ja/guide/features/page_deletion_collectively.md',
             '/ja/guide/features/emoji.md',
             '/ja/guide/features/history.md',
             '/ja/guide/features/authority.md',
@@ -166,7 +150,6 @@ module.exports = {
             '/ja/guide/features/hackmd.md',
             '/ja/guide/features/in-app-notification.md',
             '/ja/guide/features/slack_integration.md',
-            '/ja/guide/features/file_upload',
             '/ja/guide/features/questionnaire.md',
             '/ja/guide/features/presentation.md',
           ]
@@ -195,6 +178,17 @@ module.exports = {
             '/ja/admin-guide/management-cookbook/audit-log.md',
             '/ja/admin-guide/management-cookbook/plugins.md',
           ]
+        },
+        {
+          title: '活用例',
+          key: 'examples',
+          children: [
+            '/ja/guide/tips/hierarchical.md',
+            '/ja/guide/tips/include_html.md',
+            '/ja/guide/tips/checkbox.md',
+            '/ja/guide/tips/page_linker.md',
+            '/ja/guide/tips/footnote.md',
+          ],
         },
         {
           'title': 'アップグレードガイド',
@@ -276,37 +270,21 @@ module.exports = {
 
         // docs
         {
-          title: 'Tutorial',
-          key: 'tutorial',
+          title: 'How to use',
+          key: 'how-to-use',
           children: [
-            '/en/guide/getting-started/five_minutes.md',
-            '/en/guide/getting-started/markdown.md',
-            '/en/guide/tutorial/create_page.md',
-            '/en/guide/tutorial/duplicate_page.md',
-            '/en/guide/tutorial/delete_page.md',
-          ],
-        },
-        {
-          title: 'Examples',
-          key: 'examples',
-          children: [
-            '/en/guide/tips/hierarchical.md',
-            '/en/guide/tips/include_html.md',
-            '/en/guide/tips/checkbox.md',
-            '/en/guide/tips/page_linker.md',
-            '/en/guide/tips/footnote.md',
-          ],
-        },
-        {
-          title: 'Feature',
-          key: 'feature',
-          children: [
+            '/en/guide/getting-started/try_growi.md',
+            '/en/guide/features/setup.md',
             '/en/guide/features/page_layout.md',
+            '/en/guide/getting-started/markdown.md',
+            '/en/guide/features/create_page.md',
+            '/en/guide/features/page_operation.md',
+            '/en/guide/features/page_deletion_collectively.md',
+            '/en/guide/features/insert_links.md',
+            '/en/guide/features/insert_files.md',
             '/en/guide/features/copy_to_clipboard.md',
             '/en/guide/features/table.md',
             '/en/guide/features/bookmark.md',
-            '/en/guide/features/page_operation.md',
-            '/en/guide/features/page_deletion_collectively.md',
             '/en/guide/features/emoji.md',
             '/en/guide/features/history.md',
             '/en/guide/features/authority.md',
@@ -321,7 +299,6 @@ module.exports = {
             '/en/guide/features/hackmd.md',
             '/en/guide/features/in-app-notification.md',
             '/en/guide/features/slack_integration.md',
-            '/en/guide/features/file_upload',
             '/en/guide/features/questionnaire.md',
             '/en/guide/features/presentation.md',
           ]
@@ -350,6 +327,17 @@ module.exports = {
             '/en/admin-guide/management-cookbook/audit-log.md',
             '/en/admin-guide/management-cookbook/plugins.md',
           ]
+        },
+        {
+          title: 'Examples',
+          key: 'examples',
+          children: [
+            '/en/guide/tips/hierarchical.md',
+            '/en/guide/tips/include_html.md',
+            '/en/guide/tips/checkbox.md',
+            '/en/guide/tips/page_linker.md',
+            '/en/guide/tips/footnote.md',
+          ],
         },
         {
           'title': 'Uupgrade guide',
@@ -408,6 +396,9 @@ module.exports = {
         '/ja/': 'DANGER',
         '/en/': 'DANGER'
       }
+    }],
+    ['@vuepress/html-redirect', {
+      countdown: 0
     }],
   ],
 

@@ -61,7 +61,12 @@ module.exports = {
           '(ja|en)\/admin-guide\/(admin-cookbook|downgrading|getting-started|migration-guide)\/.*',
         ]
       }
-    ]
+    ],
+    [
+      '@vuepress/html-redirect', {
+        countdown: 0
+      }
+    ],
   ],
 
   markdown: {
@@ -114,29 +119,24 @@ module.exports = {
               title: 'Getting Started',
               collapsable: false,
               children: [
-                '/en/guide/getting-started/five_minutes.md',
+                '/en/guide/getting-started/try_growi.md',
                 '/en/guide/getting-started/markdown.md',
               ],
             },
             {
-              title: 'Tutorial',
+              title: 'How to use',
               collapsable: false,
               children: [
-                '/en/guide/tutorial/create_page.md',
-                '/en/guide/tutorial/duplicate_page.md',
-                '/en/guide/tutorial/delete_page.md',
-              ],
-            },
-            {
-              title: 'Features',
-              collapsable: false,
-              children: [
+                '/en/guide/features/setup.md',
                 '/en/guide/features/page_layout.md',
+                '/en/guide/features/create_page.md',
+                '/en/guide/features/page_operation.md',
+                '/en/guide/features/page_deletion_collectively.md',
+                '/en/guide/features/insert_links.md',
+                '/en/guide/features/insert_files.md',
                 '/en/guide/features/copy_to_clipboard.md',
                 '/en/guide/features/table.md',
                 '/en/guide/features/bookmark.md',
-                '/en/guide/features/page_operation.md',
-                '/en/guide/features/page_deletion_collectively.md',
                 '/en/guide/features/emoji.md',
                 '/en/guide/features/history.md',
                 '/en/guide/features/authority.md',
@@ -151,7 +151,6 @@ module.exports = {
                 '/en/guide/features/hackmd.md',
                 '/en/guide/features/in-app-notification.md',
                 '/en/guide/features/slack_integration.md',
-                '/en/guide/features/file_upload',
                 '/en/guide/features/questionnaire.md',
                 '/en/guide/features/presentation.md',
               ]
@@ -383,29 +382,24 @@ module.exports = {
               title: 'GROWI を始めよう',
               collapsable: false,
               children: [
-                '/ja/guide/getting-started/five_minutes.md',
+                '/ja/guide/getting-started/try_growi.md',
                 '/ja/guide/getting-started/markdown.md',
               ],
             },
             {
-              title: 'チュートリアル',
+              title: '使い方',
               collapsable: false,
               children: [
-                '/ja/guide/tutorial/create_page.md',
-                '/ja/guide/tutorial/duplicate_page.md',
-                '/ja/guide/tutorial/delete_page.md',
-              ],
-            },
-            {
-              title: '機能紹介',
-              collapsable: false,
-              children: [
+                '/ja/guide/features/setup.md',
                 '/ja/guide/features/page_layout.md',
+                '/ja/guide/features/create_page.md',
+                '/ja/guide/features/page_operation.md',
+                '/ja/guide/features/page_deletion_collectively.md',
+                '/ja/guide/features/insert_links.md',
+                '/ja/guide/features/insert_files.md',
                 '/ja/guide/features/copy_to_clipboard.md',
                 '/ja/guide/features/table.md',
                 '/ja/guide/features/bookmark.md',
-                '/ja/guide/features/page_operation.md',
-                '/ja/guide/features/page_deletion_collectively.md',
                 '/ja/guide/features/emoji.md',
                 '/ja/guide/features/history.md',
                 '/ja/guide/features/authority.md',
@@ -420,7 +414,6 @@ module.exports = {
                 '/ja/guide/features/hackmd.md',
                 '/ja/guide/features/in-app-notification.md',
                 '/ja/guide/features/slack_integration.md',
-                '/ja/guide/features/file_upload',
                 '/ja/guide/features/questionnaire.md',
                 '/ja/guide/features/presentation.md',
               ]
