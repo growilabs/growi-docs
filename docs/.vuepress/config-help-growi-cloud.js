@@ -168,6 +168,7 @@ module.exports = {
             '/ja/guide/features/slack_integration.md',
             '/ja/guide/features/file_upload',
             '/ja/guide/features/questionnaire.md',
+            '/ja/guide/features/presentation.md',
           ]
         },
         {
@@ -322,6 +323,7 @@ module.exports = {
             '/en/guide/features/slack_integration.md',
             '/en/guide/features/file_upload',
             '/en/guide/features/questionnaire.md',
+            '/en/guide/features/presentation.md',
           ]
         },
         {
