@@ -2,7 +2,9 @@
 
 [[toc]]
 
-## Configure pages to show in page lists and search results
+## Security Settings
+
+### Configure pages to show in page lists and search results
 
 You can configure pages whose publication range is set to `Only me` or `Only inside the group` to show/hide in the page list and search results.
 
@@ -10,7 +12,7 @@ Note that if you set `Displayed`, pages whose viewing is restricted will be disp
 
 <img :src="$withBase('/assets/images/security.png')" alt="security">
 
-## Page Deletion Permission
+### Page Deletion Permission
 
 Specify the page deletion permission according to the four types of deletion methods.
 
@@ -32,6 +34,19 @@ If you select the `Same as "Only the page"` option for "Including the descendant
 
 ::: tip
 The option that was set as "Permanently delete a page" in v4.5 or earlier is inherited as "Permanently delete a page (Only the page)" in v5.0 or later.
+:::
+
+### User homepage deletion
+
+When deleting a user, the user homepage (`/user/username`) and its subordinate pages are also completely deleted. If disabled, the user homepage is not deleted when the user is deleted.
+
+::: warning
+**Initialization of user homepages when a user registers**
+
+- If a user's homepage already exists when the user registers (for example, if the `/user/foo` page already exists when the user `foo` registers), the user homepage will be initialized regardless of whether this setting is ON or OFF.
+  - Once initialized, the `/user/foo` page and its subordinate pages are completely deleted and replaced by the newly registered user.
+  - This specification has been changed since GROWI v6.2.0.
+  - Please also see [Upgrade Guide](/en/admin-guide/upgrading/62x.html)
 :::
 
 ## Authentication Mechanism Settings
