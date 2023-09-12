@@ -46,7 +46,7 @@ When deleting a user, the user homepage (`/user/username`) and its subordinate p
 - If a user's homepage already exists when the user registers (for example, if the `/user/foo` page already exists when the user `foo` registers), the user homepage will be initialized regardless of whether this setting is ON or OFF.
   - Once initialized, the `/user/foo` page and its subordinate pages are completely deleted and replaced by the newly registered user.
   - This specification has been changed since GROWI v6.2.0.
-  - Please also see [Upgrade Guide](link)
+  - Please also see [Upgrade Guide](/en/admin-guide/upgrading/62x.html)
 :::
 
 ## Authentication Mechanism Settings
