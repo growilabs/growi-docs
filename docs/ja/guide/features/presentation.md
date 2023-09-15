@@ -19,7 +19,9 @@ GROWI スライドと Marp スライドの違いについては [こちら](/ja/
 <img :src="$withBase('/assets/images/ja/presentation.png')" alt="presentation">
 
 ::: tip
-ページ内の Frontmatter に `marp: true` が設定されている場合は、Marp スライドが表示されます。設定がない場合には、GROWI スライドが表示されます。Frontmatter や Marp についての詳細は [こちら](/ja/guide/features/marp.html) をご参照ください。
+ページ内の Frontmatter に `marp: true` が設定されている場合は、Marp スライドが表示されます。設定がない場合には、GROWI スライドが表示されます。
+
+Frontmatter や Marp についての詳細は [こちら](/ja/guide/features/marp.html) をご参照ください。
 :::
 
 ## GROWI スライドと Marp スライドの特徴

@@ -19,7 +19,9 @@ For the difference between GROWI slides and Marp slides, see [here](/en/guide/fe
 <img :src="$withBase('/assets/images/en/presentation.png')" alt="presentation">
 
 ::: tip
-If `marp: true` is set in the Frontmatter of the page, the Marp slide will be displayed; if not, the GROWI slide will be displayed. For more information about Frontmatter and Marp, please refer to [here](/en/guide/features/marp.html).
+If `marp: true` is set in the Frontmatter of the page, the Marp slide will be displayed; if not, the GROWI slide will be displayed.
+
+For more information about Frontmatter and Marp, please refer to [here](/en/guide/features/marp.html).
 :::
 
 ## Features of GROWI slides and Marp slides
