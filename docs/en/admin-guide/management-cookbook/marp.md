@@ -12,7 +12,7 @@ To enable Marp uses a different rendering engine than GROWI, which may make it v
 
 ## To enable Marp
 
-<img :src="$withBase('/assets/images/marp_setting.png')" alt="marp_setting">
+<img :src="$withBase('/assets/images/en/marp_setting.png')" alt="marp_setting">
 
 1. Manage → Customize(/admin/customize page transition )
 

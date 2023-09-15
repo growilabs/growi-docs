@@ -144,7 +144,6 @@ module.exports = {
                 '/en/guide/features/uml_diagrams.md',
                 '/en/guide/features/drawio.md',
                 '/en/guide/features/mermaid.md',
-                '/en/guide/features/marp.md',
                 '/en/guide/features/search.md',
                 '/en/guide/features/tag.md',
                 '/en/guide/features/template.md',
@@ -153,6 +152,7 @@ module.exports = {
                 '/en/guide/features/slack_integration.md',
                 '/en/guide/features/questionnaire.md',
                 '/en/guide/features/presentation.md',
+                '/en/guide/features/marp.md',
               ]
             },
             {
@@ -407,7 +407,6 @@ module.exports = {
                 '/ja/guide/features/uml_diagrams.md',
                 '/ja/guide/features/drawio.md',
                 '/ja/guide/features/mermaid.md',
-                '/ja/guide/features/marp.md',
                 '/ja/guide/features/search.md',
                 '/ja/guide/features/tag.md',
                 '/ja/guide/features/template.md',
@@ -416,6 +415,7 @@ module.exports = {
                 '/ja/guide/features/slack_integration.md',
                 '/ja/guide/features/questionnaire.md',
                 '/ja/guide/features/presentation.md',
+                '/ja/guide/features/marp.md',
               ]
             },
             {

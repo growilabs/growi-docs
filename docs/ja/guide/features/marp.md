@@ -1,17 +1,22 @@
 # Marp でスライドを作成する
 
 :::warning
-この機能を利用するには、管理者設定から機能を有効化する必要があります。設定方法は [こちら](/ja/admin-guide/management-cookbook/marp.html)
+この機能を利用するには、管理者設定から機能を有効化する必要があります。設定方法は [こちら](/ja/admin-guide/management-cookbook/marp.html) をご参照ください。
 :::
 
-GROWI では [Marp](https://marp.app/) を利用して、スライドを作成できます。
+GROWI では、[Marp](https://marp.app/) を利用してプレゼンテーション用のスライドを作成できます。
 
-[Marp](https://marp.app/) とは、Markdown を使ってプレゼンテーションスライドを作成できるツールです。
-具体的な記法は [Marpit Markdown](https://marpit.marp.app/markdown) などをご参照ください。
+[Marp](https://marp.app/) とは、Markdown を使ってプレゼンテーションスライドを作成できるツールです。プレゼンテーション機能については [こちら](/ja/guide/features/presentation.md) をご参照ください。
 
-<img :src="$withBase('/assets/images/ja/marp.png')" alt="">
+Marp を利用して作成したスライドは、下図のようにView モードや編集モードのプレビューで表示できます。
 
-### 記法例
+<img :src="$withBase('/assets/images/ja/marp.png')" alt="marp">
+
+Marp を利用するためには、ページ内に Frontmatter を記載し `marp: true` を記載します。(Frontmatter は Marp の有効・無効に関わらずプレビューには表示されません。)
+
+スライド区切りは `---` などの横罫線で指定できます。Frontmatter の終了罫線の次の罫線からスライド区切りとして認識されます。その他の具体的な記法は [Marpit Markdown](https://marpit.marp.app/markdown) などをご参照ください。
+
+## 記法例
 
 ~~~marp
 ---
@@ -54,4 +59,3 @@ marp: true
 
 ```
 ~~~
-

@@ -12,13 +12,13 @@ Marp を有効化することで GROWI とは異なるレンダリングエン�
 
 ## Marp の有効化
 
-<img :src="$withBase('/assets/images/marp_setting.png')" alt="marp_setting">
+<img :src="$withBase('/assets/images/ja/marp_setting.png')" alt="marp_setting">
 
-1. 管理メニューの「Customize」に移動します。
-
-
-2. 「Function」項目の中の「Enable Marp」にチェックをつけます。
+1. 管理メニューの「カスタマイズ」に移動します。
 
 
-3. 「Function」項目の中の Update ボタンをクリックします。
+2. 「機能」項目の中の「Marp を有効化する」にチェックをつけます。
+
+
+3. 「機能」項目の中の 「更新」 ボタンをクリックします。
 
