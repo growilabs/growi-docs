@@ -195,6 +195,7 @@ module.exports = {
           'title': 'アップグレードガイド',
           'key': 'upgrade-guide',
           'children': [
+            '/ja/admin-guide/upgrading/62x.md',
             '/ja/admin-guide/upgrading/61x.md',
             '/ja/admin-guide/upgrading/60x.md',
             '/ja/admin-guide/upgrading/51x.md',
@@ -345,6 +346,7 @@ module.exports = {
           'title': 'Uupgrade guide',
           'key': 'upgrade-guide',
           'children': [
+            '/en/admin-guide/upgrading/62x.md',
             '/en/admin-guide/upgrading/61x.md',
             '/en/admin-guide/upgrading/60x.md',
             '/en/admin-guide/upgrading/51x.md',
