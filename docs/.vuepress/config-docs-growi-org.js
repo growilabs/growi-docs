@@ -152,6 +152,8 @@ module.exports = {
                 '/en/guide/features/in-app-notification.md',
                 '/en/guide/features/slack_integration.md',
                 '/en/guide/features/questionnaire.md',
+                '/en/guide/features/presentation.md',
+                '/en/guide/features/marp.md',
               ]
             },
             {
@@ -258,6 +260,7 @@ module.exports = {
                     '/en/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
                   ],
                 },
+                '/en/admin-guide/management-cookbook/marp.md',
                 '/en/admin-guide/management-cookbook/active-directory.md',
                 '/en/admin-guide/management-cookbook/google-analytics.md',
                 '/en/admin-guide/management-cookbook/external-notification.md',
@@ -413,6 +416,8 @@ module.exports = {
                 '/ja/guide/features/in-app-notification.md',
                 '/ja/guide/features/slack_integration.md',
                 '/ja/guide/features/questionnaire.md',
+                '/ja/guide/features/presentation.md',
+                '/ja/guide/features/marp.md',
               ]
             },
             {
@@ -518,6 +523,7 @@ module.exports = {
                     '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
                   ],
                 },
+                '/ja/admin-guide/management-cookbook/marp.md',
                 '/ja/admin-guide/management-cookbook/active-directory.md',
                 '/ja/admin-guide/management-cookbook/google-analytics.md',
                 '/ja/admin-guide/management-cookbook/external-notification.md',
