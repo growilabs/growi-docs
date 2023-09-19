@@ -11,7 +11,7 @@ Hereafter, slides created using the default GROWI feature will be called "GROWI 
 ### GROWI Slide
 
 - No special settings or editing is required.
-- When you start a slideshow, a slide is automatically created for each page heading in Markdown (h1 and h2 are the slide splitter).
+- When you start a slideshow, a slide is automatically created for each page heading in Markdown (h1(#) and h2(##) are the slide splitter).
 - You can use GROWI's original features such as lsx.
 - Math, Mermaid, draw.io, etc. supported by GROWI can be displayed.
 
@@ -24,6 +24,10 @@ Hereafter, slides created using the default GROWI feature will be called "GROWI 
 
 <img :src="$withBase('/assets/images/en/marp.png')" alt="marp">
 
+::: tip
+Please refer to [here](/en/guide/features/presentation.html#create-slides-using-marp) for how to create Marp slides.
+:::
+
 ## Start the slideshow
 
 1. Click on the three dot leader on the page tools button
@@ -33,20 +37,20 @@ Hereafter, slides created using the default GROWI feature will be called "GROWI 
 <img :src="$withBase('/assets/images/en/presentation.png')" alt="presentation">
 
 ::: tip
-If `marp: true` is set in the Frontmatter of the page, the Marp slide will be displayed; if not, the GROWI slide will be displayed.
+If `marp: true` is set in the front-matter of the page, the Marp slide will be displayed; if not, the GROWI slide will be displayed.
 
-For more information about Frontmatter and Marp, please refer to [here](/en/guide/features/marp.html).
+For more information about front-matter and Marp, please refer to [here](/en/guide/features/marp.html).
 :::
 
 ## Create slides using Marp
 
 :::tip
-To use this feature, the administrator must activate the Marp. For details on how to set it up, [click here](/en/admin-guide/management-cookbook/marp.html)
+To use this feature, the administrator must activate the Marp. For details on how to set it up, please refer to [here](/en/admin-guide/management-cookbook/marp.html).
 :::
 
-To use Marp, set `marp: true` in the front-matter of the page. (From GROWI v6.2.0 onwards, front-matter is not shown in preview regardless of whether Marp is true or false.)
+To use Marp, set `marp: true` in the front-matter of the page. (From GROWI v6.2.0 onwards, front-matter is not shown in preview and view mode regardless of whether Marp is true or false.)
 
-Slides are split by a horizontal rule such as `---`. The horizontal ruler after the ending ruler of the front matter is recognized as a slide splitter.
+Slides are split by a horizontal rule such as `---`. The horizontal ruler after the ending ruler of the front-matter is recognized as a slide splitter.
 
 Please refer to [Marpit Markdown](https://marpit.marp.app/markdown) for more information.
 

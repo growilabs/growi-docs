@@ -47,7 +47,7 @@ Frontmatter や Marp についての詳細は [こちら](/ja/guide/features/pre
 この機能を利用するには、管理者設定で Marp 機能を有効にする必要があります。設定方法は [こちら](/ja/admin-guide/management-cookbook/marp.html) をご参照ください。
 :::
 
-Marp を利用するためには、ページ内に Frontmatter を記載し `marp: true` を記載します。(v6.2.0以降、Frontmatter は Marp の有効・無効に関わらずプレビューには表示されません。)
+Marp を利用するためには、ページ内に Frontmatter を記載し `marp: true` を記載します。(v6.2.0以降、Frontmatter は Marp の有効・無効に関わらずプレビューや View モードでは表示されません。)
 
 スライド区切りは `---` などの横罫線で指定できます。Frontmatter の終了罫線の次の罫線からスライド区切りとして認識されます。
 
