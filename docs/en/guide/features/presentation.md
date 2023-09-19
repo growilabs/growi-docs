@@ -1,14 +1,28 @@
 # Create slides for a presentation
 
-GROWI can automatically create slides for presentations. This feature allows you to automatically convert page content into slides and start a slide show without using other presentation software.
+GROWI can automatically create slides for presentations. This feature allows you to automatically convert page content into slides and start a full-screen slide show without using other presentation software.
 
-There are two ways to create slides: using GROWI's default feature or using [Marp](https://marp.app/). (Hereafter, slides created using the default GROWI feature will be called "GROWI slides" and slides created using Marp will be called "Marp slides.)
+There are two ways to create slides: using GROWI's default feature or using [Marp](https://marp.app/). [Marp](https://marp.app/) is a tool for creating presentation slides using Markdown.
 
-When creating GROWI slides, no special settings or editing is required. When you start a slideshow, a slide is automatically created for each page heading in Markdown (h1 and h2 are the slide splitter).
+Hereafter, slides created using the default GROWI feature will be called "GROWI slides" and slides created using Marp will be called "Marp slides".
 
-See [here](/en/guide/features/marp.html) for instructions on how to create Marp slides.
+## Features of GROWI slides and Marp slides
 
-For the difference between GROWI slides and Marp slides, see [here](/en/guide/features/presentation.html#Features of GROWI slides and -marp- slides).
+### GROWI Slide
+
+- No special settings or editing is required.
+- When you start a slideshow, a slide is automatically created for each page heading in Markdown (h1 and h2 are the slide splitter).
+- You can use GROWI's original features such as lsx.
+- Math, Mermaid, draw.io, etc. supported by GROWI can be displayed.
+
+### Marp Slide
+
+- All Marp syntax can be used.
+- You can create more beautiful slides by design settings, etc.
+- Slides can be displayed in View mode.
+- Slides can be previewed in Edit mode.
+
+<img :src="$withBase('/assets/images/en/marp.png')" alt="marp">
 
 ## Start the slideshow
 
@@ -24,19 +38,61 @@ If `marp: true` is set in the Frontmatter of the page, the Marp slide will be di
 For more information about Frontmatter and Marp, please refer to [here](/en/guide/features/marp.html).
 :::
 
-## Features of GROWI slides and Marp slides
+## Create slides using Marp
 
-### GROWI Slide
+:::tip
+To use this feature, the administrator must activate the Marp. For details on how to set it up, [click here](/en/admin-guide/management-cookbook/marp.html)
+:::
 
-- Slides are automatically created for each h1 and h2 heading on the page.
-- You can use GROWI's original features such as lsx.
-- Math, Mermaid, draw.io, etc. supported by GROWI can be displayed.
+To use Marp, set `marp: true` in the front-matter of the page. (From GROWI v6.2.0 onwards, front-matter is not shown in preview regardless of whether Marp is true or false.)
 
-### Marp Slide
+Slides are split by a horizontal rule such as `---`. The horizontal ruler after the ending ruler of the front matter is recognized as a slide splitter.
 
-- All Marp syntax can be used.
-- You can create more beautiful slides by design settings, etc.
-- Slides can be displayed in View mode.
-- Slides can be previewed in Edit mode.
+Please refer to [Marpit Markdown](https://marpit.marp.app/markdown) for more information.
 
-<img :src="$withBase('/assets/images/en/marp.png')" alt="marp">
+<img :src="$withBase('/assets/images/en/marp.png')" alt="">
+
+### Example
+
+~~~marp
+---
+marp: true
+header: "Marp in GROWI"
+footer: "How to use Marp"
+paginate: true
+---
+
+<style scoped>
+h1 {
+    text-align: center;
+}
+</style>
+# How to use Marp
+
+---
+
+## GROWI Features
+- Wiki in Markdown
+- Search by ElasticSearch
+- Simultaneous editing by multiple users
+- Group management
+- Comment function
+
+![bg right 80%](https://growi.org/assets/images/growi-logo.svg)
+
+---
+
+## GROWI Features
+- Drawing with draw.io
+- Can use mermaid and Marp
+- Activate Marp as follows
+```
+---
+marp: true
+---
+
+Body text
+
+```
+~~~
+
