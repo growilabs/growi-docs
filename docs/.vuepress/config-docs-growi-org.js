@@ -153,7 +153,6 @@ module.exports = {
                 '/en/guide/features/slack_integration.md',
                 '/en/guide/features/questionnaire.md',
                 '/en/guide/features/presentation.md',
-                '/en/guide/features/marp.md',
               ]
             },
             {
@@ -418,7 +417,6 @@ module.exports = {
                 '/ja/guide/features/slack_integration.md',
                 '/ja/guide/features/questionnaire.md',
                 '/ja/guide/features/presentation.md',
-                '/ja/guide/features/marp.md',
               ]
             },
             {
