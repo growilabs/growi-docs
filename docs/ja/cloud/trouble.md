@@ -23,10 +23,4 @@ GROWI は OSS として多くのユーザーからの指摘や改善要望をお
 
 ### Slack へのお問い合わせはこちら
 
-Issue への起票は難しい場合や、GROWI 本体に関する動作について質問がある場合は、GROWI の Slack ワークスペースへご参加ください。開発メンバーだけでなく、ユーザーコミュニティを含むより多くの方々のサポートを期待できます。  
-
-<!-- textlint-disable weseek/ja-no-mixed-period -->
-:arrow_down_small:以下のslackアイコンをクリック
-<!-- textlint-enable weseek/ja-no-mixed-period -->
-
-<a href="https://growi-slackin.weseek.co.jp/"><img src="https://growi-slackin.weseek.co.jp/badge.svg"></a>  
+Issue への起票は難しい場合や、GROWI 本体に関する動作について質問がある場合は、[GROWI の Slack ワークスペース](https://communityinviter.com/apps/wsgrowi/invite)へご参加ください。開発メンバーだけでなく、ユーザーコミュニティを含むより多くの方々のサポートを期待できます。

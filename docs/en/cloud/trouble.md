@@ -12,8 +12,5 @@ GROWI is OSS and we welcome suggestions and improvement requests from many users
 
 ## Contact Slack Here
 
-If you are not able to submit an Issue, or if you have questions about GROWI itself, please join the GROWI Slack workspace. You can expect support from more people including the user community as well as development members.
+If you are not able to submit an Issue, or if you have questions about GROWI itself, please join the [GROWI Slack workspace](https://communityinviter.com/apps/wsgrowi/invite). You can expect support from more people including the user community as well as development members.
 
-Click on the slack icon below :arrow_down_small:
-
-<a href="https://growi-slackin.weseek.co.jp/"><img src="https://growi-slackin.weseek.co.jp/badge.svg"></a>
