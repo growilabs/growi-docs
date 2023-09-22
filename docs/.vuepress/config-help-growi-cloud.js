@@ -117,6 +117,7 @@ module.exports = {
             '/ja/cloud/request.md',
             '/ja/cloud/resale.md',
             '/ja/cloud/securitycheck.md',
+            '/ja/cloud/invoice_system.md',
           ]
         },
 
