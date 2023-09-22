@@ -22,13 +22,13 @@ GROWIには、プレゼンテーション機能があります。この機能を
 
 GROWI では、プレゼンテーション機能を使わずにページの内容をスライド風に表示できます。(以下、スライドビュー機能と呼びます。)
 
-スライドビュー機能を利用するためには、ページ内の Frontmatter に `slide: true` を記載します。(v6.2.0以降、Frontmatter はプレビューや View モードでは表示されません。)
+スライドビュー機能を利用するためには、ページ内の Frontmatter に `slide: true` を記載します。
 
 <img :src="$withBase('/assets/images/ja/slide_preview.png')" alt="slideview">
 
 <img :src="$withBase('/assets/images/ja/slide_view.png')" alt="slideview">
 
-## 記法例
+### 記法例
 
 ~~~slide view
 ---
@@ -36,8 +36,6 @@ slide: true
 ---
 
 # GROWI の使い方
-
----
 
 ## GROWI の機能
 - Markdown で Wiki が書ける
@@ -47,8 +45,6 @@ slide: true
 - コメント機能
 
 ![bg right 80%](https://growi.org/assets/images/growi-logo.svg)
-
----
 
 ## GROWI の機能
 - そのほか draw.io による作図もサポートしています
@@ -66,12 +62,11 @@ slide: true
 
 ## GROWI スライドと Marp スライド
 
-
 ### 各スライドの特徴
 
 #### GROWI スライド
 
-- Markdown で記載されたページの見出しごとにスライドが自動で作成されます。 (対象の見出しは h1(#) と h2(##) です。)
+- Markdown で記載されたページの見出しごとにスライドが自動で作成されます。対象の見出しは h1(#) と h2(##) です。
 - lsx などの GROWI 独自の記法が使えます。
 - GROWI で対応している Math、Mermaid、draw.io などが表示できます。
 - View モードや編集モードのプレビューでスライドを表示できます。
@@ -88,7 +83,9 @@ Marp スライドは、[Marp for VS Code](https://github.com/marp-team/marp-vsco
 
 ### GROWI スライドの使い方
 
-プレゼンテーション機能を使う場合は、特別な設定や編集をする必要はありません。スライドショーを開始すると、自動で Markdown の内容をスライド化します。View モードや編集モードのプレビューでスライドを表示したい場合は、[スライドビュー機能](/ja/guide/features/presentation.html#view-モードや編集モードのプレビューでスライドを表示する) をご利用ください。
+プレゼンテーション機能を使う場合は、特別な設定や編集をする必要はありません。スライドショーを開始すると、自動で Markdown の内容をスライド化します。
+
+View モードや編集モードのプレビューでスライドを表示したい場合は、[スライドビュー機能](/ja/guide/features/presentation.html#view-モードや編集モードのプレビューでスライドを表示する) をご利用ください。
 
 ### Marp スライドの使い方
 
@@ -102,7 +99,9 @@ Marp を利用するためには、ページ内の Frontmatter に `marp: true` 
 
 その他の具体的な記法は [Marpit Markdown](https://marpit.marp.app/markdown) などをご参照ください。
 
-## 記法例
+<img :src="$withBase('/assets/images/ja/marp.png')" alt="marp">
+
+#### 記法例
 
 ~~~marp
 ---
