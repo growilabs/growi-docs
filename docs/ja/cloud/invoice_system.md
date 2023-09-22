@@ -1,22 +1,18 @@
-<!-- textlint-disable weseek/max-kanji-continuous-len -->
 # 適格請求書等保存方式 （インボイス制度）について
 
 2023年10月1日より導入される適格請求書等保存方式 （インボイス制度）について以下のとおりご案内いたします。
 
 ### 登録番号について
 
-<!-- textlint-disable weseek/max-kanji-continuous-len -->
 株式会社WESEEKの適格請求書発行事業者登録番号は以下の通りです。
 
 <span class="display-4">T3011101046911</span>
 
-<!-- textlint-disable weseek/max-kanji-continuous-len -->
 弊社の適格請求書発行事業者公表サイトは<a href="https://www.invoice-kohyo.nta.go.jp/regno-search/detail?selRegNo=3011101046911">こちら</a>をご覧ください。
 
 
 ### 請求書への登録番号の記載について
 
-<!-- textlint-disable weseek/max-kanji-continuous-len -->
 GROWI.cloud に関わる全ての請求書について、以下の通り適格請求書発行事業者登録番号を記載いたします。
 
 - 「請求情報」ページよりダウンロードいただける請求書  
