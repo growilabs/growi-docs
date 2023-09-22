@@ -61,7 +61,7 @@ slide: true
 ~~~
 
 
-## GROWI slide and Marp slide
+## What are GROWI slide and Marp slide?
 
 ### Features
 
