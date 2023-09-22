@@ -92,6 +92,7 @@ module.exports = {
             '/ja/cloud/planchange.md',
             '/ja/cloud/price.md',
             '/ja/cloud/private-cloud.md',
+            '/ja/cloud/compensation-option.md',
             '/ja/cloud/withdrawal.md',
           ]
         },
