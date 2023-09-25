@@ -154,6 +154,11 @@ module.exports = {
             '/ja/guide/features/questionnaire.md',
             '/ja/guide/features/presentation.md',
             '/ja/guide/features/marp.md',
+            '/ja/guide/features/lsx.md',
+            '/ja/guide/features/embed_html.md',
+            '/ja/guide/features/checkbox.md',
+            '/ja/guide/features/page_linker.md',
+            '/ja/guide/features/footnote.md',
           ]
         },
         {
@@ -180,17 +185,6 @@ module.exports = {
             '/ja/admin-guide/management-cookbook/audit-log.md',
             '/ja/admin-guide/management-cookbook/plugins.md',
           ]
-        },
-        {
-          title: '活用例',
-          key: 'examples',
-          children: [
-            '/ja/guide/tips/hierarchical.md',
-            '/ja/guide/tips/include_html.md',
-            '/ja/guide/tips/checkbox.md',
-            '/ja/guide/tips/page_linker.md',
-            '/ja/guide/tips/footnote.md',
-          ],
         },
         {
           'title': 'アップグレードガイド',
@@ -305,6 +299,11 @@ module.exports = {
             '/en/guide/features/questionnaire.md',
             '/en/guide/features/presentation.md',
             '/en/guide/features/marp.md',
+            '/en/guide/features/lsx.md',
+            '/en/guide/features/embed_html.md',
+            '/en/guide/features/checkbox.md',
+            '/en/guide/features/page_linker.md',
+            '/en/guide/features/footnote.md',
           ]
         },
         {
@@ -331,17 +330,6 @@ module.exports = {
             '/en/admin-guide/management-cookbook/audit-log.md',
             '/en/admin-guide/management-cookbook/plugins.md',
           ]
-        },
-        {
-          title: 'Examples',
-          key: 'examples',
-          children: [
-            '/en/guide/tips/hierarchical.md',
-            '/en/guide/tips/include_html.md',
-            '/en/guide/tips/checkbox.md',
-            '/en/guide/tips/page_linker.md',
-            '/en/guide/tips/footnote.md',
-          ],
         },
         {
           'title': 'Uupgrade guide',

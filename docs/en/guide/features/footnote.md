@@ -1,4 +1,4 @@
-# Creating annotations and footnotes
+# Add footnotes
 
 You can add annotations and footnotes to your GROWI wiki.
 When you add an annotation, a footnote appears at the bottom of the page.

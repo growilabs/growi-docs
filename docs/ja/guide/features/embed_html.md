@@ -1,6 +1,6 @@
-# HTML タグを組み込み
+# HTML タグを組み込む
 
-<img :src="$withBase('/assets/images/include_html.png')" alt="html">
+<img :src="$withBase('/assets/images/embed_html.png')" alt="html">
 
 ```markdown
 <div class="row">

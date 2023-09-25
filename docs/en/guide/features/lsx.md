@@ -1,4 +1,4 @@
-# Add a page hierarchy using lsx
+# Add a page list using  the lsx
 
 You can add a page hierarchy of the current page or of another page using `$lsx()`, as shown below.
 
@@ -27,11 +27,11 @@ The options you can set include:
 
 | Parameter name    | Default value    |  Explanation   | Additional details |
 | --- | --- | --- | --- |
-|  num   |  not set(< growi-plugin-lsx 4.0.0), 50(>= growi-plugin-lsx 4.0.0)   | Specify the number of pages in the hierarchy.| [num option details](./hierarchical.html#num) |
-|  depth   |  not set   | Specify the maximum hierarchy depth to display.| [depth option details](./hierarchical.html#depth) |
-|  sort   |  path   | Specify the sort order of the hierarchy. | [sort option details](./hierarchical.html#sort) |
-|  reverse   |  false   | Reverse the order of the hierarchy.| [reverse option details](./hierarchical.html#reverse) |
-|  filter   |  not set   | Filter the hierarchy according to some parameters. | [filter option details](./hierarchical.html#filter) |
+|  num   |  not set(< growi-plugin-lsx 4.0.0), 50(>= growi-plugin-lsx 4.0.0)   | Specify the number of pages in the hierarchy.| [num option details](./lsx.html#num) |
+|  depth   |  not set   | Specify the maximum hierarchy depth to display.| [depth option details](./lsx.html#depth) |
+|  sort   |  path   | Specify the sort order of the hierarchy. | [sort option details](./lsx.html#sort) |
+|  reverse   |  false   | Reverse the order of the hierarchy.| [reverse option details](./lsx.html#reverse) |
+|  filter   |  not set   | Filter the hierarchy according to some parameters. | [filter option details](./lsx.html#filter) |
 
 Additional details are as follows.
 
