@@ -12,6 +12,8 @@ marp: true
 header: "Frontmatter"
 paginate: true
 ---
+
+本文
 ~~~
 
 ## Frontmatter を使って制御できる機能一覧

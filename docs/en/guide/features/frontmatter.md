@@ -12,6 +12,8 @@ marp: true
 header: "Front-matter"
 paginate: true
 ---
+
+body text
 ~~~
 
 ## Features that can be controlled using front-matter
