@@ -1,12 +1,14 @@
 # lsx 機能を使ってページリストを表示する
 
-<img :src="$withBase('/assets/images/lsx_gif.gif')" alt="lsx">
 
 GROWI では 作成したページを一覧表示する機能があります。
 
 `$lsx()` (ドル記号と lsx と括弧) を記述すると、該当ページ配下のページ一覧を出力できます。
 
 多数のページを管理する画面などで便利に使えます。
+
+
+<img :src="$withBase('/assets/images/ja/lsx.png')" alt="lsx">
 
 ## 指定のページ配下を一覧出力
 
