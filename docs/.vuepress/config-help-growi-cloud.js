@@ -117,6 +117,7 @@ module.exports = {
             '/ja/cloud/request.md',
             '/ja/cloud/resale.md',
             '/ja/cloud/securitycheck.md',
+            '/ja/cloud/invoice_system.md',
           ]
         },
 
@@ -153,7 +154,7 @@ module.exports = {
             '/ja/guide/features/slack_integration.md',
             '/ja/guide/features/questionnaire.md',
             '/ja/guide/features/presentation.md',
-            '/ja/guide/features/marp.md',
+            '/ja/guide/features/frontmatter.md',
             '/ja/guide/features/lsx.md',
             '/ja/guide/features/embed_html.md',
             '/ja/guide/features/checkbox.md',
@@ -298,7 +299,7 @@ module.exports = {
             '/en/guide/features/slack_integration.md',
             '/en/guide/features/questionnaire.md',
             '/en/guide/features/presentation.md',
-            '/en/guide/features/marp.md',
+            '/ja/guide/features/frontmatter.md',
             '/en/guide/features/lsx.md',
             '/en/guide/features/embed_html.md',
             '/en/guide/features/checkbox.md',

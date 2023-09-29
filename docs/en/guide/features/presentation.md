@@ -1,14 +1,10 @@
 # Create slides for a presentation
 
-GROWI can automatically create slides for presentations. This feature allows you to automatically convert page content into slides and start a slide show without using other presentation software.
+GROWI can automatically create slides for presentations. This feature allows you to automatically convert page content into slides and start a full-screen slide show without using other presentation software.
 
-There are two ways to create slides: using GROWI's default feature or using [Marp](https://marp.app/). (Hereafter, slides created using the default GROWI feature will be called "GROWI slides" and slides created using Marp will be called "Marp slides.)
+There are two ways to create slides: using GROWI's default feature or using [Marp](https://marp.app/). Marp is a tool for creating presentation slides using Markdown.
 
-When creating GROWI slides, no special settings or editing is required. When you start a slideshow, a slide is automatically created for each page heading in Markdown (h1 and h2 are the slide splitter).
-
-See [here](/en/guide/features/marp.html) for instructions on how to create Marp slides.
-
-For the difference between GROWI slides and Marp slides, see [here](/en/guide/features/presentation.html#Features of GROWI slides and -marp- slides).
+Hereafter, slides created using the default GROWI feature will be called "GROWI slides" and slides created using Marp will be called "Marp slides".
 
 ## Start the slideshow
 
@@ -19,24 +15,135 @@ For the difference between GROWI slides and Marp slides, see [here](/en/guide/fe
 <img :src="$withBase('/assets/images/en/presentation.png')" alt="presentation">
 
 ::: tip
-If `marp: true` is set in the Frontmatter of the page, the Marp slide will be displayed; if not, the GROWI slide will be displayed.
-
-For more information about Frontmatter and Marp, please refer to [here](/en/guide/features/marp.html).
+If `marp: true` is set in the front-matter of the page, the Marp slide will be displayed; if not, the GROWI slide will be displayed.
 :::
 
-## Features of GROWI slides and Marp slides
+## View slides in view mode or preview in edit mode
 
-### GROWI Slide
+GROWI can render the page content as slides without using the presentation feature. (This feature is hereafter referred to as the slide view feature.)
 
-- Slides are automatically created for each h1 and h2 heading on the page.
-- You can use GROWI's original features such as lsx.
-- Math, Mermaid, draw.io, etc. supported by GROWI can be displayed.
+To use the slide view feature, include `slide: true` in the front-matter of the page.
 
-### Marp Slide
+<img :src="$withBase('/assets/images/en/slide_preview.png')" alt="slideview">
+
+<img :src="$withBase('/assets/images/en/slide_view.png')" alt="slideview">
+
+### Example
+
+~~~slide view
+---
+slide: true
+---
+
+# How to use GROWI
+
+### GROWI Features
+- Wiki in Markdown
+- Search by ElasticSearch
+- Simultaneous editing by multiple users
+- Group management
+- Comment function
+
+![bg right 80%](https://growi.org/assets/images/growi-logo.svg)
+
+## GROWI Features
+- Drawing with draw.io
+- Markdown can be display as slides.
+
+```
+---
+slide: true
+---
+
+本文
+
+```
+~~~
+
+
+## What are GROWI slide and Marp slide?
+
+### Features
+
+#### GROWI Slide
+
+- A slide is automatically created for each page heading in Markdown (h1(#) and h2(##) are the slide splitter).
+- GROWI's original syntax, such as lsx, can be used.
+- Math, Mermaid, draw.io, etc. supported by GROWI can be rendered.
+- Slides can be shown in view mode or preview in edit mode.
+
+#### Marp Slide
 
 - All Marp syntax can be used.
 - You can create more beautiful slides by design settings, etc.
 - Slides can be displayed in View mode.
-- Slides can be previewed in Edit mode.
+- Slides can be shown in view mode or preview in edit mode.
+
+::: tip
+Marp slides are compatible with [Marp for VS Code](https://github.com/marp-team/marp-vscode), so you can preview each other using the same Markdown file.
+:::
+
+### Create GROWI slides
+
+No special configuration or editing is required to use the Presentation feature. When you start a slideshow, it automatically converts the Markdown content into slides.
+
+If you want to view slides in View mode or Edit mode preview, please use [slide view feature](/en/guide/features/presentation.html##view-slides-in-view-mode-or-preview-in-edit-mode).
+
+### Create Marp slides
+
+:::tip
+To use this feature, the administrator must activate the Marp. For details on how to set it up, please refer to [here](/en/admin-guide/management-cookbook/marp.html).
+:::
+
+To use Marp, set `marp: true` in the front-matter of the page.
+
+Slides are split by a horizontal rule such as `---`. The horizontal ruler after the ending ruler of the front-matter is recognized as a slide splitter.
+
+Please refer to [Marpit Markdown](https://marpit.marp.app/markdown) for more information.
 
 <img :src="$withBase('/assets/images/en/marp.png')" alt="marp">
+
+#### Example
+
+~~~marp
+---
+marp: true
+header: "Marp in GROWI"
+footer: "How to use Marp"
+paginate: true
+---
+
+<style scoped>
+h1 {
+    text-align: center;
+}
+</style>
+# How to use Marp
+
+---
+
+## GROWI Features
+- Wiki in Markdown
+- Search by ElasticSearch
+- Simultaneous editing by multiple users
+- Group management
+- Comment function
+
+![bg right 80%](https://growi.org/assets/images/growi-logo.svg)
+
+---
+
+## GROWI Features
+- Drawing with draw.io
+- Can use mermaid and Marp
+- Activate Marp as follows
+```
+---
+marp: true
+---
+
+Body text
+
+```
+~~~
+
