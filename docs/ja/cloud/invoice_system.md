@@ -25,4 +25,4 @@ GROWI.cloud に関わる全ての請求書について、以下の通り適格�
 
 請求書での登録番号の記載例につきましては以下をご覧ください。
 
-<img :src="$withBase('/assets/help-growi-cloud/images/ja/gc_receipt_example.png')" alt="gc_receipt_example.png">
+<img :src="$withBase('/assets/images/gc_receipt_example.png')" alt="gc_receipt_example.png">
