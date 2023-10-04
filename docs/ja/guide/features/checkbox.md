@@ -1,4 +1,4 @@
-# チェックボックスの利用
+# チェックボックスを使う
 
 <img :src="$withBase('/assets/images/checkbox.png')" alt="checkbox">
 
