@@ -1,96 +1,74 @@
-# Add a page list using  the lsx
+# Render a page list using the lsx
 
-You can add a page hierarchy of the current page or of another page using `$lsx()`, as shown below.
+lsx can render a list of pages that exist under a specific page.
+
+For example, if you write `$lsx()` on a page, you can render a list of pages under that page as shown in the image.
+
+This is useful when you want to list shortcuts to multiple pages.
 
 <img :src="$withBase('/assets/images/en/lsx.png')" alt="lsx">
 
-This is useful for parent pages with large child hierarchy structures.
+## Render a page list under the specified page
 
-## Add a page hierarchy
+There are two ways to specify a page: absolute path from the root page or relative path from the page being edited.
 
-By default, the command `$lsx()` will produce the hierarchy of the current page.  You can also add hierarchies of other pages:
+If you specify a page that does not exist, an error message like `$lsx(/sample) has no contents` will be displayed.
 
-By supplying a page name beginning with `/`, you can provide a page path from your wiki's main page.  For example, if you enter `$lsx(/user)`, the hierarchy of the main page's direct child called "user" will be produced.
+- `$lsx(/user)` render a page list of the main page's direct child called "user".
+- `$lsx (./sample)` render a page list under the current page's child called "sample".
 
-By beginning your page name with `.`, you can provide a page path from the current page.  For example, `$lsx (./sample)` will provide the hierarchy under the current page's child called "sample".
+## Setting options
 
-[//]: <> (TODO: 紹介してるエラーメッセージの例を表そう。)
-If the provided page name does not correspond to a page in the wiki, an error message will be displayed.
+The lsx has many option settings. To set multiple options, separate each one with a comma as follows: `$lsx(/page, depth=1, sort=createdAt, reverse=true)`.
 
-## Additional features of lsx
-
-`$lsx()` allows you to set many additional options to customize your page hierarchy display.  You can use any combination of them, each separated by a comma, for example:
-
-`$lsx(/page, depth=1, sort=createdAt, reverse=true)`
-
-The options you can set include:
+### List of options
 
 | Parameter name    | Default value    |  Explanation   | Additional details |
 | --- | --- | --- | --- |
-|  num   |  not set(< growi-plugin-lsx 4.0.0), 50(>= growi-plugin-lsx 4.0.0)   | Specify the number of pages in the hierarchy.| [num option details](./lsx.html#num) |
-|  depth   |  not set   | Specify the maximum hierarchy depth to display.| [depth option details](./lsx.html#depth) |
-|  sort   |  path   | Specify the sort order of the hierarchy. | [sort option details](./lsx.html#sort) |
-|  reverse   |  false   | Reverse the order of the hierarchy.| [reverse option details](./lsx.html#reverse) |
-|  filter   |  not set   | Filter the hierarchy according to some parameters. | [filter option details](./lsx.html#filter) |
+|  num   |  50  | Specify the number of pages | [num option details](./lsx.html#num) |
+|  depth   |  not set   | Specify the maximum depth | [depth option details](./lsx.html#depth) |
+|  sort   |  path   | Specify page sort order | [sort option details](./lsx.html#sort) |
+|  reverse   |  false   | Reverse the order of pages | [reverse option details](./lsx.html#reverse) |
+|  filter   |  not set   | Filter pages | [filter option details](./lsx.html#filter) |
 
-Additional details are as follows.
+### num
 
-### `num`
+You can specify the number of pages to render. The default value is 50.
 
-- Specify the number of pages to display in the hierarchy.
+- `$lsx(num=N)` : Renders N pages, where N is a natural number.
+- You can use `:` or `+` to control the pages to render.
+  - `$lsx(num=1:10)` : Render pages 1st through 10th.
+  - `$lsx(num=2:)` : Render pages from the 2nd to the last.
+  - `$lsx(num=5+2)` : Render pages from the 5th to the next 2 (5th,6th,7th).
 
-Example: `$lsx(num=5)`
+### depth
 
-You can also specify a page range using `num`:
+You can specify the maximum depth of the hierarchy to render. By default, all existing pages are rendered.
 
-- `$lsx(num=1:10)` will display the 1st to the 10th result.
+- `$lsx(depth=N)` : Render pages down N levels starting from the current page or the specified page.
+- You can use `:` or `+` to control the pages to be render.
+  - `$lsx(num=2:3)` : Render pages 2 to 3 levels down.
+  - `$lsx(num=2:)` : Render pages from the 2 level to the lowest level.
+  - `$lsx(num=1+2)` : Render pages from 1 level down to the next 2 levels (1,2,3 levels).
 
-- `$lsx(num=2:)` will display the 2nd result to the end of the hierarchy (skipping the first result).
-
-- `$lsx(num=5+2)` will display the 5th result, and then the next 2 results (5th, 6th, 7th).
-
-### `depth`
-
-- Specify the maximum depth of the hierarchy
-
-Example: `$lsx(depth=1)`.
-
-By default, the entire hierarchy is displayed with no depth limit.
-
-Ranges can be specified in the same way as `num`.
-
-### `sort`
+### sort
   
 The order of the page list can be specified as follows:
 
-- `$lsx(sort=path)`
+- `$lsx(sort=path)` (default): Render pages in order of page name (ascending order of page name character code).
+- `$lsx(sort=createdAt)` : Render in ascending order of creation date (oldest first)- `$lsx(sort=updatedAt)` : Render in ascending order of last modified date (oldest first).
 
-  Lexicographic (alphabetical) sort by page name.  This is the default setting.
+### reverse
 
-- `$lsx(sort=createdAt)`
+Reverse the render order. The default value is `false`.
 
-  Sort by page created date in increasing order (oldest page first).
+- `$lsx(sort=updatedAt, reverse=true)` : Render in descending order of last modified date (oldest first).
 
-- `$lsx(sort=updatedAt)`
+### filter
 
-  Sort by page last updated date in increasing order.
+You can filter the render pages by the string contained in the page name. Filter's match type is partial match.
 
-### `reverse`
-
-- Reverse the sort order.  Supported values are `true` and `false`.
-  Default value is `false`.
-
-Example: `$lsx(sort=updatedAt, reverse=true)`
-
-In this example, the hierarchy will be displayed in order of page last updated date, with the most recently updated page first.
-
-### `filter`
-
-- Filter the hierarchy to display only pages containing a specified text in the title
-
-Example: `$lsx(filter=2019)`
-
-In this example, only pages with `2019` in the page name are displayed in the list.
+- `$lsx(filter=2023)` : Only pages with `2023` in the page name will be render.
 
 ## GitHub
 
