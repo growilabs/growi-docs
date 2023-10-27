@@ -13,6 +13,7 @@ GROWI はデモサイトがあるため、簡単に始めることができま�
 画面右上にある「作成」ボタンからページの作成をしてみましょう。
 
 <img :src="$withBase('/assets/images/create_page_button.png')" alt="">
+<img :src="$withBase('/assets/images/create_page_button2.png')" alt="">
 
 ここでのタイトルは `/お試し/はじめてのページ` とします。すでに作成されている場合には、違うページ名で作成してみてください。
 
