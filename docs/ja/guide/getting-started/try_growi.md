@@ -81,6 +81,11 @@ GROWI はデモサイトがあるため、簡単に始めることができま�
 
 ## ページ配下に作成したページ一覧を確認する
 
-ページ配下に作成したページ一覧は、ページ内に表示またはページ右側のボタンから確認できます。
-<img :src="$withBase('/assets/images/page_list.png  ')" alt="">
+ページ配下に作成したページ一覧は、ページ内の右側のボタンから確認できます。
+
 <img :src="$withBase('/assets/images/page_list2.png  ')" alt="">
+
+親ページ (/MyPage) が空ページだった場合はページ一覧がページ内に表示されます。
+
+<img :src="$withBase('/assets/images/page_list.png  ')" alt="">
+
