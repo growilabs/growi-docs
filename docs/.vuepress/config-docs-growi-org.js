@@ -324,19 +324,6 @@ module.exports = {
               ],
             },
             {
-              title: 'Plugin',
-              collapsable: false,
-              children: [
-                '/en/dev/plugin/architecture.md',
-                '/en/dev/plugin/quick-start.md',
-                '/en/dev/plugin/publish.md',
-                '/en/dev/plugin/walk-through-boilerplate.md',
-                '/en/dev/plugin/metadata.md',
-                '/en/dev/plugin/custom-tag.md',
-                '/en/dev/plugin/custom-route.md',
-              ],
-            },
-            {
               title: 'Other Documents',
               collapsable: false,
               children: [
@@ -580,19 +567,6 @@ module.exports = {
                 '/ja/dev/tips/env-vars.md',
                 '/ja/dev/tips/logger.md',
                 '/ja/dev/tips/debugging.md',
-              ],
-            },
-            {
-              title: 'プラグイン',
-              collapsable: false,
-              children: [
-                '/ja/dev/plugin/architecture.md',
-                '/ja/dev/plugin/quick-start.md',
-                '/ja/dev/plugin/publish.md',
-                '/ja/dev/plugin/walk-through-boilerplate.md',
-                '/ja/dev/plugin/metadata.md',
-                '/ja/dev/plugin/custom-tag.md',
-                '/ja/dev/plugin/custom-route.md',
               ],
             },
             {
