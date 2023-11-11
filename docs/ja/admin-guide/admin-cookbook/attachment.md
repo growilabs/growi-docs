@@ -12,6 +12,7 @@ GROWI ページの添付ファイルの保存先は以下を利用できます�
 
 - Amazon S3
 - Google Cloud Storage
+- Azure Blob Storage
 - MongoDB
 - ローカルファイルシステム
 
@@ -29,6 +30,7 @@ GROWI ページの添付ファイルの保存先は以下を利用できます�
 | --- | --- |
 | Amazon S3 | `aws` |
 | Google Cloud Storage | `gcs` |
+| Azure Blob Storage | `azure` |
 | MongoDB | `mongodb` |
 | ローカルファイルシステム | `local` |
 
@@ -49,6 +51,25 @@ GCS 設定を環境変数によって固定したい場合は、環境変数 `GC
 <!-- textlint-disable weseek/sentence-length -->
 環境変数 `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` による GCS 設定の固定が有効な場合、ファイルアップロード設定での GCS 設定のフォームの値は無効となり、変更もできなくなります。
 <!-- textlint-enable weseek/sentence-length -->
+
+### 環境変数による Azure Blob Storage 設定
+
+ファイルアップロード設定内の Azure(Blob) 設定のフォームで値を指定していない場合は、以下のデフォルト値を利用します。
+
+- テナントID: `AZURE_TANANT_ID`
+- クライアントID: `AZURE_CLIENT_ID`
+- クライアントシークレット: `AZURE_CLIENT_SECRET`
+- ストレージアカウント名: `AZURE_STORAGE_ACCOUNT_NAME`
+- コンテナ名: `AZURE_STORAGE_CONTAINER_NAME`
+
+#### 環境変数による Azure(Blob) 設定の固定
+
+Azure(Blob) 設定を環境変数によって固定したい場合は、環境変数 `AZURE_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` を `true` にし、上記の環境変数に値を入れてください。未設定の場合は、null が入ります。
+
+<!-- textlint-disable weseek/sentence-length -->
+環境変数 `AZURE_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` による Azure(Blob) 設定の固定が有効な場合、ファイルアップロード設定での Azure(Blob) 設定のフォームの値は無効となり、変更もできなくなります。
+<!-- textlint-enable weseek/sentence-length -->
+
 ## 添付ファイルのサイズ制限
 
 以下の環境変数により、一度にアップロードできるファイルのサイズ上限と全ページに添付されているファイルの累計サイズの上限を設定できます。いずれも単位は `bytes` です。デフォルトではいずれの値も `Infinity` となっており、ファイルサイズは制限されません。
@@ -101,3 +122,6 @@ GROWI サーバーは失効期間と同じ長さだけ署名付きURLをキャ�
   - `S3_LIFETIME_SEC_FOR_TEMPORARY_URL`
 - GCP(GCS)  
   - `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL`
+- Azure(Blob)
+  - `AZURE_LIFETIME_SEC_FOR_TEMPORARY_URL`
+
