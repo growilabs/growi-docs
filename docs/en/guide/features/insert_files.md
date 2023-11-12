@@ -14,7 +14,7 @@ You can insert an image in the following ways
 <ContextualBlock context="docs-growi-org">
 
 ::: tip
-Uploading files to AWS or GCS requires settings.
+Uploading files to AWS or GCS or Azure requires settings.
 
 Please refer to [here](/en/admin-guide/admin-cookbook/attachment.html) for details.
 :::

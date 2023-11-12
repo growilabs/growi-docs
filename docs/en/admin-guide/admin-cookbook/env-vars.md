@@ -55,6 +55,14 @@ pageClass: admin-cookbook-env-vars
 | `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL` | Time to keep the cache of signed URLs (number of seconds)| 120 |
 | `GCS_REFERENCE_FILE_WITH_RELAY_MODE` | If `true`, the GROWI server sends the attachment data (relay mode). In the case of `false` (default value), the users download data from GCS directly by [Signed URLs](https://cloud.google.com/storage/docs/access-control/signed-urls) created by the server. | `false` |
 | `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars over values in DB for some GCS options. | `false` |
+| `AZURE_TEANANT_ID` | ID of the application's Microsoft Entra tenant. | |
+| `AZURE_CLIENT_ID` | ID of a Microsoft Entra application. | |
+| `AZURE_CLIENT_SECRET` | One of the application's client secrets. | |
+| `AZURE_STORAGE_ACCOUNT_NAME` | Storage Account Name | |
+| `AZURE_STORAGE_CONTAINER_NAME` | Container Name | |
+| `AZURE_LIFETIME_SEC_FOR_TEMPORARY_URL` | Time to keep the cache of signed URLs (number of seconds)| 120 |
+| `AZURE_REFERENCE_FILE_WITH_RELAY_MODE` |If `true`, the GROWI server sends the attachment data (relay mode). In the case of `false` (default value), the users download data from Azure(Blob) directly by [Shared Access Signatured URLs](https://learn.microsoft.com/en-US/azure/storage/common/storage-sas-overview) created by the server. | `false` |
+| `AZURE_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars over values in DB for some Azure(Blob) options.  | `false` |
 | **Option to integrate with external systems** | | |
 | `NCHAN_URI` | URI to connect to Nginx [Nchan](https://nchan.io/) server. | |
 | `HACKMD_URI` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server. | |
