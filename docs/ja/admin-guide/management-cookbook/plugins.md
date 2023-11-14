@@ -13,7 +13,7 @@
 1. GROWI に管理者アカウントでログインし、「プラグイン」にアクセスします。
 <img :src="$withBase('/assets/images/ja/plugin-2.png')" alt="plugin_section">
 1. リポジトリ URL を入力します。
-<img :src="$withBase('/assets/images/ja/plugin-3.png')" alt="install_URL">
+<img :src="$withBase('/assets/images/ja/plugin-3.png')" alt="install_url">
 1. インストールボタンをクリックします。
 <img :src="$withBase('/assets/images/ja/plugin-4.png')" alt="install_button">
 1. プラグインがプラグインカードに追加されます。また、ON/OFFを操作するとプラグインの有効化/無効化ができます。
