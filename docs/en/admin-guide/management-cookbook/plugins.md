@@ -2,7 +2,7 @@
 
 You can customize GROWI by Plugins.
 
-Please check [GROWI plugin site](https://growi.org/plugins) for publicly available plugins.
+Please check [GROWI plugin site](https://growi.org/plugins/en) for publicly available plugins.
 
 [[toc]]
 
