@@ -8,7 +8,7 @@ Please check [GROWI plugin site](https://growi.org/plugins) for publicly availab
 
 ## How to install plugins
 
-1. Go to [GROWI plugin site](https://growi.org/plugins).
+1. Go to [GROWI plugin site](https://growi.org/plugins/en).
 
 2. Copy the URL of the GitHub repository that you want to install.
 
