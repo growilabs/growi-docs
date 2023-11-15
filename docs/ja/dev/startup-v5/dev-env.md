@@ -41,6 +41,12 @@
 
 :::
 
+::: tab "Ubuntu" id="tab-docker-ubuntu"
+
+1. [Docker Engine on Ubuntu をインストール](https://docs.docker.com/engine/install/ubuntu/)
+
+:::
+
 ::::
 
 
@@ -64,8 +70,14 @@
 
 ```bash
 brew install git
-brew install git-lfs
-git lfs install
+```
+
+:::
+
+::: tab "Ubuntu" id="tab-git-ubuntu"
+
+```bash
+apt-get install git
 ```
 
 :::
@@ -124,12 +136,6 @@ devcontainer は 自動的に docker ホストの設定を参照します。
 1. [Visual Studio Code](https://code.visualstudio.com/download) をインストール
 2. 拡張機能をインストール
     * 「Remote - Development」extension のインストール
-
-
-
-### MongoDB のための GUI クライアント
-
-1. [Robo 3T](https://robomongo.org/download) をインストール
 
 
 
