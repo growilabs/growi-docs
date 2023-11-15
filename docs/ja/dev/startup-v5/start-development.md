@@ -95,3 +95,10 @@ yarn
     ```bash
     turbo run build
     ```
+
+
+## MongoDB for VS Code を利用してデータベースにアクセスする
+
+<https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode>
+
+追加する接続先: `mongodb://mongo`
