@@ -12,6 +12,7 @@
 <img :src="$withBase('/assets/images/en/organization_1.png')" alt="organization_1.png">
 
 The created organization ID can be confirmed from the Organization List panel.
+
 <img :src="$withBase('/assets/images/en/organization_4.png')" alt="organization_4.png">
 
 ## Modifying an Organization
