@@ -7,9 +7,14 @@
 ## 組織の作成方法
 
 - 無料トライアルを開始する際に組織の作成画面が表示され、任意の組織を作成できます。
-- また [GROWI.cloud のダッシュボード](https://growi.cloud/my) の組織一覧パネルからも任意の組織を新たに作成できます。  
+- また [GROWI.cloud のダッシュボード](https://growi.cloud/my) の組織一覧パネルからも任意の組織を新たに作成できます。
+  - 組織を作成すると、自動的に組織 ID が生成されます。
 
 <img :src="$withBase('/assets/images/ja/organization_1.png')" alt="organization_1.png">
+
+作成された組織 ID は組織一覧から確認可能です。
+
+<img :src="$withBase('/assets/images/organization_3.png')" alt="organization_3.png">
 
 ## 組織の変更
 
