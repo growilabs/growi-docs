@@ -14,7 +14,7 @@
 
 作成された組織 ID は組織一覧から確認可能です。
 
-<img :src="$withBase('/assets/images/organization_3.png')" alt="organization_3.png">
+<img :src="$withBase('/assets/images/ja/organization_3.png')" alt="organization_3.png">
 
 ## 組織の変更
 
