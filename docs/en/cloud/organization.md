@@ -8,7 +8,11 @@
 
 - When you log in for the first time, an organization named `default` will be created.
 - You can also create a new organization from the Organization List panel on the [GROWI.cloud dashboard](https://growi.cloud/my) .  
+  - When creating an organization, an organization ID is automatically generated.
 <img :src="$withBase('/assets/images/en/organization_1.png')" alt="organization_1.png">
+
+The created organization ID can be confirmed from the Organization List panel.
+<img :src="$withBase('/assets/images/en/organization_4.png')" alt="organization_4.png">
 
 ## Modifying an Organization
 
