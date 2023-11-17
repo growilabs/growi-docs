@@ -12,14 +12,16 @@
 
 <img :src="$withBase('/assets/images/ja/organization_1.png')" alt="organization_1.png">
 
-作成された組織 ID は組織一覧から確認可能です。
+### 組織 ID の確認方法
+
+組織に紐づく組織 ID は組織一覧パネルからご確認いただけます。
 
 <img :src="$withBase('/assets/images/ja/organization_3.png')" alt="organization_3.png">
 
 ## 組織の変更
 
 - 組織名など組織の基本情報は、各組織の詳細画面から編集できます。
-- また、同画面からプランの変更やサーバー証明書、クレジットカードの登録等の各種操もできます。  
+- また、同画面からプランの変更やサーバー証明書、クレジットカードの登録等の各種操作もできます。  
 
 <img :src="$withBase('/assets/images/ja/organization_2.png')" alt="organization_2.png">
 
