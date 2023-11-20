@@ -22,7 +22,7 @@ GROWI のデフォルトの Markdown 記法では、単一の改行は`<br>`と�
 
 ## XSS(Cross Site Scripting)対策設定
 
-マークダウンテキスト内の HTML タグの扱いを設定し、悪意のあるプログラムからの攻撃を防ぎます。　　
+マークダウンテキスト内の HTML タグの扱いを設定し、悪意のあるプログラムからの攻撃を防ぎます。  
 「おすすめ設定」と「カスタムホワイトリスト」のどちらかを選択いただけます。
 
 <img :src="$withBase('/assets/images/ja/markdown_3.png')" alt="markdown_3.png">
