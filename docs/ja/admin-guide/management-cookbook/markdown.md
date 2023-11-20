@@ -2,14 +2,14 @@
 
 ## Line Breaks の ON/OFF
 
-### 概要
+GROWI のデフォルトの Markdown 記法では、単一の改行は`<br>`として扱われません。
+単一の改行が`<br>`として扱われるようにするには、ここから設定できます。
 
-GROWI のデフォルトの Markdown 記法では、単一の改行は`<br>`として扱われません。マークダウン設定ページにて、単一の改行が`<br>`として扱われるように設定できます。
+### Line Break を有効にする
 
-### 手順
+Line Break 設定で、ON/OFF を切り替えることができます。
 
-1. 管理ページ → マークダウン設定\(`/admin/markdown` ページへ遷移\)
-2. Line Break 設定で、ON/OFF を切り替えることができます。
+<img :src="$withBase('/assets/images/ja/markdown_1.png')" alt="markdown_1.png">
 
 ## インデント設定
 
