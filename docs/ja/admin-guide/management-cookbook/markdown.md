@@ -1,7 +1,8 @@
 # マークダウン設定
 
-マークダウンの詳細は以下のページで設定できます。  
-管理ページ ＞ マークダウン設定(`/admin/markdown` ページへ遷移)
+マークダウンの詳細は、以下のページで設定できます。  
+
+- 管理ページ ＞ マークダウン設定(`/admin/markdown` ページへ遷移)
 
 ## Line Break設定
 
@@ -12,14 +13,17 @@ GROWI のデフォルトの Markdown 記法では、単一の改行は`<br>`と�
 
 ## インデント設定
 
-以下が設定できます。
+以下の設定ができます。
 
 - 既定のインデント幅
-- ユーザによるインデント幅変更を許可しない
+- ユーザーによるインデント幅の変更許可（ ON/OFF の切り替え）
 
 <img :src="$withBase('/assets/images/ja/markdown_2.png')" alt="markdown_2.png">
 
-
-
-
 ## XSS(Cross Site Scripting)対策設定
+
+マークダウンテキスト内の HTML タグの扱いを設定し、悪意のあるプログラムからの攻撃を防ぎます。　　
+「おすすめ設定」と「カスタムホワイトリスト」のどちらかを選択いただけます。
+
+<img :src="$withBase('/assets/images/ja/markdown_3.png')" alt="markdown_3.png">
+
