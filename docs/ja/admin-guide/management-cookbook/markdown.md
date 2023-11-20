@@ -2,7 +2,7 @@
 
 ## Line Breaks の ON/OFF
 
-GROWI のデフォルトの Markdown 記法では、単一の改行は`<br>`として扱われません。
+GROWI のデフォルトの Markdown 記法では、単一の改行は`<br>`として扱われません。  
 単一の改行が`<br>`として扱われるようにするには、ここから設定できます。
 
 ### Line Break を有効にする
