@@ -142,6 +142,12 @@ Google Cloud Storage の Bucket にファイルを保存します。
 
 Google Cloud Storage の設定方法は[こちら](/ja/admin-guide/management-cookbook/app-settings.html#google-cloud-storage-のセットアップ)を参考にしてください。
 
+#### Azure Blob Storage へのアップロード
+
+Azure Blob Storage の コンテナ にファイルを保存します。
+
+Azure Blob Storage の設定方法は[こちら](/ja/admin-guide/management-cookbook/app-settings.html#azure-blob-storage-のセットアップ)を参考にしてください。
+
 #### MongoDB へのアップロード
 
 GROWI データの保存先に指定している MongoDB に [GridFS](https://docs.mongodb.com/manual/core/gridfs/) を利用し、ファイルを保存します。
@@ -211,6 +217,36 @@ Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介し
 - API Key Json Path: [(GROWIのルートディレクトリから見た) GCP サービスアカウントキー の JSON ファイルのパス]
 - バケット名: [GCS のバケット名]
 - Name Space: [バケット内に作成するファイルアップロード用のディレクトリ名]
+
+### Azure Blob Storage のセットアップ
+
+以下の5つの情報が必要です。
+- (a). ディレクトリ (テナント) ID
+- (b). アプリケーション (クライアント) ID
+- (c). クライアントシークレット
+- (d). ストレージアカウント名
+- (e). コンテナ名
+
+以下の手順で設定をしながら、必要な情報を取得していきます。
+
+#### Azureで設定
+1. [Azure Portal](https://portal.azure.com) に移動
+
+1. トップメニューから「Microsoft Entra ID」に移動し、サイドメニュー「管理＞アプリの登録」から、アプリケーション（ここでは**GROWI**）を新規登録する
+    1. ここで情報`(a),(b)`を取得する
+1. 登録したアプリケーション(**GROWI**)の詳細画面に移動し、サイドメニュー「管理＞証明書とシークレット」から、「新しいクライアントシークレットを追加する」
+    1. ここで情報`(c)`を取得する。（作成直後にしか表示されないので注意）
+1. トップメニューから「ストレージアカウント」に移動しストレージアカウントを作成する
+    1. ここで情報`(d)`を取得する
+1. 作成したストレージアカウントの詳細画面に移動し、サイドメニュー「データストレージ＞コンテナ」から、新しいコンテナを作成する
+    1. ここで情報`(e)`を取得する
+1. 作成したストレージアカウントの詳細画面に移動し、サイドメニュー「アクセス制御(IAM)」から、「ロール割り当ての追加」
+    1. 職務ロール「ストレージ BLOB データ共同作成者」を選択
+    1. メンバー選択で、上で登録したアプリを選択
+    1. 「レビューと割り当て」をおこなう。
+
+#### GROWI で設定
+1. GROWI のアプリ設定のファイルアップロード設定にて Azure(BLOB) を選択し、上記過程で確認した情報を設定してください。
 
 <ContextualBlock context="docs-growi-org">
 
