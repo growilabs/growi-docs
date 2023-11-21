@@ -3,7 +3,6 @@
 マークダウンの詳細は、以下のページで設定できます。  
 
 - 管理ページ ＞ マークダウン設定(`/admin/markdown` ページへ遷移)
-ユーザーユーザー
 
 ## Line Break設定
 
@@ -30,7 +29,7 @@ GROWI のデフォルトの Markdown 記法では、単一の改行は`<br>`と�
 
 <img :src="$withBase('/assets/images/ja/markdown_indent_1.png')" alt="markdown_indent_1.png">
 
-- ユーザーによるインデント幅の変更を許可する設定にしている場合、
+- ユーザーによるインデント幅の変更を許可する設定にしている場合、  
 ユーザーは、ページ編集画面の下部より、幅を指定することができます。
 
 <img :src="$withBase('/assets/images/ja/markdown_indent_2.png')" alt="markdown_indent_2.png">
