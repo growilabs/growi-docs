@@ -239,22 +239,24 @@ You will need the following five pieces of information
 Follow the steps below to obtain the necessary settings as you go through the configuration process.
 
 #### Setup in Azure
+
 1. go to [Azure Portal](https://portal.azure.com)
 
-1. go to "Microsoft Entra ID" from the top menu and register a new application (in this case **GROWI**) from the side menu "Administration > Register Application
+1. go to "Microsoft Entra ID" from the top menu and register a new application (in this case **GROWI**) from the side menu Administration > Register Application
     1. get information `(a),(b)` here
 1. go to the detail screen of the registered application (**GROWI**), and from the side menu "Administration > Certificates and Secrets", "Add new client secret".
     1. get the information `(c)` here. (Note that this will only appear immediately after creation)
 1. go to "Storage Accounts" from the top menu and create a storage account
     1. get information `(d)` here
-1. go to the detail screen of the created storage account and create a new container from the side menu "Data Storage > Container
+1. go to the detail screen of the created storage account and create a new container from the side menu Data Storage > Container
     1. get information `(e)` here
-1. go to the detail screen of the created storage account, from the side menu "Access Control (IAM)", "Add Role Assignment
-    1. select the role "Storage BLOB Data Co-Creator
-    1. In the Member Selection, select the application registered above. 
+1. go to the detail screen of the created storage account, from the side menu "Access Control (IAM)", "Add Role Assignment"
+    1. select the role "Storage BLOB Data Co-Creator"
+    1. In the Member Selection, select the application registered above.
     1. Perform "Review and Assign".
 
 #### Setup in GROWI
+
 1. select Azure(BLOB) in the file upload settings of GROWI's application settings and set the information confirmed in the above process.
 
 <ContextualBlock context="docs-growi-org">
