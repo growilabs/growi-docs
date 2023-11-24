@@ -13,7 +13,7 @@
 <ContextualBlock context="docs-growi-org">
 
 ::: tip
-AWS や GCS へファイルをアップロードするには管理画面で設定が必要です。
+AWS や GCS、Azure へファイルをアップロードするには管理画面で設定が必要です。
 
 設定方法は[こちら](/ja/admin-guide/admin-cookbook/attachment.html)をご参照ください。
 :::

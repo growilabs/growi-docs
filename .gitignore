@@ -31,3 +31,4 @@ tmp
 docs/.vuepress/temp
 docs/.vuepress/config.js
 docs/.vuepress/theme/*
+docs/.vuepress/enhanceApp.js

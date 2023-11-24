@@ -92,6 +92,7 @@ module.exports = {
             '/ja/cloud/planchange.md',
             '/ja/cloud/price.md',
             '/ja/cloud/private-cloud.md',
+            '/ja/cloud/compensation-option.md',
             '/ja/cloud/withdrawal.md',
           ]
         },
@@ -116,6 +117,7 @@ module.exports = {
             '/ja/cloud/request.md',
             '/ja/cloud/resale.md',
             '/ja/cloud/securitycheck.md',
+            '/ja/cloud/invoice_system.md',
           ]
         },
 
@@ -133,6 +135,7 @@ module.exports = {
             '/ja/guide/features/page_deletion_collectively.md',
             '/ja/guide/features/insert_links.md',
             '/ja/guide/features/insert_files.md',
+            '/ja/guide/features/delete_files.md',
             '/ja/guide/features/copy_to_clipboard.md',
             '/ja/guide/features/table.md',
             '/ja/guide/features/bookmark.md',
@@ -150,6 +153,13 @@ module.exports = {
             '/ja/guide/features/in-app-notification.md',
             '/ja/guide/features/slack_integration.md',
             '/ja/guide/features/questionnaire.md',
+            '/ja/guide/features/presentation.md',
+            '/ja/guide/features/frontmatter.md',
+            '/ja/guide/features/lsx.md',
+            '/ja/guide/features/embed_html.md',
+            '/ja/guide/features/checkbox.md',
+            '/ja/guide/features/page_linker.md',
+            '/ja/guide/features/footnote.md',
           ]
         },
         {
@@ -165,6 +175,7 @@ module.exports = {
             '/ja/admin-guide/management-cookbook/slack-integration/official-bot-settings.md',
             '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md',
             '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
+            '/ja/admin-guide/management-cookbook/marp.md',
             // '/ja/admin-guide/management-cookbook/active-directory.md',
             '/ja/admin-guide/management-cookbook/google-analytics.md',
             '/ja/admin-guide/management-cookbook/external-notification.md',
@@ -177,20 +188,10 @@ module.exports = {
           ]
         },
         {
-          title: '活用例',
-          key: 'examples',
-          children: [
-            '/ja/guide/tips/hierarchical.md',
-            '/ja/guide/tips/include_html.md',
-            '/ja/guide/tips/checkbox.md',
-            '/ja/guide/tips/page_linker.md',
-            '/ja/guide/tips/footnote.md',
-          ],
-        },
-        {
           'title': 'アップグレードガイド',
           'key': 'upgrade-guide',
           'children': [
+            '/ja/admin-guide/upgrading/62x.md',
             '/ja/admin-guide/upgrading/61x.md',
             '/ja/admin-guide/upgrading/60x.md',
             '/ja/admin-guide/upgrading/51x.md',
@@ -279,6 +280,7 @@ module.exports = {
             '/en/guide/features/page_deletion_collectively.md',
             '/en/guide/features/insert_links.md',
             '/en/guide/features/insert_files.md',
+            '/en/guide/features/delete_files.md',
             '/en/guide/features/copy_to_clipboard.md',
             '/en/guide/features/table.md',
             '/en/guide/features/bookmark.md',
@@ -296,6 +298,13 @@ module.exports = {
             '/en/guide/features/in-app-notification.md',
             '/en/guide/features/slack_integration.md',
             '/en/guide/features/questionnaire.md',
+            '/en/guide/features/presentation.md',
+            '/ja/guide/features/frontmatter.md',
+            '/en/guide/features/lsx.md',
+            '/en/guide/features/embed_html.md',
+            '/en/guide/features/checkbox.md',
+            '/en/guide/features/page_linker.md',
+            '/en/guide/features/footnote.md',
           ]
         },
         {
@@ -312,6 +321,7 @@ module.exports = {
             '/en/admin-guide/management-cookbook/slack-integration/official-bot-settings.md',
             '/en/admin-guide/management-cookbook/slack-integration/custom-bot-without-proxy-settings.md',
             '/en/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
+            '/en/admin-guide/management-cookbook/marp.md',
             // '/en/admin-guide/management-cookbook/active-directory.md',
             '/en/admin-guide/management-cookbook/google-analytics.md',
             '/en/admin-guide/management-cookbook/external-notification.md',
@@ -323,20 +333,10 @@ module.exports = {
           ]
         },
         {
-          title: 'Examples',
-          key: 'examples',
-          children: [
-            '/en/guide/tips/hierarchical.md',
-            '/en/guide/tips/include_html.md',
-            '/en/guide/tips/checkbox.md',
-            '/en/guide/tips/page_linker.md',
-            '/en/guide/tips/footnote.md',
-          ],
-        },
-        {
           'title': 'Uupgrade guide',
           'key': 'upgrade-guide',
           'children': [
+            '/en/admin-guide/upgrading/62x.md',
             '/en/admin-guide/upgrading/61x.md',
             '/en/admin-guide/upgrading/60x.md',
             '/en/admin-guide/upgrading/51x.md',

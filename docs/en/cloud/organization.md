@@ -8,13 +8,22 @@
 
 - When you log in for the first time, an organization named `default` will be created.
 - You can also create a new organization from the Organization List panel on the [GROWI.cloud dashboard](https://growi.cloud/my) .  
+  - When creating an organization, an organization ID is automatically generated.
+
 <img :src="$withBase('/assets/images/en/organization_1.png')" alt="organization_1.png">
+
+### How to confirm the Organization ID
+
+You can confirm the organization ID associated with the organization from the Organization List panel.
+
+<img :src="$withBase('/assets/images/en/organization_2.png')" alt="organization_2.png">
 
 ## Modifying an Organization
 
 - Basic information about an organization, such as its name, can be edited from each organization's detail screen.
 - You can also change plans, register server certificates and credit cards, and perform other operations from the same screen.  
-<img :src="$withBase('/assets/images/en/organization_2.png')" alt="organization_2.png">
+
+<img :src="$withBase('/assets/images/en/organization_3.png')" alt="organization_3.png">
 
 ## About Organizations and Users
 
@@ -52,6 +61,6 @@
 - From the "Members" section of the organization details page, check the user who will be set as the primary owner after setting among the members belonging to the organization.
 - You can change it by selecting "Change to Primary Owner" from the "User Actions" drop-down menu on the right side of the corresponding user's display.
 
-<img :src="$withBase('/assets/images/en/organization_3.png')" alt="organization_3.png">
+<img :src="$withBase('/assets/images/en/organization_4.png')" alt="organization_4.png">
 
 - The primary owner can only be selected from members belonging to the organization.

@@ -18,6 +18,7 @@
 - アクションが行われた時間
 - アクション
 <ContextualBlock context="docs-growi-org"><li>[IP アドレス](/ja/admin-guide/admin-cookbook/trust-proxy.html)</li></ContextualBlock>
+<ContextualBlock context="help-growi-cloud"><li>IP アドレス</li></ContextualBlock>
 - URL
 
 ## 検索
