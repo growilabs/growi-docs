@@ -40,7 +40,7 @@ The option that was set as "Permanently delete a page" in v4.5 or earlier is inh
 
 #### Enable user homepage deletion
 
-Deleted users' user homepages can be deleted or completely deleted same way as normal pages.
+Deleted users' user homepages (`/user/{username}`) can be deleted or completely deleted same way as normal pages.
 
 ::: warning
 User homepages in trash page (`/trash`) can be completely deleted regardless of this setting.
@@ -48,7 +48,7 @@ User homepages in trash page (`/trash`) can be completely deleted regardless of 
 
 #### When you delete a user, the user's homepage and all its sub pages will be completely deleted
 
-When deleting a user, the user homepage (`/user/username`) and its subordinate pages are also completely deleted. If disabled, the user homepage is not deleted when the user is deleted.
+When deleting a user, the user homepage (`/user/{username}`) and its subordinate pages are also completely deleted. If disabled, the user homepage is not deleted when the user is deleted.
 
 ::: warning
 **Initialization of user homepages when a user registers**
