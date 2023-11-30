@@ -53,7 +53,7 @@ When deleting a user, the user homepage (`/user/{username}`) and its subordinate
 ::: warning
 **Initialization of user homepages when a user registers**
 
-- If a user's homepage already exists when the user registers (for example, if the `/user/foo` page already exists when the user `foo` registers), the user homepage will be initialized automatically regardless of whether this setting is ON or OFF.
+- If a user's homepage already exists when the user registers (for example, if the `/user/foo` page already exists when the user `foo` registers), the user homepage will be initialized automatically regardless of whether [User homepage deletion](/en/admin-guide/management-cookbook/security.html#user-homepage-deletion) settings is ON or OFF.
   - Once initialized, the `/user/foo` page and its subordinate pages are completely deleted and replaced by the newly registered user.
   - This specification has been changed since GROWI v6.2.0.
   - Please also see [Upgrade Guide](/en/admin-guide/upgrading/62x.html)
