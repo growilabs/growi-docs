@@ -38,6 +38,12 @@ The option that was set as "Permanently delete a page" in v4.5 or earlier is inh
 
 ### User homepage deletion
 
+- By default, this setting is disabled.
+- Manual deletion of the user homepage (`/user/{username}`) is not possible. The user homepage will remain after the user is deleted.
+- If a user's homepage already exists when the user registers (for example, if the `/user/foo` page already exists when the user `foo` registers), the user homepage will be initialized automatically regardless of whether [User homepage deletion](/en/admin-guide/management-cookbook/security.html#user-homepage-deletion) settings is ON or OFF.
+  - Once initialized, the `/user/foo` page and its subordinate pages are completely deleted and replaced by the newly registered user.
+  - This specification has been changed since GROWI v6.2.0. Please also see [Upgrade Guide](/en/admin-guide/upgrading/62x.html)
+
 #### Enable user homepage deletion (Manual Deletion)
 
 Deleted users' user homepages (`/user/{username}`) can be deleted or completely deleted same way as normal pages.
@@ -48,16 +54,7 @@ User homepages in trash page (`/trash`) can be completely deleted regardless of 
 
 #### When you delete a user, the user's homepage and all its sub pages will be completely deleted (Automatic Deletion)
 
-When deleting a user, the user homepage (`/user/{username}`) and its subordinate pages are also completely deleted. If disabled, the user homepage is not deleted when the user is deleted.
-
-::: warning
-**Initialization of user homepages when a user registers**
-
-- If a user's homepage already exists when the user registers (for example, if the `/user/foo` page already exists when the user `foo` registers), the user homepage will be initialized automatically regardless of whether [User homepage deletion](/en/admin-guide/management-cookbook/security.html#user-homepage-deletion) settings is ON or OFF.
-  - Once initialized, the `/user/foo` page and its subordinate pages are completely deleted and replaced by the newly registered user.
-  - This specification has been changed since GROWI v6.2.0.
-  - Please also see [Upgrade Guide](/en/admin-guide/upgrading/62x.html)
-:::
+When deleting a user, the user homepage (`/user/{username}`) and its subordinate pages are also completely deleted.
 
 ## Authentication Mechanism Settings
 
