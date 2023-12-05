@@ -490,6 +490,7 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/user-management.md',
                 '/ja/admin-guide/management-cookbook/group.md',
                 '/ja/admin-guide/management-cookbook/ldap.md',
+                '/ja/admin-guide/management-cookbook/ldapandkeycloakgroupsync.md',
                 {
                   title: 'Slack 連携',
                   path: '/ja/admin-guide/management-cookbook/slack-integration/',

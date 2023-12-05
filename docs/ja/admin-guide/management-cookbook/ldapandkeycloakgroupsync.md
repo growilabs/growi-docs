@@ -1,0 +1,1 @@
+# LDAP/keycloakグループ同期
