@@ -4,6 +4,7 @@ const Canonical = require('./plugins/canonical');
 module.exports = {
   title: 'GROWI Docs',
   serviceWorker: true,
+  port: 8081,
 
   // fix hot reload
   // https://github.com/vuejs/vuepress/issues/2392#issuecomment-651903508
