@@ -25,6 +25,7 @@ LDAPとkeycloakのグループ同期とは、LDAPやKeycloakがもつ外部グ�
 ### Keycloak
 
 1. 管理者画面のセキュリティ設定 -> OIDC で以下の設定を入力する
+
 - プロバイダ名: Keycloak
 - 発行ホスト: <http://host.docker.internal:8080/realms/myrealm>
 - クライアントID: growi-test-oidc
@@ -44,6 +45,7 @@ LDAPとkeycloakのグループ同期とは、LDAPやKeycloakがもつ外部グ�
 2. 端末 の /etc/hosts に 127.0.0.1 localhost host.docker.internal の行を追加しておく (OIDC ログイン時にブラウザから host.docker.internal にアクセスしてしまうため)
 
 3. 管理者画面のグループ管理の Keycloak のタブで、以下の設定を入力する
+
 - Host: <http://host.docker.internal:8080>
 - Group Realm: myrealm
 - Admin API にリクエストするための client がある realm: myrealm
