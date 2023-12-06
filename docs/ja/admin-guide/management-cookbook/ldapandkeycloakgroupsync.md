@@ -24,30 +24,34 @@ LDAPとkeycloakのグループ同期とは、LDAPやKeycloakがもつ外部グ�
 
 ### Keycloak
 
-管理者画面のセキュリティ設定 -> OIDC で以下の設定を入力する
-プロバイダ名: Keycloak
-発行ホスト: <http://host.docker.internal:8080/realms/myrealm>
-クライアントID: growi-test-oidc
-クライアントシークレット: keycloak の growi-test-oidc の詳細画面の Credentials のタブにある Client secret
-認可エンドポイント: <http://host.docker.internal:8080/realms/myrealm/protocol/openid-connect/auth>
-トークンエンドポイント: <http://host.docker.internal:8080/realms/myrealm/protocol/openid-connect/token>
-失効エンドポイント: <http://host.docker.internal:8080/realms/myrealm/protocol/openid-connect/revoke>
-検証エンドポイント: <http://host.docker.internal:8080/realms/myrealm/protocol/openid-connect/token/introspect>
-ユーザ情報エンドポイント: <http://host.docker.internal:8080/realms/myrealm/protocol/openid-connect/userinfo>
-セッション終了エンドポイント: <http://host.docker.internal:8080/realms/myrealm/protocol/openid-connect/logout>
-登録エンドポイント: <http://host.docker.internal:8080/realms/myrealm/clients-registrations/openid-connect>
-Attribute Mapping
-Identifier: sub
-username: preferred_username
-Email: email
-必要に応じて自 PC の /etc/hosts に 127.0.0.1 localhost host.docker.internal の行を追加しておく (OIDC ログイン時にブラウザから host.docker.internal にアクセスしてしまうため)
-管理者画面のグループ管理の Keycloak のタブで、以下の設定を入力する
-Host: <http://host.docker.internal:8080>
-Group Realm: myrealm
-Admin API にリクエストするための client がある realm: myrealm
-Client の ID: admin-cli
-Client の Secret: keycloak の admin-cli の詳細画面の Credentials のタブにある Client secret
-作成されていない GROWI アカウントを自動生成する: true
-説明: description
-同期を実行し、同期完了後に同期されたグループがグループ管理画面に表示されることを確認
-同期されたユーザでログインできることを確認し、グループに所属していることを確認
+1. 管理者画面のセキュリティ設定 -> OIDC で以下の設定を入力する
+- プロバイダ名: Keycloak
+- 発行ホスト: <http://host.docker.internal:8080/realms/myrealm>
+- クライアントID: growi-test-oidc
+- クライアントシークレット: keycloak の growi-test-oidc の詳細画面の Credentials のタブにある Client secret
+- 認可エンドポイント: <http://host.docker.internal:8080/realms/myrealm/protocol/openid-connect/auth>
+- トークンエンドポイント: <http://host.docker.internal:8080/realms/myrealm/protocol/openid-connect/token>
+- 失効エンドポイント: <http://host.docker.internal:8080/realms/myrealm/protocol/openid-connect/revoke>
+- 検証エンドポイント: <http://host.docker.internal:8080/realms/myrealm/protocol/openid-connect/token/introspect>
+- ユーザ情報エンドポイント: <http://host.docker.internal:8080/realms/myrealm/protocol/openid-connect/userinfo>
+- セッション終了エンドポイント: <http://host.docker.internal:8080/realms/myrealm/protocol/openid-connect/logout>
+- 登録エンドポイント: <http://host.docker.internal:8080/realms/myrealm/clients-registrations/openid-connect>
+- Attribute Mapping
+  - Identifier: sub
+  - username: preferred_username
+  - Email: email
+
+2. 端末 の /etc/hosts に 127.0.0.1 localhost host.docker.internal の行を追加しておく (OIDC ログイン時にブラウザから host.docker.internal にアクセスしてしまうため)
+
+3. 管理者画面のグループ管理の Keycloak のタブで、以下の設定を入力する
+- Host: <http://host.docker.internal:8080>
+- Group Realm: myrealm
+- Admin API にリクエストするための client がある realm: myrealm
+- Client の ID: admin-cli
+- Client の Secret: keycloak の admin-cli の詳細画面の Credentials のタブにある Client secret
+- 作成されていない GROWI アカウントを自動生成する: true
+- 説明: description
+
+4. 同期を実行し、同期完了後に同期されたグループがグループ管理画面に表示されることを確認
+
+5. 同期されたユーザでログインできることを確認し、グループに所属していることを確認
