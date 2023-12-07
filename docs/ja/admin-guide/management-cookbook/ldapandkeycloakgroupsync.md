@@ -20,7 +20,17 @@ LDAPとkeycloakのグループ同期とは、LDAPやKeycloakがもつ外部グ�
 
 ### LDAP
 
-GROWI 管理画面のグループ管理画面(/admin/user-groups)にアクセスし、「LDAP」タブから設定します。
+ GROWI 管理画面のセキュリティ設定画面(/admin/security)にアクセスし、「認証機構設定」内、「LDAP」タブから設定します。
+
+- 設定
+  - Server URL
+  - Bind モード
+  - Bind DN
+  - Bind DN パスワード
+- グループ検索フィルター (オプション)
+  - グループ検索フィルター
+
+GROWI 管理画面のグループ管理画面(/admin/user-groups)にアクセスし、「外部グループ管理」の「LDAP」タブから設定します。
 
 - グループ検索ベース DN
 - 所属メンバーを表す LDAP 属性
@@ -28,7 +38,7 @@ GROWI 管理画面のグループ管理画面(/admin/user-groups)にアクセス
 
 ### Keycloak
 
- GROWI 管理画面のセキュリティ設定画面(/admin/security)にアクセスし、「OIDC」から設定します。
+ GROWI 管理画面のセキュリティ設定画面(/admin/security)にアクセスし、「認証機構設定」内、「OIDC」タブから設定します。
 
 - プロバイダ名
 - 発行ホスト
@@ -46,7 +56,7 @@ GROWI 管理画面のグループ管理画面(/admin/user-groups)にアクセス
   - username
   - Email
 
-GROWI 管理画面のグループ管理画面(/admin/user-groups)にアクセスし、「Keycloak」タブから設定します。
+GROWI 管理画面のグループ管理画面(/admin/user-groups)にアクセスし、「外部グループ管理」の「Keycloak」タブから設定します。
 
 - Host
 - Group Realm
