@@ -245,6 +245,7 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/group.md',
                 '/en/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
                 '/en/admin-guide/management-cookbook/ldap.md',
+                '/en/admin-guide/management-cookbook/ldapandkeycloakgroupsync.md',
                 {
                   title: 'Slack Integration',
                   path: '/en/admin-guide/management-cookbook/slack-integration/',
