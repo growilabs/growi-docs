@@ -26,9 +26,9 @@ GROWI 管理画面のセキュリティ設定画面(`/admin/security`)にアク�
 
 - 設定する内容や手順の詳細は、 [LDAP連携](/ja/admin-guide/management-cookbook/ldap.html)をご覧ください
 
-GROWI 管理画面のグループ管理画面(`v/admin/user-groups`)にアクセスし、「外部グループ管理」の「LDAP」タブから設定します。
+GROWI 管理画面のグループ管理画面(`/admin/user-groups`)にアクセスし、「外部グループ管理」の「LDAP」タブから設定します。
 
-必須項目は以下です。
+入力必須項目は以下です。
 
 - グループ検索ベース DN
 - 所属メンバーを表す LDAP 属性
@@ -38,7 +38,7 @@ GROWI 管理画面のグループ管理画面(`v/admin/user-groups`)にアクセ
 
  GROWI 管理画面のセキュリティ設定画面(`/admin/security`)にアクセスし、「認証機構設定」内、「OIDC」タブから設定します。
 
-必須項目は以下です。
+入力必須項目は以下です。
 
 - プロバイダ名
 - 発行ホスト
@@ -58,7 +58,7 @@ GROWI 管理画面のグループ管理画面(`v/admin/user-groups`)にアクセ
 
 GROWI 管理画面のグループ管理画面(`/admin/user-groups`)にアクセスし、「外部グループ管理」の「Keycloak」タブから設定します。
 
-必須項目は以下です。
+入力必須項目は以下です。
 
 - Host
 - Group Realm
