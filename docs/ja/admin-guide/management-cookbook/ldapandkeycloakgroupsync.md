@@ -22,17 +22,9 @@ LDAPとkeycloakのグループ同期とは、LDAPやKeycloakがもつ外部グ�
 
 ### LDAP
 
- GROWI 管理画面のセキュリティ設定画面(/admin/security)にアクセスし、「認証機構設定」内、「LDAP」タブから設定します。
+GROWI 管理画面のセキュリティ設定画面(/admin/security)にアクセスし、「認証機構設定」内、「LDAP」タブから設定します。
 
-設定内容の詳細は [LDAP連携](/ja/admin-guide/management-cookbook/ldap.html)をご覧ください。
-
-- 設定
-  - Server URL
-  - Bind モード
-  - Bind DN
-  - Bind DN パスワード
-- グループ検索フィルター (オプション)
-  - グループ検索フィルター
+- 設定内容1や手順の詳細は、 [LDAP連携](/ja/admin-guide/management-cookbook/ldap.html)をご覧ください。
 
 GROWI 管理画面のグループ管理画面(/admin/user-groups)にアクセスし、「外部グループ管理」の「LDAP」タブから設定します。
 
