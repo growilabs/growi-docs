@@ -30,7 +30,7 @@ GROWI のデフォルトの Markdown 記法では、単一の改行は`<br>`と�
 <img :src="$withBase('/assets/images/ja/markdown_indent_1.png')" alt="markdown_indent_1.png">
 
 - ユーザーによるインデント幅の変更を許可する設定にしている場合、  
-ユーザーは、ページ編集画面の下部より、幅を指定することができます。
+ユーザーは、ページ編集画面の下部より、幅を指定できます。
 
 <img :src="$withBase('/assets/images/ja/markdown_indent_2.png')" alt="markdown_indent_2.png">
 
@@ -44,7 +44,7 @@ GROWI のデフォルトの Markdown 記法では、単一の改行は`<br>`と�
 
 - 「おすすめ設定」を選択した場合
 
-ユーザー側で内容を変更することはできかねます。
+ユーザー側からは内容を変更できかねます。
 
 <img :src="$withBase('/assets/images/ja/markdown_xss_2.png')" alt="markdown_xss_2.png">
 
