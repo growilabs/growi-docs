@@ -42,3 +42,23 @@ GROWI のデフォルトの Markdown 記法では、単一の改行は`<br>`と�
 
 <img :src="$withBase('/assets/images/ja/markdown_xss_1.png')" alt="markdown_xss_1.png">
 
+「おすすめ設定」の内容はユーザー側で変更することができません。
+
+<img :src="$withBase('/assets/images/ja/markdown_xss_1.png')" alt="markdown_xss_2.png">
+
+「カスタムホワイトリスト」の「タグ名」欄を空にした状態で更新すると、HTML が機能しない状態になります。
+
+<img :src="$withBase('/assets/images/ja/markdown_xss_1.png')" alt="markdown_xss_3.png">
+
+
+具体的には、ページ本文に `<h1>title</h1>` のように書いても、HTML が機能していないため、 `h1` が「見出し 1 」として扱われません。
+
+<img :src="$withBase('/assets/images/ja/markdown_xss_1.png')" alt="markdown_xss_4.png">
+
+もし、タグ名欄に `h1` を追加した場合は、 HTML が機能するようになります。
+
+<img :src="$withBase('/assets/images/ja/markdown_xss_1.png')" alt="markdown_xss_5.png">
+
+HTML が機能しているため、 `h1` が「見出し 1 」として扱われます。
+
+<img :src="$withBase('/assets/images/ja/markdown_xss_1.png')" alt="markdown_xss_6.png">
