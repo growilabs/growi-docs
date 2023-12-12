@@ -11,7 +11,7 @@
 
 ### Prerequisites
 
-The following [Create a GROWI.cloud](https://growi.cloud/create-account-only) Account Page  is displayed.
+The following [Create a GROWI.cloud Account Page](https://growi.cloud/create-account-only) is displayed.
 
 <img :src="$withBase('/assets/images/en/createaccount_4.png')" alt="createaccount_4.png">
 
