@@ -41,13 +41,13 @@ Choose between "Recommended Settings" and "Custom Whitelist."
 
 <img :src="$withBase('/assets/images/en/markdown_xss_1.png')" alt="markdown__xss_1.png">
 
-- If "Recommended Settings" is selected
+- If "Recommended wettings" is selected
 
 Users cannot modify the content.
 
 <img :src="$withBase('/assets/images/en/markdown_xss_2.png')" alt="markdown__xss_2.png">
 
-- If "Custom Whitelist" is selected
+- If "Custom whitelist" is selected
 
 Leaving the "Tag Name" field empty and updating will disable HTML functionality.
 
