@@ -9,17 +9,17 @@ Markdown settings can be configured on the following page.
 In GROWI's default Markdown syntax, a single line break is not treated as `<br>`.  
 To treat a single line break as `<br>`, switch the Line break setting ON/OFF.
 
-<img :src="$withBase('/assets/images/en/markdown_1.png')" alt="markdown_1.png">
+<img :src="$withBase('/assets/images/en/markdown_linebreak_1.png')" alt="markdown_linebreak_1.png">
 
 - When Line break setting is enabled
   - Line breaks in page text and comments are treated as `<br>` in HTML
 
-<img :src="$withBase('/assets/images/en/markdown_2.png')" alt="markdown_2.png">
+<img :src="$withBase('/assets/images/en/markdown_linebreak_2.png')" alt="markdown_linebreak_2.png">
 
 - When Line break setting is disabled
   - Use `<br>` or insert two spaces at the end of a line to create a line break
 
-<img :src="$withBase('/assets/images/en/markdown_3.png')" alt="markdown_3.png">
+<img :src="$withBase('/assets/images/en/markdown_linebreak_3.png')" alt="markdown_linebreak_3.png">
 
 ## Indent setting
 
