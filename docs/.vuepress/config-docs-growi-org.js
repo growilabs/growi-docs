@@ -239,7 +239,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/en/admin-guide/management-cookbook/app-settings.md',
-                '/en/admin-guide/management-cookbook/line-breaks.md',
+                '/en/admin-guide/management-cookbook/markdown.md',
                 '/en/admin-guide/management-cookbook/security.md',
                 '/en/admin-guide/management-cookbook/user-management.md',
                 '/en/admin-guide/management-cookbook/group.md',
@@ -485,7 +485,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/admin-guide/management-cookbook/app-settings.md',
-                '/ja/admin-guide/management-cookbook/line-breaks.md',
+                '/ja/admin-guide/management-cookbook/markdown.md',
                 '/ja/admin-guide/management-cookbook/security.md',
                 '/ja/admin-guide/management-cookbook/user-management.md',
                 '/ja/admin-guide/management-cookbook/group.md',
