@@ -7,11 +7,11 @@ Markdown settings can be configured on the following page.
 ## Line break setting
 
 In GROWI's default Markdown syntax, a single line break is not treated as `<br>`.  
-To treat a single line break as `<br>`, switch the Line Break setting ON/OFF.
+To treat a single line break as `<br>`, switch the Line break setting ON/OFF.
 
 <img :src="$withBase('/assets/images/en/markdown_1.png')" alt="markdown_1.png">
 
-- When Line sreak setting is enabled
+- When Line break setting is enabled
   - Line breaks in page text and comments are treated as `<br>` in HTML
 
 <img :src="$withBase('/assets/images/en/markdown_2.png')" alt="markdown_2.png">
@@ -34,7 +34,7 @@ Administrators can configure the following settings in the admin panel:
 
 <img :src="$withBase('/assets/images/en/markdown_indent_2.png')" alt="markdown_indent_2.png">
 
-## Prevent XSS (cross site scripting) Setting
+## Prevent XSS (cross site scripting) setting
 
 Configure how HTML tags in Markdown text are handled to prevent attacks from malicious programs.
 Choose between "Recommended setting" and "Custom whitelist."
