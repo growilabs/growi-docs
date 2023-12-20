@@ -73,7 +73,7 @@ module.exports = {
     toc: { includeLevel: [2] },
     extendMarkdown: (md) => {
       md.use(require('markdown-it-task-lists'));
-      md.use(require('markdown-it-footnote'));
+      md.use(require('markdown-it-forgot_password'));
     },
   },
   locales: {
