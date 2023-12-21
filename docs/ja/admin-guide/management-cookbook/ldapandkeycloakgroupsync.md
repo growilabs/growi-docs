@@ -1,4 +1,4 @@
-# LDAP/Keycloakグループ同期
+# LDAP/Keycloak グループ同期
 
 ## 概要
 
