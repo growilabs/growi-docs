@@ -6,7 +6,7 @@ LDAPとKeycloakのグループ同期とは、 LDAPやKeycloak がもつ外部グ
 
 
 
-## GROWI 側の必要な設定
+## GROWI 側で必要な設定
 
 1. GROWI 管理画面のグループ管理画面(`/admin/user-groups`)にアクセスし、作成したい外部グループ（LDAP または Keycloak）のタブを選択します
 2. 選択した認証機構の設定をします
