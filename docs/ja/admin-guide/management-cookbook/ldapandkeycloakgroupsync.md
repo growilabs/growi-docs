@@ -4,21 +4,19 @@
 
 LDAPとKeycloakのグループ同期とは、 LDAPやKeycloak がもつ外部グループ情報を同期する機能です。
 
-
-
 ## GROWI 側で必要な設定
 
-- GROWI 管理画面のグループ管理画面(`/admin/user-groups`)にアクセスし、作成したい外部グループ（LDAP または Keycloak）のタブを選択します
+- GROWI 管理画面のグループ管理画面(`/admin/user-groups`)にアクセスし、作成したい外部グループ（LDAP または Keycloak）のタブを選択します。
 
-- 外部グループ同期の機能を使うには、あらかじめ LDAP/Keycloak の認証機構設定が必要です
+- 外部グループ同期の機能を使うには、あらかじめ LDAP/Keycloak の認証機構設定が必要です。
 
 ### 認証機構の設定（LDAP）
 
-GROWI 管理画面のセキュリティ設定画面(`/admin/security`)にアクセスし、「認証機構設定」内、「LDAP」タブから設定します。
+1. GROWI 管理画面のセキュリティ設定画面(`/admin/security`)にアクセスし、「認証機構設定」内、「LDAP」タブから設定します。
 
-- 設定する内容や手順の詳細は、 [LDAP 連携](/ja/admin-guide/management-cookbook/ldap.html)をご覧ください
+- 設定する内容や手順の詳細は、 [LDAP 連携](/ja/admin-guide/management-cookbook/ldap.html)をご覧ください。
 
-GROWI 管理画面のグループ管理画面(`/admin/user-groups`)にアクセスし、「外部グループ管理」の「LDAP」タブから設定します。
+2. GROWI 管理画面のグループ管理画面(`/admin/user-groups`)にアクセスし、「外部グループ管理」の「LDAP」タブから設定します。
 
 入力必須の項目は以下です。
 
@@ -28,7 +26,7 @@ GROWI 管理画面のグループ管理画面(`/admin/user-groups`)にアクセ�
 
 ### 認証機構の設定（Keycloak）
 
- GROWI 管理画面のセキュリティ設定画面(`/admin/security`)にアクセスし、「認証機構設定」内、「OIDC」タブから設定します。
+ 1. GROWI 管理画面のセキュリティ設定画面(`/admin/security`)にアクセスし、「認証機構設定」内、「OIDC」タブから設定します。
 
 入力必須の項目は以下です。
 
@@ -48,7 +46,7 @@ GROWI 管理画面のグループ管理画面(`/admin/user-groups`)にアクセ�
   - username
   - Email
 
-GROWI 管理画面のグループ管理画面(`/admin/user-groups`)にアクセスし、「外部グループ管理」の「Keycloak」タブから設定します。
+2. GROWI 管理画面のグループ管理画面(`/admin/user-groups`)にアクセスし、「外部グループ管理」の「Keycloak」タブから設定します。
 
 入力必須の項目は以下です。
 
@@ -62,6 +60,6 @@ GROWI 管理画面のグループ管理画面(`/admin/user-groups`)にアクセ�
 
 ## 同期実行
 
-- 同期実行の「同期」をクリックし、「外部グループ管理」内の「グループ一覧」にグループが追加されていることを確認します
+- 同期実行の「同期」をクリックし、「外部グループ管理」内の「グループ一覧」にグループが追加されていることを確認します。
 
 - (TBD) 大規模グループ同期時の注意点
