@@ -2,7 +2,7 @@
 
 ## 概要
 
-LDAPとkeycloakのグループ同期とは、 LDAPやKeycloak がもつ外部グループ情報を同期する機能です。
+LDAPとKeycloakのグループ同期とは、 LDAPやKeycloak がもつ外部グループ情報を同期する機能です。
 
 #### 利便性の向上
 
@@ -18,7 +18,7 @@ LDAPとkeycloakのグループ同期とは、 LDAPやKeycloak がもつ外部グ
 1. GROWI 管理画面のグループ管理画面(`/admin/user-groups`)にアクセスし、作成したい外部グループ（LDAP または Keycloak）のタブを選択します
 2. 選択した認証機構の設定をします
 
-- 外部グループ同期の機能を使うには、あらかじめ LDAP/keycloak の認証機構設定が必要です
+- 外部グループ同期の機能を使うには、あらかじめ LDAP/Keycloak の認証機構設定が必要です
 
 ### LDAP
 
