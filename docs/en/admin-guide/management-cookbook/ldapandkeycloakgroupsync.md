@@ -3,12 +3,13 @@
 ## Overview
 
 In GROWI v6.3, a feature has been introduced to import users and user groups stored in LDAP into GROWI.  
-You can choose to import from an LDAP server or from Keycloak integrated with LDAP. Additionally, groups directly created in Keycloak can also be synchronized.  
+You can choose to import from an LDAP server or from Keycloak integrated with LDAP.  
+Additionally, groups directly created in Keycloak can also be synchronized.  
 This feature tracks changes made to the imported users and user groups, allowing synchronization.
 
 - Imports and synchronization can be performed through the administration page (`/admin`).
 
-- For external specifications, refer to [Dev Wiki | /Documentation/External-Specifications/LDAP-Group-Synchronization](URLはる).
+- For external specifications, refer to [Dev Wiki | /Documentation/External-Specifications/LDAP-Group-Synchronization](https://dev.growi.org/646d5637019e02272a42cf86).
 
 ## Required Settings in GROWI
 
@@ -18,11 +19,11 @@ This feature tracks changes made to the imported users and user groups, allowing
 
 ## Authentication Mechanism Settings (LDAP)
 
-1. Access the security settings page (`/admin/security`) in the GROWI administration page and configure settings in the "Authentication Mechanism Settings" under the "LDAP" tab.
+1. Access the Security Settings page (`/admin/security`) on the GROWI administration page, and configure settings under the "LDAP" tab in the "Authentication Mechanism Settings."
 
-- For details on the settings and procedures, see [LDAP Integration](URLはる).
+- For details on the settings and procedures, see [LDAP Integration](https://docs.growi.org/en/admin-guide/management-cookbook/ldap.html).
 
-2. Access the group management page (`/admin/user-groups`) in the GROWI administration page and configure settings in the "External Group Management" under the "LDAP" tab.
+2. Access the group management page (`/admin/user-groups`) on the GROWI administration page, and configure settings under the "LDAP" tab in the "External Group Management".
 
 The required input fields are as follows:
 
@@ -32,7 +33,7 @@ The required input fields are as follows:
 
 ## Authentication Mechanism Settings (Keycloak)
 
-1. Access the security settings page (`/admin/security`) in the GROWI administration page and configure settings in the "Authentication Mechanism Settings" under the "OIDC" tab.
+1. Access the security settings page (`/admin/security`) on the GROWI administration page, and configure settings under the "OIDC" tab in the "Authentication Mechanism Settings".
 
 The required input fields are as follows:
 
@@ -52,7 +53,7 @@ The required input fields are as follows:
   - username
   - Email
 
-2. Access the group management page (`/admin/user-groups`) in the GROWI administration page and configure settings in the "External Group Management" under the "Keycloak" tab.
+2. Access the group management page (`/admin/user-groups`) on the GROWI administration page, and configure settings under the "Keycloak" tab in the "External Group Management".
 
 The required input fields are as follows:
 
