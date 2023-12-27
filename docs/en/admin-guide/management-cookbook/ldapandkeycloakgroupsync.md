@@ -28,8 +28,8 @@ This feature tracks changes made to the imported users and user groups, allowing
 The required input fields are as follows:
 
 - Group Search Base DN
-- LDAP Attribute Representing Group Members
-- LDAP Attribute Representing Child Groups
+- Membership Attribute
+- Child Groups Attribute
 
 ## Authentication Mechanism Settings (Keycloak)
 
@@ -45,8 +45,8 @@ The required input fields are as follows:
 - Token Endpoint
 - Revocation Endpoint
 - Introspection Endpoint
-- User Info Endpoint
-- End Session Endpoint
+- UserInfo Endpoint
+- EndSession Endpoint
 - Registration Endpoint
 - Attribute Mapping
   - Identifier
@@ -59,18 +59,18 @@ The required input fields are as follows:
 
 - Host
 - Group Realm
-- Realm with client that requests the admin API
+- Realm of client used to request to Admin API
 - Client ID
 - Client Secret
-- Automatically generate GROWI accounts that have not been created
+- Auto Generate User on Sync
 - Description
 
 ## Running Synchronization
 
-- Click "Sync" in the synchronization execution section and confirm that the group has been added to the "Group List" in "External Group Management".
+- Click "Sync" in the synchronization execution section and confirm that the group has been added to the "Group list" in "External Group Management".
   - The name, description, users belonging to the added external group, child groups, and creation date will be displayed.
 
 - In subsequent synchronizations, if there are changes in the data on the LDAP/Keycloak side, it will be synchronized with the changed content.
-  - However, if "Keep groups deleted from LDAP/Keycloak on GROWI" is turned on, deleted groups will remain in GROWI.
+  - However, if "Preserve Deleted LDAP/Keycloak Groups" is turned on, deleted groups will remain in GROWI.
 
 - (TBD) Points to note when synchronizing large groups.
