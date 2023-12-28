@@ -23,6 +23,6 @@
 
 <img :src="$withBase('/assets/images/ja/forgot-password_3.png')" alt="forgot-password_3.png">
 
-5. 登録したメールアドレス宛に、新パスワード設定完了メールが届きます。
+5. 登録したメールアドレス宛に、新パスワードの設定完了メールが届きます。
 
 <img :src="$withBase('/assets/images/ja/forgot-password_4.png')" alt="forgot-password_4.png">
