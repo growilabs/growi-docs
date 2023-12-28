@@ -5,7 +5,7 @@
 パスワードを忘れた場合など、ユーザーがパスワードをリセットして変更したい時に利用できる機能です。  
 
 - 事前に GROWI の管理画面（`/admin/app`）でメールの設定が必要です。
-- 詳しい設定方法は[アプリ設定＞メールの設定](https://docs.growi.org/ja/admin-guide/management-cookbook/app-settings.html#%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E8%A8%AD%E5%AE%9A)をご覧ください。
+- 詳しい設定方法は[アプリ設定＞メールの設定](https://growi.cloud/help/ja/admin-guide/management-cookbook/app-settings.html#%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E8%A8%AD%E5%AE%9A)をご覧ください。
 
 ## 手順
 
