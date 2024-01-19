@@ -47,9 +47,9 @@ You can specify the maximum depth of the hierarchy to render. By default, all ex
 
 - `$lsx(depth=N)` : Render pages down N levels starting from the current page or the specified page.
 - You can use `:` or `+` to control the pages to be render.
-  - `$lsx(num=2:3)` : Render pages 2 to 3 levels down.
-  - `$lsx(num=2:)` : Render pages from the 2 level to the lowest level.
-  - `$lsx(num=1+2)` : Render pages from 1 level down to the next 2 levels (1,2,3 levels).
+  - `$lsx(depth=2:3)` : Render pages 2 to 3 levels down.
+  - `$lsx(depth=2:)` : Render pages from the 2 level to the lowest level.
+  - `$lsx(depth=1+2)` : Render pages from 1 level down to the next 2 levels (1,2,3 levels).
 
 ### sort
   
