@@ -20,7 +20,14 @@ Editor 画面でページを更新することで WIP を解除できます。
 
 ## WIP ページの自動削除
 
-[WIP ページの作成方法1](/ja/guide/features/wip-page.html#wip-ページの作成方法1) で作成した WIP ページは2日後に自動的に削除されます。一度でも更新をすれば自動削除の対象になりません。また以下の2つのケースの場合も自動削除の対象になりません。
+[WIP ページの作成方法1](/ja/guide/features/wip-page.html#wip-ページの作成方法1) で作成した WIP ページは2日後に自動的に削除されます。一度でも更新をすれば自動削除の対象にはなりません。また以下の2つのケースの場合も自動削除の対象にはなりません。
+
+<ContextualBlock context="docs-growi-org">
+
+環境変数 `WIP_PAGE_EXPIRATION_SECONDS` を書き換えることで削除期間を変更できます。
+詳しくは [環境変数](/ja/admin-guide/admin-cookbook/env-vars) をご覧ください。
+
+</ContextualBlock>
 
 ### 作成した WIP ページ配下にページが存在する場合
 
