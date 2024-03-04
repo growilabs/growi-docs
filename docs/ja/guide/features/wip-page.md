@@ -1,6 +1,8 @@
 # WIP ページを作成する
 
-GROWI ではページを WIP (Work In Progress) ページとして保存できます。WIP ページとして保存すると執筆途中ということを示すことができます。WIP ページがどうかは View 画面、Editor 画面、ページツリー、最近の変更から確認できます。
+GROWI ではページを WIP (Work In Progress) ページとして保存できます。WIP ページとして保存すると執筆途中ということを示すことができます。そのページが WIP ページであるかどうかは View 画面、Editor 画面、ページツリー、最近の変更から確認できます。
+
+<img :src="$withBase('/assets/images/ja/wip_page_1.png')" alt="wip_page_1.png">
 
 ## WIP ページの作成方法1
 
@@ -8,7 +10,9 @@ GROWI ではページを WIP (Work In Progress) ページとして保存でき�
 
 ## WIP ページの作成方法2
 
-Editor 画面右下にある更新ボタン右のキャレットアイコンをクリックするとドロップダウンメニューが開きます。ドロップダウンメニュー内の 「WIP (執筆中) として保存」 ボタンをクリックすることで WIP ページとして保存できます。
+Editor 画面右下にある更新ボタン右のキャレットアイコンをクリックするとドロップダウンメニューが開きます。ドロップダウンメニュー内の 「WIP (執筆途中) として保存」 ボタンをクリックすることで WIP ページとして保存できます。
+
+<img :src="$withBase('/assets/images/ja/wip_page_2.png')" alt="wip_page_2.png">
 
 ## WIP の解除方法1
 
@@ -20,14 +24,7 @@ Editor 画面でページを更新することで WIP を解除できます。
 
 ## WIP ページの自動削除
 
-[WIP ページの作成方法1](/ja/guide/features/wip-page.html#wip-ページの作成方法1) で作成した WIP ページは2日後に自動的に削除されます。一度でも更新をすれば自動削除の対象にはなりません。また以下の2つのケースの場合も自動削除の対象にはなりません。
-
-<ContextualBlock context="docs-growi-org">
-
-環境変数 `WIP_PAGE_EXPIRATION_SECONDS` を書き換えることで削除期間を変更できます。
-詳しくは [環境変数](/ja/admin-guide/admin-cookbook/env-vars) をご覧ください。
-
-</ContextualBlock>
+[WIP ページの作成方法1](/ja/guide/features/wip-page.html#wip-ページの作成方法1) で作成した WIP ページは2日後に自動的に削除されます。一度でも更新をした場合、以下の2つのケースの場合も自動削除の対象にはなりません。
 
 ### 作成した WIP ページ配下にページが存在する場合
 
@@ -38,3 +35,12 @@ Editor 画面でページを更新することで WIP を解除できます。
 ### 作成した WIP ページより上の階層に削除対象ページがある場合
 
 `/A` を作成した後に `/A/B` を作成した場合 `/A` は自動削除の対象となりません。
+
+<ContextualBlock context="docs-growi-org">
+
+## 自動削除の期間変更
+
+環境変数 `WIP_PAGE_EXPIRATION_SECONDS` を書き換えることで自動削除の期間を変更できます。
+詳しくは [環境変数](/ja/admin-guide/admin-cookbook/env-vars) をご覧ください。
+
+</ContextualBlock>
