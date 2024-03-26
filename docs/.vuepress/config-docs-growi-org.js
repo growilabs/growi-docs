@@ -186,6 +186,7 @@ module.exports = {
               title: 'Upgrading',
               collapsable: false,
               children: [
+                '/en/admin-guide/upgrading/70x.md',
                 '/en/admin-guide/upgrading/63x.md',
                 '/en/admin-guide/upgrading/62x.md',
                 '/en/admin-guide/upgrading/61x.md',
@@ -434,6 +435,7 @@ module.exports = {
               title: 'アップグレード',
               collapsable: false,
               children: [
+                '/ja/admin-guide/upgrading/70x.md',
                 '/ja/admin-guide/upgrading/63x.md',
                 '/ja/admin-guide/upgrading/62x.md',
                 '/ja/admin-guide/upgrading/61x.md',
