@@ -28,15 +28,12 @@ When you open a WIP page on the View screen, an alert will appear. Click the "Pu
 
 ## Auto-delete WIP page
 
-WIP pages created in [How to create a WIP page 1](/en/guide/features/wip-page.html#how-to-create-a-wip-page1) will be automatically deleted after 2 days. They will not be subject to automatic deletion if they have been updated even once or in the following two cases.
+WIP pages created in [How to create a WIP page 1](/en/guide/features/wip-page.html#how-to-create-a-wip-page1) will be automatically deleted after 2 days. TIf a page has been updated at least once, or if a page exists under the created WIP page, as in the following case, its parent page will not be subject to automatic deletion.
 
-### If the page exists under the created WIP page
 
-If you create `/A` after creating the page `/A/B`, `/A` is not subject to auto-delete.
+- If you create `/A` after creating the page `/A/B`, `/A` is not subject to auto-delete.
 
-### If the page to be deleted is above the WIP page you created
-
-If you create `/A/B` after creating `/A`, `/A` is not subject to automatic deletion.
+- If you create `/A/B` after creating `/A`, `/A` is not subject to automatic deletion.
 
 <ContextualBlock context="docs-growi-org">
 
