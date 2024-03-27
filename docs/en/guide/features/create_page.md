@@ -2,6 +2,11 @@
 
 ## Create a new page
 
+::: tip
+See the following section for instructions on how to create pages in GROWI v6 and earlier
+[How to create a page on GROWI v6 series and earlier](/en/guide/features/create_page.html#how-to-create-a-page-on-growi-v6-series-and-earlier)
+:::
+
 1. Click on the "pencil icon" in the upper left corner of the screen to open the page editing screen.
     - To select "Create Today's Memo" or "Create/Edit Template Page", click the arrow to the right of the pencil icon to display the choices.
 
