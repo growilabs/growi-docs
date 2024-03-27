@@ -10,6 +10,7 @@
     <img :src="$withBase('/assets/images/ja/create_page1.png')" alt="create">
 
 1. 編集画面の左上に「Untitled-1」のように自動でページ名が入力されているので、任意のページ名に変更します。
+    <!-- textlint-disable weseek/no-doubled-joshi -->
     - ページ名を変更しない場合、自動で入力されたページ名でページが保存されます。
 
     <img :src="$withBase('/assets/images/ja/create_page2.png')" alt="create">
