@@ -2,7 +2,7 @@
 
 You can decorate text using [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introduction/)(Bootstrap 5).
 
-Here are the syntax and usage examples of Bootstrap that can be used in GROWI. You can use the examples as they are.
+Here are the HTML code and usage examples of Bootstrap that can be used in GROWI. You can use the examples as they are.
 
 ## [Badges](https://getbootstrap.jp/docs/5.3/components/badge/)
 
