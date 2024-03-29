@@ -40,6 +40,7 @@ Here are the HTML code and usage examples of Bootstrap that can be used in GROWI
   ```
 
 - View
+
 <img :src="$withBase('/assets/images/en/badge_example.png')" alt="example">
 
 ## [Alerts](https://getbootstrap.jp/docs/5.3/components/alerts/)
@@ -93,8 +94,8 @@ Here are the HTML code and usage examples of Bootstrap that can be used in GROWI
   ```
 
 - View
-<img :src="$withBase('/assets/images/en/alerts_example.png')" alt="example">
 
+<img :src="$withBase('/assets/images/en/alerts_example.png')" alt="example">
 
 ## [Cards](https://getbootstrap.jp/docs/5.3/components/card/)
 
@@ -184,6 +185,7 @@ Here are the HTML code and usage examples of Bootstrap that can be used in GROWI
   ```
 
 - View
+
 <img :src="$withBase('/assets/images/en/card_example.png')" alt="example">
 
 ## [Colors](https://getbootstrap.jp/docs/5.3/utilities/colors/)
@@ -234,6 +236,7 @@ Here are the HTML code and usage examples of Bootstrap that can be used in GROWI
   ```
 
 - View
+
 <img :src="$withBase('/assets/images/en/colors_example.png')" alt="example">
 
 ## [Collapse](https://getbootstrap.jp/docs/5.3/components/collapse/)
@@ -303,6 +306,7 @@ Using collapse, you can toggle the visibility of content.
   ```
 
 - View
+
 <img :src="$withBase('/assets/images/en/collapse_example.png')" alt="collapse">
 
 ## Official documentation

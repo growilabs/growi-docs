@@ -40,6 +40,7 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
   ```
 
 - View
+
 <img :src="$withBase('/assets/images/ja/badge_example.png')" alt="example">
 
 ## アラート ([Alerts](https://getbootstrap.jp/docs/5.3/components/alerts/))
@@ -93,6 +94,7 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
   ```
 
 - View
+
 <img :src="$withBase('/assets/images/ja/alerts_example.png')" alt="example">
 
 ## カード ([Cards](https://getbootstrap.jp/docs/5.3/components/card/))
@@ -183,6 +185,7 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
   ```
 
 - View
+
 <img :src="$withBase('/assets/images/ja/card_example.png')" alt="example">
 
 ## カラー ([Colors](https://getbootstrap.jp/docs/5.3/utilities/colors/))
@@ -233,6 +236,7 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
   ```
 
 - View
+
 <img :src="$withBase('/assets/images/ja/colors_example.png')" alt="example">
 
 ## コラプス ([Collapse](https://getbootstrap.jp/docs/5.3/components/collapse/))
@@ -304,6 +308,7 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
   ```
 
 - View
+
 <img :src="$withBase('/assets/images/ja/collapse_example.png')" alt="collapse">
 
 ## 公式ドキュメント
