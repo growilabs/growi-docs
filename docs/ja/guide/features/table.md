@@ -6,6 +6,8 @@ GROWI は Handsontable を使用してテーブルを作成できます。Handso
 
 <img :src="$withBase('/assets/images/table.png')" alt="">
 
+### 手順
+
 1. ツールバーのテーブルアイコンをクリックすると、テーブル編集ダイアログが表示されます。
 
   <img :src="$withBase('/assets/images/table_button.png')" alt="">
@@ -51,28 +53,18 @@ GROWI は Handsontable を使用してテーブルを作成できます。Handso
 
 <img :src="$withBase('/assets/images/ja/table_markdown.png')" alt="table_markdown">
 
-## TSV でテーブルを書く
-
-### ヘッダーなし
+### TSV でテーブルを書く
 
 - Markdown
 
 ````markdown
+# ヘッダーなし
 ``` tsv
 10:00 集合
 10:20 移動
 ```
-````
 
-- View
-
-<img :src="$withBase('/assets/images/ja/table_tsv.png')" alt="table_tsv">
-
-### ヘッダーあり
-
-- Markdown
-
-````markdown
+# ヘッダーあり
 ``` tsv-h
 時間 行動
 10:00 集合
@@ -82,30 +74,22 @@ GROWI は Handsontable を使用してテーブルを作成できます。Handso
 
 - View
 
+<img :src="$withBase('/assets/images/ja/table_tsv.png')" alt="table_tsv">
+
 <img :src="$withBase('/assets/images/ja/table_tsv_with_header.png')" alt="table_tsv_with_header">
 
 ## CSV でテーブルを書く
 
-### ヘッダーなし
-
 - Markdown
 
 ````markdown
+# ヘッダーなし
 ``` csv
 11:00,MTG
 12:00,昼食
 ```
-````
 
-- View
-
-<img :src="$withBase('/assets/images/ja/table_csv.png')" alt="table_csv">
-
-### ヘッダーあり
-
-- Markdown
-
-````markdown
+# ヘッダーあり
 ``` csv-h
 時間,行動
 11:00,MTG
@@ -114,5 +98,7 @@ GROWI は Handsontable を使用してテーブルを作成できます。Handso
 ````
 
 - View
+
+<img :src="$withBase('/assets/images/ja/table_csv.png')" alt="table_csv">
 
 <img :src="$withBase('/assets/images/ja/table_csv_with_header.png')" alt="table_csv_with_header">
