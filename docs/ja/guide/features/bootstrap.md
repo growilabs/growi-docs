@@ -1,16 +1,16 @@
 # Bootstrap を使ってページを装飾する
 
-GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introduction/)（Bootstrap5）を活用してテキストを装飾できます。
+GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introduction/)(Bootstrap5) を活用してテキストを装飾できます。
 
 以下に GROWI で使える Bootstrap の記法と、その活用例を紹介します。活用例はそのまま引用し、ご使用いただけます。
 
-## バッジ（[Badges](https://getbootstrap.jp/docs/5.3/components/badge/)）
+## バッジ ([Badges](https://getbootstrap.jp/docs/5.3/components/badge/))
 
 <img :src="$withBase('/assets/images/ja/badge.png')" alt="badge">
 
-### 記法
+### HTML
 
-```
+```html
 <span class="badge text-bg-primary">テキスト</span>  
 
 <span class="badge text-bg-secondary">テキスト</span>  
@@ -30,22 +30,25 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
 
 ### 活用例
 
-```
-- 入社してすぐにやることリスト
-  1. 自己紹介文を記載してください <span class="badge text-bg-danger">必須</span>  
-  2. 口座情報を記載してください <span class="badge text-bg-danger">必須</span>  
-  3. SNS アカウントを記載してください <span class="badge text-bg-secondary">任意</span>
-```
+- Markdown
 
+  ```markdown
+  - 入社してすぐにやることリスト
+    1. 自己紹介文を記載してください <span class="badge text-bg-danger">必須</span>  
+    2. 口座情報を記載してください <span class="badge text-bg-danger">必須</span>  
+    3. SNS アカウントを記載してください <span class="badge text-bg-secondary">任意</span>
+  ```
+
+- View
 <img :src="$withBase('/assets/images/ja/badge_example.png')" alt="example">
 
-## アラート（[Alerts](https://getbootstrap.jp/docs/5.3/components/alerts/)）
+## アラート ([Alerts](https://getbootstrap.jp/docs/5.3/components/alerts/))
 
 <img :src="$withBase('/assets/images/ja/alerts.png')" alt="alerts">
 
-### 記法
+### HTML
 
-```
+```html
 <div class="alert alert-primary" role="alert">
   テキストが入ります
 </div>
@@ -81,21 +84,24 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
 
 ### 活用例
 
-```
-<div class="alert alert-danger" role="alert">
-  ※こちらの情報はチーム長以上の役職のメンバー以外は編集しないでください※
-</div>
-```
+- Markdown
 
+  ```markdown
+  <div class="alert alert-danger" role="alert">
+    ※こちらの情報はチーム長以上の役職のメンバー以外は編集しないでください※
+  </div>
+  ```
+
+- View
 <img :src="$withBase('/assets/images/ja/alerts_example.png')" alt="example">
 
-## カード（[Cards](https://getbootstrap.jp/docs/5.3/components/card/)）
+## カード ([Cards](https://getbootstrap.jp/docs/5.3/components/card/))
 
 <img :src="$withBase('/assets/images/ja/card.png')" alt="card">
 
-### 記法
+### HTML
 
-```
+```html
 <div class="card text-bg-primary mb-3" style="max-width: 50rem;">
   <div class="card-header">見出しが入ります</div>
   <div class="card-body">
@@ -163,28 +169,31 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
 
 ### 活用例
 
-```
-<div class="card text-bg-warning mb-3" style="max-width: 40rem;">
-  <div class="card-header">一口コラム</div>
-  <div class="card-body">
-    <h5 class="card-title">日本で最初のカレーライスのレシピとは？</h5>
-    <p class="card-text">日本で初めてカレーライスの調理法が紹介されたのは、1872年（明治5年）に出版された「西洋料理指南」という本でした。</p>
-    <p class="card-text">使用する食材として「ネギ・ショウガ・ニンニク・バター・エビ・タイ・鶏・小麦粉・カレー粉」などが挙げられています。</p>
-  </div>
-</div>
-```
+- Markdown
 
+  ```markdown
+  <div class="card text-bg-warning mb-3" style="max-width: 40rem;">
+    <div class="card-header">一口コラム</div>
+    <div class="card-body">
+      <h5 class="card-title">日本で最初のカレーライスのレシピとは？</h5>
+      <p class="card-text">日本で初めてカレーライスの調理法が紹介されたのは、1872年 (明治5年) に出版された「西洋料理指南」という本でした。</p>
+      <p class="card-text">使用する食材として「ネギ・ショウガ・ニンニク・バター・エビ・タイ・鶏・小麦粉・カレー粉」などが挙げられています。</p>
+    </div>
+  </div>
+  ```
+
+- View
 <img :src="$withBase('/assets/images/ja/card_example.png')" alt="example">
 
-## カラー（[Colors](https://getbootstrap.jp/docs/5.3/utilities/colors/)）
+## カラー ([Colors](https://getbootstrap.jp/docs/5.3/utilities/colors/))
 
 ### テキストカラー
 
 <img :src="$withBase('/assets/images/ja/text_colors.png')" alt="text_colors">
 
-### 記法
+### HTML
 
-```
+```html
 <p class="text-primary">テキストはこちら</p>
 <p class="text-warning">テキストはこちら</p>
 <p class="text-danger">テキストはこちら</p>
@@ -194,9 +203,9 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
 
 <img :src="$withBase('/assets/images/ja/background_colors.png')" alt="background_colors">
 
-### 記法
+### HTML
 
-```
+```html
 <p class="bg-primary">テキストはこちら</p>
 <p class="bg-warning">テキストはこちら</p>
 <p class="bg-danger">テキストはこちら</p>
@@ -206,9 +215,9 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
 
 <img :src="$withBase('/assets/images/ja/text_background_colors.png')" alt="text_background_colors">
 
-### 記法
+### HTML
 
-```
+```html
 <p class="text-danger bg-primary">テキストはこちら</p>
 <p class="text-primary bg-warning">テキストはこちら</p>
 <p class="text-warning bg-danger">テキストはこちら</p>
@@ -216,14 +225,17 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
 
 ### 活用例
 
-```
-- <p class="text-danger">プロジェクトにアサインされる場合はスタートアップを完了させておきましょう</p>
-- <p class="bg-warning">分からないことがあればまとめて質問しましょう</p>
-```
+- Markdown
 
+  ```markdown
+  - <p class="text-danger">プロジェクトにアサインされる場合はスタートアップを完了させておきましょう</p>
+  - <p class="bg-warning">分からないことがあればまとめて質問しましょう</p>
+  ```
+
+- View
 <img :src="$withBase('/assets/images/ja/colors_example.png')" alt="example">
 
-## コラプス（[Collapse](https://getbootstrap.jp/docs/5.3/components/collapse/)）
+## コラプス ([Collapse](https://getbootstrap.jp/docs/5.3/components/collapse/))
 
 コラプスを使うと、コンテンツの 表示 / 非表示 を切り替えられます。
 
@@ -231,9 +243,9 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
 
 ### コンテンツの表示
 
-#### 記法
+#### HTML
 
-```
+```html
 <a class="btn btn-primary text-white" data-bs-toggle="collapse" href="#collapse-1">
   コンテンツを表示する
 </a>
@@ -250,9 +262,9 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
 
 ### コンテンツの非表示
 
-#### 記法
+#### HTML
 
-```
+```html
 <a class="btn btn-secondary text-white" data-bs-toggle="collapse" href="#collapse-2">
   コンテンツを非表示にする
 </a>
@@ -269,26 +281,29 @@ GROWI では [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introd
 
 #### 活用例
 
-```
-<a class="btn btn-warning text-white" data-bs-toggle="collapse" href="#collapse-3">
-  最終順位を確認する！
-</a>
+- Markdown
 
-<div class="collapse" id="collapse-3">
-  <div class="card card-body">
+  ```markdown
+  <a class="btn btn-warning text-white" data-bs-toggle="collapse" href="#collapse-3">
+    最終順位を確認する！
+  </a>
 
-##### 優勝者は **Bさん** です！！
+  <div class="collapse" id="collapse-3">
+    <div class="card card-body">
 
-| 対象者 | 点数 | 順位 |
-| ------ | ---- | ---- |
-| Aさん  | 80pt | 2位  |
-| Bさん  | 95pt | 1位  |
-| Cさん  | 70pt | 3位  |
-      
+  ##### 優勝者は **Bさん** です！！
+
+  | 対象者 | 点数 | 順位 |
+  | ------ | ---- | ---- |
+  | Aさん  | 80pt | 2位  |
+  | Bさん  | 95pt | 1位  |
+  | Cさん  | 70pt | 3位  |
+        
+    </div>
   </div>
-</div>
-```
+  ```
 
+- View
 <img :src="$withBase('/assets/images/ja/collapse_example.png')" alt="collapse">
 
 ## 公式ドキュメント
