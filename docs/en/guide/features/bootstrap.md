@@ -311,8 +311,8 @@ Using collapse, you can toggle the visibility of content.
 
 ## Official documentation
 
-- [Badge](https://getbootstrap.jp/docs/5.3/components/badge/)
-- [Alerts](https://getbootstrap.jp/docs/5.3/components/alerts/)
-- [Card](https://getbootstrap.jp/docs/5.3/components/card/)
-- [Colors](https://getbootstrap.jp/docs/5.3/utilities/colors/)
-- [Collapse](https://getbootstrap.jp/docs/5.3/components/collapse/)
+- [Badge](https://getbootstrap.com/docs/5.3/components/badge/)
+- [Alerts](https://getbootstrap.com/docs/5.3/components/alerts/)
+- [Card](https://getbootstrap.com/docs/5.3/components/card/)
+- [Colors](https://getbootstrap.com/docs/5.3/utilities/colors/)
+- [Collapse](https://getbootstrap.com/docs/5.3/components/collapse/)
