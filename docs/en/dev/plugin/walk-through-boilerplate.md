@@ -1,3 +1,0 @@
-# Walkthrough the Boilerplate
-
-(TBD)

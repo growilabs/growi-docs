@@ -8,16 +8,12 @@ GROWI.cloudのご利用にあたり、セキュリティ状況を確認するチ
 
 経済産業省による「クラウドサービスレベルのチェックリスト」や、 IPA（独立行政法人情報処理推進機構）による「安全なウェブサイトの作り方改訂第7版」に準拠したセキュリティチェックシートをダウンロードいただけます。  
 
-- <a href="/help/assets/help-growi-cloud/security_check_sheet_1.pdf">セキュリティチェックシート - 経済産業省（GROWI.cloud）</a>
-- <a href="/help/assets/help-growi-cloud/security_check_sheet_2.pdf">セキュリティチェックシート - IPA（GROWI.cloud）</a>
-- <a href="/help/assets/help-growi-cloud/security_check_sheet_3.pdf">セキュリティチェックシート - 経済産業省（GROWI）</a>
-- <a href="/help/assets/help-growi-cloud/security_check_sheet_4.pdf">セキュリティチェックシート - IPA（GROWI）</a>
+<a href="/help/assets/help-growi-cloud/security_check_sheet.zip" download="GROWI.cloud セキュリティチェックシート.zip">ダウンロードはこちら</a>
 
 その他、次の情報もご参照ください。
 
 - [GROWI.cloud_利用規約](https://growi.cloud/terms-of-service)
 - [GROWI.cloud_プライバシーポリシー](https://growi.cloud/privacy-policy)
-
 
 ### 2. 弊社側で内容確認や記入が必要な場合は、有料にて承ります
 

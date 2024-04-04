@@ -37,10 +37,12 @@ pageClass: admin-cookbook-env-vars
 | `TRUST_PROXY_BOOL` | [Express の `trust proxy` に設定可能](https://expressjs.com/ja/guide/behind-proxies.html)な boolean 形式の値。`TRUST_PROXY_CSV` 及び `TRUST_PROXY_HOPS` よりも優先されます。 | |
 | `TRUST_PROXY_CSV` | [Express の `trust proxy` に設定可能](https://expressjs.com/ja/guide/behind-proxies.html)な CSV 形式の値。 `TRUST_PROXY_HOPS` よりも優先されます。 | |
 | `TRUST_PROXY_HOPS` | [Express の `trust proxy` に設定可能](https://expressjs.com/ja/guide/behind-proxies.html)な number 形式の値。 | |
+| `WIP_PAGE_EXPIRATION_SECONDS` | 一度も更新していない [WIP ページ](/ja/guide/features/wip-page.html) の保存期間の秒数。指定された秒数が経過するとページが自動的に削除されます。 | `172800` (2日) |
 | **ファイルアップロードオプション** | | |
 | `FILE_UPLOAD` | ファイルアップロード先のストレージ | `aws` |
 | | : `aws` Amazon Web Service S3 を使用します。(管理ページにて AWS 設定を行う必要があります。) | |
 | | : `gcs` Google Cloud Storage を使用します。(環境変数にて使用する GCS を設定する必要があります。) | |
+| | : `azure` Azure Blob Storage を使用します。(環境変数にて使用する Azure(Blob) を設定する必要があります。) | |
 | | : `mongodb` MongoDB の GridFS　機能を使用します。 (別途の設定は不要です。) | |
 | | : `local` ローカルのファイルシステムを使用します。 (別途の設定は不要です。) | |
 | | : `none` ファイルアップロードを無効にします。  | |
@@ -54,6 +56,14 @@ pageClass: admin-cookbook-env-vars
 | `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL` | 署名付きURLのキャッシュを保持する期間(秒数)| 120 |
 | `GCS_REFERENCE_FILE_WITH_RELAY_MODE` | `true` の場、GROWI サーバーが添付ファイルデータを送信します(relay mode). `false` (デフォルト値)の場合は、その場合ユーザーはサーバーによって作成された [署名付き URL](https://cloud.google.com/storage/docs/access-control/signed-urls) によって GCS から直接データをダウンロードします。| `false` |
 | `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、GCS 関連設定の一部はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
+| `AZURE_TEANANT_ID` | 利用するAzureテナント名 | |
+| `AZURE_CLIENT_ID` | 登録したアプリのクライアントID | |
+| `AZURE_CLIENT_SECRET` | 登録したアプリに追加したクライアントシークレット | |
+| `AZURE_STORAGE_ACCOUNT_NAME` | 利用するストレージアカウントの名前 | |
+| `AZURE_STORAGE_CONTAINER_NAME` | 利用するコンテナの名前 | |
+| `AZURE_LIFETIME_SEC_FOR_TEMPORARY_URL` | 署名付きURLのキャッシュを保持する期間(秒数)| 120 |
+| `AZURE_REFERENCE_FILE_WITH_RELAY_MODE` | `true` の場、GROWI サーバーが添付ファイルデータを送信します(relay mode). `false` (デフォルト値)の場合は、その場合ユーザーはサーバーによって作成された [共有アクセス署名付き URL](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview) によって Azure(Blob) から直接データをダウンロードします。| `false` |
+| `AZURE_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、Azure(Blob) 関連設定の一部はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | **外部システム連携オプション** | | |
 | `NCHAN_URI` | 接続する Nginx [Nchan](https://nchan.io/) サーバーの URI | |
 | `HACKMD_URI` | 接続する [HackMD(CodiMD)](https://hackmd.io/) サーバーの URI | |

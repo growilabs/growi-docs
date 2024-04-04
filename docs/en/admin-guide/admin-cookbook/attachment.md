@@ -29,6 +29,7 @@ Also, set the value of the environment variable `FILE_UPLOAD` referring to the t
 | --- | --- |
 | Amazon S3 | `aws` |
 | Google Cloud Storage | `gcs` |
+| Azure Blob Storage | `azure` |
 | MongoDB | `mongodb` |
 | Local File System | `local` |
 
@@ -51,6 +52,23 @@ If you want to fix the GCS settings with environment variables, set the environm
 If it is not set, null will be entered.
 
 If pinning the GCS settings with the environment variable `GCS_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` are enabled, the form values of the GCS settings in the file upload settings are disabled and cannot be changed.
+
+### Azure Blob Storage Settings with environment variable
+
+If you don't set a value in the Azure Settings form in the File Upload Settings, use the default value below.
+
+- Tenant ID: `AZURE_TANANT_ID`
+- Client ID: `AZURE_CLIENT_ID`
+- Client Secret: `AZURE_CLIENT_SECRET`
+- Storage Account Name: `AZURE_STORAGE_ACCOUNT_NAME`
+- Container Name: `AZURE_STORAGE_CONTAINER_NAME`
+
+### Fixing Azure(Blob) Settings with environment variable
+
+If you want to fix the Azure(Blob) settings with environment variables, set the environment variable `AZURE_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` to `true` and put a value in the above environment variable.
+If it is not set, null will be entered.
+
+If pinning the Azure(Blob) settings with the environment variable `AZURE_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` are enabled, the form values of the Azure(Blob) settings in the file upload settings are disabled and cannot be changed.
 
 ## Attached File Size Limitation
 
@@ -101,3 +119,5 @@ The number of seconds to keep the cache can be set with [Environment Variables](
   - `S3_LIFETIME_SEC_FOR_TEMPORARY_URL`
 - GCP (GCS)  
   - `GCS_LIFETIME_SEC_FOR_TEMPORARY_URL`
+- Azure(Blob)
+  - `AZURE_LIFETIME_SEC_FOR_TEMPORARY_URL`

@@ -61,7 +61,12 @@ module.exports = {
           '(ja|en)\/admin-guide\/(admin-cookbook|downgrading|getting-started|migration-guide)\/.*',
         ]
       }
-    ]
+    ],
+    [
+      '@vuepress/html-redirect', {
+        countdown: 0
+      }
+    ],
   ],
 
   markdown: {
@@ -114,29 +119,26 @@ module.exports = {
               title: 'Getting Started',
               collapsable: false,
               children: [
-                '/en/guide/getting-started/five_minutes.md',
+                '/en/guide/getting-started/try_growi.md',
                 '/en/guide/getting-started/markdown.md',
               ],
             },
             {
-              title: 'Tutorial',
+              title: 'How to use',
               collapsable: false,
               children: [
-                '/en/guide/tutorial/create_page.md',
-                '/en/guide/tutorial/duplicate_page.md',
-                '/en/guide/tutorial/delete_page.md',
-              ],
-            },
-            {
-              title: 'Features',
-              collapsable: false,
-              children: [
+                '/en/guide/features/setup.md',
                 '/en/guide/features/page_layout.md',
+                '/en/guide/features/create_page.md',
+                '/en/guide/features/wip-page.md',
+                '/en/guide/features/page_operation.md',
+                '/en/guide/features/page_deletion_collectively.md',
+                '/en/guide/features/insert_links.md',
+                '/en/guide/features/insert_files.md',
+                '/en/guide/features/delete_files.md',
                 '/en/guide/features/copy_to_clipboard.md',
                 '/en/guide/features/table.md',
                 '/en/guide/features/bookmark.md',
-                '/en/guide/features/page_operation.md',
-                '/en/guide/features/page_deletion_collectively.md',
                 '/en/guide/features/emoji.md',
                 '/en/guide/features/history.md',
                 '/en/guide/features/authority.md',
@@ -147,23 +149,19 @@ module.exports = {
                 '/en/guide/features/search.md',
                 '/en/guide/features/tag.md',
                 '/en/guide/features/template.md',
+                '/ja/guide/features/built-in-editor.md',
                 '/en/guide/features/hackmd.md',
                 '/en/guide/features/in-app-notification.md',
                 '/en/guide/features/slack_integration.md',
-                '/en/guide/features/file_upload',
                 '/en/guide/features/questionnaire.md',
+                '/en/guide/features/presentation.md',
+                '/en/guide/features/frontmatter.md',
+                '/en/guide/features/lsx.md',
+                '/en/guide/features/embed_html.md',
+                '/en/guide/features/checkbox.md',
+                '/en/guide/features/page_linker.md',
+                '/en/guide/features/footnote.md',
               ]
-            },
-            {
-              title: 'Tips',
-              collapsable: false,
-              children: [
-                '/en/guide/tips/hierarchical.md',
-                '/en/guide/tips/include_html.md',
-                '/en/guide/tips/checkbox.md',
-                '/en/guide/tips/page_linker.md',
-                '/en/guide/tips/footnote.md',
-              ],
             },
             {
               title: 'Other Documents',
@@ -190,6 +188,9 @@ module.exports = {
               title: 'Upgrading',
               collapsable: false,
               children: [
+                '/en/admin-guide/upgrading/70x.md',
+                '/en/admin-guide/upgrading/63x.md',
+                '/en/admin-guide/upgrading/62x.md',
                 '/en/admin-guide/upgrading/61x.md',
                 '/en/admin-guide/upgrading/60x.md',
                 '/en/admin-guide/upgrading/51x.md',
@@ -242,12 +243,13 @@ module.exports = {
               collapsable: false,
               children: [
                 '/en/admin-guide/management-cookbook/app-settings.md',
-                '/en/admin-guide/management-cookbook/line-breaks.md',
+                '/en/admin-guide/management-cookbook/markdown.md',
                 '/en/admin-guide/management-cookbook/security.md',
                 '/en/admin-guide/management-cookbook/user-management.md',
                 '/en/admin-guide/management-cookbook/group.md',
                 '/en/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
                 '/en/admin-guide/management-cookbook/ldap.md',
+                '/en/admin-guide/management-cookbook/ldapandkeycloakgroupsync.md',
                 {
                   title: 'Slack Integration',
                   path: '/en/admin-guide/management-cookbook/slack-integration/',
@@ -258,6 +260,7 @@ module.exports = {
                     '/en/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
                   ],
                 },
+                '/en/admin-guide/management-cookbook/marp.md',
                 '/en/admin-guide/management-cookbook/active-directory.md',
                 '/en/admin-guide/management-cookbook/google-analytics.md',
                 '/en/admin-guide/management-cookbook/external-notification.md',
@@ -326,19 +329,6 @@ module.exports = {
               ],
             },
             {
-              title: 'Plugin',
-              collapsable: false,
-              children: [
-                '/en/dev/plugin/architecture.md',
-                '/en/dev/plugin/quick-start.md',
-                '/en/dev/plugin/publish.md',
-                '/en/dev/plugin/walk-through-boilerplate.md',
-                '/en/dev/plugin/metadata.md',
-                '/en/dev/plugin/custom-tag.md',
-                '/en/dev/plugin/custom-route.md',
-              ],
-            },
-            {
               title: 'Other Documents',
               collapsable: false,
               children: [
@@ -380,29 +370,26 @@ module.exports = {
               title: 'GROWI を始めよう',
               collapsable: false,
               children: [
-                '/ja/guide/getting-started/five_minutes.md',
+                '/ja/guide/getting-started/try_growi.md',
                 '/ja/guide/getting-started/markdown.md',
               ],
             },
             {
-              title: 'チュートリアル',
+              title: '使い方',
               collapsable: false,
               children: [
-                '/ja/guide/tutorial/create_page.md',
-                '/ja/guide/tutorial/duplicate_page.md',
-                '/ja/guide/tutorial/delete_page.md',
-              ],
-            },
-            {
-              title: '機能紹介',
-              collapsable: false,
-              children: [
+                '/ja/guide/features/setup.md',
                 '/ja/guide/features/page_layout.md',
+                '/ja/guide/features/create_page.md',
+                '/ja/guide/features/wip-page.md',
+                '/ja/guide/features/page_operation.md',
+                '/ja/guide/features/page_deletion_collectively.md',
+                '/ja/guide/features/insert_links.md',
+                '/ja/guide/features/insert_files.md',
+                '/ja/guide/features/delete_files.md',
                 '/ja/guide/features/copy_to_clipboard.md',
                 '/ja/guide/features/table.md',
                 '/ja/guide/features/bookmark.md',
-                '/ja/guide/features/page_operation.md',
-                '/ja/guide/features/page_deletion_collectively.md',
                 '/ja/guide/features/emoji.md',
                 '/ja/guide/features/history.md',
                 '/ja/guide/features/authority.md',
@@ -413,23 +400,19 @@ module.exports = {
                 '/ja/guide/features/search.md',
                 '/ja/guide/features/tag.md',
                 '/ja/guide/features/template.md',
+                '/ja/guide/features/built-in-editor.md',
                 '/ja/guide/features/hackmd.md',
                 '/ja/guide/features/in-app-notification.md',
                 '/ja/guide/features/slack_integration.md',
-                '/ja/guide/features/file_upload',
                 '/ja/guide/features/questionnaire.md',
+                '/ja/guide/features/presentation.md',
+                '/ja/guide/features/frontmatter.md',
+                '/ja/guide/features/lsx.md',
+                '/ja/guide/features/embed_html.md',
+                '/ja/guide/features/checkbox.md',
+                '/ja/guide/features/page_linker.md',
+                '/ja/guide/features/footnote.md',
               ]
-            },
-            {
-              title: 'Tips (活用例)',
-              collapsable: false,
-              children: [
-                '/ja/guide/tips/hierarchical.md',
-                '/ja/guide/tips/include_html.md',
-                '/ja/guide/tips/checkbox.md',
-                '/ja/guide/tips/page_linker.md',
-                '/ja/guide/tips/footnote.md',
-              ],
             },
             {
               title: 'その他のドキュメント',
@@ -456,6 +439,9 @@ module.exports = {
               title: 'アップグレード',
               collapsable: false,
               children: [
+                '/ja/admin-guide/upgrading/70x.md',
+                '/ja/admin-guide/upgrading/63x.md',
+                '/ja/admin-guide/upgrading/62x.md',
                 '/ja/admin-guide/upgrading/61x.md',
                 '/ja/admin-guide/upgrading/60x.md',
                 '/ja/admin-guide/upgrading/51x.md',
@@ -508,11 +494,12 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/admin-guide/management-cookbook/app-settings.md',
-                '/ja/admin-guide/management-cookbook/line-breaks.md',
+                '/ja/admin-guide/management-cookbook/markdown.md',
                 '/ja/admin-guide/management-cookbook/security.md',
                 '/ja/admin-guide/management-cookbook/user-management.md',
                 '/ja/admin-guide/management-cookbook/group.md',
                 '/ja/admin-guide/management-cookbook/ldap.md',
+                '/ja/admin-guide/management-cookbook/ldapandkeycloakgroupsync.md',
                 {
                   title: 'Slack 連携',
                   path: '/ja/admin-guide/management-cookbook/slack-integration/',
@@ -523,6 +510,7 @@ module.exports = {
                     '/ja/admin-guide/management-cookbook/slack-integration/custom-bot-with-proxy-settings.md',
                   ],
                 },
+                '/ja/admin-guide/management-cookbook/marp.md',
                 '/ja/admin-guide/management-cookbook/active-directory.md',
                 '/ja/admin-guide/management-cookbook/google-analytics.md',
                 '/ja/admin-guide/management-cookbook/external-notification.md',
@@ -589,19 +577,6 @@ module.exports = {
                 '/ja/dev/tips/env-vars.md',
                 '/ja/dev/tips/logger.md',
                 '/ja/dev/tips/debugging.md',
-              ],
-            },
-            {
-              title: 'プラグイン',
-              collapsable: false,
-              children: [
-                '/ja/dev/plugin/architecture.md',
-                '/ja/dev/plugin/quick-start.md',
-                '/ja/dev/plugin/publish.md',
-                '/ja/dev/plugin/walk-through-boilerplate.md',
-                '/ja/dev/plugin/metadata.md',
-                '/ja/dev/plugin/custom-tag.md',
-                '/ja/dev/plugin/custom-route.md',
               ],
             },
             {

@@ -14,7 +14,6 @@ footer: © 2018 WESEEK, Inc.
 
 <div align="center">
   <a href="https://github.com/weseek/growi/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/weseek/growi.svg"></a>
-  <a href="https://growi-slackin.weseek.co.jp/" target="_blank"><img src="https://growi-slackin.weseek.co.jp/badge.svg"></a>
   <a href="https://hub.docker.com/r/weseek/growi/" target="_blank"><img src="https://img.shields.io/docker/pulls/weseek/growi.svg" /></a>
 </div>
 
@@ -29,6 +28,6 @@ footer: © 2018 WESEEK, Inc.
   </div>
   <div class="feature">
     <h2>育ち続けるプロジェクト</h2>
-    <p>WESEEK, Inc. のエンジニアを中心とした活発なコミュニティが、システムを常に成長させ、ユーザーのみなさまと一緒により良いコミュニケーションツールの在り方を模索します。</p>
+    <p>WESEEK, Inc. のエンジニアを中心とした活発なコミュニティが、システムを常に成長させ、ユーザーのみなさまと一緒により良いコミュニケーションツールの在り方を模索します。質問や提案があれば私たちの <a href="https://communityinviter.com/apps/wsgrowi/invite" target="_blank"> Slack </a> にご参加ください。</p>
   </div>
 </div>

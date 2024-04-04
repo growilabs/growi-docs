@@ -63,15 +63,16 @@ v6.0.5 現在では **移行先** の設定値がそのまま使用されます�
 
 ## 添付ファイル転送の転送可否
 
-| from/to      | Local                       | AWS(S3)                                         | GCP(GCS)                                        | MongoDB(GridFS)                      | 未設定(none)                               |
-| :----------: | :-------------------------- | :------------------------------------------------- | :------------------------------------------------- | :--------------------------- | :------------------------------------------ |
-| Local        | :white_check_mark: 転送する | :white_check_mark: 転送する                        | :white_check_mark: 転送する                        | :white_check_mark: 転送する | :x: 転送不能  |
-| Cloud(S3)    | :white_check_mark: 転送する | :triangular_flag_on_post: 設定が異なる場合は転送する  | :white_check_mark: 転送する                        | :white_check_mark: 転送する | :x: 転送不能  |
-| Cloud(GCS)   | :white_check_mark: 転送する | :white_check_mark: 転送する                        | :triangular_flag_on_post: 設定が異なる場合は転送する | :white_check_mark: 転送する | :x: 転送不能  |
-| GridFS       | :white_check_mark: 転送する | :white_check_mark: 転送する                        | :white_check_mark: 転送する                        | :white_check_mark: 転送する | :x: 転送不能  |
-| 未設定(none)  | :x: 転送不能                | :x: 転送不能                                       | :x: 転送不能                                       | :x: 転送不能                | :x: 転送不能                               |
+| from/to      | Local                       | AWS(S3)                                         | GCP(GCS)                                            | Azure(Blob)                                      | MongoDB(GridFS)                      | 未設定(none)                               |
+| :----------: | :-------------------------- | :------------------------------------------------- | :------------------------------------------------- | :------------------------------------------------- | :--------------------------- | :------------------------------------------ |
+| Local        | :white_check_mark: 転送する | :white_check_mark: 転送する                        | :white_check_mark: 転送する                        | :white_check_mark: 転送する                        | :white_check_mark: 転送する | :x: 転送不能  |
+| Cloud(S3)    | :white_check_mark: 転送する | :triangular_flag_on_post: 設定が異なる場合は転送する  | :white_check_mark: 転送する                       | :white_check_mark: 転送する                        | :white_check_mark: 転送する | :x: 転送不能  |
+| Cloud(GCS)   | :white_check_mark: 転送する | :white_check_mark: 転送する                        | :triangular_flag_on_post: 設定が異なる場合は転送する | :white_check_mark: 転送する                        | :white_check_mark: 転送する | :x: 転送不能  |
+| Cloud(Azure) | :white_check_mark: 転送する | :white_check_mark: 転送する                        | :white_check_mark: 転送する                        | :triangular_flag_on_post: 設定が異なる場合は転送する | :white_check_mark: 転送する | :x: 転送不能  |
+| GridFS       | :white_check_mark: 転送する | :white_check_mark: 転送する                        | :white_check_mark: 転送する                        | :white_check_mark: 転送する                        | :white_check_mark: 転送する | :x: 転送不能  |
+| 未設定(none)  | :x: 転送不能                | :x: 転送不能                                       | :x: 転送不能                                       | :white_check_mark: 転送する                        | :x: 転送不能                | :x: 転送不能  |
 
-- Cloud(S3/GCS) -> Cloud(GCS/S3)
+- Cloud(S3/GCS/Azure) -> Cloud(GCS/S3/Azure)
   - サービス/バケット名が異なる場合は転送します
   - サービス/バケット名が一致している場合は転送しません(転送不要で移行が完了します)
 - 移行先が未インストール

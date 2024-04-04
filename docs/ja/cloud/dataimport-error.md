@@ -16,7 +16,7 @@
     1. ユーザーデータをインポートしてください。
         - 詳しい内容は GROWI 公式ドキュメントの [「GROWI アーカイブデータインポート」](https://docs.growi.org/ja/admin-guide/management-cookbook/import.html#growi-アーカイブデータインポート) をご参照ください。
     1. 移行が完了していないページは複製をしてください。
-        - 詳しい内容は GROWI 公式ドキュメントの [「ページを複製する」](https://docs.growi.org/ja/guide/tutorial/duplicate_page.html) をご参照ください。
+        - 詳しい内容は GROWI 公式ドキュメントの [「ページを移動/複製/削除する」](https://docs.growi.org/ja/guide/features/page_operation.html) をご参照ください。
 
 ### 上記の方法でも解決しない場合
 
