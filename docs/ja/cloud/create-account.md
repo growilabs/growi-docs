@@ -19,12 +19,12 @@ GROWI.cloud に登録されている組織へ GROWI.cloud のユーザーアカ�
 
 ### ユーザーアカウントのみを作成するページにアクセス
 
-<a rel="noopener noref" target="_blank" src="https://growi.cloud/create-account-only">GROWI.cloud アカウント作成画面</a> にアクセスします。
+<a rel="noopener noref" target="_blank" href="https://growi.cloud/create-account-only">GROWI.cloud アカウント作成画面</a> にアクセスします。
 
 アクセスすると下の画像のページが表示されます。  
 <img :src="$withBase('/assets/images/ja/createaccount_4.png')" alt="createaccount_4.png">
 
-上記ページには、 <a rel="noopener noref" target="_blank" src="https://growi.cloud/login">GROWI.cloud ログイン画面</a> にある `既存の組織に参加するアカウントの作成はこちら` リンクからもアクセスできます。  
+上記ページには、 <a rel="noopener noref" target="_blank" href="https://growi.cloud/login">GROWI.cloud ログイン画面</a> にある `既存の組織に参加するアカウントの作成はこちら` リンクからもアクセスできます。  
 
 <img :src="$withBase('/assets/images/ja/createaccount_5.png')" alt="createaccount_5.png">
 
