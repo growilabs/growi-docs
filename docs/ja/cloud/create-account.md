@@ -1,54 +1,70 @@
 ## アカウントのみの作成
 
-既に GROWI.cloud に作成されている組織に新しくメンバー追加する際、トライアルを開始させずにアカウントのみを作成できます。
+GROWI.cloud に登録されている組織へ GROWI.cloud のユーザーアカウントを登録していないメンバーを追加する場合、ユーザーアカウントのみを登録して組織に追加できます。
+※通常のユーザー登録では、組織の作成とトライアルの開始を求められます。
 
-本ページではユーザーのみを作成する手順をご案内します。
+本ページでは前述の意図でユーザーアカウントのみを登録する手順をご案内します。  
+組織へのメンバー追加方法については、別ページで詳しく解説しておりますのでご参照ください。  
+> [メンバーの追加](https://growi.cloud/help/ja/cloud/organization.html#メンバーの追加)
 
 なおユーザー作成には以下のいずれかが必要です。
 
-- メールアドレス
-- Google アカウント
-- GitHub アカウント
+- 外部サービスのアカウントを用いて登録する場合
+  - Google アカウント
+  - GitHub アカウント
+- メールアドレスを用いて登録する場合
+  - 受信可能なメールアドレス
 
 ## 作成方法
 
-### 前提
+### ユーザーアカウントのみを作成するページにアクセス
 
-以下の [GROWI.cloud アカウント作成画面](https://growi.cloud/create-account-only)  を表示している。
+<a rel="noopener noref" target="_blank" src="https://growi.cloud/create-account-only">GROWI.cloud アカウント作成画面</a> にアクセスします。
 
+アクセスすると下の画像のページが表示されます。  
 <img :src="$withBase('/assets/images/ja/createaccount_4.png')" alt="createaccount_4.png">
 
-上記ページには、 以下 [GROWI.cloud ログイン画面](https://growi.cloud/login) の `既存の組織に参加するアカウントの作成はこちら` リンクからもアクセスできます。
+上記ページには、 <a rel="noopener noref" target="_blank" src="https://growi.cloud/login">GROWI.cloud ログイン画面</a> にある `既存の組織に参加するアカウントの作成はこちら` リンクからもアクセスできます。  
 
 <img :src="$withBase('/assets/images/ja/createaccount_5.png')" alt="createaccount_5.png">
 
 ### Google または GitHub アカウントを用いて作成する場合
 
-1. [GROWI.cloud アカウント作成画面](https://growi.cloud/create-account-only) で、 `Google で登録` ボタン または `GitHub で登録` ボタンをクリックする
-
-すると、以下ページに移動します。
-
-<img :src="$withBase('/assets/images/ja/createaccount_1.png')" alt="createaccount_1.png">
-
-以上で、GROWI.cloud アカウントの作成は完了しました。
+1. GROWI.cloud アカウント作成画面に、 `Google で登録` ボタン と `GitHub で登録` ボタンが表示されています
+1. Google アカウントを使用して登録する場合、`Google で登録` ボタンを押します
+    - GitHub アカウントの場合は `GitHub で登録` ボタンを押します
+1. 外部アカウントの認証画面に移動するため、アカウントの認証を完了させます
+    - アクセスしているブラウザのウインドウでログイン済みですと、スキップされる場合もあります
+1. アカウントの認証が完了すると、下の画像のページが表示されます  
+    <img :src="$withBase('/assets/images/ja/createaccount_1.png')" alt="createaccount_1.png">
+1. 以上で、GROWI.cloud アカウントの作成は完了です
+    - 引き続き、追加していただく組織のの管理者にメンバー追加をご依頼ください
 
 ### メールアドレスを用いて作成する場合
 
-1. [GROWI.cloud アカウント作成画面](https://growi.cloud/create-account-only) で、メールアドレスを入力
-2. `GROWI.cloud サービス仮登録` メールが届くので、`パスワードを登録する` ボタンをクリック
+1. GROWI.cloud アカウント作成画面に、メールアドレスを入力するフォームがありますので、メールアドレスを入力してください
+1. メールアドレス入力欄の下にある「送信」ボタンを押すと入力していただいたメールアドレスに `GROWI.cloud サービス仮登録` というタイトルのメールが届きます
+1. メールの本文に `パスワードを登録する` というボタンがありますので、ボタンをクリックします  
+    <img :src="$withBase('/assets/images/ja/createaccount_2.png')" alt="createaccount_2.png">
+1. `パスワード登録ページ` が表示されますので、フォームにパスワードを入力して `パスワードを登録` ボタンをクリックします  
+    <img :src="$withBase('/assets/images/ja/createaccount_3.png')" alt="createaccount_3.png">
+1. パスワードの登録が完了すると、下の画像のページが表示されます  
+    <img :src="$withBase('/assets/images/ja/createaccount_1.png')" alt="createaccount_1.png">
+1. 以上で、GROWI.cloud アカウントの作成は完了です
+    - 引き続き、追加していただく組織のの管理者にメンバー追加をご依頼ください
 
-<img :src="$withBase('/assets/images/ja/createaccount_2.png')" alt="createaccount_2.png">
+## 登録がうまくいかない場合
 
-3. `パスワード登録ページ` に移動するので、フォームに入力して `パスワードを登録` ボタンをクリック
+### Google または GitHub アカウントでの登録に失敗する場合
 
-<img :src="$withBase('/assets/images/ja/createaccount_3.png')" alt="createaccount_3.png">
+まずは該当アカウントのトラブルシューティングを行ってください。  
+該当アカウントのトラブルシュートが解決したうえで、問題が解決しない場合にはサポートまでお問い合わせください。
 
-すると、以下ページに移動します。
+- [お問い合わせフォーム](https://growi.cloud/contact)
 
-<img :src="$withBase('/assets/images/ja/createaccount_1.png')" alt="createaccount_1.png">
+### メールアドレス登録でメールが届かない場合
 
-以上で、GROWI.cloud アカウントの作成は完了しました。
+メールが届かない場合は、既に GROWI.cloud サービスに登録済みのメールアドレスと重複している (仮登録や、外部アカウントを用いた登録も含む) 場合や、メールアドレスの誤入力が疑われます。  
+まずはお客様ご自身でご確認いただき、その上で不明な場合はサポートまでお問い合わせください。  
 
-### 組織へのメンバー追加
-
-追加方法は [メンバーの追加](https://growi.cloud/help/ja/cloud/organization.html#%E3%83%A1%E3%83%B3%E3%83%8F%E3%82%99%E3%83%BC%E3%81%AE%E8%BF%BD%E5%8A%A0) をご参照ください。
+- [お問い合わせフォーム](https://growi.cloud/contact)
