@@ -14,4 +14,4 @@ GROWI の認証機構を「SAML」や「LDAP」などの外部の認証機構で
 <!-- textlint-disable weseek/ja-no-redundant-expression -->
 なお、GROWI.cloud で無償提供している Keycloak を活用していただくことで、Keycloak の設定次第で多要素認証を適用する事が可能です。  
 <!-- textlint-disable weseek/ja-no-redundant-expression -->
-多要素認証の適用が要件上必須のお客さまは、[こちら](https://growi.cloud/help/ja/cloud/singlesignon.html) から Keycloak のご利用も含めてご検討ください。
+多要素認証の適用が要件上必須のお客さまは、[こちら](/ja/cloud/singlesignon.html) から Keycloak のご利用も含めてご検討ください。
