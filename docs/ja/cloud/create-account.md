@@ -5,7 +5,7 @@ GROWI.cloud に登録されている組織へ GROWI.cloud のユーザーアカ�
 
 本ページでは前述の意図でユーザーアカウントのみを登録する手順をご案内します。  
 組織へのメンバー追加方法については、別ページで詳しく解説しておりますのでご参照ください。  
-> [メンバーの追加](https://growi.cloud/help/ja/cloud/organization.html#メンバーの追加)
+> [メンバーの追加](/ja/cloud/organization.html#メンバーの追加)
 
 なおユーザー作成には以下のいずれかが必要です。
 

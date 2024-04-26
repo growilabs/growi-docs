@@ -49,4 +49,4 @@ That's it! The creation of your GROWI.cloud account is now complete.
 
 ## Adding Members to an Organization
 
-For the method of adding, please refer to [the Add Members](https://growi.cloud/help/en/cloud/organization.html#add-members) .
+For the method of adding, please refer to [the Add Members](/en/cloud/organization.html#add-members) .
