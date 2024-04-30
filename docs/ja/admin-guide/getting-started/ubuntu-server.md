@@ -1,22 +1,18 @@
 # Ubuntu Server
 
-:::warning
-この記事は公開されてから時間が経っています。
-:::
-
 [[toc]]
 
 ## 概要
 
-この章では Ubuntu Server 16.04 \(Xenial\) に GROWI をインストールする方法を紹介します。 14.04 や 18.04 は現在未検証です。
+この章では Ubuntu Server 22.04 \(Jammy\) に GROWI をインストールする方法を紹介します。 他のバージョンは現在未検証です。
 
 セットアップに必要となるソフトウェアは以下の通りです。
 
-* node.js 8.x \(DO NOT USE 9.x\)
-* npm 5.x or 6.x
+* node.js 18.x or 20.x
+* npm 6.x
 * yarn
-* MongoDB 3.x
-* \(Option\) Elasticsearch 5.x
+* MongoDB 4.4 以上
+* \(Option\) Elasticsearch 7.x or 8.x
 * \(Option\) systemd
 * \(Option\) Apache or nginx
 
@@ -24,7 +20,7 @@
 Optional となっているものは必須ではありません。ただし、本項ではこれら全てを利用し、全文検索できる GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホストと同時に起動させる方法を説明します。
 <!-- textlint-enable weseek/no-doubled-joshi -->
 
-## node.js 8.x & npm のインストール
+## node.js 20.x & npm のインストール
 
 ### NodeSource repository を利用する
 
@@ -34,7 +30,7 @@ Optional となっているものは必須ではありません。ただし、�
 
 ```text
 $ cd ~
-$ curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+$ curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
 ```
 
 取得したスクリプトを実行します。
@@ -43,10 +39,10 @@ $ curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
 $ sudo bash nodesource_setup.sh
 ```
 
-これにより `apt-get` 経由で node.js が取得できるようになったので、 `apt-get` コマンドでインストールを行います。
+これにより `apt` 経由で node.js が取得できるようになったので、 `apt` コマンドでインストールを行います。
 
 ```text
-$ sudo apt-get install nodejs
+$ sudo apt install nodejs
 ```
 
 GROWI では yarn を用いたパッケージインストールを利用するため、ここで `yarn` コマンドをインストールしておきます。
@@ -55,66 +51,69 @@ GROWI では yarn を用いたパッケージインストールを利用する�
 $ sudo npm install -g yarn
 ```
 
-Node.js, npm, yarn のインストールが完了したら、インストールしたバージョンを確認しましょう。
+また、GROWI では Turborepo を用いてビルドを行うため、`turbo` コマンドをインストールします。
+
+```text
+$ sudo yarn global add turbo
+```
+
+Node.js, npm, yarn, turbo のインストールが完了したら、インストールしたバージョンを確認しましょう。
 
 ```text
 $ nodejs -v
-v8.11.3
+v20.12.2
 $ npm -v
-5.6.0
+10.5.0
 $ yarn -v
-1.9.2
+1.22.22
+$ turbo --version
+1.13.3
 ```
 
 ## Elasticsearch
 
 ### インストール
 
-[公式ページ](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) に従い、インストールを進めます。 ここでは Elasticsearch 5.x をインストールするために若干の修正をしています。
+[公式ページ](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) に従い、インストールを進めます。 ここでは Elasticsearch 8.x をインストールします。
 
-::: warning
-このドキュメントは古くなっています。現在の GROWI がサポートする Elasticsearch の最新版は 6.x 系です (2019年05月時点)
-:::
-
-まず、Elasticsearch を実行できるように JDK8 をインストールします。
+まず、Elasticsearch を実行できるように JDK17 をインストールします。
 
 ```text
-$ sudo apt-get install openjdk-8-jdk
+$ sudo apt install openjdk-17-jdk
 ```
 
 パッケージをインストールするために、Elasticsearch レポジトリの GPG キーを追加します。
 
 ```text
-$ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-```
-
-HTTPS 経由で apt コマンドによるインストールを行うために、 `apt-transport-https` パッケージをインストールします。
-
-```text
-$ sudo apt-get install apt-transport-https
+$ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
 ```
 
 Elasticsearch のレポジトリを追加します。
 
 ```text
-$ echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
+$ sudo echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
 ```
 
-これで、apt-get 経由で Elasticsearch がインストールできるようになったため、インストールを行います。
+これで、apt 経由で Elasticsearch がインストールできるようになったため、インストールを行います。
 
 ```text
-$ sudo apt-get update && sudo apt-get install elasticsearch
+$ sudo apt update && sudo apt install elasticsearch
 ```
 
-インストールが完了したら、Elasticsearch に割り当てるメモリを調整します。メモリの割り当ては個人ユースであれば 256MB で十分です。チーム規模、ページの量に応じて変更してください。
+インストールが完了すると、elasticユーザーのデフォルトパスワードが表示されるので、念のためどこかにメモしておきましょう。
+
+```text
+--------------------------- Security autoconfiguration information ------------------------------ 
+Authentication and authorization are enabled. 
+TLS for the transport and HTTP layers is enabled and configured. 
+The generated password for the elastic built-in superuser is : ～～～～～～～
+```
+
+ここで Elasticsearch に割り当てるメモリを調整します。メモリの割り当ては個人ユースであれば 256MB で十分です。チーム規模、ページの量に応じて変更してください。
 
 ```text
 $ sudo vim /etc/elasticsearch/jvm.options
-# 編集前
--Xms1g
--Xmx1g
-
-# 編集後
+# IMPORTANT: JVM heap size のコメントブロックの後に追記
 -Xms256m
 -Xmx256m
 ```
@@ -122,27 +121,49 @@ $ sudo vim /etc/elasticsearch/jvm.options
 インストールが完了したら、 パッケージのバージョンを確認します。
 
 ```text
-$ dpkg -l | grep elasticsearch
-ii  elasticsearch                    5.6.10                                     all          Elasticsearch is a distributed RESTful search engine built for the cloud. Reference documentation can be found at https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html and the 'Elasticsearch: The Definitive Guide' book can be found at https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html
+$ dpkg -l elasticsearch
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name           Version      Architecture Description
++++-==============-============-============-=====================================================
+ii  elasticsearch  8.13.2       amd64        Distributed RESTful search engine built for the cloud
 ```
 
-`systemctl` コマンドを使って、Elasticsearch を起動します。
+### TLS の無効化
 
-```text
-$ sudo systemctl start elasticsearch
+Elasticsearch 8.x では、デフォルトでは TLS 通信のみ受け付ける設定です。GROWI からは、HTTP で通信を行うため、設定を変更する必要があります。
+
+以下の差分を参考に3箇所の設定を true から false に変更します。
+
+```diff
+diff -uNr old/elasticsearch.yml new/elasticsearch.yml
+--- old/elasticsearch.yml       2024-04-30 13:36:37.106652641 +0000
++++ new/elasticsearch.yml       2024-04-30 13:38:07.739773922 +0000
+@@ -89,18 +89,18 @@
+ # --------------------------------------------------------------------------------
+
+ # Enable security features
+-xpack.security.enabled: true
++xpack.security.enabled: false
+
+ xpack.security.enrollment.enabled: true
+
+ # Enable encryption for HTTP API client connections, such as Kibana, Logstash, and Agents
+ xpack.security.http.ssl:
+-  enabled: true
++  enabled: false
+   keystore.path: certs/http.p12
+
+ # Enable encryption and mutual authentication between cluster nodes
+ xpack.security.transport.ssl:
+-  enabled: true
++  enabled: false
+   verification_mode: certificate
+   keystore.path: certs/transport.p12
+   truststore.path: certs/transport.p12
 ```
 
-elasticsearch の自動起動設定を有効化します。
-
-```text
-$ sudo systemctl enable elasticsearch
-```
-
-正常に起動しているか確認します。
-
-```text
-$ sudo systemctl status elasticsearch
-```
 
 ### GROWI に必要な Elasticsearch プラグインのインストール
 
@@ -168,46 +189,77 @@ $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromo
 $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 ```
 
+### Elasticsearch の起動と自動起動設定の有効化
+
+`systemctl` コマンドを使って、Elasticsearch を起動します。
+
+```text
+$ sudo systemctl start elasticsearch
+```
+
+elasticsearch の自動起動設定を有効化します。
+
+```text
+$ sudo systemctl enable elasticsearch
+```
+
+正常に起動しているか確認します。
+
+```text
+$ systemctl status elasticsearch
+```
+
 ## MongoDB
 
 ### インストール
 
-[公式ページ](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-ubuntu/) に従ってインストールを実施します。 バージョンは、MongoDB 3.6 です。
+[公式ページ](https://www.mongodb.com/docs/v6.0/tutorial/install-mongodb-on-ubuntu/) に従ってインストールを実施します。 バージョンは、MongoDB 6.0 です。
 
 まずは、`apt` のために public key をインポートします。
 
 ```text
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg \
+   --dearmor
 ```
 
-レポジトリを追加します。ここでは Ubuntu 14.04 と Ubuntu 16.04 の例を記載しています。
+レポジトリを追加します。ここでは Ubuntu 20.04 と Ubuntu 22.04 の例を記載しています。
 
-**Ubuntu 14.04**
+**Ubuntu 20.04**
 
 ```text
-$ echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 ```
 
-**Ubuntu 16.04**
+**Ubuntu 22.04**
 
 ```text
-$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+
 ```
 
 レポジトリの追加まで完了したため、MongoDB のインストールを行います。
 
 ```text
-$ sudo apt-get update && sudo apt-get install mongodb-server
+$ sudo apt update && sudo apt install mongodb-org
 ```
 
 インストールが完了したら、 パッケージのバージョンを確認します。
 
 ```text
-ii  mongodb-org                      3.6.6                                      amd64        MongoDB open source document-oriented database system (metapackage)
-ii  mongodb-org-mongos               3.6.6                                      amd64        MongoDB sharded cluster query router
-ii  mongodb-org-server               3.6.6                                      amd64        MongoDB database server
-ii  mongodb-org-shell                3.6.6                                      amd64        MongoDB shell client
-ii  mongodb-org-tools                3.6.6                                      amd64        MongoDB tools
+$ dpkg-query -l "mongodb-org*:amd64"
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                             Version      Architecture Description
++++-================================-============-============-===================================================================
+ii  mongodb-org                      6.0.15       amd64        MongoDB open source document-oriented database system (metapackage)
+ii  mongodb-org-database             6.0.15       amd64        MongoDB open source document-oriented database system (metapackage)
+ii  mongodb-org-database-tools-extra 6.0.15       amd64        Extra MongoDB database tools
+ii  mongodb-org-mongos               6.0.15       amd64        MongoDB sharded cluster query router
+ii  mongodb-org-server               6.0.15       amd64        MongoDB database server
+ii  mongodb-org-shell                6.0.15       amd64        MongoDB shell client
+ii  mongodb-org-tools                6.0.15       amd64        MongoDB tools
 ```
 
 `systemctl` コマンドを使って、MongoDB を起動します。
@@ -225,7 +277,7 @@ $ sudo systemctl enable mongod
 正常に起動しているか確認します。
 
 ```text
-$ sudo systemctl status mongod
+$ systemctl status mongod
 ```
 
 ## GROWI
@@ -245,16 +297,17 @@ $ cd /opt/growi
 # タグの確認
 $ sudo git tag -l
 ...
-v3.1.7
-v3.1.8
-v3.1.8-RC
-v3.1.8-RC2
-v3.1.9
-v3.2.0-RC4
+v6.3.3
+v6.3.4
+v6.3.x-base
+v7.0.0
+v7.0.1
+v7.0.2
+v7.0.x-base
 ...
 
 # RC がついていない最新版を利用
-$ sudo git checkout -b v3.1.9 refs/tags/v3.1.9
+$ sudo git checkout -b v7.0.2 refs/tags/v7.0.2
 ```
 
 ソースコードを clone した後に、`yarn` コマンドを利用して、 GROWI に必要なパッケージをインストールします。
@@ -280,8 +333,7 @@ npm start
 
 ...
 # 以下のメッセージが表示されるまでしばらく待つ
-> growi@3.1.9 server:prod /opt/growi
-> env-cmd config/env.prod.js node app.js
+{"name":"growi:crowi","hostname":"growi-server","pid":29259,"level":30,"msg":"[production] Express server is listening on port 3000","time":"2024-04-30T21:50:05.549Z","v":0}
 ```
 
 `http://<hostname or ip address>:3000/` にアクセスし、初回セットアップ画面が表示されることを確認します。
@@ -299,7 +351,7 @@ npm start
 #### インストール
 
 ```text
-$ sudo apt-get update && sudo apt-get -y install apache2
+$ sudo apt update && sudo apt -y install apache2
 ```
 
 #### 必要なモジュールの有効化
@@ -354,7 +406,7 @@ $ sudo systemctl enable apache2
 #### インストール
 
 ```text
-$ sudo apt-get update && sudo apt-get -y install nginx
+$ sudo apt update && sudo apt -y install nginx
 ```
 
 #### リバースプロキシの設定例
