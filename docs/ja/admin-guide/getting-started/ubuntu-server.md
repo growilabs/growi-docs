@@ -282,6 +282,16 @@ $ systemctl status mongod
 
 ## GROWI
 
+### Git LFS の導入
+
+GROWI では、フォントファイルを [Git Large File Storage (LFS)](https://git-lfs.com/)で管理しています。そのため、`git-lfs` がインストールされていない状態で `git clone` を行うと正しくビルドが行えません。
+
+GROWI のソースコードの取得に先立ち、`git-lfs` をインストールします。
+
+```text
+$ sudo apt update && sudo apt install git-lfs
+```
+
 ### インストール
 
 [https://github.com/weseek/growi](https://github.com/weseek/growi) からソースコードを取得し、[https://github.com/weseek/growi/releases](https://github.com/weseek/growi/releases) にて、最新の安定版のバージョンを確認します。
