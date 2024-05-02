@@ -389,9 +389,9 @@ yarn app:server
 
 ここでは、起動した GROWI に対してリバースプロキシを行うための設定例を記載します。
 
-### ファイアウォールでの https サービスの開放
+### ファイアウォールでの HTTPS サービスの開放
 
-ファイアウォールが有効になっている場合、https サービスを開放します。
+ファイアウォールが有効になっている場合、HTTPS サービスを開放します。
 
 ```text
 $ sudo firewall-cmd --add-service=https --permanent
