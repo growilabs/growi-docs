@@ -488,7 +488,7 @@ map $http_upgrade $connection_upgrade {
 }
 
 server {
-    listen 443 ssl spdy;
+    listen 443 ssl http2;
     server_name <server>;
     ssl_certificate <cert_file>;
     ssl_certificate_key <key_file>;
@@ -511,6 +511,14 @@ server {
     server_name <server>;
     return 301 https://$server_name$request_uri;
 }
+```
+
+設定ファイルに問題がないことを確認します。
+
+```text
+$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 
 #### 自動起動の設定
