@@ -140,7 +140,7 @@ Elasticsearch 8.x では、デフォルトでは TLS 通信のみ受け付ける
 
 `/etc/elasticsearch/elasticsearch.yml` を編集し、以下の差分を参考に3箇所の設定を true から false に変更します。
 
-また、`cluster.initial_master_nodes: ["localhost"]` の行頭に `#` を挿入し、コメントアウトします。（クラスタ構成を行わない場合）
+また、`cluster.initial_master_nodes: ["localhost"]` の行頭に `#` を挿入し、コメントアウトします。（クラスタ構成しない場合）
 
 ```diff
 --- old/elasticsearch.yml       2024-05-03 07:01:49.040484865 +0900
