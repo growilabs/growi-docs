@@ -140,11 +140,12 @@ Elasticsearch 8.x では、デフォルトでは TLS 通信のみ受け付ける
 
 `/etc/elasticsearch/elasticsearch.yml` を編集し、以下の差分を参考に3箇所の設定を true から false に変更します。
 
+また、`cluster.initial_master_nodes: ["localhost"]` の行頭に `#` を挿入し、コメントアウトします。（クラスタ構成を行わない場合）
+
 ```diff
-diff -uNr old/elasticsearch.yml new/elasticsearch.yml
---- old/elasticsearch.yml       2024-04-30 13:36:37.106652641 +0000
-+++ new/elasticsearch.yml       2024-04-30 13:38:07.739773922 +0000
-@@ -89,18 +89,18 @@
+--- old/elasticsearch.yml       2024-05-03 07:01:49.040484865 +0900
++++ new/elasticsearch.yml       2024-05-03 07:00:47.613622273 +0900
+@@ -89,24 +89,24 @@
  # --------------------------------------------------------------------------------
 
  # Enable security features
@@ -166,6 +167,13 @@ diff -uNr old/elasticsearch.yml new/elasticsearch.yml
    verification_mode: certificate
    keystore.path: certs/transport.p12
    truststore.path: certs/transport.p12
+ # Create a new cluster with the current node only
+ # Additional nodes can still join the cluster later
+-cluster.initial_master_nodes: ["localhost"]
++#cluster.initial_master_nodes: ["localhost"]
+
+ # Allow HTTP API connections from anywhere
+ # Connections are encrypted and require user authentication
 ```
 
 ### GROWI に必要な Elasticsearch プラグインのインストール
