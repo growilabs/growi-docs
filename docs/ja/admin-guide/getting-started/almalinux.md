@@ -131,7 +131,7 @@ $ sudo vim /etc/elasticsearch/jvm.options
 ```text
 $ dnf list --installed elasticsearch
 インストール済みパッケージ
-elasticsearch.x86_64                                                                                                 8.13.3-1                                                                                                  @elasticsearch
+elasticsearch.x86_64                   8.13.3-1                   @elasticsearch
 ```
 
 ### TLS の無効化
