@@ -11,7 +11,7 @@
 * node.js 18.x or 20.x
 * npm 6.x
 * yarn
-* MongoDB 4.4 以上
+* MongoDB 4.4 以上 \(6.0 以上を推奨\)
 * \(Option\) Elasticsearch 7.x or 8.x
 * \(Option\) systemd
 * \(Option\) Apache or nginx
@@ -132,7 +132,7 @@ ii  elasticsearch  8.13.2       amd64        Distributed RESTful search engine b
 
 ### TLS の無効化
 
-Elasticsearch 8.x では、デフォルトでは TLS 通信のみ受け付ける設定です。GROWI からは、HTTP で通信を行うため、設定を変更する必要があります。
+Elasticsearch 8.x では、デフォルトでは TLS 通信のみ受け付ける設定です。GROWI からは、HTTP で通信するため、設定を変更する必要があります。
 
 以下の差分を参考に3箇所の設定を true から false に変更します。
 
@@ -284,7 +284,7 @@ $ systemctl status mongod
 
 ### Git LFS の導入
 
-GROWI では、フォントファイルを [Git Large File Storage (LFS)](https://git-lfs.com/)で管理しています。そのため、`git-lfs` がインストールされていない状態で `git clone` を行うと正しくビルドが行えません。
+GROWI では、フォントファイルなどを [Git Large File Storage (LFS)](https://git-lfs.com/)で管理しています。そのため、`git-lfs` がインストールされていない状態で `git clone` を行うと正しくビルドが行えません。
 
 GROWI のソースコードの取得に先立ち、`git-lfs` をインストールします。
 
