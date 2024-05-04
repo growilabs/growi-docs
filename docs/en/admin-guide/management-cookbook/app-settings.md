@@ -235,7 +235,7 @@ example:`"arn:aws:s3:::growi-attachment-bucket/*"`
 
 1. Sign in to [AWS Management Console](https://aws.amazon.com/console/) and
  select [My Security Credentials](https://console.aws.amazon.com/iam/home?#/security_credentials)
- from the dropdown that appears when clicking on the account name in the upper right corner of the navigation bar.
+from the dropdown that appears when clicking on the account name in the upper right corner of the navigation bar.
 2. Expand "Access Key (Access Key ID and Secret Access Key)",
 create and store the Access Key ID and Secret Access Key for the AWS account.
 3. Expand "Account ID" to comfirm the valid user ID.
