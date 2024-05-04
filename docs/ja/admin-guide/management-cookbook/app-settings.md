@@ -215,8 +215,10 @@ Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介し
 }
 ```
 
-※ Resouceの１つ目の*は、後に作成するS3 Bucket名を入力するとよりセキュアです。  
+::: tip
+Resouceの１つ目の*は、後に作成するS3 Bucket名を入力するとよりセキュアです。  
 例: `"arn:aws:s3:::growi-attachment-bucket/*"`
+:::
 
 7. ポリシー名に任意の名前を入れてポリシーを作成します。
 8. 作成したユーザーの詳細 -> セキュリティ認証情報タブ -> アクセスキー -> アクセスキーを作成を選択します。

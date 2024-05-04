@@ -186,14 +186,62 @@ Settings are required when using Amazon S3 and Google Cloud Storage.
 
 Here are the steps to set up a connection to Amazon S3 (Amazon Simple Storage Service).
 
-#### Get AWS account infomation
+#### Get AWS credentials
+
+<details><summary>When creating a new IAM User (recommended)</summary>
+
+1. Sign in to [AWS Management Console](https://aws.amazon.com/console/).
+2. Navigate to the [IAM User page](https://us-east-1.console.aws.amazon.com/iam/home#/users).
+3. Create a user.
+    - User name: Any
+    - Provide user access to the AWS Management Console: Off
+    - Set permissions: Press "Next" without making any configurations.
+4. Select the user you created.
+5. Security Credentials -> Access keys -> Create access key
+6. Select JSON in the policy editor and add the following:
+
+```json
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"s3:PutObject",
+				"s3:PutObjectAcl",
+				"s3:GetObject"
+			],
+			"Resource": [
+				"arn:aws:s3:::*/*"
+			]
+		}
+	]
+}
+```
+
+::: tip
+It is more secure to replace the first * in the Resource with the name of S3 Bucket that you will create later.  
+example:`"arn:aws:s3:::growi-attachment-bucket/*"`
+:::
+
+7. Enter any name for the policy name and create the policy. 
+8. User details -> Security credentials -> Access keys -> Create access key
+9. Select Other and create access key.
+10. Store the Access Key ID and Secret Access Key.
+
+</details>
+
+<details><summary>When use security credentials of logged-in user</summary>
 
 1. Sign in to [AWS Management Console](https://aws.amazon.com/console/) and
  select [My Security Credentials](https://console.aws.amazon.com/iam/home?#/security_credentials)
-from the dropdown that appears when clicking on the account name in the upper right corner of the navigation bar.
+ from the dropdown that appears when clicking on the account name in the upper right corner of the navigation bar.
 2. Expand "Access Key (Access Key ID and Secret Access Key)",
- create and store the Access Key ID and Secret Access Key for the AWS account.
+create and store the Access Key ID and Secret Access Key for the AWS account.
 3. Expand "Account ID" to comfirm the valid user ID.
+
+
+</details>
 
 #### Get or change permitions of Amazon S3 Bucket
 
@@ -203,6 +251,10 @@ from the dropdown that appears when clicking on the account name in the upper ri
 4. Click the edit button of "Block Public Access".
 only uncheck "Block public access" through the New Access Control List (ACL) and save the changes.
 5. If the valid ID of the AWS account that has been added to the "Bucket Owner Permissions" and the "Access Control List" doesn't match step 3 of the procedure "Getting AWS Account Information", add the account with the verified canonical ID to "Access Other AWS Accounts". In this case, please check all types of authority.
+
+::: tip
+When using a private S3 Bucket (with ACLs disabled and all public access blocked), you should set the environment valiable `S3_BUCKET_ACLS_DISABLE=true` when launching growi.
+:::
 
 #### Register Bucket to GROWI
 
