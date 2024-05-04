@@ -182,12 +182,57 @@ Amazon S3, Google Cloud Storage を利用する場合はそれぞれ設定が必
 
 Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介します。
 
-#### AWS アカウント情報の取得
+#### AWS 認証情報の取得
+
+<details><summary>IAM Userを新規に作成する場合(推奨)</summary>
+
+1. [AWS マネジメントコンソール](https://aws.amazon.com/jp/console/) にサインインします。
+2. IAMの[IAMユーザー](https://us-east-1.console.aws.amazon.com/iam/home#/users)へ移動します。
+3. ユーザーを作成します。
+    - ユーザー名: 任意
+    - AWS マネジメントコンソールへのユーザーアクセスを提供する: オフ
+    - 許可を設定: 何も追加せずに次へ
+4. 作成したユーザーを選択します。
+5. 許可タブ -> 許可を追加 -> インラインポリシーを作成を選択します。
+6. ポリシーエディタのJSONを選択し、以下を追加します。
+
+```json
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"s3:PutObject",
+				"s3:PutObjectAcl",
+				"s3:GetObject"
+			],
+			"Resource": [
+				"arn:aws:s3:::*/*"
+			]
+		}
+	]
+}
+```
+
+※ Resouceの１つ目の*は、後に作成するS3 Bucket名を入力するとよりセキュアです。  
+例: `"arn:aws:s3:::growi-attachment-bucket/*"`
+
+7. ポリシー名に任意の名前を入れてポリシーを作成します。
+8. 作成したユーザーの詳細 -> セキュリティ認証情報タブ -> アクセスキー -> アクセスキーを作成を選択します。
+9. その他を選択 -> アクセスキーを作成します。
+10. Access Key ID および Secret Access Key を作成、保管します。
+
+</details>
+
+<details><summary>ログインユーザーの認証情報を利用する場合</summary>
 
 1. [AWS マネジメントコンソール](https://aws.amazon.com/jp/console/) にサインインします。
 2. ナビバー右上のアカウント名をクリックすると表示されるドロップダウンから、[マイセキュリティ資格情報](https://console.aws.amazon.com/iam/home?#/security_credentials) を選択します。
 3. 「アクセスキー(アクセスキー ID とシークレットアクセスキー)」を展開し、AWS アカウントのAccess Key ID および Secret Access Key を作成、保管します。
 4. 「アカウント ID」を展開し、正規ユーザー ID を確認します。
+
+</details>
 
 #### Amazon S3 Bucket 情報の取得、権限変更
 
@@ -197,6 +242,10 @@ Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介し
 4. 「ブロックパブリックアクセス」の編集ボタンをクリックします。
 5. 「新しいアクセスコントロールリスト (ACL) を介して許可されたバケットとオブジェクトへのパブリックアクセスをブロックする」のみチェックを外し、変更を保存します。
 6. 「アクセスコントロールリスト」の「バケット所有者のアクセス権」に追加されている AWS アカウントの正規 ID が手順「AWS アカウント情報の取得」の 3. で確認したものと一致していなければ、「他の AWS アカウントのアクセス」に、確認した正規 ID でアカウントを追加します。この時、権限の種類全てにチェックします。
+
+::: tip
+Private S3 Bucket(ACL無効、パブリックアクセスをブロック)を利用する場合、GROWIの起動時に環境変数`S3_BUCKET_ACLS_DISABLE=true`を設定する必要があります。
+:::
 
 #### GROWI に Bucket を登録
 
