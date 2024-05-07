@@ -14,6 +14,12 @@ For details on file upload settings, please click   [Attachment Storage Location
 
 - There is no need to configure any particular settings. After purchasing the storage option, the GROWI App will be automatically restarted on GROWI.cloud and the settings will be applied.
 
+## Method to Check Storage Usage
+
+- The storage usage can be checked from the "Account Statistics" section on the [GROWI.cloud Dashboard](https://growi.cloud/my).
+
+<img :src="$withBase('/assets/images/en/option_1.png')" alt="option_1.png">
+
 ## Downgrading Options
 
 - You can downgrade by reducing the quantity of storage options from the Change Plans and Options page.

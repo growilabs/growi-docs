@@ -2,9 +2,33 @@
 
 You can customize GROWI by Plugins.
 
-Please check [GROWI plugin site](https://growi.org/plugins) for publicly available plugins.
+Please check [GROWI plugin site](https://growi.org/plugins/en) for publicly available plugins.
 
 [[toc]]
+
+## How to install plugins
+
+1. Go to [GROWI plugin site](https://growi.org/plugins/en).
+
+2. Copy the URL of the GitHub repository that you want to install.
+
+<img :src="$withBase('/assets/images/en/plugin-1.png')" alt="copy_botton">
+
+3. Go to "Plugins" in the administration menu.
+
+<img :src="$withBase('/assets/images/en/plugin-2.png')" alt="plugin_section">
+
+4. Input the URL of GitHub repository.
+
+<img :src="$withBase('/assets/images/en/plugin-3.png')" alt="install_url">
+
+5. Click on the "Install" button.
+
+<img :src="$withBase('/assets/images/en/plugin-4.png')" alt="install_button">
+
+6. The plugin would be added in Plugin Card. You can activate/deactivate plugins with the ON/OFF switch.
+
+<img :src="$withBase('/assets/images/en/plugin-5.png')" alt="plugin_card">
 
 ## Plugin Installer
 

@@ -39,10 +39,50 @@ The below documentation details our development environment at WESEEK Inc. It ma
 
 :::
 
+::: tab "Ubuntu" id="tab-docker-ubuntu"
+
+1. [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+
+:::
+
 ::::
 
 
-## Git Setup
+
+### Install Git
+
+on the host PC:
+
+:::: tabs
+
+::: tab "Windows" id="tab-git-win"
+
+1. Install [Git for Windows](https://gitforwindows.org/)
+    * Basically, the default settings are fine, but if you have never used Vim or are not familiar with it, change the following options.
+        1. Chooseing the default editor used by Git
+            * Change to another familiar editor
+
+:::
+
+::: tab "Mac" id="tab-git-mac"
+
+```bash
+brew install git
+```
+
+:::
+
+::: tab "Ubuntu" id="tab-git-ubuntu"
+
+```bash
+apt-get install git
+```
+
+:::
+
+::::
+
+#### Configuration
 
 Devcontainer will automatically inherit settings from Docker.  
 These settings must be set up on the host side.
@@ -87,11 +127,6 @@ These settings must be set up on the host side.
     * Remote - Development
     * Docker
 
-
-
-## GUI Client for MongoDB
-
-1. Install [Robo 3T](https://robomongo.org/download)
 
 
 ## Preparing a Workspace

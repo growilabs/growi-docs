@@ -98,3 +98,10 @@ Execute the following command under the `apps/app` directory.
     ```bash
     turbo run build
     ```
+
+
+## Access database with MongoDB for VS Code
+
+<https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode>
+
+Connection to add: `mongodb://mongo`
