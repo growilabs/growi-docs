@@ -432,6 +432,7 @@ module.exports = {
               children: [
                 '/ja/admin-guide/getting-started/docker-compose.md',
                 '/ja/admin-guide/getting-started/ubuntu-server.md',
+                '/ja/admin-guide/getting-started/almalinux.md',
                 '/ja/admin-guide/getting-started/centos.md',
               ],
             },

@@ -13,11 +13,12 @@ GROWI Docs へようこそ。
 
 GROWIのインストールの手順をご紹介します。
 
-docker-compose、Ubuntu Server、CentOSにインストール頂けます。
+docker-compose、Ubuntu Server、Alma Linux、CentOSにインストール頂けます。
 
-- [docker-compose](https://docs.growi.org/ja/admin-guide/getting-started/docker-compose.html)
-- [Ubuntu Server](https://docs.growi.org/ja/admin-guide/getting-started/ubuntu-server.html)
-- [CentOS](https://docs.growi.org/ja/admin-guide/getting-started/centos.html)
+- [docker-compose](/ja/admin-guide/getting-started/docker-compose.html)
+- [Ubuntu Server](/ja/admin-guide/getting-started/ubuntu-server.html)
+- [Alma Linux](/ja/admin-guide/getting-started/almalinux.html)
+- [CentOS](/ja/admin-guide/getting-started/centos.html)
 
 ::: tip
 最新版をご利用いただくには、docker-composeでのインストールをおすすめしています。
