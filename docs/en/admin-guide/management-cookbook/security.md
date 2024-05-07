@@ -94,7 +94,7 @@ When deleting a user, the user homepage (`/user/{username}`) and its subordinate
   By registering for our service using an external service account that has two-factor authentication configured,
   it is the same as using two-factor authentication to log in to GROWI.cloud.
 
-### The help pages for each service for two-factor authentication (two-step authentication) are as follows
+### The following pages are help for two-factor authentication for each services
 
 - Google: [Turn on 2-Step Verification - Computer - Google Account Help](https://support.google.com/accounts/answer/185839)
 - GitHub: [Set up two-factor authentication - GitHub Docs](https://docs.github.com/ja/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)
