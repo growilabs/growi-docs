@@ -5,7 +5,7 @@ sidebarDepth: 0
 # About GROWI
 
 Here is a brief introduction to GROWI.
-If you want to start anyway, please go to [5 Minutes GROWI Tutorial](/en/guide/getting-started/five_minutes.html)
+If you want to try GROWI, please refer to  [Try GROWI on the demo site](/en/guide/getting-started/try_growi.html)
 
 ## A wiki that can be written in Markdown
 

@@ -19,6 +19,7 @@ Subheaders can also be created by adding additional hashes after the first.
 ```
 
 ## Add a list
+
 A `-` (dash) or `*` (asterisk) at the beginning of a line is recognized as a bulleted list. If you write `1.`, it will be a numbered list. You can indent bullets by inserting four spaces at the beginning of the line.
 
 As with headers, a dash, asterisk, or number must also be followed by a space.
@@ -35,3 +36,71 @@ As with headers, a dash, asterisk, or number must also be followed by a space.
         - more nested
 ```
 
+## Decorate text
+
+You can use Markdown's text decoration techniques to make your text more readable. Some of these can be inserted using the toolbar at the top of the editing screen.
+
+Copy and paste the following sample text into the page and check the preview.
+
+```
+
+  # Decorate text
+
+  ## Bold
+
+    ```
+    **Bold**
+    ```
+
+  **Bold**
+
+  ## Italic
+
+    ```
+    *Italic*
+    ```
+
+  *Italic*
+
+  ## Strikethrough
+
+    ```
+    ~~Strikethrough~~
+    ```
+
+  ~~Strikethrough~~
+
+  ## Inline code
+
+    ```
+    `Inline code`
+    ```
+  `Inline code`
+
+  ## Quotation
+
+    ```
+    >Quotation
+    >>Quotation
+    ```
+
+  >Quotation
+  >>Quotation
+
+  ## Horizontal line
+
+    ```
+    ***
+    ---
+    ```
+
+  ***
+  ---
+    
+  ## Code block
+
+    ```
+    Code block
+    ```
+
+```

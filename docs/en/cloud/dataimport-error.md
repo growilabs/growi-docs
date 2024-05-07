@@ -14,4 +14,4 @@
     1. Import the user data.
         - For more details, please refer to [Importing GROWI Archive Data](https://docs.growi.org/en/admin-guide/management-cookbook/import.html#growi-archive-data-import) in the official GROWI documentation.
     1. Duplicate any pages that have not been migrated.
-        - For more details, please refer to [Duplicating Pages](https://docs.growi.org/en/guide/tutorial/duplicate_page.html) in the official GROWI documentation.
+        - For more details, please refer to [Move/Duplicate/Delete a page](https://docs.growi.org/en/guide/features/page_operation.html) in the official GROWI documentation.

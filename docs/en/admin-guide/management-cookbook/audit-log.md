@@ -18,6 +18,7 @@ Actions taken by users, such as login, logout, and create page, can be viewed an
 - Time the action was performed
 - Action
 <ContextualBlock context="docs-growi-org"><li>[IP Address](/en/admin-guide/admin-cookbook/trust-proxy.html)</li></ContextualBlock>
+<ContextualBlock context="help-growi-cloud"><li>IP Address</li></ContextualBlock>
 - URL
 
 ## Search

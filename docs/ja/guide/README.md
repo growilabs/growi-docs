@@ -5,7 +5,7 @@ sidebarDepth: 0
 # GROWI について
 
 ここでは GROWI について簡単に紹介します。
-とにかく始めたい方は [5分で始める GROWI](/ja/guide/getting-started/five_minutes.html) をご参照ください。
+使い心地を確かめたい方は [デモサイトで GROWI を体験する](/ja/guide/getting-started/try_growi.html) をご参照ください。
 
 ## Markdown で書ける wiki
 
