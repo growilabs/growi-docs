@@ -134,7 +134,7 @@ ii  elasticsearch  8.13.2       amd64        Distributed RESTful search engine b
 
 Elasticsearch 8.x では、デフォルトでは TLS 通信のみ受け付ける設定です。GROWI からは、HTTP で通信するため、設定を変更する必要があります。
 
-以下の差分を参考に3箇所の設定を true から false に変更します。
+`/etc/elasticsearch/elasticsearch.yml` を編集し、以下の差分を参考に3箇所の設定を true から false に変更します。
 
 ```diff
 diff -uNr old/elasticsearch.yml new/elasticsearch.yml
@@ -191,22 +191,43 @@ $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 
 ### Elasticsearch の起動と自動起動設定の有効化
 
-`systemctl` コマンドを使って、Elasticsearch を起動します。
+`systemctl` コマンドを使って、Elasticsearch の自動起動設定を有効化し、起動します。
 
 ```text
-$ sudo systemctl start elasticsearch
-```
-
-elasticsearch の自動起動設定を有効化します。
-
-```text
-$ sudo systemctl enable elasticsearch
+$ sudo systemctl enable --now elasticsearch
 ```
 
 正常に起動しているか確認します。
 
 ```text
 $ systemctl status elasticsearch
+● elasticsearch.service - Elasticsearch
+     Loaded: loaded (/lib/systemd/system/elasticsearch.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2024-05-03 08:46:23 JST; 11min ago
+...
+```
+
+また、http で通信できることを確認します。
+
+```text
+$ curl http://localhost:9200/
+{
+  "name" : "localhost.localdomain",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "_na_",
+  "version" : {
+    "number" : "8.13.3",
+    "build_flavor" : "default",
+    "build_type" : "rpm",
+    "build_hash" : "617f7b76c4ebcb5a7f1e70d409a99c437c896aea",
+    "build_date" : "2024-04-29T22:05:16.051731935Z",
+    "build_snapshot" : false,
+    "lucene_version" : "9.10.0",
+    "minimum_wire_compatibility_version" : "7.17.0",
+    "minimum_index_compatibility_version" : "7.0.0"
+  },
+  "tagline" : "You Know, for Search"
+}
 ```
 
 ## MongoDB
@@ -262,22 +283,20 @@ ii  mongodb-org-shell                6.0.15       amd64        MongoDB shell cli
 ii  mongodb-org-tools                6.0.15       amd64        MongoDB tools
 ```
 
-`systemctl` コマンドを使って、MongoDB を起動します。
+`systemctl` コマンドを使って、MongoDB の自動起動設定を有効化し、起動します。
 
 ```text
-$ sudo systemctl start mongod
-```
-
-MongoDB の自動起動設定を有効化します。
-
-```text
-$ sudo systemctl enable mongod
+$ sudo systemctl enable --now mongod
 ```
 
 正常に起動しているか確認します。
 
 ```text
 $ systemctl status mongod
+● mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2024-05-03 08:45:35 JST; 14min ago
+...
 ```
 
 ## GROWI
@@ -327,9 +346,19 @@ $ cd /opt/growi
 $ sudo yarn
 ```
 
+### ビルド
+
+パッケージのインストールが完了したら、ビルドを行います。
+
+```text
+$ sudo yarn app:build
+```
+
+これには、しばらく時間がかかります。
+
 ### 起動確認
 
-パッケージのインストールが完了したら、起動確認を行います。
+ビルドが完了したら、起動確認を行います。
 
 ここでは MongoDB と Elasticsearch が同一ホストで稼働していることを前提としています。
 
@@ -339,7 +368,7 @@ $ sudo yarn
 $ sudo \
 MONGO_URI=mongodb://localhost:27017/growi \
 ELASTICSEARCH_URI=http://localhost:9200/growi \
-npm start
+yarn app:server
 
 ...
 # 以下のメッセージが表示されるまでしばらく待つ
@@ -408,7 +437,7 @@ $ sudo a2enmod proxy proxy_http proxy_wstunnel
 #### 自動起動の設定
 
 ```text
-$ sudo systemctl enable apache2
+$ sudo systemctl enable --now apache2
 ```
 
 ### Nginx のインストールと設定
@@ -434,7 +463,7 @@ map $http_upgrade $connection_upgrade {
 }
 
 server {
-    listen 443 ssl spdy;
+    listen 443 ssl http;
     server_name <server>;
     ssl_certificate <cert_file>;
     ssl_certificate_key <key_file>;
@@ -459,8 +488,16 @@ server {
 }
 ```
 
+設定ファイルに問題がないことを確認します。
+
+```text
+$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+```
+
 #### 自動起動の設定
 
 ```text
-$ sudo systemctl enable nginx
+$ sudo systemctl enable --now nginx
 ```
