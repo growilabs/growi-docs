@@ -87,12 +87,12 @@ When deleting a user, the user homepage (`/user/{username}`) and its subordinate
 
 ## Two-factor Authentication
 
-  GROWI.cloud does not provide two-factor authentication for user authentication.
+  Our service does not provide two-factor authentication log in.
 
-- However, GROWI.cloud allows two-factor authentication for external service accounts (Google account, GitHub account) that can be used to login to GROWI.cloud.
+  However, you can log in to GROWI.cloud using an external service account that allows you to set up two-factor authentication.
 
-  If you register for GROWI.cloud with an external service account that has already been set up for two-factor authentication,
-  you can use two-factor authentication for GROWI.cloud login in a pseudo-authenticated manner.
+  By registering for our service using an external service account that has two-factor authentication configured,
+  it is the same as using two-factor authentication to log in to GROWI.cloud.
 
 ### The help pages for each service for two-factor authentication (two-step authentication) are as follows
 
