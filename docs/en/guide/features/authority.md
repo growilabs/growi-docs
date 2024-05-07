@@ -2,7 +2,8 @@
 
 View/Edit permissions can be set for each page. Newly created pages are automatically set to the permissions of the parent page.
 
-GROWI v6.1.x migrations can be configured to allow users with read-only privileges (including Saml-linked users) to attach and detach.
+If you use GROWI v6.1.x or later versions, you can use a setting that allows only viewing permissions for each user.
+It can also be set for Saml and external account linked login users.
 
 ## How to set up
 
