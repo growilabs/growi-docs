@@ -37,6 +37,7 @@ pageClass: admin-cookbook-env-vars
 | `TRUST_PROXY_BOOL` | [Express の `trust proxy` に設定可能](https://expressjs.com/ja/guide/behind-proxies.html)な boolean 形式の値。`TRUST_PROXY_CSV` 及び `TRUST_PROXY_HOPS` よりも優先されます。 | |
 | `TRUST_PROXY_CSV` | [Express の `trust proxy` に設定可能](https://expressjs.com/ja/guide/behind-proxies.html)な CSV 形式の値。 `TRUST_PROXY_HOPS` よりも優先されます。 | |
 | `TRUST_PROXY_HOPS` | [Express の `trust proxy` に設定可能](https://expressjs.com/ja/guide/behind-proxies.html)な number 形式の値。 | |
+| `WIP_PAGE_EXPIRATION_SECONDS` | 一度も更新していない [WIP ページ](/ja/guide/features/wip-page.html) の保存期間の秒数。指定された秒数が経過するとページが自動的に削除されます。 | `172800` (2日) |
 | **ファイルアップロードオプション** | | |
 | `FILE_UPLOAD` | ファイルアップロード先のストレージ | `aws` |
 | | : `aws` Amazon Web Service S3 を使用します。(管理ページにて AWS 設定を行う必要があります。) | |

@@ -130,6 +130,7 @@ module.exports = {
                 '/en/guide/features/setup.md',
                 '/en/guide/features/page_layout.md',
                 '/en/guide/features/create_page.md',
+                '/en/guide/features/wip-page.md',
                 '/en/guide/features/page_operation.md',
                 '/en/guide/features/page_deletion_collectively.md',
                 '/en/guide/features/insert_links.md',
@@ -148,6 +149,7 @@ module.exports = {
                 '/en/guide/features/search.md',
                 '/en/guide/features/tag.md',
                 '/en/guide/features/template.md',
+                '/ja/guide/features/built-in-editor.md',
                 '/en/guide/features/hackmd.md',
                 '/en/guide/features/in-app-notification.md',
                 '/en/guide/features/slack_integration.md',
@@ -187,6 +189,7 @@ module.exports = {
               title: 'Upgrading',
               collapsable: false,
               children: [
+                '/en/admin-guide/upgrading/70x.md',
                 '/en/admin-guide/upgrading/63x.md',
                 '/en/admin-guide/upgrading/62x.md',
                 '/en/admin-guide/upgrading/61x.md',
@@ -247,6 +250,7 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/group.md',
                 '/en/admin-guide/management-cookbook/aws-s3-bucket-setting.md',
                 '/en/admin-guide/management-cookbook/ldap.md',
+                '/en/admin-guide/management-cookbook/ldapandkeycloakgroupsync.md',
                 {
                   title: 'Slack Integration',
                   path: '/en/admin-guide/management-cookbook/slack-integration/',
@@ -378,6 +382,7 @@ module.exports = {
                 '/ja/guide/features/setup.md',
                 '/ja/guide/features/page_layout.md',
                 '/ja/guide/features/create_page.md',
+                '/ja/guide/features/wip-page.md',
                 '/ja/guide/features/page_operation.md',
                 '/ja/guide/features/page_deletion_collectively.md',
                 '/ja/guide/features/insert_links.md',
@@ -396,6 +401,7 @@ module.exports = {
                 '/ja/guide/features/search.md',
                 '/ja/guide/features/tag.md',
                 '/ja/guide/features/template.md',
+                '/ja/guide/features/built-in-editor.md',
                 '/ja/guide/features/hackmd.md',
                 '/ja/guide/features/in-app-notification.md',
                 '/ja/guide/features/slack_integration.md',
@@ -428,6 +434,7 @@ module.exports = {
               children: [
                 '/ja/admin-guide/getting-started/docker-compose.md',
                 '/ja/admin-guide/getting-started/ubuntu-server.md',
+                '/ja/admin-guide/getting-started/almalinux.md',
                 '/ja/admin-guide/getting-started/centos.md',
               ],
             },
@@ -435,6 +442,7 @@ module.exports = {
               title: 'アップグレード',
               collapsable: false,
               children: [
+                '/ja/admin-guide/upgrading/70x.md',
                 '/ja/admin-guide/upgrading/63x.md',
                 '/ja/admin-guide/upgrading/62x.md',
                 '/ja/admin-guide/upgrading/61x.md',
@@ -494,6 +502,7 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/user-management.md',
                 '/ja/admin-guide/management-cookbook/group.md',
                 '/ja/admin-guide/management-cookbook/ldap.md',
+                '/ja/admin-guide/management-cookbook/ldapandkeycloakgroupsync.md',
                 {
                   title: 'Slack 連携',
                   path: '/ja/admin-guide/management-cookbook/slack-integration/',

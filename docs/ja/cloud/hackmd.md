@@ -4,6 +4,8 @@
 
 - HackMD は Markdown 同時多人数編集をするためのとても優れたツールです。
   - 詳細は [GROWI Docs](https://docs.growi.org/ja/admin-guide/admin-cookbook/integrate-with-hackmd.html) をご参照ください。
+- HackMD は GROWI v6 系以前のバージョンでのみご利用可能で、GROWI v7 系以降のバージョンでは HackMD を利用できません。
+  - ただし、GROWI v7 系以降のバージョンでは、HackMD を利用せずに GROWI ビルトインの編集機能で同時多人数編集が可能です。
 
 ## HackMD をご利用いただけるプラン
 
