@@ -161,6 +161,7 @@ module.exports = {
                 '/en/guide/features/checkbox.md',
                 '/en/guide/features/page_linker.md',
                 '/en/guide/features/footnote.md',
+                '/en/guide/features/forgot_password.md',
               ]
             },
             {
@@ -412,6 +413,7 @@ module.exports = {
                 '/ja/guide/features/checkbox.md',
                 '/ja/guide/features/page_linker.md',
                 '/ja/guide/features/footnote.md',
+                '/ja/guide/features/forgot_password.md',
               ]
             },
             {
