@@ -4,6 +4,7 @@
 
 - HackMD is a very good tool for simultaneous Markdown multi-editing.
   - Please refer to [GROWI Docs](https://docs.growi.org/en/admin-guide/admin-cookbook/integrate-with-hackmd.html) for more details.
+- HackMD can be used with GROWI v6 and earlier versions, and GROWI v7 and later versions allow simultaneous multi-person editing without using HackMD.
 
 ## HackMD Activation Conditions
 
@@ -28,4 +29,3 @@
 6. After the restart is complete, you will be able to use HackMD with the GROWI app on the same domain as before.
 7. To use the HackMD functionality, click `HackMD` in the tab next to `View` Edit in GROWI to start editing.<br〉
   <img :src="$withBase('/assets/images/en/hackmd_3.png')" alt="hackmd_3.png">
-
