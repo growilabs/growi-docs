@@ -1,14 +1,14 @@
 # 画像などのファイルを挿入する
 
-## ファイルをアップロードする
+## 画像/ファイルをアップロードする
 
-以下の3種類の方法で、ファイルを挿入できます。
+以下の3種類の方法で、画像やファイルを挿入できます。
 
-- ツールバーのファイル添付アイコンをクリックし、挿入したいファイルを選択する
-- 挿入したいファイルをドラックアンドドロップする
-- 挿入したいファイルをコピーアンドペーストする
+- 左下にあるツールバーの「＋」ボタンから「Images」/「Files」をクリックした後、挿入したい画像/ファイルを選択する
+- 挿入したい画像/ファイルをドラックアンドドロップする
+- 挿入したい画像/ファイルをコピーアンドペーストする
 
-<img :src="$withBase('/assets/images/attach.png')" alt="attach">
+<img :src="$withBase('/assets/images/ja/attach.png')" alt="attach">
 
 <ContextualBlock context="docs-growi-org">
 
@@ -27,12 +27,10 @@ AWS や GCS、Azure へファイルをアップロードするには管理画面
 
 ## Markdown で記述する
 
-- 画像アイコンから以下のような画像挿入テンプレートを挿入できます。
-
-  <img :src="$withBase('/assets/images/add_image.png')" alt="image">
-
 - 記述例
 
   ```
   ![growi](https://growi.org/assets/images/logo.png)
   ```
+
+<img :src="$withBase('/assets/images/ja/add_image.png')" alt="image">
