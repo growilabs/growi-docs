@@ -4,22 +4,22 @@ GROWI では、更新履歴の確認や過去のバージョンの閲覧、差�
 
 ## 過去のバージョンを閲覧する
 
-1. ページツールボタンの3点リーダーをクリックし、History を選択してください。
+1. ページツールボタンの3点リーダーをクリックし、「更新履歴」を選択してください。
 
-  <img  :src="$withBase('/assets/images/click-history.png')" alt="">
+  <img  :src="$withBase('/assets/images/ja/click-history.png')" alt="click-history">
 
-2. 閲覧したいバージョンの View this version をクリックしてください。
+2. 閲覧したいバージョンの「このバージョンを見る」をクリックしてください。
 
-  <img  :src="$withBase('/assets/images/history.png')" alt="">
+  <img  :src="$withBase('/assets/images/ja/history.png')" alt="history">
 
 ## バージョン間の差分を確認する
 
-1. ページツールボタンの3点リーダーをクリックし、History を選択してください。
+1. ページツールボタンの3点リーダーをクリックし、「更新履歴」を選択してください。
 
-  <img  :src="$withBase('/assets/images/click-history.png')" alt="">
+  <img  :src="$withBase('/assets/images/ja/click-history.png')" alt="click-history">
 
-2. 差分を確認したいバージョンの Source と Target を選択してください。
+2. 差分を確認したいバージョンのソースとターゲットを選択してください。
 
-- Compare latest revision ボタンとCompare previous revision ボタンを使うと簡単に Source と Target を設定できます。
+- 「最新と比較」ボタンと「１つ前のバージョンと比較」ボタンを使うと簡単にソースとターゲットを設定できます。
 
-  <img  :src="$withBase('/assets/images/compare-previous-revision.png')" alt="">
+  <img  :src="$withBase('/assets/images/ja/compare-previous-revision.png')" alt="compare-previous-revision">
