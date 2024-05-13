@@ -2,17 +2,17 @@
 
 ページタイトルの横にあるアイコンをクリックすると、ページパスや URL をコピーできます。ページ内容の共有や、ページ内にリンクを記載するときに便利です。
 
-<img :src="$withBase('/assets/images/copy_to_clipboard.png')" alt="">
+<img :src="$withBase('/assets/images/ja/copy_to_clipboard.png')" alt="">
 
-- Page path
+- ページ名
   - ページのパスをコピーします
-- Page URL
+- ページURL
   - ページの URL をコピーします
-- Permanent link
+- パーマリンク
   - ページの パーマリンク をコピーします
-- Page path and permanent link
+- ページ名とパーマリンク
   - ページのパスとパーマリンクをコピーします
-- Markdown link
+- マークダウン形式のリンク
   - マークダウンのリンク形式のページパスと URL をコピーします
 
 ::: tip
