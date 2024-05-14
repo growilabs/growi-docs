@@ -70,9 +70,3 @@ Reverse the render order.
 You can filter the render pages by the string contained in the page name. Filter's match type is partial match.
 
 - `$lsx(filter=2023)` : Only pages with `2023` in the page name will be render.
-
-## GitHub
-
-The `$lsx()` function used in GROWI originated as the [Pukiwiki lsx plugin](http://ukiya.sakura.ne.jp/index.php?PukiWiki%2F1.4%2F%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%2F%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%2F%E7%8B%AC%E8%87%AA%E3%81%AB%E8%BF%BD%E5%8A%A0%E3%81%97%E3%81%9F%E3%82%82%E3%81%AE%2Flsx)
-
-The GROWI implementation can be found on our [GitHub](https://github.com/weseek/growi-plugin-lsx)
