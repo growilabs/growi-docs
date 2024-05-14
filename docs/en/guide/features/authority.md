@@ -40,15 +40,15 @@ The following four types of permissions can be set.
 - Only you can view and edit this page.
 - Not displayed in the page tree.
 - By default, it will display in other users' page lists and search results.
-  - Please refer to [here](en/admin-guide/management-cookbook/security.html#security-settings-2) for how to change the setting.
+  - Please refer to [here](/en/admin-guide/management-cookbook/security.html#security-settings-2) for how to change the setting.
 
 ### Only inside the group
 
 - Only users who belong to the specified group can view/edit.
 - Not displayed in the page tree.
 - By default, it is displayed in other users' page lists and search results.
-  - Please refer to [here](en/admin-guide/management-cookbook/security.html#security-settings-2) for how to change the setting.
-- Please refer to [here](en/admin-guide/management-cookbook/group.html#create-group) for information on group management functions.
+  - Please refer to [here](/en/admin-guide/management-cookbook/security.html#security-settings-2) for how to change the setting.
+- Please refer to [here](/en/admin-guide/management-cookbook/group.html#create-group) for information on group management functions.
 
 ## Permissions for subordinate pages
 
@@ -120,6 +120,6 @@ Pages that require authorization settings can be organized into groups, and mana
 Example:
 
 1. Create a page with a specific group name.
-2. Move the pages which you want to set the permission to view/edit only for this group to under the page created in step 1. (Please refer to [here](en/guide/features/page_operation.html) for details on moving pages.)
+2. Move the pages which you want to set the permission to view/edit only for this group to under the page created in step 1. (Please refer to [here](/en/guide/features/page_operation.html) for details on moving pages.)
 3. Set permissions at once on the page created in step 1.
 :::
