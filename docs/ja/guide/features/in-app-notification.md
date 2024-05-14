@@ -1,29 +1,19 @@
 # アプリ内通知を受け取る
 
-GROWI ではサブスクライブしているページの通知を受け取ることができます。画面上のベルアイコンをクリックすると、ドロップダウンが開き最大6件の通知を見ることができます。
+GROWI ではサブスクライブしているページの通知を受け取ることができます。サイドバーに表示されたベルアイコンから通知を確認できます。
 
-<img :src="$withBase('/assets/images/in-app-notification-dropdown.png')" alt="">
+<img :src="$withBase('/assets/images/ja/in-app-notification1.png')" alt="">
 
-ドロップダウンの ***See Alll*** をクリックすると、全ての通知を見ることができます。
+「未読のみ」のトグルをオンにすることで未読の通知のみを表示できます。
 
-<img :src="$withBase('/assets/images/in-app-notification-list1.png')" alt="">
-
-***Unread*** タブでは未読の通知を見ることができます。***Mark all as read*** をクリックすると全ての通知に既読をつけることができます。
-
-<img :src="$withBase('/assets/images/in-app-notification-list2.png')" alt="">
+<img :src="$withBase('/assets/images/ja/in-app-notification2.png')" alt="">
 
 
 ## ページをサブスクライブする
 
-通知を受け取りたいページに行き、目玉ボタンをクリックするとサブスクライブできます。
+通知を受け取りたいページに行き、ページ右上に表示されるベルアイコンのボタンをクリックするとサブスクライブできます。
 
-<img :src="$withBase('/assets/images/in-app-notification-subscribe-button.png')" alt="">
-
-
-ユーザー設定のアプリ内通知設定にある ***PAGE_CREATE***  のスイッチを ON にすることで、自分で作成したページを自動的にサブスクライブできます。
-
-<img :src="$withBase('/assets/images/in-app-notification-settings.png')" alt="">
-
+<img :src="$withBase('/assets/images/ja/in-app-notification3.png')" alt="">
 
 ## 通知の種類
 
