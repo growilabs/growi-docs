@@ -8,7 +8,7 @@
 
   二要素認証を設定済みの外部サービスアカウントを用いて GROWI.cloud にご登録いただくことで、副次的に GROWI.cloud のログインに二要素認証をご利用いただけます。
 
-### 各サービスの二段階認証に有効化手法
+### 各サービスの二段階認証の有効化手法
 
 - Google: [Turn on 2-Step Verification - Computer - Google Account Help](https://support.google.com/accounts/answer/185839)
 - GitHub: [二要素認証を設定する - GitHub Docs](https://docs.github.com/ja/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)
