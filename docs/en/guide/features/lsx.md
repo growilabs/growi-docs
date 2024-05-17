@@ -25,11 +25,11 @@ The lsx has many option settings. To set multiple options, separate each one wit
 
 | Parameter name  | Default value  |  Explanation | Additional details |
 | --- | --- | --- | --- |
-|  num   |  50   | Specify the number of pages| [num option details](./lsx.html#num-オプション) |
-|  depth   |  not set  | Specify the maximum depth| [depth option details](./lsx.html#depth-オプション) |
-|  sort   |  path   | Specify page sort order| [sort option details](./lsx.html#sort-オプション) |
-|  reverse   |  false   | Reverse the order of pages| [reverse option details](./lsx.html#reverse-オプション) |
-|  filter   |  not set   | Filter pages | [filter option details](./lsx.html#filter-オプション) |
+|  num   |  50   | Specify the number of pages| [num option details](./lsx.html#num) |
+|  depth   |  not set  | Specify the maximum depth| [depth option details](./lsx.html#depth) |
+|  sort   |  path   | Specify page sort order| [sort option details](./lsx.html#sort) |
+|  reverse   |  false   | Reverse the order of pages| [reverse option details](./lsx.html#reverse) |
+|  filter   |  not set   | Filter pages | [filter option details](./lsx.html#filter) |
 
 ### num
 
