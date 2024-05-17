@@ -10,11 +10,11 @@ This tutorial will walk you through creating a daily report template.
 
 ### Create a template page
 
-<img :src="$withBase('/en/assets/images/en/template_01.png')" alt="template_01">
+<img :src="$withBase('/assets/images/en/template_01.png')" alt="template_01">
 
 From the page toolbar, select Create/Edit template page.
 
-<img :src="$withBase('/en/assets/images/en/template_02.png')" alt="template_02">
+<img :src="$withBase('/assets/images/en/template_02.png')" alt="template_02">
 
 Select Create a Page Template at this Hierarchy Level from the displayed dialog.
 
@@ -44,7 +44,7 @@ You will be taken to the Edit Page screen for your new page, and it will be pre-
 
 Edit the page as needed, then click Save to create your page.
 
-<img :src="$withBase('/en/assets/images/en/template_03.png')" alt="template_03">
+<img :src="$withBase('/assets/images/en/template_03.png')" alt="template_03">
 
 ### Using lower level templates
 
@@ -68,13 +68,13 @@ GROWI also allows you to insert templates for individual pages.
 
 First, open the edit screen and click on the template icon in the lower left corner.
 
-<img :src="$withBase('/en/assets/images/en/template_04.png')" alt="template_04">
+<img :src="$withBase('/assets/images/en/template_04.png')" alt="template_04">
 
 Select the template you want to create from the dialog that appears, and click the Insert button.
 
-<img :src="$withBase('/en/assets/images/en/template_05.png')" alt="template_05">
+<img :src="$withBase('/assets/images/en/template_05.png')" alt="template_05">
 
-<img :src="$withBase('/en/assets/images/en/template_06.png')" alt="template_06">
+<img :src="$withBase('/assets/images/en/template_06.png')" alt="template_06">
 
 These templates can be increased by applying the GROWI plugin to increase the number of templates that can be selected.
 
