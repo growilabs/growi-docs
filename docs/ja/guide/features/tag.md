@@ -60,7 +60,9 @@ GROWI ではページパスという階層構造でページを管理するの�
 
 tag 検索の使い方として `tag:日本語` などの入力形式でタグを対象とした検索が可能です。
 
+<!-- textlint-disable weseek/no-doubled-joshi -->
 入力すると、先ほど設定したタグが付いたページが表示されます。
+<!-- textlint-enable weseek/no-doubled-joshi -->
 
 <img :src="$withBase('/assets/images/ja/tagsearch2.png')" alt="tagsearch2">
 
