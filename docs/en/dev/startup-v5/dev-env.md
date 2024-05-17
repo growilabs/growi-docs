@@ -98,7 +98,7 @@ These settings must be set up on the host side.
     git config --global user.name "Your Name"
     git config --global user.email "yourname@example.com"
     # If you are using Windows, you will also need to set up a credential helper for WSL to reference the local machines settings
-    git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe"
+    git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
     ```
 
 :::
