@@ -12,7 +12,7 @@ Hereafter, slides created using the default GROWI feature will be called "GROWI 
 1. Select "Presentation" from the menu that opens.
 1. The slide show will start. Click on the arrow button at the bottom right of the screen or use the cursor keys on the keyboard.
 
-<img :src="$withBase('/en/assets/images/presentation.png')" alt="presentation">
+<img :src="$withBase('/en/assets/images/en/presentation.png')" alt="presentation">
 
 ::: tip
 If `marp: true`  is set in the front-matter of the page, the Marp slide will be displayed; if not, the GROWI slide will be displayed.
@@ -24,9 +24,9 @@ GROWI can render the page content as slides without using the presentation featu
 
 To use the slide view feature, include `slide: true` in the front-matter of the page.
 
-<img :src="$withBase('/en/assets/images/slide_preview.png')" alt="slideview">
+<img :src="$withBase('/en/assets/images/en/slide_preview.png')" alt="slideview">
 
-<img :src="$withBase('/en/assets/images/slide_view.png')" alt="slideview">
+<img :src="$withBase('/en/assets/images/en/slide_view.png')" alt="slideview">
 
 ### Example
 
@@ -100,7 +100,7 @@ Slides are split by a horizontal rule such as `---`. The horizontal ruler after 
 
 Please refer to [Marpit Markdown](https://marpit.marp.app/markdown) for more information.
 
-<img :src="$withBase('/en/assets/images/marp.png')" alt="marp">
+<img :src="$withBase('/en/assets/images/en/marp.png')" alt="marp">
 
 #### Example
 
