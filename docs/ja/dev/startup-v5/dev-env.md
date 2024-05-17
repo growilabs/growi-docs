@@ -105,7 +105,7 @@ devcontainer は 自動的に docker ホストの設定を参照します。
     # autocrlf 無効化
     git config --global core.autocrlf false
     # Windows の場合は、WSL 内から更にホストPCの credential helper を参照する設定を行う
-    git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe"
+    git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
     ```
 
 :::
