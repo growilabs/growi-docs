@@ -86,7 +86,7 @@ Marp slides are compatible with [Marp for VS Code](https://github.com/marp-team/
 
 No special configuration or editing is required to use the Presentation feature. When you start a slideshow, it automatically converts the Markdown content into slides.
 
-If you want to view slides in View mode or Edit mode preview, please use [slide view feature](en/guide/features/presentation.html##view-slides-in-view-mode-or-preview-in-edit-mode).
+If you want to view slides in View mode or Edit mode preview, please use [slide view feature](/en/guide/features/presentation.html#view-slides-in-view-mode-or-preview-in-edit-mode).
 
 ### Create Marp slides
 
