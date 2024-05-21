@@ -10,16 +10,17 @@ GROWI はデモサイトがあるため、簡単に始めることができま�
 
 ## ページを作成する
 
-画面右上にある「作成」ボタンからページの作成をしてみましょう。
+画面左上にある「鉛筆アイコン」からページの作成をしてみましょう。
 
-<img :src="$withBase('/assets/images/create_page_button.png')" alt="">
+<img :src="$withBase('/assets/images/ja/try_growi1.png')" alt="try_growi1">
 
-ここでのタイトルは `/お試し/はじめてのページ` とします。すでに作成されている場合には、違うページ名で作成してみてください。
+<!-- textlint-disable weseek/max-kanji-continuous-len -->
+「鉛筆アイコン」を押すとページの編集画面（作成画面）が表示されます。編集画面左上のページ名の入力欄にページタイトル（ページ名）を入力しましょう。
+<!-- textlint-enable weseek/max-kanji-continuous-len -->
 
-<img :src="$withBase('/assets/images/create_page_dialog.png')" alt="">
+<img :src="$withBase('/assets/images/ja/try_growi2.png')" alt="try_growi2">
 
-
-その後に下記の内容をコピーします。
+その後、下記の内容をページ本文にコピーします。
 
 ```markdown
 # はじめてのページ
@@ -36,11 +37,11 @@ GROWI はデモサイトがあるため、簡単に始めることができま�
 
 貼り付けると下記のように内容がリアルタイムに反映されたプレビューが画面右側に表示されます。
 
-<img :src="$withBase('/assets/images/begin_create_page.png')" alt="作成ボタン">
+<img :src="$withBase('/assets/images/ja/try_growi3.png')" alt="try_growi3">
 
-画面右下の「作成」ボタンを押して、ページを保存しましょう。
+画面右下の「更新」ボタンを押して、ページを保存しましょう。
 
-<img :src="$withBase('/assets/images/save_button.png')" alt="作成ダイアログ">
+<img :src="$withBase('/assets/images/ja/try_growi4.png')" alt="try_growi4">
 
 ::: tip
 ショートカットキーとして、 **Ctrl+s** でページを保存できます。
@@ -48,11 +49,11 @@ GROWI はデモサイトがあるため、簡単に始めることができま�
 
 ## 作ったページ配下に更にページを作る
 
-自分が作ったページ配下に更にページを追加してみましょう。もう一度、画面右上にある「作成」ボタンからページを作成します。
+先ほど作成したページを開いている状態で、画面左上の鉛筆アイコンからページを作成することで、先ほど作成したページの配下に更にページを作成できます。
 
-今度はページ名を `/マイページ/入れ子のページ` とします。
+<img :src="$withBase('/assets/images/ja/try_growi5.png')" alt="try_growi5">
 
-<img :src="$withBase('/assets/images/create_nest_page_dialog.png')" alt="">
+自分が作ったページ配下に更にページを追加してみましょう。もう一度、画面左上にある「鉛筆アイコン」からページを作成します。
 
 その後に下記の内容をコピーします。
 
@@ -69,23 +70,12 @@ GROWI はデモサイトがあるため、簡単に始めることができま�
 2. 番号リスト
 ```
 
-入力が完了したら、画面右下の「作成」ボタンを押してページを保存しましょう。
+入力が完了したら、画面右下の「更新」ボタンを押してページを保存しましょう。
 
-<img :src="$withBase('/assets/images/save_button.png')" alt="">
-
-## 親のページに移動する
-
-上記作業が終わった後、表示されたページ内の「マイページ」をクリックすることで、親のページに簡単に移動できます。
-
-<img :src="$withBase('/assets/images/title_click.png')" alt="">
+<img :src="$withBase('/assets/images/ja/try_growi6.png')" alt="try_growi6">
 
 ## ページ配下に作成したページ一覧を確認する
 
 ページ配下に作成したページ一覧は、ページ内の右側のボタンから確認できます。
 
-<img :src="$withBase('/assets/images/page_list2.png  ')" alt="">
-
-親ページ (/MyPage) が空ページだった場合はページ一覧がページ内に表示されます。
-
-<img :src="$withBase('/assets/images/page_list.png  ')" alt="">
-
+<img :src="$withBase('/assets/images/ja/try_growi7.png')" alt="try_growi7">

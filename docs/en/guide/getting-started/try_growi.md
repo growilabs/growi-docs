@@ -1,24 +1,24 @@
 # Try GROWI on the demo site
 
-This guide will walkthrough how to quickly create a page, create a child page, and navigate between parent and child pages.
+GROWI has a demo site that makes it easy to get started.
 
 [[toc]]
 
 ## Setup
 
-[Proceed to the demo site](https://demo.growi.org/) and log in with the account credentials provided.
+Proceed to the [demo site](https://demo.growi.org/) and log in with the account credentials provided.
 
 ## Create a page
 
-Create a page by clicking the Create button in the upper right corner of the screen.
+Create a page from the "pencil icon" in the upper left corner of the screen.
 
-<img :src="$withBase('/assets/images/create_page_button.png')" alt="">
+<img :src="$withBase('/assets/images/en/try_growi1.png')" alt="try_growi1">
 
-[//]: <> (TODO: Create This Pageと言う名はよくなくて英語サイト完成したら変わってください。)
-Choose a title for your page by typing it in the box titled Create This Page, then click Create.
+When you click on the "pencil icon," the page edit screen (creation screen) will appear.
 
-[//]: <> (TODO: 下のイメージはホワイトスペース多くて、レンダーされたページは綺麗ではありません)
-<img :src="$withBase('/assets/images/create_page_dialog.png')" alt="">
+Enter the page title (page name) in the input box for page name in the upper left corner of the edit screen.
+
+<img :src="$withBase('/assets/images/en/try_growi2.png')" alt="try_growi2">
 
 Paste the following content in the body of the page:
 
@@ -37,23 +37,23 @@ Paste the following content in the body of the page:
 
 A preview reflecting the contents is displayed on the right side of the screen, updating in real time.
 
-<img :src="$withBase('/assets/images/begin_create_page.png')" alt="Create Button">
+<img :src="$withBase('/assets/images/en/try_growi3.png')" alt="try_growi3">
 
-Press the Create button at the bottom right of the screen to finish creating the page.
+Press the "Update" button at the bottom right of the screen to finish creating the page.
 
-<img :src="$withBase('/assets/images/save_button.png')" alt="Create Dialog">
+<img :src="$withBase('/assets/images/en/try_growi4.png')" alt="try_growi4">
 
 ::: tip
 You can also save the page with **Ctrl + S**.
 :::
 
-## Create a child page
+## Create additional pages under the created page
 
-As before, click the Create button in the upper right corner of the screen to create a new page.
+You can create another page under the page you just created by pressing the "pencil icon" in the upper left corner of the screen while the page you just created is open.
 
-Use the name `/[PARENT_PAGE]/NestedPage` for your new page, replacing `[PARENT_PAGE]` with the name you created in the previous section.  For example, if you named the previous page `/MyPage`, then this page would be named `/MyPage/NestedPage`.
+<img :src="$withBase('/assets/images/en/try_growi5.png')" alt="/try_growi5">
 
-<img :src="$withBase('/assets/images/create_nest_page_dialog.png')" alt="">
+Add more pages under the page you have just created. Once again, create a page from the pencil icon in the upper left corner of the screen.
 
 Paste the following content in the body of the new page:
 
@@ -70,19 +70,12 @@ Paste the following content in the body of the new page:
 2. Number List 2
 ```
 
-When you’re done, press the Create button at the bottom right of the screen to save the page.
+When you’re done, press the "Update" button at the bottom right of the screen to save the page.
 
-<img :src="$withBase('/assets/images/save_button.png')" alt="">
-
-## View parent page
-
-You can easily navigate to the parent page from its child page by clicking the name of the parent page at the top of the child page.
-
-<img :src="$withBase('/assets/images/title_click.png')" alt="">
+<img :src="$withBase('/assets/images/en/try_growi6.png')" alt="try_growi6">
 
 ## View a list of child pages
 
-A list of child pages is displayed at the bottom of each parent page.
+A list of child pages can be checked from the "Page List" button on the right side of the page.
 
-![](/assets
-/images/page_list.png)
+<img :src="$withBase('/assets/images/en/try_growi7.png')" alt="try_growi7">
