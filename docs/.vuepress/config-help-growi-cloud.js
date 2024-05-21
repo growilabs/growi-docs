@@ -107,6 +107,7 @@ module.exports = {
             '/ja/cloud/noeditnotice.md',
             '/ja/cloud/recovery-byuser.md',
             '/ja/cloud/multi-factor-authentication.md',
+            '/ja/cloud/announcement-notification.md',
             '/ja/cloud/servicedesk.md',
             '/ja/cloud/trouble.md',
           ],
