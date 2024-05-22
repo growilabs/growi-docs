@@ -8,14 +8,14 @@ Hereafter, slides created using the default GROWI feature will be called "GROWI 
 
 ## Start the slideshow
 
-1. Click on the three dot leader on the page tools button
+1. Click on the three dot leader on the page tools button.
 1. Select "Presentation" from the menu that opens.
 1. The slide show will start. Click on the arrow button at the bottom right of the screen or use the cursor keys on the keyboard.
 
 <img :src="$withBase('/assets/images/en/presentation.png')" alt="presentation">
 
 ::: tip
-If `marp: true` is set in the front-matter of the page, the Marp slide will be displayed; if not, the GROWI slide will be displayed.
+If `marp: true`  is set in the front-matter of the page, the Marp slide will be displayed; if not, the GROWI slide will be displayed.
 :::
 
 ## View slides in view mode or preview in edit mode
@@ -55,11 +55,10 @@ slide: true
 slide: true
 ---
 
-本文
+Body text
 
 ```
 ~~~
-
 
 ## What are GROWI slide and Marp slide?
 
@@ -80,14 +79,14 @@ slide: true
 - Slides can be shown in view mode or preview in edit mode.
 
 ::: tip
-Marp slides are compatible with [Marp for VS Code](https://github.com/marp-team/marp-vscode), so you can preview each other using the same Markdown file.
+Marp slides are compatible with [Marp for VS Code](https://github.com/marp-team/marp-vscode) , so you can preview each other using the same Markdown file.
 :::
 
 ### Create GROWI slides
 
 No special configuration or editing is required to use the Presentation feature. When you start a slideshow, it automatically converts the Markdown content into slides.
 
-If you want to view slides in View mode or Edit mode preview, please use [slide view feature](/en/guide/features/presentation.html##view-slides-in-view-mode-or-preview-in-edit-mode).
+If you want to view slides in View mode or Edit mode preview, please use [slide view feature](/en/guide/features/presentation.html#view-slides-in-view-mode-or-preview-in-edit-mode).
 
 ### Create Marp slides
 
@@ -146,4 +145,3 @@ Body text
 
 ```
 ~~~
-
