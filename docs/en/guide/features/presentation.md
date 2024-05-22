@@ -91,7 +91,7 @@ If you want to view slides in View mode or Edit mode preview, please use [slide 
 ### Create Marp slides
 
 :::tip
-To use this feature, the administrator must activate the Marp. For details on how to set it up, please refer to [here](en/admin-guide/management-cookbook/marp.html).
+To use this feature, the administrator must activate the Marp. For details on how to set it up, please refer to [here](/en/admin-guide/management-cookbook/marp.html).
 :::
 
 To use Marp, set `marp: true` in the front-matter of the page.
