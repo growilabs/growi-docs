@@ -2,10 +2,6 @@
 
 GROWI のインストール後、初めて GROWI へアクセスすると、User ID やパスワードなどを設定する初回セットアップ画面が表示されます。
 
-<img :src="$withBase('/assets/images/installer.png')" alt="start">
+<img :src="$withBase('/assets/images/ja/setup.png')" alt="setup">
 
-必要な項目を入力し、「Create」 ボタンを押すと以下の画面が表示されます。
-
-<img :src="$withBase('/assets/images/home.png')" alt="start">
-
-管理者設定については、管理者ガイドの[アプリ設定](/ja/admin-guide/management-cookbook/app-settings.html)をご参照ください。
+必要な項目を入力し、「作成」 ボタンを押すと GROWI が起動され wiki のホームページが開かれます。
