@@ -4,22 +4,22 @@ GROWI では [PlantUML](https://plantuml.com/) を利用して、UML 図を書�
 
 具体的な記述例は [Real World UML](https://real-world-plantuml.com/) などをご参照ください。
 
-<img :src="$withBase('/assets/images/uml_diagrams.png')" alt="">
+<img :src="$withBase('/assets/images/ja/uml_diagrams.png')" alt="uml_diagrams">
 
 
 ## 記法1
 
-~~~ plantuml
+~~~~
 ``` plantuml
 class RemarkPlugin {
     + transform(syntaxTree: AST): AST
 }
 ```
-~~~
+~~~~
 
 ## 記法2
 
-~~~ plantuml
+~~~~
 ``` plantuml
 @startuml
 class RemarkPlugin {
@@ -27,4 +27,4 @@ class RemarkPlugin {
 }
 @enduml
 ```
-~~~
+~~~~
