@@ -1,10 +1,10 @@
-# Search pages
+# Search the page
 
 <ContextualBlock context="docs-growi-org">
 
 :::warning
-To use this function, setting up Elasticsearch as a search-engine database is required. Check [this](/en/admin-guide/management-cookbook/setup-search-system.html) page to find out how.
-:::
+To use this feature, you need to set up Elasticsearch as a search DB. For details, please refer to [here](/en/admin-guide/management-cookbook/setup-search-system.html)
+:::.
 
 </ContextualBlock>
 
@@ -14,18 +14,18 @@ You can open the search modal by clicking the magnifying glass icon on the navig
 
 You can search pages by page path, body, or tags by typing keywords in the search bar within the modal.
 
-<img :src="$withBase('/assets/images/en/search2.png')" alt="search2">
+<img :src="$withBase('/en/assets/images/en/search2.png')" alt="search2">
 
 You can select "all pages," "only child pages under this hierarchy," or "only pages that contain the exact text matching the keyword" as the search target.  
 Note that when you enter a keyword, candidates for the corresponding page will be displayed, so you can also access the page directly from the page candidates.
 
-<img :src="$withBase('/assets/images/en/search3.png')" alt="search3">
+<img :src="$withBase('/en/assets/images/en/search3.png')" alt="search3">
 
 ## Search Results Page
 
 Enter keywords in the search modal and press Enter(return) to move to the search results list page as shown below.
 
-<img :src="$withBase('/assets/images/en/search4.png')" alt="search4">
+<img :src="$withBase('/en/assets/images/en/search4.png')" alt="search4">
 
 - List of page names
   - On the left side of the screen, a list of page names found in the search is displayed.
@@ -63,10 +63,10 @@ When searching, options can be specified with the following notation. Options ca
 
 You can search pages by page path, text, or tags from the search bar on the navigation bar. (If the environment for searching is not yet completed, it will not be displayed.)
 
-<img :src="$withBase('/assets/images/en/search5.png')" alt="search5">
+<img :src="$withBase('/en/assets/images/en/search5.png')" alt="search5">
 
 When you enter a keyword in the search bar, you will see a list of suggested pages whose page paths partially match the keyword, as shown below. You can access pages from these suggestions.
 
 In addition, by pressing the magnifying glass icon in the search bar or the Enter(return) key, a list of pages that contain the keyword in the page path or in the text will be displayed. At this time, you can change the search range by selecting "all pages" or "child pages below this level" from the drop-down menu on the left side of the search bar.
 
-<img :src="$withBase('/assets/images/en/search6.png')" alt="search6">
+<img :src="$withBase('/en/assets/images/en/search6.png')" alt="search6">
