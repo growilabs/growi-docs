@@ -14,11 +14,11 @@ You can send your comments and requests to the GROWI development team.
 
 - Click on the user icon in the lower left corner of the screen and select "Feedback" from the drop-down that appears.
 
-<img :src="$withBase('/assets/images/en/questionnaire_feedback.png')" alt="">
+<img :src="$withBase('/assets/images/questionnaire_feedback.png')" alt="">
 
 - Fill in the information in the form that appears and press "Submit" to have the feedback sent to the GROWI development team.
 
-<img :src="$withBase('/assets/images/en/questionnaire_form.png')" alt="">
+<img :src="$withBase('/assets/images/questionnaire_form.png')" alt="">
 
 ## Questionnaire
 

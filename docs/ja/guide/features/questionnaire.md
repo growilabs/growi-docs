@@ -13,11 +13,11 @@ GROWI 開発チームにご意見やご要望を送付できます。
 
 - 画面左下のユーザーアイコンをクリックすると表示されるドロップダウンから「ご意見・ご要望」を選択してください。
 
-<img :src="$withBase('/assets/images/ja/questionnaire_feedback.png')" alt="">
+<img :src="$withBase('/assets/images/questionnaire_feedback.png')" alt="">
 
 - 表示されたフォームに情報を入力し「送信」を押してください。GROWI 開発チームにご意見・ご要望が送付されます。
 
-<img :src="$withBase('/assets/images/ja/questionnaire_form.png')" alt="">
+<img :src="$withBase('/assets/images/questionnaire_form.png')" alt="">
 
 ## アンケート
 
