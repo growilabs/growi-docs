@@ -1,9 +1,9 @@
-# Search pages
+# Search the page
 
 <ContextualBlock context="docs-growi-org">
 
 :::warning
-To use this function, setting up Elasticsearch as a search-engine database is required. Check [this](/en/admin-guide/management-cookbook/setup-search-system.html) page to find out how.
+To use this feature, you need to set up Elasticsearch as a search DB. For details, please refer to [here](/en/admin-guide/management-cookbook/setup-search-system.html)
 :::
 
 </ContextualBlock>
