@@ -2,7 +2,7 @@
 
 Clicking the three dot leader of the page tool button opens a menu of operations on the current page.
 
-<img :src="$withBase('/assets/images/page_operation.png')" alt="">
+<img :src="$withBase('/assets/images/en/page_operation.png')" alt="page_operation">
 
 ## Move/Rename a page
 
@@ -15,9 +15,8 @@ Clicking the three dot leader of the page tool button opens a menu of operations
 
 1. Click the three dot leader of the page tool button and, and select "Duplicate".
 2. Enter the new page path in the dialog box that appears.
-3. Check "Recursively" if necessary.
+3. Check the options if necessary.
 4. Click "Duplicate page" button.
-
 
 ## Delete a page
 
@@ -33,5 +32,10 @@ Deleted pages can be viewed and restored from the Trash, except when "Delete com
 2. Click on the page you want to restore.
 3. Click the "Put back" button.
 
-  <img :src="$withBase('/assets/images/trash.png')" alt="">
-  <img :src="$withBase('/assets/images/put_back_page.png')" alt="">
+<img :src="$withBase('/assets/images/en/trash.png')" alt="trash">
+  
+<img :src="$withBase('/assets/images/en/put_back_page1.png')" alt="put_back_page1">
+
+You can also restore a deleted page from the three dot leader.
+
+<img :src="$withBase('/assets/images/en/put_back_page2.png')" alt="put_back_page2">
