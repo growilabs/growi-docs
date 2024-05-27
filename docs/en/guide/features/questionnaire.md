@@ -1,6 +1,6 @@
 # Questionnaire function
 
-Starting with v6.1.0, a questionnaire feature has been added to GROWI. Users can send [Feedback](en/guide/features/questionnaire.html#feedback) and fill out a [Questionnaire](en/guide/features/questionnaire.html#questionnaire-2).
+Starting with v6.1.0, a questionnaire feature has been added to GROWI. Users can send [Feedback](/en/guide/features/questionnaire.html#feedback) and fill out a [Questionnaire](/en/guide/features/questionnaire.html#questionnaire-2).
 
 
 ::: warning
@@ -34,5 +34,5 @@ You can answer questionnaire distributed by the GROWI development team.
 <img :src="$withBase('/assets/images/questionnaire_cron_form.png')" alt="">
 
 ::: tip
-The questionnaire feature can be enabled/disabled system-wide by the administrator or individually by the user. Please see [Questionnaire Settings](en/admin-guide/management-cookbook/app-settings.html#questionnaire-settings).
+The questionnaire feature can be enabled/disabled system-wide by the administrator or individually by the user. Please see [Questionnaire Settings](/en/admin-guide/management-cookbook/app-settings.html#questionnaire-settings).
 :::
