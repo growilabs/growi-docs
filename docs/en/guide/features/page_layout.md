@@ -2,7 +2,7 @@
 
 This page describes the page layout of GROWI.
 
-<img :src="$withBase('/assets/images/en/page_layout.png')" alt="">
+<img :src="$withBase('/assets/images/en/page_layout.png')" alt="page_layout">
 
 ## 1. GROWI logo
 
@@ -51,7 +51,7 @@ You can do the following operations on the displayed page:
 - Share link management
   - You can manage links to share a private page with unauthorized users.
 - Create/Edit a template
-- [Delete a page](/ja/guide/features/page_operation.html)
+- [Delete a page](/en/guide/features/page_operation.html)
 
 ## 7. Page toolbar
 
