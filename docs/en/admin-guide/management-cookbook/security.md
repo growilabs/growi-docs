@@ -10,7 +10,7 @@ You can configure pages whose publication range is set to `Only me` or `Only ins
 
 Note that if you set `Displayed`, pages whose viewing is restricted will be displayed in the page list and search results for other users.
 
-<img :src="$withBase('/assets/images/security.png')" alt="security">
+<img :src="$withBase('/assets/images/en/security.png')" alt="security">
 
 ### Page Deletion Permission
 
@@ -24,7 +24,6 @@ Specify the page deletion permission according to the four types of deletion met
 You can select the setting from the following options for "Only the page" and "Including the descendant pages".
 
 - Only the page
-
   - Choose from: `Anyone can perform the action`, `Only administrators can perform the action`, `Administrators and page authors can perform the action`.
 
 - Including the descendant pages
@@ -42,7 +41,7 @@ The option that was set as "Permanently delete a page" in v4.5 or earlier is inh
 - Manual deletion of the user homepage (`/user/{username}`) is not possible. The user homepage will remain after the user is deleted.
 - If a user's homepage already exists when the user registers (for example, if the `/user/foo` page already exists when the user `foo` registers), the user homepage will be initialized automatically regardless of whether [User homepage deletion](/en/admin-guide/management-cookbook/security.html#user-homepage-deletion) settings is ON or OFF.
   - Once initialized, the `/user/foo` page and its subordinate pages are completely deleted and replaced by the newly registered user.
-  - This specification has been changed since GROWI v6.2.0. Please also see [Upgrade Guide](/en/admin-guide/upgrading/62x.html)
+  - This specification has been changed since GROWI v6.2.0. Please also see [Upgrade Guide](/en/admin-guide/upgrading/62x.html).
 
 #### Enable user homepage deletion (Manual Deletion)
 
@@ -65,13 +64,14 @@ When deleting a user, the user homepage (`/user/{username}`) and its subordinate
 - `Open (Anyone can register)`
   - New registrations can be made with ID/Password from the user registration screen.
 
-  <img :src="$withBase('/assets/images/register.png')" alt="">
+  <img :src="$withBase('/assets/images/en/register1.png')" alt="">
 
 - `Restricted (Requires approval by administrators)`
   - You cannot log in immediately after registering a new user with ID/Password from the user registration screen. Approval of the target user by the administrator is required.
-  - An in-app notification will be sent to the administrator when a new registration is made.
 
-  <img :src="$withBase('/assets/images/in-app-notification-requested-registration-approval.png')" alt="">
+  <img :src="$withBase('/assets/images/en/register2.png')" alt="">
+
+  - An in-app notification will be sent to the administrator when a new registration is made.
 
   ::: tip
   If [email settings](/en/admin-guide/management-cookbook/app-settings.html#email-settings) has been setup an email will be sent to the administrator.
@@ -79,8 +79,6 @@ When deleting a user, the user homepage (`/user/{username}`) and its subordinate
 
   - The administrator must approve the target user from User Management.
 
-  <img :src="$withBase('/assets/images/user-management-user-approval-pending.png')" alt="">
-
 - `Closed (Invitation Only)`
   - The user will not be able to register a new user with ID/Password from the user registration screen.
-  - To register a new user, please [Temporary issuance of a new user](/en/admin-guide/management-cookbook/user-management.html#temporary-issuance-of-a-new-user) to invite you.
+  - To register a new user, please [Temporary issuance of a new user](/en/admin-guide/management-cookbook/user-management.html#user-table).
