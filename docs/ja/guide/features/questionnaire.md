@@ -11,13 +11,13 @@ v6.1.0 より GROWI にアンケート機能が追加されました。ユーザ
 
 GROWI 開発チームにご意見やご要望を送付できます。
 
-- 画面右上のユーザー名をクリックすると表示されるドロップダウンから「ご意見・ご要望」を選択してください。
+- 画面左下のユーザーアイコンをクリックすると表示されるドロップダウンから「ご意見・ご要望」を選択してください。
 
-<img :src="$withBase('/assets/images/questionnaire_feedback.png')" alt="">
+<img :src="$withBase('/assets/images/ja/questionnaire_feedback.png')" alt="">
 
 - 表示されたフォームに情報を入力し「送信」を押してください。GROWI 開発チームにご意見・ご要望が送付されます。
 
-<img :src="$withBase('/assets/images/questionnaire_form.png')" alt="">
+<img :src="$withBase('/assets/images/ja/questionnaire_form.png')" alt="">
 
 ## アンケート
 
