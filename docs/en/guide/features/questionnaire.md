@@ -1,6 +1,6 @@
 # Questionnaire function
 
-Starting with v6.1.0, a questionnaire feature has been added to GROWI. Users can send [Feedback](/en/guide/features/questionnaire.html#feedback) and fill out a [Questionnaire](/en/guide/features/questionnaire.html#questionnaire-2).
+Starting with v6.1.0, a questionnaire feature has been added to GROWI. Users can send [Feedback](/en/guide/features/questionnaire.html#feedback) and fill out a [Questionnaire](/en/guide/features/questionnaire.html#questionnaire).
 
 
 ::: warning
