@@ -4,8 +4,7 @@ Starting with v6.1.0, a questionnaire feature has been added to GROWI. Users can
 
 
 ::: warning
-The data sent will not contain any personal information of the user. Please refer to .
-詳しくは[Questionnaire Settings](/en/admin-guide/management-cookbook/app-settings.html#questionnaire-settings).
+The data sent will not contain any personal information of the user. Please refer to [Questionnaire Settings](/en/admin-guide/management-cookbook/app-settings.html#questionnaire-settings).
 :::
 
 ## Feedback
