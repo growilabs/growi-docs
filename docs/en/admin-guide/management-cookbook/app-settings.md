@@ -17,12 +17,12 @@ If the site URL is not set, some of the functions on GROWI will not work properl
 If a DNS record such as `growi.example.com` has been specified as the destination for a custom domain, set it here.  
 If a domain is not set to the DNS, set the value to any URL.
 
-<img :src="$withBase('/assets/images/appsettings10.png')" alt="appsettings10">
+<img :src="$withBase('/assets/images/en/appsettings1.png')" alt="appsettings1">
 
 If the environment variable `APP_SITE_URL` is set, the value will be displayed in the `Environment variables` column on the right.  
 
 
-<img :src="$withBase('/assets/images/appsettings11.png')" alt="appsettings11">
+<img :src="$withBase('/assets/images/en/appsettings2.png')" alt="appsettings2">
 
 If a value is entered in the `Database` field, the value set in the `Database` field will take precedence over the `Environment variables` field.  
 
@@ -32,9 +32,6 @@ If the site URL is not set, an error message will be displayed because some of t
 The following error message is displayed in the settings section of the admin page and in the header section of the page.  
 Please be sure to set the **Site URL setting for GROWI**.
 
-<img :src="$withBase('/assets/images/appsettings12.png')" alt="appsettings12">
-
-<img :src="$withBase('/assets/images/appsettings13.png')" alt="appsettings13">
 :::
 
 </ContextualBlock>
@@ -45,42 +42,42 @@ Please be sure to set the **Site URL setting for GROWI**.
 
 If the site name is set, it is displayed on the login screen and the title of GROWI.
 
-<img :src="$withBase('/assets/images/appsettings1.png')" alt="appsettings1">
+<img :src="$withBase('/assets/images/en/appsettings3.png')" alt="appsettings3">
 
-<img :src="$withBase('/assets/images/appsettings2.png')" alt="appsettings2">
+<img :src="$withBase('/assets/images/en/appsettings4.png')" alt="appsettings4">
 
 ### Confidential Name
 
-The contents set as the Confidential Name will be displayed in the GROWI header.
+The contents written in the confidential display field will be displayed when the cursor is placed on the GROWI title.
 
-<img :src="$withBase('/assets/images/appsettings3.png')" alt="appsettings3">
+<img :src="$withBase('/assets/images/en/appsettings5.png')" alt="appsettings5">
 
 ### Default language setting for new users
 
 In this field, the user can select English, Japanese, or Chinese.
 
-<img :src="$withBase('/assets/images/appsettings4.png')" alt="appsettings4">
+<img :src="$withBase('/assets/images/en/appsettings6.png')" alt="appsettings6">
 
 The above setting changes the default language when creating a new user in GROWI.
 
-<img :src="$withBase('/assets/images/appsettings5.png')" alt="appsettings5">
+<img :src="$withBase('/assets/images/en/appsettings7.png')" alt="appsettings7">
 
 
 ### File Uploading
 
 GROWI has a setting that allows uploading of files other than images to a page.
 
-<img :src="$withBase('/assets/images/appsettings6.png')" alt="appsettings6">
+<img :src="$withBase('/assets/images/en/appsettings8.png')" alt="appsettings8">
 
 If this option is unchecked, users will not be able to upload non-image files when editing the wiki page.
 
 The File Uploading settings will enable users to upload files.
 
-<img :src="$withBase('/assets/images/appsettings8.png')" alt="appsettings8">
+<img :src="$withBase('/assets/images/en/appsettings9.png')" alt="appsettings9">
 
 If the upload banner is hidden as follows, the File Uploading settings have not been configured.
 
-<img :src="$withBase('/assets/images/appsettings9.png')" alt="appsettings9">
+<img :src="$withBase('/assets/images/en/appsettings10.png')" alt="appsettings10">
 
 ## Email settings
 
@@ -89,7 +86,7 @@ Sending email from GROWI can be enabled by configuring one of the following conf
   1. Setting up an SMTP server
   2. Using SES from AWS
 
-<img :src="$withBase('/assets/images/appsettings14.png')" alt="appsettings14">
+<img :src="$withBase('/assets/images/en/appsettings11.png')" alt="appsettings11">
 
 If there is an alert that says **"Email setting is not set up"**, this indicates that the configuration form has not been fully completed.
 
@@ -113,7 +110,7 @@ If the email settings are enabled, the email will be sent from GROWI.
 
 The following is the **Temporarily issue a new user** window in the User Management menu.
 
-<img :src="$withBase('/assets/images/appsettings15.png')" alt="appsettings15">
+<img :src="$withBase('/assets/images/en/appsettings12.png')" alt="appsettings12">
 
 Check the **Send invitation email** checkbox to make the email work.  
 If the settings are not configured correctly, the email will not work.
@@ -167,8 +164,6 @@ Please note that by changing the file upload method in the middle,
  the uploaded files so far will not be able to access.
 :::
 
-<img :src="$withBase('/assets/images/appsettings18.png')" alt="appsettings18">
-
 <ContextualBlock context="docs-growi-org">
 
 ::: warning
@@ -212,8 +207,6 @@ only uncheck "Block public access" through the New Access Control List (ACL) and
 2. In case of using other object storage services that have an S3-compatible API, such as MinIO,
 Please enter the URL of the endpoint into the custom endpoint.
 
-<img :src="$withBase('/assets/images/appsettings19.png')" alt="appsettings19">
-
 ### Set up Google Cloud Storage
 
 1. Please refer to [here](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)
@@ -221,7 +214,6 @@ for more GCS information.
 
 2. Select GCS in the file upload settings of GROWI app settings and set the information confirmed in the above process.
 
-<img :src="$withBase('/assets/images/appsettings20.png')" alt="appsettings20">
 
 - API Key Json Path: [The path to the JSON file for the GCP service account key (as seen from the GROWI root directory)]
 - Bucket Name: [Bucket Name of GCS]
