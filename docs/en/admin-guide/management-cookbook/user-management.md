@@ -79,7 +79,7 @@ Only accounts that do not have the Active status can be deleted. Please note tha
 
 2. Click Temporary Issuance for new users.
 
-3. Enter your invitation email address. Multiple e-mail addresses can be specified by a new line.
+3. Enter your invitation email address. Multiple email addresses can be specified by a new line.
 
 4. Click issue.
 
