@@ -2,13 +2,13 @@
 
 You can customize GROWI by Plugins.
 
-Please check [GROWI plugin site](https://growi.org/plugins/en) for publicly available plugins.
+Please check [GROWI plugin site](https://growi.org/plugins) for publicly available plugins.
 
 [[toc]]
 
 ## How to install plugins
 
-1. Go to [GROWI plugin site](https://growi.org/plugins/en).
+1. Go to [GROWI plugin site](https://growi.org/plugins).
 
 2. Copy the URL of the GitHub repository that you want to install.
 
@@ -37,8 +37,7 @@ Please check [GROWI plugin site](https://growi.org/plugins/en) for publicly avai
 
 ::: warning
 
-If a plugin is already installed, reinstalling it from the same repository will overwrite the existing plugin.
-Also, even if the branches are different, if the repositories are the same, the plugin will be overwritten.
+If a plugin is already installed, reinstalling it from the same repository will overwrite the existing plugin. Also, even if the branches are different, if the repositories are the same, the plugin will be overwritten.
 :::
 
 ## Plugin Card
