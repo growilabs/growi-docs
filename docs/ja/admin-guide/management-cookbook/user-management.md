@@ -58,7 +58,7 @@
 
 ユーザーテーブル右側のドロップダウンからユーザーへの閲覧のみアクセス権の付与または削除ができます。
 
-<img :src="$withBase('/assets/images/ja/user-management-read-only.png')" width="20%" alt="user-management-read-only">
+<img :src="$withBase('/assets/images/ja/user-management-read-only.png')" alt="user-management-read-only">
 
 #### アカウントの承認および停止
 

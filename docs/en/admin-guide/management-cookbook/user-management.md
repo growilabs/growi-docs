@@ -59,7 +59,7 @@ Users with read-only access rights cannot create, delete, update, or comment on 
 
 You can grant or revoke read-only access rights to users from the drop-down on the right side of the user table.
 
-<img :src="$withBase('/assets/images/en/user-management-read-only.png')" width="20%" alt="user-management-read-only">
+<img :src="$withBase('/assets/images/en/user-management-read-only.png')" alt="user-management-read-only">
 
 #### Account Approval and Suspension
 
