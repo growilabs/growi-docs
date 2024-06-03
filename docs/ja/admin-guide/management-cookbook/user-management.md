@@ -8,7 +8,7 @@
 
 パスワードのリセット、アカウントの削除、停止、管理画面へのアクセス権限の変更等の操作もこのテーブル上で行うことができます。
 
-<img :src="$withBase('/assets/images/user-management1.png')" alt="">
+<img :src="$withBase('/assets/images/ja/user-management1.png')" alt="user-management1">
 
 ### ステータス
 
@@ -35,15 +35,15 @@
 
 ユーザーテーブル右側のドロップダウンから、ユーザーのパスワードをリセットできます。
 
-<img :src="$withBase('/assets/images/user-management2.png')" alt="">
+<img :src="$withBase('/assets/images/ja/user-management2.png')" alt="user-management2">
 
 ドロップダウンの編集メニューから、パスワードのリセットを選択するとモーダルが表示されるので、そこに表示されるパスワードリセットの対象ユーザーを確認してください。
 
-<img :src="$withBase('/assets/images/user-management3.png')" width="50%">
+<img :src="$withBase('/assets/images/ja/user-management3.png')" width="50%" alt="user-management3">
 
 パスワードのリセットを押すと新規のパスワードが発行されます。対象ユーザーはこのパスワードを用いてログインしたのち、ユーザー設定( `/me` )のパスワード設定からパスワードを再設定するよう伝えてください。
 
-<img :src="$withBase('/assets/images/user-management4.png')" width="50%">
+<img :src="$withBase('/assets/images/ja/user-management4.png')" width="50%" alt="user-management4">
 
 
 #### 管理者権限の付与
@@ -58,7 +58,7 @@
 
 ユーザーテーブル右側のドロップダウンからユーザーへの閲覧のみアクセス権の付与または削除ができます。
 
-<img :src="$withBase('/assets/images/user-management-read-only.png')" width="20%">
+<img :src="$withBase('/assets/images/ja/user-management-read-only.png')" alt="user-management-read-only">
 
 #### アカウントの承認および停止
 
@@ -74,7 +74,7 @@ Active ステータスでないアカウントのみ削除できます。削除�
 
 1. 左のサイドバーから「ユーザー管理」をクリックします。
 
-<img :src="$withBase('/assets/images/user-management6.png')" alt="">
+<img :src="$withBase('/assets/images/ja/user-management6.png')" alt="user-management6">
 
 2. **新規ユーザーの仮発行** ボタンを押します。
 
@@ -82,17 +82,17 @@ Active ステータスでないアカウントのみ削除できます。削除�
 
 4. 発行ボタンを押します
 
-<img :src="$withBase('/assets/images/user-management7.png')" width="50%">
+<img :src="$withBase('/assets/images/ja/user-management7.png')" width="50%" alt="user-management7">
 
 5. 画面上にメールアドレスと仮のパスワードが表示されます
 
-<img :src="$withBase('/assets/images/user-management8.png')" width="50%">
+<img :src="$withBase('/assets/images/ja/user-management8.png')" width="50%" alt="user-management8">
 
 #### 招待メールの再送信
 
 新規ユーザーの仮発行が完了済み、かつアカウントによるログインが未完了のユーザーに対して招待メールを再送できます。
 
-<img :src="$withBase('/assets/images/user-management9.png')" width="50%">
+<img :src="$withBase('/assets/images/ja/user-management9.png')" width="50%" alt="user-management9">
 
 ::: tip
 GROWIから通知メールを配信する場合は、[管理画面からのメール設定](/ja/admin-guide/management-cookbook/app-settings.html#メールの設定) が必要です。
@@ -102,7 +102,7 @@ GROWIから通知メールを配信する場合は、[管理画面からのメ�
 
 外部アカウントを管理します。外部アカウントとは外部認証機構を利用して登録した時に GROWI アカウントと紐づけられる情報で、紐づくGROWIアカウントが削除されるとそれに紐づく外部アカウントも自動で削除されます。
 
-<img :src="$withBase('/assets/images/user-management5.png')" alt="">
+<img :src="$withBase('/assets/images/ja/user-management5.png')" alt="user-management5">
 
 GROWI アカウントのパスワードが未設定の場合、パスワードの設定ステータスが「未設定」と表示されます。その状態の外部アカウントに紐づいた GROWI アカウントは ID/Pass によるログインはできません。その外部アカウントでログインし、個人設定画面からパスワードを設定するか、管理者がそのアカウントのパスワードをリセットすると「設定済み」になります。
 
