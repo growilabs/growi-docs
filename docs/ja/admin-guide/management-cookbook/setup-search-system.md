@@ -23,11 +23,10 @@ Elasticsearch サーバーの起動と接続に関しては、システム管理
 
 - 環境変数 `ELASTICSEARCH_URI` によって Elasticsearch の URI が指定され、正常に接続されている場合、GROWI 画面のトップバーに検索窓が表示されます。また、管理画面の全文検索管理ページで接続および Elasticsearch インデックスの状態を確認できます。
 
-  <img :src="$withBase('/assets/images/setup-search-system1.png')" alt="">
+  <img :src="$withBase('/assets/images/ja/setup-search-system1.png')" alt="">
 
-- Elasticsearch の URI を指定しているにもかかわらず、以下のような接続できない旨のエラーが表示される場合は Elasticsearch の状態と URI の設定を再度確認してください。
+- Elasticsearch の URI を指定しているにもかかわらず、接続できない旨のエラーが表示される場合は Elasticsearch の状態と URI の設定を再度確認してください。
 
-  <img :src="$withBase('/assets/images/setup-search-system2.png')" alt="">
 
 ## インデックスのリビルド
 
@@ -41,12 +40,6 @@ Elasticsearch による検索機能は、検索用 DB のデータと Mongo DB �
 
 インデックスの処理が中断された場合、インデックスは以下のように破損状態と表示されます。（リビルドが継続している場合も同様の表示になりますので継続中の場合は処理が完了するまで待ってください。）
 
-<img :src="$withBase('/assets/images/setup-search-system3.png')" alt="">
+<img :src="$withBase('/assets/images/ja/setup-search-system2.png')" alt="">
 
 破損したインデックスに対して、インデックスの正規化を行うことで以前のリビルド結果のインデックスで検索機能を利用できます。
-
-
-
-
-
-
