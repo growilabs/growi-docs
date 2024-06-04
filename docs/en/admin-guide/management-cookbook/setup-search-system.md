@@ -23,7 +23,7 @@ Please refer to system management page for instructions on activating and connec
 
 - If your Elasticsearch is properly set up using the Elasticsearch URI in the `ELASTICSEARCH_URI` environment variable, a search bar wil appear in the GROWI top bar and you will be able to check the Elasticsearch connection settings and index information of your Elasticsearch instance in the Full Text Search Management page of the management screen.
 
-  <img :src="$withBase('/assets/images/en/setup-search-system1.png')" alt="">
+  <img :src="$withBase('/assets/images/en/setup-search-system1.png')" alt="setup-search-system1">
 
 - If you see the error message even though you have set your Elasticsearch URI properly, double check your Elasticsearch information and URI.
 
@@ -40,6 +40,6 @@ You can rebuild the index by clicking the **Rebuild Index** button on the Full T
 
 An index may become corrupted if the processing of the index is interrupted. One way this might occur is if the above rebuilding operation is interrupted. When doing an index rebuild, please wait until the rebuild is complete to avoid corrupting the data.
 
-<img :src="$withBase('/assets/images/en/setup-search-system2.png')" alt="">
+<img :src="$withBase('/assets/images/en/setup-search-system2.png')" alt="setup-search-system2">
 
 A corrupted index can be repaired and returned to usable status by renormalizing the index as shown above.
