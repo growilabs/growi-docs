@@ -2,7 +2,7 @@
 
 ログイン、ログアウト、ページの作成など、ユーザーが行ったアクションを管理画面から 表示 / 検索 できる機能です。
 
-<img :src="$withBase('/assets/images/audit-log.png')" alt="audit-log">
+<img :src="$withBase('/assets/images/ja/audit-log.png')" alt="audit-log">
 
 <ContextualBlock context="docs-growi-org">
 
