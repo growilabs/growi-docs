@@ -2,7 +2,7 @@
 
 Actions taken by users, such as login, logout, and create page, can be viewed and searched from the administration screen.
 
-<img :src="$withBase('/assets/images/audit-log.png')" alt="audit-log">
+<img :src="$withBase('/assets/images/en/audit-log.png')" alt="audit-log">
 
 <ContextualBlock context="docs-growi-org">
 
