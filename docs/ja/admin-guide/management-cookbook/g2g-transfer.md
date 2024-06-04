@@ -25,11 +25,11 @@ GROWI から別の GROWI へ簡単にデータの移行ができる機能です�
 - 移行先の GROWI はインストールの有無関係なく、移行キーが発行できます。
   - インストールしている場合は、管理画面から移行キーを発行します。
 
-<img :src="$withBase('/assets/images/g2g-transfer-1.png')" alt="g2g-transfer-1">
+<img :src="$withBase('/assets/images/ja/g2g-transfer-1.png')" alt="g2g-transfer-1">
 
 - インストールしていない場合は、インストーラー画面から移行キーを発行します。
 
-<img :src="$withBase('/assets/images/g2g-transfer-2.png')" alt="g2g-transfer-2">
+<img :src="$withBase('/assets/images/ja/g2g-transfer-2.png')" alt="g2g-transfer-2">
 
 ### 移行キーの期限
 
@@ -42,7 +42,7 @@ GROWI から別の GROWI へ簡単にデータの移行ができる機能です�
 
 - 移行先で発行した移行キーを移行元の管理画面へ入力し、移行開始ボタンを押すと移行を開始します。
 
-<img :src="$withBase('/assets/images/g2g-transfer-3.png')" alt="g2g-transfer-3">
+<img :src="$withBase('/assets/images/ja/g2g-transfer-3.png')" alt="g2g-transfer-3">
 
 
 ### 移行するコレクション、高度なオプションを選択する
@@ -51,7 +51,7 @@ GROWI から別の GROWI へ簡単にデータの移行ができる機能です�
 - デフォルトはすべてのコレクションを移行し移行元と移行先のデータベースの中身が同じになります。
 - 重複するデータが存在していた場合、移行元のデータで上書きします。ただし、Config だけは `Flush and insert` されます。
 
-<img :src="$withBase('/assets/images/g2g-transfer-4.png')" alt="g2g-transfer-4">
+<img :src="$withBase('/assets/images/ja/g2g-transfer-4.png')" alt="g2g-transfer-4">
 
 ## 移行先のファイルアップロード設定
 
