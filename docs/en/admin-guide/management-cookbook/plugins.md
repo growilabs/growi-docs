@@ -37,8 +37,7 @@ Please check [GROWI plugin site](https://growi.org/plugins/en) for publicly avai
 
 ::: warning
 
-If a plugin is already installed, reinstalling it from the same repository will overwrite the existing plugin.
-Also, even if the branches are different, if the repositories are the same, the plugin will be overwritten.
+If a plugin is already installed, reinstalling it from the same repository will overwrite the existing plugin. Also, even if the branches are different, if the repositories are the same, the plugin will be overwritten.
 :::
 
 ## Plugin Card
