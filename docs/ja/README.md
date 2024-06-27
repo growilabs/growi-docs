@@ -3,7 +3,7 @@ home: true
 heroImage: https://user-images.githubusercontent.com/1638767/68901318-100dd280-0779-11ea-83ab-51f111972ab1.png
 actionText: ガイドを見る
 actionLink: /ja/guide/
-footer: © 2018 WESEEK, Inc.
+footer: © 2024 GROWI, Inc.
 ---
 <!-- for docs-growi-org root-->
 
@@ -28,6 +28,6 @@ footer: © 2018 WESEEK, Inc.
   </div>
   <div class="feature">
     <h2>育ち続けるプロジェクト</h2>
-    <p>WESEEK, Inc. のエンジニアを中心とした活発なコミュニティが、システムを常に成長させ、ユーザーのみなさまと一緒により良いコミュニケーションツールの在り方を模索します。質問や提案があれば私たちの <a href="https://communityinviter.com/apps/wsgrowi/invite" target="_blank"> Slack </a> にご参加ください。</p>
+    <p>GROWI, Inc. のエンジニアを中心とした活発なコミュニティが、システムを常に成長させ、ユーザーのみなさまと一緒により良いコミュニケーションツールの在り方を模索します。質問や提案があれば私たちの <a href="https://communityinviter.com/apps/wsgrowi/invite" target="_blank"> Slack </a> にご参加ください。</p>
   </div>
 </div>
