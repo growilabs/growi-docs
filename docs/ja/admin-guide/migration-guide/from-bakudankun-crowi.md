@@ -3,7 +3,7 @@
 ## 概要
 
 <!-- textlint-disable weseek/sentence-length -->
-- Crowi の docker image、[bakudankun/crowi](https://github.com/crowi/docker-crowi) を利用している環境から、GROWI 公式の docker-compose を用いたディプロイ方法である [weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose) への切り替えを想定
+- Crowi の docker image、[bakudankun/crowi](https://github.com/crowi/docker-crowi) を利用している環境から、GROWI 公式の docker-compose を用いたディプロイ方法である [growilabs/growi-docker-compose](https://github.com/growilabs/growi-docker-compose) への切り替えを想定
 <!-- textlint-enable weseek/sentence-length -->
 - その際、以下のデータ移行を伴うことになる
     - MongoDB コンテナのデータボリュームからデータを吸い出し、リストアする

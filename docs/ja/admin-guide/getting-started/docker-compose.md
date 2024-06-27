@@ -13,10 +13,10 @@
 
 ## growi-docker-compose　のダウンロード
 
-[https://github.com/weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose) の「Clone or download」ボタンから、ソースコードをダウンロードもしくは git コマンドにより clone します。
+[https://github.com/growilabs/growi-docker-compose](https://github.com/growilabs/growi-docker-compose) の「Clone or download」ボタンから、ソースコードをダウンロードもしくは git コマンドにより clone します。
 
 ```text
-git clone https://github.com/weseek/growi-docker-compose.git growi
+git clone https://github.com/growilabs/growi-docker-compose.git growi
 ```
 
 ## GROWI の起動確認
@@ -87,7 +87,7 @@ docker-compose stop
 
 ```text
 docker-compose rm app mongo elasticsearch
-docker rmi weseek/growi:5
+docker rmi growilabs/growi:5
 ```
 
 最新版を pull し、Docker イメージを作成した後、コンテナを立ち上げます。

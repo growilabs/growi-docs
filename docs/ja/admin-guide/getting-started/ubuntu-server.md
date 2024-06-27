@@ -313,14 +313,14 @@ $ sudo apt update && sudo apt install git-lfs
 
 ### インストール
 
-[https://github.com/weseek/growi](https://github.com/weseek/growi) からソースコードを取得し、[https://github.com/weseek/growi/releases](https://github.com/weseek/growi/releases) にて、最新の安定版のバージョンを確認します。
+[https://github.com/growilabs/growi](https://github.com/growilabs/growi) からソースコードを取得し、[https://github.com/growilabs/growi/releases](https://github.com/growilabs/growi/releases) にて、最新の安定版のバージョンを確認します。
 
 ここでは `/opt/growi` 配下にインストールする手順を記載しています。
 
 ```text
 $ sudo mkdir -p /opt/
 $ cd /opt/
-$ sudo git clone https://github.com/weseek/growi /opt/growi
+$ sudo git clone https://github.com/growilabs/growi /opt/growi
 $ cd /opt/growi
 
 # タグの確認

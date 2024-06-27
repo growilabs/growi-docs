@@ -10,7 +10,7 @@
 
 #### 概要
 
-- GROWI の バージョン [v3.6.2](https://github.com/weseek/growi/releases) 時点で、GROWI のエクスポート機能、インポート機能が実装されています。
+- GROWI の バージョン [v3.6.2](https://github.com/growilabs/growi/releases) 時点で、GROWI のエクスポート機能、インポート機能が実装されています。
 - それぞれ手順についてはGROWI Docs をご参照ください。
   - [データアーカイブ](https://docs.growi.org/ja/admin-guide/management-cookbook/export.html)
   - [アーカイブデータインポート](https://docs.growi.org/ja/admin-guide/management-cookbook/import.html#growi-アーカイブデータインポート)

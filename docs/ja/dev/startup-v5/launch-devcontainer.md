@@ -11,7 +11,7 @@
 1. コマンドパレットから、devcontainer でリポジトリを開く
     * コマンドパレットを開く: `Ctrl + Shift + P` or `<F1>`
     * `Dev Containers: Open folder in Container...`
-    * weseek/growi ローカルリポジトリを選択
+    * growilabs/growi ローカルリポジトリを選択
         * Windows の場合は WSL のパス: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
             * `{your account}` は自身のアカウント名に置き換えてください
 1. 初回は各種コンテナイメージのダウンロードとビルドのため、5～10分待つ

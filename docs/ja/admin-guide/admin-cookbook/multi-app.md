@@ -140,7 +140,7 @@ docker-compose rm app-1
 docker-compose rm app-2
 docker-compose rm app-3
 docker rmi growimulti_app
-docker rmi weseek/growi:3
+docker rmi growilabs/growi:3
 ```
 
 ### Docker イメージの起動

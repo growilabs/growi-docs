@@ -6,7 +6,7 @@
 
 - 移行の際は、移行元 GROWI と 移行先 GROWI (GROWI.cloud で用意した GROWI) のバージョンをそろえる必要があります。
 - バージョン変更に関しては [/サービス/GROWIアプリ/バージョン] をご参照ください。
-  - v4.1.3 のリリースノートは → [こちら](https://github.com/weseek/growi/releases/tag/v4.1.3)
+  - v4.1.3 のリリースノートは → [こちら](https://github.com/growilabs/growi/releases/tag/v4.1.3)
 
 ### 上記手順で正常に移行が完了できていない場合
 

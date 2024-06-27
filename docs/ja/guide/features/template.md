@@ -54,7 +54,7 @@ GROWI ではテンプレートを利用したページを作ることができ�
 
 例として、下記のようなテンプレートをトップページに配置することで、常にページ一覧がページ上部に表示されるページを作成できます。
 
-`$lsx()` という記法は [weseek/growi-plugin-lsx](https://github.com/weseek/growi-plugin-lsx) によるものです。
+`$lsx()` という記法は [growilabs/growi-plugin-lsx](https://github.com/growilabs/growi-plugin-lsx) によるものです。
 
 ```markdown
 # 関連ページ

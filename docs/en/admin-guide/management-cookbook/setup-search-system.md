@@ -9,7 +9,7 @@ This guide will explain how to set up and manage Elasticsearch for full text sea
 Please refer to system management page for instructions on activating and connecting to Elasticsearch.
 
 - docker-compose
-  - Users of [weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose) will automatically have Elasticsearch activated by default. No additional setup is required.
+  - Users of [growilabs/growi-docker-compose](https://github.com/growilabs/growi-docker-compose) will automatically have Elasticsearch activated by default. No additional setup is required.
 - ubuntu
   - Please find instructions for setting up and using Elasticsearch [here](/en/admin-guide/getting-started/ubuntu-server.html#elasticsearch).
   - Please set the environment variable `ELASTICSEARCH_URI` to the URI of the Elasticsearch instance. you will use for GROWI.

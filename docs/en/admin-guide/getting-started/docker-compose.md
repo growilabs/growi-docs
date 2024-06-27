@@ -13,10 +13,10 @@ Software needed for setup are listed below.
 
 ## Download growi-docker-compose
 
-Download or clone source code files from [https://github.com/weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose) .
+Download or clone source code files from [https://github.com/growilabs/growi-docker-compose](https://github.com/growilabs/growi-docker-compose) .
 
 ```text
-git clone https://github.com/weseek/growi-docker-compose.git growi
+git clone https://github.com/growilabs/growi-docker-compose.git growi
 ```
 
 ## Build GROWI
@@ -87,7 +87,7 @@ Remove Docker containers and Docker images.
 
 ```text
 docker-compose rm app mongo elasticseach
-docker rmi weseek/growi:5
+docker rmi growilabs/growi:5
 ```
 
 Pull latest GROWI, and create a fresh Docker image and build up containers.

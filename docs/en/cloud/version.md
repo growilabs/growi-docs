@@ -6,7 +6,7 @@
 <img :src="$withBase('/assets/images/en/version_1.png')" alt="version_1.png">
 - The version of the GROWI app can be selected and updated on GROWI.cloud.
   - When the version is updated, the GROWI app is automatically restarted and the settings are reflected.
-  - Please refer [here](https://github.com/weseek/growi/releases) for the released version of GROWI.
+  - Please refer [here](https://github.com/growilabs/growi/releases) for the released version of GROWI.
 
 ### GROWI Application Version Update Guide
 

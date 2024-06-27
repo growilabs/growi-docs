@@ -9,8 +9,8 @@ devcontainer で開発するには、以下のような構造のディレクト�
 
 ```
 - GROWI
-    - growi                   <-- weseek/growi repository
-    - growi-docker-compose    <-- weseek/growi-docker-compose repository
+    - growi                   <-- growilabs/growi repository
+    - growi-docker-compose    <-- growilabs/growi-docker-compose repository
 ```
 
 ## 手順
@@ -25,8 +25,8 @@ devcontainer で開発するには、以下のような構造のディレクト�
 ```bash
 mkdir -p ~/Projects/GROWI
 cd ~/Projects/GROWI
-git clone https://github.com/weseek/growi.git
-git clone https://github.com/weseek/growi-docker-compose.git
+git clone https://github.com/growilabs/growi.git
+git clone https://github.com/growilabs/growi-docker-compose.git
 # プラグイン開発時に利用する空のディレクトリを作成
 mkdir node_modules
 ```

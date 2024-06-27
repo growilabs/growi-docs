@@ -16,9 +16,9 @@
 
 ## Create a new HackMD(CodiMD) container with [growi-docker-compose](/en/admin-guide/getting-started/docker-compose.html)
 
-[This](https://github.com/weseek/growi-docker-compose/tree/master/examples/integrate-with-hackmd) example will be used.
+[This](https://github.com/growilabs/growi-docker-compose/tree/master/examples/integrate-with-hackmd) example will be used.
 
-Set up will follow these instructions [README.md](https://github.com/weseek/growi-docker-compose/blob/master/examples/integrate-with-hackmd/README.md).
+Set up will follow these instructions [README.md](https://github.com/growilabs/growi-docker-compose/blob/master/examples/integrate-with-hackmd/README.md).
 
 1. Prepare `examples/integrate-with-hackmd/docker-compose.override.yml`
 2. Add environment variables to GROWI container

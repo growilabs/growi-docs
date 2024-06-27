@@ -10,7 +10,7 @@ The below documentation details our development environment at WESEEK Inc. It ma
 1. From the Remote Connection indicator, open the devcontainer repository
     * <img :src="$withBase('/assets/images/vscode-remote-button.png')" alt="indicator">
     * Remote-Containers: Open folder in Container...
-    * Select the weseek/growi repository
+    * Select the growilabs/growi repository
         * WSL path for Windows: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
 1. For first time users wait 5-10 minutes for the download and building of various docker container images.
 1. If there was no error, you should see 5 docker container images in the sidebar
@@ -37,7 +37,7 @@ To ensure there were no errors in setup, confirm the following information in th
     file:.git/config        core.filemode=true
     file:.git/config        core.bare=false
     file:.git/config        core.logallrefupdates=true
-    file:.git/config        remote.origin.url=https://github.com/weseek/growi.git
+    file:.git/config        remote.origin.url=https://github.com/growilabs/growi.git
     file:.git/config        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
     file:.git/config        branch.master.remote=origin
     file:.git/config        branch.master.merge=refs/heads/master

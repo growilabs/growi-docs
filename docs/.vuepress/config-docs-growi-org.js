@@ -88,7 +88,7 @@ module.exports = {
   },
   themeConfig: {
     context: 'docs-growi-org',
-    repo: 'weseek/growi-docs',
+    repo: 'growilabs/growi-docs',
     docsDir: 'docs',
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
@@ -102,7 +102,7 @@ module.exports = {
           { text: 'Admin Guide', link: '/en/admin-guide/' },
           { text: 'Developers Guide', link: '/en/dev/' },
           { text: 'API Reference', link: '/en/api/' },
-          { text: 'Release Note', link: 'https://github.com/weseek/growi/releases' },
+          { text: 'Release Note', link: 'https://github.com/growilabs/growi/releases' },
           {
             text: 'External Sites',
             items: [
@@ -354,7 +354,7 @@ module.exports = {
           { text: '管理者ガイド', link: '/ja/admin-guide/' },
           { text: '開発ガイド', link: '/ja/dev/' },
           { text: 'API リファレンス (英語)', link: '/en/api/' },
-          { text: 'リリースノート', link: 'https://github.com/weseek/growi/releases' },
+          { text: 'リリースノート', link: 'https://github.com/growilabs/growi/releases' },
           {
             text: '外部サイト',
             items: [

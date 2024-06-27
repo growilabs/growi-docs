@@ -11,7 +11,7 @@
 1. リモート接続用インジケーターから、devcontainer でリポジトリを開く
     * <img :src="$withBase('/assets/images/vscode-remote-button.png')" alt="indicator">
     * Remote-Containers: Open folder in Container...
-    * weseek/growi ローカルリポジトリを選択
+    * growilabs/growi ローカルリポジトリを選択
         * Windows の場合は WSL のパス: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
 1. 初回は各種コンテナイメージのダウンロードとビルドのため、5～10分待つ
 1. エラーなく起動したら、サイドバーの Docker メニューで5つのコンテナの起動を確認する
@@ -37,7 +37,7 @@ GROWI-Dev devcontainer ウィンドウ内で作業します。
     file:.git/config        core.filemode=true
     file:.git/config        core.bare=false
     file:.git/config        core.logallrefupdates=true
-    file:.git/config        remote.origin.url=https://github.com/weseek/growi.git
+    file:.git/config        remote.origin.url=https://github.com/growilabs/growi.git
     file:.git/config        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
     file:.git/config        branch.master.remote=origin
     file:.git/config        branch.master.merge=refs/heads/master

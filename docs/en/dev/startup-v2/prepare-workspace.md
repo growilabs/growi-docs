@@ -8,8 +8,8 @@ In order to develop using devcontainer, you need to set up a directory tree as f
 
 ```
 - GROWI
-    - growi                   <-- weseek/growi repository
-    - growi-docker-compose    <-- weseek/growi-docker-compose repository
+    - growi                   <-- growilabs/growi repository
+    - growi-docker-compose    <-- growilabs/growi-docker-compose repository
 ```
 
 ## Procedures
@@ -24,8 +24,8 @@ In order to develop using devcontainer, you need to set up a directory tree as f
 ```bash
 mkdir -p ~/Projects/GROWI
 cd ~/Projects/GROWI
-git clone https://github.com/weseek/growi.git
-git clone https://github.com/weseek/growi-docker-compose.git
+git clone https://github.com/growilabs/growi.git
+git clone https://github.com/growilabs/growi-docker-compose.git
 # Create an empty directory for plugin development
 mkdir node_modules
 ```

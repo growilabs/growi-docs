@@ -11,7 +11,7 @@ This chapter introduces how to launch three GROWI sites.
 ### Build Image
 
 ```bash
-git clone https://github.com/weseek/growi-docker-compose.git growi
+git clone https://github.com/growilabs/growi-docker-compose.git growi
 cd growi
 docker build -t growimulti_app .
 ```
@@ -139,7 +139,7 @@ docker-compose rm app-1
 docker-compose rm app-2
 docker-compose rm app-3
 docker rmi growimulti_app
-docker rmi weseek/growi:3
+docker rmi growilabs/growi:3
 ```
 
 ### Rebuild Image

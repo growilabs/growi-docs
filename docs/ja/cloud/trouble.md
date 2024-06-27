@@ -19,7 +19,7 @@ GROWI は OSS として多くのユーザーからの指摘や改善要望をお
 
 ### GitHub_Issueはこちら
 
-[GitHub Issue](https://github.com/weseek/growi/issues)  
+[GitHub Issue](https://github.com/growilabs/growi/issues)  
 
 ### Slack へのお問い合わせはこちら
 

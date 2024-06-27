@@ -8,5 +8,5 @@
 ## For feature requests or bug reports
 
 - Please join our Slack and ask your questions
-- Please submit an [Issue](https://github.com/weseek/growi/issues) to GitHub.
+- Please submit an [Issue](https://github.com/growilabs/growi/issues) to GitHub.
 - Join the GROWI workspace on Slack [here](https://communityinviter.com/apps/wsgrowi/invite)
