@@ -2,7 +2,7 @@
 
 ## GROWI アプリの不具合について
 
-オープンソースソフトウェアである [GROWI](https://growi.org) と、その GROWI を起動できるサービスである GROWI.cloud は、共に [WESEEK,Inc](https://weseek.co.jp) が開発・運用をしていますが、それぞれ別のプロジェクトチームで構成されています。
+オープンソースソフトウェアである [GROWI](https://growi.org) と、その GROWI を起動できるサービスである GROWI.cloud は、共に  [GROWI, Inc.](https://growi.co.jp) が開発・運用をしていますが、それぞれ別のプロジェクトチームで構成されています。
 
 <!-- textlint-disable weseek/no-doubled-joshi -->
 そのため、GROWI.cloud で構築した GROWI をご利用いただいている際に気付いた本体の疑問点や不具合については、GROWI.cloud のサービスデスクへ問い合わせるよりも直接 GROWI 本体の開発チームやユーザーコミュニ

@@ -1,6 +1,6 @@
 # growi-docs
 
-[![Deploy](https://github.com/weseek/growi-docs/actions/workflows/deploy.yml/badge.svg)](https://github.com/weseek/growi-docs/actions/workflows/deploy.yml)
+[![Deploy](https://github.com/growilabs/growi-docs/actions/workflows/deploy.yml/badge.svg)](https://github.com/growilabs/growi-docs/actions/workflows/deploy.yml)
 
 ## Requirements
 

@@ -3,7 +3,7 @@ home: true
 heroImage: https://user-images.githubusercontent.com/1638767/68901318-100dd280-0779-11ea-83ab-51f111972ab1.png
 actionText: Get Started
 actionLink: /guide/
-footer: © 2018 WESEEK, Inc.
+footer: © 2024 GROWI, Inc.
 ---
 <!-- for docs-growi-org root-->
 
@@ -28,6 +28,6 @@ footer: © 2018 WESEEK, Inc.
   </div>
   <div class="feature">
     <h2>Ever-Growing</h2>
-    <p>WESEEK, Inc., together with our community of contributors, is committed to creating the most powerful and desirable communication tool. Please join our <a href="https://communityinviter.com/apps/wsgrowi/invite" target="_blank"> Slack </a> with any questions or suggestions!</p>
+    <p>GROWI, Inc., together with our community of contributors, is committed to creating the most powerful and desirable communication tool. Please join our <a href="https://communityinviter.com/apps/wsgrowi/invite" target="_blank"> Slack </a> with any questions or suggestions!</p>
   </div>
 </div>

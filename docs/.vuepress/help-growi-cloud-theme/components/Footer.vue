@@ -24,7 +24,7 @@
         <div class="col-12 col-md-3">
           <p class="text-white fw-bold gc-footer-title my-4">{{ this.$themeLocaleConfig.company_profile_terms_of_use }}</p>
           <div class="d-flex flex-column text-white mr-5">
-            <a class="gc-footer-link" :href="`https://weseek.co.jp/${this.$lang}`" target="_blank" rel="noopener noreferrer">{{ this.$themeLocaleConfig.about_us }}</a>
+            <a class="gc-footer-link" :href="`https://growi.co.jp`" target="_blank" rel="noopener noreferrer">{{ this.$themeLocaleConfig.about_us }}</a>
             <a class="gc-footer-link" href="https://growi.cloud/terms-of-service">{{ this.$themeLocaleConfig.terms_of_service }}</a>
             <a class="gc-footer-link" href="https://growi.cloud/privacy-policy">{{ this.$themeLocaleConfig.privacy_policy }}</a>
             <a class="gc-footer-link" href="https://growi.cloud/asct">{{ this.$themeLocaleConfig.notation_based_on_the_act_on_specified_commercial_transactions }}</a>
@@ -58,17 +58,17 @@
         </div>
 
         <div class="col-12 gc-text-right">
-          <a href="https://twitter.com/weseek_inc" class="btn btn-lg fa-lg btn-rounded mr-2" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/GrowiDev" class="btn btn-lg fa-lg btn-rounded mr-2" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-twitter gc-footer-sns-icon" />
           </a>
-          <a href="https://www.facebook.com/weseekinc" class="btn btn-lg fa-lg btn-rounded" target="_blank" rel="noopener noreferrer">
+          <!-- <a href="https://www.facebook.com/weseekinc" class="btn btn-lg fa-lg btn-rounded" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-facebook-f gc-footer-sns-icon" />
-          </a>
+          </a> -->
         </div>
 
       </div>
     </div>
-    <div class="text-center gc-copyright py-2">©WESEEK, Inc. All Rights Reserved.</div>
+    <div class="text-center gc-copyright py-2">©GROWI, Inc. All Rights Reserved.</div>
   </footer>
 </template>
 

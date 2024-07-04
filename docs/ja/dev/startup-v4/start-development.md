@@ -2,7 +2,7 @@
 
 ## Git の操作について
 
-::: tip WESEEK Rule
+::: tip
 ブランチ操作、reset, rebase 操作に慣れていない人は必ず Git Graph を利用し、樹形図を常に確認しながら開発を進めるようにしてください。
 :::
 
