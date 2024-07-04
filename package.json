@@ -11,13 +11,13 @@
   ],
   "author": "Yuki Takei <yuki@weseek.co.jp>",
   "license": "MIT",
-  "homepage": "https://github.com/weseek/growi-docs#readme",
+  "homepage": "https://github.com/growilabs/growi-docs#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/weseek/growi-docs.git"
+    "url": "git+https://github.com/growilabs/growi-docs.git"
   },
   "bugs": {
-    "url": "https://github.com/weseek/growi-docs/issues"
+    "url": "https://github.com/growilabs/growi-docs/issues"
   },
   "watch": {
     "apiv3:dev": {

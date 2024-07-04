@@ -4,11 +4,11 @@
 
 ### 登録番号について
 
-株式会社WESEEKの適格請求書発行事業者登録番号は以下の通りです。
+株式会社GROWIの適格請求書発行事業者登録番号は以下の通りです。
 
-<span class="display-4">T3011101046911</span>
+<span class="display-4">T9011101097073</span>
 
-弊社の適格請求書発行事業者公表サイトは<a href="https://www.invoice-kohyo.nta.go.jp/regno-search/detail?selRegNo=3011101046911">こちら</a>をご覧ください。
+弊社の適格請求書発行事業者公表サイトは<a href="https://www.invoice-kohyo.nta.go.jp/regno-search/detail?selRegNo=9011101097073">こちら</a>をご覧ください。
 
 
 ### 請求書への登録番号の記載について

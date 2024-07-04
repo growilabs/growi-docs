@@ -88,7 +88,7 @@ module.exports = {
   },
   themeConfig: {
     context: 'docs-growi-org',
-    repo: 'weseek/growi-docs',
+    repo: 'growilabs/growi-docs',
     docsDir: 'docs',
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
@@ -102,13 +102,13 @@ module.exports = {
           { text: 'Admin Guide', link: '/en/admin-guide/' },
           { text: 'Developers Guide', link: '/en/dev/' },
           { text: 'API Reference', link: '/en/api/' },
-          { text: 'Release Note', link: 'https://github.com/weseek/growi/releases' },
+          { text: 'Release Note', link: 'https://github.com/growilabs/growi/releases' },
           {
             text: 'External Sites',
             items: [
               { text: 'GROWI.org', link: 'https://growi.org' },
               { text: 'GROWI.cloud', link: 'https://growi.cloud' },
-              { text: 'Blog', link: 'https://weseek.co.jp/tech/category/growi/' },
+              // { text: 'Blog', link: 'https://weseek.co.jp/tech/category/growi/' },
             ],
           },
         ],
@@ -360,7 +360,7 @@ module.exports = {
             items: [
               { text: 'GROWI.org', link: 'https://growi.org' },
               { text: 'GROWI.cloud', link: 'https://growi.cloud' },
-              { text: 'Blog', link: 'https://weseek.co.jp/tech/category/growi/' },
+              // { text: 'Blog', link: 'https://weseek.co.jp/tech/category/growi/' },
             ],
           },
         ],
