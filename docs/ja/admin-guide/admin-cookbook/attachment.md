@@ -77,6 +77,8 @@ Azure(Blob) 設定を環境変数によって固定したい場合は、環境�
 - `MAX_FILE_SIZE` : [アップロード可能なファイルのサイズ上限(bytes)]
 - `FILE_UPLOAD_TOTAL_LIMIT` : [アップロードされたファイルの累計サイズ上限(bytes)]
 
+ただし、リバースプロキシに Nginx を利用している場合は、その制限を受けます。1Mバイトを超えるファイルをアップロードする必要がある場合は、[client_max_body_size](http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size)ディレクティブを設定してください。
+
 ## 添付ファイル参照方法
 
 v4.2.3 より 添付ファイル参照方法に変更が加わりました。
