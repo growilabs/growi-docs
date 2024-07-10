@@ -18,7 +18,7 @@ WorkingDirectory=/opt/growi
 Environment=PORT=3000\
 MONGO_URI=mongodb://localhost:27017/growi\
 ELASTICSEARCH_URI=http://localhost:9200/growi
-ExecStart=/usr/local/bin/yarn dev:server
+ExecStart=/usr/bin/yarn app:server
 
 [Install]
 WantedBy=multi-user.target
@@ -37,7 +37,7 @@ Set environment variables such as `MONGO_URI` and `FILE_UPLOAD`.
 
 #### ExecStart
 
-Set `ExecStart` according to your environment. On CentOS, set it to `/usr/bin/yarn dev:server`.
+Set `ExecStart` according to your environment. Check the yarn path using `which yarn` etc.
 
 ## Run systemctl
 
