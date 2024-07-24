@@ -75,10 +75,11 @@ Versions from GROWI v6.0.0 to v7.0.11 have a bug related to the custom whitelist
 
 ##### Solution
 
-Upgrade to v7.0.12 or later and perform one of the following:
+Perform one of the following:
 
 - Use the recommended settings.
-- After selecting the custom whitelist, import the values from the recommended settings for both tag names and tag attributes, and modify the settings based on them.
+- Upgrade to v7.0.12 or later, select the custom whitelist,
+import the values from the recommended settings for both tag names and attributes and modify them based on them.
 
 
 :::
