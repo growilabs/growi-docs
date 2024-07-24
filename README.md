@@ -4,9 +4,8 @@
 
 ## Requirements
 
-- Node.js 12.x
-- npm 6.x
-- Yarn 1.12 or above
+- Node.js v14 or v16
+- Yarn v1.22
 
 ## How to start
 
@@ -14,7 +13,7 @@
 yarn
 
 # Start dev server (docs-growi-org)
-yarn docs-growi-org:dev
+yarn start
 
 # Or start dev server (help-growi-cloud) 
 yarn help-growi-cloud:dev
