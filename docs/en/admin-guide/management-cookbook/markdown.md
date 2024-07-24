@@ -40,15 +40,52 @@ Configure how HTML tags in Markdown text are handled to prevent attacks from mal
 
 <img :src="$withBase('/assets/images/en/markdown_xss_1.png')" alt="markdown_xss_1.png">
 
-- If "Recommended setting" is selected
+### Recommended setting
 
-Users cannot modify the content.
+- It is a secure setting that allows the use of HTML within the scope that does not interfere with the use of GROWI.
+- Users cannot change the setting value.
+
 
 <img :src="$withBase('/assets/images/en/markdown_xss_2.png')" alt="markdown_xss_2.png">
 
-- If "Custom whitelist" is selected
+### Custom whitelist
 
-Leaving the "Tag names" field empty and updating will disable HTML functionality.
+- Administrators can configure which HTML tags and tag attributes are allowed.
+- Tag names:
+  - Please enter a comma-separated list of tag names.
+- Tag attributes:
+  - Please enter the string representation of a JSON object.
+  - For each tag name as a key, enter the string representation of a JSON array of tag attributes that you want to allow.
+    - You can specify tag attributes to allow for all tags by using `"*"` as the key.
+
+::: danger
+
+#### Bug related to custom whitelist in versions prior to v7.0.11
+
+Versions from GROWI v6.0.0 to v7.0.11 have a bug related to the custom whitelist.
+
+##### Symptoms
+
+- The values entered in the custom whitelist are not reflected correctly.
+- Upgrading to v7.0.10 or later exacerbates this issue, causing the inability to render HTML tags correctly in Markdown.
+
+##### Related Fixes
+
+[#8836](https://github.com/weseek/growi/pull/8836), [#8946](https://github.com/weseek/growi/pull/8836)
+
+##### Solution
+
+Upgrade to v7.0.12 or later and perform one of the following:
+
+- Use the recommended settings.
+- After selecting the custom whitelist, import the values from the recommended settings for both tag names and tag attributes, and modify the settings based on them.
+
+
+:::
+
+#### Examples
+
+When left empty, it disables all HTML tags and tag attributes.
 
 <img :src="$withBase('/assets/images/en/markdown_xss_3.png')" alt="markdown_xss_3.png">
 
