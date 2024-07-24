@@ -38,22 +38,33 @@ GROWI のデフォルトの Markdown 記法では、単一の改行は`<br>`と�
 ## XSS(Cross Site Scripting)対策設定
 
 マークダウンテキスト内の HTML タグの扱いを設定し、悪意のあるプログラムからの攻撃を防ぎます。  
-「おすすめ設定」と「カスタムホワイトリスト」のどちらかを選択いただけます。
+「おすすめ設定」と「カスタムホワイトリスト」のどちらかを選択できます。
 
 <img :src="$withBase('/assets/images/ja/markdown_xss_1.png')" alt="markdown_xss_1.png">
 
-- 「おすすめ設定」を選択した場合
+### おすすめ設定
 
-ユーザー側からは内容を変更できかねます。
+- GROWI の利用には支障のない範囲で HTML を利用できるセキュアな設定です
+- ユーザーは設定値を変更できません
 
 <img :src="$withBase('/assets/images/ja/markdown_xss_2.png')" alt="markdown_xss_2.png">
 
-- 「カスタムホワイトリスト」を選択した場合
+### カスタムホワイトリスト
 
-「タグ名」欄を空にした状態で更新すると、HTML が機能しない状態になります。
+- どのような HTML タグ、タグ属性を許可するかを管理者自身で設定できます
+- タグ名
+  - カンマ区切りのタグ名のリストを入力してください
+- タグ属性
+  - JSON Object の string 表現を入力してください
+  - JSON Object のキーにはタグ名、値には許可したいタグ属性の JSON Array の string 表現を入力してください
+    - `"*"` をキーとすることで全てのタグに対して許可するタグ属性を指定できます
+
+
+#### 設定例
+
+空にすると全ての HTML タグおよびタグ属性を無効化します。
 
 <img :src="$withBase('/assets/images/ja/markdown_xss_3.png')" alt="markdown_xss_3.png">
-
 
 たとえば、ページ本文に `<h1>title</h1>` のように記述しても、HTML が機能していないため、 `h1` が「見出し 1 」として扱われません。
 

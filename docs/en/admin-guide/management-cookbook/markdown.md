@@ -40,15 +40,28 @@ Configure how HTML tags in Markdown text are handled to prevent attacks from mal
 
 <img :src="$withBase('/assets/images/en/markdown_xss_1.png')" alt="markdown_xss_1.png">
 
-- If "Recommended setting" is selected
+### Recommended setting
 
-Users cannot modify the content.
+
+- It is a secure setting that allows the use of HTML within the scope that does not interfere with the use of GROWI.
+- Users cannot change the setting value.
+
 
 <img :src="$withBase('/assets/images/en/markdown_xss_2.png')" alt="markdown_xss_2.png">
 
-- If "Custom whitelist" is selected
+### Custom whitelist
 
-Leaving the "Tag names" field empty and updating will disable HTML functionality.
+- Administrators can configure which HTML tags and tag attributes are allowed.
+- Tag names:
+  - Please enter a comma-separated list of tag names.
+- Tag attributes:
+  - Please enter the string representation of a JSON object.
+  - For each tag name as a key, enter the string representation of a JSON array of tag attributes that you want to allow.
+    - You can specify tag attributes to allow for all tags by using `"*"` as the key.
+
+#### Examples
+
+When left empty, it disables all HTML tags and tag attributes.
 
 <img :src="$withBase('/assets/images/en/markdown_xss_3.png')" alt="markdown_xss_3.png">
 
