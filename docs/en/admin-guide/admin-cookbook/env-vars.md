@@ -22,7 +22,9 @@ pageClass: admin-cookbook-env-vars
 | `USER_UPPER_LIMIT` | (TBD) | |
 | `MIN_PASSWORD_LENGTH` | Minimum password length that users can set. | 8 |
 | `DEFAULT_EMAIL_PUBLISHED` | Default setting for publishing new user email addresses. | `true` |
+<!-- textlint-disable weseek/terminology -->
 | `SSR_MAX_REVISION_BODY_LENGTH` | Maximum number of characters for the body to be Server Side Rendered (SSR). Pages with a body length exceeding this value will no longer be SSR, but will still be rendered on the client side without any issues. | 3000 |
+<!-- textlint-enable weseek/terminology -->
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Maximum number of connections for all clients that receive push messages. | 5000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Maximum number of connections for guest clients that receive push messages. | 2000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_ADMIN` | Maximum number of connections for admin users in admin pages.<br>(This is isolated from `S2CMSG_PUBSUB_CONNECTIONS_LIMIT`)  | 100 |

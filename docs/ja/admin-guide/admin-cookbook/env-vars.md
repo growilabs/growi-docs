@@ -21,7 +21,7 @@ pageClass: admin-cookbook-env-vars
 | `USER_UPPER_LIMIT` | (TBD) | |
 | `MIN_PASSWORD_LENGTH` | ユーザーが設定可能なパスワードの最短文字数 | 8 |
 | `DEFAULT_EMAIL_PUBLISHED` | 新規作成されたユーザーのデフォルトの email 公開設定 | `true` |
-| `SSR_MAX_REVISION_BODY_LENGTH` | SSR (Server Side Rendering) する本文の最大文字数。本文の文字数がこの値を上回るページは SSR されなくなりますが、クライアントサイドでレンダリングされるため閲覧に問題はありません。 | 3000 |
+| `SSR_MAX_REVISION_BODY_LENGTH` | SSR (サーバーサイドレンダリング) する本文の最大文字数。本文の文字数がこの値を上回るページは SSR されなくなりますが、クライアントサイドでレンダリングされるため閲覧に問題はありません。 | 3000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Push 通知を行う全クライアントの同時接続数上限 | 5000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Push 通知を行うことのできるゲストユーザーの同時接続数上限 | 2000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_ADMIN` | 管理画面で Push 通知を行うことのできる管理者ユーザーの同時接続数上限<br>(`S2CMSG_PUBSUB_CONNECTIONS_LIMIT`からは独立した値です) | 100 |
