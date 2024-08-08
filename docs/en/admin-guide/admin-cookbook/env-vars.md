@@ -48,6 +48,7 @@ pageClass: admin-cookbook-env-vars
 | `FILE_UPLOAD_DISABLED` | If `true`, file uploading will be disabled. However, the files can be still viewed. | `false` |
 | `MAX_FILE_SIZE` | The maximum file size limit for uploads (bytes). | `Infinity` |
 | `FILE_UPLOAD_TOTAL_LIMIT` | Total capacity limit for uploads (bytes). | `Infinity` |
+| `S3_OBJECT_ACL` | Object ACL. ([Reference: Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl))<br />Set `private` to disable. **(Recommended)** | `public-read` |
 | `S3_LIFETIME_SEC_FOR_TEMPORARY_URL` | Time to keep the cache of signed URLs (number of seconds) | 120 |
 | `GCS_API_KEY_JSON_PATH` | Path of the JSON file that contains [service account key to authenticate to GCP API](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) | |
 | `GCS_BUCKET` | Name of the GCS bucket | |

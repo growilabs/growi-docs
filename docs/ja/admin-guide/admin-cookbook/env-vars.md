@@ -49,6 +49,7 @@ pageClass: admin-cookbook-env-vars
 | `FILE_UPLOAD_DISABLED` | `true` の場合、ファイルアップロード機能を無効にしますが、既にアップロードされている画像の閲覧は可能です。 | `false` |
 | `MAX_FILE_SIZE` | アップロード可能なファイルサイズ上限（bytes）。 | `Infinity` |
 | `FILE_UPLOAD_TOTAL_LIMIT` | アップロードファイルの総容量の上限（bytes） | `Infinity` |
+| `S3_OBJECT_ACL` | オブジェクト ACL。([参考: 既定 ACL](https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/userguide/acl-overview.html#canned-acl))<br />無効化する場合は `private` をセットしてください。**(推奨)** | `public-read` |
 | `S3_LIFETIME_SEC_FOR_TEMPORARY_URL` | 署名付きURLのキャッシュを保持する期間(秒数) | 120 |
 | `GCS_API_KEY_JSON_PATH` |  [GCP API 認証用のサービスアカウントキー](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) を含む JSON ファイルのパス | |
 | `GCS_BUCKET` | 利用する GCS バケット名 | |
