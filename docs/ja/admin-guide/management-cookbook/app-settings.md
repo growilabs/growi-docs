@@ -193,20 +193,20 @@ Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介し
 
 ```json
 {
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Effect": "Allow",
-			"Action": [
-				"s3:PutObject",
-				"s3:PutObjectAcl",
-				"s3:GetObject"
-			],
-			"Resource": [
-				"arn:aws:s3:::*/*"
-			]
-		}
-	]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:PutObjectAcl",
+        "s3:GetObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::*/*"
+      ]
+    }
+  ]
 }
 ```
 
