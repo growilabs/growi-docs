@@ -193,20 +193,20 @@ Amazon S3(Amazon Simple Storage Service) への接続設定の手順を紹介し
 
 ```json
 {
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Effect": "Allow",
-			"Action": [
-				"s3:PutObject",
-				"s3:PutObjectAcl",
-				"s3:GetObject"
-			],
-			"Resource": [
-				"arn:aws:s3:::*/*"
-			]
-		}
-	]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:PutObjectAcl",
+        "s3:GetObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::*/*"
+      ]
+    }
+  ]
 }
 ```
 
@@ -240,8 +240,11 @@ Resouceの１つ目の*は、後に作成するS3 Bucket名を入力するとよ
 5. 「新しいアクセスコントロールリスト (ACL) を介して許可されたバケットとオブジェクトへのパブリックアクセスをブロックする」のみチェックを外し、変更を保存します。
 6. 「アクセスコントロールリスト」の「バケット所有者のアクセス権」に追加されている AWS アカウントの正規 ID が手順「AWS アカウント情報の取得」の 3. で確認したものと一致していなければ、「他の AWS アカウントのアクセス」に、確認した正規 ID でアカウントを追加します。この時、権限の種類全てにチェックします。
 
-::: tip
-Private S3 Bucket(ACL無効、パブリックアクセスをブロック)を利用する場合、GROWIの起動時に環境変数`S3_BUCKET_ACLS_DISABLE=true`を設定する必要があります。
+::: warning
+GROWI の初期設定では、オブジェクト ACL として `public-read` が設定されているためパブリックアクセスを許可することになり、セキュリティリスクが存在します。
+添付ファイルに対するセキュリティを確保するため、環境変数 `S3_OBJECT_ACL=private` の設定を推奨します。
+
+参考: [環境変数](/ja/admin-guide/admin-cookbook/env-vars.html)
 :::
 
 #### GROWI に Bucket を登録
