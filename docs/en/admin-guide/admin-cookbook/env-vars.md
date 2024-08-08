@@ -10,11 +10,6 @@ pageClass: admin-cookbook-env-vars
 | ------------------- | ----------  | ------------- |
 | `APP_SITE_URL` | Site URL. e.g. `https://example.com`, `https://example.com:8080` | |
 | `MONGO_URI` | URI to connect to MongoDB. | `mongodb://localhost/growi` |
-| `ELASTICSEARCH_VERSION` | Elasticsearch major version that system connects to. (`7` or `8` can be specified) | `8` |
-| `ELASTICSEARCH_URI` | URI to connect to Elasticsearch. | |
-| `ELASTICSEARCH_REQUEST_TIMEOUT` | Max request timeout in milliseconds for each request.(msec) | 8000 |
-| `ELASTICSEARCH_REJECT_UNAUTHORIZED` | Turn off certificate verification when connecting with HTTPS schema. | `false` |
-| `REDIS_URI` | URI to connect to Redis (use it as a session store instead of MongoDB). | |
 | `PASSWORD_SEED` | A password seed used by the password hash generator. | |
 | `SECRET_TOKEN` | A secret key for verifying the integrity of signed cookies. | |
 | `SESSION_NAME` | The name of the session ID cookie to set in the response by Express. | `connect.sid` |
@@ -27,6 +22,9 @@ pageClass: admin-cookbook-env-vars
 | `USER_UPPER_LIMIT` | (TBD) | |
 | `MIN_PASSWORD_LENGTH` | Minimum password length that users can set. | 8 |
 | `DEFAULT_EMAIL_PUBLISHED` | Default setting for publishing new user email addresses. | `true` |
+<!-- textlint-disable weseek/terminology -->
+| `SSR_MAX_REVISION_BODY_LENGTH` | Maximum number of characters for the body to be Server Side Rendered (SSR). Pages with a body length exceeding this value will no longer be SSR, but will still be rendered on the client side without any issues. | 3000 |
+<!-- textlint-enable weseek/terminology -->
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Maximum number of connections for all clients that receive push messages. | 5000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Maximum number of connections for guest clients that receive push messages. | 2000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_ADMIN` | Maximum number of connections for admin users in admin pages.<br>(This is isolated from `S2CMSG_PUBSUB_CONNECTIONS_LIMIT`)  | 100 |
@@ -64,7 +62,16 @@ pageClass: admin-cookbook-env-vars
 | `AZURE_LIFETIME_SEC_FOR_TEMPORARY_URL` | Time to keep the cache of signed URLs (number of seconds)| 120 |
 | `AZURE_REFERENCE_FILE_WITH_RELAY_MODE` |If `true`, the GROWI server sends the attachment data (relay mode). In the case of `false` (default value), the users download data from Azure(Blob) directly by [Shared Access Signatured URLs](https://learn.microsoft.com/en-US/azure/storage/common/storage-sas-overview) created by the server. | `false` |
 | `AZURE_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars over values in DB for some Azure(Blob) options.  | `false` |
+| **Option for full-text search** | | |
+| `ELASTICSEARCH_URI` | URI to connect to Elasticsearch. | |
+| `ELASTICSEARCH_VERSION` | Elasticsearch major version that system connects to. (`7` or `8` can be specified) | `8` |
+| `ELASTICSEARCH_MAX_BODY_LENGTH_TO_INDEX` | The maximum number of characters per page to create an index. Pages with a body length exceeding this value will not be indexed. | 100000 |
+| `ELASTICSEARCH_REINDEX_BULK_SIZE` | The number of page documents to process at once when reindexing | 100 |
+| `ELASTICSEARCH_REINDEX_ON_BOOT` | Recreate the index on system boot | `false` |
+| `ELASTICSEARCH_REQUEST_TIMEOUT` | Timeout for requests to the Elasticsearch server (msec) | 8000 |
+| `ELASTICSEARCH_REJECT_UNAUTHORIZED` | Turn off certificate verification when connecting with HTTPS schema. | `false` |
 | **Option to integrate with external systems** | | |
+| `REDIS_URI` | URI to connect to Redis (use it as a session store instead of MongoDB). | |
 | `NCHAN_URI` | URI to connect to Nginx [Nchan](https://nchan.io/) server. | |
 | `HACKMD_URI` | URI to connect to [HackMD(CodiMD)](https://hackmd.io/) server. | |
 | | This server must load the GROWI agent. [Here's how to prepare it](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html). | |

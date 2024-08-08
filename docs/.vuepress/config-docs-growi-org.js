@@ -108,6 +108,7 @@ module.exports = {
             items: [
               { text: 'GROWI.org', link: 'https://growi.org' },
               { text: 'GROWI.cloud', link: 'https://growi.cloud' },
+              { text: 'GROWI, Inc. (Japanese)', link: 'https://growi.co.jp' },
               // { text: 'Blog', link: 'https://weseek.co.jp/tech/category/growi/' },
             ],
           },
@@ -360,6 +361,7 @@ module.exports = {
             items: [
               { text: 'GROWI.org', link: 'https://growi.org' },
               { text: 'GROWI.cloud', link: 'https://growi.cloud' },
+              { text: 'GROWI, Inc.', link: 'https://growi.co.jp' },
               // { text: 'Blog', link: 'https://weseek.co.jp/tech/category/growi/' },
             ],
           },

@@ -9,11 +9,6 @@ pageClass: admin-cookbook-env-vars
 | ------------------- | ---------- | ------------- |
 | `APP_SITE_URL` | サイト URL (例: `https://example.com` 、 `https://example.com:8080`) | |
 | `MONGO_URI` | 接続する MongoDB サーバーの URI | `mongodb://localhost/growi` |
-| `ELASTICSEARCH_VERSION` | 接続する Elasticsearch のメジャーバージョン。(`7` または `8` を指定可能) | `8` |
-| `ELASTICSEARCH_URI` | 接続する Elasticsearch サーバーの URI | |
-| `ELASTICSEARCH_REQUEST_TIMEOUT` | リクエスト時のタイムアウト(msec) | 8000 |
-| `ELASTICSEARCH_REJECT_UNAUTHORIZED` | HTTPS スキーマでの接続時に証明書の検証を行うかどうか | `false` |
-| `REDIS_URI` | 接続する Redis サーバーの URI (Redis を MongoDB の代わりにセッションストアとして利用する場合に設定してください） | |
 | `PASSWORD_SEED` | パスワードハッシュ生成時に使用されるパスワードシード | |
 | `SECRET_TOKEN` | 発行された cookie の正当性を検証するためのシークレットトークン | |
 | `SESSION_NAME` | Express からのレスポンスに含まれる cookie 内のセッション ID 名 | `connect.sid` |
@@ -26,6 +21,7 @@ pageClass: admin-cookbook-env-vars
 | `USER_UPPER_LIMIT` | (TBD) | |
 | `MIN_PASSWORD_LENGTH` | ユーザーが設定可能なパスワードの最短文字数 | 8 |
 | `DEFAULT_EMAIL_PUBLISHED` | 新規作成されたユーザーのデフォルトの email 公開設定 | `true` |
+| `SSR_MAX_REVISION_BODY_LENGTH` | SSR (サーバーサイドレンダリング) する本文の最大文字数。本文の文字数がこの値を上回るページは SSR されなくなりますが、クライアントサイドでレンダリングされるため閲覧に問題はありません。 | 3000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT` | Push 通知を行う全クライアントの同時接続数上限 | 5000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_GUEST` | Push 通知を行うことのできるゲストユーザーの同時接続数上限 | 2000 |
 | `S2CMSG_PUBSUB_CONNECTIONS_LIMIT_FOR_ADMIN` | 管理画面で Push 通知を行うことのできる管理者ユーザーの同時接続数上限<br>(`S2CMSG_PUBSUB_CONNECTIONS_LIMIT`からは独立した値です) | 100 |
@@ -65,7 +61,16 @@ pageClass: admin-cookbook-env-vars
 | `AZURE_LIFETIME_SEC_FOR_TEMPORARY_URL` | 署名付きURLのキャッシュを保持する期間(秒数)| 120 |
 | `AZURE_REFERENCE_FILE_WITH_RELAY_MODE` | `true` の場、GROWI サーバーが添付ファイルデータを送信します(relay mode). `false` (デフォルト値)の場合は、その場合ユーザーはサーバーによって作成された [共有アクセス署名付き URL](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview) によって Azure(Blob) から直接データをダウンロードします。| `false` |
 | `AZURE_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、Azure(Blob) 関連設定の一部はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
+| **全文検索オプション** | | |
+| `ELASTICSEARCH_URI` | 接続する Elasticsearch サーバーの URI | |
+| `ELASTICSEARCH_VERSION` | 接続する Elasticsearch のメジャーバージョン。(`7` または `8` を指定可能) | `8` |
+| `ELASTICSEARCH_MAX_BODY_LENGTH_TO_INDEX` | インデックスを作成する1ページあたりの最大文字数。本文の文字数がこの値を上回るページはインデックスされなくなります。 | 100000 |
+| `ELASTICSEARCH_REINDEX_BULK_SIZE` | インデックス再作成時に一度に処理するページドキュメントの数 | 100 |
+| `ELASTICSEARCH_REINDEX_ON_BOOT` | システム起動時にインデックスを再作成する | `false` |
+| `ELASTICSEARCH_REQUEST_TIMEOUT` | Elasticsearch サーバーへのリクエストに対するタイムアウト(msec) | 8000 |
+| `ELASTICSEARCH_REJECT_UNAUTHORIZED` | HTTPS スキーマでの接続時に証明書の検証を行うかどうか | `false` |
 | **外部システム連携オプション** | | |
+| `REDIS_URI` | 接続する Redis サーバーの URI (Redis を MongoDB の代わりにセッションストアとして利用する場合に設定してください） | |
 | `NCHAN_URI` | 接続する Nginx [Nchan](https://nchan.io/) サーバーの URI | |
 | `HACKMD_URI` | 接続する [HackMD(CodiMD)](https://hackmd.io/) サーバーの URI | |
 | | このサーバーは GROWI エージェントをロードする必要があります。 セットアップ方法は[こちら](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html)。| |
