@@ -219,7 +219,7 @@ It is more secure to replace the first * in the Resource with the name of S3 Buc
 example:`"arn:aws:s3:::growi-attachment-bucket/*"`
 :::
 
-7. Enter any name for the policy name and create the policy. 
+7. Enter any name for the policy name and create the policy.
 8. User details -> Security credentials -> Access keys -> Create access key
 9. Select Other and create access key.
 10. Store the Access Key ID and Secret Access Key.
@@ -247,8 +247,10 @@ from the dropdown that appears when clicking on the account name in the upper ri
 only uncheck "Block public access" through the New Access Control List (ACL) and save the changes.
 5. If the valid ID of the AWS account that has been added to the "Bucket Owner Permissions" and the "Access Control List" doesn't match step 3 of the procedure "Getting AWS Account Information", add the account with the verified canonical ID to "Access Other AWS Accounts". In this case, please check all types of authority.
 
-::: tip
-When using a private S3 Bucket (with ACLs disabled and all public access blocked), you should set the environment valiable `S3_BUCKET_ACLS_DISABLE=true` when launching growi.
+::: warning
+In the initial setup of GROWI, the Object ACL is set to `public-read`, which allows public access and poses a security risk. To ensure security for attachments, it is recommended to set the environment variable `S3_OBJECT_ACL=private`.
+
+Reference: [Environment Variables](/en/admin-guide/admin-cookbook/env-vars.html)
 :::
 
 #### Register Bucket to GROWI
