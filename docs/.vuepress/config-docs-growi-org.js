@@ -597,4 +597,9 @@ module.exports = {
       },
     },
   },
+  head: [
+    ['link', { rel: 'icon', href: '/assets/docs-growi-org/favicon.ico', sizes: '48x48'}],
+    ['link', { rel: 'icon', href: '/assets/docs-growi-org/favicon.svg', sizes: 'any', type: 'image/svg+xml'}],
+    ['link', { rel: 'apple-touch-icon', href: '/assets/docs-growi-org/apple-touch-icon.png'}],
+  ],
 };
