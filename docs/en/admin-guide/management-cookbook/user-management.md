@@ -4,7 +4,7 @@ Registered users can be managed from the User Management sub-menu of the Admin p
 
 ## User Table
 
-Displays a list of users. Use the search filter to narrow down the users by username, name, email address, and status.
+Displays a list of users. Use the search filter to narrow down the users by username (user ID), name, email address, and status.
 
 This table can also be used to reset passwords, delete or suspend accounts, and change access privileges to the admin page.
 
@@ -98,6 +98,10 @@ You can resend an invitation email to users who have already been provisionally 
 ::: tip
 [Email settings from the management screen](/en/admin-guide/management-cookbook/app-settings.html#email-settings) are required when delivering a notification email from GROWI.
 :::
+
+#### Change username
+
+Once an account is created, username (user ID) cannot be changed.
 
 ## Manage external accounts
 

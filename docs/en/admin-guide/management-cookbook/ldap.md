@@ -43,7 +43,7 @@ Registering an LDAP server allows users to login via LDAP.
 
 When creating a new GROWI account based on an LDAP account, the user can specify which values (`uid`, `cn`, etc.) of the LDAP account should be associated with the following information in the GROWI account.
 
-- username: By default, the `uid` of the LDAP account is applied.
+- username: By default, the `uid` of the LDAP account is applied. (Once an account is created, username cannot be changed.)
 - Mail: By default, `mail` of the LDAP account is applied.
 - Name: If not specified, Name is left blank.
 
