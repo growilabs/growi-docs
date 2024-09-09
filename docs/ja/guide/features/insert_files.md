@@ -1,6 +1,6 @@
-# 画像などのファイルを挿入する
+# 画像や動画などのファイルを挿入する
 
-## 画像/ファイルをアップロードする
+## 自分の PC 上の画像やファイルを挿入する
 
 以下の3種類の方法で、画像やファイルを挿入できます。
 
@@ -25,12 +25,47 @@ v6 以前をお使いの場合、ページを新規作成する画面でファ�
 公開範囲については[こちら](/ja/guide/features/authority.html)をご参照ください。  
 :::  
 
-## Markdown で記述する
+## Web 上の画像を挿入する
+
+Web 上の画像を挿入するには、以下のように記述します。
+
+```
+![growi](https://growi.org/assets/images/logo.png)
+```
+
+<img :src="$withBase('/assets/images/ja/add_image.png')" alt="image">
+
+## 動画を挿入する
+
+### アップロードした動画を埋め込む
+
+<video> タグを使用し、動画を Markdown エディタ上でストリーミング再生できます。
+ページにアップロードされている動画を埋め込むには、以下のように記述します。
+
+```
+<video src="アップロードした動画のパス" controls="true"></video>
+```
+
+### YouTube 動画を埋め込む
+
+YouTube にアップロードされている動画を埋め込むには、以下のように記述します。
+
+```
+<div>
+<iframe src="https://www.youtube.com/embed/youtubeの動画ID"></iframe>
+</div>
+```
+
+また、YouTube の共有機能で自動生成される動画埋め込み用の HTML タグをそのまま利用できます。
+ただし、`frameborder` 属性は HTML5 で廃止されたため、境界線を設定したい場合は CSS を使います。
 
 - 記述例
 
-  ```
-  ![growi](https://growi.org/assets/images/logo.png)
-  ```
+```
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W_OK4TLbvYs?si=52EIj4mRtzoO57V5" title="YouTube video player" style="border: none; allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+```
 
-<img :src="$withBase('/assets/images/ja/add_image.png')" alt="image">
+
+
