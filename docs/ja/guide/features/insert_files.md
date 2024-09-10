@@ -1,6 +1,6 @@
 # 画像や動画などのファイルを挿入する
 
-## 自分の PC 上の画像やファイルを挿入する
+## 自分のデバイス上の画像やファイルを挿入する
 
 以下の3種類の方法で、画像やファイルを挿入できます。
 
@@ -39,12 +39,20 @@ Web 上の画像を挿入するには、以下のように記述します。
 
 ### アップロードした動画を埋め込む
 
-<video> タグを使用し、動画を Markdown エディタ上でストリーミング再生できます。
-ページにアップロードされている動画を埋め込むには、以下のように記述します。
+`<video>` タグを使用し、動画を Markdown エディタ上でストリーミング再生できます。
+ページにアップロードした動画を埋め込むには、以下のように記述します。
 
 ```
 <video src="アップロードした動画のパス" controls="true"></video>
 ```
+
+また、`height` や `width` 属性を使用して、表示サイズを調整できます。
+
+- 記述例
+
+  ```
+  <video src="/attachment/66dea1c16a8b457ec2fcaa46" controls="true" width="600"></video>
+  ```
 
 ### YouTube 動画を埋め込む
 
@@ -61,11 +69,11 @@ YouTube にアップロードされている動画を埋め込むには、以下
 
 - 記述例
 
-```
-<div style="text-align:center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/W_OK4TLbvYs?si=52EIj4mRtzoO57V5" title="YouTube video player" style="border: none; allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-```
+  ```
+  <div style="text-align:center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/W_OK4TLbvYs?si=52EIj4mRtzoO57V5" title="YouTube video player" style="border: none; allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  ```
 
 
 
