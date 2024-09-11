@@ -150,7 +150,7 @@ module.exports = {
                 '/en/guide/features/search.md',
                 '/en/guide/features/tag.md',
                 '/en/guide/features/template.md',
-                '/ja/guide/features/built-in-editor.md',
+                '/en/guide/features/built-in-editor.md',
                 '/en/guide/features/hackmd.md',
                 '/en/guide/features/in-app-notification.md',
                 '/en/guide/features/slack_integration.md',
@@ -597,4 +597,8 @@ module.exports = {
       },
     },
   },
+  head: [
+    ['link', { rel: 'icon', href: '/assets/docs-growi-org/favicon.ico', sizes: '48x48'}],
+    ['link', { rel: 'apple-touch-icon', href: '/assets/docs-growi-org/apple-touch-icon.png'}],
+  ],
 };
