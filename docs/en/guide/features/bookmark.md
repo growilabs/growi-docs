@@ -9,9 +9,9 @@
 
 <img :src="$withBase('/assets/images/en/bookmark.png')" alt="bookmark">
 
-### Vertical three point leader in Page Tree
+### Vertical three dot leader in Page Tree
 
-- You can bookmark pages from the vertical three point leader of any page displayed in the page tree.
+- You can bookmark pages from the vertical three dot leader of any page displayed in the page tree.
 
 <img :src="$withBase('/assets/images/en/bookmark_page_tree.png')" alt="bookmark_page_tree">
 
@@ -21,9 +21,9 @@
 
 - Click the bookmark icon in the upper right corner of the page and select "Un-bookmark this page".
 
-### Vertical three point leader in page tree or bookmarks sidebar
+### Vertical three dot leader in page tree or bookmarks sidebar
 
-- Select "Remove from Bookmarks" from the page vertical three point leader in the page tree or bookmarks sidebar.
+- Select "Remove from Bookmarks" from the page vertical three dot leader in the page tree or bookmarks sidebar.
 
 ## Check the list of bookmarks
 
@@ -50,7 +50,7 @@ Up to two levels of bookmark folders can be created.
 
 ### Rename/Delete bookmark folder
 
-- You can rename or delete a bookmark folder from the vertical three point leader of the bookmark folder in the bookmarks sidebar or user's home page.
+- You can rename or delete a bookmark folder from the vertical three dot leader of the bookmark folder in the bookmarks sidebar or user's home page.
 
 ::: warning
 Deleting a folder will delete all folders under that folder and cancel all bookmarks.
