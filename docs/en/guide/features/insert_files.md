@@ -38,7 +38,7 @@ To insert an image on the web, write as follows.
 
 ## Insert a video
 
-### Embed videos on your device
+### Embed videos uploaded to GROWI
 
 You can embed a video into your page using the `<video>` tag and stream it in view mode or preview in edit mode.
 
