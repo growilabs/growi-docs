@@ -38,6 +38,10 @@
 
     <img :src="$withBase('/assets/images/en/create_page4.png')" alt="create_page4">
 
+    ::: tip  
+    A newly created page will automatically be set to the permissions of its parent page. Please refer to [here](/en/guide/features/authority.html) for details.
+    :::
+
 ### How to create a page on GROWI v6 series and earlier
 
 1. Click the "New" button in the upper right corner of the screen to display the Create Page dialog box.
