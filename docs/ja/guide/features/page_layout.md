@@ -51,6 +51,7 @@ GROWI のページレイアウトを紹介します。
 - 添付データの表示
 - 共有リンク管理
   - 非公開の特定のページを外部に公開するためのリンクを管理できます
+  - 共有リンク管理については、[動画](https://www.youtube.com/watch?v=vIYRq4vPLow) でも解説しています
 - テンプレートページの作成/編集
 - [ページの削除](/ja/guide/features/page_operation.html)
 

@@ -1,7 +1,7 @@
 # 画像や動画などのファイルを挿入する
 
 ::: tip
-このページの内容は、[動画](https://www.youtube.com/watch?v=MfIpdI_4_TI&t=13s)でも解説しています。
+このページの内容は、[動画](https://www.youtube.com/watch?v=MfIpdI_4_TI&t=13s) でも解説しています。
 :::
 
 ## 自分のデバイス上の画像やファイルを挿入する
