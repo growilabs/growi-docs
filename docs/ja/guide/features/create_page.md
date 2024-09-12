@@ -2,6 +2,8 @@
 
 ::: tip
 このページの内容は、[動画](https://www.youtube.com/watch?v=WT_f-CuUADA)でも解説しています。
+
+ページの階層関係については、[こちらの動画](https://www.youtube.com/watch?v=tI_QrqOXWDE) で解説しています。
 :::
 
 ## 新しいページを作成する
