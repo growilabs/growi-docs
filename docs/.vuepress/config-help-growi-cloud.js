@@ -313,7 +313,7 @@ module.exports = {
             '/en/guide/features/slack_integration.md',
             '/en/guide/features/questionnaire.md',
             '/en/guide/features/presentation.md',
-            '/ja/guide/features/frontmatter.md',
+            '/en/guide/features/frontmatter.md',
             '/en/guide/features/lsx.md',
             '/en/guide/features/embed_html.md',
             '/en/guide/features/checkbox.md',

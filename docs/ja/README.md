@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://user-images.githubusercontent.com/1638767/68901318-100dd280-0779-11ea-83ab-51f111972ab1.png
+heroImage: /assets/docs-growi-org/ogp-logo.png
 actionText: ガイドを見る
 actionLink: /ja/guide/
 footer: © 2024 GROWI, Inc.
