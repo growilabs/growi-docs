@@ -1,10 +1,10 @@
 # 画像や動画などのファイルを挿入する
 
-::: tip
-このページの内容は、[動画](https://www.youtube.com/watch?v=MfIpdI_4_TI&t=13s) でも解説しています。
-:::
-
 ## 自分のデバイス上の画像やファイルを挿入する
+
+::: tip
+このセクションの内容は、[動画](https://youtu.be/MfIpdI_4_TI) でも解説しています。
+:::
 
 以下の3種類の方法で、画像やファイルを挿入できます。
 
@@ -40,6 +40,10 @@ Web 上の画像を挿入するには、以下のように記述します。
 <img :src="$withBase('/assets/images/ja/add_image.png')" alt="image">
 
 ## 動画を挿入する
+
+::: tip
+このセクションの内容は、[動画](https://youtu.be/acFPZu6geUU) でも解説しています。
+:::
 
 ### GROWI にアップロードした動画を埋め込む
 
