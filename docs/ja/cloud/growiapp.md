@@ -44,3 +44,9 @@ GROWI へアカウント登録した情報、ページ内容・GCP へアップ�
   - 復旧されたアプリも、1週間以上アクセスが無い場合は再度、停止対象となりますのでお気を付けください。  
 
 <img :src="$withBase('/assets/images/ja/growiapp_4.png')" alt="growiapp_4.png">
+
+## 複数アプリの運用イメージ
+
+::: tip
+このセクションの内容は、[動画](https://youtu.be/kUFSWArpvM0) で解説しています。
+:::

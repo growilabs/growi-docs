@@ -1,7 +1,7 @@
 # Markdown の書き方
 
 ::: tip
-このページの内容は、[動画](https://www.youtube.com/watch?v=gx5DRVbaiP0) でも解説しています。
+このページの内容は、[動画](https://youtu.be/gx5DRVbaiP0) でも解説しています。
 :::
 
 GROWI では Markdown (マークダウン) という書式でページを書くことができます。2、3個の簡単な記法を覚えることで、読みやすい文書を書くことができます。

@@ -1,7 +1,7 @@
 # ページを検索する
 
 ::: tip
-このページの内容は、[動画](https://www.youtube.com/watch?v=GwlcwMJlkGg) でも解説しています。
+このページの内容は、[動画](https://youtu.be/GwlcwMJlkGg) でも解説しています。
 :::
 
 <ContextualBlock context="docs-growi-org">
