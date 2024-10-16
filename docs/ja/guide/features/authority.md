@@ -1,10 +1,13 @@
 # ページの閲覧/編集権限を設定する
 
-::: tip
-このページの内容は、[動画](https://youtu.be/q_tXF3RVLyM) でも解説しています。
-:::
-
 GROWI は、ページごとに閲覧/編集権限を設定できます。新しく作成したページには、自動的に親ページの権限が設定されます。
+
+このページの内容は、動画でも解説しています。
+
+<figure>
+  <figcaption>【GROWI v7】ページの閲覧制限の設定</figcaption>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/q_tXF3RVLyM?si=u07QJzOr5ty95LUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
 
 ## 設定方法
 

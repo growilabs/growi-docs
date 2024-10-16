@@ -1,10 +1,13 @@
 # Markdown の書き方
 
-::: tip
-このページの内容は、[動画](https://youtu.be/gx5DRVbaiP0) でも解説しています。
-:::
-
 GROWI では Markdown (マークダウン) という書式でページを書くことができます。2、3個の簡単な記法を覚えることで、読みやすい文書を書くことができます。
+
+このページの内容は、動画でも解説しています。
+
+<figure>
+  <figcaption>【GROWI v7】Markdown の活用</figcaption>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/gx5DRVbaiP0?si=abKP1E64VYGPchas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
 
 ## 見出しをつける
 

@@ -2,9 +2,12 @@
 
 ## 自分のデバイス上の画像やファイルを挿入する
 
-::: tip
-このセクションの内容は、[動画](https://youtu.be/MfIpdI_4_TI) でも解説しています。
-:::
+このセクションの内容は、動画でも解説しています。
+
+<figure>
+  <figcaption>【GROWI v7】添付ファイルの挿入</figcaption>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/MfIpdI_4_TI?si=D-ZKnfcrh-mRJYPi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
 
 以下の3種類の方法で、画像やファイルを挿入できます。
 
@@ -41,9 +44,12 @@ Web 上の画像を挿入するには、以下のように記述します。
 
 ## 動画を挿入する
 
-::: tip
-このセクションの内容は、[動画](https://youtu.be/acFPZu6geUU) でも解説しています。
-:::
+このセクションの内容は、動画でも解説しています。
+
+<figure>
+  <figcaption>【GROWI v7】動画のストリーミング再生</figcaption>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/acFPZu6geUU?si=fvWiS9VwCnT6DCOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
 
 ### GROWI にアップロードした動画を埋め込む
 
