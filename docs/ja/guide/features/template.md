@@ -6,11 +6,14 @@ GROWI ではテンプレートを利用したページを作ることができ�
 
 ## 階層に対してテンプレートを適用する方法
 
-::: tip
-このセクションの内容は、[動画](https://youtu.be/FpTFmQ2pOgA) でも解説しています。
-:::
-
 ここでは、日報テンプレートを作成する例をご紹介します。
+
+このセクションの内容は、動画でも解説しています。
+
+<figure>
+  <figcaption>【GROWI v7】階層テンプレートの適用方法</figcaption>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/FpTFmQ2pOgA?si=0g6UABblqRYTrdp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
 
 ### テンプレートページを作成する
 
@@ -70,9 +73,12 @@ $lsx()
 
 ## ページ単位でテンプレートを挿入する方法
 
-::: tip
-このセクションの内容は、[動画](https://youtu.be/BBiFUI1QLCg) でも解説しています。
-:::
+このセクションの内容は、動画でも解説しています。
+
+<figure>
+  <figcaption>【GROWI v7】ページ単位のテンプレートの適用方法</figcaption>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/BBiFUI1QLCg?si=t2I6EmjRONd2CFY7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
 
 GROWIではページ単体でもテンプレートを挿入できます。
 

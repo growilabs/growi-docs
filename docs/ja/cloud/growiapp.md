@@ -47,6 +47,9 @@ GROWI へアカウント登録した情報、ページ内容・GCP へアップ�
 
 ## 複数アプリの運用イメージ
 
-::: tip
-このセクションの内容は、[動画](https://youtu.be/kUFSWArpvM0) で解説しています。
-:::
+このセクションの内容は、動画で解説しています。
+
+<figure>
+  <figcaption>【GROWI.cloud】複数アプリの運用イメージ</figcaption>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/kUFSWArpvM0?si=wgjOZo9CcCAqRJDK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
