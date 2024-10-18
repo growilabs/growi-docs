@@ -62,7 +62,7 @@ Specifies the comment operation permissions for ROM users (users with read-only 
 By default, "Deny (Prohibit ROM users from comment management)" is specified.
 
 ::: tip
-For more about ROM users, please refer to [here]().
+For more about ROM users, please refer to [here](/en/admin-guide/management-cookbook/user-management.html#user-table).
 :::
 
 ## Authentication Mechanism Settings

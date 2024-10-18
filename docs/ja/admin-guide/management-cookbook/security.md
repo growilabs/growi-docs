@@ -62,7 +62,7 @@ ROM ユーザー (閲覧のみ許可するアクセス権を付与されたユ�
 デフォルトでは「拒否 (ROMユーザーのコメント操作を禁止)」が指定されています。
 
 ::: tip
-ROM ユーザーについては[こちら](https://docs.growi.org/ja/admin-guide/management-cookbook/user-management.html#%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E3%83%BC%E3%83%86%E3%83%BC%E3%83%95%E3%82%99%E3%83%AB)
+ROM ユーザーについては[こちら](/ja/admin-guide/management-cookbook/user-management.html#ユーザーテーブル)
 :::
 
 ## 認証機構設定
