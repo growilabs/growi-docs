@@ -62,7 +62,7 @@ ROM ユーザー (閲覧のみ許可するアクセス権を付与されたユ�
 デフォルトでは「拒否 (ROMユーザーのコメント操作を禁止)」が指定されています。
 
 ::: tip
-ROM ユーザーについては[こちら](/ja/admin-guide/management-cookbook/user-management.html#ユーザーテーブル)
+ROM ユーザーについては[こちら](/ja/admin-guide/management-cookbook/user-management.html#閲覧のみアクセス権の付与)
 :::
 
 ## 認証機構設定

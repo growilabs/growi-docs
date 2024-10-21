@@ -91,4 +91,4 @@ For more about ROM users, please refer to [here](/en/admin-guide/management-cook
 
 - `Closed (Invitation Only)`
   - The user will not be able to register a new user with ID/Password from the user registration screen.
-  - To register a new user, please [Temporary issuance of a new user](/en/admin-guide/management-cookbook/user-management.html#user-table).
+  - To register a new user, please [Temporary issuance of a new user](/en/admin-guide/management-cookbook/user-management.html#granting-read-only-access-rights).
