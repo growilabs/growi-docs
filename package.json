@@ -20,28 +20,45 @@
     "url": "https://github.com/growilabs/growi-docs/issues"
   },
   "watch": {
-    "apiv3:dev": {
+    "api:dev:swagger2openapi": {
+      "extensions": "js,ts",
       "patterns": [
-        "../growi/apps/app/config/swagger-definition.js",
+        "../growi/apps/app/bin/swagger-jsdoc",
+        "../growi/apps/app/src/server/models",
+        "../growi/apps/app/src/server/routes",
         "../growi/apps/app/src/server/routes/apiv3"
+      ]
+    },
+    "api:dev:redoc:apiv3": {
+      "extensions": "json",
+      "patterns": [
+        "tmp/openapi-spec-apiv3.json"
+      ]
+    },
+    "api:dev:redoc:apiv1": {
+      "extensions": "json",
+      "patterns": [
+        "tmp/openapi-spec-apiv1.json"
       ]
     }
   },
   "scripts": {
-    "apiv3:jsdoc:base": "swagger-jsdoc -o tmp/swagger.json",
-    "apiv3:jsdoc:dev": "npm run apiv3:jsdoc:base -- -d ../growi/apps/app/config/swagger-definition.js \"../growi/apps/app/src/server/**/*.js\"",
-    "apiv3:jsdoc:build": "npm run apiv3:jsdoc:base -- -d tmp/growi/apps/app/config/swagger-definition.js \"tmp/growi/apps/app/src/server/**/*.js\"",
-    "apiv3:redoc": "redoc-cli bundle -o docs/.vuepress/public/redoc.html tmp/swagger.json",
-    "apiv3:dev": "run-s apiv3:jsdoc:dev apiv3:redoc",
-    "apiv3:build": "run-s apiv3:jsdoc:build apiv3:redoc",
+    "api:swagger2openapi:apiv3": "cross-env OUT=./tmp/openapi-spec-apiv3.json sh -c 'sh \"${APP_PATH}/bin/swagger-jsdoc/generate-spec-apiv3.sh\"'",
+    "api:swagger2openapi:apiv1": "cross-env OUT=./tmp/openapi-spec-apiv1.json sh -c 'sh \"${APP_PATH}/bin/swagger-jsdoc/generate-spec-apiv1.sh\"'",
+    "api:dev:swagger2openapi": "cross-env APP_PATH=../growi/apps/app run-p api:swagger2openapi:*",
+    "api:dev:redoc:apiv3": "yarn api:build:redoc:apiv3 && npx -y shx cp docs/.vuepress/public/redoc-apiv3.html tmp",
+    "api:dev:redoc:apiv1": "yarn api:build:redoc:apiv1 && npx -y shx cp docs/.vuepress/public/redoc-apiv1.html tmp",
+    "api:dev": "npm-watch",
+    "api:build:redoc:apiv3": "redoc-cli bundle -o docs/.vuepress/public/redoc-apiv3.html tmp/openapi-spec-apiv3.json",
+    "api:build:redoc:apiv1": "redoc-cli bundle -o docs/.vuepress/public/redoc-apiv1.html tmp/openapi-spec-apiv1.json",
+    "api:build": "cross-env APP_PATH=tmp/growi/apps/app run-s api:swagger2openapi:* api:build:redoc:*",
     "docs-growi-org:dev": "npx -y shx cp ./docs/.vuepress/config-docs-growi-org.js ./docs/.vuepress/config.js && npx -y shx rm -rf ./docs/.vuepress/theme && npx -y shx cp ./docs/.vuepress/enhance-docs-growi-org.js ./docs/.vuepress/enhanceApp.js && npx -y shx cp ./docs/.vuepress/public/assets/docs-growi-org/index.html ./docs/.vuepress/public/index.html && vuepress dev docs",
     "docs-growi-org:build": "npx -y shx cp ./docs/.vuepress/config-docs-growi-org.js ./docs/.vuepress/config.js && npx -y shx rm -rf ./docs/.vuepress/theme && npx -y shx cp ./docs/.vuepress/enhance-docs-growi-org.js ./docs/.vuepress/enhanceApp.js && npx -y shx cp ./docs/.vuepress/public/assets/docs-growi-org/index.html ./docs/.vuepress/public/index.html && vuepress build docs",
     "help-growi-cloud:dev": "npx -y shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && npx -y shx cp ./docs/.vuepress/enhance-help-growi-cloud.js ./docs/.vuepress/enhanceApp.js && npx -y shx mkdir -p ./docs/.vuepress/theme  && npx -y shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme &&  npx -y shx cp ./docs/.vuepress/public/assets/help-growi-cloud/index.html ./docs/.vuepress/public/index.html && vuepress dev docs",
     "help-growi-cloud:build": "npx -y shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && npx -y shx cp ./docs/.vuepress/enhance-help-growi-cloud.js ./docs/.vuepress/enhanceApp.js && npx -y shx mkdir -p ./docs/.vuepress/theme && npx -y shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme &&   npx -y shx cp ./docs/.vuepress/public/assets/help-growi-cloud/index.html ./docs/.vuepress/public/index.html && vuepress build docs",
     "lint": "textlint \"docs/ja/**/*.md\" \"docs/en/**/*.md\" README.md",
     "start": "yarn docs-growi-org:dev",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npm-watch"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "@popperjs/core": "^2.11.8",
