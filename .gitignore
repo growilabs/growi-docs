@@ -20,6 +20,7 @@ package-lock.json
 docs/.vuepress/dist
 docs/.vuepress/public/redoc*
 docs/.vuepress/public/index.html
+redoc
 tmp
 
 # Doc #
