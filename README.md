@@ -30,3 +30,17 @@ Then, access to the URL that VuePress will print like below.
 Add Markdown file to `docs` dir.
 
 For detail, please reference [VuePress Documents](https://vuepress.vuejs.org/).
+
+## How to write API docs
+
+``` bash
+yarn api:dev
+```
+
+### Live Server
+
+Launch the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+to watch the modification to the `growi` repository will be applied in realtime.
+
+1. `yarn api:dev`
+1. Right click `redoc/apivX.html` in the file tree and select "Open with Live Server".
