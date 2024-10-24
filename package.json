@@ -20,28 +20,43 @@
     "url": "https://github.com/growilabs/growi-docs/issues"
   },
   "watch": {
-    "apiv3:dev": {
+    "api:dev:swagger2openapi": {
+      "extensions": "js,ts",
       "patterns": [
-        "../growi/apps/app/config/swagger-definition.js",
+        "../growi/apps/app/bin/swagger-jsdoc",
+        "../growi/apps/app/src/server/models",
+        "../growi/apps/app/src/server/routes",
         "../growi/apps/app/src/server/routes/apiv3"
+      ]
+    },
+    "api:redoc:apiv3": {
+      "extensions": "json",
+      "patterns": [
+        "tmp/openapi-spec-apiv3.json"
+      ]
+    },
+    "api:redoc:apiv1": {
+      "extensions": "json",
+      "patterns": [
+        "tmp/openapi-spec-apiv1.json"
       ]
     }
   },
   "scripts": {
-    "apiv3:jsdoc:base": "swagger-jsdoc -o tmp/swagger.json",
-    "apiv3:jsdoc:dev": "npm run apiv3:jsdoc:base -- -d ../growi/apps/app/config/swagger-definition.js \"../growi/apps/app/src/server/**/*.js\"",
-    "apiv3:jsdoc:build": "npm run apiv3:jsdoc:base -- -d tmp/growi/apps/app/config/swagger-definition.js \"tmp/growi/apps/app/src/server/**/*.js\"",
-    "apiv3:redoc": "redoc-cli bundle -o docs/.vuepress/public/redoc.html tmp/swagger.json",
-    "apiv3:dev": "run-s apiv3:jsdoc:dev apiv3:redoc",
-    "apiv3:build": "run-s apiv3:jsdoc:build apiv3:redoc",
-    "docs-growi-org:dev": "npx -y shx cp ./docs/.vuepress/config-docs-growi-org.js ./docs/.vuepress/config.js && npx -y shx rm -rf ./docs/.vuepress/theme && npx -y shx cp ./docs/.vuepress/enhance-docs-growi-org.js ./docs/.vuepress/enhanceApp.js && npx -y shx cp ./docs/.vuepress/public/assets/docs-growi-org/index.html ./docs/.vuepress/public/index.html && vuepress dev docs",
-    "docs-growi-org:build": "npx -y shx cp ./docs/.vuepress/config-docs-growi-org.js ./docs/.vuepress/config.js && npx -y shx rm -rf ./docs/.vuepress/theme && npx -y shx cp ./docs/.vuepress/enhance-docs-growi-org.js ./docs/.vuepress/enhanceApp.js && npx -y shx cp ./docs/.vuepress/public/assets/docs-growi-org/index.html ./docs/.vuepress/public/index.html && vuepress build docs",
-    "help-growi-cloud:dev": "npx -y shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && npx -y shx cp ./docs/.vuepress/enhance-help-growi-cloud.js ./docs/.vuepress/enhanceApp.js && npx -y shx mkdir -p ./docs/.vuepress/theme  && npx -y shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme &&  npx -y shx cp ./docs/.vuepress/public/assets/help-growi-cloud/index.html ./docs/.vuepress/public/index.html && vuepress dev docs",
-    "help-growi-cloud:build": "npx -y shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && npx -y shx cp ./docs/.vuepress/enhance-help-growi-cloud.js ./docs/.vuepress/enhanceApp.js && npx -y shx mkdir -p ./docs/.vuepress/theme && npx -y shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme &&   npx -y shx cp ./docs/.vuepress/public/assets/help-growi-cloud/index.html ./docs/.vuepress/public/index.html && vuepress build docs",
+    "api:swagger2openapi:apiv3": "cross-env OUT=./tmp/openapi-spec-apiv3.json sh -c 'sh \"${APP_PATH}/bin/swagger-jsdoc/generate-spec-apiv3.sh\"'",
+    "api:swagger2openapi:apiv1": "cross-env OUT=./tmp/openapi-spec-apiv1.json sh -c 'sh \"${APP_PATH}/bin/swagger-jsdoc/generate-spec-apiv1.sh\"'",
+    "api:redoc:apiv3": "redoc-cli bundle -o redoc/apiv3.html tmp/openapi-spec-apiv3.json && shx cp redoc/apiv3.html docs/.vuepress/public/redoc-apiv3.html",
+    "api:redoc:apiv1": "redoc-cli bundle -o redoc/apiv1.html tmp/openapi-spec-apiv1.json && shx cp redoc/apiv1.html docs/.vuepress/public/redoc-apiv1.html",
+    "api:dev:swagger2openapi": "cross-env APP_PATH=../growi/apps/app run-p api:swagger2openapi:*",
+    "api:dev": "npm-watch",
+    "api:build": "cross-env APP_PATH=tmp/growi/apps/app run-s api:swagger2openapi:* api:redoc:*",
+    "docs-growi-org:dev": "shx cp ./docs/.vuepress/config-docs-growi-org.js ./docs/.vuepress/config.js && shx rm -rf ./docs/.vuepress/theme && shx cp ./docs/.vuepress/enhance-docs-growi-org.js ./docs/.vuepress/enhanceApp.js && shx cp ./docs/.vuepress/public/assets/docs-growi-org/index.html ./docs/.vuepress/public/index.html && vuepress dev docs",
+    "docs-growi-org:build": "shx cp ./docs/.vuepress/config-docs-growi-org.js ./docs/.vuepress/config.js && shx rm -rf ./docs/.vuepress/theme && shx cp ./docs/.vuepress/enhance-docs-growi-org.js ./docs/.vuepress/enhanceApp.js && shx cp ./docs/.vuepress/public/assets/docs-growi-org/index.html ./docs/.vuepress/public/index.html && vuepress build docs",
+    "help-growi-cloud:dev": "shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && shx cp ./docs/.vuepress/enhance-help-growi-cloud.js ./docs/.vuepress/enhanceApp.js && shx mkdir -p ./docs/.vuepress/theme  && shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme &&  shx cp ./docs/.vuepress/public/assets/help-growi-cloud/index.html ./docs/.vuepress/public/index.html && vuepress dev docs",
+    "help-growi-cloud:build": "shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && shx cp ./docs/.vuepress/enhance-help-growi-cloud.js ./docs/.vuepress/enhanceApp.js && shx mkdir -p ./docs/.vuepress/theme && shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme &&   shx cp ./docs/.vuepress/public/assets/help-growi-cloud/index.html ./docs/.vuepress/public/index.html && vuepress build docs",
     "lint": "textlint \"docs/ja/**/*.md\" \"docs/en/**/*.md\" README.md",
     "start": "yarn docs-growi-org:dev",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npm-watch"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "@popperjs/core": "^2.11.8",
@@ -50,6 +65,7 @@
     "@vuepress/plugin-search": "^1.9.9",
     "babel-eslint": "^10.0.1",
     "bootstrap": "^5.2.3",
+    "cross-env": "^7.0.3",
     "eslint": "^5.15.1",
     "eslint-config-weseek": "^1.0.1",
     "eslint-plugin-import": "^2.16.0",
@@ -61,6 +77,7 @@
     "redoc-cli": "^0.8.6",
     "sass": "^1.62.1",
     "sass-loader": "^v10.3.1",
+    "shx": "^0.3.4",
     "stylelint": "^13.6.0",
     "stylelint-config-recess-order": "^2.0.4",
     "swagger-jsdoc": "^3.4.0",

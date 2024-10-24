@@ -7,4 +7,4 @@ editLink: false
 pageClass: fluid
 ---
 
-<Embed src="/redoc.html" />
+<Embed src="/redoc-apiv3.html" />
