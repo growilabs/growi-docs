@@ -55,6 +55,7 @@ module.exports = {
             '/ja/cloud/attachment.md',
             '/ja/cloud/domain.md',
             '/ja/cloud/growiapp.md',
+            '/ja/cloud/ai-chat.md',
             '/ja/cloud/organization.md',
             '/ja/cloud/passwordseed.md',
             '/ja/cloud/status.md',
