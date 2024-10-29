@@ -2,54 +2,36 @@
 
 ## ナレッジアシスタントとは
 
-- GROWI.cloud 上で管理する GROWI アプリケーションのことを指します。
-- 主に `GROWI アプリ` と表記します。
+- OpenAI API を利用して GROWI 内に蓄積されているナレッジを横断的に活用し、投げかけた質問への回答を返してくれるチャットボットです。
+- 2024年11月現在、β版で提供しています。
 
-## GROWI アプリでできること
+## ナレッジアシスタントでできること
 
-- GROWI アプリを作成すると、設定した URL で GROWI へアクセス出来るようになります。
-- 立ち上がった GROWI では自由に Markdown 記法の wiki ページを作成・編集できます。
+- GROWI に蓄積されている情報を、対話形式で検索できます。
 
-## GROWI アプリの作成方法
+## ナレッジアシスタントご利用開始の方法
 
-- GROWI.cloud へログイン後、GROWI.cloud の管理画面もしくはトップページのドメイン入力フォームから GROWI アプリを作成出来るようになります。
-- GROWI アプリを作成出来る数には上限があります。上限はプランにより異なります。
+- GROWI AI 機能には、OpenAI を使用しますが、GROWI.cloud がホストする OpenAI と, お客様ご自身でご利用中の OpenAI のどちらもご利用いただけます。
+- GROWI.cloud がホストする OpenAI サーバーには数に上限があります。
+  - 1 GROWI アプリあたり 1 つまで
+- GROWI.cloud へログイン後、GROWI アプリの管理画面から AI 機能の項目の「編集」ボタンを押下し、設定を開始してください。
+  - 編集画面の各設定項目は、下記「AI機能の各種項目の設定」の節をご覧ください。
 
-### GROWI アプリの作成導線
+### AI機能の各種項目の設定
 
-GROWI.cloud にログイン後、組織詳細画面もしくはダッシュボード画面から GROWI アプリを作成できます。  
+ナレッジアシスタントを有効にするためには、まず、編集画面に切り替えて『「AI機能」を有効にする』トグルを選択します。
+<img :src="$withBase('/assets/images/ja/ai-chat_1.png')" alt="ai-chat_1.png">
 
-#### 組織詳細画面
+#### GROWI.cloud が提供する OpenAI プロジェクトを使用する場合 (Hosted)
 
-<img :src="$withBase('/assets/images/ja/growiapp_1.png')" alt="growiapp_1.png">
+- Hosted の OpenAI プロジェクトを初めて使用する場合、Hosted を選択した状態でプロジェクトタイプを選択し、「+追加」ボタンを押します。
+- 追加されたプロジェクトを選択し、「更新する」ボタンを押下することで AI 機能を有効化できます。
+- <span class="text-danger">※Hosted の場合、GROWI AI クレジットの残高が無いと、AI 機能が利用停止され、 GROWI AI クレジットを再度購入するまで AI 機能のご利用を再開できません。</span>
+<img :src="$withBase('/assets/images/ja/ai-chat_2.png')" alt="ai-chat_1.png">
 
-#### ダッシュボード画面
+#### ユーザー自身が用意した OpenAI プロジェクトを使用する場合 (Owned)
 
-<img :src="$withBase('/assets/images/ja/growiapp_2.png')" alt="growiapp_2.png">
-
-## GROWI アプリの削除方法
-
-GROWI.cloud 上の GROWI アプリの管理画面上で「各種操作」プルダウンメニューから「削除する」を選択すると、作成した GROWI アプリを削除できます。  
-
-GROWI へアカウント登録した情報、ページ内容・GCP へアップロードしたファイル等も削除されます。  
-<img :src="$withBase('/assets/images/ja/growiapp_3.png')" alt="growiapp_3.png">
-
-### アクセスがない場合のアプリの停止について
-
-<!-- textlint-disable weseek/no-doubled-joshi -->
-- GROWI.cloud 上で立ち上げられた GROWI App へのアクセス有無をチェックし、1週間以上、継続してアクセスが無い状態が続いた場合は、ご利用いただいていない状態と判定しアプリを停止いたします。
-<!-- textlint-enable weseek/no-doubled-joshi -->
-- **アプリの停止によって wiki 上のデータが削除されることはありません。**
-- 停止されたアプリは、アプリの管理画面またはアプリを所有する組織の管理画面から、該当のアプリの「再起動」ボタンを押下していただければ、簡単に復旧できます。
-  - 復旧されたアプリも、1週間以上アクセスが無い場合は再度、停止対象となりますのでお気を付けください。  
-
-<img :src="$withBase('/assets/images/ja/growiapp_4.png')" alt="growiapp_4.png">
-
-## 複数アプリの運用イメージ
-
-このセクションの内容は、動画で解説しています。
-
-<figure>
-  <figcaption>【GROWI.cloud】複数アプリの運用イメージ</figcaption>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/kUFSWArpvM0?si=wgjOZo9CcCAqRJDK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</figure>
+- Owned の場合、まずお客様にて OpenAI のプロジェクトをご用意いただく必要があります。
+- ご用意いただいた OpenAI プロジェクトの情報を基に、以下のとおりに項目を埋めてプロジェクトを追加します。(画像参照)
+- 追加されたプロジェクトを選択し、「更新する」ボタンを押下することで AI 機能を有効化できます。
+<img :src="$withBase('/assets/images/ja/ai-chat_3.png')" alt="ai-chat_1.png">
