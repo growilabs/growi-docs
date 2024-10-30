@@ -190,6 +190,7 @@ module.exports = {
               title: 'Upgrading',
               collapsable: false,
               children: [
+                '/en/admin-guide/upgrading/71x.md',
                 '/en/admin-guide/upgrading/70x.md',
                 '/en/admin-guide/upgrading/63x.md',
                 '/en/admin-guide/upgrading/62x.md',
