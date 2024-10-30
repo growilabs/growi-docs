@@ -28,6 +28,7 @@
 - Hosted の OpenAI プロジェクトを初めて使用する場合、Hosted を選択した状態でプロジェクトタイプを選択し、「+追加」ボタンを押します。
 - 追加されたプロジェクトを選択し、「更新する」ボタンを押下することで AI 機能を有効化できます。
 - <span class="text-danger">※Hosted の場合、GROWI AI クレジットの残高がなくなると AI 機能が利用停止され、GROWI AI クレジットを再度購入するまで AI 機能のご利用を再開できません。</span>
+  - GROWI AI クレジットに関するヘルプはこちら [GROWI AI クレジット](./ai-credit.md)
 <img :src="$withBase('/assets/images/ja/ai-chat_2.png')" alt="ai-chat_1.png">
 
 #### ユーザー自身が用意した OpenAI プロジェクトを使用する場合 (Owned)
