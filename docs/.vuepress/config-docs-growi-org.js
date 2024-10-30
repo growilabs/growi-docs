@@ -296,26 +296,6 @@ module.exports = {
               ],
             },
             {
-              title: '(Deprecated) Getting Started v3',
-              collapsable: true,
-              children: [
-                '/en/dev/startup-v3/dev-env.md',
-                '/en/dev/startup-v3/launch-devcontainer.md',
-                '/en/dev/startup-v3/start-development.md',
-              ],
-            },
-            {
-              title: '(Deprecated) Getting Started v2',
-              collapsable: true,
-              children: [
-                '/en/dev/startup-v2/dev-env.md',
-                '/en/dev/startup-v2/prepare-tools.md',
-                '/en/dev/startup-v2/prepare-workspace.md',
-                '/en/dev/startup-v2/launch-devcontainer.md',
-                '/en/dev/startup-v2/launch-system.md',
-              ],
-            },
-            {
               title: 'GROWI Repository',
               collapsable: false,
               children: [
@@ -548,26 +528,6 @@ module.exports = {
                 '/ja/dev/startup-v4/dev-env.md',
                 '/ja/dev/startup-v4/launch-devcontainer.md',
                 '/ja/dev/startup-v4/start-development.md',
-              ],
-            },
-            {
-              title: '(旧版) 開発スタートアップ v3',
-              collapsable: true,
-              children: [
-                '/ja/dev/startup-v3/dev-env.md',
-                '/ja/dev/startup-v3/launch-devcontainer.md',
-                '/ja/dev/startup-v3/start-development.md',
-              ],
-            },
-            {
-              title: '(旧版) 開発スタートアップ v2',
-              collapsable: true,
-              children: [
-                '/ja/dev/startup-v2/dev-env.md',
-                '/ja/dev/startup-v2/prepare-tools.md',
-                '/ja/dev/startup-v2/prepare-workspace.md',
-                '/ja/dev/startup-v2/launch-devcontainer.md',
-                '/ja/dev/startup-v2/launch-system.md',
               ],
             },
             {
