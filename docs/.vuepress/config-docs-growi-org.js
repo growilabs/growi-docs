@@ -278,7 +278,16 @@ module.exports = {
           '/en/dev/': [
             '/en/dev/',
             {
-              title: 'Getting Started v5',
+              title: 'Getting Started v6',
+              collapsable: false,
+              children: [
+                '/en/dev/startup-v6/dev-env.md',
+                '/en/dev/startup-v6/launch-devcontainer.md',
+                '/en/dev/startup-v6/start-development.md',
+              ],
+            },
+            {
+              title: '(Deprecated) Getting Started v5',
               collapsable: false,
               children: [
                 '/en/dev/startup-v5/dev-env.md',
@@ -293,26 +302,6 @@ module.exports = {
                 '/en/dev/startup-v4/dev-env.md',
                 '/en/dev/startup-v4/launch-devcontainer.md',
                 '/en/dev/startup-v4/start-development.md',
-              ],
-            },
-            {
-              title: '(Deprecated) Getting Started v3',
-              collapsable: true,
-              children: [
-                '/en/dev/startup-v3/dev-env.md',
-                '/en/dev/startup-v3/launch-devcontainer.md',
-                '/en/dev/startup-v3/start-development.md',
-              ],
-            },
-            {
-              title: '(Deprecated) Getting Started v2',
-              collapsable: true,
-              children: [
-                '/en/dev/startup-v2/dev-env.md',
-                '/en/dev/startup-v2/prepare-tools.md',
-                '/en/dev/startup-v2/prepare-workspace.md',
-                '/en/dev/startup-v2/launch-devcontainer.md',
-                '/en/dev/startup-v2/launch-system.md',
               ],
             },
             {
@@ -533,7 +522,16 @@ module.exports = {
           '/ja/dev/': [
             '/ja/dev/',
             {
-              title: '開発スタートアップ v5',
+              title: '開発スタートアップ v6',
+              collapsable: false,
+              children: [
+                '/ja/dev/startup-v6/dev-env.md',
+                '/ja/dev/startup-v6/launch-devcontainer.md',
+                '/ja/dev/startup-v6/start-development.md',
+              ],
+            },
+            {
+              title: '(旧版) 開発スタートアップ v5',
               collapsable: false,
               children: [
                 '/ja/dev/startup-v5/dev-env.md',
@@ -548,26 +546,6 @@ module.exports = {
                 '/ja/dev/startup-v4/dev-env.md',
                 '/ja/dev/startup-v4/launch-devcontainer.md',
                 '/ja/dev/startup-v4/start-development.md',
-              ],
-            },
-            {
-              title: '(旧版) 開発スタートアップ v3',
-              collapsable: true,
-              children: [
-                '/ja/dev/startup-v3/dev-env.md',
-                '/ja/dev/startup-v3/launch-devcontainer.md',
-                '/ja/dev/startup-v3/start-development.md',
-              ],
-            },
-            {
-              title: '(旧版) 開発スタートアップ v2',
-              collapsable: true,
-              children: [
-                '/ja/dev/startup-v2/dev-env.md',
-                '/ja/dev/startup-v2/prepare-tools.md',
-                '/ja/dev/startup-v2/prepare-workspace.md',
-                '/ja/dev/startup-v2/launch-devcontainer.md',
-                '/ja/dev/startup-v2/launch-system.md',
               ],
             },
             {

@@ -7,9 +7,9 @@ The below documentation details our development environment at WESEEK Inc. It ma
 ## Launch
 
 1. Open Visual Studio Code
-1. From the Remote Connection indicator, open the devcontainer repository
-    * <img :src="$withBase('/assets/images/vscode-remote-button.png')" alt="indicator">
-    * Remote-Containers: Open folder in Container...
+1. From the Command Palette, open the devcontainer repository
+    * Open the Command Palette: `Ctrl+Shift+P` or `<F1>`
+    * `Dev Containers: Open folder in Container...`
     * Select the weseek/growi repository
         * WSL path for Windows: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
             * Replace `{your account}` with your own account name

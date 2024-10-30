@@ -1,10 +1,5 @@
 # Let's start development
 
-::: danger
-This page's development environment is compatible with GROWI v7.0.x and below.
-For development with v7.1.x and above, please refer to [Development Startup v6](../startup-v6/dev-env.html).
-:::
-
 ::: tip WESEEK Rule
 Developers who are not used to Git functionality (branches, reset, rebase) should use a GUI client.
 GUI clients make it easy to develop while keeping in mind the tree structure of the Git repository and related considerations.
@@ -26,11 +21,11 @@ Alternatively, you can use the `yarn` command. But then you have to run it in th
 
 ``` bash
 cd ${project root dir}
-yarn
+pnpm install
 ```
 
 ::: danger
-DO NOT USE `npm install`.
+DO NOT USE `npm install` or `yarn`.
 :::
 
 
@@ -77,13 +72,12 @@ Execute the following command under the `apps/app` directory.
 |--|--|
 |`dev`|Launch Express server for development.<br>Watch file changes and rebuild automatically.|
 |`dev:migrate:create`|Create a new migration file.|
-|`dev:migrate:status`|Check which migrations are applied (or not.|
+|`dev:migrate:status`|Check which migrations are applied or not.|
 |`dev:migrate:up`|Apply all pending migrations.|
 |`dev:migrate:down`|Revert (only) the last applied migration.|
 |`dev:migrate`|*[Alias]* Invoke `migrate:up`.|
 |`lint`|Run code linting.|
 |`test`|Run unit/integration tests.|
-|`cy:run`|Run tests with Cypress.|
 
 
 ## Production Build and Execution
