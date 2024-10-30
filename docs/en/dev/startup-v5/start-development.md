@@ -1,5 +1,10 @@
 # Let's start development
 
+::: danger
+This page's development environment is compatible with GROWI v7.0.x and below.
+For development with v7.1.x and above, please refer to [Development Startup v6](../startup-v6/dev-env.html).
+:::
+
 ::: tip WESEEK Rule
 Developers who are not used to Git functionality (branches, reset, rebase) should use a GUI client.
 GUI clients make it easy to develop while keeping in mind the tree structure of the Git repository and related considerations.

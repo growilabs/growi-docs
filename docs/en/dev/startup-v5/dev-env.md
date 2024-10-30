@@ -1,5 +1,10 @@
 # Creating a Development Environment
 
+::: danger
+This page's development environment is compatible with GROWI v7.0.x and below.
+For development with v7.1.x and above, please refer to [Development Startup v6](../startup-v6/dev-env.html).
+:::
+
 ## Preparing Tools
 
 ::: tip Note
