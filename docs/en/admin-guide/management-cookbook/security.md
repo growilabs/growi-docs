@@ -55,6 +55,16 @@ User homepages in trash page (`/trash`) can be completely deleted regardless of 
 
 When deleting a user, the user homepage (`/user/{username}`) and its subordinate pages are also completely deleted.
 
+### Comment management rights
+
+Specifies the comment operation permissions for ROM users (users with read-only access rights).
+
+By default, "Deny (Prohibit ROM users from comment management)" is specified.
+
+::: tip
+For more about ROM users, please refer to [here](/en/admin-guide/management-cookbook/user-management.html#granting-read-only-access-rights).
+:::
+
 ## Authentication Mechanism Settings
 
 ### ID/Password

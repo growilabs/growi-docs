@@ -1,5 +1,10 @@
 # Launch devcontainer
 
+::: danger
+This page's development environment is compatible with GROWI v7.0.x and below.
+For development with v7.1.x and above, please refer to [Development Startup v6](../startup-v6/dev-env.html).
+:::
+
 ::: tip Note
 The below documentation details our development environment at WESEEK Inc. It may include some tools that are not necessary for your use case.
 :::
