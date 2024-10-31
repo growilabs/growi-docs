@@ -35,7 +35,7 @@ GROWI AI 機能を有効にするためには、まず、編集画面に切り�
 - GROWI.cloud がホストする OpenAI の API キーには数に上限があります。
   - 1 GROWI アプリあたり 1 つまで
 - 追加されたプロジェクトを選択し、「更新する」ボタンを押下することで AI 機能を有効化できます。
-- <span class="text-danger">※Hosted の場合、GROWI AI クレジットの残高がなくなると AI 機能が利用停止され、GROWI AI クレジットを再度購入するまで AI 機能のご利用を再開できません。</span>
+- <span class="text-danger">※Hosted の場合、GROWI AI クレジットがなくなると AI 機能が利用停止され、GROWI AI クレジットを再度購入するまで AI 機能のご利用を再開できません。</span>
 <img :src="$withBase('/assets/images/ja/ai-chat_2.png')" alt="ai-chat_1.png">
 
 #### ユーザー自身が用意した OpenAI プロジェクトを使用する場合 (Owned)
