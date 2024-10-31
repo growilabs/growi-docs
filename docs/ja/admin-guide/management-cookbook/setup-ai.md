@@ -19,8 +19,9 @@ OpenAI の API キー取得等に関しては、システム管理者のペー�
 ## アプリ上で接続確認
 
 - 環境変数 `OPENAI_SERVICE_TYPE` ほか、OpenAI との連携に必要な環境変数が設定されている場合、GROWI 画面のトップバーに　AI　検索アイコンが出現します。
+  - 環境変数は、管理者メニューの「Wiki管理トップ」ページに一覧で表示されます。
 
-  <img :src="$withBase('/assets/images/ja/setup-search-system1.png')" alt="setup-search-system1">
+  <img :src="$withBase('/assets/images/ja/setup-ai.png')" alt="setup-ai">
 
 <ContextualBlock context="docs-growi-org">
 
@@ -30,7 +31,7 @@ OpenAI の API キー取得等に関しては、システム管理者のペー�
 
 <ContextualBlock context="help-growi-cloud">
 
-- 設定を有効にしているにもかかわらず、 AI 連携が正常に利用できない場合は、[GROWI.cloud サポートへのお問い合わせ窓口](https://growi.cloud/contact) までお問い合わせください。
+- 設定を有効にしているにもかかわらず、 AI 連携機能が正常に利用できない場合は、[GROWI.cloud サポートへのお問い合わせ窓口](https://growi.cloud/contact) までお問い合わせください。
 
 </ContextualBlock>
 
