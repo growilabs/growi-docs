@@ -3,6 +3,7 @@
 ## GROWI AI 機能とは
 
 - v7.1 で GROWI に追加された OpenAI をナレッジに活用できる機能です。
+  - 詳しくは [AI 機能](/ja/guide/features/ai-function) のヘルプページをご参照ください。
 - GROWI.cloud では、[GROWI AI クレジット](./ai-credit) が無ければ GROWI AI 機能をご利用いただけません。
   - (ユーザー自身が用意したAPIキーを使用する場合を除く)
 - ※2024年11月現在、β版で提供している機能です。
@@ -38,4 +39,4 @@ GROWI AI 機能を有効にするためには、まず、編集画面に切り�
 ### GROWI の設定を行う
 
 - AI 機能を実際にご利用いただくためには GROWI アプリ上でもセットアップが必要です。
-- 設定方法の詳細は、[GROWI AI 機能のセットアップと管理](/ja/admin-guide/management-cookbook/ai-function.md) をご参照ください。
+- 設定方法は、[GROWI AI 機能のセットアップと管理](/ja/admin-guide/management-cookbook/ai-function.md) をご参照ください。
