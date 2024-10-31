@@ -1,9 +1,5 @@
 # Ubuntu Server
 
-:::warning
-This article has been in the public domain for some time.
-:::
-
 [[toc]]
 
 ## Overview
@@ -14,7 +10,7 @@ Software needed for Setup are listed below.
 
 * Node.js 14.x \(DO NOT USE 9.x\)
 * npm 6.x
-* yarn
+* pnpm
 * MongoDB 4.4
 * \(Option\) Elasticsearch 6.8
 * \(Option\) systemd
@@ -47,21 +43,30 @@ Now that node.js can be retrieved via `apt-get`, use the `apt-get` command to in
 $ sudo apt-get install nodejs
 ```
 
-Since GROWI uses yarn for package installation, install the `yarn` command.
+Since GROWI uses pnpm for package installation, install the `pnpm` command.
 
 ```text
-$ sudo npm install -g yarn
+$ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sudo sh -
+$ sudo pnpm setup
 ```
 
-Once installation for Node.js, npm, yarn is completed, check the installed versions.
+Additionally, since GROWI uses Turborepo for building, install the `turbo` command.
+
+```text
+$ sudo pnpm add turbo --global
+```
+
+Once installation for Node.js, npm, pnpm and turbo is completed, check the installed versions.
 
 ```text
 $ nodejs -v
 v14.11.0
 $ npm -v
 6.14.8
-$ yarn -v
-1.22.5
+$ pnpm -v
+9.12.2
+$ turbo --version
+2.1.3
 ```
 
 ## Elasticsearch
@@ -247,23 +252,22 @@ $ cd /opt/growi
 # Check the tags
 $ sudo git tag -l
 ...
-v3.1.7
-v3.1.8
-v3.1.8-RC
-v3.1.8-RC2
-v3.1.9
-v3.2.0-RC4
+v6.3.3
+v6.3.4
+v7.0.0
+v7.0.1
+v7.0.2
 ...
 
 # Use the latest version that doesn't have RC
-$ sudo git checkout -b v4.3.1 refs/tags/v4.3.1
+$ sudo git checkout -b v7.0.2 refs/tags/v7.0.2
 ```
 
-After cloning the source code, use the `npx lerna` command to install packages needed for GROWI.
+After cloning the source code, use the `pnpm` command to install packages needed for GROWI.
 
 ```text
 $ cd /opt/growi
-$ sudo npx lerna bootstrap
+$ sudo pnpm install
 ```
 
 ### Check Startup
@@ -278,7 +282,7 @@ Rewrite `MONGO_URI` and `ELASTICSEARCH_URI` appropriate to the environment.
 $ sudo \
 MONGO_URI=mongodb://localhost:27017/growi \
 ELASTICSEARCH_URI=http://localhost:9200/growi \
-yarn start
+npm run start
 
 ...
 # Wait for the message below to appear
