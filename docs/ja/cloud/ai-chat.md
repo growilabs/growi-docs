@@ -34,3 +34,8 @@ GROWI AI 機能を有効にするためには、まず、編集画面に切り�
 - ご用意いただいた OpenAI プロジェクトの情報を基に、以下のとおりに項目を埋めてプロジェクトを追加します。(画像参照)
 - 追加されたプロジェクトを選択し、「更新する」ボタンを押下することで GROWI の AI 機能を有効化できます。
 <img :src="$withBase('/assets/images/ja/ai-chat_3.png')" alt="ai-chat_1.png">
+
+### GROWI の設定を行う
+
+- AI 機能を実際にご利用いただくためには GROWI アプリ上でもセットアップが必要です。
+- 設定方法の詳細は、[GROWI AI 機能のセットアップと管理](/ja/admin-guide/management-cookbook/ai-function.md) をご参照ください。
