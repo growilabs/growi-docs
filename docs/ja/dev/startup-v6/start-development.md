@@ -1,10 +1,5 @@
 # 開発を始めましょう
 
-::: danger
-このページの開発環境は GROWI v7.0.x 以下に対応しています。
-v7.1.x 以上の開発をする場合は [開発スタートアップ v6](../startup-v6/dev-env.html) を参照してください。
-:::
-
 ## Git の操作について
 
 ::: tip
@@ -23,15 +18,15 @@ GROWI-Dev devcontainer 内のターミナルで作業します。
 turbo run bootstrap
 ```
 
-代わりに、`yarn` コマンドを使うこともできます。ただし、その場合はプロジェクトルートで実行する必要があります。
+代わりに、`pnpm` コマンドを使うこともできます。
 
 ``` bash
 cd ${project root dir}
-yarn
+pnpm install
 ```
 
 ::: danger
-`npm install` は利用しないでください
+`npm install`, `yarn` は利用しないでください
 :::
 
 
@@ -80,7 +75,6 @@ yarn
 |`dev:migrate`|*[エイリアス]* `migrate:up` を実行します|
 |`lint`|コードの linting を実施します。|
 |`test`|単体テスト、統合テストを実行します。|
-|`cy:run`|Cypress によるテストを実行します。|
 
 
 ## Production 用の成果物をビルドして起動

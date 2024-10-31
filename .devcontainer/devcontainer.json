@@ -29,6 +29,7 @@
         "octref.vetur",
         "sysoev.language-stylus",
         "taichi.vscode-textlint",
+        "ritwickdey.liveserver",
     ],
 
     // Uncomment the next line if you want start specific services in your Docker Compose config.

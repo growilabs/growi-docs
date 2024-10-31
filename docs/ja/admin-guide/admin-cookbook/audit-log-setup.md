@@ -31,4 +31,4 @@ GROWI が収集するログは `SMALL、MEDIUM、LARGE` の3種類のグルー�
 
 ## 対応しているアクション一覧
 
-- [収集できるアクション名](https://github.com/weseek/growi/blob/master/packages/app/src/interfaces/activity.ts#L9)
+- [収集できるアクション名](https://github.com/weseek/growi/blob/master/apps/app/src/interfaces/activity.ts#8)

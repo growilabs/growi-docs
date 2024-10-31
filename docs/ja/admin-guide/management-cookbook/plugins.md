@@ -1,13 +1,16 @@
 # プラグイン
 
-::: tip
-このページの内容は、[動画](https://youtu.be/jwfhZ-QgsBA) でも解説しています。
-:::
-
 プラグインをインストールすることで GROWI をカスタマイズできます。
 公開されているプラグインは [GROWI プラグインサイト](https://growi.org/plugins)をご確認ください。
 
 [[toc]]
+
+このページの内容は、動画でも解説しています。
+
+<figure>
+  <figcaption>【GROWI v7】プラグインの適用・活用</figcaption>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/jwfhZ-QgsBA?si=1D0QPvyHdrH1l0ni" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
 
 ## プラグインのインストール方法
 

@@ -1,8 +1,11 @@
 # ページを検索する
 
-::: tip
-このページの内容は、[動画](https://youtu.be/GwlcwMJlkGg) でも解説しています。
-:::
+このページの内容は、動画でも解説しています。
+
+<figure>
+  <figcaption>【GROWI v7】ページの検索方法</figcaption>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/GwlcwMJlkGg?si=2EaCbI5JS-dlnCVr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
 
 <ContextualBlock context="docs-growi-org">
 

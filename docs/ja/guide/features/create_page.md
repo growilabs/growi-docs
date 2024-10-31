@@ -1,10 +1,17 @@
 # ページを作成する
 
-::: tip
-このページの内容は、[動画](https://youtu.be/WT_f-CuUADA) でも解説しています。
 
-ページの階層関係については、[こちらの動画](https://youtu.be/tI_QrqOXWDE) で解説しています。
-:::
+このページの内容は、動画でも解説しています。
+
+<figure>
+  <figcaption>【GROWI v7】ページの作成方法</figcaption>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/WT_f-CuUADA?si=1D0QPvyHdrH1l0ni" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
+
+<figure>
+  <figcaption>【GROWI v7】ページの階層関係</figcaption>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/tI_QrqOXWDE?si=01Ds7JgC4wNVRxYZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
 
 ## 新しいページを作成する
 
