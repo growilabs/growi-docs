@@ -15,9 +15,9 @@ jobs:
         node-version: [16.x]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
 
@@ -35,7 +35,7 @@ jobs:
 
     - name: Cache/Restore yarn cache
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ${{ steps.cache-yarn.outputs.dir }}
         key: ${{ runner.os }}-yarn-${{ matrix.node-version }}-${{ hashFiles('**/yarn.lock') }}
@@ -63,7 +63,7 @@ jobs:
       uses: jenkey2011/vuepress-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_SCRIPT: yarn apiv3:build && yarn docs-growi-org:build
+        BUILD_SCRIPT: yarn api:build && yarn docs-growi-org:build
         BUILD_DIR: docs/.vuepress/dist/
         CNAME: docs.growi.org
 

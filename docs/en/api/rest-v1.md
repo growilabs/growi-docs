@@ -1,5 +1,10 @@
 ---
-sidebar: 'auto'
+title: GROWI REST API v1
+sidebar: false
+prev: false
+next: false
+editLink: false
+pageClass: fluid
 ---
 
-# (TBD) Crowi Compatible REST API (v1)
+<Embed src="/redoc-apiv1.html" />

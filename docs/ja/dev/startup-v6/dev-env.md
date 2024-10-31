@@ -1,10 +1,5 @@
 # 開発環境の構築
 
-::: danger
-**このページは GROWI v5.x 以下のバージョン向けに書かれています。**  
-GROWI v6.x 以上を開発する場合は、最新の開発スタートアップを確認してください。
-:::
-
 ## 各種ツールの準備
 
 ::: tip Note
@@ -34,63 +29,21 @@ GROWI v6.x 以上を開発する場合は、最新の開発スタートアップ
         * Ubuntu    Stopped         2
         ```
 
-    1. ホストのメモリを消費しすぎてしまう問題([microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))への対処として、メモリサイズを制限する
-        * `C:\Users\YourAccount\.wslconfig` を編集(ファイルが存在しない場合は作成)
-
-        ```properties
-        [wsl2]
-        memory=6GB
-        swap=0
-        ```
-
 1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
 
 :::
 
-::: tab "Old Windows 10" id="tab-docker-win10"
-
-1. WSL2 を利用できる状態にする
-    1. [WSL2 Linux カーネル更新プログラム パッケージ](https://docs.microsoft.com/ja-jp/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package) をインストール
-    1. 管理者権限で起動した PowerShell で以下を実行
-
-        ```bash
-        # Hyper-V の無効化
-        Disable-WindowsOptionalFeature -Online -FeatureName $("Microsoft-Hyper-V")
-        # WSL の有効化
-        Enable-WindowsOptionalFeature -Online -FeatureName $("VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux")
-        ```
-
-    1. Microsoft Store で Ubuntu をインストール
-        * アプリ名にバージョンが入っていない「Ubuntu」アプリを推奨
-            * その時点の最新版(Ubuntu 20.04 LTS 等)へのエイリアスになっている
-        * 単体で起動してユーザー作成、ログインまで済ませる
-        * 確認
-
-            ```bash
-            > wsl -l -v
-            NAME      STATE           VERSION
-            * Ubuntu    Stopped         2
-            ```
-
-        * VERSION 1 で動いている場合は、更に `wsl --set-version Ubuntu 2` を打ち込んでディストリビューションを更新する
-    1. ホストのメモリを消費しすぎてしまう問題([microsoft/WSL#4166](https://github.com/microsoft/WSL/issues/4166))への対処として、メモリサイズを制限する
-        * `C:\Users\YourAccount\.wslconfig` を編集(ファイルが存在しない場合は作成)
-
-        ```properties
-        [wsl2]
-        memory=6GB
-        swap=0
-        ```
-
-1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
-
-:::
-
-::: tab "Mac (Intel)" id="tab-docker-mac"
+::: tab "Mac" id="tab-docker-mac"
 
 1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストール
     1. メモリ利用量上限がデフォルトでは 2GB に設定されているので変更する
-        * 参考: [Get started with Docker Desktop for Mac | Resources](https://docs.docker.com/docker-for-mac/#resources)
+        * 参考: [Change preferences on Mac | Docker Documentation](https://docs.docker.com/desktop/settings/mac/#resources)
+
+:::
+
+::: tab "Ubuntu" id="tab-docker-ubuntu"
+
+1. [Docker Engine on Ubuntu をインストール](https://docs.docker.com/engine/install/ubuntu/)
 
 :::
 
@@ -117,8 +70,14 @@ GROWI v6.x 以上を開発する場合は、最新の開発スタートアップ
 
 ```bash
 brew install git
-brew install git-lfs
-git lfs install
+```
+
+:::
+
+::: tab "Ubuntu" id="tab-git-ubuntu"
+
+```bash
+apt-get install git
 ```
 
 :::
@@ -146,7 +105,7 @@ devcontainer は 自動的に docker ホストの設定を参照します。
     # autocrlf 無効化
     git config --global core.autocrlf false
     # Windows の場合は、WSL 内から更にホストPCの credential helper を参照する設定を行う
-    git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
+    git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
     ```
 
 :::
@@ -177,12 +136,6 @@ devcontainer は 自動的に docker ホストの設定を参照します。
 1. [Visual Studio Code](https://code.visualstudio.com/download) をインストール
 2. 拡張機能をインストール
     * 「Remote - Development」extension のインストール
-
-
-
-### MongoDB のための GUI クライアント
-
-1. [Robo 3T](https://robomongo.org/download) をインストール
 
 
 
