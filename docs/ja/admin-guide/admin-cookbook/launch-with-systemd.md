@@ -18,7 +18,7 @@ WorkingDirectory=/opt/growi
 Environment=PORT=3000\
 MONGO_URI=mongodb://localhost:27017/growi\
 ELASTICSEARCH_URI=http://localhost:9200/growi
-ExecStart=/usr/bin/yarn app:server
+ExecStart=/usr/bin/npm run app:server
 
 [Install]
 WantedBy=multi-user.target
@@ -39,7 +39,7 @@ GROWI のディレクトリのある場所を指定します。
 #### ExecStart
 
 起動コマンドを指定します。  
-適宜環境に合わせて設定してください。yarn のパスは、`which yarn` などで確認してください。
+適宜環境に合わせて設定してください。npm のパスは、`which npm` などで確認してください。
 
 ## systemctl による操作
 
