@@ -17,6 +17,7 @@ module.exports = {
   about_us: '会社概要',
   terms_of_service: '利用規約',
   privacy_policy: 'プライバシーポリシー',
+  fund_settlement: '資金決済法に基づく表示',
   notation_based_on_the_act_on_specified_commercial_transactions: '特定商取引法に基づく表記',
   community_support: "サポート・コミュニティ",
   login_to_service: 'サービスへログイン',

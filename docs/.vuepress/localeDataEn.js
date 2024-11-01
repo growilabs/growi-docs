@@ -17,6 +17,7 @@ module.exports = {
   about_us: 'Company Profile',
   terms_of_service: 'Terms of Service',
   privacy_policy: 'Privacy Policy',
+  fund_settlement: 'Display Based on the Payment Services Act',
   notation_based_on_the_act_on_specified_commercial_transactions: 'Notation Based on the Act on Specified Commercial Transactions',
   community_support: 'Community Support',
   login_to_service: 'Login to Service',
