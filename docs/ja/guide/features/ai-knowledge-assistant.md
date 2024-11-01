@@ -7,11 +7,11 @@
 
 ## ナレッジアシスタントの使い方
 
-- GROWI 画面のトップバーの検索ボタンの横に「AI」と書かれた吹き出しのアイコンがあります。  
+- GROWI 画面のトップバーに「AI」と書かれた吹き出しのアイコンがあります。  
 
 <img :src="$withBase('/assets/images/ja/ai-knowledge-assistant_1.png')" alt="ai-knowledge-assistant_1.png" class="border">
 
-- アイコンを押すとナレッジアシスタントのモーダルが開きます。  
+- アイコンを押すとナレッジアシスタント (ベータ) のモーダルが開きます。  
 
 <img :src="$withBase('/assets/images/ja/ai-knowledge-assistant_2.png')" alt="ai-knowledge-assistant_2.png" class="border">
 
