@@ -6,7 +6,7 @@ OpenAI 連携による AI 検索機能を利用するための設定方法を紹
 
 ## OpenAI との接続設定
 
-OpenAI の API キー取得等に関しては、システム管理者のページを参考にしてください。
+OpenAI の API キー等の取得に関しては、OpenAIのヘルプを参考にしてください。
 
 - `AI_ENABLED` に `true` を指定
 - `OPENAI_SERVICE_TYPE` にサービスの種別を指定
@@ -18,10 +18,10 @@ OpenAI の API キー取得等に関しては、システム管理者のペー�
 
 ## アプリ上で接続確認
 
-- 環境変数 `OPENAI_SERVICE_TYPE` ほか、OpenAI との連携に必要な環境変数が設定されている場合、GROWI 画面のトップバーに　AI　検索アイコンが出現します。
+- 環境変数 `OPENAI_SERVICE_TYPE` ほか、OpenAI との連携に必要な環境変数が設定されている場合、GROWI 画面のトップバーに AI 検索アイコンが出現します。
   - 環境変数は、管理者メニューの「Wiki管理トップ」ページに一覧で表示されます。
 
-  <img :src="$withBase('/assets/images/ja/setup-ai.png')" alt="setup-ai">
+  <img :src="$withBase('/assets/images/ja/setup-ai_1.png')" alt="setup-ai_1">
 
 <ContextualBlock context="docs-growi-org">
 
@@ -31,13 +31,14 @@ OpenAI の API キー取得等に関しては、システム管理者のペー�
 
 <ContextualBlock context="help-growi-cloud">
 
-- 設定を有効にしているにもかかわらず、 AI 連携機能が正常に利用できない場合は、[GROWI.cloud サポートへのお問い合わせ窓口](https://growi.cloud/contact) までお問い合わせください。
+- 設定を有効にしているにもかかわらず AI 連携機能が正常に利用できない場合は、[GROWI AI 機能](/ja/cloud/ai-chat.md) の設定と [](/ja/cloud/ai-credit.md) の残高をご確認のうえ [GROWI.cloud サポートへのお問い合わせ窓口](https://growi.cloud/contact) までお問い合わせください。
 
 </ContextualBlock>
 
 ## Vector Store のリビルド
 
-- OpenAI では、 `Vector Store` へ学習対象の文書をアップロードして機械学習させます。
-- GROWI AI 機能が有効な場合、パブリックなページの作成・更新時にページの本文ほか学習に必要なメタデータなどを `Vector Store` へアップロードしますが、既存のページについてはページを更新しない限り学習対象となりません。
+- AI 連携機能では、 `Vector Store` へ学習対象の文書をアップロードして機械学習させます。
+- AI 連携機能が有効な場合、パブリックなページの作成・更新時にページの本文ほか学習に必要なメタデータなどを `Vector Store` へアップロードしますが、既存のページについてはページを更新しない限り学習対象となりません。
 - そこで、「Vector Store のリビルド」を行うことで、パブリックな既存ページすべてを `Vector Store` に取り込ませることができます。
-- 既存の GROWI に、新たに GROWI AI 機能を導入する場合は特に、機能を十分に活用するためにも「Vector Store のリビルド」を行うことをお勧めします。
+- 既存の GROWI に、新たに GROWI AI 機能を導入する場合は特に、機能を十分に活用するためにも「Vector Store のリビルド」を行うことをお勧めします。  
+  <img :src="$withBase('/assets/images/ja/setup-ai_2.png')" alt="setup-ai_2">
