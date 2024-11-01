@@ -28,6 +28,7 @@
             <a class="gc-footer-link" href="https://growi.cloud/terms-of-service">{{ this.$themeLocaleConfig.terms_of_service }}</a>
             <a class="gc-footer-link" href="https://growi.cloud/privacy-policy">{{ this.$themeLocaleConfig.privacy_policy }}</a>
             <a class="gc-footer-link" href="https://growi.cloud/asct">{{ this.$themeLocaleConfig.notation_based_on_the_act_on_specified_commercial_transactions }}</a>
+            <a class="gc-footer-link" href="https://growi.cloud/v2/fund-settlement/">{{ this.$themeLocaleConfig.fund_settlement }}</a>
           </div>
         </div>
 
