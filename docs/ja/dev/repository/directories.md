@@ -14,7 +14,7 @@
 ├── tsconfig.base.json
 ├── package.json
 ├── turbo.json
-└── yarn.lock
+└── pnpm-lock.yaml
 ```
 
 ## apps/app
@@ -22,8 +22,12 @@
 ```text
 ├── .next
 ├── config
-│   └── logger
+│   ├── logger
+│   ├── i18next.config.js
+│   ├── migrate-mongo-config.js
+│   └── next-i18next.config.js
 ├── docker
+├── playwright
 ├── public
 │   ├── images
 │   ├── js
@@ -58,11 +62,10 @@
 │   ├── cypress
 │   ├── integration
 │   └── unit
+├── test-with-vite
 ├── tmp
-├── jest.config.js
-├── migrate-mongo-config.js
 ├── next.config.js
+├── nodemon.json
 ├── package.json
-├── regconfig.json
 └── tsconfig.json
 ```

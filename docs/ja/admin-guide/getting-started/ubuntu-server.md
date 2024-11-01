@@ -10,7 +10,7 @@
 
 * node.js 18.x or 20.x
 * npm 6.x
-* yarn
+* pnpm
 * MongoDB 4.4 以上 \(6.0 以上を推奨\)
 * \(Option\) Elasticsearch 7.x or 8.x
 * \(Option\) systemd
@@ -45,29 +45,30 @@ $ sudo bash nodesource_setup.sh
 $ sudo apt install nodejs
 ```
 
-GROWI では yarn を用いたパッケージインストールを利用するため、ここで `yarn` コマンドをインストールしておきます。
+GROWI では pnpm を用いたパッケージインストールを利用するため、ここで `pnpm` コマンドをインストールしておきます。
 
 ```text
-$ sudo npm install -g yarn
+$ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sudo sh -
+$ sudo pnpm setup
 ```
 
 また、GROWI では Turborepo を用いてビルドを行うため、`turbo` コマンドをインストールします。
 
 ```text
-$ sudo yarn global add turbo
+$ sudo pnpm add turbo --global
 ```
 
-Node.js, npm, yarn, turbo のインストールが完了したら、インストールしたバージョンを確認しましょう。
+Node.js, npm, pnpm, turbo のインストールが完了したら、インストールしたバージョンを確認しましょう。
 
 ```text
 $ nodejs -v
 v20.12.2
 $ npm -v
 10.5.0
-$ yarn -v
-1.22.22
+$ pnpm -v
+9.12.2
 $ turbo --version
-1.13.3
+2.1.3
 ```
 
 ## Elasticsearch
@@ -328,22 +329,20 @@ $ sudo git tag -l
 ...
 v6.3.3
 v6.3.4
-v6.3.x-base
 v7.0.0
 v7.0.1
 v7.0.2
-v7.0.x-base
 ...
 
 # RC がついていない最新版を利用
 $ sudo git checkout -b v7.0.2 refs/tags/v7.0.2
 ```
 
-ソースコードを clone した後に、`yarn` コマンドを利用して、 GROWI に必要なパッケージをインストールします。
+ソースコードを clone した後に、`pnpm` コマンドを利用して、 GROWI に必要なパッケージをインストールします。
 
 ```text
 $ cd /opt/growi
-$ sudo yarn
+$ sudo pnpm install
 ```
 
 ### ビルド
@@ -351,7 +350,7 @@ $ sudo yarn
 パッケージのインストールが完了したら、ビルドを行います。
 
 ```text
-$ sudo yarn app:build
+$ sudo npm run app:build
 ```
 
 これには、しばらく時間がかかります。
@@ -368,7 +367,7 @@ $ sudo yarn app:build
 $ sudo \
 MONGO_URI=mongodb://localhost:27017/growi \
 ELASTICSEARCH_URI=http://localhost:9200/growi \
-yarn app:server
+npm run app:server
 
 ...
 # 以下のメッセージが表示されるまでしばらく待つ
