@@ -90,6 +90,13 @@ pageClass: admin-cookbook-env-vars
 | `SLACKBOT_WITH_PROXY_PROXY_URI` | URI of slackbot-proxy server used for Custom Bot with proxy environment |  |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_GTOP` | Salt (for GROWI to Proxy) when generating tokens for the Official Bot or Custom Bot with proxy environment | `gtop` |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_PTOG` | Salt (for GROWI to Proxy) when generating tokens for the Official Bot or Custom Bot with proxy environment | `ptog` |
+| **AI function** |  |  |
+| `AI_ENABLED` | Enable or disable AI function |  |
+| `OPENAI_SERVICE_TYPE` | Type of AI service |  |
+|  | `openai` | Use "OpenAI" |
+|  | `azure openai` | Use "Azure OpenAI" |
+| `OPENAI_ASSISTANT_NAME_SUFFIX` | ナレッジアシスタント機能で利用する固有な名前 |  |
+| `OPENAI_API_KEY` | API key for using OpenAI services |  |
 | **Option (Overwritable in admin page)** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | Prioritize env vars over values in DB for Site URL | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` | Prioritize env var over value in DB for File Upload Type | `false` |

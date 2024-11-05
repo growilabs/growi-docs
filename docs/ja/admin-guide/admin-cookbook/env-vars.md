@@ -91,6 +91,13 @@ pageClass: admin-cookbook-env-vars
 | `SLACKBOT_WITH_PROXY_PROXY_URI` | Custom bot with proxy 環境下で利用する slackbot-proxy サーバーの URI |  |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_GTOP` | Official bot または Custom bot with proxy 環境下で利用するトークンを生成する際の salt (GROWI to Proxy 向き) | `gtop` |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_PTOG` | Official bot または Custom bot with proxy 環境下で利用するトークンを生成する際の salt (GROWI to Proxy 向き) | `ptog` |
+| **AI 連携機能** |  |  |
+| `AI_ENABLED` | `true` の場合、AI 連携を有効にします。 |  |
+| `OPENAI_SERVICE_TYPE` | OpenAI のサービスの種別 |  |
+|  | `openai` | OpenAI を利用 |
+|  | `azure openai` | Azure OpenAI を利用 |
+| `OPENAI_ASSISTANT_NAME_SUFFIX` | ナレッジアシスタント機能で利用する固有な名前 |  |
+| `OPENAI_API_KEY` | OpenAI サービスで取得した API キーを指定します。 |  |
 | **管理設定を上書きする環境変数** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | `true` の場合、サイト URL の設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` |`true` の場合、ファイルアップロードタイプの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。|`false`|
