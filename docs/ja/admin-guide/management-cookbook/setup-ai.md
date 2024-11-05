@@ -1,10 +1,12 @@
 # AI 連携機能のセットアップと管理
 
-OpenAI 連携による AI 検索機能を利用するための設定方法を紹介します。
+OpenAI による AI 連携機能を利用するための設定方法を紹介します。
+
+## ナレッジアシスタント機能
 
 <ContextualBlock context="docs-growi-org">
 
-## OpenAI との接続設定
+### OpenAI との接続設定
 
 OpenAI の API キー等の取得に関しては、OpenAIのヘルプを参考にしてください。
 
@@ -14,12 +16,10 @@ OpenAI の API キー等の取得に関しては、OpenAIのヘルプを参考�
     - 例: `OpenAI` なら `openai` を指定
   - `OPENAI_ASSISTANT_NAME_SUFFIX` に固有な値を指定
   - `OPENAI_API_KEY` に OpenAI サービスで取得した API キーを指定
-- ※現在は、本機能に関するセットアップ用 UI の提供はありません。
-  - AI 連携機能の設定は環境変数による指定のみ可能です。
 
 </ContextualBlock>
 
-## アプリ上で接続確認
+### アプリ上で接続確認
 
 - 環境変数 `OPENAI_SERVICE_TYPE` ほか、OpenAI との連携に必要な環境変数が設定されている場合、GROWI 画面のトップバーに AI 検索アイコンが出現します。
   - 環境変数は、管理者メニューの「Wiki管理トップ」ページで確認できます。
@@ -40,10 +40,9 @@ OpenAI の API キー等の取得に関しては、OpenAIのヘルプを参考�
 
 </ContextualBlock>
 
-## Vector Store のリビルド
+### Vector Store のリビルド
 
-- AI 連携機能では、 OpenAI の `Vector Store` へ文書をアップロードして機械学習の対象とします。
-- AI 連携機能が有効な場合、パブリックなページの作成・更新時にページの本文ほか機械学習に必要なメタデータを `Vector Store` へアップロードしますが、既存のページについてはページを更新しない限り学習対象となりません。
-- 「Vector Store のリビルド」を行うことで、すべてのパブリックなページを `Vector Store` に取り込ませることができます。
-- 既存の GROWI に、新たに AI 連携機能を導入する場合は特に、機能を十分に活用するためにも、はじめに「Vector Store のリビルド」を行うことをお勧めします。  
+- 「Vector Store のリビルド」を行うことで、GROWI 上のすべてのパブリックなページのデータを `Vector Store` にアップロードします。
+- AI 連携機能では、 `Vector Store` にアップロードされた文書を対象に機械学習します。
+- 既存の GROWI に新たに AI 連携機能を導入する場合は、「Vector Store のリビルド」を行うことをお勧めします。  
   <img :src="$withBase('/assets/images/ja/setup-ai_2.png')" alt="setup-ai_2">
