@@ -14,7 +14,6 @@ OpenAI の API キー等の取得に関しては、OpenAIのヘルプを参考�
   - `AI_ENABLED` に `true` を指定
   - `OPENAI_SERVICE_TYPE` にサービスの種別を指定
     - 例: `OpenAI` なら `openai` を指定
-  - `OPENAI_ASSISTANT_NAME_SUFFIX` に固有な値を指定
   - `OPENAI_API_KEY` に OpenAI サービスで取得した API キーを指定
 
 </ContextualBlock>

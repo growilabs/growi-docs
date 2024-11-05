@@ -95,7 +95,6 @@ pageClass: admin-cookbook-env-vars
 | `OPENAI_SERVICE_TYPE` | Type of AI service |  |
 |  | `openai` | Use "OpenAI" |
 |  | `azure openai` | Use "Azure OpenAI" |
-| `OPENAI_ASSISTANT_NAME_SUFFIX` | ナレッジアシスタント機能で利用する固有な名前 |  |
 | `OPENAI_API_KEY` | API key for using OpenAI services |  |
 | **Option (Overwritable in admin page)** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | Prioritize env vars over values in DB for Site URL | `false` |
