@@ -3,7 +3,7 @@
 ## GROWI AI 機能とは
 
 - GROWI v7.1.0 にて追加された OpenAI をナレッジに活用できる機能です。
-  - 詳しくは [GROWI v7.1.x へのアップグレード](/ja/admin-guide/upgrading/71x.html) のヘルプページをご参照ください。
+  - 詳しくは [GROWI v7.1.x へのアップグレード](/ja/admin-guide/upgrading/71x.html) のページをご参照ください。
 - GROWI.cloud では、[GROWI AI クレジット](./growi-ai-credit.html) が無ければ GROWI AI 機能をご利用いただけません。
   - (ユーザー自身が用意したAPIキーを使用する場合を除く)
 - ※2024年11月現在、β版で提供している機能です。
