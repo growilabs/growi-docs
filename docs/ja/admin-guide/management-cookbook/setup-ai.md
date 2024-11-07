@@ -42,6 +42,6 @@ OpenAI の API キー等の取得に関しては、OpenAIのヘルプを参考�
 ### Vector Store のリビルド
 
 - 「Vector Store のリビルド」を行うことで、GROWI 上のすべてのパブリックなページのデータを `Vector Store` にアップロードします。
-- AI 連携機能では、 `Vector Store` にアップロードされた文書を対象に機械学習します。
+  - AI 連携機能では、 `Vector Store` にアップロードされた文書を対象に機械学習します。
 - 既存の GROWI に新たに AI 連携機能を導入する場合は、「Vector Store のリビルド」を行うことをお勧めします。  
   <img :src="$withBase('/assets/images/ja/setup-ai_2.png')" alt="setup-ai_2">
