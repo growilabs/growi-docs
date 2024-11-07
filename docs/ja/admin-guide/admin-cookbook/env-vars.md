@@ -95,7 +95,7 @@ pageClass: admin-cookbook-env-vars
 | `AI_ENABLED` | `true` の場合、AI 連携を有効にします。 |  |
 | `OPENAI_SERVICE_TYPE` | OpenAI のサービスの種別 |  |
 |  | `openai` | OpenAI を利用 |
-|  | `azure openai` | Azure OpenAI を利用 |
+|  | `azure-openai` | Azure OpenAI を利用 |
 | `OPENAI_API_KEY` | OpenAI サービスで取得した API キーを指定します。 |  |
 | **管理設定を上書きする環境変数** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | `true` の場合、サイト URL の設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
