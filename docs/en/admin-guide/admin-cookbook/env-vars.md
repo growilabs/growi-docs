@@ -93,8 +93,7 @@ pageClass: admin-cookbook-env-vars
 | **AI function** |  |  |
 | `AI_ENABLED` | Enable or disable AI function |  |
 | `OPENAI_SERVICE_TYPE` | Type of AI service |  |
-|  | `openai` | Use "OpenAI" |
-|  | `azure-openai` | Use "Azure OpenAI" |
+|  | `openai` | Use "OpenAI" <!-- TODO: add "`azure-openai`: Use "Azure OpenAI"" -->|
 | `OPENAI_API_KEY` | API key for using OpenAI services |  |
 | **Option (Overwritable in admin page)** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | Prioritize env vars over values in DB for Site URL | `false` |
