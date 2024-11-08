@@ -10,6 +10,7 @@
 - GROWI AI 連携機能では、 OpenAI の `Vector Store` へ文書をアップロードして機械学習の対象とします。
 - GROWI が OpenAI へアップロードするのは、パブリックなページのみです。
 - AI 連携機能が有効な場合、ページの作成・更新・複製のアクションが起こったときに、ページの本文ほか機械学習に必要なメタデータを `Vector Store` へアップロードします。
+- 既に存在するページを一括でアップロードするには、「[Vector Store のリビルド](/ja/admin-guide/management-cookbook/setup-ai.md#vector-store-のリビルド)」を行ってください。
 
 ## ナレッジアシスタントの使い方
 
