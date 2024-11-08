@@ -406,6 +406,7 @@ module.exports = {
                 '/ja/guide/features/page_linker.md',
                 '/ja/guide/features/footnote.md',
                 '/ja/guide/features/forgot_password.md',
+                '/ja/guide/features/ai-knowledge-assistant.md',
               ]
             },
             {
