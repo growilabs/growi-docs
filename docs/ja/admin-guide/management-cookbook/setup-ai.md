@@ -2,11 +2,9 @@
 
 OpenAI による AI 連携機能を利用するための設定方法を紹介します。
 
-## ナレッジアシスタント機能
-
 <ContextualBlock context="docs-growi-org">
 
-### OpenAI との接続設定
+## OpenAI との接続設定
 
 OpenAI の API キー等の取得に関しては、OpenAIのヘルプを参考にしてください。
 
@@ -17,6 +15,8 @@ OpenAI の API キー等の取得に関しては、OpenAIのヘルプを参考�
   - `OPENAI_API_KEY` に OpenAI サービスで取得した API キーを指定
 
 </ContextualBlock>
+
+## ナレッジアシスタント機能
 
 ### アプリ上で接続確認
 
