@@ -517,6 +517,7 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/setup-search-system.md',
                 '/ja/admin-guide/management-cookbook/audit-log.md',
                 '/ja/admin-guide/management-cookbook/plugins.md',
+                '/ja/admin-guide/management-cookbook/setup-ai.md',
               ],
             },
           ],
