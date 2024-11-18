@@ -90,11 +90,13 @@ pageClass: admin-cookbook-env-vars
 | `SLACKBOT_WITH_PROXY_PROXY_URI` | URI of slackbot-proxy server used for Custom Bot with proxy environment |  |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_GTOP` | Salt (for GROWI to Proxy) when generating tokens for the Official Bot or Custom Bot with proxy environment | `gtop` |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_PTOG` | Salt (for GROWI to Proxy) when generating tokens for the Official Bot or Custom Bot with proxy environment | `ptog` |
-| **AI function** |  |  |
-| `AI_ENABLED` | Enable or disable AI function |  |
-| `OPENAI_SERVICE_TYPE` | Type of AI service |  |
-|  | `openai` | Use "OpenAI" <!-- TODO: add "`azure-openai`: Use "Azure OpenAI"" -->|
-| `OPENAI_API_KEY` | API key for using OpenAI services |  |
+| **Option for GROWI AI features** |  |  |
+| `AI_ENABLED` | Enable or disable AI function | `false` |
+| `OPENAI_SERVICE_TYPE` | Type of OpenAI compatible service. As of v7.1.2, only `openai` is available. | |
+|  | : `openai` Use OpenAI API. |  | <!-- TODO: add "`azure-openai`: Use "Azure OpenAI"" -->|
+| `OPENAI_API_KEY` | API key for using OpenAI services. |  |
+| `OPENAI_CHAT_ASSISTANT_INSTRUCTIONS` | Instructions used by Knowledge Assistant feature. | [ref](https://github.com/search?q=repo%253Aweseek%252Fgrowi+OPENAI_CHAT_ASSISTANT_INSTRUCTIONS) |
+| `OPENAI_CHAT_ASSISTANT_MODEL` | AI model used by Knowledge Assistant feature. | `gpt-4o-mini` |
 | **Option (Overwritable in admin page)** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | Prioritize env vars over values in DB for Site URL | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` | Prioritize env var over value in DB for File Upload Type | `false` |
