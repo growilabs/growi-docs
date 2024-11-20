@@ -10,7 +10,7 @@
 - The GROWI AI integration feature uploads documents to OpenAI's `Vector Store` for machine learning purposes.  
 - Only public pages are uploaded to OpenAI by GROWI.  
 - When the AI integration feature is enabled, the content and metadata required for machine learning are uploaded to the `Vector Store` whenever a page is created, updated, or duplicated.  
-- To bulk upload already existing pages, perform a "[Vector Store Rebuild](/en/admin-guide/management-cookbook/setup-ai.md#vector-store-rebuild)."
+- To bulk upload already existing pages, perform a "[Rebuild Vector Store](/en/admin-guide/management-cookbook/setup-ai.md#vector-store-rebuild)."
 
 ## How to Use the Knowledge Assistant
 

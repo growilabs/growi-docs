@@ -41,7 +41,7 @@ Refer to OpenAI's help documentation for instructions on obtaining API keys and 
 
 ### Rebuilding the Vector Store
 
-- Performing a "Vector Store Rebuild" uploads all public page data in GROWI to the `Vector Store`.  
+- Performing a "Rebuild Vector Store" uploads all public page data in GROWI to the `Vector Store`.  
   - The AI integration feature uses documents uploaded to the `Vector Store` for machine learning.  
-- If you are adding the AI integration feature to an existing GROWI setup, it is recommended to perform a "Vector Store Rebuild."  
+- If you are adding the AI integration feature to an existing GROWI setup, it is recommended to perform a "Rebuild Vector Store"  
   <img :src="$withBase('/assets/images/en/setup-ai_2.png')" alt="setup-ai_2">
