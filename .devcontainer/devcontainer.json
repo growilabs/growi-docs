@@ -3,19 +3,22 @@
 // If you want to run as a non-root user in the container, see .devcontainer/docker-compose.yml.
 {
     "name": "GROWI-Docs-Dev",
-    "dockerComposeFile": "docker-compose.yml",
+    "dockerComposeFile": "compose.yml",
     "service": "node",
     "workspaceFolder": "/workspace/growi-docs",
 
     // Set *default* container specific settings.json values on container create.
+    /*
     "settings": {
         "terminal.integrated.defaultProfile.linux": "bash"
     },
+    */
 
     "features": {
       "ghcr.io/devcontainers/features/node:1": {
         "version": "20.18.0"
-      }
+      },
+     "ghcr.io/devcontainers-contrib/features/pnpm:2.0.4": {}
     },
 
     // Add the IDs of extensions you want installed when the container is created.
@@ -48,5 +51,5 @@
     // "postCreateCommand": "yarn install",
 
     // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-    "remoteUser": "node"
+    // "remoteUser": "node"
 }
