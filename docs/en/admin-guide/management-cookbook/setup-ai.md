@@ -20,10 +20,20 @@ Refer to OpenAI's help documentation for instructions on obtaining API keys and 
 
 ### Verifying Connection in the Application
 
-- If the `OPENAI_SERVICE_TYPE` and other necessary environment variables for OpenAI integration are properly set, the AI search icon will appear in the top bar of the GROWI interface.  
-  - You can check the environment variables on the "Wiki Management Home" page in the Admin Menu.
+<ContextualBlock context="docs-growi-org">
 
-  <img :src="$withBase('/assets/images/en/setup-ai_1.png')" alt="setup-ai_1">
+If the environment variables required for the Knowledge Assistant are set, the Knowledge Assistant icon will appear on the top bar of the GROWI screen.
+
+</ContextualBlock>
+
+
+<ContextualBlock context="help-growi-cloud">
+
+When the AI function is enabled, the Knowledge Assistant icon appears on the top bar of the GROWI screen.
+
+</ContextualBlock>
+
+<img :src="$withBase('/assets/images/en/setup-ai_1.png')" alt="setup-ai_1">
 
 <ContextualBlock context="docs-growi-org">
 
