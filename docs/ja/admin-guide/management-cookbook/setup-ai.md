@@ -20,10 +20,20 @@ OpenAI の API キー等の取得に関しては、OpenAIのヘルプを参考�
 
 ### アプリ上で接続確認
 
-- 環境変数 `OPENAI_SERVICE_TYPE` ほか、OpenAI との連携に必要な環境変数が設定されている場合、GROWI 画面のトップバーに AI 検索アイコンが出現します。
-  - 環境変数は、管理者メニューの「Wiki管理トップ」ページで確認できます。
+<ContextualBlock context="docs-growi-org">
 
-  <img :src="$withBase('/assets/images/ja/setup-ai_1.png')" alt="setup-ai_1">
+ナレッジアシスタントに必要な環境変数が設定されている場合、GROWI 画面のトップバーにナレッジアシスタントのアイコンが表示されます。
+
+</ContextualBlock>
+
+
+<ContextualBlock context="help-growi-cloud">
+
+AI 機能が有効になっている場合、GROWI 画面のトップバーにナレッジアシスタントのアイコンが表示されます。
+
+</ContextualBlock>
+
+<img :src="$withBase('/assets/images/ja/setup-ai_1.png')" alt="setup-ai_1">
 
 <ContextualBlock context="docs-growi-org">
 
