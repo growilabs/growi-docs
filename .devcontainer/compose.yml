@@ -1,0 +1,13 @@
+services:
+  node:
+    image: mcr.microsoft.com/devcontainers/base:ubuntu
+    volumes:
+      - ..:/workspace/growi-docs:delegated
+      - node_modules:/workspace/growi-docs/node_modules
+      - pnpm-store:/workspace/growi-docs/.pnpm-store
+      - ../../growi:/workspace/growi:delegated
+    tty: true
+
+volumes:
+  node_modules:
+  pnpm-store:
