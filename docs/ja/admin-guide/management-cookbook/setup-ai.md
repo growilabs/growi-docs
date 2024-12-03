@@ -44,7 +44,7 @@ AI 機能が有効になっている場合、GROWI 画面のトップバーに�
 <ContextualBlock context="help-growi-cloud">
 
 - 設定を有効にしているにもかかわらず AI 連携機能が正常に利用できない場合
-  - [GROWI AI 機能](/ja/cloud/ai-chat) の設定と [GROWI AI クレジット](/ja/cloud/ai-credit) の残高をご確認ください。
+  - [GROWI AI 機能](/ja/cloud/growi-ai-features.html) の設定と [GROWI AI クレジット](/ja/cloud/growi-ai-credit.html) の残高をご確認ください。
   - 上記をご確認のうえ、問題を解消できない場合は [GROWI.cloud サポートへのお問い合わせ窓口](https://growi.cloud/contact) までお問い合わせください。
 
 </ContextualBlock>

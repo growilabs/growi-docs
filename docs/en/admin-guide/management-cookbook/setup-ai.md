@@ -44,7 +44,7 @@ When the AI function is enabled, the Knowledge Assistant icon appears on the top
 <ContextualBlock context="help-growi-cloud">
 
 - If the AI integration feature does not function correctly despite being enabled:  
-  - Check the [GROWI AI Features](/en/cloud/ai-chat) settings and your [GROWI AI Credit Balance](/en/cloud/ai-credit).  
+  - Check the [GROWI AI 機能(GROWI AI Features japanese page)](/ja/cloud/growi-ai-features.html) settings and your [GROWI AI クレジット(GROWI AI Credit Balance japanese page)](/ja/cloud/growi-ai-credit.html).  
   - If the issue persists after verification, please contact [GROWI.cloud Support](https://growi.cloud/contact).
 
 </ContextualBlock>

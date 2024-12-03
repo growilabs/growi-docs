@@ -53,4 +53,4 @@ GROWI AI 機能を有効にするためには、まず、編集画面に切り�
 ### GROWI の設定を行う
 
 - AI 機能を実際にご利用いただくためには GROWI アプリ上でもセットアップが必要です。
-- 設定方法は、[GROWI AI 機能のセットアップと管理](/ja/admin-guide/management-cookbook/ai-function.html) をご参照ください。
+- 設定方法は、[GROWI AI 機能のセットアップと管理](/ja/admin-guide/management-cookbook/setup-ai.html) をご参照ください。
