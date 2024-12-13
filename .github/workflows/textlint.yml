@@ -9,13 +9,13 @@ jobs:
     # setup Node.js
     - uses: actions/setup-node@v4
       with:
-        node-version: '16.x'
-        cache: 'yarn'
-        cache-dependency-path: '**/yarn.lock'
+        node-version: '20.18.0'
+        cache: 'pnpm'
+        cache-dependency-path: '**/pnpm-lock.yaml'
 
     # Run scripts
     - name: Install dependencies
-      run: yarn install
+      run: pnpm install
     - name: linting markdown files
-      run: yarn run lint
+      run: pnpm run lint
 

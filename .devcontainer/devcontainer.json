@@ -16,24 +16,28 @@
     "postCreateCommand": "/bin/bash ./.devcontainer/postCreateCommand.sh",
 
     // Add the IDs of extensions you want installed when the container is created.
-    "extensions": [
-        "dbaeumer.vscode-eslint",
-        "mhutchie.git-graph",
-        "eamodio.gitlens",
-        "github.vscode-pull-request-github",
-        "cschleiden.vscode-github-actions",
-        "msjsdiag.debugger-for-chrome",
-        "firefox-devtools.vscode-firefox-debug",
-        "editorconfig.editorconfig",
-        "esbenp.prettier-vscode",
-        "shinnn.stylelint",
-        "hex-ci.stylelint-plus",
-        "davidanson.vscode-markdownlint",
-        "octref.vetur",
-        "sysoev.language-stylus",
-        "taichi.vscode-textlint",
-        "ritwickdey.liveserver",
-    ],
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "mhutchie.git-graph",
+          "eamodio.gitlens",
+          "github.vscode-pull-request-github",
+          "cschleiden.vscode-github-actions",
+          "msjsdiag.debugger-for-chrome",
+          "firefox-devtools.vscode-firefox-debug",
+          "editorconfig.editorconfig",
+          "esbenp.prettier-vscode",
+          "shinnn.stylelint",
+          "hex-ci.stylelint-plus",
+          "davidanson.vscode-markdownlint",
+          "octref.vetur",
+          "sysoev.language-stylus",
+          "taichi.vscode-textlint",
+          "ritwickdey.liveserver"
+      ]
+    }
+  }
 
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   // "remoteUser": "root"
