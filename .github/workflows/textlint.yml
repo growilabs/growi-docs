@@ -8,6 +8,8 @@ jobs:
 
     # setup pnpm
     - uses: pnpm/action-setup@v4
+      with:
+        version: '9.12.3'
 
     # setup Node.js
     - uses: actions/setup-node@v4
