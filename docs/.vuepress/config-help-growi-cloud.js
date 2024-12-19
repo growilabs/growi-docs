@@ -229,6 +229,7 @@ module.exports = {
             '/en/cloud/attachment.md',
             '/en/cloud/domain.md',
             '/en/cloud/growiapp.md',
+            '/en/cloud/growi-ai-features.md',
             '/en/cloud/organization.md',
             '/en/cloud/status.md',
             '/en/cloud/url.md',
@@ -260,6 +261,7 @@ module.exports = {
             '/en/cloud/option.md',
             '/en/cloud/payment.md',
             '/en/cloud/planchange.md',
+            '/ja/cloud/growi-ai-credit.md',
             '/en/cloud/price.md',
             '/en/cloud/withdrawal.md',
           ]
