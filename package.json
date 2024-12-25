@@ -90,9 +90,8 @@
     "vuepress-plugin-tabs": "^0.3.0"
   },
   "engines": {
-    "node": "^14 || ^16",
-    "npm": ">=6.14 <7 || >=8.1 < 9",
-    "yarn": ">=1.22 <2"
+    "node": "^18 || ^20",
+    "pnpm": ">=9.4 <10"
   },
   "dependencies": {
     "vuepress-plugin-medium-zoom": "^1.1.9",
