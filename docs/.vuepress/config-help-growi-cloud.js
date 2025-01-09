@@ -261,7 +261,7 @@ module.exports = {
             '/en/cloud/option.md',
             '/en/cloud/payment.md',
             '/en/cloud/planchange.md',
-            '/ja/cloud/growi-ai-credit.md',
+            '/en/cloud/growi-ai-credit.md',
             '/en/cloud/price.md',
             '/en/cloud/withdrawal.md',
           ]
