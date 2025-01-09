@@ -34,7 +34,7 @@ To enable the GROWI AI features, first, switch to the edit screen and toggle the
 
 <img :src="$withBase('/assets/images/en/ai-chat_2.png')" alt="ai-chat_2.png" class="border p-2 my-2">
 
-- If you are using a hosted OpenAI project for the first time, select "Hosted" and click the "Update" button.
+- If you are using a hosted OpenAI project, select "Hosted" and click the "Update" button.
 - <span class="text-danger">※ If your organization’s GROWI AI credits run out, the AI features for all GROWI apps in the organization will be disabled.</span>
   - Please refer to [GROWI AI Credits](./growi-ai-credit.html) for more information.
 
