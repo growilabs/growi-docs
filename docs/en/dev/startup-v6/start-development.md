@@ -104,3 +104,20 @@ Execute the following command under the `apps/app` directory.
 <https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode>
 
 Connection to add: `mongodb://mongo`
+
+
+## How to Use Playwright Test for VSCode
+
+### Preparation
+
+```bash
+pnpm playwright install chromium
+pnpm playwright install-deps
+```
+
+### Running Tests from the Editor
+
+1. Open the Testing tool from the sidebar.
+1. Check all projects starting with `auth` and `chromium` in the PLAYWRIGHT group.
+    1. **Note: The test run button will not appear unless these are checked.**
+1. Run the tests.
