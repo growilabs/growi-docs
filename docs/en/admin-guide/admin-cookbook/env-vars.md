@@ -17,7 +17,6 @@ pageClass: admin-cookbook-env-vars
 | | : `undefined` Publicity will be configured by the admin security page settings | |
 | | : `public` Forces all pages to become public | |
 | | : `private` Forces all pages to become private | |
-| `DISABLE_LINK_SHARING` | Disable link sharing feature | `false` |
 | `FORMAT_NODE_LOG` | If `false`, Output server log as JSON. (Enabled only when `NODE_ENV=production`) | `true` |
 | `USER_UPPER_LIMIT` | (TBD) | |
 | `MIN_PASSWORD_LENGTH` | Minimum password length that users can set. | 8 |
@@ -41,7 +40,6 @@ pageClass: admin-cookbook-env-vars
 | | : `mongodb` MongoDB GridFS (Setting-less) | |
 | | : `local` Server's Local file system (Setting-less) | |
 | | : `none` Disable file uploading | |
-| `FILE_UPLOAD_DISABLED` | If `true`, file uploading will be disabled. However, the files can be still viewed. | `false` |
 | `MAX_FILE_SIZE` | The maximum file size limit for uploads (bytes). | `Infinity` |
 | `FILE_UPLOAD_TOTAL_LIMIT` | Total capacity limit for uploads (bytes). | `Infinity` |
 | `S3_OBJECT_ACL` | Object ACL. ([Reference: Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl))<br />Set `private` to disable. **(Recommended)** | `public-read` |

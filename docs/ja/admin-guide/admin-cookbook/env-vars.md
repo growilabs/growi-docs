@@ -16,7 +16,6 @@ pageClass: admin-cookbook-env-vars
 | | : `undefined` 閲覧権限は管理画面のセキュリティ設定に従います。 | |
 | | : `public` 全てのページを強制的にパブリックにします。 | |
 | | : `private` 全てのページを強制的に非公開にします。 | |
-| `DISABLE_LINK_SHARING` | シェアリンク機能を無効化します。 | `false` |
 | `FORMAT_NODE_LOG` |  `false`の場合、サーバーログを JSON 形式で出力します。(`NODE_ENV=production` の時のみ可能) | `true` |
 | `USER_UPPER_LIMIT` | (TBD) | |
 | `MIN_PASSWORD_LENGTH` | ユーザーが設定可能なパスワードの最短文字数 | 8 |
@@ -42,7 +41,6 @@ pageClass: admin-cookbook-env-vars
 | | : `mongodb` MongoDB の GridFS　機能を使用します。 (別途の設定は不要です。) | |
 | | : `local` ローカルのファイルシステムを使用します。 (別途の設定は不要です。) | |
 | | : `none` ファイルアップロードを無効にします。  | |
-| `FILE_UPLOAD_DISABLED` | `true` の場合、ファイルアップロード機能を無効にしますが、既にアップロードされている画像の閲覧は可能です。 | `false` |
 | `MAX_FILE_SIZE` | アップロード可能なファイルサイズ上限（bytes）。 | `Infinity` |
 | `FILE_UPLOAD_TOTAL_LIMIT` | アップロードファイルの総容量の上限（bytes） | `Infinity` |
 | `S3_OBJECT_ACL` | オブジェクト ACL。([参考: 既定 ACL](https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/userguide/acl-overview.html#canned-acl))<br />無効化する場合は `private` をセットしてください。**(推奨)** | `public-read` |
