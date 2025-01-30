@@ -16,7 +16,6 @@ pageClass: admin-cookbook-env-vars
 | | : `undefined` 閲覧権限は管理画面のセキュリティ設定に従います。 | |
 | | : `public` 全てのページを強制的にパブリックにします。 | |
 | | : `private` 全てのページを強制的に非公開にします。 | |
-| `DISABLE_LINK_SHARING` | シェアリンク機能を無効化します。 | `false` |
 | `FORMAT_NODE_LOG` |  `false`の場合、サーバーログを JSON 形式で出力します。(`NODE_ENV=production` の時のみ可能) | `true` |
 | `USER_UPPER_LIMIT` | (TBD) | |
 | `MIN_PASSWORD_LENGTH` | ユーザーが設定可能なパスワードの最短文字数 | 8 |
@@ -42,7 +41,6 @@ pageClass: admin-cookbook-env-vars
 | | : `mongodb` MongoDB の GridFS　機能を使用します。 (別途の設定は不要です。) | |
 | | : `local` ローカルのファイルシステムを使用します。 (別途の設定は不要です。) | |
 | | : `none` ファイルアップロードを無効にします。  | |
-| `FILE_UPLOAD_DISABLED` | `true` の場合、ファイルアップロード機能を無効にしますが、既にアップロードされている画像の閲覧は可能です。 | `false` |
 | `MAX_FILE_SIZE` | アップロード可能なファイルサイズ上限（bytes）。 | `Infinity` |
 | `FILE_UPLOAD_TOTAL_LIMIT` | アップロードファイルの総容量の上限（bytes） | `Infinity` |
 | `S3_OBJECT_ACL` | オブジェクト ACL。([参考: 既定 ACL](https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/userguide/acl-overview.html#canned-acl))<br />無効化する場合は `private` をセットしてください。**(推奨)** | `public-read` |
@@ -91,6 +89,11 @@ pageClass: admin-cookbook-env-vars
 | `SLACKBOT_WITH_PROXY_PROXY_URI` | Custom bot with proxy 環境下で利用する slackbot-proxy サーバーの URI |  |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_GTOP` | Official bot または Custom bot with proxy 環境下で利用するトークンを生成する際の salt (GROWI to Proxy 向き) | `gtop` |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_PTOG` | Official bot または Custom bot with proxy 環境下で利用するトークンを生成する際の salt (GROWI to Proxy 向き) | `ptog` |
+| **OpenTelemetry 関連オプション** | | |
+| `OPENTELEMETRY_ENABLED` | OpenTelemetry によるデータ送信を有効にします。**このオプションは、OpenTelemetry 公式 SDK の `OTEL_SDK_DISABLED` を上書きします。** | `true` |
+| `OPENTELEMETRY_IS_APP_SITE_URL_HASHED` | OpenTelemetry で送るデータ中のサイト URL を匿名化します。 | `false` |
+| `OTEL_EXPORTER_OTLP_ENDPOINT` | データ送信先エンドポイント | `(TBD)` |
+| その他の `OTEL_` で始まる環境変数 | OpenTelemetry 公式ドキュメントを参照してください。<ul><li><a href="https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/">Environment Variable Specification</a></li><li><a href="https://opentelemetry.io/docs/languages/sdk-configuration/">SDK Configuration</a></li></ul> |  |
 | **GROWI AI オプション** |  |  |
 | `AI_ENABLED` | `true` の場合、AI 連携を有効にします。 | `false` |
 | `OPENAI_SERVICE_TYPE` | 利用する OpenAI 互換サービスの種別。v7.1.2 時点では `openai` のみ利用可能です。 |  |
