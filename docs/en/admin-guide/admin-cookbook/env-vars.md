@@ -88,6 +88,11 @@ pageClass: admin-cookbook-env-vars
 | `SLACKBOT_WITH_PROXY_PROXY_URI` | URI of slackbot-proxy server used for Custom Bot with proxy environment |  |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_GTOP` | Salt (for GROWI to Proxy) when generating tokens for the Official Bot or Custom Bot with proxy environment | `gtop` |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_PTOG` | Salt (for GROWI to Proxy) when generating tokens for the Official Bot or Custom Bot with proxy environment | `ptog` |
+| **Options related to OpenTelemetry** | | |
+| `OPENTELEMETRY_ENABLED` | Enables data transmission via OpenTelemetry. **This option overrides the official OpenTelemetry SDK's `OTEL_SDK_DISABLED`.** | `true` |
+| `OPENTELEMETRY_IS_APP_SITE_URL_HASHED` | Anonymizes the site URL in the data sent via OpenTelemetry. | `false` |
+| `OTEL_EXPORTER_OTLP_ENDPOINT` | Endpoint for data transmission | `(TBD)` |
+| Other environment variables starting with `OTEL_` | Refer to the official OpenTelemetry documentation.<ul><li><a href="https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/">Environment Variable Specification</a></li><li><a href="https://opentelemetry.io/docs/languages/sdk-configuration/">SDK Configuration</a></li></ul> |  |
 | **Option for GROWI AI features** |  |  |
 | `AI_ENABLED` | Enable or disable AI function | `false` |
 | `OPENAI_SERVICE_TYPE` | Type of OpenAI compatible service. As of v7.1.2, only `openai` is available. | |
