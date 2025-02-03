@@ -101,3 +101,20 @@ pnpm install
 <https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode>
 
 追加する接続先: `mongodb://mongo`
+
+
+## Playwright Test for VSCode の使い方
+
+### 準備
+
+```bash
+pnpm playwright install chromium
+pnpm playwright install-deps
+```
+
+### エディタからテストを実行する
+
+1. サイドバーから Testing ツールを開く
+1. PLAYWRIGHT グループ中に表示されている Projects のうち、`auth` と `chromium` から始まるもの全てにチェックを付ける
+    1. **このチェックを付けないとテスト実行ボタンが表示されないので注意**
+1. テストを実行
