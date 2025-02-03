@@ -2,15 +2,15 @@
 
 ## GROWI.cloudのプランについて
 
-GROWI.cloud では**法人向けプラン4つ**、**個人向けプラン3つ**をご提供しております。
+GROWI.cloud では**法人向けプラン5つ**、**個人向けプラン3つ**をご提供しております。
 
 [料金・機能 ページ](https://growi.cloud/price-and-features)
 
-#### 法人向けプラン表<br>
+### 法人向けプラン表<br>
 
-<img :src="$withBase('/assets/images/ja/price_1.png')" alt="price_1.png">
+<img :src="$withBase('/assets/images/ja/price_1_ja.png')" alt="price_1_ja.png">
 
-#### 個人向けプラン表<br>
+### 個人向けプラン表<br>
 
 <img :src="$withBase('/assets/images/ja/price_2.png')" alt="price_2.png">
 
