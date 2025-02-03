@@ -163,6 +163,7 @@ module.exports = {
                 '/en/guide/features/page_linker.md',
                 '/en/guide/features/footnote.md',
                 '/en/guide/features/forgot_password.md',
+                '/ja/guide/features/ai-knowledge-assistant.md',
               ]
             },
             {
@@ -272,6 +273,7 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/setup-search-system.md',
                 '/en/admin-guide/management-cookbook/audit-log.md',
                 '/en/admin-guide/management-cookbook/plugins.md',
+                '/en/admin-guide/management-cookbook/setup-ai.md',
               ],
             },
           ],
@@ -406,6 +408,7 @@ module.exports = {
                 '/ja/guide/features/page_linker.md',
                 '/ja/guide/features/footnote.md',
                 '/ja/guide/features/forgot_password.md',
+                '/ja/guide/features/ai-knowledge-assistant.md',
               ]
             },
             {
@@ -516,6 +519,7 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/setup-search-system.md',
                 '/ja/admin-guide/management-cookbook/audit-log.md',
                 '/ja/admin-guide/management-cookbook/plugins.md',
+                '/ja/admin-guide/management-cookbook/setup-ai.md',
               ],
             },
           ],

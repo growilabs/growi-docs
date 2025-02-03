@@ -1,14 +1,16 @@
 # Price Plan
 
-GROWI.cloud offers **four plans for corporations** and **four plans for personal**.<br>
+## About Price Plan
+
+GROWI.cloud offers **three plans for corporations** and **four plans for personal**.<br>
 
 [Price & Features Page](https://growi.cloud/price-and-features)
 
-#### Corporate Plans<br>
+### Corporate Plans
 
-<img :src="$withBase('/assets/images/en/price_1.png')" alt="price_1.png">
+<img :src="$withBase('/assets/images/en/price_1_phl.png')" alt="price_1_phl.png">
 
-#### Personal Plans<br>
+### Personal Plans
 
 <img :src="$withBase('/assets/images/en/price_2.png')" alt="price_2.png">
 

@@ -169,6 +169,7 @@ module.exports = {
             '/ja/guide/features/page_linker.md',
             '/ja/guide/features/footnote.md',
             '/ja/guide/features/forgot_password.md',
+            '/ja/guide/features/ai-knowledge-assistant.md',
           ]
         },
         {
@@ -195,6 +196,7 @@ module.exports = {
             '/ja/admin-guide/management-cookbook/setup-search-system.md',
             '/ja/admin-guide/management-cookbook/audit-log.md',
             '/ja/admin-guide/management-cookbook/plugins.md',
+            '/ja/admin-guide/management-cookbook/setup-ai.md',
           ]
         },
         {
@@ -227,6 +229,7 @@ module.exports = {
             '/en/cloud/attachment.md',
             '/en/cloud/domain.md',
             '/en/cloud/growiapp.md',
+            '/en/cloud/growi-ai-features.md',
             '/en/cloud/organization.md',
             '/en/cloud/status.md',
             '/en/cloud/url.md',
@@ -258,6 +261,7 @@ module.exports = {
             '/en/cloud/option.md',
             '/en/cloud/payment.md',
             '/en/cloud/planchange.md',
+            '/en/cloud/growi-ai-credit.md',
             '/en/cloud/price.md',
             '/en/cloud/withdrawal.md',
           ]
@@ -323,6 +327,7 @@ module.exports = {
             '/en/guide/features/page_linker.md',
             '/en/guide/features/footnote.md',
             '/en/guide/features/forgot_password.md',
+            '/en/guide/features/ai-knowledge-assistant.md',
           ]
         },
         {
@@ -349,6 +354,7 @@ module.exports = {
             '/en/admin-guide/management-cookbook/setup-search-system.md',
             '/en/admin-guide/management-cookbook/audit-log.md',
             '/en/admin-guide/management-cookbook/plugins.md',
+            '/en/admin-guide/management-cookbook/setup-ai.md',
           ]
         },
         {

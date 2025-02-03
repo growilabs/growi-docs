@@ -91,6 +91,13 @@ pageClass: admin-cookbook-env-vars
 | `SLACKBOT_WITH_PROXY_PROXY_URI` | Custom bot with proxy 環境下で利用する slackbot-proxy サーバーの URI |  |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_GTOP` | Official bot または Custom bot with proxy 環境下で利用するトークンを生成する際の salt (GROWI to Proxy 向き) | `gtop` |
 | `SLACKBOT_WITH_PROXY_SALT_FOR_PTOG` | Official bot または Custom bot with proxy 環境下で利用するトークンを生成する際の salt (GROWI to Proxy 向き) | `ptog` |
+| **GROWI AI オプション** |  |  |
+| `AI_ENABLED` | `true` の場合、AI 連携を有効にします。 | `false` |
+| `OPENAI_SERVICE_TYPE` | 利用する OpenAI 互換サービスの種別。v7.1.2 時点では `openai` のみ利用可能です。 |  |
+|  | : `openai` OpenAI API を利用します |  | <!-- TODO: 使えるようになったら、新しい行にこれを追加「`azure-openai`: Azure OpenAI を利用」 -->
+| `OPENAI_API_KEY` | OpenAI サービスで取得した API キーを指定します。 |  |
+| `OPENAI_CHAT_ASSISTANT_INSTRUCTIONS` | ナレッジアシスタントで利用されるインストラクション | [ref](https://github.com/search?q=repo%253Aweseek%252Fgrowi+OPENAI_CHAT_ASSISTANT_INSTRUCTIONS) |
+| `OPENAI_CHAT_ASSISTANT_MODEL` | ナレッジアシスタント機能で利用されるモデル。 | `gpt-4o-mini` |
 | **管理設定を上書きする環境変数** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | `true` の場合、サイト URL の設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` |`true` の場合、ファイルアップロードタイプの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。|`false`|
