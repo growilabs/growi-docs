@@ -4,30 +4,32 @@
 
 - GROWI.cloud が提供している GROWI AI 機能を利用する際に消費するクレジットです。
 - GROWI AI 機能は 2024年11月現在、β版で提供している機能です。
-  - サービス内容の変更が発生することや正式版のサービスの提供自体が中止される可能性もありますのでご了承ください。
+  - サービス内容の変更が発生することや、正式版のサービスの提供自体が中止される可能性もありますのでご了承ください。
 
 ## GROWI AI クレジットの考え方
 
 - GROWI AI クレジットは、前払い制で購入・取得できます。
+  - GROWI.cloud プランの料金には GROWI AI クレジットの料金は含まれておりません。
 - GROWI AI クレジットは、GROWI AI 機能を利用することで消費されます。
 
 ## 保有できるクレジット量について
 
 - GROWI AI クレジットは、組織ごとに保有できます。  
-- GROWI.cloud へログイン後、組織の詳細画面から「GROWI AI クレジット」の項目で、残りのクレジット数を確認できます  
-- 保有上限数は「[資金決済法に基づく表示](https://growi.cloud/v2/fund-settlement/jpn)」に記載しています  
+- GROWI.cloud へログイン後、組織の詳細画面から「GROWI AI クレジット」の項目で、残りのクレジット数を確認できます。
+  - 保有上限数は「[資金決済法に基づく表示](https://growi.cloud/v2/fund-settlement/jpn)」に記載しています。
 
 <!--  -->
 ## GROWI AI クレジットの購入方法
 
 <span class="text-warning">※GROWI AI クレジットは、プランのお支払いをされているサブスクリプション(定期購入) に含めることはできません。</span>
 
-1. 組織の詳細画面から「GROWI AI クレジット」の項目から、購入ボタンを押します。  
-  <img :src="$withBase('/assets/images/ja/ai-credit_1.png')" alt="ai-credit_1.png" class="border p-2 my-2">
+1. 組織の詳細画面から「GROWI AI クレジット」の項目から、購入ボタンを押します。<br />
+   <img :src="$withBase('/assets/images/ja/ai-credit_1.png')" alt="ai-credit_1.png" class="border p-2 my-2">
 1. 「GROWI AI クレジット購入」の画面でご購入数を選択し、「お支払いへ」ボタンを押します。  
-  <img :src="$withBase('/assets/images/ja/ai-credit_2.png')" alt="ai-credit_2.png" class="border p-2 my-2">
-1. 保存済みのお支払方法を利用するか、クレジットカードの情報を入力、もしくは、「Link を使用した安全なワンクリック決済」を利用して、ご請求内容をご確認のうえ「購入する」ボタンを押して購入を完了させてください。  
-  <img :src="$withBase('/assets/images/ja/ai-credit_3.png')" alt="ai-credit_3.png" class="border p-2 my-2">
+    - 購入単位は1口 5,000クレジット(10,000円)です。<br />
+      <img :src="$withBase('/assets/images/ja/ai-credit_2.png')" alt="ai-credit_2.png" class="border p-2 my-2">
+1. 保存済みのお支払方法を利用するか、クレジットカードの情報を入力、もしくは「Link を使用した安全なワンクリック決済」を利用して、ご請求内容をご確認のうえ「購入する」ボタンを押して購入を完了させてください。<br />
+   <img :src="$withBase('/assets/images/ja/ai-credit_3.png')" alt="ai-credit_3.png" class="border p-2 my-2">
 
 ### GROWI AI クレジットが不足した場合
 
