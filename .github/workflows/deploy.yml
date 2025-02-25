@@ -3,7 +3,7 @@ name: Deploy docs-growi-org
 on:
   push:
     branches:
-      - master
+      - support/156908-157019-deploy-yml
 
 jobs:
 
@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [20.x]
 
     steps:
     - uses: actions/checkout@v4
@@ -26,53 +26,58 @@ jobs:
       uses: actions/cache@v3
       with:
         path: node_modules
-        key: ${{ runner.OS }}-node_modules-${{ matrix.node-version }}-${{ hashFiles('**/yarn.lock') }}
+        key: ${{ runner.OS }}-node_modules-${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
 
-    - name: Get yarn cache dir
+    - name: Get pnpm cache dir
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
-      id: cache-yarn
-      run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+      id: cache-pnpm
+      run: echo "dir=$(pnpm cache dir)" >> $GITHUB_OUTPUT
 
-    - name: Cache/Restore yarn cache
+    - name: Cache/Restore pnpm cache
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
       uses: actions/cache@v4
       with:
-        path: ${{ steps.cache-yarn.outputs.dir }}
-        key: ${{ runner.os }}-yarn-${{ matrix.node-version }}-${{ hashFiles('**/yarn.lock') }}
+        path: ${{ steps.cache-pnpm.outputs.dir }}
+        key: ${{ runner.os }}-pnpm-${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
         restore-keys: |
-          ${{ runner.os }}-yarn-${{ matrix.node-version }}-
+          ${{ runner.os }}-pnpm-${{ matrix.node-version }}-
 
     - name: Install dependencies
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
       run: |
-        yarn
+        pnpm install
 
     - name: Print dependencies
       run: |
         echo -n "node " && node -v
         echo -n "npm " && npm -v
-        yarn list --depth=0
+        pnpm list --depth=0
 
-    - name: Download and extract GROWI source
+    # - name: Download and extract GROWI source
+    #   run: |
+    #     mkdir -p tmp/growi
+    #     export GROWI_ARCHIVE_URL=https://github.com/weseek/growi/archive/master.tar.gz
+    #     curl -SL $GROWI_ARCHIVE_URL | tar -xz -C tmp/growi --strip-components 1
+
+    - name: Build test
       run: |
-        mkdir -p tmp/growi
-        export GROWI_ARCHIVE_URL=https://github.com/weseek/growi/archive/master.tar.gz
-        curl -SL $GROWI_ARCHIVE_URL | tar -xz -C tmp/growi --strip-components 1
+        pnpm run api:build
+        pnpm run docs-growi-org:build
 
-    - name: Build and deploy
-      uses: jenkey2011/vuepress-deploy@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_SCRIPT: yarn api:build && yarn docs-growi-org:build
-        BUILD_DIR: docs/.vuepress/dist/
-        CNAME: docs.growi.org
+    # - name: Build and deploy
+    #   uses: jenkey2011/vuepress-deploy@master
+    #   env:
+    #     ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #     BUILD_SCRIPT: pnpm run api:build && pnpm run docs-growi-org:build
+    #     BUILD_DIR: docs/.vuepress/dist/
+    #     CNAME: docs.growi.org
 
-    - name: Slack Notification
-      uses: weseek/ghaction-slack-notification@master
-      if: failure()
-      with:
-        type: ${{ job.status }}
-        job_name: '*Deploy growi-docs*'
-        channel: '#ci'
-        isCompactMode: true
-        url: ${{ secrets.SLACK_WEBHOOK_URL }}
+    # - name: Slack Notification
+    #   uses: weseek/ghaction-slack-notification@master
+    #   if: failure()
+    #   with:
+    #     type: ${{ job.status }}
+    #     job_name: '*Deploy growi-docs*'
+    #     channel: '#ci'
+    #     isCompactMode: true
+    #     url: ${{ secrets.SLACK_WEBHOOK_URL }}
