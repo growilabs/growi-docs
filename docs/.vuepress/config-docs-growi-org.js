@@ -241,6 +241,7 @@ module.exports = {
                 '/en/admin-guide/admin-cookbook/audit-log-setup.md',
                 '/en/admin-guide/admin-cookbook/trust-proxy.md',
                 '/en/admin-guide/admin-cookbook/custom-rate-limit.md',
+                '/en/admin-guide/admin-cookbook/telemetry.md',
               ],
             },
             {
@@ -488,6 +489,7 @@ module.exports = {
                 '/ja/admin-guide/admin-cookbook/audit-log-setup.md',
                 '/ja/admin-guide/admin-cookbook/trust-proxy.md',
                 '/ja/admin-guide/admin-cookbook/custom-rate-limit.md',
+                '/ja/admin-guide/admin-cookbook/telemetry.md',
               ],
             },
             {
