@@ -3,33 +3,25 @@
 ## What is the Knowledge Assistant?
 
 - The Knowledge Assistant is a feature that provides answers to users' questions in a chat format based on information stored within GROWI.  
-- It is available from GROWI v7.1.0 and later.
+- Available from GROWI v7.1.0 onwards, with v7.2.0 and later allowing each user to freely create knowledge assistants specialized for specific page groups.
 
 ## Data Handled by the Knowledge Assistant
 
 - The GROWI AI integration feature uploads documents to OpenAI's `Vector Store` for machine learning purposes.  
-- Only public pages are uploaded to OpenAI by GROWI.  
 - When the AI integration feature is enabled, the content and metadata required for machine learning are uploaded to the `Vector Store` whenever a page is created, updated, or duplicated.  
-- To bulk upload already existing pages, perform a "[Rebuild Vector Store](/en/admin-guide/management-cookbook/setup-ai.html#vector-store-rebuild)."
+
+## How to Create the Knowledge Assistant
+
+(TBD)
 
 ## How to Use the Knowledge Assistant
 
-- On the top bar of the GROWI interface, there is a speech bubble icon labeled "AI."  
+(TBD)
 
-<img :src="$withBase('/assets/images/en/ai-knowledge-assistant_1.png')" alt="ai-knowledge-assistant_1.png" class="border">
+## About the Default Knowledge Assistant
 
-- Clicking the icon opens the Knowledge Assistant (Beta) modal.  
+- Any knowledge assistant can be registered as the "Default Knowledge Assistant."
+- The default knowledge assistant can be launched from the "AI" bubble icon in the top bar of the GROWI screen.
 
-<img :src="$withBase('/assets/images/en/ai-knowledge-assistant_2.png')" alt="ai-knowledge-assistant_2.png" class="border">
+<img :src="$withBase('/assets/images/en/ai-default-knowledge-assistant-balloon.png')" alt="ai-default-knowledge-assistant-balloon.png" class="border">
 
-- In the input field labeled "Please enter your question," freely type and submit your question.  
-
-<img :src="$withBase('/assets/images/en/ai-knowledge-assistant_3.png')" alt="ai-knowledge-assistant_3.png" class="border">
-
-- Wait for the response to be generated.  
-
-<img :src="$withBase('/assets/images/en/ai-knowledge-assistant_4.png')" alt="ai-knowledge-assistant_4.png" class="border">
-
-- The Knowledge Assistant will return a generated response.  
-
-<img :src="$withBase('/assets/images/en/ai-knowledge-assistant_5.png')" alt="ai-knowledge-assistant_5.png" class="border">
