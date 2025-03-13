@@ -4,8 +4,8 @@
 
       <!-- Brand logo -->
       <a class="navbar-brand" href="https://growi.cloud" title="Home">
-        <span class="gc-brandlogo-midium py-2 fw-bold gc-text-lato">
-          <img src="/help/assets/help-growi-cloud/gc-logo.png"><span class="gc-text-dark align-middle">GROWI</span><span class="gc-brandlogo-second-level-domain align-middle">.cloud</span>
+        <span class="gc-brandlogo-medium py-2 fw-bold gc-text-lato">
+          <img src="/help/assets/help-growi-cloud/growi-cloud-brand-logo-positive.svg" alt="GROWI.cloud" />
         </span>
       </a>
 
@@ -65,16 +65,10 @@ export default {
   font-family: Lato;
 }
 
-.gc-brandlogo-midium {
-  font-size: 20px;
+.gc-brandlogo-medium {
   img {
-    width: auto;
-    height: 40px;
-    margin-right: 8px;
-    @include media-breakpoint-down(sm) {
-      height: 32px;
-      margin-right: 8px;
-    }
+    height: 28px;
+    vertical-align: text-top;
   }
 }
 
