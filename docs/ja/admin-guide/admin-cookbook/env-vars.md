@@ -101,6 +101,7 @@ pageClass: admin-cookbook-env-vars
 | `OPENAI_API_KEY` | OpenAI サービスで取得した API キーを指定します。 |  |
 | `OPENAI_CHAT_ASSISTANT_INSTRUCTIONS` | ナレッジアシスタントで利用されるインストラクション | [ref](https://github.com/search?q=repo%253Aweseek%252Fgrowi+OPENAI_CHAT_ASSISTANT_INSTRUCTIONS) |
 | `OPENAI_CHAT_ASSISTANT_MODEL` | ナレッジアシスタント機能で利用されるモデル。 | `gpt-4o-mini` |
+| `OPENAI_LIMIT_LEARNABLE_PAGE_COUNT_PER_ASSISTANT` | 1つのナレッジアシスタントが学習できるページの上限数  | 3000  |
 | **管理設定を上書きする環境変数** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | `true` の場合、サイト URL の設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` |`true` の場合、ファイルアップロードタイプの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。|`false`|

@@ -13,6 +13,7 @@ OpenAI の API キー等の取得に関しては、OpenAIのヘルプを参考�
   - `OPENAI_SERVICE_TYPE` にサービスの種別を指定
     - 例: `OpenAI` なら `openai` を指定
   - `OPENAI_API_KEY` に OpenAI サービスで取得した API キーを指定
+  - (任意)`OPENAI_LIMIT_LEARNABLE_PAGE_COUNT_PER_ASSISTANT` に1つのナレッジアシスタントが学習できるページの上限数を指定 (デフォルトは 3000)
 
 </ContextualBlock>
 
