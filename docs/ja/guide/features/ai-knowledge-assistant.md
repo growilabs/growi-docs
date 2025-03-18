@@ -29,8 +29,6 @@ v7.2.0以降のバージョンでは、権限制限のあるページ（自分�
 | 情報管理 | - | 権限付きページも学習対象となるため注意が必要 |
 | アシスタントの共有設定 | - | 個人用・チーム用など個別に選択できる |
 
-
-
 ## ナレッジアシスタントの作成手順
 
 ### 新規アシスタントの追加画面を開く
@@ -93,6 +91,7 @@ v7.2.0以降のバージョンでは、権限制限のあるページ（自分�
 1. 他にも追加したい場合は、また「ページを追加する」ボタンから同様の作業を繰り返します。
 
 <img :src="$withBase('/assets/images/ja/add-assistant-modal-3.png')" alt="add-assistant-modal-3.png" class="border">
+
 <img :src="$withBase('/assets/images/ja/add-referencepaages-1.png')" alt="add-referencepaages-1.png" class="border">
 
 ### 参照ページを削除する
