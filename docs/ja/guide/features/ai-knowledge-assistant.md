@@ -80,7 +80,7 @@ v7.2.0以降のバージョンでは、権限制限のあるページ（自分�
 
 ### 参照ページを追加する
 
-アシスタントが参照するページを設定できます。参照できるページは、配下ページを含め、デフォルト設定では 3000 ページまでです。 ([環境変数](/ja/guide/features/ai-knowledge-assistant.html#環境変数)で変更できます)
+アシスタントが参照するページを設定できます。参照できるページは、配下ページを含め、デフォルト設定では 3000 ページまでです。 ([GROWI AI オプションの環境変数](/ja/admin-guide/admin-cookbook/env-vars.html)で変更できます)
 
 1. 参照ページをクリックし、参照ページの設定モーダルを表示します。
 1. 「ページを追加する」ボタンを押すと、参照可能なすべてのページリストが表示されます。
@@ -148,9 +148,5 @@ v7.2.0以降のバージョンでは、権限制限のあるページ（自分�
 
 ナレッジアシスタント機能の利用には、環境変数の設定が必要です。
 
-詳細は [AI 連携機能のセットアップと管理](/ja/admin-guide/management-cookbook/setup-ai.html)をご参照ください。
+詳細は [AI 連携機能のセットアップと管理](/ja/admin-guide/management-cookbook/setup-ai.html) や [GROWI AI オプションの環境変数](/ja/admin-guide/admin-cookbook/env-vars.html)をご参照ください。
 
-- `AI_ENABLED` : `true` (デフォルト `false`)
-- `OPENAI_SERVICE_TYPE` : `openai`
-- `OPENAI_API_KEY` : OpenAI サービスで取得した API キーを指定
-- `OPENAI_LIMIT_LEARNABLE_PAGE_COUNT_PER_ASSISTANT` (任意) : 1つのナレッジアシスタントが学習できるページの上限数 (デフォルトは 3000)
