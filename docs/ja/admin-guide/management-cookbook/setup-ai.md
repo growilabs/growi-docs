@@ -23,14 +23,14 @@ OpenAI の API キー等の取得に関しては、OpenAIのヘルプを参考�
 
 <ContextualBlock context="docs-growi-org">
 
-ナレッジアシスタントに必要な環境変数が設定されている場合、GROWI 画面のトップバーにナレッジアシスタントのアイコンが表示されます。
+ナレッジアシスタントに必要な環境変数が設定されている場合、GROWI 画面の左サイドバーに「AI」アイコンが表示されます。
 
 </ContextualBlock>
 
 
 <ContextualBlock context="help-growi-cloud">
 
-AI 機能が有効になっている場合、GROWI 画面のトップバーにナレッジアシスタントのアイコンが表示されます。
+AI 機能が有効になっている場合、GROWI 画面の左サイドバーに「AI」アイコンが表示されます。
 
 </ContextualBlock>
 
@@ -51,6 +51,11 @@ AI 機能が有効になっている場合、GROWI 画面のトップバーに�
 </ContextualBlock>
 
 ### Vector Store のリビルド
+
+::: tip
+v7.2.0 以降のバージョンでは、この「Vector Store のリビルド」操作は不要となりました。新しいバージョンでは、アシスタントの作成・更新時に「VectorStore のリビルド」相当の処理が行われます。
+v7.1 以前のバージョンを使用している場合は、引き続き下記の手順でリビルドを行ってください。
+:::
 
 - 「Vector Store のリビルド」を行うことで、GROWI 上のすべてのパブリックなページのデータを `Vector Store` にアップロードします。
   - AI 連携機能では、 `Vector Store` にアップロードされた文書を対象に機械学習します。
