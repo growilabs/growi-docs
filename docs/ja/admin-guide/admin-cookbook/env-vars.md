@@ -102,11 +102,11 @@ pageClass: admin-cookbook-env-vars
 | `OPENAI_CHAT_ASSISTANT_INSTRUCTIONS` | ナレッジアシスタントで利用されるインストラクション | [ref](https://github.com/weseek/growi/blob/82042b3a409e867615acedd9fb3e99f3236c1917/apps/app/src/server/service/config-manager/config-definition.ts#L1077) |
 | `OPENAI_CHAT_ASSISTANT_MODEL` | ナレッジアシスタント機能で利用されるモデル | `gpt-4o-mini` |
 | `OPENAI_THREAD_DELETION_CRON_EXPRESSION` | OpenAI スレッドの削除を実行するスケジュールを cron 形式で指定します。 | `0 * * * *` |
-| `OPENAI_THREAD_DELETION_BARCH_SIZE` | 一度の処理で削除するスレッドの最大数 | `100` |
-| `OPENAI_THREAD_DELETION_API_CALL_INTERVAL` | スレッド削除 API 呼び出しの間隔（ミリ秒） | `36000` |
+| `OPENAI_THREAD_DELETION_BARCH_SIZE` | 一度の処理で削除するスレッドの最大数 | 100 |
+| `OPENAI_THREAD_DELETION_API_CALL_INTERVAL` | スレッド削除 API 呼び出しの間隔（ミリ秒） | 36000 |
 | `OPENAI_VECTOR_STORE_FILE_DELETION_CRON_EXPRESSION` | Vector store ファイルの削除を実行するスケジュールを cron 形式で指定します。 | `0 * * * *` |
-| `OPENAI_VECTOR_STORE_FILE_DELETION_BARCH_SIZE` | 一度の処理で削除する Vector store ファイルの最大数 | `100` |
-| `OPENAI_VECTOR_STORE_FILE_DELETION_API_CALL_INTERVAL` | Vector store ファイル削除 API 呼び出しの間隔（ミリ秒） | `36000` |
+| `OPENAI_VECTOR_STORE_FILE_DELETION_BARCH_SIZE` | 一度の処理で削除する Vector store ファイルの最大数 | 100 |
+| `OPENAI_VECTOR_STORE_FILE_DELETION_API_CALL_INTERVAL` | Vector store ファイル削除 API 呼び出しの間隔（ミリ秒） | 36000 |
 | `OPENAI_SEARCH_ASSISTANT_INSTRUCTIONS` | 検索アシスタント機能で利用されるインストラクション | `''` (空文字列) |
 | `OPENAI_LIMIT_LEARNABLE_PAGE_COUNT_PER_ASSISTANT` | 1つのナレッジアシスタントが学習できるページの上限数  | 3000  |
 | **管理設定を上書きする環境変数** | | |
