@@ -96,11 +96,19 @@ pageClass: admin-cookbook-env-vars
 | その他の `OTEL_` で始まる環境変数 | OpenTelemetry 公式ドキュメントを参照してください。<ul><li><a href="https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/">Environment Variable Specification</a></li><li><a href="https://opentelemetry.io/docs/languages/sdk-configuration/">SDK Configuration</a></li></ul> |  |
 | **GROWI AI オプション** |  |  |
 | `AI_ENABLED` | `true` の場合、AI 連携を有効にします。 | `false` |
-| `OPENAI_SERVICE_TYPE` | 利用する OpenAI 互換サービスの種別。v7.1.2 時点では `openai` のみ利用可能です。 |  |
+| `OPENAI_SERVICE_TYPE` | 利用する OpenAI 互換サービスの種別。v7.1.2 時点では `openai` のみ利用可能です。 | `openai` |
 |  | : `openai` OpenAI API を利用します |  | <!-- TODO: 使えるようになったら、新しい行にこれを追加「`azure-openai`: Azure OpenAI を利用」 -->
 | `OPENAI_API_KEY` | OpenAI サービスで取得した API キーを指定します。 |  |
-| `OPENAI_CHAT_ASSISTANT_INSTRUCTIONS` | ナレッジアシスタントで利用されるインストラクション | [ref](https://github.com/search?q=repo%253Aweseek%252Fgrowi+OPENAI_CHAT_ASSISTANT_INSTRUCTIONS) |
-| `OPENAI_CHAT_ASSISTANT_MODEL` | ナレッジアシスタント機能で利用されるモデル。 | `gpt-4o-mini` |
+| `OPENAI_CHAT_ASSISTANT_INSTRUCTIONS` | ナレッジアシスタントで利用されるインストラクション | [ref](https://github.com/weseek/growi/blob/82042b3a409e867615acedd9fb3e99f3236c1917/apps/app/src/server/service/config-manager/config-definition.ts#L1077) |
+| `OPENAI_CHAT_ASSISTANT_MODEL` | ナレッジアシスタント機能で利用されるモデル | `gpt-4o-mini` |
+| `OPENAI_THREAD_DELETION_CRON_EXPRESSION` | OpenAI スレッドの削除を実行するスケジュールを cron 形式で指定します。 | `0 * * * *` |
+| `OPENAI_THREAD_DELETION_BARCH_SIZE` | 一度の処理で削除するスレッドの最大数 | 100 |
+| `OPENAI_THREAD_DELETION_API_CALL_INTERVAL` | スレッド削除 API 呼び出しの間隔（ミリ秒） | 36000 |
+| `OPENAI_VECTOR_STORE_FILE_DELETION_CRON_EXPRESSION` | Vector store ファイルの削除を実行するスケジュールを cron 形式で指定します。 | `0 * * * *` |
+| `OPENAI_VECTOR_STORE_FILE_DELETION_BARCH_SIZE` | 一度の処理で削除する Vector store ファイルの最大数 | 100 |
+| `OPENAI_VECTOR_STORE_FILE_DELETION_API_CALL_INTERVAL` | Vector store ファイル削除 API 呼び出しの間隔（ミリ秒） | 36000 |
+| `OPENAI_SEARCH_ASSISTANT_INSTRUCTIONS` | 検索アシスタント機能で利用されるインストラクション | `''` (空文字列) |
+| `OPENAI_LIMIT_LEARNABLE_PAGE_COUNT_PER_ASSISTANT` | 1つのナレッジアシスタントが学習できるページの上限数  | 3000  |
 | **管理設定を上書きする環境変数** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | `true` の場合、サイト URL の設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` |`true` の場合、ファイルアップロードタイプの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。|`false`|
