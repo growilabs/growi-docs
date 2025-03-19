@@ -80,7 +80,14 @@ v7.2.0以降のバージョンでは、権限制限のあるページ（自分�
 
 ### 参照ページを追加する
 
-アシスタントが参照するページを設定できます。参照できるページは、配下ページを含め、デフォルト設定では 3000 ページまでです。 ([GROWI AI オプションの環境変数](/ja/admin-guide/admin-cookbook/env-vars.html)で変更できます)
+アシスタントが参照するページを設定できます。1つのナレッジアシスタントが参照できるページは、配下ページを含め、デフォルト設定では 3000 ページまでです。
+
+<ContextualBlock context="docs-growi-org">
+
+この上限数は、[GROWI AI オプションの環境変数](/ja/admin-guide/admin-cookbook/env-vars.html)で変更できます。
+
+</ContextualBlock>
+
 
 1. 参照ページをクリックし、参照ページの設定モーダルを表示します。
 1. 「ページを追加する」ボタンを押すと、参照可能なすべてのページリストが表示されます。
@@ -144,9 +151,12 @@ v7.2.0以降のバージョンでは、権限制限のあるページ（自分�
 - 3日間が経過すると、スレッドは自動的に削除されます。
 - 既存のスレッドを開いて新しい質問をすると、そのスレッドの保存期間が再び3日間に延長されます。
 
+<ContextualBlock context="docs-growi-org">
+
 ## 環境変数
 
 ナレッジアシスタント機能の利用には、環境変数の設定が必要です。
 
 詳細は [AI 連携機能のセットアップと管理](/ja/admin-guide/management-cookbook/setup-ai.html) や [GROWI AI オプションの環境変数](/ja/admin-guide/admin-cookbook/env-vars.html)をご参照ください。
 
+</ContextualBlock>
