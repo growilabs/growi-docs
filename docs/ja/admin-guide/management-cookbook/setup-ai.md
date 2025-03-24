@@ -49,15 +49,3 @@ AI 機能が有効になっている場合、GROWI 画面の左サイドバー�
   - 上記をご確認のうえ、問題を解消できない場合は [GROWI.cloud サポートへのお問い合わせ窓口](https://growi.cloud/contact) までお問い合わせください。
 
 </ContextualBlock>
-
-### Vector Store のリビルド
-
-::: tip
-v7.2.0 以降のバージョンでは、この「Vector Store のリビルド」操作は不要となりました。新しいバージョンでは、アシスタントの作成・更新時に「VectorStore のリビルド」相当の処理が行われます。
-v7.1 以前のバージョンを使用している場合は、引き続き下記の手順でリビルドを行ってください。
-:::
-
-- 「Vector Store のリビルド」を行うことで、GROWI 上のすべてのパブリックなページのデータを `Vector Store` にアップロードします。
-  - AI 連携機能では、 `Vector Store` にアップロードされた文書を対象に機械学習します。
-- 既存の GROWI に新たに AI 連携機能を導入する場合は、「Vector Store のリビルド」を行うことをお勧めします。  
-  <img :src="$withBase('/assets/images/ja/setup-ai_2.png')" alt="setup-ai_2">
