@@ -26,17 +26,17 @@
 1. 確認ダイアログが表示されるので、問題なければ「OK」ボタンをクリックします。
 1. 同期が成功すると成功メッセージが表示されます。
 
-<img :src="$withBase('/assets/images/ja/.png')" alt="">
+<img :src="$withBase('/assets/images/ja/sync-with-latest-revision-1.png')" alt="sync-with-latest-revision-1.png">
 
 ### 他のユーザーが編集中かどうかの確認方法
 
 同期を実行する前に、他のユーザーが同じページを編集中かどうかを確認できます。
 
-- 対象ページの「Edit」ボタンの右上に青い丸がついている場合は、現在誰かがエディタでそのページを開いています。
-- 同時に、「Edit」ボタンの下に編集中のユーザーのアイコンが表示されます（Edit モードでのみ表示）。
-- 現在のリビジョン内容と編集中の内容が異なる場合（下書きがある状態）で View モードにすると、丸の色がグレーになります。
+- 対象ページの「Edit」ボタンの右上に青い丸がついている場合は、現在誰かがエディタでそのページを開いています。(a)
+- 同時に、「Edit」ボタンの下に編集中のユーザーのアイコンが表示されます（Edit モードでのみ表示）。(b)
+- 現在のリビジョン内容と編集中の内容が異なる場合（下書きがある状態）で View モードにすると、丸の色がグレーになります。(c)
 
-<img :src="$withBase('/assets/images/ja/.png')" alt="">
+<img :src="$withBase('/assets/images/ja/sync-with-latest-revision-2.png')" alt="sync-with-latest-revision-2.png">
 
 ## トラブルシューティング
 
