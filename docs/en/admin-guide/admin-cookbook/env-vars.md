@@ -95,11 +95,19 @@ pageClass: admin-cookbook-env-vars
 | Other environment variables starting with `OTEL_` | Refer to the official OpenTelemetry documentation.<ul><li><a href="https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/">Environment Variable Specification</a></li><li><a href="https://opentelemetry.io/docs/languages/sdk-configuration/">SDK Configuration</a></li></ul> |  |
 | **Option for GROWI AI features** |  |  |
 | `AI_ENABLED` | Enable or disable AI function | `false` |
-| `OPENAI_SERVICE_TYPE` | Type of OpenAI compatible service. As of v7.1.2, only `openai` is available. | |
+| `OPENAI_SERVICE_TYPE` | Type of OpenAI compatible service. As of v7.1.2, only `openai` is available. | `openai` |
 |  | : `openai` Use OpenAI API. |  | <!-- TODO: add "`azure-openai`: Use "Azure OpenAI"" -->|
 | `OPENAI_API_KEY` | API key for using OpenAI services. |  |
-| `OPENAI_CHAT_ASSISTANT_INSTRUCTIONS` | Instructions used by Knowledge Assistant feature. | [ref](https://github.com/search?q=repo%253Aweseek%252Fgrowi+OPENAI_CHAT_ASSISTANT_INSTRUCTIONS) |
+| `OPENAI_CHAT_ASSISTANT_INSTRUCTIONS` | Instructions used by Knowledge Assistant feature. | [ref](https://github.com/weseek/growi/blob/82042b3a409e867615acedd9fb3e99f3236c1917/apps/app/src/server/service/config-manager/config-definition.ts#L1077) |
 | `OPENAI_CHAT_ASSISTANT_MODEL` | AI model used by Knowledge Assistant feature. | `gpt-4o-mini` |
+| `OPENAI_THREAD_DELETION_CRON_EXPRESSION` | Specifies the schedule for executing OpenAI thread deletion in cron format. | `0 * * * *` |
+| `OPENAI_THREAD_DELETION_BARCH_SIZE` | Maximum number of threads to delete in a single process | 100 |
+| `OPENAI_THREAD_DELETION_API_CALL_INTERVAL` | Interval between thread deletion API calls (milliseconds) | 36000 |
+| `OPENAI_VECTOR_STORE_FILE_DELETION_CRON_EXPRESSION` | Specifies the schedule for executing Vector store file deletion in cron format. | `0 * * * *` |
+| `OPENAI_VECTOR_STORE_FILE_DELETION_BARCH_SIZE` | Maximum number of Vector store files to delete in a single process | 100 |
+| `OPENAI_VECTOR_STORE_FILE_DELETION_API_CALL_INTERVAL` | Interval between Vector store file deletion API calls (milliseconds) | 36000 |
+| `OPENAI_SEARCH_ASSISTANT_INSTRUCTIONS` | Instructions used for Search Assistant functionality | `''` (empty string) |
+| `OPENAI_LIMIT_LEARNABLE_PAGE_COUNT_PER_ASSISTANT` | Maximum number of pages that a single Knowledge Assistant can learn | 3000 |
 | **Option (Overwritable in admin page)** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | Prioritize env vars over values in DB for Site URL | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` | Prioritize env var over value in DB for File Upload Type | `false` |
