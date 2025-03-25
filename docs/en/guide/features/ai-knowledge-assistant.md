@@ -15,7 +15,7 @@ When the AI integration feature is enabled, the content and metadata required fo
 ## Knowledge Assistant features and cautions
 
 ::: warning
-Knowledge Assistant can be configured to learn from specific group of pages.Most importantly, pages with permission restrictions (e.g., `Only me` or `Only inside the group`, etc) can also be included in the learning targets.
+Knowledge Assistant can be configured to learn from specific group of pages. Most importantly, pages with permission restrictions (e.g., `Only me` or `Only inside the group`, etc) can also be included in the learning targets.
 
 Therefore, when creating assistants and configuring sharing settings, you need to pay close attention to handling confidential or restricted information. When sharing assistants in particular, please be careful with your settings to prevent unintended information leakage.
 :::
@@ -33,10 +33,10 @@ Therefore, when creating assistants and configuring sharing settings, you need t
 
 In the add new assistant dialog, enter the following:
 
-1. Assistant name: The name displayed in the assistant list
-2. Assistant memo (optional): Freely describe the purpose and other information (this does not affect the assistant's processing)
+1. Assistant name: The name displayed in the assistant list.
+2. Assistant memo (optional): Freely describe the purpose and other information. (This does not affect the assistant's processing.)
 
-### Configure Assistant Sharing Settings
+### Configure assistant sharing settings
 
 1. Click on "Assistant Sharing" to open the assistant sharing settings dialog.
 
@@ -56,7 +56,7 @@ In the add new assistant dialog, enter the following:
 If the assistant references restricted pages, when trying to share that assistant with users who should not have access to those pages, a warning message will appear when you click the Create or Update Assistant button. This prevents unintended information leakage.
 :::
 
-### Add Reference Pages
+### Add reference pages
 
 You can set which pages the assistant will reference. By default, one Knowledge Assistant can reference up to 3,000 pages, including subordinate pages.
 
@@ -106,7 +106,7 @@ You can set any single Knowledge Assistant of your choice as the "Default Assist
 
 <img :src="$withBase('/assets/images/en/ai-default-knowledge-assistant-setting.png')" alt="ai-default-knowledge-assistant-setting.png" class="border">
 
-## Chat History
+## Chat history
 
 All conversations with the Knowledge Assistant are saved as history and can be referenced later.
 
