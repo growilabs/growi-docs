@@ -2,7 +2,7 @@
 
 ## What is the GROWI AI Knowledge Assistant?
 
-The GROWI AI Knowledge Assistant (hereinafter referred to as "Knowledge Assistant") is a is a feature that provides answers to users' questions in a chat format based on information stored within GROWI.
+The GROWI AI Knowledge Assistant (hereinafter referred to as "Knowledge Assistant") is a feature that provides answers to users' questions in a chat format based on information stored within GROWI.
 
 In addition, each user can freely create knowledge assistants specialized for specific page groups.
 
@@ -78,7 +78,7 @@ This limit can be changed through [GROWI AI option environment variables](/en/ad
 
 If you want to delete a reference page that has been set, you can delete it using the trash icon.
 
-<img :src="$withBase('/assets/images/en/remove-referencepaages-1.png')" alt="remove-referencepaages-1.png" class="border">
+<img :src="$withBase('/assets/images/en/remove-reference-pages-1.png')" alt="remove-reference-pages-1.png" class="border">
 
 ### Set instructions for the assistant
 

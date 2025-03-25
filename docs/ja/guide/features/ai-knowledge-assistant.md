@@ -80,7 +80,7 @@ AI 連携機能が有効な場合、ページの作成・更新・複製・削�
 
 一度設定した参照ページを削除したい場合は、ごみ箱アイコンで削除できます。
 
-<img :src="$withBase('/assets/images/ja/remove-referencepaages-1.png')" alt="remove-referencepaages-1.png" class="border">
+<img :src="$withBase('/assets/images/ja/remove-reference-pages-1.png')" alt="remove-reference-pages-1.png" class="border">
 
 ### アシスタントへの指示を設定する
 
