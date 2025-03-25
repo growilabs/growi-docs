@@ -82,7 +82,7 @@ If you want to delete a reference page that has been set, you can delete it usin
 
 ### Set instructions for the assistant
 
-You can set unique response styles and behavioral guidelines for each assistant. This is made possible using the `additional_instructions` parameter of OpenAI's [Create Run API](https://platform.openai.com/docs/api-reference/runs/createRun).
+You can set unique response styles and behavioral guidelines for each assistant. This is implemented through the `additional_instructions` parameter of OpenAI's [Create Run API](https://platform.openai.com/docs/api-reference/runs/createRun).
 
 For example, by instructing "Please explain from basic terminology for beginners" or "Please include technical details for system administrators," you can generate flexible responses tailored to the user's situation and preferences even for the same question.
 
