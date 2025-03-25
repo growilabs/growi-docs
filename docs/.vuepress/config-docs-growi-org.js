@@ -379,6 +379,7 @@ module.exports = {
                 '/ja/guide/features/page_layout.md',
                 '/ja/guide/features/create_page.md',
                 '/ja/guide/features/wip-page.md',
+                '/ja/guide/features/sync-the-editor-text-with-the-latest-revision-body.md',
                 '/ja/guide/features/page_operation.md',
                 '/ja/guide/features/page_deletion_collectively.md',
                 '/ja/guide/features/insert_links.md',
