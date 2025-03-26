@@ -132,6 +132,7 @@ module.exports = {
                 '/en/guide/features/page_layout.md',
                 '/en/guide/features/create_page.md',
                 '/en/guide/features/wip-page.md',
+                '/en/guide/features/sync-the-editor-text-with-the-latest-revision-body.md',
                 '/en/guide/features/page_operation.md',
                 '/en/guide/features/page_deletion_collectively.md',
                 '/en/guide/features/insert_links.md',
@@ -163,7 +164,7 @@ module.exports = {
                 '/en/guide/features/page_linker.md',
                 '/en/guide/features/footnote.md',
                 '/en/guide/features/forgot_password.md',
-                '/ja/guide/features/ai-knowledge-assistant.md',
+                '/en/guide/features/ai-knowledge-assistant.md',
               ]
             },
             {
@@ -191,6 +192,7 @@ module.exports = {
               title: 'Upgrading',
               collapsable: false,
               children: [
+                '/en/admin-guide/upgrading/72x.md',
                 '/en/admin-guide/upgrading/71x.md',
                 '/en/admin-guide/upgrading/70x.md',
                 '/en/admin-guide/upgrading/63x.md',
@@ -240,6 +242,7 @@ module.exports = {
                 '/en/admin-guide/admin-cookbook/audit-log-setup.md',
                 '/en/admin-guide/admin-cookbook/trust-proxy.md',
                 '/en/admin-guide/admin-cookbook/custom-rate-limit.md',
+                '/en/admin-guide/admin-cookbook/telemetry.md',
               ],
             },
             {
@@ -377,6 +380,7 @@ module.exports = {
                 '/ja/guide/features/page_layout.md',
                 '/ja/guide/features/create_page.md',
                 '/ja/guide/features/wip-page.md',
+                '/ja/guide/features/sync-the-editor-text-with-the-latest-revision-body.md',
                 '/ja/guide/features/page_operation.md',
                 '/ja/guide/features/page_deletion_collectively.md',
                 '/ja/guide/features/insert_links.md',
@@ -437,6 +441,7 @@ module.exports = {
               title: 'アップグレード',
               collapsable: false,
               children: [
+                '/ja/admin-guide/upgrading/72x.md',
                 '/ja/admin-guide/upgrading/71x.md',
                 '/ja/admin-guide/upgrading/70x.md',
                 '/ja/admin-guide/upgrading/63x.md',
@@ -486,6 +491,7 @@ module.exports = {
                 '/ja/admin-guide/admin-cookbook/audit-log-setup.md',
                 '/ja/admin-guide/admin-cookbook/trust-proxy.md',
                 '/ja/admin-guide/admin-cookbook/custom-rate-limit.md',
+                '/ja/admin-guide/admin-cookbook/telemetry.md',
               ],
             },
             {

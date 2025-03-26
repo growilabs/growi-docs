@@ -26,7 +26,7 @@
         </li>
 
         <li class="nav-item p-2 p-md-0 ms-md-3">
-          <a href="https://growi.cloud/contact" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.contact }}</a>
+          <a href="https://growi.cloud/v2/contact" target="_blank" rel="noopener noreferrer" class="nav-link gc-text-dark fw-bold">{{ this.$themeLocaleConfig.contact }}</a>
         </li>
 
         <li class="nav-item p-2 p-md-0 ms-md-3">
@@ -41,7 +41,7 @@
 
         <li class="nav-item p-2 p-md-0 ms-md-3">
           <!-- SP mode -->
-          <a href="https://growi.cloud/catalog-request"
+          <a href="https://growi.cloud/v2/catalog-request"
              target="_blank"
              rel="noopener noreferrer"
              class="btn btn-outline-dark d-block d-md-none gc-global-menu-button fw-bold">
@@ -50,7 +50,7 @@
           </a>
 
           <!-- PC mode -->
-          <a href="https://growi.cloud/catalog-request"
+          <a href="https://growi.cloud/v2/catalog-request"
              target="_blank"
              rel="noopener noreferrer"
              class="gc-global-nav-link d-none d-md-block nav-link gc-text-dark fw-bold">

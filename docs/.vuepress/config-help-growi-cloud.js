@@ -138,6 +138,7 @@ module.exports = {
             '/ja/guide/getting-started/markdown.md',
             '/ja/guide/features/create_page.md',
             '/ja/guide/features/wip-page.md',
+            '/ja/guide/features/sync-the-editor-text-with-the-latest-revision-body.md',
             '/ja/guide/features/page_operation.md',
             '/ja/guide/features/page_deletion_collectively.md',
             '/ja/guide/features/insert_links.md',
@@ -203,6 +204,7 @@ module.exports = {
           'title': 'アップグレードガイド',
           'key': 'upgrade-guide',
           'children': [
+            '/ja/admin-guide/upgrading/72x.md',
             '/ja/admin-guide/upgrading/71x.md',
             '/ja/admin-guide/upgrading/70x.md',
             '/ja/admin-guide/upgrading/63x.md',
@@ -296,6 +298,7 @@ module.exports = {
             '/en/guide/getting-started/markdown.md',
             '/en/guide/features/create_page.md',
             '/en/guide/features/wip-page.md',
+            '/en/guide/features/sync-the-editor-text-with-the-latest-revision-body.md',
             '/en/guide/features/page_operation.md',
             '/en/guide/features/page_deletion_collectively.md',
             '/en/guide/features/insert_links.md',
@@ -361,6 +364,7 @@ module.exports = {
           'title': 'Uupgrade guide',
           'key': 'upgrade-guide',
           'children': [
+            '/en/admin-guide/upgrading/72x.md',
             '/en/admin-guide/upgrading/71x.md',
             '/en/admin-guide/upgrading/70x.md',
             '/en/admin-guide/upgrading/63x.md',

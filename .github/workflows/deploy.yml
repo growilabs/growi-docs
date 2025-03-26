@@ -3,7 +3,13 @@ name: Deploy docs-growi-org
 on:
   push:
     branches:
-      - support/156908-157019-deploy-yml
+      - support/156908-157019-deploy-yml # あとでmasterに戻す
+  workflow_dispatch:
+    inputs:
+      commit_hash:
+        description: 'Branch/Tag/Commit (default: master)'
+        required: false
+        default: ''
 
 jobs:
 
@@ -15,6 +21,9 @@ jobs:
         node-version: [20.x]
 
     steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.inputs.commit_hash || 'master' }}
     # setup Node.js
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4

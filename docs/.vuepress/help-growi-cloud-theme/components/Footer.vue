@@ -15,8 +15,8 @@
             </div>
             <div class="d-flex flex-column text-white">
               <a class="gc-footer-link" href="https://growi.cloud/signup?contractType=CORPORATION">{{ this.$themeLocaleConfig.free_trial }}</a>
-              <a class="gc-footer-link" href="https://growi.cloud/contact" target="_blank" rel="noopener noreferrer">{{ this.$themeLocaleConfig.contact }}</a>
-              <a class="gc-footer-link" href="https://growi.cloud/catalog-request" target="_blank" rel="noopener noreferrer">{{ this.$themeLocaleConfig.catalog_request }}</a>
+              <a class="gc-footer-link" href="https://growi.cloud/v2/contact" target="_blank" rel="noopener noreferrer">{{ this.$themeLocaleConfig.contact }}</a>
+              <a class="gc-footer-link" href="https://growi.cloud/v2/catalog-request" target="_blank" rel="noopener noreferrer">{{ this.$themeLocaleConfig.catalog_request }}</a>
             </div>
           </div>
         </div>

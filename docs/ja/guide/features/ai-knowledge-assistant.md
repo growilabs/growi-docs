@@ -1,35 +1,135 @@
-# ナレッジアシスタント
+# ナレッジアシスタント機能を使う
 
-## ナレッジアシスタントとは
+## GROWI AI ナレッジアシスタントとは
 
-- ナレッジアシスタントは、ユーザーの質問に対して、GROWI 内の情報をもとにチャット形式で質問に回答する機能です。
-- GROWI v7.1.0 以降のバージョンで利用可能です。
+GROWI AI ナレッジアシスタント（以下、「ナレッジアシスタント」と呼びます）は、ユーザーの質問に対して、GROWI 内の情報をもとにチャット形式で質問に回答する機能です。
+
+また、各ユーザーが任意のページ群に特化したナレッジアシスタントを自由に作成できる機能を提供しています。
 
 ## ナレッジアシスタントが取り扱うデータについて
 
-- GROWI AI 連携機能では、 OpenAI の `Vector Store` へ文書をアップロードして機械学習の対象とします。
-- GROWI が OpenAI へアップロードするのは、パブリックなページのみです。
-- AI 連携機能が有効な場合、ページの作成・更新・複製のアクションが起こったときに、ページの本文ほか機械学習に必要なメタデータを `Vector Store` へアップロードします。
-- 既に存在するページを一括でアップロードするには、「[Vector Store のリビルド](/ja/admin-guide/management-cookbook/setup-ai.html#vector-store-のリビルド)」を行ってください。
+GROWI AI 連携機能では、OpenAI の Vector Store へ文書をアップロードして機械学習の対象とします。
+
+AI 連携機能が有効な場合、ページの作成・更新・複製・削除のアクションが起こったときに、ページの本文ほか機械学習に必要なメタデータを Vector Store へアップロードします。
+
+## ナレッジアシスタントの機能と注意点
+
+::: warning
+ナレッジアシスタントは、任意のページ群を学習対象として設定できます。特に重要な点として、権限制限のあるページ（自分のみ、特定グループのみなどが設定されているページ）も学習対象に含めることができるようになりました。
+
+このため、アシスタント作成時および共有設定時には、機密情報や制限付き情報の取り扱いに十分注意する必要があります。特にアシスタントを共有する場合は、意図しない情報漏洩が起こらないよう慎重に設定してください。
+:::
+
+## ナレッジアシスタントの作成手順
+
+### 新規アシスタントの追加画面を開く
+
+1. 左サイドバーの 「AI」ボタンをクリックします。
+1. 「アシスタントを追加する」ボタンをクリックします。
+
+    <img :src="$withBase('/assets/images/ja/add-assistant-button.png')" alt="add-assistant-button.png" class="border">
+
+### アシスタント名を入力する
+
+表示された新規アシスタントの追加画面で、以下を入力します。
+
+1. アシスタント名 : アシスタントの一覧画面に表示される名前
+1. アシスタントのメモ(任意) : 用途などを自由に記載（アシスタントの処理には影響しません）
+
+### アシスタントの共有設定をする
+
+1. 「アシスタントの共有」をクリックし、アシスタントの共有設定モーダルを表示します。
+
+1. 作成するアシスタントを他のユーザーと共有したい場合は、ボタンをクリックして有効にします。
+
+    <img :src="$withBase('/assets/images/ja/assistant-sharing-1.png')" alt="assistant-sharing-1.png" class="border">
+
+1. 学習対象にするページを設定します。
+    - 学習対象のページを、ページのアクセス権限設定により絞り込めます。
+    - アシスタント作成者が閲覧できるページのみ選択できます。
+
+1. アシスタントの共有範囲を設定します。
+    - 作成するアシスタントの共有範囲を設定できます。
+    - デフォルトアシスタントとして設定できるのは、共有範囲が「全体公開」に設定されたアシスタントのみです。
+
+::: tip
+<!-- textlint-disable weseek/no-doubled-joshi -->
+アシスタントが権限制限ページを参照している場合、そのアシスタントを、本来それらのページにアクセスできないユーザーと共有しようとすると、アシスタント作成または更新ボタンを押したときに共有範囲の確認を促す警告メッセージが表示されます。これにより、意図しない情報漏洩を防止します。
+<!-- textlint-enable weseek/no-doubled-joshi -->
+:::
+
+### 参照ページを追加する
+
+アシスタントが参照するページを設定できます。1つのナレッジアシスタントが参照できるページは、配下ページを含め、デフォルト設定では 3000 ページまでです。
+
+<ContextualBlock context="docs-growi-org">
+
+この上限数は、[GROWI AI オプションの環境変数](/ja/admin-guide/admin-cookbook/env-vars.html)で変更できます。
+
+</ContextualBlock>
+
+1. 「参照ページ」をクリックし、参照ページの設定モーダルを表示します。
+1. 「ページを追加する」ボタンを押すと、参照可能なすべてのページリストが表示されます。
+1. 参照ページとして設定したいページをクリックします。
+1. 配下ページも含めるかどうかのチェックボックスにチェックを入れます。
+1. 「完了」ボタンを押します。
+1. 「ページを追加する」ボタンの下に、参照ページとして設定されたページのパスが表示されます (配下ページも含めた場合は、末尾のパスが `/*` になります)
+1. 他にも追加したい場合は、また「ページを追加する」ボタンから同様の作業を繰り返します。
+
+### 参照ページを削除する
+
+一度設定した参照ページを削除したい場合は、ごみ箱アイコンで削除できます。
+
+<img :src="$withBase('/assets/images/ja/remove-reference-pages-1.png')" alt="remove-reference-pages-1.png" class="border">
+
+### アシスタントへの指示を設定する
+
+アシスタントごとに独自の応答スタイルや行動指針を設定できる機能です。これは OpenAI の [Create Run API](https://platform.openai.com/docs/api-reference/runs/createRun) の `additional_instructions` パラメータを通じて実現されます。
+
+例えば、「初心者向けに基本的な用語から説明してください」や「システム管理者向けに技術的詳細を含めて説明してください」などと指示することで、同じ質問に対しても、ユーザーの状況や好みに合わせた柔軟な応答生成ができます。
 
 ## ナレッジアシスタントの使い方
 
-- GROWI 画面のトップバーに「AI」と書かれた吹き出しのアイコンがあります。  
+1. ナレッジアシスタント一覧から利用したいアシスタントを選択してチャットを開始できます。
+1. チャットウィンドウに質問を入力すると、アシスタントが GROWI 内の参照ページをもとに回答します。
 
-<img :src="$withBase('/assets/images/ja/ai-knowledge-assistant_1.png')" alt="ai-knowledge-assistant_1.png" class="border">
+<img :src="$withBase('/assets/images/ja/start-chat-1.png')" alt="start-chat-1.png" class="border">
 
-- アイコンを押すとナレッジアシスタント (ベータ) のモーダルが開きます。  
+## デフォルトアシスタント
 
-<img :src="$withBase('/assets/images/ja/ai-knowledge-assistant_2.png')" alt="ai-knowledge-assistant_2.png" class="border">
+任意のナレッジアシスタントを、「デフォルトアシスタント」として登録できます。
 
-- 「ききたいことを入力してください」という入力欄に自由に質問を入力して送信します。  
+- デフォルトアシスタントは、上部のページツールボタンの「AI」吹き出しアイコンから1クリックで起動できます。
+- アシスタント一覧でデフォルトアシスタントに設定したいアシスタントの横にある「★」マークをクリックすることで設定できます。
+  - デフォルトアシスタントとして設定されているときは 「★」、設定されていないときは 「☆」の表示になります。
+- アシスタントの共有範囲が「全体公開」のものだけがデフォルトアシスタントに設定できます。また、デフォルトアシスタントの設定は管理者権限を持つユーザーのみが行えます。
 
-<img :src="$withBase('/assets/images/ja/ai-knowledge-assistant_3.png')" alt="ai-knowledge-assistant_3.png" class="border">
+<img :src="$withBase('/assets/images/ja/ai-default-knowledge-assistant-balloon.png')" alt="ai-default-knowledge-assistant-balloon.png" class="border">
 
-- 回答の生成を待ちます。  
+<img :src="$withBase('/assets/images/ja/ai-default-knowledge-assistant-setting.png')" alt="ai-default-knowledge-assistant-setting.png" class="border">
 
-<img :src="$withBase('/assets/images/ja/ai-knowledge-assistant_4.png')" alt="ai-knowledge-assistant_4.png" class="border">
+## チャット履歴について
 
-- ナレッジアシスタントによって生成された回答が返ってきます。  
+ナレッジアシスタントとの対話はすべて履歴として保存され、後から参照できます。
 
-<img :src="$withBase('/assets/images/ja/ai-knowledge-assistant_5.png')" alt="ai-knowledge-assistant_5.png" class="border">
+- チャット履歴はユーザーごとに保存され、過去の質問と回答を確認できます。
+- チャット履歴はアシスタントごとに整理されており、複数のナレッジアシスタントを使い分けている場合も、それぞれの会話を個別に参照できます。
+- 各アシスタントのツリーを展開すると、過去のスレッドが表示されます。
+
+<img :src="$withBase('/assets/images/ja/ai-chat-history-1.png')" alt="ai-chat-history-1.png" class="border">
+
+### チャット履歴の保存期間
+
+- 各スレッドは、最後の会話から3日間保存されます。
+- 3日間が経過すると、スレッドは自動的に削除されます。
+- 既存のスレッドを開いて新しい質問をすると、そのスレッドの保存期間が再び3日間に延長されます。
+
+<ContextualBlock context="docs-growi-org">
+
+## 環境変数
+
+ナレッジアシスタント機能の利用には、環境変数の設定が必要です。
+
+詳細は [AI 連携機能のセットアップと管理](/ja/admin-guide/management-cookbook/setup-ai.html) や [GROWI AI オプションの環境変数](/ja/admin-guide/admin-cookbook/env-vars.html)をご参照ください。
+
+</ContextualBlock>
