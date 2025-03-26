@@ -298,6 +298,7 @@ module.exports = {
             '/en/guide/getting-started/markdown.md',
             '/en/guide/features/create_page.md',
             '/en/guide/features/wip-page.md',
+            '/en/guide/features/sync-the-editor-text-with-the-latest-revision-body.md',
             '/en/guide/features/page_operation.md',
             '/en/guide/features/page_deletion_collectively.md',
             '/en/guide/features/insert_links.md',
