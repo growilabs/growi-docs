@@ -13,6 +13,7 @@ Refer to OpenAI's help documentation for instructions on obtaining API keys and 
   - Specify the service type in `OPENAI_SERVICE_TYPE`.  
     - Example: For `OpenAI`, specify `openai`.
   - Set `OPENAI_API_KEY` to the API key obtained from the OpenAI service.
+  - (Optional) Specify `OPENAI_LIMIT_LEARNABLE_PAGE_COUNT_PER_ASSISTANT` to set the maximum number of pages that a single Knowledge Assistant can learn (default is 3000)
 
 </ContextualBlock>
 
@@ -22,14 +23,14 @@ Refer to OpenAI's help documentation for instructions on obtaining API keys and 
 
 <ContextualBlock context="docs-growi-org">
 
-If the environment variables required for the Knowledge Assistant are set, the Knowledge Assistant icon will appear on the top bar of the GROWI screen.
+If the environment variables required for the Knowledge Assistant are set, the "AI" icon will appear on the left sidebar of the GROWI screen.
 
 </ContextualBlock>
 
 
 <ContextualBlock context="help-growi-cloud">
 
-When the AI function is enabled, the Knowledge Assistant icon appears on the top bar of the GROWI screen.
+When the AI function is enabled, the "AI" icon appears on the left sidebar of the GROWI screen.
 
 </ContextualBlock>
 
@@ -48,10 +49,3 @@ When the AI function is enabled, the Knowledge Assistant icon appears on the top
   - If the issue persists after verification, please contact [GROWI.cloud Support](https://growi.cloud/contact).
 
 </ContextualBlock>
-
-### Rebuilding the Vector Store
-
-- Performing a "Rebuild Vector Store" uploads all public page data in GROWI to the `Vector Store`.  
-  - The AI integration feature uses documents uploaded to the `Vector Store` for machine learning.  
-- If you are adding the AI integration feature to an existing GROWI setup, it is recommended to perform a "Rebuild Vector Store"  
-  <img :src="$withBase('/assets/images/en/setup-ai_2.png')" alt="setup-ai_2">

@@ -13,6 +13,7 @@ OpenAI の API キー等の取得に関しては、OpenAIのヘルプを参考�
   - `OPENAI_SERVICE_TYPE` にサービスの種別を指定
     - 例: `OpenAI` なら `openai` を指定
   - `OPENAI_API_KEY` に OpenAI サービスで取得した API キーを指定
+  - (任意)`OPENAI_LIMIT_LEARNABLE_PAGE_COUNT_PER_ASSISTANT` に1つのナレッジアシスタントが学習できるページの上限数を指定 (デフォルトは 3000)
 
 </ContextualBlock>
 
@@ -22,14 +23,14 @@ OpenAI の API キー等の取得に関しては、OpenAIのヘルプを参考�
 
 <ContextualBlock context="docs-growi-org">
 
-ナレッジアシスタントに必要な環境変数が設定されている場合、GROWI 画面のトップバーにナレッジアシスタントのアイコンが表示されます。
+ナレッジアシスタントに必要な環境変数が設定されている場合、GROWI 画面の左サイドバーに「AI」アイコンが表示されます。
 
 </ContextualBlock>
 
 
 <ContextualBlock context="help-growi-cloud">
 
-AI 機能が有効になっている場合、GROWI 画面のトップバーにナレッジアシスタントのアイコンが表示されます。
+AI 機能が有効になっている場合、GROWI 画面の左サイドバーに「AI」アイコンが表示されます。
 
 </ContextualBlock>
 
@@ -48,10 +49,3 @@ AI 機能が有効になっている場合、GROWI 画面のトップバーに�
   - 上記をご確認のうえ、問題を解消できない場合は [GROWI.cloud サポートへのお問い合わせ窓口](https://growi.cloud/contact) までお問い合わせください。
 
 </ContextualBlock>
-
-### Vector Store のリビルド
-
-- 「Vector Store のリビルド」を行うことで、GROWI 上のすべてのパブリックなページのデータを `Vector Store` にアップロードします。
-  - AI 連携機能では、 `Vector Store` にアップロードされた文書を対象に機械学習します。
-- 既存の GROWI に新たに AI 連携機能を導入する場合は、「Vector Store のリビルド」を行うことをお勧めします。  
-  <img :src="$withBase('/assets/images/ja/setup-ai_2.png')" alt="setup-ai_2">
