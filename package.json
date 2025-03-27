@@ -19,6 +19,7 @@
   "bugs": {
     "url": "https://github.com/growilabs/growi-docs/issues"
   },
+  "packageManager": "pnpm@9.15.3",
   "watch": {
     "api:dev:swagger2openapi": {
       "extensions": "js,ts",
@@ -50,7 +51,7 @@
     "api:dev:swagger2openapi": "cross-env APP_PATH=../growi/apps/app run-p api:swagger2openapi:*",
     "api:dev": "npm-watch",
     "api:build": "cross-env APP_PATH=tmp/growi/apps/app run-s api:swagger2openapi:* api:redoc:*",
-    "docs-growi-org:dev": "shx cp ./docs/.vuepress/config-docs-growi-org.js ./docs/.vuepress/config.js && shx rm -rf ./docs/.vuepress/theme && shx cp ./docs/.vuepress/enhance-docs-growi-org.js ./docs/.vuepress/enhanceApp.js && shx cp ./docs/.vuepress/public/assets/docs-growi-org/index.html ./docs/.vuepress/public/index.html && NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs",
+    "docs-growi-org:dev": "shx cp ./docs/.vuepress/config-docs-growi-org.js ./docs/.vuepress/config.js && shx rm -rf ./docs/.vuepress/theme && shx cp ./docs/.vuepress/enhance-docs-growi-org.js ./docs/.vuepress/enhanceApp.js && shx cp ./docs/.vuepress/public/assets/docs-growi-org/index.html ./docs/.vuepress/public/index.html && vuepress dev docs",
     "docs-growi-org:build": "shx cp ./docs/.vuepress/config-docs-growi-org.js ./docs/.vuepress/config.js && shx rm -rf ./docs/.vuepress/theme && shx cp ./docs/.vuepress/enhance-docs-growi-org.js ./docs/.vuepress/enhanceApp.js && shx cp ./docs/.vuepress/public/assets/docs-growi-org/index.html ./docs/.vuepress/public/index.html && NODE_OPTIONS=--openssl-legacy-provider vuepress build docs",
     "help-growi-cloud:dev": "shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && shx cp ./docs/.vuepress/enhance-help-growi-cloud.js ./docs/.vuepress/enhanceApp.js && shx mkdir -p ./docs/.vuepress/theme  && shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme &&  shx cp ./docs/.vuepress/public/assets/help-growi-cloud/index.html ./docs/.vuepress/public/index.html && NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs",
     "help-growi-cloud:build": "shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && shx cp ./docs/.vuepress/enhance-help-growi-cloud.js ./docs/.vuepress/enhanceApp.js && shx mkdir -p ./docs/.vuepress/theme && shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme &&   shx cp ./docs/.vuepress/public/assets/help-growi-cloud/index.html ./docs/.vuepress/public/index.html && NODE_OPTIONS=--openssl-legacy-provider vuepress build docs",
@@ -67,16 +68,16 @@
     "babel-eslint": "^10.0.1",
     "bootstrap": "^5.2.3",
     "cross-env": "^7.0.3",
-    "eslint": "^5.15.1",
+    "eslint": "^5.16.0",
     "eslint-config-weseek": "^1.0.1",
-    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-import": "^2.17.2",
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-task-lists": "^2.1.1",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.6.0",
     "prettier": "^2.0.5",
     "sass": "^1.62.1",
-    "sass-loader": "^v10.3.1",
+    "sass-loader": "^10.4.1",
     "shx": "^0.3.4",
     "stylelint": "^13.6.0",
     "stylelint-config-recess-order": "^2.0.4",
