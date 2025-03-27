@@ -25,6 +25,10 @@ jobs:
     - uses: actions/checkout@v4
       with:
         ref: ${{ github.event.inputs.commit_hash || 'master' }}
+
+    # setup pnpm
+    - uses: pnpm/action-setup@v4
+
     # setup Node.js
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
@@ -32,8 +36,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
 
-    # setup pnpm
-    - uses: pnpm/action-setup@v4
 
     - name: Install dependencies
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
@@ -57,20 +59,20 @@ jobs:
         pnpm run api:build
         pnpm run docs-growi-org:build
 
-    - name: Build and deploy
-      uses: jenkey2011/vuepress-deploy@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_SCRIPT: pnpm run api:build && pnpm run docs-growi-org:build
-        BUILD_DIR: docs/.vuepress/dist/
-        CNAME: docs.growi.org
+    # - name: Build and deploy
+    #   uses: jenkey2011/vuepress-deploy@master
+    #   env:
+    #     ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #     BUILD_SCRIPT: pnpm run api:build && pnpm run docs-growi-org:build
+    #     BUILD_DIR: docs/.vuepress/dist/
+    #     CNAME: docs.growi.org
 
-    - name: Slack Notification
-      uses: weseek/ghaction-slack-notification@master
-      if: failure()
-      with:
-        type: ${{ job.status }}
-        job_name: '*Deploy growi-docs*'
-        channel: '#ci'
-        isCompactMode: true
-        url: ${{ secrets.SLACK_WEBHOOK_URL }}
+    # - name: Slack Notification
+    #   uses: weseek/ghaction-slack-notification@master
+    #   if: failure()
+    #   with:
+    #     type: ${{ job.status }}
+    #     job_name: '*Deploy growi-docs*'
+    #     channel: '#ci'
+    #     isCompactMode: true
+    #     url: ${{ secrets.SLACK_WEBHOOK_URL }}
