@@ -3,7 +3,8 @@ name: Deploy docs-growi-org
 on:
   push:
     branches:
-      - master
+      # - master
+      - support/156908-157019-deploy-yml
   workflow_dispatch:
     inputs:
       commit_hash:
@@ -29,40 +30,15 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
 
     # setup pnpm
     - uses: pnpm/action-setup@v4
-      with:
-        version: '9.12.3'
-
-    - name: Cache/Restore node_modules
-      id: cache-dependencies
-      uses: actions/cache@v3
-      with:
-        path: node_modules
-        key: ${{ runner.OS }}-node_modules-${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-
-    - name: Get pnpm cache dir
-      if: steps.cache-dependencies.outputs.cache-hit != 'true'
-      id: cache-pnpm
-      run: echo "dir=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-    - name: Cache/Restore pnpm cache
-      if: steps.cache-dependencies.outputs.cache-hit != 'true'
-      uses: actions/cache@v4
-      with:
-        path: ${{ steps.cache-pnpm.outputs.dir }}
-        key: ${{ runner.os }}-pnpm-${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-pnpm-${{ matrix.node-version }}-
-
-    - name: Check current directory
-      run: pwd && ls -la
 
     - name: Install dependencies
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
       run: |
-        pnpm install
+        pnpm install --frozen-lockfile
 
     - name: Print dependencies
       run: |
