@@ -28,6 +28,8 @@ jobs:
 
     # setup pnpm
     - uses: pnpm/action-setup@v4
+      with:
+        version: '9.12.3'
 
     # setup Node.js
     - name: Use Node.js ${{ matrix.node-version }}
