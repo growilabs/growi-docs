@@ -5,13 +5,20 @@
 #
 #  Build Stage
 #
-FROM node:16-slim AS builder
+FROM node:20-slim AS builder
 
 WORKDIR /growi-docs
 
 COPY . .
-RUN yarn
-RUN yarn help-growi-cloud:build
+
+RUN apt-get update && apt-get install -y ca-certificates wget --no-install-recommends \
+  && wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.shrc" SHELL="$(which sh)" sh -
+
+ENV PNPM_HOME="/root/.local/share/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+
+RUN pnpm install
+RUN pnpm run help-growi-cloud:build
 
 
 #

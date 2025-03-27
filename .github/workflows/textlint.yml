@@ -6,16 +6,18 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    # setup pnpm
+    - uses: pnpm/action-setup@v4
+
     # setup Node.js
     - uses: actions/setup-node@v4
       with:
-        node-version: '16.x'
-        cache: 'yarn'
-        cache-dependency-path: '**/yarn.lock'
+        node-version: '20.x'
+        cache: 'pnpm'
 
     # Run scripts
     - name: Install dependencies
-      run: yarn install
+      run: pnpm install --frozen-lockfile
     - name: linting markdown files
-      run: yarn run lint
+      run: pnpm run lint
 
