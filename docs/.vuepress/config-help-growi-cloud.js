@@ -426,6 +426,12 @@ module.exports = {
     ['@vuepress/html-redirect', {
       countdown: 0
     }],
+    [
+      'sitemap',
+      {
+        hostname: 'https://growi.cloud/help',
+      },
+    ],
   ],
 
   markdown: {
