@@ -31,8 +31,8 @@ export const getReactHooks = (): typeof React => {
 };
 ```
 
-### この関数の仕組み
+## React インスタンスの切り替えの仕組み
 
-- 本番環境 (`process.env.NODE_ENV === 'production'`) かつ `window.GrowiFacade.react` が存在する場合は、GROWI の React インスタンスを使用
-- そうでない場合（開発環境など）は、通常の React インポートを使用
-- これにより、プラグインを単体で開発する際には通常の React を使い、GROWI 上で実行する際には GROWI の React インスタンスを使用できる
+- 本番環境 (`process.env.NODE_ENV === 'production'`) かつ `window.GrowiFacade.react` が存在する場合は、GROWI の React インスタンスを使用します。
+- そうでない場合（開発環境など）は、通常の React インポートを使用します。
+- これにより、プラグインを単体で開発する際には通常の React を使い、GROWI 上で実行する際には GROWI の React インスタンスを使用できます。
