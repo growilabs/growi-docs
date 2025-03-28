@@ -575,6 +575,15 @@ module.exports = {
               ],
             },
             {
+              title: 'プラグイン',
+              collapsable: false,
+              children: [
+                '/ja/dev/plugin/overview.md',
+                '/ja/dev/plugin/script.md',
+                '/ja/dev/plugin/react-hooks.md',
+              ],
+            },
+            {
               title: 'その他のドキュメント',
               collapsable: false,
               children: [
