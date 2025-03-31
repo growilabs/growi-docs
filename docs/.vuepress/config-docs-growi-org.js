@@ -579,6 +579,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/dev/plugin/overview.md',
+                '/ja/dev/plugin/development.md',
                 '/ja/dev/plugin/script.md',
                 '/ja/dev/plugin/react-hooks.md',
               ],
