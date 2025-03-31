@@ -581,6 +581,7 @@ module.exports = {
                 '/ja/dev/plugin/overview.md',
                 '/ja/dev/plugin/development.md',
                 '/ja/dev/plugin/script.md',
+                '/ja/dev/plugin/theme.md',
                 '/ja/dev/plugin/react-hooks.md',
               ],
             },
