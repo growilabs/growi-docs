@@ -22,7 +22,9 @@ growi-plugin-theme-example/
 
 ## 開発手順
 
-### 1. package.json を編集する
+### 1. package.json を作成する
+
+package.jsonを以下のように編集します。
 
 ```json
 {
