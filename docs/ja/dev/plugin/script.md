@@ -1,14 +1,14 @@
 # スクリプトプラグインを開発する
 
-## スクリプトプラグインのアーキテクチャ
-
-スクリプトプラグインは、一般的に以下のような構造を持っています。
+スクリプトプラグインは、GROWI の機能を拡張するための JavaScript または TypeScript で開発されたコードを提供するプラグインです。TypeScript で開発し Vite でトランスパイルする方法を推奨しています。
 
 ### スクリプトプラグインの基本構造
 
+典型的なスクリプトプラグインは以下のような構造を持っています。
+
 ```
 growi-plugin-example/
-├── client-entry.ts        # プラグインのエントリーポイント
+├── client-entry.tsx        # プラグインのエントリーポイント
 ├── package.json            # プラグイン情報と依存関係
 ├── src/                    # ソースコード
 │   ├── Component.tsx       # React コンポーネント
@@ -25,15 +25,15 @@ growi-plugin-example/
 
 ```
 growi-plugin-copy-code-to-clipboard/
-├── client-entry.ts         # プラグインのエントリーポイント
-├── package.json            # プラグイン情報と依存関係
-├── src/                    # ソースコード
-│   ├── components/         # コンポーネントディレクトリ
+├── client-entry.ts             # プラグインのエントリーポイント
+├── package.json                # プラグイン情報と依存関係
+├── src/                        # ソースコード
+│   ├── components/             # コンポーネントディレクトリ
 │   │   └── CopyCodeButton.tsx  # コピーボタンコンポーネント
-│   └── styles/             # スタイルディレクトリ
+│   └── styles/                 # スタイルディレクトリ
 │       └── CopyCodeButton.css  # ボタン用スタイル
-├── tsconfig.json           # TypeScript 設定
-└── vite.config.ts          # ビルド設定
+├── tsconfig.json               # TypeScript 設定
+└── vite.config.ts              # ビルド設定
 ```
 
 #### 例2: datatables プラグイン
@@ -54,36 +54,49 @@ growi-plugin-datatables/
 └── vite.config.ts              # ビルド設定
 ```
 
-## プラグイン開発の基本的な流れ
+## 開発手順
 
-GROWI プラグインの開発は以下の流れで行います。
+### 1. package.json を編集する
 
-### 1. プラグイン情報を編集する
+```json
+{
+  "name": "growi-plugin-example",  // プラグイン名
+  "version": "1.0.0",
+  "description": "Example GROWI plugin", // プラグインの説明
+  "type": "module", // ESモジュールとして設定
+  "keywords": [
+    "growi",
+    "growi-plugin"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+  },
+  "devDependencies": {
+    "@growi/pluginkit": "^1.1.0", // GROWI プラグイン開発キット
+    "typescript": "^x.x.x",
+    "vite": "^^x.x.x" // ビルドツール
+  },
+  "growiPlugin": {
+    "schemaVersion": "4",
+    "types": [ // 複数のプラグインタイプを同時に設定可能
+      "script"
+    ]
+  },
+  // 他の設定...
+}
+```
 
-- `package.json` でプラグインの基本情報を設定します。
+### 2. ライブラリをインストールする
 
-    ```
-    {
-      "name": "growi-plugin-my-feature",  // プラグイン名
-      "version": "1.0.0",
-      "description": "My custom GROWI plugin", // プラグインの説明
-      // 他の設定...
-    }
-    ```
+```
+$ pnpm install
+```
 
-- 必要なライブラリをインストールします。
+### 3. プラグインを実装する
 
-    ```
-    $ yarn install
-    ```
-
-### 2. プラグインを実装する
-
-すべてのスクリプトプラグインには `client-entry.tsx` (または `.ts`) ファイルが必要です。このファイルは、プラグインのエントリーポイントとなり、GROWI本体とプラグインを接続します。
-
-最小構成のプラグインでは、このファイル1つだけでも実装可能です。プラグインの規模や複雑さに応じて、コンポーネントやユーティリティを別ファイルに分けるかどうかは開発者の判断によります。
-
-#### 必須の実装要素
+スクリプトプラグインを実装するには、メインのエントリーポイントとなるファイル (ここでは client-entry.tsx) に次の3つの要素を実装する必要があります。
 
 1. **activate 関数**：プラグインが有効化されたときに実行される関数
 2. **deactivate 関数**：プラグインが無効化されたときに実行される関数
@@ -91,7 +104,8 @@ GROWI プラグインの開発は以下の流れで行います。
     - プラグインの名前をキーとして、activate と deactivate 関数を登録します
     - これにより、GROWI 本体は起動時にこのオブジェクトを検索してプラグインを見つけることができます。
 
-```
+```typescript
+//client-entry.tsx 
 const activate = (): void => {
   // GROWI本体が利用可能か確認
   if (growiFacade == null || growiFacade.markdownRenderer == null) {
@@ -115,30 +129,34 @@ if ((window as any).pluginActivators == null) {
 };
 ```
 
-#### コードの構造化
+#### React コンポーネントの実装
 
-プラグインが複雑になる場合は、以下のような構造に分けることできます。
+スクリプトプラグインでは、React コンポーネントを使って GROWI の UI をカスタマイズできます。実際の実装例は [growi-plugin-copy-code-to-clipboard](https://github.com/growilabs/growi-plugin-copy-code-to-clipboard)  で確認できます。
 
-- `client-entry.tsx`：プラグインのエントリーポイント
-- `src/components/`：Reactコンポーネント
-- `src/utils/`：ユーティリティ関数
-- `src/styles/`：スタイルシート
+### 4. Vite の設定
 
+vite.config.ts ファイルで、ビルドに関する設定をします。
 
-### 3. プラグインをビルドする
+```typescript
+// vite.config.ts
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    manifest: true,
+    rollupOptions: {
+      input: ['/client-entry.tsx'],
+    },
+  },
+});
+```
+
+### 5. プラグインをビルドする
 
 ```
-$ yarn build
+$ pnpm build
 ```
 
 これにより `dist` ディレクトリにビルド済みのファイルが生成されます。
-
-### 4. プラグインを公開する(任意)
-
-プラグインの開発が完了したら、以下の手順で公開しましょう。
-
-1. 作成したプラグインを GitHub リポジトリにプッシュします。
-2. リポジトリの「トピック」に `growi-plugin` を追加してください。
-3. トピックを追加することで、[GROWI プラグイン一覧](https://growi.org/plugins)ページに自動的に表示されるようになります。
-
-これにより、他の GROWI ユーザーがあなたの開発したプラグインを見つけて利用できるようになります。

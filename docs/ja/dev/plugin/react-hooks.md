@@ -1,9 +1,5 @@
 # React フックを使う
 
-このページでは、GROWI プラグイン開発における React フックの使用方法について説明します。
-
-## 公式ユーティリティを使用する方法 (推奨)
-
  [@growi/pluginkit](https://github.com/weseek/growi/tree/master/packages/pluginkit) パッケージの `growiReact` 関数を使用します。
 
 ```typescript
