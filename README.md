@@ -4,19 +4,19 @@
 
 ## Requirements
 
-- Node.js v14 or v16
-- Yarn v1.22
+- Node.js v18 or v20
+- pnpm >= 9.4 < 10
 
 ## How to start
 
 ``` bash
-yarn
+pnpm install
 
 # Start dev server (docs-growi-org)
-yarn start
+pnpm start
 
 # Or start dev server (help-growi-cloud) 
-yarn help-growi-cloud:dev
+pnpm help-growi-cloud:dev
 ```
 
 Then, access to the URL that VuePress will print like below.
@@ -34,7 +34,7 @@ For detail, please reference [VuePress Documents](https://vuepress.vuejs.org/).
 ## How to write API docs
 
 ``` bash
-yarn api:dev
+pnpm api:dev
 ```
 
 ### Live Server
@@ -42,5 +42,5 @@ yarn api:dev
 Launch the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 to watch the modification to the `growi` repository will be applied in realtime.
 
-1. `yarn api:dev`
+1. `pnpm api:dev`
 1. Right click `redoc/apivX.html` in the file tree and select "Open with Live Server".
