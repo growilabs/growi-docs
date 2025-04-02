@@ -326,6 +326,16 @@ module.exports = {
               ],
             },
             {
+              title: 'Plugin',
+              collapsable: false,
+              children: [
+                '/en/dev/plugin/overview.md',
+                '/en/dev/plugin/development.md',
+                '/en/dev/plugin/script.md',
+                '/en/dev/plugin/react-hooks.md',
+              ],
+            },
+            {
               title: 'Other Documents',
               collapsable: false,
               children: [

@@ -39,7 +39,7 @@ package.json にプラグインの基本情報を設定します。 `growiPlugin
   "version": "1.0.0",
   "description": "Example GROWI plugin", // プラグインの説明
   "devDependencies": {
-    "@growi/pluginkit": "^1.1.0", // GROWI プラグイン開発キット
+    "@growi/pluginkit": "^1.1.0" // GROWI プラグイン開発キット
   },
   "growiPlugin": {
     "schemaVersion": "4",
