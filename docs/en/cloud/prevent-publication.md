@@ -47,9 +47,6 @@ In the following cases, this function will be activated and GROWI will not be ab
 ### Case ③: Trial Ends Without Registering a Payment Method
 
 - If no payment method is registered at the end of the trial, the status will change to "payment failure" and the plan will be downgraded to a free plan and the GROWI in question will be suspended.
-- For more information about trials, please see below
-  - [/For Philippines/Service/Trial](https://stg-help.growi.cloud/63a2a0ce938f53be567b2c81)
-
 
 
 

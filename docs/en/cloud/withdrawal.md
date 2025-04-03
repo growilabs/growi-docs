@@ -12,8 +12,6 @@
 1. Delete the GROWI application
     - Delete GROWI apps created on GROWI.cloud from the administration screen
     - If you have multiple organizations, delete the apps from all of them.
-    - **Be sure to delete the GROWI app before downgrading to the free plan.**
-      - If you change to the free plan before deleting the GROWI app, your page information will be made public if you are using it as a private wiki.
 2. After completing the app deletion, please contact us through the inquiry page about your wish to cancel your account.
     - <https://growicloud.atlassian.net/servicedesk/customer/portal/1>
 3. Our service desk will delete your GROWI.cloud information and card information.
