@@ -292,6 +292,8 @@ package.jsonの `growiPlugin.themes` 配列の各アイテムには、以下の�
     - 管理画面でテーマを選ぶ際に表示されるテーマプレビューボックスの作成ボタンの色
     - 16進カラーコード（文字列型）
 
+<!-- textlint-disable weseek/max-comma -->
 `lightBg`, `darkBg`, `lightSidebar`, `darkSidebar`, `lightIcon`, `darkIcon`, `createBtn` の各プロパティは、管理画面のテーマ選択 UI におけるテーマのプレビュー表示の見た目のみに使用され、アプリケーションの実際の外観には影響しません。実際のアプリケーションのスタイルは `manifestKey` で指定されたスタイルファイルによって定義されます。
+<!-- textlint-enable weseek/max-comma -->
 
 <img :src="$withBase('/assets/images/ja/customize-theme.png')" alt="customize-theme.png" class="border">
