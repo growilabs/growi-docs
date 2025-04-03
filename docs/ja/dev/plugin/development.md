@@ -74,8 +74,8 @@ $ pnpm install
 各プラグインタイプごとの詳細な実装方法については、以下のドキュメントを参照してください。
 
 - [スクリプトプラグイン](/ja/dev/plugin/script.html)
-- テーマプラグイン (準備中)
-- テンプレートプラグイン (準備中)
+- [テーマプラグイン](/ja/dev/plugin/theme.html)
+- [テンプレートプラグイン](/ja/dev/plugin/template.html)
 
 ### 5. プラグインを公開する(任意)
 
