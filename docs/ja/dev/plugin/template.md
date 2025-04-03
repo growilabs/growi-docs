@@ -46,7 +46,7 @@ package.jsonを以下のように編集します。
   ],
   "type": "module",
   "devDependencies": {
-    "@growi/pluginkit": "^1.1.0", // GROWI プラグイン開発キット
+    "@growi/pluginkit": "^1.1.0" // GROWI プラグイン開発キット
   },
   "growiPlugin": {
     "schemaVersion": "4",
