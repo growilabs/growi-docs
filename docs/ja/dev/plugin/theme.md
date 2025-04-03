@@ -211,29 +211,60 @@ GROWIのテーマでは、以下の色の設定が重要です。
 
 ### 2. カラーパレット生成
 
-`generate-color-palette` mixin を使用して、基本色から派生する色のバリエーションを自動生成できます。これにより一貫性のあるデザインが実現できます。
+`generate-color-palette` mixin を使用すると、基本色から派生する色のバリエーションを自動生成できます。これにより一貫性のあるデザインが実現できます。
 
 ```scss
-@include generate-color-palette('primary', $base-color, $darker-variant, $lighter-variant, $darken-percentage, $lighten-percentage);
+@include generate-color-palette($color-id, $color-value, $shade-color, $tint-color, $shade-color-ratio, $tint-color-ratio, $prefix);
 ```
-
-下図のように、この mixin は基本色（`$base-color`）を中心として、明るい方向（`$lighter-variant`）と暗い方向（`$darker-variant`）に色のバリエーションを展開します。`$lighten-percentage` と `$darken-percentage` のパラメータにより、どの程度明暗のバリエーションを広げるかをコントロールできます。
 
 <img :src="$withBase('/assets/images/ja/generate-color-palette.png')" alt="generate-color-palette.png" class="border">
 
-この mixin を実行すると、以下のようなCSS変数が利用可能になります。
+#### パラメータ
 
-- `--primary-color`: 中央の基本色（`$base-color`）
-- `--primary-color-dark`: 暗い色のバリアント（`$darker-variant`）
-- `--primary-color-light`: 明るい色のバリアント（`$lighter-variant`）
-- `--primary-color-100` から `--primary-color-900`: 明暗のスケールに応じた色のバリエーション
-- `--primary-color-10` から `--primary-color-90`: 基本色の透明度を変えたバリエーション（10%〜90%の透明度）
+<!-- textlint-disable weseek/max-kanji-continuous-len -->
 
-例えば以下のように指定すると、`$primary` を基本色として、それを 20% 暗くした色と 20% 明るくした色をそれぞれ `$darker-variant` と `$lighter-variant` として設定し、さらに 12.5% ずつの明暗のグラデーションを生成します。
+| パラメータ | 説明 | デフォルト値 |
+|------------|------|-------------|
+| `$color-id` (必須) | 生成される変数の識別子（例: 'primary'） | なし |
+| `$color-value` (必須) | 基本色の値（例: #4285f4） | なし |
+| `$shade-color` | 暗い色を作成するときに混合する色 | black |
+| `$tint-color` | 明るい色を作成するときに混合する色 | white |
+| `$shade-color-ratio` | 暗い色を作成するときの基本混合割合 | 20% |
+| `$tint-color-ratio` | 明るい色を作成するときの基本混合割合 | 20% |
+| `$prefix` | 生成されるCSS変数のプレフィックス | 'grw-' |
+
+<!-- textlint-enable weseek/max-kanji-continuous-len -->
+
+#### 生成される変数
+
+この mixin を実行すると、以下のような CSS 変数が生成されます。
+
+- 基本色: `--{$prefix}{$color-id}-500`
+- 暗い色のバリエーション: `--{$prefix}{$color-id}-600` から `--{$prefix}{$color-id}-900`
+- 明るい色のバリエーション: `--{$prefix}{$color-id}-400` から `--{$prefix}{$color-id}-100`
+- RGB形式の値: `--{$prefix}{$color-id}-{number}-rgb`
+
+#### 使用例
 
 ```scss
 @include generate-color-palette('primary', $primary, darken($primary, 20%), lighten($primary, 20%), 12.5%, 12.5%);
 ```
+
+この例では以下の CSS 変数が生成されます。
+
+- `--grw-primary-500`: 基本色（`$primary`）
+- 暗い色のバリエーション:
+  - `--grw-primary-600`: 基本色に darken($primary, 20%) を 12.5% 混合
+  - `--grw-primary-700`: 基本色に darken($primary, 20%) を 25% 混合
+  - `--grw-primary-800`: 基本色に darken($primary, 20%) を 37.5% 混合
+  - `--grw-primary-900`: 基本色に darken($primary, 20%) を 50% 混合
+- 明るい色のバリエーション:
+  - `--grw-primary-400`: 基本色に lighten($primary, 20%) を 12.5% 混合
+  - `--grw-primary-300`: 基本色に lighten($primary, 20%) を 25% 混合
+  - `--grw-primary-200`: 基本色に lighten($primary, 20%) を 37.5% 混合
+  - `--grw-primary-100`: 基本色に lighten($primary, 20%) を 50% 混合
+
+詳細な実装については、[_color-palette.scss](https://github.com/weseek/growi/blob/4edec2a6fe4ffe356e669c2edc9551abe045b6e1/packages/core-styles/scss/bootstrap/theming/utils/_color-palette.scss#L3) を参照してください。
 
 ### 3. レスポンシブデザイン
 
