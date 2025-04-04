@@ -332,6 +332,8 @@ module.exports = {
                 '/en/dev/plugin/overview.md',
                 '/en/dev/plugin/development.md',
                 '/en/dev/plugin/script.md',
+                '/en/dev/plugin/template.md',
+                '/en/dev/plugin/theme.md',
                 '/en/dev/plugin/react-hooks.md',
               ],
             },

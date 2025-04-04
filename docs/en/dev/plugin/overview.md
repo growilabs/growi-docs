@@ -19,7 +19,7 @@ These plugin types are not mutually exclusive; a single Git repository can provi
 
 ### 1. Script plugins
 
-Plugins that extend GROWI's functionality using client-side JavaScript. Mainly customizes frontend display and behavior. For details, see [Script Plugins](/en/dev/plugin/script.html).
+Plugins that extend GROWI's functionality using client-side JavaScript. Mainly customizes frontend display and behavior. For details, see [Developing script Plugins](/en/dev/plugin/script.html).
 
 **Example uses**:
 
@@ -30,7 +30,7 @@ Plugins that extend GROWI's functionality using client-side JavaScript. Mainly c
 
 ### 2. Template plugins
 
-Plugins that provide page templates for use in GROWI.
+Plugins that provide page templates for use in GROWI. For details, see [Developing template plugins](/en/dev/plugin/template.html).
 
 **Example uses**:
 
@@ -41,7 +41,7 @@ Plugins that provide page templates for use in GROWI.
 
 ### 3. Theme plugins
 
-Plugins that customize GROWI's appearance.
+Plugins that customize GROWI's appearance. For details, see [Developing theme plugins](/en/dev/plugin/theme.html).
 
 **Example uses**:
 
