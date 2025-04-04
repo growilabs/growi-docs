@@ -177,8 +177,8 @@ $ pnpm build
   $secondary: #666666;
 
   // カラーパレットを生成
-  @include generate-color-palette('primary', $primary, darken($primary, 20%), lighten($primary, 20%), 12.5%, 12.5%);
-  @include generate-color-palette('highlight', $highlight, darken($highlight, 20%), lighten($highlight, 20%), 25%, 25%);
+  @include generate-color-palette('primary', $primary, #0000FF, #FF0000, 12.5%, 12.5%);
+  @include generate-color-palette('highlight', $highlight,#00FFFF, #FFFF00, 25%, 25%);
 
   // 基本的なスタイル変数を設定
   $body-color: #333333;
@@ -207,7 +207,7 @@ GROWIのテーマでは、以下の色の設定が重要です。
 
 - `$primary`: メインとなる色（ボタンやアクティブな要素など）
 - `$highlight`: 強調表示や選択項目の色
-- `$secondary`: 二次的な要素の色
+- `$secondary`: 二次的な要素の色（基本的にBootstrapのデフォルト値を使用し、必要に応じてオプションでカスタマイズ可能）
 
 ### 2. カラーパレット生成
 
@@ -217,7 +217,7 @@ GROWIのテーマでは、以下の色の設定が重要です。
 @include generate-color-palette($color-id, $color-value, $shade-color, $tint-color, $shade-color-ratio, $tint-color-ratio, $prefix);
 ```
 
-<img :src="$withBase('/assets/images/ja/generate-color-palette.png')" alt="generate-color-palette.png" class="border">
+<img :src="$withBase('/assets/images/generate-color-palette-default.png')" alt="generate-color-palette-default.png" class="border">
 
 #### パラメータ
 
@@ -247,22 +247,24 @@ GROWIのテーマでは、以下の色の設定が重要です。
 #### 使用例
 
 ```scss
-@include generate-color-palette('primary', $primary, darken($primary, 20%), lighten($primary, 20%), 12.5%, 12.5%);
+@include generate-color-palette('primary', #17B37F, #1E286B, #FAF7DE, 18%, 23%);
 ```
 
 この例では以下の CSS 変数が生成されます。
 
-- `--grw-primary-500`: 基本色（`$primary`）
+- `--grw-primary-500`: 基本色（#17B37F）
 - 暗い色のバリエーション:
-  - `--grw-primary-600`: 基本色に darken($primary, 20%) を 12.5% 混合
-  - `--grw-primary-700`: 基本色に darken($primary, 20%) を 25% 混合
-  - `--grw-primary-800`: 基本色に darken($primary, 20%) を 37.5% 混合
-  - `--grw-primary-900`: 基本色に darken($primary, 20%) を 50% 混合
+  - `--grw-primary-600`: 基本色に #1E286B を 18% 混合
+  - `--grw-primary-700`: 基本色に #1E286B を 36% 混合
+  - `--grw-primary-800`: 基本色に #1E286B を 54% 混合
+  - `--grw-primary-900`: 基本色に #1E286B を 72% 混合
 - 明るい色のバリエーション:
-  - `--grw-primary-400`: 基本色に lighten($primary, 20%) を 12.5% 混合
-  - `--grw-primary-300`: 基本色に lighten($primary, 20%) を 25% 混合
-  - `--grw-primary-200`: 基本色に lighten($primary, 20%) を 37.5% 混合
-  - `--grw-primary-100`: 基本色に lighten($primary, 20%) を 50% 混合
+  - `--grw-primary-400`: 基本色に #FAF7DE を 23% 混合
+  - `--grw-primary-300`: 基本色に #FAF7DE を 46% 混合
+  - `--grw-primary-200`: 基本色に #FAF7DE を 69% 混合
+  - `--grw-primary-100`: 基本色に #FAF7DE を 92% 混合
+
+<img :src="$withBase('/assets/images/generate-color-palette-example.png')" alt="generate-color-palette-example.png" class="border">
 
 詳細な実装については、[_color-palette.scss](https://github.com/weseek/growi/blob/4edec2a6fe4ffe356e669c2edc9551abe045b6e1/packages/core-styles/scss/bootstrap/theming/utils/_color-palette.scss#L3) を参照してください。
 

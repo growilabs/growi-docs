@@ -177,8 +177,8 @@ The basic SCSS structure is as follows:
   $secondary: #666666;
 
   // Generate color palettes
-  @include generate-color-palette('primary', $primary, darken($primary, 20%), lighten($primary, 20%), 12.5%, 12.5%);
-  @include generate-color-palette('highlight', $highlight, darken($highlight, 20%), lighten($highlight, 20%), 25%, 25%);
+  @include generate-color-palette('primary', $primary, #0000FF, #FF0000, 12.5%, 12.5%);
+  @include generate-color-palette('highlight', $highlight,#00FFFF, #FFFF00, 25%, 25%);
 
   // Set basic style variables
   $body-color: #333333;
@@ -205,9 +205,9 @@ The basic SCSS structure is as follows:
 
 The following color settings are important in GROWI themes:
 
-- `$primary`: The main color (for buttons and active elements)
+- `$primary`: The main color (for buttons, active elements, etc.)
 - `$highlight`: Color for emphasis and selected items
-- `$secondary`: Color for secondary elements
+- `$secondary`: Color for secondary elements (uses Bootstrap's default value by default, with option to customize as needed)
 
 ### 2. Color palette generation
 
@@ -217,7 +217,7 @@ Using the `generate-color-palette` mixin, you can automatically generate variati
 @include generate-color-palette($color-id, $color-value, $shade-color, $tint-color, $shade-color-ratio, $tint-color-ratio, $prefix);
 ```
 
-<img :src="$withBase('/assets/images/en/generate-color-palette.png')" alt="generate-color-palette.png" class="border">
+<img :src="$withBase('/assets/images/generate-color-palette-default.png')" alt="generate-color-palette-default.png" class="border">
 
 #### Parameters
 
@@ -243,22 +243,24 @@ This mixin generates the following CSS variables:
 #### Usage example
 
 ```scss
-@include generate-color-palette('primary', $primary, darken($primary, 20%), lighten($primary, 20%), 12.5%, 12.5%);
+@include generate-color-palette('primary', #17B37F, #1E286B, #FAF7DE, 18%, 23%);
 ```
 
 This example generates the following CSS variables:
 
-- `--grw-primary-500`: Base color (`$primary`)
-- Darker variations:
-  - `--grw-primary-600`: Base color mixed with darken($primary, 20%) at 12.5%
-  - `--grw-primary-700`: Base color mixed with darken($primary, 20%) at 25%
-  - `--grw-primary-800`: Base color mixed with darken($primary, 20%) at 37.5%
-  - `--grw-primary-900`: Base color mixed with darken($primary, 20%) at 50%
-- Lighter variations:
-  - `--grw-primary-400`: Base color mixed with lighten($primary, 20%) at 12.5%
-  - `--grw-primary-300`: Base color mixed with lighten($primary, 20%) at 25%
-  - `--grw-primary-200`: Base color mixed with lighten($primary, 20%) at 37.5%
-  - `--grw-primary-100`: Base color mixed with lighten($primary, 20%) at 50%
+- `--grw-primary-500`: Base color (#17B37F)
+- Darker color variations:
+  - `--grw-primary-600`: Base color mixed with 18% of #1E286B
+  - `--grw-primary-700`: Base color mixed with 36% of #1E286B
+  - `--grw-primary-800`: Base color mixed with 54% of #1E286B
+  - `--grw-primary-900`: Base color mixed with 72% of #1E286B
+- Lighter color variations:
+  - `--grw-primary-400`: Base color mixed with 23% of #FAF7DE
+  - `--grw-primary-300`: Base color mixed with 46% of #FAF7DE
+  - `--grw-primary-200`: Base color mixed with 69% of #FAF7DE
+  - `--grw-primary-100`: Base color mixed with 92% of #FAF7DE
+
+<img :src="$withBase('/assets/images/generate-color-palette-example.png')" alt="generate-color-palette-example.png" class="border">
 
 For detailed implementation, refer to [_color-palette.scss](https://github.com/weseek/growi/blob/4edec2a6fe4ffe356e669c2edc9551abe045b6e1/packages/core-styles/scss/bootstrap/theming/utils/_color-palette.scss#L3).
 
