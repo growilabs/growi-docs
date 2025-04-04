@@ -1,8 +1,12 @@
 # Creating and Using Page Templates
 
-In GROWI, you can model your new page based on a page template.
+## What are templates
 
-Templates make it easy to create pages that are regularly required, such as daily reports, bug reports, and meeting minutes.
+GROWI's template feature helps efficiently create pages with the same structure (meeting minutes, weekly reports, manuals, etc.) that are frequently created. Using templates provides the following benefits:
+
+- Saves the effort of manually entering the same headings and structures each time
+- Standardizes page structures within a team
+- Prevents omission of necessary items
 
 ## How to apply a template page to a hierarchy
 
