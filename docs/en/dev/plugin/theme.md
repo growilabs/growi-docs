@@ -321,6 +321,8 @@ Each item in the `growiPlugin.themes` array in package.json needs to have the fo
     - Color of the create button in the theme preview box in the admin screen
     - Hexadecimal color code (string type)
 
+<!-- textlint-disable weseek/max-comma -->
 The properties `lightBg`, `darkBg`, `lightSidebar`, `darkSidebar`, `lightIcon`, `darkIcon`, and `createBtn` are only used for the appearance of the theme preview in the theme selection UI in the admin screen and do not affect the actual appearance of the application. The actual style of the application is defined by the style file specified in `manifestKey`.
+<!-- textlint-enable weseek/max-comma -->
 
 <img :src="$withBase('/assets/images/en/customize-theme.png')" alt="customize-theme.png" class="border">
