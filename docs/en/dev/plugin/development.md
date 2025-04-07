@@ -74,8 +74,8 @@ Files to be placed in the dist directory differ depending on the plugin type.
 For detailed implementation methods for each plugin type, please refer to the following documentation:
 
 - [Script plugins](/en/dev/plugin/script.html)
-- Theme plugins (coming soon)
-- Template plugins (coming soon)
+- [Theme plugins](/en/dev/plugin/theme.html)
+- [Template plugins](/en/dev/plugin/template.html)
 
 ### 5. Publish the plugin (optional)
 

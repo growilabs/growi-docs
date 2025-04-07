@@ -62,14 +62,14 @@ yyyy/mm/dd hh:mm
 growi-plugin-templates-example/
 ├── package.json             # プラグイン情報と依存関係
 └── dist/                    # テンプレートファイルが格納されるディレクトリ
-    ├── template1/          # テンプレート1のディレクトリ
-    │   ├── en_US/         # 英語版テンプレート
-    │   │   ├── meta.json # テンプレート1の英語メタデータ
-    │   │   └── template.md # テンプレート1の英語コンテンツ
-    │   └── ja_JP/         # 日本語版テンプレート 
-    │       ├── meta.json # テンプレート1の日本語メタデータ
-    │       └── template.md # テンプレート1の日本語コンテンツ
-    └── template2/          # テンプレート2のディレクトリ (同様の構造)
+    ├── template1/           # テンプレート1のディレクトリ
+    │   ├── en_US/           # 英語版テンプレート
+    │   │   ├── meta.json    # テンプレート1の英語メタデータ
+    │   │   └── template.md  # テンプレート1の英語コンテンツ
+    │   └── ja_JP/           # 日本語版テンプレート 
+    │       ├── meta.json    # テンプレート1の日本語メタデータ
+    │       └── template.md  # テンプレート1の日本語コンテンツ
+    └── template2/           # テンプレート2のディレクトリ (同様の構造)
 ```
 
 ### 実際のプラグインの構造例
@@ -102,10 +102,10 @@ package.json を作成し、`growiPlugin` ディレクティブを記載しま�
   "growiPlugin": {
     "schemaVersion": "4",
     "types": [
-      "template"                 // 複数のプラグインタイプを同時に設定可能
+      "template"       // 複数のプラグインタイプを同時に設定可能
     ],
     "locales": [
-      "en_US", "ja_JP"          // サポートする言語(対応言語: "en_US", "ja_JP", "zh_CN", "fr_FR")
+      "en_US", "ja_JP" // サポートする言語(対応言語: "en_US", "ja_JP", "zh_CN", "fr_FR")
     ]
   }
 }
