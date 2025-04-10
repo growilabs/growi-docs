@@ -15,6 +15,7 @@ Thumbs.db
 npm-debug.log
 /npm-debug.log.*
 package-lock.json
+.pnpm-store
 
 # Dist #
 docs/.vuepress/dist
