@@ -60,7 +60,7 @@ jobs:
       uses: jenkey2011/vuepress-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_SCRIPT: pnpm run api:build && pnpm run docs-growi-org:build
+        BUILD_SCRIPT: npm run api:build && npm run docs-growi-org:build
         BUILD_DIR: docs/.vuepress/dist/
         CNAME: docs.growi.org
 
