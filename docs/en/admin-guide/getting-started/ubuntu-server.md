@@ -252,15 +252,14 @@ $ cd /opt/growi
 # Check the tags
 $ sudo git tag -l
 ...
-v6.3.3
-v6.3.4
-v7.0.0
-v7.0.1
-v7.0.2
+v7.2.0
+v7.2.1
+v7.2.3
+v7.2.4
 ...
 
 # Use the latest version that doesn't have RC
-$ sudo git checkout -b v7.0.2 refs/tags/v7.0.2
+$ sudo git checkout -b v7.2.4 refs/tags/v7.2.4
 ```
 
 After cloning the source code, use the `pnpm` command to install packages needed for GROWI.
