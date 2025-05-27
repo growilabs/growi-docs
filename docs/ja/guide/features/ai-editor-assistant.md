@@ -11,15 +11,15 @@ GROWI AI エディターアシスタント（以下、「エディターアシ�
 1. エディターアシスタントを利用したいページにアクセスし、エディターモードで開く
 1. エディター左下にある「エディターアシスタント」ボタンをクリック
 
-    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_1.png')" alt="ai-editor-assistant_1.png" class="border">
+    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_1.png')" alt="Location of Editor Assistant button in the bottom left of the editor" class="border">
 
 1. 右サイドバー下部のフォームにプロンプトを入力し、送信ボタンをクリック
 
-    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_2.png')" alt="ai-editor-assistant_2.png" class="border">
+    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_2.png')" alt="Prompt input form in the right sidebar" class="border">
 
 1. エディターに生成された文章が差分表示されるので、エディター中の「Accept (採用)」または「Discard (破棄)」 をクリックするか右サイドバーの「採用」または「破棄」ボタンをクリックすることでエディターに文章を反映させることができます
 
-    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_3.png')" alt="ai-editor-assistant_3.png" class="border">
+    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_3.png')" alt="Generated text with diff display and Accept/Discard buttons" class="border">
 
 
 ## クイックメニューを使う
@@ -29,11 +29,11 @@ GROWI AI エディターアシスタント（以下、「エディターアシ�
 1. エディター左下にある「エディターアシスタント」ボタンをクリック
 1. 右サイドバー上部にあるクイックメニューからあらかじめ用意されているプロンプトを選択 (例として「この記事の要約をつくる」を選択)
 
-    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_4.png')" alt="ai-editor-assistant_4.png" class="border">
+    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_4.png')" alt="Quick menu with pre-defined prompts selection" class="border">
 
 1. 文章が生成される
 
-    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_5.png')" alt="ai-editor-assistant_5.png" class="border">
+    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_5.png')" alt="Generated text from quick menu prompt" class="border">
 
 
 ## 選択した文章を書き換える
@@ -42,15 +42,15 @@ GROWI AI エディターアシスタント（以下、「エディターアシ�
 
 1. エディター中の文章を選択する
 
-    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_6.png')" alt="ai-editor-assistant_6.png" class="border">
+    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_6.png')" alt="Selected text highlighted in the editor" class="border">
 
 1. 右サイドバー下部のフォームにプロンプトを入力し、送信ボタンをクリック
 
-    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_7.png')" alt="ai-editor-assistant_7.png" class="border">
+    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_7.png')" alt="Prompt input for rewriting selected text" class="border">
 
 1. 選択した文章に生成された文章が差分表示される
 
-    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_8.png')" alt="ai-editor-assistant_8.png" class="border">
+    <img :src="$withBase('/assets/images/ja/ai-editor-assistant_8.png')" alt="Diff display showing original and rewritten text" class="border">
 
 
 ## GROWI 内のナレッジに基づいた文章を生成する
@@ -61,10 +61,9 @@ GROWI のナレッジアシスタントの学習内容に基づいて文章生�
 1. エディターアシスタントの右サイドバー上部の「アシスタントを使用する」ボタンをクリック
 1. 自分で作成したナレッジアシスタントや他のユーザーが公開しているナレッジアシスタントが表示されるのでいずれかを選択
 
-     <img :src="$withBase('/assets/images/ja/ai-editor-assistant_9.png')" alt="ai-editor-assistant_9.png" class="border">
+     <img :src="$withBase('/assets/images/ja/ai-editor-assistant_9.png')" alt="Knowledge assistant selection dialog" class="border">
 
 1. 他のセクションを参考にプロンプトを入力してエディターに文章を生成する
-
 
 <ContextualBlock context="docs-growi-org">
 
