@@ -17,7 +17,7 @@ GROWI AI エディターアシスタント（以下、「エディターアシ�
 
     <img :src="$withBase('/assets/images/ja/ai-editor-assistant_2.png')" alt="ai-editor-assistant_2.png" class="border">
 
-1. エディターに生成された文章が差分表示されるので、エディター中の「Accept (採用)」or「Discard (破棄)」 をクリックするか右サイドバーの「採用」or「破棄」ボタンをクリックすることでエディターに文章を反映させることができます
+1. エディターに生成された文章が差分表示されるので、エディター中の「Accept (採用)」または「Discard (破棄)」 をクリックするか右サイドバーの「採用」または「破棄」ボタンをクリックすることでエディターに文章を反映させることができます
 
     <img :src="$withBase('/assets/images/ja/ai-editor-assistant_3.png')" alt="ai-editor-assistant_3.png" class="border">
 
