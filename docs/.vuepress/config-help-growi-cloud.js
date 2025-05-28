@@ -98,6 +98,7 @@ module.exports = {
             '/ja/cloud/private-cloud.md',
             '/ja/cloud/compensation-option.md',
             '/ja/cloud/withdrawal.md',
+            '/ja/cloud/anti-virus.md',
           ]
         },
         {
