@@ -332,6 +332,7 @@ module.exports = {
             '/en/guide/features/footnote.md',
             '/en/guide/features/forgot_password.md',
             '/en/guide/features/ai-knowledge-assistant.md',
+            '/en/guide/features/ai-editor-assistant.md'
           ]
         },
         {
