@@ -267,6 +267,7 @@ module.exports = {
             '/en/cloud/growi-ai-credit.md',
             '/en/cloud/price.md',
             '/en/cloud/withdrawal.md',
+            '/en/cloud/anti-virus.md',
           ]
         },
         {
