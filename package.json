@@ -46,8 +46,8 @@
   "scripts": {
     "api:swagger2openapi:apiv3": "cross-env OUT=./tmp/openapi-spec-apiv3.json sh -c 'sh \"${APP_PATH}/bin/swagger-jsdoc/generate-spec-apiv3.sh\"'",
     "api:swagger2openapi:apiv1": "cross-env OUT=./tmp/openapi-spec-apiv1.json sh -c 'sh \"${APP_PATH}/bin/swagger-jsdoc/generate-spec-apiv1.sh\"'",
-    "api:redoc:apiv3": "redocly build-docs -o redoc/apiv3.html tmp/openapi-spec-apiv3.json && shx cp redoc/apiv3.html docs/.vuepress/public/redoc-apiv3.html",
-    "api:redoc:apiv1": "redocly build-docs -o redoc/apiv1.html tmp/openapi-spec-apiv1.json && shx cp redoc/apiv1.html docs/.vuepress/public/redoc-apiv1.html",
+    "api:redoc:apiv3": "redocly build-docs -o redoc/apiv3.html tmp/openapi-spec-apiv3.json && shx cp redoc/apiv3.html docs/.vuepress/public/redoc-apiv3.html && shx cp tmp/openapi-spec-apiv3.json docs/.vuepress/public/",
+    "api:redoc:apiv1": "redocly build-docs -o redoc/apiv1.html tmp/openapi-spec-apiv1.json && shx cp redoc/apiv1.html docs/.vuepress/public/redoc-apiv1.html && shx cp tmp/openapi-spec-apiv1.json docs/.vuepress/public/",
     "api:dev:swagger2openapi": "cross-env APP_PATH=../growi/apps/app run-p api:swagger2openapi:*",
     "api:dev": "npm-watch",
     "api:build": "cross-env APP_PATH=tmp/growi/apps/app run-s api:swagger2openapi:* api:redoc:*",
