@@ -19,6 +19,9 @@ package-lock.json
 
 # Dist #
 docs/.vuepress/dist
+docs/.vuepress/public/openapi-spec-*.json
+docs/.vuepress/public/redoc-*.html
+docs/.vuepress/public/index.html
 redoc
 tmp
 
