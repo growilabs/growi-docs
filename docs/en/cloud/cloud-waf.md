@@ -42,7 +42,9 @@ The Cloud WAF used in GROWI.cloud is **designed with consideration for major thr
 However, it does not provide complete protection against all vulnerabilities.
 
 In particular, **some vulnerabilities at the application layer (Layer 7), such as Cross-Site Scripting (XSS)**, are difficult to detect using communication-level filtering alone.  
-Since detection of such threats depends on the application’s source code and input handling logic, they must be addressed through the implementation and secure configuration of GROWI itself.
+This is because detection depends on the application’s source code and input handling logic.  
+Such threats must therefore be addressed through the implementation and secure configuration of GROWI itself.
+
 
 Such mitigation is ensured through software updates to GROWI and secure operational practices by administrators.
 
