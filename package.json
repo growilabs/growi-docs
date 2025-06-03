@@ -19,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/growilabs/growi-docs/issues"
   },
-  "packageManager": "pnpm@9.12.3",
   "watch": {
     "api:dev:swagger2openapi": {
       "extensions": "js,ts",
@@ -57,9 +56,16 @@
     "help-growi-cloud:build": "shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && shx cp ./docs/.vuepress/enhance-help-growi-cloud.js ./docs/.vuepress/enhanceApp.js && shx mkdir -p ./docs/.vuepress/theme && shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme &&   shx cp ./docs/.vuepress/public/assets/help-growi-cloud/index.html ./docs/.vuepress/public/index.html && vuepress build docs",
     "lint": "textlint \"docs/ja/**/*.md\" \"docs/en/**/*.md\" README.md",
     "start": "pnpm docs-growi-org:dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodets": "tsx"
+  },
+  "dependencies": {
+    "vuepress-plugin-medium-zoom": "^1.1.9",
+    "vuepress-plugin-redirect": "^1.2.5",
+    "vuepress-plugin-sitemap": "^2.3.1"
   },
   "devDependencies": {
+    "@apidevtools/swagger-parser": "^10.1.1",
     "@popperjs/core": "^2.11.8",
     "@redocly/cli": "^1.25.8",
     "@vuepress/plugin-google-analytics": "^1.9.10",
@@ -67,6 +73,7 @@
     "@vuepress/plugin-search": "^1.9.10",
     "babel-eslint": "^10.0.1",
     "bootstrap": "^5.2.3",
+    "commander": "^14.0.0",
     "cross-env": "^7.0.3",
     "eslint": "^5.16.0",
     "eslint-config-weseek": "^1.0.1",
@@ -85,17 +92,13 @@
     "textlint": "^12.0.2",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-weseek": "^1.0.3",
+    "tsx": "^4.19.4",
     "vue-tabs-component": "^1.5.0",
     "vuepress": "^1.9.10",
     "vuepress-plugin-tabs": "^0.3.0"
   },
   "engines": {
-    "node": "^18 || ^20",
-    "pnpm": ">=9.4 <10"
+    "node": ">=22"
   },
-  "dependencies": {
-    "vuepress-plugin-medium-zoom": "^1.1.9",
-    "vuepress-plugin-redirect": "^1.2.5",
-    "vuepress-plugin-sitemap": "^2.3.1"
-  }
+  "packageManager": "pnpm@10.11.0"
 }
