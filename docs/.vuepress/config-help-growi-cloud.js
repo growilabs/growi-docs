@@ -269,6 +269,7 @@ module.exports = {
             '/en/cloud/price.md',
             '/en/cloud/withdrawal.md',
             '/en/cloud/anti-virus.md',
+            '/en/cloud/cloud-waf.md',
           ]
         },
         {
