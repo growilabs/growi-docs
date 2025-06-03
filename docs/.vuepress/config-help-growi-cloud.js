@@ -99,6 +99,7 @@ module.exports = {
             '/ja/cloud/compensation-option.md',
             '/ja/cloud/withdrawal.md',
             '/ja/cloud/anti-virus.md',
+            '/ja/cloud/cloud-waf.md',
           ]
         },
         {
