@@ -9,8 +9,7 @@
     "features": {
       "ghcr.io/devcontainers/features/node:1": {
         "version": "20.18.0"
-      },
-      "ghcr.io/devcontainers-contrib/features/pnpm:2.0.4": {}
+      }
     },
 
     "postCreateCommand": "/bin/bash ./.devcontainer/postCreateCommand.sh",
