@@ -23,7 +23,7 @@
     "api:dev:swagger2openapi": {
       "extensions": "js,ts",
       "patterns": [
-        "../growi/apps/app/bin/swagger-jsdoc",
+        "../growi/apps/app/bin/openapi",
         "../growi/apps/app/src/server/models",
         "../growi/apps/app/src/server/routes",
         "../growi/apps/app/src/server/routes/apiv3"
@@ -43,8 +43,8 @@
     }
   },
   "scripts": {
-    "api:swagger2openapi:apiv3": "cross-env OUT=./tmp/openapi-spec-apiv3.json sh -c 'sh \"${APP_PATH}/bin/swagger-jsdoc/generate-spec-apiv3.sh\"'",
-    "api:swagger2openapi:apiv1": "cross-env OUT=./tmp/openapi-spec-apiv1.json sh -c 'sh \"${APP_PATH}/bin/swagger-jsdoc/generate-spec-apiv1.sh\"'",
+    "api:swagger2openapi:apiv3": "cross-env NODE_PATH=./node_modules OUT=./tmp/openapi-spec-apiv3.json sh -c 'sh \"${APP_PATH}/bin/openapi/generate-spec-apiv3.sh\"'",
+    "api:swagger2openapi:apiv1": "cross-env NODE_PATH=./node_modules OUT=./tmp/openapi-spec-apiv1.json sh -c 'sh \"${APP_PATH}/bin/openapi/generate-spec-apiv1.sh\"'",
     "api:redoc:apiv3": "redocly build-docs -o redoc/apiv3.html tmp/openapi-spec-apiv3.json && shx cp redoc/apiv3.html docs/.vuepress/public/redoc-apiv3.html && shx cp tmp/openapi-spec-apiv3.json docs/.vuepress/public/",
     "api:redoc:apiv1": "redocly build-docs -o redoc/apiv1.html tmp/openapi-spec-apiv1.json && shx cp redoc/apiv1.html docs/.vuepress/public/redoc-apiv1.html && shx cp tmp/openapi-spec-apiv1.json docs/.vuepress/public/",
     "api:dev:swagger2openapi": "cross-env APP_PATH=../growi/apps/app run-p api:swagger2openapi:*",
@@ -56,8 +56,7 @@
     "help-growi-cloud:build": "shx cp ./docs/.vuepress/config-help-growi-cloud.js ./docs/.vuepress/config.js && shx cp ./docs/.vuepress/enhance-help-growi-cloud.js ./docs/.vuepress/enhanceApp.js && shx mkdir -p ./docs/.vuepress/theme && shx cp -r ./docs/.vuepress/help-growi-cloud-theme/* ./docs/.vuepress/theme &&   shx cp ./docs/.vuepress/public/assets/help-growi-cloud/index.html ./docs/.vuepress/public/index.html && vuepress build docs",
     "lint": "textlint \"docs/ja/**/*.md\" \"docs/en/**/*.md\" README.md",
     "start": "pnpm docs-growi-org:dev",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "nodets": "tsx"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "vuepress-plugin-medium-zoom": "^1.1.9",
@@ -92,7 +91,6 @@
     "textlint": "^12.0.2",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-weseek": "^1.0.3",
-    "tsx": "^4.19.4",
     "vue-tabs-component": "^1.5.0",
     "vuepress": "^1.9.10",
     "vuepress-plugin-tabs": "^0.3.0"
