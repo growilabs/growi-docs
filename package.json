@@ -19,12 +19,11 @@
   "bugs": {
     "url": "https://github.com/growilabs/growi-docs/issues"
   },
-  "packageManager": "pnpm@9.12.3",
   "watch": {
     "api:dev:swagger2openapi": {
       "extensions": "js,ts",
       "patterns": [
-        "../growi/apps/app/bin/swagger-jsdoc",
+        "../growi/apps/app/bin/openapi",
         "../growi/apps/app/src/server/models",
         "../growi/apps/app/src/server/routes",
         "../growi/apps/app/src/server/routes/apiv3"
@@ -44,8 +43,8 @@
     }
   },
   "scripts": {
-    "api:swagger2openapi:apiv3": "cross-env OUT=./tmp/openapi-spec-apiv3.json sh -c 'sh \"${APP_PATH}/bin/swagger-jsdoc/generate-spec-apiv3.sh\"'",
-    "api:swagger2openapi:apiv1": "cross-env OUT=./tmp/openapi-spec-apiv1.json sh -c 'sh \"${APP_PATH}/bin/swagger-jsdoc/generate-spec-apiv1.sh\"'",
+    "api:swagger2openapi:apiv3": "cross-env NODE_PATH=./node_modules OUT=./tmp/openapi-spec-apiv3.json sh -c 'sh \"${APP_PATH}/bin/openapi/generate-spec-apiv3.sh\"'",
+    "api:swagger2openapi:apiv1": "cross-env NODE_PATH=./node_modules OUT=./tmp/openapi-spec-apiv1.json sh -c 'sh \"${APP_PATH}/bin/openapi/generate-spec-apiv1.sh\"'",
     "api:redoc:apiv3": "redocly build-docs -o redoc/apiv3.html tmp/openapi-spec-apiv3.json && shx cp redoc/apiv3.html docs/.vuepress/public/redoc-apiv3.html && shx cp tmp/openapi-spec-apiv3.json docs/.vuepress/public/",
     "api:redoc:apiv1": "redocly build-docs -o redoc/apiv1.html tmp/openapi-spec-apiv1.json && shx cp redoc/apiv1.html docs/.vuepress/public/redoc-apiv1.html && shx cp tmp/openapi-spec-apiv1.json docs/.vuepress/public/",
     "api:dev:swagger2openapi": "cross-env APP_PATH=../growi/apps/app run-p api:swagger2openapi:*",
@@ -59,7 +58,13 @@
     "start": "pnpm docs-growi-org:dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "vuepress-plugin-medium-zoom": "^1.1.9",
+    "vuepress-plugin-redirect": "^1.2.5",
+    "vuepress-plugin-sitemap": "^2.3.1"
+  },
   "devDependencies": {
+    "@apidevtools/swagger-parser": "^10.1.1",
     "@popperjs/core": "^2.11.8",
     "@redocly/cli": "^1.25.8",
     "@vuepress/plugin-google-analytics": "^1.9.10",
@@ -67,6 +72,7 @@
     "@vuepress/plugin-search": "^1.9.10",
     "babel-eslint": "^10.0.1",
     "bootstrap": "^5.2.3",
+    "commander": "^14.0.0",
     "cross-env": "^7.0.3",
     "eslint": "^5.16.0",
     "eslint-config-weseek": "^1.0.1",
@@ -90,12 +96,7 @@
     "vuepress-plugin-tabs": "^0.3.0"
   },
   "engines": {
-    "node": "^18 || ^20",
-    "pnpm": ">=9.4 <10"
+    "node": ">=22"
   },
-  "dependencies": {
-    "vuepress-plugin-medium-zoom": "^1.1.9",
-    "vuepress-plugin-redirect": "^1.2.5",
-    "vuepress-plugin-sitemap": "^2.3.1"
-  }
+  "packageManager": "pnpm@10.11.0"
 }
