@@ -98,6 +98,8 @@ module.exports = {
             '/ja/cloud/private-cloud.md',
             '/ja/cloud/compensation-option.md',
             '/ja/cloud/withdrawal.md',
+            '/ja/cloud/anti-virus.md',
+            '/ja/cloud/cloud-waf.md',
           ]
         },
         {
@@ -267,6 +269,8 @@ module.exports = {
             '/en/cloud/growi-ai-credit.md',
             '/en/cloud/price.md',
             '/en/cloud/withdrawal.md',
+            '/en/cloud/anti-virus.md',
+            '/en/cloud/cloud-waf.md',
           ]
         },
         {
