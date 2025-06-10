@@ -15,8 +15,8 @@
             </div>
             <div class="d-flex flex-column text-white">
               <a class="gc-footer-link" href="https://growi.cloud/signup?contractType=CORPORATION">{{ this.$themeLocaleConfig.free_trial }}</a>
-              <a class="gc-footer-link" href="https://growi.cloud/v2/contact" target="_blank" rel="noopener noreferrer">{{ this.$themeLocaleConfig.contact }}</a>
-              <a class="gc-footer-link" href="https://growi.cloud/v2/catalog-request" target="_blank" rel="noopener noreferrer">{{ this.$themeLocaleConfig.catalog_request }}</a>
+              <a class="gc-footer-link" href="https://growi.cloud/v2/contact">{{ this.$themeLocaleConfig.contact }}</a>
+              <a class="gc-footer-link" href="https://growi.cloud/v2/catalog-request">{{ this.$themeLocaleConfig.catalog_request }}</a>
             </div>
           </div>
         </div>
@@ -24,7 +24,7 @@
         <div class="col-12 col-md-3">
           <p class="text-white fw-bold gc-footer-title my-4">{{ this.$themeLocaleConfig.company_profile_terms_of_use }}</p>
           <div class="d-flex flex-column text-white mr-5">
-            <a class="gc-footer-link" :href="`https://growi.co.jp`" target="_blank" rel="noopener noreferrer">{{ this.$themeLocaleConfig.about_us }}</a>
+            <a class="gc-footer-link" :href="`https://growi.co.jp`">{{ this.$themeLocaleConfig.about_us }}</a>
             <a class="gc-footer-link" href="https://growi.cloud/terms-of-service">{{ this.$themeLocaleConfig.terms_of_service }}</a>
             <a class="gc-footer-link" href="https://growi.cloud/privacy-policy">{{ this.$themeLocaleConfig.privacy_policy }}</a>
             <a class="gc-footer-link" href="https://growi.cloud/asct">{{ this.$themeLocaleConfig.notation_based_on_the_act_on_specified_commercial_transactions }}</a>
