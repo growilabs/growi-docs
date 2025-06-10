@@ -9,6 +9,7 @@ npm-debug.log.*
 ehthumbs.db
 Thumbs.db
 *.Zone.Identifier
+*:Zone.Identifier
 
 # Node Files #
 /node_modules/
