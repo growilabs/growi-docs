@@ -86,7 +86,7 @@ docker-compose stop
 Remove Docker containers and Docker images.
 
 ```text
-docker-compose rm app mongo elasticseach
+docker-compose rm app mongo elasticsearch
 docker rmi weseek/growi:5
 ```
 
