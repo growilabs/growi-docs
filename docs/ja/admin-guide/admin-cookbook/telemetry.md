@@ -1,4 +1,4 @@
-# テレメトリー (ベータ)
+# テレメトリー
 
 ## 概要
 
@@ -15,46 +15,45 @@ OSS としてリリースされた GROWI は、これまで利用ユーザーか
 
 GROWI ユーザーはこの機能を通じて、GROWI の進化を支える貴重なデータ提供者として、このオープンソースソフトウェアに貢献できます。
 
-本機能はベータ版のため、デフォルトでは無効化されています。有効化すると、[GROWI, Inc.](https://growi.co.jp) が提供する安全な分析基盤にデータが送信され、GROWI の継続的な改善プログラムに参加できます。
-将来的なバージョンでは、送信データに関してより厳密な匿名化処理の実装を進めており、開発チームの品質基準を満たした段階で本機能をデフォルトで有効化する予定です。
+v7.2.9 では、送信データに関する厳密な匿名化処理の実装が完了し、開発チームの品質基準を満たしたため、本機能をデフォルトで有効化しました。[GROWI, Inc.](https://growi.co.jp) が提供する安全な分析基盤にデータが送信され、GROWI の継続的な改善プログラムに参加できます。
 
 <!-- textlint-disable weseek/max-kanji-continuous-len -->
-GROWI の更なる改善のため、テレメトリー機能開発初期の段階からのフィードバックを歓迎しています。
+GROWI の更なる改善のため、テレメトリー機能へのフィードバックを歓迎しています。
 <!-- textlint-enable weseek/max-kanji-continuous-len -->
 ご協力いただける場合は、ぜひこの改善プログラムへご参加ください。
-
 
 ## どんなデータが収集されますか？
 
 一般的な Node.js / JavaScript システム 向けの計装ライブラリを利用して収集可能なデータを収集します。
 
-v7.2.0 では、具体的には、次のライブラリを利用します。
+具体的には、次のライブラリを利用します。
 
 - [@opentelemetry/auto-instrumentations-node](https://www.npmjs.com/package/@opentelemetry/auto-instrumentations-node)
 
+## データの匿名化について
+
+v7.2.9 では、プライバシー保護を強化するため、追加の匿名化機能が追加されました。
+通常状態でも機密情報が送信されることはありませんが、より慎重にデータを匿名化したい環境においては環境変数 `OPENTELEMETRY_ANONYMIZE_IN_BEST_EFFORT=true` を設定することで追加の保護層を提供できます。
+有効にした場合、わずかながらサーバーパフォーマンスに影響する可能性があります。
 
 ## テレメトリーの収集に協力し、プロジェクトに貢献するには？
 
-環境変数 `OPENTELEMETRY_ENABLED=true` を設定して GROWI サーバーを起動してください。詳しくは [環境変数](/ja/admin-guide/admin-cookbook/env-vars.html) をご覧ください。
-
-この環境変数が設定されていない場合、データは私たちに送信されません。
+v7.2.9 以降、テレメトリー機能はデフォルトで有効化されています。
+特別な設定をしなくても、GROWI の継続的な改善プログラムに参加できます。詳しくは [環境変数](/ja/admin-guide/admin-cookbook/env-vars.html) をご覧ください。
 
 また、環境変数 `OTEL_LOG_LEVEL` を設定することで、収集される内容を確認できます。
 詳しくは [@opentelemetry/auto-instrumentations-node](https://www.npmjs.com/package/@opentelemetry/auto-instrumentations-node) をご覧ください。
-
 
 ## このデータは共有されますか?
 
 データ収集基盤を提供する GROWI, Inc. は、OSS の自由と開発者・利用者の権利とプライバシーを尊重する日本企業です。
 
 GROWI, Inc. では、製品の改善のためにテレメトリデータを社内のみで使用します。
-将来的には、完全匿名化されたデータがマーケティングなどのビジネス目的に限り他社と共有される可能性はありますが、v7.2.0 時点では他の組織に送信されることはありません。
-
+将来的には、完全匿名化されたデータがマーケティングなどのビジネス目的に限り他社と共有される可能性はありますが、現時点では他の組織に送信されることはありません。
 
 ## オプトアウトするにはどうすればいいですか?
 
-環境変数 `OPENTELEMETRY_ENABLED=false` を設定するか、または単に `OPENTELEMETRY_ENABLED` を未設定のままサーバーを起動してください。
-
+環境変数 `OPENTELEMETRY_ENABLED=false` を設定してサーバーを起動してください。詳しくは [環境変数](/ja/admin-guide/admin-cookbook/env-vars.html) をご覧ください。
 
 ## 送信先の変更
 
@@ -63,4 +62,3 @@ GROWI, Inc. では、製品の改善のためにテレメトリデータを社�
 <!-- textlint-enable weseek/ja-no-redundant-expression -->
 
 環境変数 `OTEL_EXPORTER_OTLP_ENDPOINT` を設定してください。詳しくは [環境変数](/ja/admin-guide/admin-cookbook/env-vars.html) をご覧ください。
-
