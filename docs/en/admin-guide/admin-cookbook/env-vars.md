@@ -90,7 +90,8 @@ pageClass: admin-cookbook-env-vars
 | `SLACKBOT_WITH_PROXY_SALT_FOR_PTOG` | Salt (for GROWI to Proxy) when generating tokens for the Official Bot or Custom Bot with proxy environment | `ptog` |
 | **Options related to OpenTelemetry** | | |
 | `OPENTELEMETRY_ENABLED` | Enables data transmission via OpenTelemetry. **This option overrides the official OpenTelemetry SDK's `OTEL_SDK_DISABLED`.** | `true` |
-| `OPENTELEMETRY_IS_APP_SITE_URL_HASHED` | Anonymizes the site URL in the data sent via OpenTelemetry. | `false` |
+| `OPENTELEMETRY_IS_APP_SITE_URL_HASHED` | Hashing the site URL in the data sent via OpenTelemetry. | `false` |
+| `OPENTELEMETRY_ANONYMIZE_IN_BEST_EFFORT` | Applies additional anonymization to data sent via OpenTelemetry. While sensitive information is not sent under normal circumstances, enabling this setting provides an extra layer of protection for environments requiring stricter data anonymization. Note that enabling this may have a slight impact on server performance. | `false` |
 | `OTEL_EXPORTER_OTLP_ENDPOINT` | Endpoint for data transmission | `https://telemetry.growi.org` |
 | Other environment variables starting with `OTEL_` | Refer to the official OpenTelemetry documentation.<ul><li><a href="https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/">Environment Variable Specification</a></li><li><a href="https://opentelemetry.io/docs/languages/sdk-configuration/">SDK Configuration</a></li></ul> |  |
 | **Option for GROWI AI features** |  |  |
