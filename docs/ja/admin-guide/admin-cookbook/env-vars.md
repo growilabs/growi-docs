@@ -92,7 +92,7 @@ pageClass: admin-cookbook-env-vars
 | **OpenTelemetry 関連オプション** | | |
 | `OPENTELEMETRY_ENABLED` | OpenTelemetry によるデータ送信を有効にします。**このオプションは、OpenTelemetry 公式 SDK の `OTEL_SDK_DISABLED` を上書きします。** | `true` |
 | `OPENTELEMETRY_IS_APP_SITE_URL_HASHED` | OpenTelemetry で送信されるデータ中のサイト URL をハッシュ化します。 | `false` |
-| `OPENTELEMETRY_ANONYMIZE_IN_BEST_EFFORT` | OpenTelemetry で送信されるデータに対して、追加の匿名化処理を行います。通常状態でも機密情報は送信されることはありませんが、より慎重にデータを匿名化したい環境では、この設定を有効にすることで追加の保護層を提供できます。有効にした場合、わずかながらサーバーパフォーマンスに影響する可能性があります。 | `false` |
+| `OPENTELEMETRY_ANONYMIZE_IN_BEST_EFFORT` | OpenTelemetry で送信されるデータに対して、追加の匿名化処理を行います。通常状態でも機密情報が送信されることはありませんが、より慎重にデータを匿名化したい環境においては、この設定を有効にすることで追加の保護層を提供できます。有効にした場合、わずかながらサーバーパフォーマンスに影響する可能性があります。 | `false` |
 | `OTEL_EXPORTER_OTLP_ENDPOINT` | データ送信先エンドポイント | `https://telemetry.growi.org` |
 | その他の `OTEL_` で始まる環境変数 | OpenTelemetry 公式ドキュメントを参照してください。<ul><li><a href="https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/">Environment Variable Specification</a></li><li><a href="https://opentelemetry.io/docs/languages/sdk-configuration/">SDK Configuration</a></li></ul> |  |
 | **GROWI AI オプション** |  |  |
