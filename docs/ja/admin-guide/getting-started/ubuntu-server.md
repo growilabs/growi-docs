@@ -28,39 +28,39 @@ Optional となっているものは必須ではありません。ただし、�
 [https://deb.nodesource.com/](https://deb.nodesource.com/) から Node.js のインストールスクリプトを取得します。作業ディレクトリはホームディレクトリで作業します。
 <!-- textlint-enable weseek/no-dead-link -->
 
-```text
+```bash
 $ cd ~
 $ curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
 ```
 
 取得したスクリプトを実行します。
 
-```text
+```bash
 $ sudo bash nodesource_setup.sh
 ```
 
 これにより `apt` 経由で node.js が取得できるようになったので、 `apt` コマンドでインストールを行います。
 
-```text
+```bash
 $ sudo apt install nodejs
 ```
 
 GROWI では pnpm を用いたパッケージインストールを利用するため、ここで `pnpm` コマンドをインストールしておきます。
 
-```text
+```bash
 $ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=\<version> sudo sh -
 $ sudo pnpm setup
 ```
 
 また、GROWI では Turborepo を用いてビルドを行うため、`turbo` コマンドをインストールします。
 
-```text
+```bash
 $ sudo pnpm add turbo --global
 ```
 
 Node.js, npm, pnpm, turbo のインストールが完了したら、インストールしたバージョンを確認しましょう。
 
-```text
+```bash
 $ nodejs -v
 v20.12.2
 $ npm -v
@@ -79,25 +79,25 @@ $ turbo --version
 
 まず、Elasticsearch を実行できるように JDK17 をインストールします。
 
-```text
+```bash
 $ sudo apt install openjdk-17-jdk
 ```
 
 パッケージをインストールするために、Elasticsearch レポジトリの GPG キーを追加します。
 
-```text
+```bash
 $ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
 ```
 
 Elasticsearch のレポジトリを追加します。
 
-```text
+```bash
 $ sudo echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
 ```
 
 これで、apt 経由で Elasticsearch がインストールできるようになったため、インストールを行います。
 
-```text
+```bash
 $ sudo apt update && sudo apt install elasticsearch
 ```
 
@@ -112,7 +112,7 @@ The generated password for the elastic built-in superuser is : ～～～～～�
 
 ここで Elasticsearch に割り当てるメモリを調整します。メモリの割り当ては個人ユースであれば 256MB で十分です。チーム規模、ページの量に応じて変更してください。
 
-```text
+```bash
 $ sudo vim /etc/elasticsearch/jvm.options
 # IMPORTANT: JVM heap size のコメントブロックの後に追記
 -Xms256m
@@ -121,7 +121,7 @@ $ sudo vim /etc/elasticsearch/jvm.options
 
 インストールが完了したら、 パッケージのバージョンを確認します。
 
-```text
+```bash
 $ dpkg -l elasticsearch
 Desired=Unknown/Install/Remove/Purge/Hold
 | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
@@ -175,14 +175,14 @@ diff -uNr old/elasticsearch.yml new/elasticsearch.yml
 
 まずは、Elasticsearch plugin をインストールするために利用するコマンドを検索します。
 
-```text
+```bash
 $ dpkg -L elasticsearch | grep bin | grep plugin
 /usr/share/elasticsearch/bin/elasticsearch-plugin
 ```
 
 上記で出力されたコマンドを利用して、 analysis-kuromoji plugin と analysis-icu plugin をインストールします。
 
-```text
+```bash
 # analysis-kuromoji のインストール
 $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromoji
 
@@ -194,13 +194,13 @@ $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 
 `systemctl` コマンドを使って、Elasticsearch の自動起動設定を有効化し、起動します。
 
-```text
+```bash
 $ sudo systemctl enable --now elasticsearch
 ```
 
 正常に起動しているか確認します。
 
-```text
+```bash
 $ systemctl status elasticsearch
 ● elasticsearch.service - Elasticsearch
      Loaded: loaded (/lib/systemd/system/elasticsearch.service; enabled; vendor preset: enabled)
@@ -210,7 +210,7 @@ $ systemctl status elasticsearch
 
 また、http で通信できることを確認します。
 
-```text
+```json
 $ curl http://localhost:9200/
 {
   "name" : "localhost.localdomain",
@@ -239,7 +239,7 @@ $ curl http://localhost:9200/
 
 まずは、`apt` のために public key をインポートします。
 
-```text
+```bash
 curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg \
    --dearmor
@@ -249,26 +249,26 @@ curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc | \
 
 **Ubuntu 20.04**
 
-```text
+```bash
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 ```
 
 **Ubuntu 22.04**
 
-```text
+```bash
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 
 ```
 
 レポジトリの追加まで完了したため、MongoDB のインストールを行います。
 
-```text
+```bash
 $ sudo apt update && sudo apt install mongodb-org
 ```
 
 インストールが完了したら、 パッケージのバージョンを確認します。
 
-```text
+```bash
 $ dpkg-query -l "mongodb-org*:amd64"
 Desired=Unknown/Install/Remove/Purge/Hold
 | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
@@ -286,13 +286,13 @@ ii  mongodb-org-tools                6.0.15       amd64        MongoDB tools
 
 `systemctl` コマンドを使って、MongoDB の自動起動設定を有効化し、起動します。
 
-```text
+```bash
 $ sudo systemctl enable --now mongod
 ```
 
 正常に起動しているか確認します。
 
-```text
+```bash
 $ systemctl status mongod
 ● mongod.service - MongoDB Database Server
      Loaded: loaded (/lib/systemd/system/mongod.service; enabled; vendor preset: enabled)
@@ -308,7 +308,7 @@ $ systemctl status mongod
 
 ここでは `/opt/growi` 配下にインストールする手順を記載しています。
 
-```text
+```bash
 $ sudo mkdir -p /opt/
 $ cd /opt/
 $ sudo git clone https://github.com/weseek/growi /opt/growi
@@ -329,7 +329,7 @@ $ sudo git checkout -b v7.2.4 refs/tags/v7.2.4
 
 ソースコードを clone した後に、`pnpm` コマンドを利用して、 GROWI に必要なパッケージをインストールします。
 
-```text
+```bash
 $ cd /opt/growi
 $ sudo pnpm install
 ```
@@ -338,7 +338,7 @@ $ sudo pnpm install
 
 パッケージのインストールが完了したら、ビルドを行います。
 
-```text
+```bash
 $ sudo npm run app:build
 ```
 
@@ -352,7 +352,7 @@ $ sudo npm run app:build
 
 `MONGO_URI` と `ELASTICSEARCH_URI` は環境に合わせて適宜書き換えてください。
 
-```text
+```bash
 $ sudo \
 MONGO_URI=mongodb://localhost:27017/growi \
 ELASTICSEARCH_URI=http://localhost:9200/growi \
@@ -377,7 +377,7 @@ npm run app:server
 
 #### インストール
 
-```text
+```bash
 $ sudo apt update && sudo apt -y install apache2
 ```
 
@@ -385,7 +385,7 @@ $ sudo apt update && sudo apt -y install apache2
 
 proxy, proxy\_http, proxy\_wstunnel module をインストールします。
 
-```text
+```bash
 $ sudo a2enmod proxy proxy_http proxy_wstunnel
 ```
 
@@ -393,7 +393,7 @@ $ sudo a2enmod proxy proxy_http proxy_wstunnel
 
 ここではリバースプロキシに関する箇所を抜粋して記載しています。
 
-```
+```apacheconf
 <IfModule mod_ssl.c>
   <VirtualHost _default_:443>
     ...
@@ -424,7 +424,7 @@ $ sudo a2enmod proxy proxy_http proxy_wstunnel
 
 #### 自動起動の設定
 
-```text
+```bash
 $ sudo systemctl enable --now apache2
 ```
 
@@ -432,15 +432,15 @@ $ sudo systemctl enable --now apache2
 
 #### インストール
 
-```text
+```bash
 $ sudo apt update && sudo apt -y install nginx
 ```
 
 #### リバースプロキシの設定例
 
-ここでは HTTPS を利用する設定例を記載しています。 &lt;server&gt; など&lt;&gt;で囲まれている箇所は、適宜環境に合わせて設定してください。
+ここでは HTTPS を利用する設定例を記載しています。 `<server>` など `<>` で囲まれている箇所は、適宜環境に合わせて設定してください。
 
-```text
+```nginx
 upstream growi {
     server localhost:3000;
 }
@@ -478,7 +478,7 @@ server {
 
 設定ファイルに問題がないことを確認します。
 
-```text
+```bash
 $ sudo nginx -t
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
@@ -486,6 +486,6 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 #### 自動起動の設定
 
-```text
+```bash
 $ sudo systemctl enable --now nginx
 ```
