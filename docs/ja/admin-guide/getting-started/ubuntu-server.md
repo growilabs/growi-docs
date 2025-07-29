@@ -314,7 +314,8 @@ $ systemctl status mongod
 
 ### インストール
 
-[https://github.com/weseek/growi](https://github.com/weseek/growi) からソースコードを取得し、[https://github.com/weseek/growi/releases](https://github.com/weseek/growi/releases) にて、最新の安定版のバージョンを確認します。
+[https://github.com/weseek/growi](https://github.com/weseek/growi) からソースコードを取得し、
+[https://github.com/weseek/growi/releases](https://github.com/weseek/growi/releases) にて、最新の安定版のバージョンを確認します。
 
 ここでは `/opt/growi` 配下にインストールする手順を記載しています。所有ユーザー・グループを GROWI 実行ユーザーに変更するため、`<username>` と `<usergroup>` は適宜変更してください。
 
