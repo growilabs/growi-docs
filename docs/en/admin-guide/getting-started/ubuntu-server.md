@@ -4,65 +4,77 @@
 
 ## Overview
 
-This chapter introduces the installation process for GROWI on Ubuntu Server 16.04 \(Xenial\). Installation on 14.04 and 18.04 have not been verified.
+This chapter introduces how to install GROWI on Ubuntu Server 22.04 (Jammy). Other versions are currently untested.
 
-Software needed for Setup are listed below.
+The software required for setup is as follows:
 
-* Node.js 14.x \(DO NOT USE 9.x\)
+* node.js 18.x or 20.x
 * npm 6.x
 * pnpm
-* MongoDB 4.4
-* \(Option\) Elasticsearch 6.8
-* \(Option\) systemd
-* \(Option\) Apache or nginx
+* MongoDB 4.4 or higher (6.0 or higher recommended)
+* (Option) Elasticsearch 7.x or 8.x
+* (Option) systemd
+* (Option) Apache or nginx
 
-Software listed as 'Optional' are not required, but in this document all are used, from construction of an environment using Apache or nginx as a reverse proxy for the full-text search feasible Growi, to simultaneously launching the host OS using systemd.
+Optional items are not mandatory. However, this section explains how to build an environment
+that uses all of these to create a GROWI with full-text search capabilities,
+reverse-proxied with Apache or nginx, and automatically started with systemd along with the host.
 
-## Installation for node.js 14.x & npm
+## Installing Tools
 
-### Use the NodeSource repository
+Install `git` and `curl` which are required during the installation process.
 
-<!-- textlint-disable weseek/no-dead-link -->
-Download the Node.js installation script from [https://deb.nodesource.com/](https://deb.nodesource.com/). The working directory is the home directory.
-<!-- textlint-enable weseek/no-dead-link -->
-
-```text
-$ cd ~
-$ curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+```bash
+$ sudo apt update && sudo apt -y install git curl
 ```
 
-Run the retrieved script.
+## Installing node.js 20.x & npm
 
-```text
+### Using NodeSource repository
+
+<!-- textlint-disable weseek/no-dead-link -->
+Get the Node.js installation script from [https://deb.nodesource.com/](https://deb.nodesource.com/). Work in the home directory.
+<!-- textlint-enable weseek/no-dead-link -->
+
+```bash
+$ cd ~
+$ curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+```
+
+Execute the downloaded script.
+
+```bash
 $ sudo bash nodesource_setup.sh
 ```
 
-Now that node.js can be retrieved via `apt-get`, use the `apt-get` command to install.
+This enables node.js to be obtained via `apt`, so install it using the `apt` command.
 
-```text
-$ sudo apt-get install nodejs
+```bash
+$ sudo apt -y install nodejs
 ```
 
-Since GROWI uses pnpm for package installation, install the `pnpm` command.
+Since GROWI uses pnpm for package installation, install the `pnpm` command here.
 
-```text
+For the `<version>` part, please check the official site information and select appropriately.
+
+```bash
 $ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sudo sh -
 $ sudo pnpm setup
 ```
 
-Additionally, since GROWI uses Turborepo for building, install the `turbo` command.
+Also, since GROWI uses Turborepo for building, install the `turbo` command.
 
-```text
+```bash
 $ sudo pnpm add turbo --global
 ```
 
-Once installation for Node.js, npm, pnpm and turbo is completed, check the installed versions.
+After installing Node.js, npm, pnpm, and turbo, check the installed versions.
 
-```text
+```bash
 $ nodejs -v
-v14.11.0
+v20.12.2
 $ npm -v
-6.14.8
+10.5.0
 $ pnpm -v
 9.12.2
 $ turbo --version
@@ -73,184 +85,249 @@ $ turbo --version
 
 ### Installation
 
-Follow the [Official site](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) to proceed installation. Here we make a few changes to install Elasticsearch 5.x
+Follow the [official page](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) to proceed with installation. Here we install Elasticsearch 8.x.
 
-::: warning
-This document is outdated. GROWI currently supports the most recent version of Elasticsearch 6.x (updated 05/2019)
-:::
+First, install JDK17 to run Elasticsearch.
 
-First, install JDK8 to make Elasticsearch runnable.
-
-```text
-$ sudo apt-get install openjdk-8-jdk
+```bash
+$ sudo apt -y install openjdk-17-jdk
 ```
 
-To install the package, import the Elasticsearch repository's GPG key.
+Add the Elasticsearch repository GPG key to install packages.
 
-```text
-$ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-```
-
-To allow installation using the apt command via https, install the `apt-transport-https` package.
-
-```text
-$ sudo apt-get install apt-transport-https
+```bash
+$ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
 ```
 
 Add the Elasticsearch repository.
 
-```text
-$ echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
+```bash
+$ sudo echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
 ```
 
-Now Elasticsearch can be installed via apt-get. Install.
+Now Elasticsearch can be installed via apt, so proceed with installation.
 
-```text
-$ sudo apt-get update && sudo apt-get install elasticsearch
+```bash
+$ sudo apt update && sudo apt -y install elasticsearch
 ```
 
-Once the installation is complete, specify the memory allocation pool size for Elasticsearch. If the usage is for individual use, 256MB should be enough for memory allocation. Make changes based on the scale of the team and the amount of pages.
+After installation is complete, the default password for the elastic user will be displayed, so make sure to note it down somewhere.
 
 ```text
+--------------------------- Security autoconfiguration information ------------------------------ 
+Authentication and authorization are enabled. 
+TLS for the transport and HTTP layers is enabled and configured. 
+The generated password for the elastic built-in superuser is : ～～～～～～～
+```
+
+Here, adjust the memory allocated to Elasticsearch. For personal use, 256MB is sufficient. Change according to team size and the number of pages.
+
+```bash
 $ sudo vim /etc/elasticsearch/jvm.options
-# Before edit
--Xms1g
--Xmx1g
-
-# After edit
+# Add after the IMPORTANT: JVM heap size comment block
 -Xms256m
 -Xmx256m
 ```
 
-Once installation is completed, check the package version.
+After installation is complete, check the package version.
 
-```text
-$ dpkg -l | grep elasticsearch
-ii  elasticsearch                    5.6.10                                     all          Elasticsearch is a distributed RESTful search engine built for the cloud. Reference documentation can be found at https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html and the 'Elasticsearch: The Definitive Guide' book can be found at https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html
+```bash
+$ dpkg -l elasticsearch
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name           Version      Architecture Description
++++-==============-============-============-=====================================================
+ii  elasticsearch  8.13.2       amd64        Distributed RESTful search engine built for the cloud
 ```
 
-Using the `systemctl` command, launch Elasticsearch.
+### Disabling TLS
 
-```text
-$ sudo systemctl start elasticsearch
+Elasticsearch 8.x only accepts TLS communication by default. Since GROWI communicates via HTTP, configuration changes are necessary.
+
+Edit `/etc/elasticsearch/elasticsearch.yml` and change the three settings from true to false, referring to the following diff.
+
+```diff
+diff -uNr old/elasticsearch.yml new/elasticsearch.yml
+--- old/elasticsearch.yml       2024-04-30 13:36:37.106652641 +0000
++++ new/elasticsearch.yml       2024-04-30 13:38:07.739773922 +0000
+@@ -89,18 +89,18 @@
+ # --------------------------------------------------------------------------------
+
+ # Enable security features
+-xpack.security.enabled: true
++xpack.security.enabled: false
+
+ xpack.security.enrollment.enabled: true
+
+ # Enable encryption for HTTP API client connections, such as Kibana, Logstash, and Agents
+ xpack.security.http.ssl:
+-  enabled: true
++  enabled: false
+   keystore.path: certs/http.p12
+
+ # Enable encryption and mutual authentication between cluster nodes
+ xpack.security.transport.ssl:
+-  enabled: true
++  enabled: false
+   verification_mode: certificate
+   keystore.path: certs/transport.p12
+   truststore.path: certs/transport.p12
 ```
 
-Enable the autoboot setting of elasticsearch
 
-```text
-$ sudo systemctl enable elasticsearch
-```
+### Installing Elasticsearch plugins required for GROWI
 
-Check the status to verify it is running properly.
+Install the following Elasticsearch plugins:
 
-```text
-$ sudo systemctl status elasticsearch
-```
-
-### Installation for Elasticsearch plugins needed for GROWI
-
-We will install the Elasticsearch plugins shown below
-
-* [Japanese \(kuromoji\) Analysis plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-kuromoji.html)
+* [Japanese (kuromoji) Analysis plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-kuromoji.html)
 * [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-icu.html)
 
-First, search for the command used to install Elasticsearch plugins
+First, search for the command used to install Elasticsearch plugins.
 
-```text
+```bash
 $ dpkg -L elasticsearch | grep bin | grep plugin
 /usr/share/elasticsearch/bin/elasticsearch-plugin
 ```
 
-Using the command above, install both the analysis-kuromoji plugin and the analysis-icu plugin
+Use the command output above to install the analysis-kuromoji plugin and analysis-icu plugin.
 
-```text
-# Installation for analysis-kuromoji
+```bash
+# Install analysis-kuromoji
 $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromoji
 
-# Installation for analysis-icu plugin
+# Install analysis-icu plugin
 $ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
+```
+
+### Starting Elasticsearch and enabling auto-start
+
+Use the `systemctl` command to enable auto-start for Elasticsearch and start it.
+
+```bash
+$ sudo systemctl enable --now elasticsearch
+```
+
+Check if it's running normally.
+
+```bash
+$ systemctl status elasticsearch
+● elasticsearch.service - Elasticsearch
+     Loaded: loaded (/lib/systemd/system/elasticsearch.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2024-05-03 08:46:23 JST; 11min ago
+...
+```
+
+Also, verify that http communication is possible.
+
+```json
+$ curl http://localhost:9200/
+{
+  "name" : "localhost.localdomain",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "_na_",
+  "version" : {
+    "number" : "8.13.3",
+    "build_flavor" : "default",
+    "build_type" : "rpm",
+    "build_hash" : "617f7b76c4ebcb5a7f1e70d409a99c437c896aea",
+    "build_date" : "2024-04-29T22:05:16.051731935Z",
+    "build_snapshot" : false,
+    "lucene_version" : "9.10.0",
+    "minimum_wire_compatibility_version" : "7.17.0",
+    "minimum_index_compatibility_version" : "7.0.0"
+  },
+  "tagline" : "You Know, for Search"
+}
 ```
 
 ## MongoDB
 
 ### Installation
 
-Follow the [Official site](https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-ubuntu/) to proceed installation. In this section MongoDB 3.6 is used.
+Follow the [official page](https://www.mongodb.com/docs/v6.0/tutorial/install-mongodb-on-ubuntu/) to proceed with installation. The version is MongoDB 6.0.
 
-::: warning
-This document is outdated. GROWI currently supports the version of MongoDB 4.x (updated 07/2021)
-:::
+First, import the public key for `apt`.
 
-To start off, import the public key used by `apt`.
-
-```text
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+```bash
+curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg \
+   --dearmor
 ```
 
-Add the repository. Listed below are examples for Ubuntu 14.04 and Ubuntu 16.04.
+Add the repository. Here are examples for Ubuntu 20.04 and Ubuntu 22.04.
 
-**Ubuntu 14.04**
+**Ubuntu 20.04**
 
-```text
-$ echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+```bash
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 ```
 
-**Ubuntu 16.04**
+**Ubuntu 22.04**
 
-```text
-$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+```bash
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+
 ```
 
-Now that the repository has been added, install MongoDB.
+After adding the repository, install MongoDB.
 
-```text
-$ sudo apt-get update && sudo apt-get install mongodb-server
+```bash
+$ sudo apt update && sudo apt -y install mongodb-org
 ```
 
-Once installation is complete, check the package versions.
+After installation is complete, check the package version.
 
-```text
-ii  mongodb-org                      3.6.6                                      amd64        MongoDB open source document-oriented database system (metapackage)
-ii  mongodb-org-mongos               3.6.6                                      amd64        MongoDB sharded cluster query router
-ii  mongodb-org-server               3.6.6                                      amd64        MongoDB database server
-ii  mongodb-org-shell                3.6.6                                      amd64        MongoDB shell client
-ii  mongodb-org-tools                3.6.6                                      amd64        MongoDB tools
+```bash
+$ dpkg-query -l "mongodb-org*:amd64"
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                             Version      Architecture Description
++++-================================-============-============-===================================================================
+ii  mongodb-org                      6.0.15       amd64        MongoDB open source document-oriented database system (metapackage)
+ii  mongodb-org-database             6.0.15       amd64        MongoDB open source document-oriented database system (metapackage)
+ii  mongodb-org-database-tools-extra 6.0.15       amd64        Extra MongoDB database tools
+ii  mongodb-org-mongos               6.0.15       amd64        MongoDB sharded cluster query router
+ii  mongodb-org-server               6.0.15       amd64        MongoDB database server
+ii  mongodb-org-shell                6.0.15       amd64        MongoDB shell client
+ii  mongodb-org-tools                6.0.15       amd64        MongoDB tools
 ```
 
-Using the `systemctl` command, launch MongoDB.
+Use the `systemctl` command to enable auto-start for MongoDB and start it.
 
-```text
-$ sudo systemctl start mongod
+```bash
+$ sudo systemctl enable --now mongod
 ```
 
-Enable the autoboot setting of MongoDB.
+Check if it's running normally.
 
-```text
-$ sudo systemctl enable mongod
-```
-
-Check the status to verify it is running properly.
-
-```text
-$ sudo systemctl status mongod
+```bash
+$ systemctl status mongod
+● mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2024-05-03 08:45:35 JST; 14min ago
+...
 ```
 
 ## GROWI
 
 ### Installation
 
-Download the source code from [https://github.com/weseek/growi](https://github.com/weseek/growi), and check the latest stable version at [https://github.com/weseek/growi/releases](https://github.com/weseek/growi/releases).
+Get the source code from [https://github.com/weseek/growi](https://github.com/weseek/growi) and check the latest stable version at [https://github.com/weseek/growi/releases](https://github.com/weseek/growi/releases).
 
-The installation procedure shown below will be carried out under `/opt/growi`.
+Here we describe the procedure for installing under `/opt/growi`.
+To change the owner user and group to the GROWI execution user, please modify `<username>` and `<usergroup>` as appropriate.
 
-```text
+```bash
 $ sudo mkdir -p /opt/
+$ sudo chown <username>:<usergroup> /opt/
 $ cd /opt/
-$ sudo git clone https://github.com/weseek/growi /opt/growi
-$ cd /opt/growi
+$ git clone https://github.com/weseek/growi growi
+$ cd growi
 
-# Check the tags
-$ sudo git tag -l
+# Check tags
+$ git tag --sort=-version:refname | head -10
 ...
 v7.2.0
 v7.2.1
@@ -258,84 +335,93 @@ v7.2.3
 v7.2.4
 ...
 
-# Use the latest version that doesn't have RC
-$ sudo git checkout -b v7.2.4 refs/tags/v7.2.4
+# Use the latest version without RC
+$ git checkout -b v7.2.4 refs/tags/v7.2.4
 ```
 
-After cloning the source code, use the `pnpm` command to install packages needed for GROWI.
+After cloning the source code, use the `pnpm` command to install packages required for GROWI.
 
-```text
+```bash
 $ cd /opt/growi
-$ sudo pnpm install
+$ pnpm install
 ```
 
-### Check Startup
+### Build
 
-Once installation for packages is completed, check the startup.
+After package installation is complete, perform the build.
 
-Here it is a requirement that MongoDB and Elasticsearch are running under the same hostname.
+```bash
+$ pnpm run app:build
+```
 
-Rewrite `MONGO_URI` and `ELASTICSEARCH_URI` appropriate to the environment.
+This will take some time.
 
-```text
+### Startup verification
+
+After the build is complete, perform startup verification.
+
+This assumes that MongoDB and Elasticsearch are running on the same host.
+
+Please modify `MONGO_URI` and `ELASTICSEARCH_URI` according to your environment.
+
+```bash
 $ sudo \
 MONGO_URI=mongodb://localhost:27017/growi \
 ELASTICSEARCH_URI=http://localhost:9200/growi \
-npm run start
+npm run app:server
 
 ...
-# Wait for the message below to appear
-> growi@4.3.1 server:prod /opt/growi
-> env-cmd config/env.prod.js node app.js
+# Wait until the following message is displayed
+{"name":"growi:crowi","hostname":"growi-server","pid":29259,"level":30,"msg":"[production] Express server is listening on port 3000","time":"2024-04-30T21:50:05.549Z","v":0}
 ```
 
-Access `http://<hostname or ip address>:3000/` and check whether the initial setup page appears.
+Access `http://<hostname or ip address>:3000/` and verify that the initial setup screen is displayed.
 
-### Setting autoboot using systemd
+### Auto-start configuration with systemd
 
-See "[Autostart using systemd](/en/admin-guide/admin-cookbook/launch-with-systemd.html)".
+Refer to "[Auto-start with systemd](/en/admin-guide/admin-cookbook/launch-with-systemd.html)".
 
-## Reverse Proxy Settings
+## Reverse Proxy Configuration
 
-Shown below is an example of setting up a reverse proxy to an activated GROWI.
+Here we describe configuration examples for setting up a reverse proxy for the started GROWI.
 
 ### Apache
 
 #### Installation
 
-```text
-$ sudo apt-get update && sudo apt-get -y install apache2
+```bash
+$ sudo apt update && sudo apt -y install apache2
 ```
 
-#### Enable required Modules
+#### Enabling required modules
 
-Install proxy, proxy\_http, proxy\_wstunnel module
+Install proxy, proxy_http, proxy_wstunnel modules.
 
-```text
+```bash
 $ sudo a2enmod proxy proxy_http proxy_wstunnel
 ```
 
-#### Reverse Proxy Settings Example
+#### Reverse proxy configuration example
 
-Shown below is a part related to reverse proxy
+Here we extract and describe the parts related to reverse proxy.
 
-```text
+```apacheconf
 <IfModule mod_ssl.c>
   <VirtualHost _default_:443>
     ...
     ###
     # reverse proxy to crowi
-    # To add Host: example.com to the Header
+    # To add Host: example.com to Header
     ProxyPreserveHost On
-    # Using HTTPS: To add x-forwarded-proto: https to the Header
+    # When using HTTPS: To add x-forwarded-proto: https to Header
     RequestHeader set x-forwarded-proto 'https'
-    # With Apache, sometimes a 304 isn't returned from static assets, so unset ETag
+    # Disable ETag because Apache may not return 304 for static assets
     <ifModule mod_headers.c>
             Header unset ETag
     </ifModule>
     FileETag None
 
-    # Rewrite the path of socket.io
+    # Rewrite socket.io path
     RewriteEngine On
     RewriteCond %{REQUEST_URI}  ^/socket.io            [NC]
     RewriteCond %{QUERY_STRING} transport=websocket    [NC]
@@ -348,25 +434,25 @@ Shown below is a part related to reverse proxy
 </IfModule>
 ```
 
-#### Autoboot Settings
+#### Auto-start configuration
 
-```text
-$ sudo systemctl enable apache2
+```bash
+$ sudo systemctl enable --now apache2
 ```
 
-### Nginx Installation and Settings
+### Nginx Installation and Configuration
 
 #### Installation
 
-```text
-$ sudo apt-get update && sudo apt-get -y install nginx
+```bash
+$ sudo apt update && sudo apt -y install nginx
 ```
 
-#### Reverse Proxy Settings Example
+#### Reverse proxy configuration example
 
-Shown here is an example using HTTPS. Sections surrounded by &lt;server&gt; or &lt;&gt; should be set accordingly to the appropriate environment.
+Here we describe a configuration example using HTTPS. Please configure the parts enclosed in `<>` such as `<server>` according to your environment.
 
-```text
+```nginx
 upstream growi {
     server localhost:3000;
 }
@@ -377,7 +463,7 @@ map $http_upgrade $connection_upgrade {
 }
 
 server {
-    listen 443 ssl spdy;
+    listen 443 ssl http;
     server_name <server>;
     ssl_certificate <cert_file>;
     ssl_certificate_key <key_file>;
@@ -402,8 +488,16 @@ server {
 }
 ```
 
-#### Autoboot Settings
+Verify that there are no issues with the configuration file.
 
-```text
-$ sudo systemctl enable nginx
+```bash
+$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+```
+
+#### Auto-start configuration
+
+```bash
+$ sudo systemctl enable --now nginx
 ```

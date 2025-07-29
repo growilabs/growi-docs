@@ -15,11 +15,12 @@ git clone https://github.com/weseek/growi-docker-compose.git growi
 cd growi
 docker build -t growimulti_app .
 ```
+
 ### Replace docker-compose.yml
 
 Edit `./docker-compose.yml` and duplicate the app container and volumes. On this example, these GROWI apps share the use of one Mongo DB contatiner and one Elasticsearch container for saving of resources.
 
-```text:docker-compose.yml
+```yaml title="docker-compose.yml"
 ...
 
 services:
@@ -109,6 +110,7 @@ volumes:
 ```
 
 ### Start
+
 Execute this command and access to each site.
 
 ```bash

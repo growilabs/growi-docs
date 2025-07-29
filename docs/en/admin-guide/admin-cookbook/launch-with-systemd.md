@@ -8,7 +8,7 @@ This chapter introduces how to autostart GROWI using systemd.
 
 Create `/etc/systemd/system/growi.service`.
 
-```text
+```systemd
 [Unit]
 Description=Growi
 After=network.target mongod.service
@@ -43,12 +43,12 @@ Set `ExecStart` according to your environment. Check the npm path using `which n
 
 ### Start
 
-```text
+```bash
 sudo systemctl start growi
 ```
 
 ### Enable Autostart
 
-```text
+```bash
 sudo systemctl enable growi
 ```
