@@ -51,18 +51,19 @@ jobs:
         export GROWI_ARCHIVE_URL=https://github.com/weseek/growi/archive/master.tar.gz
         curl -SL $GROWI_ARCHIVE_URL | tar -xz -C tmp/growi --strip-components 1
 
-    - name: Build test
+    - name: Build VuePress site
       run: |
         pnpm run api:build
         pnpm run docs-growi-org:build
 
-    - name: Build and deploy
-      uses: jenkey2011/vuepress-deploy@master
+    - name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v4
+      with:
+        target_branch: gh-pages
+        build_dir: docs/.vuepress/dist
+        fqdn: docs.growi.org
       env:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_SCRIPT: npm run api:build && npm run docs-growi-org:build
-        BUILD_DIR: docs/.vuepress/dist/
-        CNAME: docs.growi.org
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Slack Notification
       uses: weseek/ghaction-slack-notification@master
