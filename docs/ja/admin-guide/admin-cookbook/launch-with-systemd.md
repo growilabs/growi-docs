@@ -8,7 +8,7 @@
 
 `/etc/systemd/system/growi.service` を作成し、以下の内容を書き込みます。
 
-```text
+```systemd
 [Unit]
 Description=Growi
 After=network.target mongod.service
@@ -45,12 +45,12 @@ GROWI のディレクトリのある場所を指定します。
 
 ### 起動
 
-```text
+```bash
 sudo systemctl start growi
 ```
 
 ### 自動起動の有効化
 
-```text
+```bash
 sudo systemctl enable growi
 ```

@@ -20,7 +20,7 @@ $ docker build -t growimulti_app .
 
 `./docker-compose.yml` ファイルの `services:app` およびボリュームを以下のように複製してください。なお、今回はリソース節約のために Mongo DB と Elasticsearch はそれぞれ1つだけで運用します。
 
-```text:docker-compose.yml
+```yaml title="docker-compose.yml"
 ...
 
 services:

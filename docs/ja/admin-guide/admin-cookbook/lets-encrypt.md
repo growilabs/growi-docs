@@ -14,8 +14,8 @@
 
 以下のコマンドを実行し、GROWI のあるディレクトリの直下に `./examples/https-portal` の `docker-compose.override.yml` ファイルをコピーします。
 
-```text
-$ cd growi // growi-docker-compose をインストールしたディレクトリ
+```bash
+$ cd growi # growi-docker-compose をインストールしたディレクトリ
 $ cp examples/https-portal/docker-compose.override.yml .
 ```
 
@@ -34,7 +34,7 @@ docker-compose up
 
 `./docker-compose.override.yml` の `DOMAINS` の値に、利用者が管理可能なドメイン名を設定してください。
 
-```text:docker-compose.override.yml
+```yaml title="docker-compose.override.yml"
 services:
   https-portal:
     environment:

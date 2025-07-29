@@ -48,7 +48,7 @@ $ sudo apt install nodejs
 GROWI では pnpm を用いたパッケージインストールを利用するため、ここで `pnpm` コマンドをインストールしておきます。
 
 ```text
-$ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sudo sh -
+$ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=\<version> sudo sh -
 $ sudo pnpm setup
 ```
 
@@ -393,7 +393,7 @@ $ sudo a2enmod proxy proxy_http proxy_wstunnel
 
 ここではリバースプロキシに関する箇所を抜粋して記載しています。
 
-```text
+```
 <IfModule mod_ssl.c>
   <VirtualHost _default_:443>
     ...
