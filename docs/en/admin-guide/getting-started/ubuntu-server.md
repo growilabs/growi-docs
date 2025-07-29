@@ -20,6 +20,14 @@ Optional items are not mandatory. However, this section explains how to build an
 that uses all of these to create a GROWI with full-text search capabilities,
 reverse-proxied with Apache or nginx, and automatically started with systemd along with the host.
 
+## Installing Tools
+
+Install `git` and `curl` which are required during the installation process.
+
+```bash
+$ sudo apt update && sudo apt -y install git curl
+```
+
 ## Installing node.js 20.x & npm
 
 ### Using NodeSource repository
@@ -42,13 +50,15 @@ $ sudo bash nodesource_setup.sh
 This enables node.js to be obtained via `apt`, so install it using the `apt` command.
 
 ```bash
-$ sudo apt install nodejs
+$ sudo apt -y install nodejs
 ```
 
 Since GROWI uses pnpm for package installation, install the `pnpm` command here.
 
+For the `<version>` part, please check the official website information and select appropriately.
+
 ```bash
-$ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=\<version> sudo sh -
+$ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sudo sh -
 $ sudo pnpm setup
 ```
 
@@ -80,7 +90,7 @@ Follow the [official page](https://www.elastic.co/guide/en/elasticsearch/referen
 First, install JDK17 to run Elasticsearch.
 
 ```bash
-$ sudo apt install openjdk-17-jdk
+$ sudo apt -y install openjdk-17-jdk
 ```
 
 Add the Elasticsearch repository GPG key to install packages.
@@ -98,7 +108,7 @@ $ sudo echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https
 Now Elasticsearch can be installed via apt, so proceed with installation.
 
 ```bash
-$ sudo apt update && sudo apt install elasticsearch
+$ sudo apt update && sudo apt -y install elasticsearch
 ```
 
 After installation is complete, the default password for the elastic user will be displayed, so make sure to note it down somewhere.
@@ -263,7 +273,7 @@ echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gp
 After adding the repository, install MongoDB.
 
 ```bash
-$ sudo apt update && sudo apt install mongodb-org
+$ sudo apt update && sudo apt -y install mongodb-org
 ```
 
 After installation is complete, check the package version.
@@ -307,15 +317,17 @@ $ systemctl status mongod
 Get the source code from [https://github.com/weseek/growi](https://github.com/weseek/growi) and check the latest stable version at [https://github.com/weseek/growi/releases](https://github.com/weseek/growi/releases).
 
 Here we describe the procedure for installing under `/opt/growi`.
+To change the owner user and group to the GROWI execution user, please modify `<username>` and `<usergroup>` as appropriate.
 
 ```bash
 $ sudo mkdir -p /opt/
+$ sudo chown <username>:<usergroup> /opt/
 $ cd /opt/
-$ sudo git clone https://github.com/weseek/growi /opt/growi
-$ cd /opt/growi
+$ git clone https://github.com/weseek/growi growi
+$ cd growi
 
 # Check tags
-$ sudo git tag -l
+$ git tag --sort=-version:refname | head -10
 ...
 v7.2.0
 v7.2.1
@@ -324,14 +336,14 @@ v7.2.4
 ...
 
 # Use the latest version without RC
-$ sudo git checkout -b v7.2.4 refs/tags/v7.2.4
+$ git checkout -b v7.2.4 refs/tags/v7.2.4
 ```
 
 After cloning the source code, use the `pnpm` command to install packages required for GROWI.
 
 ```bash
 $ cd /opt/growi
-$ sudo pnpm install
+$ pnpm install
 ```
 
 ### Build
@@ -339,7 +351,7 @@ $ sudo pnpm install
 After package installation is complete, perform the build.
 
 ```bash
-$ sudo npm run app:build
+$ pnpm run app:build
 ```
 
 This will take some time.

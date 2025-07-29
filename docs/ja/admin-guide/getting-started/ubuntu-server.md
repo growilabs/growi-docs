@@ -20,6 +20,14 @@
 Optional となっているものは必須ではありません。ただし、本項ではこれら全てを利用し、全文検索できる GROWI を Apache or nginx でリバースプロキシする環境を構築し、systemd でホストと同時に起動させる方法を説明します。
 <!-- textlint-enable weseek/no-doubled-joshi -->
 
+## ツール類のインストール
+
+インストールの過程で必要になる `git`, `curl` をインストールします。
+
+```bash
+$ sudo apt update && sudo apt -y install git curl
+```
+
 ## node.js 20.x & npm のインストール
 
 ### NodeSource repository を利用する
@@ -42,13 +50,15 @@ $ sudo bash nodesource_setup.sh
 これにより `apt` 経由で node.js が取得できるようになったので、 `apt` コマンドでインストールを行います。
 
 ```bash
-$ sudo apt install nodejs
+$ sudo apt -y install nodejs
 ```
 
 GROWI では pnpm を用いたパッケージインストールを利用するため、ここで `pnpm` コマンドをインストールしておきます。
 
+`<version>` 部分は公式サイトの情報を確認し、適宜選択してください。
+
 ```bash
-$ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=\<version> sudo sh -
+$ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sudo sh -
 $ sudo pnpm setup
 ```
 
@@ -80,7 +90,7 @@ $ turbo --version
 まず、Elasticsearch を実行できるように JDK17 をインストールします。
 
 ```bash
-$ sudo apt install openjdk-17-jdk
+$ sudo apt -y install openjdk-17-jdk
 ```
 
 パッケージをインストールするために、Elasticsearch レポジトリの GPG キーを追加します。
@@ -98,7 +108,7 @@ $ sudo echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https
 これで、apt 経由で Elasticsearch がインストールできるようになったため、インストールを行います。
 
 ```bash
-$ sudo apt update && sudo apt install elasticsearch
+$ sudo apt update && sudo apt -y install elasticsearch
 ```
 
 インストールが完了すると、elasticユーザーのデフォルトパスワードが表示されるので、念のためどこかにメモしておきましょう。
@@ -263,7 +273,7 @@ echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gp
 レポジトリの追加まで完了したため、MongoDB のインストールを行います。
 
 ```bash
-$ sudo apt update && sudo apt install mongodb-org
+$ sudo apt update && sudo apt -y install mongodb-org
 ```
 
 インストールが完了したら、 パッケージのバージョンを確認します。
@@ -306,16 +316,17 @@ $ systemctl status mongod
 
 [https://github.com/weseek/growi](https://github.com/weseek/growi) からソースコードを取得し、[https://github.com/weseek/growi/releases](https://github.com/weseek/growi/releases) にて、最新の安定版のバージョンを確認します。
 
-ここでは `/opt/growi` 配下にインストールする手順を記載しています。
+ここでは `/opt/growi` 配下にインストールする手順を記載しています。所有ユーザー・グループを GROWI 実行ユーザーに変更するため、`<username>` と `<usergroup>` は適宜変更してください。
 
 ```bash
 $ sudo mkdir -p /opt/
+$ sudo chwon <username>:<usergroup> /opt/
 $ cd /opt/
-$ sudo git clone https://github.com/weseek/growi /opt/growi
-$ cd /opt/growi
+$ git clone https://github.com/weseek/growi growi
+$ cd growi
 
 # タグの確認
-$ sudo git tag -l
+$ git tag --sort=-version:refname | head -10
 ...
 v7.2.0
 v7.2.1
@@ -324,14 +335,14 @@ v7.2.4
 ...
 
 # RC がついていない最新版を利用
-$ sudo git checkout -b v7.2.4 refs/tags/v7.2.4
+$ git checkout -b v7.2.4 refs/tags/v7.2.4
 ```
 
 ソースコードを clone した後に、`pnpm` コマンドを利用して、 GROWI に必要なパッケージをインストールします。
 
 ```bash
 $ cd /opt/growi
-$ sudo pnpm install
+$ pnpm install
 ```
 
 ### ビルド
@@ -339,7 +350,7 @@ $ sudo pnpm install
 パッケージのインストールが完了したら、ビルドを行います。
 
 ```bash
-$ sudo npm run app:build
+$ pnpm run app:build
 ```
 
 これには、しばらく時間がかかります。
