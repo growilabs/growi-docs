@@ -55,7 +55,7 @@ $ sudo apt -y install nodejs
 
 Since GROWI uses pnpm for package installation, install the `pnpm` command here.
 
-For the `<version>` part, please check the official website information and select appropriately.
+For the `<version>` part, please check the official site information and select appropriately.
 
 ```bash
 $ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sudo sh -
