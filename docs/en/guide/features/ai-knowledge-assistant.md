@@ -116,7 +116,7 @@ All conversations with the Knowledge Assistant are saved as history and can be r
 
 <img :src="$withBase('/assets/images/en/ai-chat-history-1.png')" alt="ai-chat-history-1.png" class="border">
 
-## About Uploaded Files
+## Uploaded Files
 We can also provide answers about the content of certain files uploaded to the referenced page.
 
 For supported file formats, please refer to OpenAI's [Supported files](https://platform.openai.com/docs/assistants/tools/file-search#supported-files).
