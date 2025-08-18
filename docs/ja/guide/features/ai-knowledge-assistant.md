@@ -118,6 +118,11 @@ AI 連携機能が有効な場合、ページの作成・更新・複製・削�
 
 <img :src="$withBase('/assets/images/ja/ai-chat-history-1.png')" alt="ai-chat-history-1.png" class="border">
 
+## アップロードされたファイルについて
+参照先のページにアップロードされた一部のファイルの内容についても回答が可能です。
+
+対応しているファイル形式については、OpenAI の [Supported files](https://platform.openai.com/docs/assistants/tools/file-search#supported-files) をご確認ください。
+
 ### チャット履歴の保存期間
 
 - 各スレッドは、最後の会話から3日間保存されます。

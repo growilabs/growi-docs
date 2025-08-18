@@ -116,6 +116,11 @@ All conversations with the Knowledge Assistant are saved as history and can be r
 
 <img :src="$withBase('/assets/images/en/ai-chat-history-1.png')" alt="ai-chat-history-1.png" class="border">
 
+## Uploaded Files
+We can also provide answers about the content of certain files uploaded to the referenced page.
+
+For supported file formats, please refer to OpenAI's [Supported files](https://platform.openai.com/docs/assistants/tools/file-search#supported-files).
+
 ### Chat history retention period
 
 - Each thread is stored for 3 days from the last conversation.
