@@ -30,6 +30,7 @@ The lsx has many option settings. To set multiple options, separate each one wit
 |  sort   |  path   | Specify page sort order| [sort option details](./lsx.html#sort) |
 |  reverse   |  false   | Reverse the order of pages| [reverse option details](./lsx.html#reverse) |
 |  filter   |  not set   | Filter pages | [filter option details](./lsx.html#filter) |
+|  except   |  not set   | Exclude pages | [except option details](./lsx.html#except-option) |
 
 ### num
 
@@ -70,3 +71,9 @@ Reverse the render order.
 You can filter the render pages by the string contained in the page name. Filter's match type is partial match.
 
 - `$lsx(filter=2023)` : Only pages with `2023` in the page name will be render.
+
+### except
+
+You can exclude pages from the output based on strings contained in the page name. The except match type is partial match.
+
+- `$lsx(except=2025)` : Only pages that do not contain `2025` in their page name will be displayed.
