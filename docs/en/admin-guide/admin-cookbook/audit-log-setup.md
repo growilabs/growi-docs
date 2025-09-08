@@ -31,4 +31,4 @@ Actions included/excluded in the group set in `AUDIT_LOG_ACTION_GROUP_SIZE` can 
 
 ## List of supported actions
 
-- [name of action that can be collected](https://github.com/weseek/growi/blob/master/packages/app/src/interfaces/activity.ts#L9)
+- [name of action that can be collected](https://github.com/growilabs/growi/blob/master/packages/app/src/interfaces/activity.ts#L9)

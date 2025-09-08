@@ -100,7 +100,7 @@ pageClass: admin-cookbook-env-vars
 | `OPENAI_SERVICE_TYPE` | 利用する OpenAI 互換サービスの種別。v7.1.2 時点では `openai` のみ利用可能です。 | `openai` |
 |  | : `openai` OpenAI API を利用します |  | <!-- TODO: 使えるようになったら、新しい行にこれを追加「`azure-openai`: Azure OpenAI を利用」 -->
 | `OPENAI_API_KEY` | OpenAI サービスで取得した API キーを指定します。 |  |
-| `OPENAI_CHAT_ASSISTANT_INSTRUCTIONS` | ナレッジアシスタントで利用されるインストラクション | [ref](https://github.com/weseek/growi/blob/82042b3a409e867615acedd9fb3e99f3236c1917/apps/app/src/server/service/config-manager/config-definition.ts#L1077) |
+| `OPENAI_CHAT_ASSISTANT_INSTRUCTIONS` | ナレッジアシスタントで利用されるインストラクション | [ref](https://github.com/growilabs/growi/blob/82042b3a409e867615acedd9fb3e99f3236c1917/apps/app/src/server/service/config-manager/config-definition.ts#L1077) |
 | `OPENAI_CHAT_ASSISTANT_MODEL` | ナレッジアシスタント機能で利用されるモデル | `gpt-4o-mini` |
 | `OPENAI_THREAD_DELETION_CRON_EXPRESSION` | OpenAI スレッドの削除を実行するスケジュールを cron 形式で指定します。 | `0 * * * *` |
 | `OPENAI_THREAD_DELETION_BARCH_SIZE` | 一度の処理で削除するスレッドの最大数 | 100 |

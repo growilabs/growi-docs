@@ -154,6 +154,6 @@ devcontainer で開発するには、以下のような構造のディレクト�
 ```bash
 mkdir -p ~/Projects/GROWI
 cd ~/Projects/GROWI
-git clone https://github.com/weseek/growi.git
-git clone https://github.com/weseek/growi-docker-compose.git
+git clone https://github.com/growilabs/growi.git
+git clone https://github.com/growilabs/growi-docker-compose.git
 ```

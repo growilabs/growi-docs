@@ -56,7 +56,7 @@ Lower level templates can be used when you want to unify the format of your enti
 
 For example, by creating the following template at the top level, you can create a page template that always displays the child page list at the top of the page.
 
-The notation `$lsx()` is from [weseek/growi-plugin-lsx](https://github.com/weseek/growi-plugin-lsx).
+The notation `$lsx()` is from [weseek/growi-plugin-lsx](https://github.com/growilabs/growi-plugin-lsx).
 
 ```markdown
 # Related pages

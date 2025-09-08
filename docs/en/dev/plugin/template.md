@@ -115,7 +115,7 @@ Create a package.json file and include the `growiPlugin` directive.
 
 You can add tests to verify that your plugin configuration is correct. To implement tests, create `test/index.spec.ts`.
 
-Here's an example of a test based on [GROWI's preset templates](https://github.com/weseek/growi/blob/master/packages/preset-templates/test/index.test.ts):
+Here's an example of a test based on [GROWI's preset templates](https://github.com/growilabs/growi/blob/master/packages/preset-templates/test/index.test.ts):
 
 ```typescript
 import path from 'node:path';

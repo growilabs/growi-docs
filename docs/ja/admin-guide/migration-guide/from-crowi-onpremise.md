@@ -16,7 +16,7 @@
 
 ## Node.js 実行環境の準備
 
-- [README.md#dependencies](https://github.com/weseek/growi/blob/master/README.md#dependencies) を参考に、Node.js, npm, yarn をセットアップする
+- [README.md#dependencies](https://github.com/growilabs/growi/blob/master/README.md#dependencies) を参考に、Node.js, npm, yarn をセットアップする
   - Node.js は 10.x にアップグレード
   - yarn は新規インストール
 
@@ -63,7 +63,7 @@ node app.js
 
 ```bash
 # clone
-git clone https://github.com/weseek/growi.git
+git clone https://github.com/growilabs/growi.git
 cd growi
 # install dependencies and build client
 yarn

@@ -7,7 +7,7 @@
 
 - GROWI アプリのバージョンを、GROWI.cloud 上で選択、更新することが出来ます。
   - バージョンを更新した場合、自動的に GROWI アプリの再起動が行われ、設定が反映されます。
-  - GROWI のリリースされているバージョンに関しては [こちら](https://github.com/weseek/growi/releases) をご参照ください。
+  - GROWI のリリースされているバージョンに関しては [こちら](https://github.com/growilabs/growi/releases) をご参照ください。
 
 ### GROWIアプリのバージョン更新方法
 

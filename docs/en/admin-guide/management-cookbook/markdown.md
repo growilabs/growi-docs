@@ -71,7 +71,7 @@ Versions from GROWI v6.0.0 to v7.0.11 have a bug related to the custom whitelist
 
 ##### Related Fixes
 
-[#8836](https://github.com/weseek/growi/pull/8836), [#8946](https://github.com/weseek/growi/pull/8836)
+[#8836](https://github.com/growilabs/growi/pull/8836), [#8946](https://github.com/growilabs/growi/pull/8836)
 
 ##### Solution
 

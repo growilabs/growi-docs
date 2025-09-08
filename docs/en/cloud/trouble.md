@@ -8,7 +8,7 @@ GROWI is OSS and we welcome suggestions and improvement requests from many users
 
 ## GitHub_Issue is Here
 
-[GitHub Issue](https://github.com/weseek/growi/issues)
+[GitHub Issue](https://github.com/growilabs/growi/issues)
 
 ## Contact Slack Here
 

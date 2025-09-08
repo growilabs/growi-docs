@@ -14,5 +14,5 @@
     - または Slack にご参加いただいてご質問ください
   - 機能要望、不具合について、
     - Slack にご参加いただいてご質問いただくか
-    - GitHub に [Issue の登録](https://github.com/weseek/growi/issues) をお願いいたします。
+    - GitHub に [Issue の登録](https://github.com/growilabs/growi/issues) をお願いいたします。
   - Slack の GROWI ワークスペースへのご参加は[こちら](https://communityinviter.com/apps/wsgrowi/invite)から

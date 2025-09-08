@@ -4,7 +4,7 @@
 
 ## 前提条件
 
-* バックアップ/リストアは、[weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を利用します
+* バックアップ/リストアは、[weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) を利用します
 
 #### 必要なもの
 
@@ -38,7 +38,7 @@
 * (執筆者・PR募集)
 
 ::: tip
-その他のオプションは [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を参照してください
+その他のオプションは [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) を参照してください
 :::
 
 ## docker-compose による管理
@@ -47,12 +47,12 @@
 GROWI を [growi-docker-compose](/ja/admin-guide/getting-started/docker-compose.html) で管理している場合、更に簡単にバックアップ用コンテナを起動できます
 :::
 
-* [weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose/tree/master/examples/backup-mongodb-data) の [Example](https://github.com/weseek/growi-docker-compose/tree/master/examples/backup-mongodb-data) を参考に、以下の手順を行います
+* [weseek/growi-docker-compose](https://github.com/growilabs/growi-docker-compose/tree/master/examples/backup-mongodb-data) の [Example](https://github.com/growilabs/growi-docker-compose/tree/master/examples/backup-mongodb-data) を参考に、以下の手順を行います
 
 1. clone
 
     ```bash
-    git clone https://github.com/weseek/growi-docker-compose.git growi
+    git clone https://github.com/growilabs/growi-docker-compose.git growi
     cd growi
     ```
 

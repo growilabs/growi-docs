@@ -4,7 +4,7 @@
 
 ## Overview
 
-This chapter introduces how to set up auto backup for GROWI data using [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup).
+This chapter introduces how to set up auto backup for GROWI data using [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup).
 
 #### Requirements
 
@@ -37,7 +37,7 @@ See [MongoDB Backup & Restore](/en/admin-guide/admin-cookbook/mongodb-backup.htm
 * (TBD: Looking for a contributor)
 
 ::: tip
-See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options.
+See [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) for more options.
 :::
 
 ## Manage with docker-compose
@@ -46,11 +46,11 @@ See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-ba
 If GROWI is installed with [growi-docker-compose](/en/admin-guide/getting-started/docker-compose.html), preparing a backup container is even easier.
 :::
 
-* Refer to weseek/growi-docker-compose [Example](https://github.com/weseek/growi-docker-compose/tree/master/examples/backup-mongodb-data), and follow the steps below.
+* Refer to weseek/growi-docker-compose [Example](https://github.com/growilabs/growi-docker-compose/tree/master/examples/backup-mongodb-data), and follow the steps below.
 
 1. clone
     ```bash
-    git clone https://github.com/weseek/growi-docker-compose.git growi
+    git clone https://github.com/growilabs/growi-docker-compose.git growi
     cd growi
     ```
 2. Copy `docker-compose.override.yml` to the root directory.

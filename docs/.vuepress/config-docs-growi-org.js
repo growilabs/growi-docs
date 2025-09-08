@@ -363,7 +363,7 @@ module.exports = {
           { text: '管理者ガイド', link: '/ja/admin-guide/' },
           { text: '開発ガイド', link: '/ja/dev/' },
           { text: 'API リファレンス (英語)', link: '/en/api/' },
-          { text: 'リリースノート', link: 'https://github.com/weseek/growi/releases' },
+          { text: 'リリースノート', link: 'https://github.com/growilabs/growi/releases' },
           {
             text: '外部サイト',
             items: [

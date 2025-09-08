@@ -35,7 +35,7 @@ Endpoints are restricted by default in the table below.
 
 Other endpoints that require restrictions have default customized initial values set as restrictions by the following configuration file.
 
-<https://github.com/weseek/growi/blob/master/packages/app/config/rate-limiter.ts>
+<https://github.com/growilabs/growi/blob/master/packages/app/config/rate-limiter.ts>
 
 ## Limit Customization
 
