@@ -146,8 +146,8 @@ devcontainer で開発するには、以下のような構造のディレクト�
 
 ```
 - GROWI
-    - growi                   <-- weseek/growi repository
-    - growi-docker-compose    <-- weseek/growi-docker-compose repository
+    - growi                   <-- growilabs/growi repository
+    - growi-docker-compose    <-- growilabs/growi-docker-compose repository
 ```
 
 * 以下の手順を、Windows の場合は WSL 内、Mac の場合はホストPCで作業します

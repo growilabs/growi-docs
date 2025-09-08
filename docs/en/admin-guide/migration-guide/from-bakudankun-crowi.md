@@ -2,15 +2,15 @@
 
 ## Overview
 
-- Assuming to migrate from [Crowi docker image + [bakudankun/crowi](https://github.com/crowi/docker-crowi)] to [weseek/growi-docker-compose](https://github.com/growilabs/growi-docker-compose).
+- Assuming to migrate from [Crowi docker image + [bakudankun/crowi](https://github.com/crowi/docker-crowi)] to [growilabs/growi-docker-compose](https://github.com/growilabs/growi-docker-compose).
 - Migrate the following data.
-    - MongoDB container's data volume
-    - Uploaded file data from the App container
+  - MongoDB container's data volume
+  - Uploaded file data from the App container
 
 ## Preparation
 
 1. Have Crowi and GROWI contaienr running.
-    * Hypothetically, each app container and data volume is called as below (change the name according to your environment).
+    - Hypothetically, each app container and data volume is called as below (change the name according to your environment).
 
         ||Crowi|GROWI|
         |---|---|---|

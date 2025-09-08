@@ -4,7 +4,7 @@
 
 ## 概要
 
-この章では[weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) を利用したバックアップとリストアの方法を紹介します。
+この章では[weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を利用したバックアップとリストアの方法を紹介します。
 
 ### 必要なもの
 
@@ -16,7 +16,7 @@
 
 ### 事前作業
 
-[weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) は、シェルスクリプトを実行するテンポラリなコンテナを作成してバックアップ/リストアを行います。
+[weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) は、シェルスクリプトを実行するテンポラリなコンテナを作成してバックアップ/リストアを行います。
 ただし、そのコンテナ内から MongoDB サーバーへ疎通できるように、以下に示す docker コマンドオプションを追加する必要があります。
 
 #### MongoDB が docker コンテナで動作している場合
@@ -52,7 +52,7 @@ man
 
 ### バックアップ手順
 
-1. [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) コンテナを、クリーンアップオプション\(`--rm`\)付きで実行します
+1. [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) コンテナを、クリーンアップオプション\(`--rm`\)付きで実行します
 
     ```bash
     docker run --rm \
@@ -66,12 +66,12 @@ man
 2. 対象となる MongoDB サーバーの全てのデータベースのデータを取得し、 `backup-YYYYMMdd.tar.bz2`として指定された S3 バケットにアップロードされます
 
 ::: tip
-その他のオプションは [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) を参照してください
+その他のオプションは [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を参照してください
 :::
 
 ### リストア手順
 
-1. [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) コンテナを、クリーンアップオプション\(`--rm`\)付きで実行します
+1. [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) コンテナを、クリーンアップオプション\(`--rm`\)付きで実行します
 
     ```bash
     docker run --rm \
@@ -87,7 +87,7 @@ man
 3. GROWI を再起動してください
 
 ::: tip
-その他のオプションは [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) を参照してください
+その他のオプションは [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) を参照してください
 :::
 
 ## Google Cloud Platform を利用する方法

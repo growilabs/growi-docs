@@ -4,7 +4,7 @@
 
 ## Overview
 
-This chapter introduces how to backup and restore GROWI data using [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup).
+This chapter introduces how to backup and restore GROWI data using [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup).
 
 ### Requirements
 
@@ -16,7 +16,7 @@ This chapter introduces how to backup and restore GROWI data using [weseek/mongo
 
 ### Before You Start
 
-To backup/restore MongoDBs, [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) creates a temporary container that executes shell scripts. In order to access the MongoDB server from the temporary container, add the docker command option below.
+To backup/restore MongoDBs, [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) creates a temporary container that executes shell scripts. In order to access the MongoDB server from the temporary container, add the docker command option below.
 
 #### When MongoDB Is Running as a Docker Container
 
@@ -53,7 +53,8 @@ Add `--network host` to use the same network with the host.
 
 ### How to Backup
 
-1. Run [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) container with \(`--rm`\) flag.
+1. Run [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) container with \(`--rm`\) flag.
+
     ```bash
     docker run --rm \
       -e MONGODB_HOST=<Target MongoDB Host> \
@@ -62,15 +63,17 @@ Add `--network host` to use the same network with the host.
       -e S3_TARGET_BUCKET_URL=<Target S3 Bucket URL (s3://...)> \
       weseek/mongodb-awesome-backup
     ```
+
 2. The command creates a backup for all databases in the target MongoDB server, and upload it as `backup-YYYYMMdd.tar.bz2` in the S3 bucket.
 
 ::: tip
-See [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) for more options.
+See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options.
 :::
 
 ### How to Restore
 
-1. Run [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) container with \(`--rm`\) flag.
+1. Run [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) container with \(`--rm`\) flag.
+
     ```bash
     docker run --rm \
       -e MONGODB_HOST=<Target MongoDB Host> \
@@ -86,7 +89,7 @@ See [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome
 3. Restart GROWI.
 
 ::: tip
-See [weseek/mongodb-awesome-backup](https://github.com/growilabs/mongodb-awesome-backup) for more options.
+See [weseek/mongodb-awesome-backup](https://github.com/weseek/mongodb-awesome-backup) for more options.
 :::
 
 ## Using Google Cloud Platform
