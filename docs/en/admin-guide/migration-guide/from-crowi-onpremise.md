@@ -16,7 +16,7 @@
 
 ## Set up Node.js Environment
 
-- Set up Node.js, npm, and yarn. See [README.md#dependencies](https://github.com/weseek/growi/blob/master/README.md#dependencies).
+- Set up Node.js, npm, and yarn. See [README.md#dependencies](https://github.com/growilabs/growi/blob/master/README.md#dependencies).
   - Upgrade Node.js to 10.x
   - Install yarn
 
@@ -63,7 +63,7 @@ node app.js
 
 ```bash
 # clone
-git clone https://github.com/weseek/growi.git
+git clone https://github.com/growilabs/growi.git
 cd growi
 # install dependencies and build client
 yarn

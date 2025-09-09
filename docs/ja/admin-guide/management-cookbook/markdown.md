@@ -72,7 +72,7 @@ GROWI v6.0.0 から v7.0.11 までのバージョンではカスタムホワイ�
 
 ##### 関連する修正
 
-[#8836](https://github.com/weseek/growi/pull/8836), [#8946](https://github.com/weseek/growi/pull/8836)
+[#8836](https://github.com/growilabs/growi/pull/8836), [#8946](https://github.com/growilabs/growi/pull/8836)
 
 ##### 対処方法
 

@@ -11,7 +11,7 @@
 1. リモート接続用インジケーターから、devcontainer でリポジトリを開く
     * <img :src="$withBase('/assets/images/vscode-remote-button.png')" alt="indicator">
     * Remote-Containers: Open folder in Container...
-    * weseek/growi ローカルリポジトリを選択
+    * growilabs/growi ローカルリポジトリを選択
         * Windows の場合は WSL のパス: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
             * `{your account}` は自身のアカウント名に置き換えてください
 1. 初回は各種コンテナイメージのダウンロードとビルドのため、5～10分待つ

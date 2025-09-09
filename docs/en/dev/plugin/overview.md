@@ -57,7 +57,7 @@ For information on how to install GROWI plugins, please refer to [Plugins](/en/a
 
 ### Official packages
 
-- [@growi/pluginkit](https://github.com/weseek/growi/tree/master/packages/pluginkit): Official utilities for GROWI plugin development (React hooks can be easily used from version 1.1.0 onwards)
+- [@growi/pluginkit](https://github.com/growilabs/growi/tree/master/packages/pluginkit): Official utilities for GROWI plugin development (React hooks can be easily used from version 1.1.0 onwards)
 
 ### Official plugins
 

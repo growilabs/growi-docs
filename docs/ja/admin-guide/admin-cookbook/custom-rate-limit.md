@@ -31,7 +31,7 @@ GROWIでのAPIのrate limitについて紹介します。
 
 その他、制限が必要なエンドポイントには以下の設定ファイルによって、デフォルトでカスタマイズされた初期値が制限として設定されています。
 
-<https://github.com/weseek/growi/blob/master/packages/app/config/rate-limiter.ts>
+<https://github.com/growilabs/growi/blob/master/packages/app/config/rate-limiter.ts>
 
 ## 制限のカスタマイズ
 

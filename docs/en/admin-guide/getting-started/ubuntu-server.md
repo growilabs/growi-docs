@@ -314,7 +314,7 @@ $ systemctl status mongod
 
 ### Installation
 
-Get the source code from [https://github.com/weseek/growi](https://github.com/weseek/growi) and check the latest stable version at [https://github.com/weseek/growi/releases](https://github.com/weseek/growi/releases).
+Get the source code from [https://github.com/growilabs/growi](https://github.com/growilabs/growi) and check the latest stable version at [https://github.com/growilabs/growi/releases](https://github.com/growilabs/growi/releases).
 
 Here we describe the procedure for installing under `/opt/growi`.
 To change the owner user and group to the GROWI execution user, please modify `<username>` and `<usergroup>` as appropriate.
@@ -323,7 +323,7 @@ To change the owner user and group to the GROWI execution user, please modify `<
 $ sudo mkdir -p /opt/
 $ sudo chown <username>:<usergroup> /opt/
 $ cd /opt/
-$ git clone https://github.com/weseek/growi growi
+$ git clone https://github.com/growilabs/growi growi
 $ cd growi
 
 # Check tags

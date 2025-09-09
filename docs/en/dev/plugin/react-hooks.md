@@ -1,6 +1,6 @@
 # Using React hooks
 
-Use the `growiReact` function from the [@growi/pluginkit](https://github.com/weseek/growi/tree/master/packages/pluginkit) package.
+Use the `growiReact` function from the [@growi/pluginkit](https://github.com/growilabs/growi/tree/master/packages/pluginkit) package.
 
 ```typescript
 // In your plugin code

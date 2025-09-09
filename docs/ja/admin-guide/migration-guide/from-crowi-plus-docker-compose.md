@@ -20,6 +20,7 @@
        FROM weseek/growi:3
        ENV APP_DIR /opt/growi
      ```
+
 2. GROWI では、lsx プラグインと pukiwiki-like-linker プラグインはオフィシャルイメージに含まれます。そのため、以下の行をコメントアウトするか、削除してください。
    * **Before**
 

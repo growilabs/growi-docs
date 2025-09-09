@@ -262,7 +262,7 @@ This example generates the following CSS variables:
 
 <img :src="$withBase('/assets/images/generate-color-palette-example.png')" alt="generate-color-palette-example.png" class="border">
 
-For detailed implementation, refer to [_color-palette.scss](https://github.com/weseek/growi/blob/4edec2a6fe4ffe356e669c2edc9551abe045b6e1/packages/core-styles/scss/bootstrap/theming/utils/_color-palette.scss#L3).
+For detailed implementation, refer to [_color-palette.scss](https://github.com/growilabs/growi/blob/4edec2a6fe4ffe356e669c2edc9551abe045b6e1/packages/core-styles/scss/bootstrap/theming/utils/_color-palette.scss#L3).
 
 ### 3. Responsive design
 

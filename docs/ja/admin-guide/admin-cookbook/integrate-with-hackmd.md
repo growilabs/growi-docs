@@ -16,9 +16,9 @@
 
 ## [growi-docker-compose](/ja/admin-guide/getting-started/docker-compose.html) で新しく HackMD(CodiMD) コンテナを立てる
 
-[こちら](https://github.com/weseek/growi-docker-compose/tree/master/examples/integrate-with-hackmd) の Example を利用します。
+[こちら](https://github.com/growilabs/growi-docker-compose/tree/master/examples/integrate-with-hackmd) の Example を利用します。
 
-[README.md](https://github.com/weseek/growi-docker-compose/blob/master/examples/integrate-with-hackmd/README.md) の内容に従ってセットアップします。
+[README.md](https://github.com/growilabs/growi-docker-compose/blob/master/examples/integrate-with-hackmd/README.md) の内容に従ってセットアップします。
 
 1. `examples/integrate-with-hackmd/docker-compose.override.yml` を用意
 2. GROWI コンテナに環境変数を設定

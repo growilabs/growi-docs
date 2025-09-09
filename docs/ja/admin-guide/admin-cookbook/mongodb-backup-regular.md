@@ -47,12 +47,12 @@
 GROWI を [growi-docker-compose](/ja/admin-guide/getting-started/docker-compose.html) で管理している場合、更に簡単にバックアップ用コンテナを起動できます
 :::
 
-* [weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose/tree/master/examples/backup-mongodb-data) の [Example](https://github.com/weseek/growi-docker-compose/tree/master/examples/backup-mongodb-data) を参考に、以下の手順を行います
+* [growilabs/growi-docker-compose](https://github.com/growilabs/growi-docker-compose/tree/master/examples/backup-mongodb-data) の [Example](https://github.com/growilabs/growi-docker-compose/tree/master/examples/backup-mongodb-data) を参考に、以下の手順を行います
 
 1. clone
 
     ```bash
-    git clone https://github.com/weseek/growi-docker-compose.git growi
+    git clone https://github.com/growilabs/growi-docker-compose.git growi
     cd growi
     ```
 
@@ -81,6 +81,7 @@ GROWI を [growi-docker-compose](/ja/admin-guide/getting-started/docker-compose.
 
 4. ```bash
    docker-compose up
+
    ```
 
 ## Google Cloud Platform による管理

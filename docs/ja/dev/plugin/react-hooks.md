@@ -1,6 +1,6 @@
 # React フックを使う
 
- [@growi/pluginkit](https://github.com/weseek/growi/tree/master/packages/pluginkit) パッケージの `growiReact` 関数を使用します。
+ [@growi/pluginkit](https://github.com/growilabs/growi/tree/master/packages/pluginkit) パッケージの `growiReact` 関数を使用します。
 
 ```typescript
 // プラグインのコードで

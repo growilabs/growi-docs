@@ -3,7 +3,7 @@
 ## Preparing Tools
 
 ::: tip Note
-The below documentation details our development environment at WESEEK Inc. It may include some tools that are not necessary for your use case.
+The below documentation details our development environment at GROWI, Inc. It may include some tools that are not necessary for your use case.
 :::
 
 
@@ -97,15 +97,15 @@ These settings must be set up on the host side.
 ## Preparing a Workspace
 
 ::: tip Note
-The below documentation details our development environment at WESEEK Inc. It may include some tools that are not necessary for your use case.
+The below documentation details our development environment at GROWI, Inc. It may include some tools that are not necessary for your use case.
 :::
 
 In order to develop using devcontainer, you need to set up a directory tree as follows:
 
 ```
 - GROWI
-    - growi                   <-- weseek/growi repository
-    - growi-docker-compose    <-- weseek/growi-docker-compose repository
+    - growi                   <-- growilabs/growi repository
+    - growi-docker-compose    <-- growilabs/growi-docker-compose repository
 ```
 
 * If you are using Windows, use WSL to execute the following commands; on Mac use the included terminal
@@ -118,6 +118,6 @@ In order to develop using devcontainer, you need to set up a directory tree as f
 ```bash
 mkdir -p ~/Projects/GROWI
 cd ~/Projects/GROWI
-git clone https://github.com/weseek/growi.git
-git clone https://github.com/weseek/growi-docker-compose.git
+git clone https://github.com/growilabs/growi.git
+git clone https://github.com/growilabs/growi-docker-compose.git
 ```

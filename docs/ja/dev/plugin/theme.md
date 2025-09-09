@@ -266,7 +266,7 @@ GROWIのテーマでは、以下の色の設定が重要です。
 
 <img :src="$withBase('/assets/images/generate-color-palette-example.png')" alt="generate-color-palette-example.png" class="border">
 
-詳細な実装については、[_color-palette.scss](https://github.com/weseek/growi/blob/4edec2a6fe4ffe356e669c2edc9551abe045b6e1/packages/core-styles/scss/bootstrap/theming/utils/_color-palette.scss#L3) を参照してください。
+詳細な実装については、[_color-palette.scss](https://github.com/growilabs/growi/blob/4edec2a6fe4ffe356e669c2edc9551abe045b6e1/packages/core-styles/scss/bootstrap/theming/utils/_color-palette.scss#L3) を参照してください。
 
 ### 3. レスポンシブデザイン
 

@@ -48,7 +48,7 @@ jobs:
     - name: Download and extract GROWI source
       run: |
         mkdir -p tmp/growi
-        export GROWI_ARCHIVE_URL=https://github.com/weseek/growi/archive/master.tar.gz
+        export GROWI_ARCHIVE_URL=https://github.com/growilabs/growi/archive/master.tar.gz
         curl -SL $GROWI_ARCHIVE_URL | tar -xz -C tmp/growi --strip-components 1
 
     - name: Build VuePress site

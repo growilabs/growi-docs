@@ -115,7 +115,7 @@ package.json を作成し、`growiPlugin` ディレクティブを記載しま�
 
 プラグインの設定が正しいかどうかを確認するためのテストを追加できます。テストを実装するには、`test/index.spec.ts` を作成します。
 
-以下は [GROWI のプリセットテンプレート](https://github.com/weseek/growi/blob/master/packages/preset-templates/test/index.test.ts) を参考にしたテストの例です。
+以下は [GROWI のプリセットテンプレート](https://github.com/growilabs/growi/blob/master/packages/preset-templates/test/index.test.ts) を参考にしたテストの例です。
 
 ```typescript
 import path from 'node:path';

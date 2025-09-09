@@ -13,10 +13,10 @@ Software needed for setup are listed below.
 
 ## Download growi-docker-compose
 
-Download or clone source code files from [https://github.com/weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose) .
+Download or clone source code files from [https://github.com/growilabs/growi-docker-compose](https://github.com/growilabs/growi-docker-compose) .
 
 ```text
-git clone https://github.com/weseek/growi-docker-compose.git growi
+git clone https://github.com/growilabs/growi-docker-compose.git growi
 ```
 
 ## Build GROWI

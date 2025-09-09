@@ -1,7 +1,7 @@
 # Launch devcontainer
 
 ::: tip Note
-The below documentation details our development environment at WESEEK Inc. It may include some tools that are not necessary for your use case.
+The below documentation details our development environment at GROWI, Inc. It may include some tools that are not necessary for your use case.
 :::
 
 ## Launch
@@ -10,7 +10,7 @@ The below documentation details our development environment at WESEEK Inc. It ma
 1. From the Remote Connection indicator, open the devcontainer repository
     * <img :src="$withBase('/assets/images/vscode-remote-button.png')" alt="indicator">
     * Remote-Containers: Open folder in Container...
-    * Select the weseek/growi repository
+    * Select the growilabs/growi repository
         * WSL path for Windows: `\\wsl$\Ubuntu\home\{your account}\Projects\GROWI\growi`
             * Replace `{your account}` with your own account name
 1. For first time users wait 5-10 minutes for the download and building of various docker container images.

@@ -1,6 +1,6 @@
 # Let's start development
 
-::: tip WESEEK Rule
+::: tip GROWI, Inc. Rule
 Developers who are not used to Git functionality (branches, reset, rebase) should use a GUI client.
 GUI clients make it easy to develop while keeping in mind the tree structure of the Git repository and related considerations.
 :::

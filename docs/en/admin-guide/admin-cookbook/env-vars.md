@@ -99,7 +99,7 @@ pageClass: admin-cookbook-env-vars
 | `OPENAI_SERVICE_TYPE` | Type of OpenAI compatible service. As of v7.1.2, only `openai` is available. | `openai` |
 |  | : `openai` Use OpenAI API. |  | <!-- TODO: add "`azure-openai`: Use "Azure OpenAI"" -->|
 | `OPENAI_API_KEY` | API key for using OpenAI services. |  |
-| `OPENAI_CHAT_ASSISTANT_INSTRUCTIONS` | Instructions used by Knowledge Assistant feature. | [ref](https://github.com/weseek/growi/blob/82042b3a409e867615acedd9fb3e99f3236c1917/apps/app/src/server/service/config-manager/config-definition.ts#L1077) |
+| `OPENAI_CHAT_ASSISTANT_INSTRUCTIONS` | Instructions used by Knowledge Assistant feature. | [ref](https://github.com/growilabs/growi/blob/82042b3a409e867615acedd9fb3e99f3236c1917/apps/app/src/server/service/config-manager/config-definition.ts#L1077) |
 | `OPENAI_CHAT_ASSISTANT_MODEL` | AI model used by Knowledge Assistant feature. | `gpt-4o-mini` |
 | `OPENAI_THREAD_DELETION_CRON_EXPRESSION` | Specifies the schedule for executing OpenAI thread deletion in cron format. | `0 * * * *` |
 | `OPENAI_THREAD_DELETION_BARCH_SIZE` | Maximum number of threads to delete in a single process | 100 |

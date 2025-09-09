@@ -15,4 +15,4 @@ GROWI.cloud では [お知らせ/ニュースページ](https://growi.cloud/v2/n
 
 ## GROWI アプリに関しての最新情報
 
-GROWI アプリに関しての最新情報は [GitHub リポジトリ](https://github.com/weseek/growi/) をご確認いただくか、GitHub Releases の [RSS フィード](https://github.com/weseek/growi/releases.atom) を購読していただくことで、最新情報をキャッチアップしていただくことが可能です。
+GROWI アプリに関しての最新情報は [GitHub リポジトリ](https://github.com/growilabs/growi/) をご確認いただくか、GitHub Releases の [RSS フィード](https://github.com/growilabs/growi/releases.atom) を購読していただくことで、最新情報をキャッチアップしていただくことが可能です。

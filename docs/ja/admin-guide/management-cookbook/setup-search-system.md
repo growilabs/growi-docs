@@ -9,7 +9,7 @@ Elasticsearch による全文検索機能を利用するための設定方法を
 Elasticsearch サーバーの起動と接続に関しては、システム管理者のページを参考にしてください。
 
 - docker-compose
-  - [weseek/growi-docker-compose](https://github.com/weseek/growi-docker-compose) を利用している場合はデフォルトで Elasticsearch が起動されるので、追加で設定する必要はありません。
+  - [growilabs/growi-docker-compose](https://github.com/growilabs/growi-docker-compose) を利用している場合はデフォルトで Elasticsearch が起動されるので、追加で設定する必要はありません。
 - ubuntu
   - [こちら](/ja/admin-guide/getting-started/ubuntu-server.html#elasticsearch)を参考にインストールおよび起動してください。
   - 起動した Elasticsearch の URI を GROWI の環境変数 `ELASTICSEARCH_URI` に設定してください。

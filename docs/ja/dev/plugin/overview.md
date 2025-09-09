@@ -59,7 +59,7 @@ GROWI プラグインをインストールする方法は、[プラグイン](/j
 
 ### 公式パッケージ
 
-- [@growi/pluginkit](https://github.com/weseek/growi/tree/master/packages/pluginkit): GROWI プラグイン開発のための公式ユーティリティ（バージョン 1.1.0 以降で React フックを簡単に利用可能）
+- [@growi/pluginkit](https://github.com/growilabs/growi/tree/master/packages/pluginkit): GROWI プラグイン開発のための公式ユーティリティ（バージョン 1.1.0 以降で React フックを簡単に利用可能）
 
 ### 公式プラグイン
 

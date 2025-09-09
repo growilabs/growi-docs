@@ -8,12 +8,12 @@ footer: © 2024 GROWI, Inc.
 <!-- for docs-growi-org root-->
 
 <div align="center">
-  <a href="https://github.com/weseek/growi/" target="_blank"><img src="https://img.shields.io/github/stars/weseek/growi.svg?style=social&label=Stars"></a>
-  <a href="https://github.com/weseek/growi/" target="_blank"><img src="https://img.shields.io/github/forks/weseek/growi.svg?style=social&label=Fork"></a>
+  <a href="https://github.com/growilabs/growi/" target="_blank"><img src="https://img.shields.io/github/stars/growilabs/growi.svg?style=social&label=Stars"></a>
+  <a href="https://github.com/growilabs/growi/" target="_blank"><img src="https://img.shields.io/github/forks/growilabs/growi.svg?style=social&label=Fork"></a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/weseek/growi/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/weseek/growi.svg"></a>
+  <a href="https://github.com/growilabs/growi/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/growilabs/growi.svg"></a>
   <a href="https://hub.docker.com/r/weseek/growi/" target="_blank"><img src="https://img.shields.io/docker/pulls/weseek/growi.svg" /></a>
 </div>
 
