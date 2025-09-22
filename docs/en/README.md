@@ -14,7 +14,7 @@ footer: © 2024 GROWI, Inc.
 
 <div align="center">
   <a href="https://github.com/growilabs/growi/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/growilabs/growi.svg"></a>
-  <a href="https://hub.docker.com/r/weseek/growi/" target="_blank"><img src="https://img.shields.io/docker/pulls/weseek/growi.svg" /></a>
+  <a href="https://hub.docker.com/r/growilabs/growi/" target="_blank"><img src="https://img.shields.io/docker/pulls/growilabs/growi.svg" /></a>
 </div>
 
 <div class="features">

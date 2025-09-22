@@ -17,7 +17,7 @@
    * **After**
 
      ```docker
-       FROM weseek/growi:3
+       FROM growilabs/growi:7
        ENV APP_DIR /opt/growi
      ```
 
@@ -42,7 +42,7 @@
        # ;;
        # ;; NOTE: In GROWI v3 and later,
        # ;;       2 of official plugins (growi-plugin-lsx and growi-plugin-pukiwiki-like-linker)
-       # ;;       are now included in the 'weseek/growi' image.
+       # ;;       are now included in the 'growilabs/growi' image.
        # ;;       Therefore you will not need following lines except when you install third-party plugins.
        # ;;
        #RUN echo "install plugins" \
