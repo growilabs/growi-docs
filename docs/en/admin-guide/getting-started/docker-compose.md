@@ -87,7 +87,7 @@ Remove Docker containers and Docker images.
 
 ```text
 docker-compose rm app mongo elasticsearch
-docker rmi weseek/growi:5
+docker rmi growilabs/growi:7
 ```
 
 Pull latest GROWI, and create a fresh Docker image and build up containers.

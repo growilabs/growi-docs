@@ -18,7 +18,7 @@ DO NOT EDIT `docker-compose.yml`. Only edit `Dockerfile`.
    * **After**
 
      ```docker
-       FROM weseek/growi:3
+       FROM growilabs/growi:7
        ENV APP_DIR /opt/growi
      ```
 2. Because GROWI includes lsx plugin and pukiwiki-like-linker plugin in GROWI official image by default, comment out or delete the lines below.
@@ -42,7 +42,7 @@ DO NOT EDIT `docker-compose.yml`. Only edit `Dockerfile`.
        # ;;
        # ;; NOTE: In GROWI v3 and later,
        # ;;       2 of official plugins (growi-plugin-lsx and growi-plugin-pukiwiki-like-linker)
-       # ;;       are now included in the 'weseek/growi' image.
+       # ;;       are now included in the 'growilabs/growi' image.
        # ;;       Therefore you will not need following lines except when you install third-party plugins.
        # ;;
        #RUN echo "install plugins" \
