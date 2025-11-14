@@ -69,7 +69,7 @@ Instructions like "Add new member information to the /team/members page" or "Upd
 Batch updates across multiple pages and unification to specific formats can also be executed through conversation.
 
 You can also retrieve the latest external information and reflect it in existing pages.  
-For example, you can automate tasks like retrieving product release notes from the official website and adding them to the product information page in GROWI.
+For example, you can automate tasks like retrieving product release notes from the official site and adding them to the product information page in GROWI.
 
 ### ④ Wiki Organization
 
