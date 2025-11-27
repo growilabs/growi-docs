@@ -123,6 +123,7 @@ If you use only a single GROWI instance, configure as follows.
       "command": "npx",
       "args": ["@growi/mcp-server"],
       "env": {
+        "GROWI_APP_NAME_1": "main",
         "GROWI_BASE_URL_1": "https://your-growi-instance.com",
         "GROWI_API_TOKEN_1": "your_growi_api_token"
       }

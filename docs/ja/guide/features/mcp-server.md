@@ -128,6 +128,7 @@ GROWI MCPをClaude Desktopで使用するための設定方法を説明します
       "command": "npx",
       "args": ["@growi/mcp-server"],
       "env": {
+        "GROWI_APP_NAME_1": "main",
         "GROWI_BASE_URL_1": "https://your-growi-instance.com",
         "GROWI_API_TOKEN_1": "your_growi_api_token"
       }
