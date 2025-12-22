@@ -198,6 +198,12 @@ module.exports = {
                 '/en/admin-guide/upgrading/72x.md',
                 '/en/admin-guide/upgrading/71x.md',
                 '/en/admin-guide/upgrading/70x.md',
+              ],
+            },
+            {
+              title: 'Upgrading (for older versions)',
+              collapsable: true,
+              children: [
                 '/en/admin-guide/upgrading/63x.md',
                 '/en/admin-guide/upgrading/62x.md',
                 '/en/admin-guide/upgrading/61x.md',
@@ -462,6 +468,12 @@ module.exports = {
                 '/ja/admin-guide/upgrading/72x.md',
                 '/ja/admin-guide/upgrading/71x.md',
                 '/ja/admin-guide/upgrading/70x.md',
+              ],
+            },
+            {
+              title: 'アップグレード (旧バージョン)',
+              collapsable: true,
+              children: [
                 '/ja/admin-guide/upgrading/63x.md',
                 '/ja/admin-guide/upgrading/62x.md',
                 '/ja/admin-guide/upgrading/61x.md',
