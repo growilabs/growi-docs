@@ -1,6 +1,8 @@
 # アカデミックプラン
 
+<!-- textlint-disable weseek/max-kanji-continuous-len -->
 学生・教員、学生団体、教育機関・教育関係団体向けに、一部の機能を制限したGROWI.cloudをリーズナブルにご提供するプランです。
+<!-- textlint-enable weseek/max-kanji-continuous-len -->
 
 ## 本プラン提供の対象者
 
@@ -8,6 +10,7 @@
 
 ### 対象になるケース
 
+<!-- textlint-disable weseek/max-kanji-continuous-len -->
 - 学生・教員(個人利用)
   - 個人の学習・研究活動での利用(授業ノート、研究記録、課題管理など)
   - ゼミ・研究室での個人的な活動記録
@@ -18,14 +21,17 @@
   - 学生自治会・学生団体の運営管理
 - 教育機関・教育関係団体(学校、大学、専門学校、教育を主たる事業とする団体など)
   - 学校・大学での授業資料管理や教員間の情報共有
+<!-- textlint-enable weseek/max-kanji-continuous-len -->
 
 ※ 対象に含まれるかの判断が難しい場合は、お気軽にお問い合わせください。
 
 ### 対象外になるケース
 
+<!-- textlint-disable weseek/max-kanji-continuous-len -->
 - 教育関係団体以外の企業・法人においての業務利用
   - メンバーに学生や教員が含まれる場合も対象外となります
   - 教育を主たる事業とされている場合はご相談ください
+<!-- textlint-enable weseek/max-kanji-continuous-len -->
 
 ## プランの特徴
 
@@ -36,9 +42,11 @@
 
 ### 契約期間・お支払い方法
 
+<!-- textlint-disable weseek/max-kanji-continuous-len -->
 - 契約期間は1年間で、契約開始時に年間利用料金をまとめてお支払いいただきます。
   - 契約の更新方法については、下記の「契約更新(継続)の流れ」をご確認ください。
 - お支払い方法はクレジットカードのみとなっております。
+<!-- textlint-enable weseek/max-kanji-continuous-len -->
 
 ## 新規申し込みの流れ
 
@@ -49,12 +57,14 @@
 
 ### 新規申し込み手順
 
+<!-- textlint-disable weseek/no-doubled-joshi -->
 1. GROWI.cloud アカウントを作成し、GROWI App を作成する
     - この時点ではアカデミックプランを選択できませんので、どのプランで進めていただいても構いません
 1. [アカデミックプランお申し込みフォーム](https://growicloud.atlassian.net/servicedesk/customer/portal/1/group/3/create/10017)から、作成したGROWI Appの情報と必要書類を添付して利用申し込み
 1. 運営での審査後、運営側からアカデミックプランが選択できる状態になった通知が届く
 1. アカデミックプランの中から、お客様ご自身でご利用シーンに適したプランを選択
     - フォームからお申し込みいただくだけではアカデミックプランは適用されませんので、ご注意ください
+<!-- textlint-enable weseek/no-doubled-joshi -->
 
 ## 契約更新(継続)の流れ
 
@@ -73,8 +83,10 @@
 
 ## 期限までに契約更新(継続)手続きをされなかった場合
 
+<!-- textlint-disable weseek/no-doubled-joshi -->
 - アカデミックプランの有効期限が切れた場合、GROWI が停止しご利用いただけなくなります。
 - 停止した GROWI は、通常のプランへの変更もしくはアカデミックプランへの更新手続きによって復旧できます。[サポートデスク](https://growi.cloud/v2/contact)までお問い合わせください。
+<!-- textlint-enable weseek/no-doubled-joshi -->
 
 ## 管理者が変わる場合の注意点
 
@@ -83,9 +95,11 @@
 
 ### GROWI.cloud プライマリーオーナー
 
+<!-- textlint-disable weseek/max-kanji-continuous-len -->
 - GROWI.cloudの契約や請求、カスタマーサポートとのメールのやり取りなどを実施
 - プライマリーオーナーの方に契約更新案内メールを送付します
   - [プライマリーオーナーの変更方法](https://growi.cloud/help/ja/cloud/organization.html#プライマリーオーナーの変更方法)
+<!-- textlint-enable weseek/max-kanji-continuous-len -->
 
 ### GROWI管理者
 
