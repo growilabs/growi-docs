@@ -23,6 +23,7 @@ docs/.vuepress/dist
 docs/.vuepress/public/openapi-spec-*.json
 docs/.vuepress/public/redoc-*.html
 docs/.vuepress/public/index.html
+docs/.vuepress/public/robots.txt
 redoc
 tmp
 
