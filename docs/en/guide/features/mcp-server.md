@@ -195,6 +195,108 @@ If the connection is successful, Claude will respond and GROWI operations will b
 
 If you have configured multiple GROWI instances, you can check all connection statuses by asking "Can you connect to each GROWI?"
 
+## Connecting via UTCP Code-Mode
+
+UTCP (Universal Tool Calling Protocol) is an intermediate layer for efficiently utilizing MCP servers. It reduces token consumption by combining multiple tool calls into a single request.
+
+By connecting to GROWI MCP via UTCP Code-Mode, you can use [AI Tools (Skills)](/en/guide/features/ai-tools.html).
+
+### UTCP Setup Steps
+
+#### 1. Create the UTCP Configuration File
+
+Create `.utcp_config.json` in your home directory.
+
+**Windows:** `C:\Users\<username>\.utcp_config.json`
+
+**macOS/Linux:** `~/.utcp_config.json`
+
+```json
+{
+  "manual_call_templates": [
+    {
+      "name": "growi",
+      "call_template_type": "mcp",
+      "config": {
+        "mcpServers": {
+          "growi": {
+            "transport": "stdio",
+            "command": "npx",
+            "args": ["-y", "@growi/mcp-server"],
+            "env": {
+              "GROWI_API_TOKEN_1": "<API token>",
+              "GROWI_APP_NAME_1": "<app name>",
+              "GROWI_BASE_URL_1": "<GROWI URL>",
+              "GROWI_DEFAULT_APP_NAME": "<default app name>"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+```
+
+::: tip
+If you want to place `.utcp_config.json` in a different location such as within a repository,
+you can specify the full path using the `UTCP_CONFIG_FILE` environment variable
+in the MCP client configuration described below.
+Since the file contains API tokens, adding it to `.gitignore` is recommended.
+:::
+
+For environment variable descriptions (`GROWI_API_TOKEN_1`, etc.),
+refer to the "MCP Configuration Method" section above.
+To use multiple GROWI instances, add entries with incrementing numbers (`_2`, `_3`, ...) in the same way.
+
+#### 2. Configure UTCP in Your MCP Client
+
+Add UTCP Code-Mode as an MCP server in your MCP client (such as Claude Desktop) configuration file.
+
+**For Claude Desktop (`claude_desktop_config.json`):**
+
+```json
+{
+  "mcpServers": {
+    "code-mode": {
+      "command": "npx",
+      "args": ["-y", "@utcp/code-mode-mcp"],
+      "env": {
+        "UTCP_CONFIG_FILE": "<full path to .utcp_config.json>"
+      }
+    }
+  }
+}
+```
+
+::: warning
+Even if `.utcp_config.json` is placed in the home directory, the full path must be specified.
+:::
+
+#### 3. Restart Your MCP Client
+
+After saving the configuration, completely quit and restart your MCP client.
+
+#### 4. Verify Connection
+
+Ask "Can you connect to GROWI?" to verify that MCP is working correctly via UTCP.
+
+#### UTCP Connection Troubleshooting
+
+##### Warning Messages on Startup
+
+```text
+MCP code-mode: Unexpected token 'M', "[McpCommuni"... is not valid JSON
+```
+
+This warning is caused by UTCP internal logs being output to stdout. The tools function normally, so you can continue using them as-is.
+
+##### Tools Not Found
+
+1. Verify that the path to `.utcp_config.json` is correct.
+2. Verify that the GROWI URL includes `https://`.
+3. Verify that the URL does not end with a trailing slash (`/`).
+4. Restart your MCP client.
+
 ### Troubleshooting
 
 #### When Connection Fails

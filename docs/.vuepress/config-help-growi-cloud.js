@@ -175,7 +175,7 @@ module.exports = {
             '/ja/guide/features/ai-knowledge-assistant.md',
             '/ja/guide/features/ai-editor-assistant.md',
             '/ja/guide/features/mcp-server',
-            '/ja/guide/features/smart-save-setup.md'
+            '/ja/guide/features/ai-tools.md'
           ]
         },
         {
@@ -342,7 +342,7 @@ module.exports = {
             '/en/guide/features/ai-knowledge-assistant.md',
             '/en/guide/features/ai-editor-assistant.md',
             '/en/guide/features/mcp-server',
-            '/en/guide/features/smart-save-setup.md',
+            '/en/guide/features/ai-tools.md',
           ]
         },
         {
