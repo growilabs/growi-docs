@@ -56,8 +56,8 @@ gemini extensions update growi-mcp-server
 
 ### Skills.sh (Vercel)
 
-Works with Claude Code, Gemini CLI, Cursor, Codex,
-GitHub Copilot, and [many other agents](https://skills.sh/).
+Works with Claude Code, Gemini CLI, Cursor,
+and [many other agents](https://skills.sh/).
 
 ```bash
 npx skills add growilabs/growi-mcp-server
