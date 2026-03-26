@@ -1,5 +1,7 @@
 # GROWI.cloud で作成された GROWI へのデータ移行(データアーカイブ・インポート機能を利用)
 
+<!-- textlint-disable weseek/ja-no-redundant-expression -->
+
 ## 概要
 
 - GROWI.cloud で作成した GROWI へデータを移行するには2種類の方法がございます。
@@ -73,3 +75,5 @@
   - 本機能を利用した移行については弊社では責任を負いかねますので、ご自身での対応をお願いいたします。
   - 本機能自体の不具合についてはGROWI(OSS) の開発チームが調査対応するため、[Slack](https://communityinviter.com/apps/wsgrowi/invite) または [GitHubのIssue](https://github.com/growilabs/growi/issues) へのご連絡をお願いいたします。
 - OSSチームでの詳細なサポートが難しい場合もございますので、GROWI.cloudサポートへの移行依頼も含めてご検討ください。
+
+<!-- textlint-enable weseek/ja-no-redundant-expression -->

@@ -1,3 +1,5 @@
+<!-- textlint-disable weseek/max-kanji-continuous-len -->
+
 # GROWI.cloud で作成された GROWI へのデータ移行 (サポートへの移行作業依頼)
 
 ## 概要
@@ -144,3 +146,5 @@
 - お客様側でGROWIの表示に問題がないか、表示できていないファイルがないかをご確認いただきます。
 - 確認が完了し次第、移行作業に関する請求書を発行させていただきます。
   - 移行作業に関する費用についてはクレジットカード払いには対応しておりません。予めご了承ください。
+
+<!-- textlint-enable weseek/max-kanji-continuous-len -->
