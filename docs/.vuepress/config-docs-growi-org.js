@@ -1,6 +1,8 @@
 const path = require('path');
 const Canonical = require('./plugins/canonical');
 
+const jsonLd = (obj) => JSON.stringify(obj).replace(/</g, '\\u003c');
+
 module.exports = {
   title: 'GROWI Docs',
   serviceWorker: true,
@@ -634,5 +636,175 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/assets/docs-growi-org/favicon.ico', sizes: '48x48'}],
     ['link', { rel: 'apple-touch-icon', href: '/assets/docs-growi-org/apple-touch-icon.png'}],
+    ['script', { type: 'application/ld+json' }, jsonLd({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": [
+        { "@language": "ja", "@value": "デモサイトでGROWIを体験する方法" },
+        { "@language": "en", "@value": "How to try GROWI on the demo site" }
+      ],
+      "description": [
+        { "@language": "ja", "@value": "GROWIのデモサイトを使って、ページの作成・階層構造・一覧表示を体験する手順です。" },
+        { "@language": "en", "@value": "Steps to try GROWI using the demo site, including creating pages, nesting pages, and viewing child page lists." }
+      ],
+      "url": "https://docs.growi.org/ja/guide/getting-started/try_growi.html",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": [
+            { "@language": "ja", "@value": "デモサイトにログインする" },
+            { "@language": "en", "@value": "Log in to the demo site" }
+          ],
+          "text": [
+            { "@language": "ja", "@value": "デモサイトにアクセスして、サイトに掲載されているアカウントでログインしてください。" },
+            { "@language": "en", "@value": "Access the demo site and log in with the account credentials provided on the site." }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "name": [
+            { "@language": "ja", "@value": "ページを作成する" },
+            { "@language": "en", "@value": "Create a page" }
+          ],
+          "text": [
+            { "@language": "ja", "@value": "画面左上の「鉛筆アイコン」をクリックして編集画面を開き、ページ名と本文を入力して「更新」ボタンで保存します。" },
+            { "@language": "en", "@value": "Click the pencil icon in the upper left corner to open the editor, enter a page name and content, then press the 'Update' button to save." }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "name": [
+            { "@language": "ja", "@value": "配下にページを作成する" },
+            { "@language": "en", "@value": "Create a child page" }
+          ],
+          "text": [
+            { "@language": "ja", "@value": "作成したページを開いた状態で再度「鉛筆アイコン」からページを作成すると、配下にページを追加できます。" },
+            { "@language": "en", "@value": "While viewing the created page, click the pencil icon again to create a new page nested under it." }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "name": [
+            { "@language": "ja", "@value": "ページ一覧を確認する" },
+            { "@language": "en", "@value": "View child pages" }
+          ],
+          "text": [
+            { "@language": "ja", "@value": "ページ内右側のボタンから、配下に作成したページの一覧を確認できます。" },
+            { "@language": "en", "@value": "Click the 'Page List' button on the right side of the page to view a list of child pages." }
+          ]
+        }
+      ]
+    })],
+    ['script', { type: 'application/ld+json' }, jsonLd({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": [
+        { "@language": "ja", "@value": "GROWIでページを作成する方法" },
+        { "@language": "en", "@value": "How to create a page in GROWI" }
+      ],
+      "description": [
+        { "@language": "ja", "@value": "GROWIでMarkdown形式のwikiページを作成する手順です。" },
+        { "@language": "en", "@value": "Steps to create a Markdown-based wiki page in GROWI." }
+      ],
+      "url": "https://docs.growi.org/ja/guide/features/create_page.html",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": [
+            { "@language": "ja", "@value": "編集画面を開く" },
+            { "@language": "en", "@value": "Open the editor" }
+          ],
+          "text": [
+            { "@language": "ja", "@value": "画面左上の「鉛筆アイコン」をクリックすると、ページの編集画面が表示されます。" },
+            { "@language": "en", "@value": "Click the pencil icon in the upper left of the screen to open the page editor." }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "name": [
+            { "@language": "ja", "@value": "ページ名を入力する" },
+            { "@language": "en", "@value": "Enter a page name" }
+          ],
+          "text": [
+            { "@language": "ja", "@value": "編集画面左上の入力欄から任意のページ名を入力します。ページ名を入力しない場合、自動でページ名が入力されます。" },
+            { "@language": "en", "@value": "Enter any page name in the input field at the top left of the editor. If no name is entered, one will be generated automatically." }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "name": [
+            { "@language": "ja", "@value": "内容を入力する" },
+            { "@language": "en", "@value": "Enter content" }
+          ],
+          "text": [
+            { "@language": "ja", "@value": "Markdown形式でページの内容を入力します。画面右側にリアルタイムでプレビューが表示されます。" },
+            { "@language": "en", "@value": "Enter the page content in Markdown format. A real-time preview is shown on the right side of the screen." }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "name": [
+            { "@language": "ja", "@value": "保存する" },
+            { "@language": "en", "@value": "Save the page" }
+          ],
+          "text": [
+            { "@language": "ja", "@value": "「更新」ボタンをクリックして編集内容を保存します。" },
+            { "@language": "en", "@value": "Click the 'Update' button to save your changes." }
+          ]
+        }
+      ]
+    })],
+    ['script', { type: 'application/ld+json' }, jsonLd({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": [
+        { "@language": "ja", "@value": "Docker ComposeでGROWIをインストールする方法" },
+        { "@language": "en", "@value": "How to install GROWI with Docker Compose" }
+      ],
+      "description": [
+        { "@language": "ja", "@value": "docker-composeを使ってGROWIをセルフホストする手順です。" },
+        { "@language": "en", "@value": "Steps to self-host GROWI using docker-compose." }
+      ],
+      "url": "https://docs.growi.org/ja/admin-guide/getting-started/docker-compose.html",
+      "tool": [
+        { "@type": "HowToTool", "name": "Docker" },
+        { "@type": "HowToTool", "name": "docker-compose" }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": [
+            { "@language": "ja", "@value": "リポジトリをダウンロードする" },
+            { "@language": "en", "@value": "Download the repository" }
+          ],
+          "text": [
+            { "@language": "ja", "@value": "git clone https://github.com/growilabs/growi-docker-compose.git growi を実行してリポジトリをクローンします。" },
+            { "@language": "en", "@value": "Run git clone https://github.com/growilabs/growi-docker-compose.git growi to clone the repository." }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "name": [
+            { "@language": "ja", "@value": "GROWIを起動する" },
+            { "@language": "en", "@value": "Start GROWI" }
+          ],
+          "text": [
+            { "@language": "ja", "@value": "ダウンロードしたフォルダ内で cd growi && docker-compose up を実行します。" },
+            { "@language": "en", "@value": "Run cd growi && docker-compose up inside the downloaded folder." }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "name": [
+            { "@language": "ja", "@value": "起動を確認する" },
+            { "@language": "en", "@value": "Verify the installation" }
+          ],
+          "text": [
+            { "@language": "ja", "@value": "http://localhost:3000/ にアクセスし、初回セットアップ画面が表示されれば起動完了です。" },
+            { "@language": "en", "@value": "Access http://localhost:3000/ and confirm that the initial setup screen is displayed." }
+          ]
+        }
+      ]
+    })],
   ],
 };
