@@ -64,16 +64,36 @@ $code-bg: #eff1f3;
 
   code {
     padding: 2px 4px;
+    font-size: 0.875em;
     color: $code-text;
     background: $code-bg;
     border: solid 1px $code-border;
     border-radius: 4px;
   }
 
+  pre {
+    font-size: 0.875em;
+  }
+
   pre code {
+    font-size: 1em;
     color: unset;
     background: none;
     border: 0;
+  }
+
+  ul, ol {
+    padding-left: 1.8em;
+    margin-bottom: 0.8em;
+  }
+
+  li {
+    margin-bottom: 0.3em;
+
+    > ul, > ol {
+      margin-top: 0.3em;
+      margin-bottom: 0;
+    }
   }
 }
 </style>
