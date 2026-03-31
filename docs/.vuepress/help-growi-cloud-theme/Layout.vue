@@ -4,6 +4,7 @@
     <!-- If you write https://fonts.googleapis.com/css?family=Lato:700 in config.head, -->
     <!-- it will be converted to https://fonts.googleapis.com/css?family=Lato, so you have no choice but to put it in body. in the body. -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" />
 
     <Header/>
 
@@ -65,3 +66,9 @@ export default {
   },
 }
 </script>
+
+<style>
+:root {
+  --bs-font-sans-serif: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+</style>
