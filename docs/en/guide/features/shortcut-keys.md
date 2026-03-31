@@ -26,6 +26,10 @@ These shortcuts are available on any screen, whether you are viewing a page or u
 
 These shortcuts are available while the editor is open.
 
+### Default Mode
+
+#### Basic Operations
+
 | Action | Key |
 |---|---|
 | Find in editor | `Ctrl` + `F` |
@@ -38,7 +42,7 @@ These shortcuts are available while the editor is open.
 | Copy line | `Alt` + `Shift` + `↓` or `↑` |
 | Multiple cursors | `Ctrl` + `Alt` + `↓` or `↑` (or `Alt` + Click) |
 
-## Text Formatting (Editor)
+#### Text Formatting
 
 | Action | Key |
 |---|---|
@@ -48,7 +52,7 @@ These shortcuts are available while the editor is open.
 | Inline code | `Ctrl` + `Shift` + `C` |
 | Hyperlink | `Ctrl` + `Shift` + `U` |
 
-## Line Settings (Editor)
+#### Line Settings
 
 | Action | Key |
 |---|---|
@@ -58,7 +62,7 @@ These shortcuts are available while the editor is open.
 | Code block | `Ctrl` + `Alt` + `Shift` + `C` |
 | Comment out | `Ctrl` + `/` |
 
-## Additional Editor Shortcuts
+#### Additional Shortcuts
 
 These shortcuts are not shown in the shortcut modal, but are available in the editor.
 
@@ -67,143 +71,77 @@ These shortcuts are not shown in the shortcut modal, but are available in the ed
 | Undo | `Ctrl` + `Z` |
 | Redo | `Ctrl` + `Y` (or `Ctrl` + `Shift` + `Z`) |
 | Select all | `Ctrl` + `A` |
+| Increase indent | `Ctrl` + `]` |
+| Decrease indent | `Ctrl` + `[` |
+| Go to matching bracket | `Ctrl` + `Shift` + `\` |
+| Toggle block comment | `Alt` + `A` |
 
-## Vim Mode
+### Vim Mode
 
 When Vim keymap is selected in the editor settings, Vim keybindings are available.
-In addition to standard Vim commands, the following GROWI-specific customizations apply:
+
+#### Key Vim Commands
+
+| Category | Commands |
+| --- | --- |
+| Movement | `h` `j` `k` `l`, `w` `b` `e`, `0` `$`, `gg` `G`, etc. |
+| Editing | `d` `c` `y` `p`, `x` `r` `J` `.`, etc. |
+| Search | `/` `?` `n` `N` `*` `#` |
+| Mode switching | `i` `a` `o` `I` `A` `O`, `v` `V` `Ctrl+V`, `Esc` |
+| Macros | `q` `@` |
+| Ex commands | `:s`, `:g`, etc. |
+
+#### GROWI-Specific Customizations
 
 | Action | Key |
-|---|---|
+| --- | --- |
 | Exit insert mode | `J` `J` (or `J` `K`) |
 | Save | `:w` |
-| Bold | `Ctrl` + `Shift` + `B` (since `Ctrl` + `B` is used for page scroll in Vim) |
+| Bold | `Ctrl` + `Shift` + `B` |
 
 :::tip
 In Vim mode, `Ctrl` + `B` is used for page scrolling,
 so the bold shortcut is changed to `Ctrl` + `Shift` + `B`.
-All other formatting and line setting shortcuts remain the same as default.
+All other formatting and line setting shortcuts remain the same as Default mode.
 :::
 
-## Emacs Mode
+### Emacs Mode
 
 When Emacs keymap is selected in the editor settings, Emacs keybindings are available.
 
-### Cursor Movement
+#### Key Emacs Commands
 
-| Action | Key |
-|---|---|
-| Previous character | `Ctrl` + `B` |
-| Next character | `Ctrl` + `F` |
-| Previous line | `Ctrl` + `P` |
-| Next line | `Ctrl` + `N` |
-| Beginning of line | `Ctrl` + `A` |
-| End of line | `Ctrl` + `E` |
-| Previous word | `Alt` + `B` |
-| Next word | `Alt` + `F` |
-| Beginning of document | `Shift` + `Alt` + `<` |
-| End of document | `Shift` + `Alt` + `>` |
-| Go to line | `Alt` + `G` |
-
-### Text Editing
-
-| Action | Key |
-|---|---|
-| Kill to end of line | `Ctrl` + `K` |
-| Delete next character | `Ctrl` + `D` |
-| Kill next word | `Alt` + `D` |
-| Kill previous word | `Alt` + `Backspace` |
-| Split line | `Ctrl` + `O` |
-| Transpose characters | `Ctrl` + `T` |
-| Uppercase | `Alt` + `U` |
-| Lowercase | `Alt` + `L` |
-
-### Selection, Copy & Paste
-
-| Action | Key |
-|---|---|
-| Set mark | `Ctrl` + `Space` |
-| Kill region | `Ctrl` + `W` |
-| Copy region | `Alt` + `W` |
-| Yank (paste) | `Ctrl` + `Y` |
-| Yank rotation | `Alt` + `Y` |
-| Select all | `Ctrl` + `X` → `H` |
-
-### Search
-
-| Action | Key |
-|---|---|
-| Search | `Ctrl` + `S` |
-| Reverse search | `Ctrl` + `R` |
-| Replace | `Shift` + `Alt` + `5` |
-
-### Undo & Comments
-
-| Action | Key |
-|---|---|
-| Undo | `Ctrl` + `/` (or `Ctrl` + `Z`) |
-| Redo | `Shift` + `Ctrl` + `/` (or `Shift` + `Ctrl` + `Z`) |
-| Toggle comment | `Alt` + `;` |
-| Cancel | `Ctrl` + `G` |
-
-## VSCode Mode
-
-When VSCode keymap is selected in the editor settings, VSCode keybindings are available.
-
-### Editing
-
-| Action | Key |
-|---|---|
-| Delete line | `Ctrl` + `Shift` + `K` |
-| Move line down | `Alt` + `↓` |
-| Move line up | `Alt` + `↑` |
-| Copy line down | `Alt` + `Shift` + `↓` |
-| Copy line up | `Alt` + `Shift` + `↑` |
-| Select line | `Ctrl` + `L` |
-| Increase indent | `Ctrl` + `]` |
-| Decrease indent | `Ctrl` + `[` |
-
-### Multiple Cursors & Selection
-
-| Action | Key |
-|---|---|
-| Add cursor above | `Ctrl` + `Alt` + `↑` |
-| Add cursor below | `Ctrl` + `Alt` + `↓` |
-| Add cursor to each selection line | `Shift` + `Alt` + `I` |
-| Select next occurrence | `Ctrl` + `D` |
-| Select all occurrences | `Ctrl` + `Shift` + `L` |
-
-### Search & Navigation
-
-| Action | Key |
-|---|---|
-| Find | `Ctrl` + `F` |
-| Go to line | `Ctrl` + `G` |
-| Go to matching bracket | `Ctrl` + `Shift` + `\` |
-
-### Code Folding
-
-| Action | Key |
-|---|---|
-| Fold | `Ctrl` + `Shift` + `[` |
-| Unfold | `Ctrl` + `Shift` + `]` |
-| Fold all | `Ctrl` + `K` → `Ctrl` + `0` |
-| Unfold all | `Ctrl` + `K` → `Ctrl` + `J` |
-
-### Comments
-
-| Action | Key |
+| Category | Commands |
 | --- | --- |
-| Toggle line comment | `Ctrl` + `/` |
-| Toggle block comment | `Shift` + `Alt` + `A` |
-| Add line comment | `Ctrl` + `K` → `Ctrl` + `C` |
-| Remove line comment | `Ctrl` + `K` → `Ctrl` + `U` |
+| Cursor movement | `Ctrl+F/B/N/P`, `Ctrl+A/E`, `Alt+F/B`, etc. |
+| Text editing | `Ctrl+K`, `Ctrl+D`, `Ctrl+T`, `Alt+D`, `Alt+U/L`, etc. |
+| Kill ring | `Ctrl+W` (kill), `Alt+W` (copy), `Ctrl+Y` (yank), `Alt+Y` (rotate) |
+| Mark & selection | `Ctrl+Space`, `Ctrl+X H` |
+| Search | `Ctrl+S` (search), `Ctrl+R` (reverse), `Shift+Alt+5` (replace) |
+| Undo | `Ctrl+/`, `Ctrl+Z` |
 
-### Undo & Completion
+:::tip
+In Emacs mode, some Default mode shortcuts are overridden by Emacs keybindings.
+For example, `Ctrl` + `S` becomes search instead of save.
+Formatting and line setting shortcuts remain the same as Default mode.
+:::
 
-| Action | Key |
+### VSCode Mode
+
+When VSCode keymap is selected in the editor settings,
+VSCode-specific keybindings are added on top of Default mode shortcuts.
+
+#### Key VSCode Commands
+
+| Category | Commands |
 | --- | --- |
-| Undo | `Ctrl` + `Z` |
-| Redo | `Ctrl` + `Y` (or `Ctrl` + `Shift` + `Z`) |
-| Select all | `Ctrl` + `A` |
-| Start completion | `Ctrl` + `Space` |
+| Multiple cursors | `Ctrl+Alt+↑/↓`, `Ctrl+D`, `Ctrl+Shift+L`, `Shift+Alt+I` |
+| Code folding | `Ctrl+Shift+[/]`, `Ctrl+K Ctrl+0/J` |
+| Comments | `Ctrl+/`, `Shift+Alt+A`, `Ctrl+K Ctrl+C/U` |
+| Line operations | `Ctrl+L` (select), `Ctrl+]/[` (indent) |
+| Navigation | `Ctrl+G` (go to line), `Ctrl+Shift+\` (bracket) |
+| Completion | `Ctrl+Space` |
+
+:::tip
+Formatting and line setting shortcuts remain the same as Default mode.
+:::
