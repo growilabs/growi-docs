@@ -24,6 +24,7 @@ docs/.vuepress/public/openapi-spec-*.json
 docs/.vuepress/public/redoc-*.html
 docs/.vuepress/public/index.html
 docs/.vuepress/public/robots.txt
+docs/.vuepress/public/llms.txt
 redoc
 tmp
 
