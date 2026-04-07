@@ -27,6 +27,7 @@ RUN pnpm run help-growi-cloud:build
 FROM nginx:latest
 
 COPY --from=builder /growi-docs/docs/.vuepress/dist /usr/share/nginx/html/help
+COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
