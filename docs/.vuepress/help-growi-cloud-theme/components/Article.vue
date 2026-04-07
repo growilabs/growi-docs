@@ -33,6 +33,7 @@ $link-text: #00A5B1;
 $code-text: #BD0039;
 $code-border: #abb4bd;
 $code-bg: #eff1f3;
+$border-color: #eaecef;
 
 .article {
   img {
@@ -94,6 +95,12 @@ $code-bg: #eff1f3;
       margin-top: 0.3em;
       margin-bottom: 0;
     }
+  }
+
+  hr {
+    margin: 1rem 0;
+    border-top: 1px $border-color solid;
+    opacity: 1;
   }
 }
 </style>
