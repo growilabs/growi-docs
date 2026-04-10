@@ -168,7 +168,8 @@ module.exports = {
                 '/en/guide/features/forgot_password.md',
                 '/en/guide/features/ai-knowledge-assistant.md',
                 '/en/guide/features/ai-editor-assistant.md',
-                '/en/guide/features/mcp-server'
+                '/en/guide/features/mcp-server',
+                '/en/guide/features/ai-tools.md'
               ]
             },
             {
@@ -439,7 +440,8 @@ module.exports = {
                 '/ja/guide/features/forgot_password.md',
                 '/ja/guide/features/ai-knowledge-assistant.md',
                 '/ja/guide/features/ai-editor-assistant.md',
-                '/ja/guide/features/mcp-server.md'
+                '/ja/guide/features/mcp-server.md',
+                '/ja/guide/features/ai-tools.md'
               ]
             },
             {
