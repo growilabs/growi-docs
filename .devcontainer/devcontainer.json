@@ -18,18 +18,27 @@
     "customizations": {
       "vscode": {
         "extensions": [
+          // AI
+          "anthropic.claude-code",
+          // linter
           "dbaeumer.vscode-eslint",
-          "mhutchie.git-graph",
-          "eamodio.gitlens",
-          "github.vscode-pull-request-github",
-          "cschleiden.vscode-github-actions",
           "editorconfig.editorconfig",
-          "esbenp.prettier-vscode",
           "shinnn.stylelint",
           "hex-ci.stylelint-plus",
+          "esbenp.prettier-vscode",
           "davidanson.vscode-markdownlint",
-          "octref.vetur",
           "sysoev.language-stylus",
+          // markdown
+          "bierner.markdown-mermaid",
+          // git/github
+          "codeinklingon.git-worktree-menu",
+          "github.vscode-pull-request-github",
+          "mhutchie.git-graph",
+          "eamodio.gitlens",
+          "cschleiden.vscode-github-actions",
+          // framework
+          "octref.vetur",
+          // live server
           "ritwickdey.liveserver"
       ]
     }
