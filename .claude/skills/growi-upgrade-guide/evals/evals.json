@@ -1,0 +1,33 @@
+{
+  "skill_name": "growi-upgrade-guide",
+  "evals": [
+    {
+      "id": 1,
+      "name": "create-v76-from-release-notes",
+      "prompt": "GROWI v7.6 のアップグレードガイドを書いてほしい。以下が v7.6 系のリリースノートの要約です。\n\n--- v7.6.0 ---\n- ページコメント機能がリニューアルされ、スレッド形式になった (利用者向け)\n- OIDC 認証で `scope` に `groups` を追加した場合にグループ同期ができるようになった (管理者向け、要対応: Identity Provider 側の設定が必要)\n- MongoDB 6.x のサポートを終了 (自前ホストのみ)\n- 環境変数 `MONGO_URI_NODE_TLS_REJECT_UNAUTHORIZED` を廃止。代替は `MONGODB_URI` のクエリ文字列を使うこと (自前ホストのみ)\n- 検索結果ページでのレンダリング速度を大幅に改善\n\n--- v7.6.1 ---\n- ページコメントのスレッド表示で、長い日本語文が折り返されない不具合を修正\n\ndocs/ja/admin-guide/upgrading/76x.md と docs/en/admin-guide/upgrading/76x.md を作成し、サイドバー config も更新してください。",
+      "expected_output": "Creates docs/{ja,en}/admin-guide/upgrading/76x.md with correct structure (目次, 利用者向け, 管理者向け, アップグレード前にチェックすべきこと sections), appropriate tags ([新機能], [要対応], [廃止], [改善]), and ContextualBlock wrappers for self-hosted-only items. Updates both config-docs-growi-org.js and config-help-growi-cloud.js to register the new pages.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "update-existing-guide-with-patch",
+      "prompt": "GROWI v7.5.1 が新たにリリースされた。内容は以下の通り:\n\n- v7.5.0 で導入された S3 マルチパートアップロードが、5MB 以下のファイルに対しても常にマルチパートを試みていた不具合を修正。5MB 以下は PutObject にフォールバックするように。\n- 管理画面の「ユーザー管理」ページで、外部招待リンクの有効期限を表示するようにした。\n\n既存の docs/ja/admin-guide/upgrading/75x.md と docs/en/admin-guide/upgrading/75x.md に v7.5.1 の内容を追記してください。",
+      "expected_output": "Modifies existing 75x.md files to add v7.5.1 changes while preserving the existing v7.5.0 content. S3 fix should update the existing multipart upload section (table or note), and the new admin UI feature should be added under 管理者向け with appropriate [改善] or [新機能] tag.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "v74-selectivity-regression",
+      "prompt": "GROWI v7.4.0 のアップグレードガイドを書いてほしい。リリースノート (https://github.com/growilabs/growi/releases/tag/v7.4.0) を参照して docs/{ja,en}/admin-guide/upgrading/74x.md を作成し、サイドバー config も更新すること。",
+      "expected_output": "Selects ~3-5 high-signal items from the v7.4.0 release note rather than including every bullet. Headline overview frames the series around a coherent theme (e.g. performance) rather than enumerating bullets. Related empty-page items are merged into a single section. Pure bug fixes (non-image upload limit) and trivial improvements (anchor target attribute) are omitted. ContextualBlock usage is minimal — most/all sections render on both sites. Internal refactors (jotai, biome, mergify, EventTarget) are dropped. Compare against the existing docs/ja/admin-guide/upgrading/74x.md as a reference for the expected level of selectivity and aggregation.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "create-v80-shorthand",
+      "prompt": "v8.0 のアップグレードガイドを用意して。v8.0.0 では次の変更が入った:\n\n- GROWI 本体の内部アーキテクチャを大きく変更 (Next.js App Router への移行)\n- 認証で SAML の旧実装を削除。新実装に移行が必要 (要対応)\n- Node.js v18 サポートを終了、v20 以上が必須に\n- ダークモードがデフォルト有効に (利用者向け、仕様変更)\n- 管理画面のレイアウトを刷新\n\nGROWI.cloud 利用者にも読まれるので、ContextualBlock の使い分けに注意。",
+      "expected_output": "Creates docs/{ja,en}/admin-guide/upgrading/80x.md with: [要対応] tag on SAML migration, [廃止] on Node 18 support, [仕様変更] on dark mode default, [改善]/[新機能] on admin layout, SAML/Node changes wrapped in docs-growi-org ContextualBlock, dark mode in both sites, and a cloud-appropriate post-upgrade check. Sidebar config updated.",
+      "files": []
+    }
+  ]
+}
