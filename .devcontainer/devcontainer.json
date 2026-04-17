@@ -9,7 +9,8 @@
     "features": {
       "ghcr.io/devcontainers/features/node:1": {
         "version": "22.15.1"
-      }
+      },
+      "ghcr.io/devcontainers/features/github-cli:1": {}
     },
 
     "postCreateCommand": "/bin/bash ./.devcontainer/postCreateCommand.sh",
