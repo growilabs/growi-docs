@@ -169,7 +169,8 @@ module.exports = {
                 '/en/guide/features/ai-knowledge-assistant.md',
                 '/en/guide/features/ai-editor-assistant.md',
                 '/en/guide/features/mcp-server',
-                '/en/guide/features/ai-tools.md'
+                '/en/guide/features/ai-tools.md',
+                '/en/guide/features/shortcut-keys.md'
               ]
             },
             {
@@ -441,7 +442,8 @@ module.exports = {
                 '/ja/guide/features/ai-knowledge-assistant.md',
                 '/ja/guide/features/ai-editor-assistant.md',
                 '/ja/guide/features/mcp-server.md',
-                '/ja/guide/features/ai-tools.md'
+                '/ja/guide/features/ai-tools.md',
+                '/ja/guide/features/shortcut-keys.md'
               ]
             },
             {
