@@ -29,7 +29,9 @@ Do **not** invoke for unrelated release-note work in other repos or for `guide/`
 
 ## The workflow
 
-Five sequential phases. Stop and confirm with the user at the end of phase 1 (target version), phase 3 (categorization plan), and phase 4 (Japanese draft). The English version is intentionally deferred to the very end — do not start it until the Japanese is approved.
+Five sequential phases. Stop and confirm with the user at the end of phase 1 (target version), phase 3 (categorization plan — presented together with the Japanese header skeleton already inserted into the file), and phase 4 (Japanese body draft). The English version is intentionally deferred to the very end — do not start it until the Japanese is approved.
+
+**Non-destructive invariant**: if the target Japanese or English file already exists (patch-driven update, or resuming an in-progress draft), never overwrite or wipe it. All additions in phases 2 and 3 must be additive — insert new headers below the existing content under a patch marker, leaving prior wording byte-for-byte intact. Users have been burned by losing hand-edited content, so this rule is absolute.
 
 ### Phase 1. Identify the target version (input gathering)
 
@@ -88,14 +90,16 @@ Wait for the user to confirm a target. Then:
 
 ### Phase 2. Create minimal scaffolding (files + sidebar config)
 
-Before deciding any content, create empty-but-valid files and wire them into the sidebar. This makes the page navigable on the dev server immediately and surfaces config mistakes early.
+Before deciding any content, make sure the target pages exist and are wired into the sidebar. This makes the page navigable on the dev server immediately and surfaces config mistakes early.
 
-**(a) Skeleton Markdown files** — write both `docs/ja/admin-guide/upgrading/NNx.md` and `docs/en/admin-guide/upgrading/NNx.md` containing only:
+**(a) Skeleton Markdown files** — behavior depends on whether the file already exists:
 
-- The `# h1` title (`# GROWI vX.Y.x へのアップグレード` / `# Upgrading to GROWI vX.Y.x`)
-- A one-line placeholder overview (e.g. `<!-- TODO: 概要 -->` / `<!-- TODO: overview -->`)
-- `## 目次` / `## Table of Contents` with `[[toc]]`
-- Empty `## 利用者向け` / `## 管理者向け` and `## アップグレード前にチェックすべきこと` / `## Things to Check Before Upgrading` headings as placeholders
+- **New file (initial-creation path)** — create both `docs/ja/admin-guide/upgrading/NNx.md` and `docs/en/admin-guide/upgrading/NNx.md` containing only:
+  - The `# h1` title (`# GROWI vX.Y.x へのアップグレード` / `# Upgrading to GROWI vX.Y.x`)
+  - A one-line placeholder overview (e.g. `<!-- TODO: 概要 -->` / `<!-- TODO: overview -->`)
+  - `## 目次` / `## Table of Contents` with `[[toc]]`
+  - Empty `## 利用者向け` / `## 管理者向け` and `## アップグレード前にチェックすべきこと` / `## Things to Check Before Upgrading` headings as placeholders
+- **Existing file (patch-driven update, or a prior incomplete draft)** — do **not** rewrite or clear it. Leave the full existing content untouched. Header insertion for the new patch items happens in phase 3, additively.
 
 Use [references/template.md](references/template.md) as the source for exact heading vocabulary. Do **not** fill in any change content yet.
 
@@ -104,13 +108,17 @@ Use [references/template.md](references/template.md) as the source for exact hea
 - `docs/.vuepress/config-docs-growi-org.js`
 - `docs/.vuepress/config-help-growi-cloud.js`
 
-Each file has separate `ja` and `en` arrays listing `'/<lang>/admin-guide/upgrading/NNx.md'`. Prepend the new entry so the newest version appears at the top. Locate the insertion point with Grep (e.g. search for the current-top entry like `upgrading/75x.md`) and insert above it. Update **all four arrays** (2 files × 2 languages).
+Each file has separate `ja` and `en` arrays listing `'/<lang>/admin-guide/upgrading/NNx.md'`. For a *new* `NNx.md`, prepend the new entry so the newest version appears at the top — locate the insertion point with Grep (e.g. search for the current-top entry like `upgrading/75x.md`) and insert above it. Update **all four arrays** (2 files × 2 languages). For a patch-driven update of an already-registered file, skip this step — the sidebar entry is already there.
 
-After this phase, the user can navigate to the new (still-empty) page in the dev server. Move on without confirming — there is nothing to review yet.
+After this phase, the user can navigate to the target page in the dev server. Move on without confirming — header content arrives in phase 3.
 
-### Phase 3. Triage release-note content and propose a plan
+### Phase 3. Triage release-note content, propose a plan, and seed the Japanese headers
 
-Now go through every bullet aggregated in phase 1 and decide what makes the cut. **Bias toward fewer, higher-signal items.** Real-world `74x.md`-style guides typically include only ~30–50% of release-note bullets — past authors aggressively omit small improvements and bug fixes. If your draft includes nearly every release-note item, you are over-including.
+This phase produces two things that the user reviews *together*: (i) a categorization plan (table), and (ii) the Japanese file with the `###` headers from that plan already inserted. Seeing the plan reflected in the actual file (visible in the dev server) makes the review concrete — the user can navigate the skeleton and catch structural issues before any prose gets written. Do **not** skip the in-file seeding: "plan only" presentations have, in past sessions, produced plans that the user approved in isolation but that didn't survive contact with the real doc structure.
+
+#### 3a. Triage
+
+Go through every bullet aggregated in phase 1 and decide what makes the cut. **Bias toward fewer, higher-signal items.** Real-world `74x.md`-style guides typically include only ~30–50% of release-note bullets — past authors aggressively omit small improvements and bug fixes. If your draft includes nearly every release-note item, you are over-including.
 
 For each item that *does* make the cut, decide:
 
@@ -141,22 +149,47 @@ A signal you are over-wrapping: every section has a ContextualBlock. That is alm
 
 **(e) Ordering** — within `## 管理者向け`, important breaking changes (`[要対応]`, `[廃止]`) go first, then `[仕様変更]`, then `[サポート追加]`, then `[新機能]`, then `[改善]`. Within `## 利用者向け`, lead with `[新機能]` then `[改善]`.
 
-**Present the plan to the user before writing any content.** A compact table works well:
+#### 3b. Seed the Japanese `###` headers into the file
 
-```
-| Item | Section | Tag | Site | Notes |
-|---|---|---|---|---|
-| OIDC groups scope | 管理者向け | [要対応] | both | needs IdP config |
-| MongoDB 6 EOL | 管理者向け | [廃止] | docs-growi-org | self-hosted only |
-| Comment thread UI | 利用者向け | [新機能] | both | headline feature |
-| (omitted) test refactor | — | — | — | internal only |
-```
+Before showing the plan, write the `###` headings from that plan into `docs/ja/admin-guide/upgrading/NNx.md` — titles only, no body text. Leave the English file untouched for now (phase 5 handles translation).
 
-Wait for the user to approve / adjust the plan. This is the highest-leverage confirmation point — getting categorization wrong wastes the writing effort.
+What "header only" means concretely:
 
-### Phase 4. Write the Japanese version only
+- The `### [タグ] 見出し` line, Japanese wording, under the correct `## 利用者向け` / `## 管理者向け` / (top-level) parent
+- The `<ContextualBlock context="...">` wrapper with blank lines inside, if the phase-3a plan assigns a site split for that item
+- **No body prose, no bullets, no code blocks** — just the heading line. A `<!-- TODO -->` comment underneath is fine if it helps the user see "content goes here"
 
-After the plan is approved, fill in **only `docs/ja/admin-guide/upgrading/NNx.md`**. Leave the English file as the empty scaffold from phase 2 — do not touch it yet.
+Ordering follows the rule from 3a(e): within `## 管理者向け`, `[要対応]` / `[廃止]` first, then `[仕様変更]`, `[サポート追加]`, `[新機能]`, `[改善]`; within `## 利用者向け`, `[新機能]` first, then `[改善]`.
+
+**Non-destructive handling** — this is the case where things can go wrong, so be careful:
+
+- **New-file path (file was created empty in phase 2)** — insert the `###` headers under the existing `## 利用者向け` / `## 管理者向け` placeholders. The overview paragraph stays as `<!-- TODO: 概要 -->`; the pre-upgrade checklist stays empty.
+- **Patch-driven update (file already has content from a previous version)** — never edit, reorder, or delete anything already in the file. Append a patch marker (`<!-- v7.5.1 リリースに伴う追記 -->` style, matching the precedent in `docs/ja/admin-guide/upgrading/71x.md`) near the bottom of the relevant `##` section, and add the new `###` headers underneath it. If multiple patches are being folded in at once, use one marker per patch tag. When in doubt about where exactly the marker goes, ask the user rather than guess — but do not remove any existing `###` content to "make room".
+
+Use Edit (not Write) for the additions — Write would clobber existing content. Insert-anchoring on a stable string like the `## 管理者向け` line is the safest approach.
+
+#### 3c. Present the plan alongside the seeded file
+
+Show the user two things in the same message:
+
+1. The categorization plan as a compact table:
+   ```
+   | Item | Section | Tag | Site | Notes |
+   |---|---|---|---|---|
+   | OIDC groups scope | 管理者向け | [要対応] | both | needs IdP config |
+   | MongoDB 6 EOL | 管理者向け | [廃止] | docs-growi-org | self-hosted only |
+   | Comment thread UI | 利用者向け | [新機能] | both | headline feature |
+   | (omitted) test refactor | — | — | — | internal only |
+   ```
+2. A pointer to the seeded Japanese file (path + a brief note that the dev server now renders the skeleton), so the user can open it in the browser while reviewing the plan.
+
+Wait for the user to approve / adjust. This is the highest-leverage confirmation point — getting categorization or ordering wrong at this stage wastes the writing effort. If the user asks for changes (add/drop/reorder items, retag, rewrap), update both the plan and the file's `###` headers before proceeding to phase 4.
+
+### Phase 4. Fill in the Japanese body content
+
+The Japanese file's structure (headings, section order, ContextualBlock wrappers) is already in place from phase 3b. Phase 4 fills in prose **under those existing headings** — do not re-insert or reorder them, and do not touch the English file yet (phase 5 handles translation).
+
+For a patch-driven update, the same rule applies to previously-written sections: leave pre-existing prose exactly as it was and only fill in body content beneath the newly added patch-marker headers.
 
 Follow [references/template.md](references/template.md) and these invariants:
 
