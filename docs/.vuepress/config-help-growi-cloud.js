@@ -204,6 +204,7 @@ module.exports = {
             '/ja/admin-guide/management-cookbook/audit-log.md',
             '/ja/admin-guide/management-cookbook/plugins.md',
             '/ja/admin-guide/management-cookbook/setup-ai.md',
+            '/ja/admin-guide/management-cookbook/news.md',
           ]
         },
         {
@@ -372,6 +373,7 @@ module.exports = {
             '/en/admin-guide/management-cookbook/audit-log.md',
             '/en/admin-guide/management-cookbook/plugins.md',
             '/en/admin-guide/management-cookbook/setup-ai.md',
+            '/en/admin-guide/management-cookbook/news.md',
           ]
         },
         {
