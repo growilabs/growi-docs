@@ -6,13 +6,9 @@
 
 <img :src="$withBase('/assets/images/ja/news-ja.png')" alt="where">
 
-<ContextualBlock context="docs-growi-org">
-
 ::: tip
 未読フィルタについて、すべて／通知／お知らせ のそれぞれのタブで未読のみボタンによるフィルタリングが機能します。
 :::
-
-</ContextualBlock>
 
 ## 配信されるニュースの種類
 

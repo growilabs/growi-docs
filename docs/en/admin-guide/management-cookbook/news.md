@@ -4,13 +4,9 @@ The News Delivery feature, added in v7.5.4, allows users to receive news such as
 
 <img :src="$withBase('/assets/images/en/news-en.png')" alt="where">
 
-<ContextualBlock context="docs-growi-org">
-
 ::: tip
 The unread filter works on each of the All / Notifications / Announcements tabs via the "Unread only" button.
 :::
-
-</ContextualBlock>
 
 [[toc]]
 
