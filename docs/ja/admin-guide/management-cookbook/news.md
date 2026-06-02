@@ -4,7 +4,7 @@
 
 [[toc]]
 
-<img :src="$withBase('/assets/images/ja/news-1.png')" alt="where">
+<img :src="$withBase('/assets/images/ja/news-ja.png')" alt="where">
 
 <ContextualBlock context="docs-growi-org">
 

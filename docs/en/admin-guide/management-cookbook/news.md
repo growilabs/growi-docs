@@ -2,7 +2,7 @@
 
 The News Delivery feature, added in v7.5.4, allows users to receive news such as announcements and release information from the GROWI development team via in-app notifications.
 
-<img :src="$withBase('/assets/images/en/news-1.png')" alt="where">
+<img :src="$withBase('/assets/images/en/news-en.png')" alt="where">
 
 <ContextualBlock context="docs-growi-org">
 
