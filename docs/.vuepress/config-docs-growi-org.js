@@ -170,6 +170,7 @@ module.exports = {
                 '/en/guide/features/ai-editor-assistant.md',
                 '/en/guide/features/mcp-server',
                 '/en/guide/features/ai-tools.md',
+                '/en/guide/features/vault.md',
                 '/en/guide/features/shortcut-keys.md'
               ]
             },
@@ -198,6 +199,7 @@ module.exports = {
               title: 'Upgrading',
               collapsable: false,
               children: [
+                '/en/admin-guide/upgrading/80x.md',
                 '/en/admin-guide/upgrading/75x.md',
                 '/en/admin-guide/upgrading/74x.md',
                 '/en/admin-guide/upgrading/73x.md',
@@ -292,6 +294,7 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/audit-log.md',
                 '/en/admin-guide/management-cookbook/plugins.md',
                 '/en/admin-guide/management-cookbook/setup-ai.md',
+                '/en/admin-guide/management-cookbook/setup-vault.md',
                 '/en/admin-guide/management-cookbook/news.md',
               ],
             },
@@ -444,6 +447,7 @@ module.exports = {
                 '/ja/guide/features/ai-editor-assistant.md',
                 '/ja/guide/features/mcp-server.md',
                 '/ja/guide/features/ai-tools.md',
+                '/ja/guide/features/vault.md',
                 '/ja/guide/features/shortcut-keys.md'
               ]
             },
@@ -473,6 +477,7 @@ module.exports = {
               title: 'アップグレード',
               collapsable: false,
               children: [
+                '/ja/admin-guide/upgrading/80x.md',
                 '/ja/admin-guide/upgrading/75x.md',
                 '/ja/admin-guide/upgrading/74x.md',
                 '/ja/admin-guide/upgrading/73x.md',
@@ -567,6 +572,7 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/audit-log.md',
                 '/ja/admin-guide/management-cookbook/plugins.md',
                 '/ja/admin-guide/management-cookbook/setup-ai.md',
+                '/ja/admin-guide/management-cookbook/setup-vault.md',
                 '/ja/admin-guide/management-cookbook/news.md',
               ],
             },
