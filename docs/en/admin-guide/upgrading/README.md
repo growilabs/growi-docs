@@ -1,131 +1,111 @@
 ---
-title: Migration Guide to the GROWI v7 Series
+title: Migration Guide to the Latest Version of GROWI
 ---
 
-# Migration Guide to the GROWI v7 Series
+# Migration Guide to the Latest Version of GROWI
+This guide is for everyone running an older version of GROWI. It provides a cross-cutting overview of **how to update to the latest version of GROWI (v7.5.x as of June 2026)**.
 
-We recommend running the latest v7 series of GROWI (the latest at the time of writing is v7.5.x).
-The latest series receives continuous improvements in features, performance, and security, and supports the most up-to-date runtime environments.
+The latest series receives continuous improvements in features, performance, and security, and its supported runtime environments are kept up to date.
+To help you keep using GROWI safely, the development team strongly recommends updating to the latest version.
 
-The goal of this page is simple: **once you know which version you are currently running, you should be able to tell exactly what you need to do** to migrate to the v7 series.
-Start with [Check your current version](#check-your-current-version), pick your series, and read only that section — it contains everything you need for that series.
-
-The concrete changes and procedures for each minor version are documented in the individual "Upgrading to GROWI vX.Y.x" pages. Each section links only the individual guides that are actually relevant to that series, so you do not need to read every series' page.
-
-::: tip
-We recommend running at least v7.4.0 or later.
-The safeguard for the Revision data migration is applied automatically from v7.4.0 onward.
-:::
-
+The specific changes in each minor version are also documented on the individual upgrade pages. This page focuses on the tasks you need to perform, the items you need to check, and the points to note when updating to the latest version in a single step.
 
 ## Table of Contents
 
 [[toc]]
 
+## 1. Check your current version
+Check the GROWI version you are currently running, and proceed from the section that matches your series.
+Before upgrading, always take a backup of MongoDB.
 
-## Check your current version
+Reference: [Backing up / restoring MongoDB](https://docs.growi.org/en/admin-guide/admin-cookbook/mongodb-backup.html)
 
-Check the version you are currently running from the GROWI admin page or the startup logs, then jump to the matching section below. Reading only that one section gives you everything you need for your series.
 
-| Current version | Go to | Migration point |
+| Current version | Section to go to | Migration point |
 | :--- | :--- | :--- |
-| v4.x or earlier | [If you are running v4.x or earlier](#if-you-are-running-v4-x-or-earlier) | Stop once at v5 for the manual conversion to the v5 Compatible Format, then upgrade directly to v7.4 or later (do not run the v6 series) |
-| v5.x – v6.0.x | [If you are running v5.x – v6.0.x](#if-you-are-running-v5-x-v6-0-x) | Meet the runtime requirements and upgrade directly to v7.4 or later |
-| v6.1.0 – v7.0.15 | [If you are running v6.1.0 – v7.0.15](#if-you-are-running-v6-1-0-v7-0-15) | **Security vulnerability that can leak information. Act with top priority** |
-| v7.0.16 or later | [If you are running v7.0.16 or later](#if-you-are-running-v7-0-16-or-later) | A normal upgrade. Move to the latest series |
+| v4.x or earlier | [2. Upgrading to GROWI v5.0.11](#_2-upgrading-to-growi-v5-0-11-for-v4-x-or-earlier) | First upgrade to v5.0.11 and convert to the v5 Compatible Format, then proceed to sections 3 and 4 |
+| v5.x | [If you are running v5.x](#if-you-are-running-v5-x) | Check the runtime and settings, then move to the latest version |
+| v6.0.x | [If you are running v6.0.x](#if-you-are-running-v6-0-x) | Node.js and Elasticsearch need updating |
+| v6.1.x – v6.2.x | [If you are running v6.1.x – v6.2.x](#if-you-are-running-v6-1-x-v6-2-x) | Generally no required environment changes (check GridFS if built on v3.3 or earlier) |
+| v6.3.x | [If you are running v6.3.x](#if-you-are-running-v6-3-x) | Node.js needs updating |
+| v7.0.x | [If you are running v7.0.x](#if-you-are-running-v7-0-x) | MongoDB needs updating |
+| v7.1.x | [If you are running v7.1.x](#if-you-are-running-v7-1-x) | Check authentication- and S3-related settings |
+| v7.2.x – v7.4.x | [If you are running v7.2.x – v7.4.x](#if-you-are-running-v7-2-x-v7-4-x) | A normal upgrade |
 
+## 2. Upgrading to GROWI v5.0.11 (for v4.x or earlier)
+### Upgrade Elasticsearch to 7.x and rebuild the index
+- If you use Elasticsearch, you first need to upgrade **Elasticsearch 6 → 7**.
+- Elasticsearch 6.x and 7.x are officially said to have index compatibility, but to avoid trouble when using them with GROWI, we recommend deleting all existing index data and rebuilding the index.
+  - [Upgrading GROWI to v5.0.x / Elasticsearch 7.x Support](/en/admin-guide/upgrading/50x.html#elasticsearch-7-x-support)
 
-## How upgrading works
+### Upgrade GROWI itself to v5.0.11
+- Following the [Upgrading GROWI to v5.0.x](/en/admin-guide/upgrading/50x.html) guide, upgrade GROWI itself to **v5.0.11**.
 
-GROWI runs database migrations automatically at startup, so in principle you can skip multiple versions and upgrade in one step.
-However, there are just two exceptions that need care. The specific handling for each is described in the relevant series' section.
+### Convert page data to the v5 Compatible Format
+- After upgrading to v5.0.x, you need to **convert page data to the v5 Compatible Format**.
+- For the procedure and scope of impact, see [Upgrading GROWI to v5.0.x / About The New v5 Compatible Format](/en/admin-guide/upgrading/50x.html#about-the-new-v5-compatible-format).
 
-- **Points where you must stop and do manual work** (in particular, the conversion to the "v5 Compatible Format" when coming from v4.x or earlier).
-- **A version range you must neither run/operate nor pass through** (v6.1.0–v7.0.15, which causes information leakage and unrepairable data corruption).
+## 3. Upgrades and configuration changes outside GROWI itself (for v5.x and later)
 
+Before upgrading to the latest version in a single step, you need to complete the **runtime (middleware) updates and the environment-variable / infrastructure configuration changes** required between your version and the latest one. GROWI runs database migrations automatically at startup, but the "outside GROWI itself" tasks listed here are not performed automatically.
 
-## If you are running v4.x or earlier
+Start from the entry for the version you are currently running, and **review and apply every entry below it (toward the newer versions) in order**. For the details and background of each change, see the "For Admin" section of the individual upgrade guide linked in each entry. For the list of environment variables, see [Environment Variables](/en/admin-guide/admin-cookbook/env-vars.html).
 
-**Path: first to v5 (stop here once to do the manual conversion) → then directly to v7.4 or later (do not run the v6 series; the latest series is recommended)**
+### If you are running v5.x
+Reference: [Upgrading to GROWI v6.0.x / For Admin](/en/admin-guide/upgrading/60x.html#for-admin)
 
-This is the only series with **one mandatory stop along the way** (stopping at v5 to do the manual conversion). That single stop aside, once the conversion is done you do not boot the v6 series one version at a time — you go from v5 **straight** to v7.4 or later.
+There are no changes to the middleware version requirements. However, the following admin-panel and authentication settings are not carried over automatically, so address them if they apply to you.
 
-### What to do
+- [If applicable] **XSS (Cross-Site Scripting) protection settings**: Previous settings are not carried over and are reset to the default (ON, with the "Recommended settings" selected) at startup. If you had registered your own tags / attributes in the allowlist, configure them again (the format for allowed attributes has changed to JSON).
+- [If applicable] **Removal of the Custom HTML Header**: The feature for inserting arbitrary strings / tags into the `head` tag has been removed. If you were using it, migrate to the newly added "Custom Noscript" or to a custom script.
+- [If applicable] **Removal of Twitter OAuth 2 authentication**: If you were using it, migrate to a different authentication method.
+- [If applicable] **Discontinuation of the nocdn build**: If you were routinely running the nocdn build (which avoids the CDN), note that the official image has been consolidated into a single build that minimizes CDN usage.
 
-1. **Take a backup** (database and attachments).
-2. **Upgrade to the v5 series.** If you use Elasticsearch, this is when you handle the **Elasticsearch 6 → 7** move ([v5.0.x guide](/en/admin-guide/upgrading/50x.html)).
-3. **Convert pages to the "v5 Compatible Format" manually.** v5.0 significantly changed the internal data format of pages, and pages created in v4.5 or earlier are not converted automatically. If left unconverted, this affects page-tree display and how descendant pages behave on move / rename / delete, so plan it deliberately (and consider using maintenance mode). For the procedure and scope of impact, see the [v5.0.x guide](/en/admin-guide/upgrading/50x.html).
-4. **Upgrade directly from v5 to v7.4 or later.** Once the v5 Compatible Format conversion is done, the rest follows the same path as the [v5.x – v6.0.x series](#if-you-are-running-v5-x-v6-0-x). GROWI runs migrations automatically at startup. **You do not boot the v6 series or intermediate v7.0.x versions one by one — you go from v5 straight to v7.4 or later in a single upgrade**. Never run or pass through v6.1.0–v7.0.15 (see the danger note below). Before that single upgrade, prepare for the following runtime and specification changes:
-   - **End of Node.js 16 support (move to 18 / 20)** (v7.0) — [v7.0.x guide](/en/admin-guide/upgrading/70x.html)
-   - **Manual rewrite of Bootstrap v4 → v5 notation** (v7.0) — [v7.0.x guide](/en/admin-guide/upgrading/70x.html)
-   - **Deprecation of HackMD integration** (v7.0; moved to simultaneous editing in the built-in editor) — [v7.0.x guide](/en/admin-guide/upgrading/70x.html)
-   - **MongoDB 6.0 or higher required** (v7.1) — [v7.1.x guide](/en/admin-guide/upgrading/71x.html)
+### If you are running v6.0.x
+Reference: [Upgrading to GROWI v6.1.x / For Admin](/en/admin-guide/upgrading/61x.html#for-admin)
+
+- [Required] Upgrade **Node.js** to v18 (no impact if you use the official Docker image).
+- [Required] Upgrade **Elasticsearch** to v8.
+- [If applicable] **When `FILE_UPLOAD=local` (attachments stored on the local file system)**: The storage location has changed from `/opt/growi/packages/app/public` to `/opt/growi/apps/app/public`. Move existing files after upgrading (not needed when using AWS S3, GCP GCS, or MongoDB GridFS).
+- [If applicable] **When you build from source yourself**: The build tool has changed from Lerna to Turborepo (a global install is required via `yarn global add turbo`; not needed when using the official Docker image).
+
+### If you are running v6.1.x – v6.2.x
+Reference: [Upgrading to GROWI v6.3.x](/en/admin-guide/upgrading/63x.html)
+
+- There are no required middleware or environment-variable changes.
+- [If applicable] **Systems built on GROWI v3.3 or earlier that manage attachments with MongoDB GridFS**: The endpoint in the form `/attachment/{pageID}/{fileName}` has been removed. Rewrite pages that contain such URLs to the `/attachment/{attachmentId}` form, or re-upload the files.
+
+### If you are running v6.3.x
+Reference: [Upgrading to GROWI v7.0.x / For Admin](/en/admin-guide/upgrading/70x.html#for-admin)
+
+- [Required] Upgrade **Node.js** to v18 or v20 (no impact if you use the official Docker image).
+- [If applicable] **Removal of HackMD integration**: The feature for simultaneous editing by multiple people via HackMD integration has been removed (replaced by the built-in editor in v7). Consider decommissioning your HackMD server.
+- [If applicable] **Removal of Promster integration**: If you were monitoring with Promster, review your monitoring setup.
+- Note that the frontend framework Bootstrap has been updated from v4.6 to v5.3, which affects HTML tags written with Bootstrap notation in Markdown (you need to notify your users).
+
+### If you are running v7.0.x
+Reference: [Upgrading to GROWI v7.1.x / For Admin](/en/admin-guide/upgrading/71x.html#for-admin)
+
+- [Required] Upgrade **MongoDB** to v6.0 or later.
+- [If applicable] **When you store files in AWS S3**: An object ACL (`public-read`) is no longer attached on upload. Following AWS best practices, we recommend disabling the S3 bucket ACL and blocking public access. If you have set the environment variable `S3_OBJECT_ACL=public-read`, change it to `private` or remove it (leave it as `public-read` only if you keep operating as before without changing the bucket settings).
+- [If applicable] **When you build from source yourself**: The package manager and task runner have changed from yarn (v1) to pnpm (v9.4 or later) (not needed when using the official Docker image).
+
+### If you are running v7.1.x
+Reference: [Upgrading to GROWI v7.2.x / For Admin](/en/admin-guide/upgrading/72x.html#for-admin)
+
+- [If applicable] **When you use ID/Pass authentication or SAML authentication**: The logic that determines whether they are enabled or disabled has changed. If you have set the environment variables `LOCAL_STRATEGY_ENABLED` / `SAML_ENABLED`, access `/login` in a private browser before and after upgrading and confirm that the actual enabled/disabled state matches your expectation. If it differs, align the state by either "giving priority to the DB value (remove the environment variable)" or "giving priority to the environment variable (delete the relevant config in the DB)".
+- [If applicable] **Removed environment variables**: `FILE_UPLOAD_DISABLED` (replacement: `FILE_UPLOAD=none`) and `DISABLE_LINK_SHARING` (replacement: the admin panel "Security settings") have been removed. If you have set them, migrate to the replacements.
+- [Optional] **OpenTelemetry**: From v7.2.9, sending telemetry data is enabled by default. If you do not want to send it, or want to change the destination to your own organization's collector, see [Telemetry](/en/admin-guide/admin-cookbook/telemetry.html).
+
+### If you are running v7.2.x – v7.4.x
+Reference: [Upgrading to GROWI v7.5.x / For Administrators](/en/admin-guide/upgrading/75x.html#for-administrators)
+
+- [If applicable] **When you use S3-compatible object storage**: The upload method has changed to multipart upload. Add the `s3:AbortMultipartUpload` permission to your IAM policy (`CreateMultipartUpload`, `CompleteMultipartUpload`, and `UploadPart` are included in `s3:PutObject`, so they do not need to be added).
+- [If applicable] **When you use the official Docker image**: The base image has changed to a Docker Hardened Image (DHI), which does not include a shell (`sh`, `bash`) or a package manager. Interactive debugging via `docker exec`, operations that assume in-container shell access or installing extra packages, and custom entry points or derived images are all affected, so verify that they work before upgrading.
+
+## 4. Upgrade GROWI to the latest version
+- Following the [Upgrading to GROWI v7.5.x](/en/admin-guide/upgrading/75x.html) guide, upgrade **directly to the latest version**.
 
 ::: danger
-On the way from v5 to v7.4 or later, **do not run or operate on v6.1.0–v7.0.15, and do not let your upgrade pass through that range either.** This range has a serious bug in Revision (page edit history) data: running and operating on it makes the content and authorship of private or deleted pages viewable by users who should not have access (information leak), and merely passing through it corrupts history data created before that point so that it cannot be repaired. **Upgrade directly to v7.4.0 or later.** For details, see the Dev Wiki page [Revision data migration bug in v5.0.0–v7.0.15](https://dev.growi.org/69301054963f68dfcf2b7111).
+Because of a serious bug in Revision (page edit history) data, **do not upgrade to v6.1.0–v7.0.15; always upgrade directly to v7.4.0 or later**. For details, see the Dev Wiki page [Revision data migration bug in v5.0.0–v7.0.15](https://dev.growi.org/69301054963f68dfcf2b7111).
 :::
-
-
-## If you are running v5.x – v6.0.x
-
-**Path: directly to v7.4 or later (do not pass through v6.1.0–v7.0.15)**
-
-The conversion to the v5 Compatible Format was already handled in v5.0, so from this series the main work is meeting the runtime requirements.
-
-### What to do
-
-1. **Take a backup** (database and attachments).
-2. **Confirm whether the conversion to the v5 Compatible Format has been done.** If your environment was migrated from v4.5 or earlier and still has unconverted pages, perform the conversion first (see the [v5.0.x guide](/en/admin-guide/upgrading/50x.html)). It is not needed for environments freshly built on v5.0 or later.
-3. **Meet the runtime requirements.**
-   - **End of Node.js 16 support (move to 18 / 20)** (v7.0) — [v7.0.x guide](/en/admin-guide/upgrading/70x.html)
-   - **Manual rewrite of Bootstrap v4 → v5 notation** (v7.0) — [v7.0.x guide](/en/admin-guide/upgrading/70x.html)
-   - **Deprecation of HackMD integration** (v7.0) — [v7.0.x guide](/en/admin-guide/upgrading/70x.html)
-   - **MongoDB 6.0 or higher required** (v7.1) — [v7.1.x guide](/en/admin-guide/upgrading/71x.html)
-4. **Upgrade directly to v7.4 or later.**
-
-::: danger
-**Do not run or operate on v6.1.0–v7.0.15, and do not let your upgrade pass through that range.** This range has a serious bug in Revision data: running and operating on it makes the content and authorship of private or deleted pages viewable by users who should not have access (information leak), and merely passing through it corrupts history data created before that point beyond repair. Always **upgrade directly to v7.4.0 or later.** For details, see the Dev Wiki page [Revision data migration bug in v5.0.0–v7.0.15](https://dev.growi.org/69301054963f68dfcf2b7111).
-:::
-
-
-## If you are running v6.1.0 – v7.0.15
-
-**Act with top priority.** This range has a **serious security vulnerability that can leak information** simply by running and operating it.
-
-In this range, all Revisions (page edit history) in the system are incorrectly linked to a single page, making the content, author, last editor, and edit content of private or deleted pages viewable by users who should not have access. Furthermore, **any system that has passed through this range even once (during an upgrade) has corrupted history data created before that point, and it cannot be repaired.**
-
-### What to do
-
-1. **Take a backup** (database and attachments).
-2. **Upgrade to v7.4.0 or later immediately to stop the leak.** The root cause was removed in v7.0.16, but we recommend **v7.4.0 or later**, where the safeguard is applied automatically. While upgrading, also meet the runtime requirements in the [v7.0.x guide](/en/admin-guide/upgrading/70x.html) / [v7.1.x guide](/en/admin-guide/upgrading/71x.html) (Node.js, Bootstrap notation, HackMD deprecation, MongoDB 6.0 or higher).
-3. **Assess the corruption and recover where possible.** On a system that has passed through this range, history data created before that point **will not be restored by upgrading (it is unrepairable)**. Manual recovery is possible only under very limited conditions. For the scope of potentially leaked information, how to determine corruption, and recovery steps, see the Dev Wiki page [Revision data migration bug in v5.0.0–v7.0.15](https://dev.growi.org/69301054963f68dfcf2b7111).
-4. **Confirm whether the v5 Compatible Format conversion has been done.** If your environment came from v4.5 or earlier and still has unconverted pages, perform the conversion (see the [v5.0.x guide](/en/admin-guide/upgrading/50x.html)). This is not the priority for stopping the leak, so you may do it after the upgrade above. It is not needed for environments freshly built on v5.0 or later.
-
-::: danger
-**Never run or pass through v6.1.0–v7.0.15**, not even as a temporary step on the way to a newer version. If you have already operated in this range, be sure to assess the scope of potentially leaked information, such as private and deleted pages.
-:::
-
-
-## If you are running v7.0.16 or later
-
-**Path: to the latest series (v7.5.x recommended)**
-
-The root cause of the Revision data migration bug was removed in v7.0.16, so you can proceed as a normal upgrade.
-
-### What to do
-
-1. **Take a backup** (database and attachments).
-2. **Confirm whether the v5 Compatible Format conversion has been done.** If your environment came from v4.5 or earlier and still has unconverted pages, perform the conversion (see the [v5.0.x guide](/en/admin-guide/upgrading/50x.html)). It is not needed for environments freshly built on v5.0 or later.
-3. **Review the changes in the individual guides** ([v7.1.x](/en/admin-guide/upgrading/71x.html) and each later vX.Y.x guide you pass through). Read the "Things to Check Before Upgrading" section of each guide.
-4. **Upgrade to the latest series.** Stay on **v7.4.0 or later**, where the Revision data safeguard is applied automatically.
-
-::: warning
-If your environment **previously passed through v6.1.0–v7.0.15**, history data created before that point may already be corrupted (upgrading to v7.0.16 or later does not repair it). This applies in particular if you are currently running v7.0.16–v7.0.20. For how to determine corruption and recovery steps, see the Dev Wiki page [Revision data migration bug in v5.0.0–v7.0.15](https://dev.growi.org/69301054963f68dfcf2b7111).
-:::
-
-
-## Things to check before and after upgrading
-
-- Always back up your database and attachments before upgrading.
-- Review the "Things to Check Before Upgrading" section of the individual guides linked in your section.
-- If a large conversion task is involved (such as the v5 Compatible Format), consider using maintenance mode.
