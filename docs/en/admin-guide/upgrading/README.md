@@ -29,7 +29,7 @@ Check the version you are currently running from the GROWI admin page or the sta
 
 | Current version | Go to | Migration point |
 | :--- | :--- | :--- |
-| v4.x or earlier | [If you are running v4.x or earlier](#if-you-are-running-v4-x-or-earlier) | A manual conversion to the v5 Compatible Format is required. Upgrade in stages |
+| v4.x or earlier | [If you are running v4.x or earlier](#if-you-are-running-v4-x-or-earlier) | Stop once at v5 for the manual conversion to the v5 Compatible Format, then upgrade directly to v7.4 or later (do not run the v6 series) |
 | v5.x – v6.0.x | [If you are running v5.x – v6.0.x](#if-you-are-running-v5-x-v6-0-x) | Meet the runtime requirements and upgrade directly to v7.4 or later |
 | v6.1.0 – v7.0.15 | [If you are running v6.1.0 – v7.0.15](#if-you-are-running-v6-1-0-v7-0-15) | **Security vulnerability that can leak information. Act with top priority** |
 | v7.0.16 or later | [If you are running v7.0.16 or later](#if-you-are-running-v7-0-16-or-later) | A normal upgrade. Move to the latest series |
@@ -46,21 +46,23 @@ However, there are just two exceptions that need care. The specific handling for
 
 ## If you are running v4.x or earlier
 
-**Path: v5 series → v6 series → v7.4 or later (the latest series is recommended)**
+**Path: first to v5 (stop here once to do the manual conversion) → then directly to v7.4 or later (do not run the v6 series; the latest series is recommended)**
+
+This is the only series with **one mandatory stop along the way** (stopping at v5 to do the manual conversion). That single stop aside, once the conversion is done you do not boot the v6 series one version at a time — you go from v5 **straight** to v7.4 or later.
 
 ### What to do
 
 1. **Take a backup** (database and attachments).
 2. **Upgrade to the v5 series.** If you use Elasticsearch, this is when you handle the **Elasticsearch 6 → 7** move ([v5.0.x guide](/en/admin-guide/upgrading/50x.html)).
 3. **Convert pages to the "v5 Compatible Format" manually.** v5.0 significantly changed the internal data format of pages, and pages created in v4.5 or earlier are not converted automatically. If left unconverted, this affects page-tree display and how descendant pages behave on move / rename / delete, so plan it deliberately (and consider using maintenance mode). For the procedure and scope of impact, see the [v5.0.x guide](/en/admin-guide/upgrading/50x.html).
-4. **Pass through the v6 series and reach v7.4 or later.** Along the way, handle the following runtime and specification changes:
+4. **Upgrade directly from v5 to v7.4 or later.** Once the v5 Compatible Format conversion is done, the rest follows the same path as the [v5.x – v6.0.x series](#if-you-are-running-v5-x-v6-0-x). GROWI runs migrations automatically at startup. **You do not boot the v6 series or intermediate v7.0.x versions one by one — you go from v5 straight to v7.4 or later in a single upgrade**. Never run or pass through v6.1.0–v7.0.15 (see the danger note below). Before that single upgrade, prepare for the following runtime and specification changes:
    - **End of Node.js 16 support (move to 18 / 20)** (v7.0) — [v7.0.x guide](/en/admin-guide/upgrading/70x.html)
    - **Manual rewrite of Bootstrap v4 → v5 notation** (v7.0) — [v7.0.x guide](/en/admin-guide/upgrading/70x.html)
    - **Deprecation of HackMD integration** (v7.0; moved to simultaneous editing in the built-in editor) — [v7.0.x guide](/en/admin-guide/upgrading/70x.html)
    - **MongoDB 6.0 or higher required** (v7.1) — [v7.1.x guide](/en/admin-guide/upgrading/71x.html)
 
 ::: danger
-When upgrading through the v6 series, **do not run or operate on v6.1.0–v7.0.15, and do not let your upgrade pass through that range either.** This range has a serious bug in Revision (page edit history) data: running and operating on it makes the content and authorship of private or deleted pages viewable by users who should not have access (information leak), and merely passing through it corrupts history data created before that point so that it cannot be repaired. **Upgrade directly to v7.4.0 or later.** For details, see the Dev Wiki page [Revision data migration bug in v5.0.0–v7.0.15](https://dev.growi.org/69301054963f68dfcf2b7111).
+On the way from v5 to v7.4 or later, **do not run or operate on v6.1.0–v7.0.15, and do not let your upgrade pass through that range either.** This range has a serious bug in Revision (page edit history) data: running and operating on it makes the content and authorship of private or deleted pages viewable by users who should not have access (information leak), and merely passing through it corrupts history data created before that point so that it cannot be repaired. **Upgrade directly to v7.4.0 or later.** For details, see the Dev Wiki page [Revision data migration bug in v5.0.0–v7.0.15](https://dev.growi.org/69301054963f68dfcf2b7111).
 :::
 
 
@@ -73,19 +75,16 @@ The conversion to the v5 Compatible Format was already handled in v5.0, so from 
 ### What to do
 
 1. **Take a backup** (database and attachments).
-2. **Meet the runtime requirements.**
+2. **Confirm whether the conversion to the v5 Compatible Format has been done.** If your environment was migrated from v4.5 or earlier and still has unconverted pages, perform the conversion first (see the [v5.0.x guide](/en/admin-guide/upgrading/50x.html)). It is not needed for environments freshly built on v5.0 or later.
+3. **Meet the runtime requirements.**
    - **End of Node.js 16 support (move to 18 / 20)** (v7.0) — [v7.0.x guide](/en/admin-guide/upgrading/70x.html)
    - **Manual rewrite of Bootstrap v4 → v5 notation** (v7.0) — [v7.0.x guide](/en/admin-guide/upgrading/70x.html)
    - **Deprecation of HackMD integration** (v7.0) — [v7.0.x guide](/en/admin-guide/upgrading/70x.html)
    - **MongoDB 6.0 or higher required** (v7.1) — [v7.1.x guide](/en/admin-guide/upgrading/71x.html)
-3. **Upgrade directly to v7.4 or later.**
+4. **Upgrade directly to v7.4 or later.**
 
 ::: danger
 **Do not run or operate on v6.1.0–v7.0.15, and do not let your upgrade pass through that range.** This range has a serious bug in Revision data: running and operating on it makes the content and authorship of private or deleted pages viewable by users who should not have access (information leak), and merely passing through it corrupts history data created before that point beyond repair. Always **upgrade directly to v7.4.0 or later.** For details, see the Dev Wiki page [Revision data migration bug in v5.0.0–v7.0.15](https://dev.growi.org/69301054963f68dfcf2b7111).
-:::
-
-::: tip
-If your environment was migrated from v4.5 or earlier and you have not yet performed the conversion to the "v5 Compatible Format," do that first (see the [v5.0.x guide](/en/admin-guide/upgrading/50x.html)). It is not needed for environments freshly built on v5.0 or later.
 :::
 
 
@@ -100,6 +99,7 @@ In this range, all Revisions (page edit history) in the system are incorrectly l
 1. **Take a backup** (database and attachments).
 2. **Upgrade to v7.4.0 or later immediately to stop the leak.** The root cause was removed in v7.0.16, but we recommend **v7.4.0 or later**, where the safeguard is applied automatically. While upgrading, also meet the runtime requirements in the [v7.0.x guide](/en/admin-guide/upgrading/70x.html) / [v7.1.x guide](/en/admin-guide/upgrading/71x.html) (Node.js, Bootstrap notation, HackMD deprecation, MongoDB 6.0 or higher).
 3. **Assess the corruption and recover where possible.** On a system that has passed through this range, history data created before that point **will not be restored by upgrading (it is unrepairable)**. Manual recovery is possible only under very limited conditions. For the scope of potentially leaked information, how to determine corruption, and recovery steps, see the Dev Wiki page [Revision data migration bug in v5.0.0–v7.0.15](https://dev.growi.org/69301054963f68dfcf2b7111).
+4. **Confirm whether the v5 Compatible Format conversion has been done.** If your environment came from v4.5 or earlier and still has unconverted pages, perform the conversion (see the [v5.0.x guide](/en/admin-guide/upgrading/50x.html)). This is not the priority for stopping the leak, so you may do it after the upgrade above. It is not needed for environments freshly built on v5.0 or later.
 
 ::: danger
 **Never run or pass through v6.1.0–v7.0.15**, not even as a temporary step on the way to a newer version. If you have already operated in this range, be sure to assess the scope of potentially leaked information, such as private and deleted pages.
@@ -115,8 +115,9 @@ The root cause of the Revision data migration bug was removed in v7.0.16, so you
 ### What to do
 
 1. **Take a backup** (database and attachments).
-2. **Review the changes in the individual guides** ([v7.1.x](/en/admin-guide/upgrading/71x.html) and each later vX.Y.x guide you pass through). Read the "Things to Check Before Upgrading" section of each guide.
-3. **Upgrade to the latest series.** Stay on **v7.4.0 or later**, where the Revision data safeguard is applied automatically.
+2. **Confirm whether the v5 Compatible Format conversion has been done.** If your environment came from v4.5 or earlier and still has unconverted pages, perform the conversion (see the [v5.0.x guide](/en/admin-guide/upgrading/50x.html)). It is not needed for environments freshly built on v5.0 or later.
+3. **Review the changes in the individual guides** ([v7.1.x](/en/admin-guide/upgrading/71x.html) and each later vX.Y.x guide you pass through). Read the "Things to Check Before Upgrading" section of each guide.
+4. **Upgrade to the latest series.** Stay on **v7.4.0 or later**, where the Revision data safeguard is applied automatically.
 
 ::: warning
 If your environment **previously passed through v6.1.0–v7.0.15**, history data created before that point may already be corrupted (upgrading to v7.0.16 or later does not repair it). This applies in particular if you are currently running v7.0.16–v7.0.20. For how to determine corruption and recovery steps, see the Dev Wiki page [Revision data migration bug in v5.0.0–v7.0.15](https://dev.growi.org/69301054963f68dfcf2b7111).
