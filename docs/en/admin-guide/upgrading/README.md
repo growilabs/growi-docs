@@ -10,29 +10,33 @@ To help you keep using GROWI safely, the development team strongly recommends up
 
 The specific changes in each minor version are also documented on the individual upgrade pages. This page focuses on the tasks you need to perform, the items you need to check, and the points to note when updating to the latest version in a single step.
 
+::: danger
+Because of a serious bug in Revision (page edit history) data, **do not upgrade to v6.1.0–v7.0.15; always upgrade directly to v7.4.0 or later**. For details, see the Dev Wiki page [Revision data migration bug in v5.0.0–v7.0.15](https://dev.growi.org/69301054963f68dfcf2b7111).
+:::
+
 ## Table of Contents
 
 [[toc]]
 
-## 1. Check your current version
+## Check your current version
 Check the GROWI version you are currently running, and proceed from the section that matches your series.
 Before upgrading, always take a backup of MongoDB.
 
 Reference: [Backing up / restoring MongoDB](https://docs.growi.org/en/admin-guide/admin-cookbook/mongodb-backup.html)
 
 
-| Current version | Section to go to | Migration point |
-| :--- | :--- | :--- |
-| v4.x or earlier | [2. Upgrading to GROWI v5.0.11](#_2-upgrading-to-growi-v5-0-11-for-v4-x-or-earlier) | First upgrade to v5.0.11 and convert to the v5 Compatible Format, then proceed to sections 3 and 4 |
-| v5.x | [If you are running v5.x](#if-you-are-running-v5-x) | Check the runtime and settings, then move to the latest version |
-| v6.0.x | [If you are running v6.0.x](#if-you-are-running-v6-0-x) | Node.js and Elasticsearch need updating |
-| v6.1.x – v6.2.x | [If you are running v6.1.x – v6.2.x](#if-you-are-running-v6-1-x-v6-2-x) | Generally no required environment changes (check GridFS if built on v3.3 or earlier) |
-| v6.3.x | [If you are running v6.3.x](#if-you-are-running-v6-3-x) | Node.js needs updating |
-| v7.0.x | [If you are running v7.0.x](#if-you-are-running-v7-0-x) | MongoDB needs updating |
-| v7.1.x | [If you are running v7.1.x](#if-you-are-running-v7-1-x) | Check authentication- and S3-related settings |
-| v7.2.x – v7.4.x | [If you are running v7.2.x – v7.4.x](#if-you-are-running-v7-2-x-v7-4-x) | A normal upgrade |
+| Current version | Section to go to |
+| :--- | :--- |
+| v4.x or earlier | [If you are running v4.x or earlier](#if-you-are-running-v4-x-or-earlier) |
+| v5.x | [If you are running v5.x](#if-you-are-running-v5-x) |
+| v6.0.x | [If you are running v6.0.x](#if-you-are-running-v6-0-x) |
+| v6.1.x – v6.2.x | [If you are running v6.1.x – v6.2.x](#if-you-are-running-v6-1-x-v6-2-x) |
+| v6.3.x | [If you are running v6.3.x](#if-you-are-running-v6-3-x) |
+| v7.0.x | [If you are running v7.0.x](#if-you-are-running-v7-0-x) |
+| v7.1.x | [If you are running v7.1.x](#if-you-are-running-v7-1-x) |
+| v7.2.x – v7.4.x | [If you are running v7.2.x – v7.4.x](#if-you-are-running-v7-2-x-v7-4-x) |
 
-## 2. Upgrading to GROWI v5.0.11 (for v4.x or earlier)
+## If you are running v4.x or earlier
 ### Upgrade Elasticsearch to 7.x and rebuild the index
 - If you use Elasticsearch, you first need to upgrade **Elasticsearch 6 → 7**.
 - Elasticsearch 6.x and 7.x are officially said to have index compatibility, but to avoid trouble when using them with GROWI, we recommend deleting all existing index data and rebuilding the index.
@@ -45,7 +49,7 @@ Reference: [Backing up / restoring MongoDB](https://docs.growi.org/en/admin-guid
 - After upgrading to v5.0.x, you need to **convert page data to the v5 Compatible Format**.
 - For the procedure and scope of impact, see [Upgrading GROWI to v5.0.x / About The New v5 Compatible Format](/en/admin-guide/upgrading/50x.html#about-the-new-v5-compatible-format).
 
-## 3. Upgrades and configuration changes outside GROWI itself (for v5.x and later)
+## Upgrades and configuration changes outside GROWI itself (for v5.x and later)
 
 Before upgrading to the latest version in a single step, you need to complete the **runtime (middleware) updates and the environment-variable / infrastructure configuration changes** required between your version and the latest one. GROWI runs database migrations automatically at startup, but the "outside GROWI itself" tasks listed here are not performed automatically.
 
