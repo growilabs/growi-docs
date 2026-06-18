@@ -3,7 +3,7 @@ title: Migration Guide to the Latest Version of GROWI
 ---
 
 # Migration Guide to the Latest Version of GROWI
-This guide is for everyone running an older version of GROWI. It provides a cross-cutting overview of **how to update to the latest version of GROWI (v7.5.x as of June 2026)**.
+This guide is for everyone running an older version of GROWI. It provides a cross-cutting overview of **how to update to the latest version of GROWI (v8.0.x as of June 2026)**.
 
 The latest series receives continuous improvements in features, performance, and security, and its supported runtime environments are kept up to date.
 To help you keep using GROWI safely, the development team strongly recommends updating to the latest version.
@@ -35,6 +35,7 @@ Reference: [Backing up / restoring MongoDB](https://docs.growi.org/en/admin-guid
 | v7.0.x | [If you are running v7.0.x](#if-you-are-running-v7-0-x) |
 | v7.1.x | [If you are running v7.1.x](#if-you-are-running-v7-1-x) |
 | v7.2.x – v7.4.x | [If you are running v7.2.x – v7.4.x](#if-you-are-running-v7-2-x-v7-4-x) |
+| v7.5.x | [If you are running v7.5.x](#if-you-are-running-v7-5-x) |
 
 ## If you are running v4.x or earlier
 ### Upgrade Elasticsearch to 7.x and rebuild the index
@@ -107,8 +108,16 @@ Reference: [Upgrading to GROWI v7.5.x / For Administrators](/en/admin-guide/upgr
 - [If applicable] **When you use S3-compatible object storage**: The upload method has changed to multipart upload. Add the `s3:AbortMultipartUpload` permission to your IAM policy (`CreateMultipartUpload`, `CompleteMultipartUpload`, and `UploadPart` are included in `s3:PutObject`, so they do not need to be added).
 - [If applicable] **When you use the official Docker image**: The base image has changed to a Docker Hardened Image (DHI), which does not include a shell (`sh`, `bash`) or a package manager. Interactive debugging via `docker exec`, operations that assume in-container shell access or installing extra packages, and custom entry points or derived images are all affected, so verify that they work before upgrading.
 
+### If you are running v7.5.x
+Reference: [Upgrading to GROWI v8.0.x / For Administrators](/en/admin-guide/upgrading/80x.html#for-administrators)
+
+- [Action Required] **MongoDB replica set is now required**: Because the new GROWI Vault feature uses MongoDB change streams, MongoDB must run as a replica set (change streams are only available on a replica set). If you run a single-node standalone configuration, migrate to a replica set (a single-node replica set is acceptable). For how to migrate, refer to the updates in [growi-docker-compose](https://github.com/growilabs/growi-docker-compose).
+- [If applicable] **When you use the AI integration features**: With the overhaul of GROWI AI to an agent-driven design, the legacy AI integration settings have been removed. They will not work as-is after the upgrade, so reconfiguration with the new method is required. For the steps, see [Setting up and managing AI integration](/en/admin-guide/management-cookbook/setup-ai.html).
+- [If applicable] **For large-scale environments with high access volume**: To optimize memory usage, the default upper limit of the MongoDB connection pool has been reduced. Most environments need no action. Once you exceed several hundred active users (roughly 500), the default may be insufficient; in that case raise the limit with the environment variable `MONGO_MAX_POOL_SIZE`.
+- [If applicable] **When you customize OpenTelemetry instrumentation**: To reduce memory usage, OpenTelemetry instrumentation has been fixed to the minimal set that GROWI actually uses. Standard usage needs no action. The environment variable that switched the auto-instrumentation scope has been removed, so check the configuration method if you need to customize instrumentation.
+
 ## 4. Upgrade GROWI to the latest version
-- Following the [Upgrading to GROWI v7.5.x](/en/admin-guide/upgrading/75x.html) guide, upgrade **directly to the latest version**.
+- Following the [Upgrading to GROWI v8.0.x](/en/admin-guide/upgrading/80x.html) guide, upgrade **directly to the latest version**.
 
 ::: danger
 Because of a serious bug in Revision (page edit history) data, **do not upgrade to v6.1.0–v7.0.15; always upgrade directly to v7.4.0 or later**. For details, see the Dev Wiki page [Revision data migration bug in v5.0.0–v7.0.15](https://dev.growi.org/69301054963f68dfcf2b7111).
