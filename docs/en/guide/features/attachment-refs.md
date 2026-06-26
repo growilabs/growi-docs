@@ -1,14 +1,14 @@
 # Master Attachment References and Display with `$ref` Tags
 
 GROWI's `$ref` family of tags lets you embed attachment links, display images, and build galleries — all within your page content.
-You can reference attachments by file name or by ID, and even pull in attachments from other pages.
+You can reference attachments by filename or by ID, and even pull in attachments from other pages.
 
 ## Flexible ways to use these tags
 
 The `$ref` tags do more than just "paste an attachment." By combining their options, you can enable workflows like these:
 
-- **Reference by file name so you never have to touch the markup when a file is replaced**
-  Re-upload a file under the same name and a reference such as `$ref(design.pdf)` keeps pointing at the latest file — no edits needed. Handy as a home for versioned manuals or recurring reports.
+- **Reference by filename**
+  Re-upload a file under the same name and a reference such as `$ref(design.pdf)` keeps pointing at the latest file. No page edits are needed — handy for versioned manuals or recurring reports.
 - **Reference and aggregate attachments across other pages**
   With `page` or `prefix`, you can list files attached to another page or an entire page subtree in one place. Keep the files consolidated on one page while surfacing them from an index page.
 - **Lay out multiple images as a grid or gallery**
@@ -34,13 +34,13 @@ $ref(5f17286fd7fbb1104fdbd111, page=/somewhere/page)
 
 | Option | Required | Description |
 | --- | --- | --- |
-| `file` | One of these | File name of the attachment to reference (default: first argument) |
+| `file` | One of these | Filename of the attachment to reference (default: first argument) |
 | `id` | One of these | Attachment ID of the file to reference (default: first argument) |
 | `page` | Optional | Page path to search for the file (default: current page) |
 
 ### Examples
 
-- **Drop-in replacement**: Write `$ref(price-list.xlsx)` once, then re-upload under the same file name each month to always keep a link to the latest version.
+- **Drop-in replacement**: Write `$ref(price-list.xlsx)` once, then re-upload under the same filename each month to always keep a link to the latest version.
 - **Reference a file on another page**: With `$ref(policy.pdf, page=/legal/policies)`, you can link to the same file from many pages while the attachment itself stays consolidated on a single page.
 
 ## `$refs` tag — Display a list of attachments
@@ -82,7 +82,7 @@ $refimg(5f17286fd7fbb1104fdbd111, width=50%, alt=Pic)
 
 | Option | Required | Description |
 | --- | --- | --- |
-| `file` | One of these | File name of the attachment to reference (default: first argument) |
+| `file` | One of these | Filename of the attachment to reference (default: first argument) |
 | `id` | One of these | Attachment ID of the file to reference (default: first argument) |
 | `width` | Optional | Width (e.g. `width=200px`, `width=50%`) |
 | `height` | Optional | Height (e.g. `height=100px`) |
@@ -92,7 +92,7 @@ $refimg(5f17286fd7fbb1104fdbd111, width=50%, alt=Pic)
 
 ### Examples
 
-- **A replaceable diagram**: Write `$refimg(architecture.png, max-width=600px)` and the embedded figure stays current — just re-upload the diagram under the same file name whenever it changes.
+- **A replaceable diagram**: Write `$refimg(architecture.png, max-width=600px)` to embed a figure. Re-upload the diagram under the same filename and the embedded figure stays current.
 - **Reuse a shared logo or banner**: Reference an image on a shared page with `$refimg(logo.png, page=/assets)` to reuse the same image across multiple pages.
 
 ## `$refsimg` tag — Display a list of attachment images
