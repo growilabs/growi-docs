@@ -10,6 +10,8 @@ pageClass: admin-cookbook-env-vars
 | ------------------- | ----------  | ------------- |
 | `APP_SITE_URL` | Site URL. e.g. `https://example.com`, `https://example.com:8080` | |
 | `MONGO_URI` | URI to connect to MongoDB. | `mongodb://localhost/growi` |
+| `MONGO_MAX_POOL_SIZE` | Maximum number of connections in the MongoDB connection pool. Raise it when a large environment with many active users runs short on concurrency. | `15` |
+| `MONGO_MIN_POOL_SIZE` | Minimum number of connections in the MongoDB connection pool. | `2` |
 | `PASSWORD_SEED` | A password seed used by the password hash generator. | |
 | `SECRET_TOKEN` | A secret key for verifying the integrity of signed cookies. | |
 | `SESSION_NAME` | The name of the session ID cookie to set in the response by Express. | `connect.sid` |
@@ -130,5 +132,33 @@ pageClass: admin-cookbook-env-vars
 | `OAUTH_GITHUB_CLIENT_SECRET` | GitHub API client secret for OAuth login. | |
 | `OAUTH_TWITTER_CONSUMER_KEY` | Twitter consumer key(API key) for OAuth login. | |
 | `OAUTH_TWITTER_CONSUMER_SECRET` | Twitter consumer secret(API secret) for OAuth login. | |
+| **GROWI Vault options** | | |
+| `VAULT_ENABLED` | Enables the GROWI Vault feature (fixed at deploy time; no runtime toggle). | `false` |
+| `VAULT_MANAGER_ENDPOINT` | URL the GROWI app uses to reach the vault-manager service (required to enable Vault). | |
+| `VAULT_MANAGER_INTERNAL_SECRET` | Shared secret for app-to-vault-manager authentication. **Must be set in production and kept confidential.** | |
+| `VAULT_REPO_PATH` | Filesystem path of the bare Git repository managed by vault-manager. | `/data/vault-repo.git` |
+| `VAULT_BOOTSTRAP_ON_START` | Run the initial bootstrap at startup (`true` / `false` / `force`). | `false` |
+| `VAULT_BOOTSTRAP_RETRY_MAX` | Maximum number of bootstrap retry attempts. | `5` |
+| `VAULT_BOOTSTRAP_RETRY_BASE_MS` | Base backoff delay between bootstrap retries (ms). | `30000` |
+| `VAULT_BOOTSTRAP_RETRY_MAX_MS` | Cap on the bootstrap retry backoff delay (ms). | `1800000` |
+| `VAULT_BOOTSTRAP_RETRY_DISABLED` | Disables automatic bootstrap retries. | `false` |
+| `VAULT_BOOTSTRAP_HEARTBEAT_INTERVAL_MS` | Interval for bootstrap heartbeat writes (ms). | `10000` |
+| `VAULT_BOOTSTRAP_HEARTBEAT_STALE_MS` | Age after which a running bootstrap heartbeat is considered stale (ms). | `60000` |
+| `VAULT_DRIFT_DETECTION_DISABLED` | Disables the post-bootstrap drift detection sweep. | `false` |
+| `VAULT_DRIFT_DETECTION_INTERVAL_MS` | Interval between drift detection ticks (ms). | `300000` |
+| `VAULT_DRIFT_MAX_PAGES_PER_TICK` | Maximum pages scanned per drift detection tick. | `10000` |
+| `VAULT_RECONCILE_MAX_PAGES_PER_USER_REQUEST` | Maximum pages for a user-triggered reconcile request. | `1000` |
+| `VAULT_RECONCILE_MAX_PAGES_PER_ADMIN_REQUEST` | Maximum pages for an admin-triggered reconcile request. | `1000` |
+| `VAULT_RECONCILE_MAX_CONCURRENT_PER_USER` | Maximum concurrent reconcile jobs per user. | `1` |
+| `VAULT_RECONCILE_MAX_CONCURRENT_SYSTEM` | Maximum concurrent reconcile jobs system-wide. | `3` |
+| `VAULT_RECONCILE_CHUNK_SIZE` | Page batch size per reconcile processing chunk. | `100` |
+| `VAULT_RECONCILE_HISTORY_RETENTION_DAYS` | Days to retain reconcile history log entries. | `30` |
+| `VAULT_RECONCILE_REJECT_WHEN_BOOTSTRAP_NOT_DONE` | Rejects reconcile requests while bootstrap is incomplete. | `true` |
+| `VAULT_RECONCILE_ADMIN_BYPASS_CAPACITY_LIMIT` | Lets admin reconcile requests bypass the system concurrency limit. | `false` |
+| `VAULT_MAINTENANCE_TICK_MS` | vault-manager maintenance loop tick interval (ms); drives squash/gc checks. | `300000` |
+| `VAULT_SQUASH_COMMIT_THRESHOLD` | Commit count per namespace above which history is squashed. | `1000` |
+| `VAULT_SQUASH_AGE_HOURS` | Hours since the last squash that forces another squash. | `1` |
+| `VAULT_GC_LOOSE_OBJECT_THRESHOLD` | Loose-object count above which `git gc` runs. | `50000` |
+| `VAULT_GC_INTERVAL_HOURS` | Hours between `git gc` runs. | `24` |
 
 <!-- textlint-enable weseek/sentence-length -->
