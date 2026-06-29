@@ -144,6 +144,8 @@ $refsimg(prefix=/somewhere, grid=autofill, grid-gap=1px)
 `$refsimg(grid=col-4, grid-gap=1px)` のショートハンドです。
 指定したページ群の添付画像をギャラリー形式（4 列グリッド）で一覧表示します。
 
+<img :src="$withBase('/assets/images/attachment-refs-gallery.png')" alt="gallery">
+
 ### 構文
 
 ```

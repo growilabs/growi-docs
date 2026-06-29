@@ -144,6 +144,8 @@ $refsimg(prefix=/somewhere, grid=autofill, grid-gap=1px)
 A shorthand for `$refsimg(grid=col-4, grid-gap=1px)`.
 Displays attachment images from the specified pages in a 4-column gallery grid.
 
+<img :src="$withBase('/assets/images/attachment-refs-gallery.png')" alt="gallery">
+
 ### Syntax
 
 ```
