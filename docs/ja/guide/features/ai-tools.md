@@ -6,18 +6,26 @@ AI ツール（スキル）は、GROWI MCP Server が提供する拡張機能で
 MCP クライアント（Claude Desktop など）にスキルをインストールすることで、
 GROWI と連携した高度なワークフローを利用できます。
 
-AI ツールを利用するには、UTCP Code-Mode 経由で GROWI MCP に接続する必要があります。
+AI ツールは、UTCP Code-Mode 経由で GROWI MCP に接続して動作します。
+ただし、UTCP Code-Mode をあらかじめ手動で設定しておく必要はありません。
+セットアップ用のスキルが、UTCP Code-Mode の設定から GROWI への接続確認までを対話的にガイドします。
 
-::: warning
-あらかじめ UTCP Code-Mode の設定を完了しておく必要があります。
-設定方法は [GROWI MCP Server を使う](/ja/guide/features/mcp-server.html) の
-「UTCP Code-Mode 経由で接続する」セクションを参照してください。
+## セットアップの流れ
+
+AI ツールを利用開始するまでの流れは次のとおりです。
+
+1. **スキルをインストールする** — 後述の「スキルのインストール」の手順で行います。
+1. **エージェントにセットアップを依頼する** — インストール後にエージェントを再起動し、「GROWI をセットアップして」と伝えます。
+1. **スキルの案内に従う** — セットアップスキルが、UTCP Code-Mode の設定から GROWI への接続確認までを対話的にガイドします。GROWI の URL とアクセストークンを用意しておいてください。
+
+::: tip
+アクセストークンの取得方法や、スキルを使わずに手動で接続設定を行う場合の手順は、
+[GROWI MCP Server を使う](/ja/guide/features/mcp-server.html) を参照してください。
 :::
 
 ## スキルのインストール
 
-UTCP 経由で GROWI MCP に接続できたら、スキルをインストールします。
-お使いの MCP クライアントに合わせて、いずれかの方法でインストールしてください。
+お使いの MCP クライアントに合わせて、いずれかの方法でスキルをインストールしてください。
 
 ### Claude Desktop (Cowork)
 
@@ -77,6 +85,11 @@ npx skills update
    - Claude Code: `.claude/skills/<skill-name>/SKILL.md`
    - Gemini CLI: `.gemini/skills/<skill-name>/SKILL.md`
    - その他のエージェント: `.agents/skills/<skill-name>/SKILL.md`
+
+### インストール後のセットアップ
+
+インストールが完了したら、エージェントを再起動して「GROWI をセットアップして」と伝えてください。
+セットアップスキルが GROWI への接続設定を対話的にガイドします。
 
 ## Smart Save
 
