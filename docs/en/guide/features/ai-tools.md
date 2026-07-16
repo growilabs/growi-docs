@@ -6,18 +6,27 @@ AI Tools (Skills) are extensions provided by GROWI MCP Server.
 By installing skills in your MCP client (such as Claude Desktop),
 you can use advanced workflows integrated with GROWI.
 
-To use AI Tools, you need to connect to GROWI MCP via UTCP Code-Mode.
+AI Tools work by connecting to GROWI MCP via UTCP Code-Mode.
+However, you do not need to configure UTCP Code-Mode manually in advance.
+The setup skill interactively guides you through everything
+from UTCP Code-Mode configuration to verifying the GROWI connection.
 
-::: warning
-You need to complete the UTCP Code-Mode configuration beforehand.
-For setup instructions, see the "Connecting via UTCP Code-Mode" section
-in [GROWI MCP Server](/en/guide/features/mcp-server.html).
+## Setup Flow
+
+Getting started with AI Tools takes the following steps:
+
+1. **Install the skills** — Follow the "Installing Skills" instructions below.
+1. **Ask your agent to set up GROWI** — After installing, restart your agent and say "Set up GROWI."
+1. **Follow the skill's guidance** — The setup skill interactively guides you through UTCP Code-Mode configuration and connection verification. Have your GROWI URL and access token ready.
+
+::: tip
+For how to obtain an access token, or for manual connection setup without the skill,
+see [GROWI MCP Server](/en/guide/features/mcp-server.html).
 :::
 
 ## Installing Skills
 
-Once you have confirmed the GROWI MCP connection via UTCP,
-install skills using one of the methods below for your MCP client.
+Install skills using one of the methods below for your MCP client.
 
 ### Claude Desktop (Cowork)
 
@@ -78,6 +87,11 @@ in your agent's skills directory.
    - Claude Code: `.claude/skills/<skill-name>/SKILL.md`
    - Gemini CLI: `.gemini/skills/<skill-name>/SKILL.md`
    - Other agents: `.agents/skills/<skill-name>/SKILL.md`
+
+### After Installation
+
+Once installation is complete, restart your agent and say "Set up GROWI."
+The setup skill will interactively guide you through the GROWI connection configuration.
 
 ## Smart Save
 
