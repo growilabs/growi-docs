@@ -11,7 +11,7 @@ WORKDIR /growi-docs
 
 COPY . .
 
-RUN apt-get update && apt-get install -y ca-certificates wget --no-install-recommends \
+RUN apt-get update && apt-get install -y ca-certificates wget libatomic1 --no-install-recommends \
   && wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.shrc" SHELL="$(which sh)" sh -
 
 ENV PNPM_HOME="/root/.local/share/pnpm"
