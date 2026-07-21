@@ -1,5 +1,9 @@
 # エディターアシスタント機能を使う
 
+::: warning
+エディターアシスタントは GROWI v8.0 で廃止予定です。その役割はエージェント駆動の [GROWI AI Agent](/ja/guide/features/growi-ai-agent.html) へ引き継がれます。詳しくは [GROWI v8.0.x へのアップグレード](/ja/admin-guide/upgrading/80x.html) を参照してください。
+:::
+
 ## GROWI AI エディターアシスタントとは
 
 GROWI AI エディターアシスタント（以下、「エディターアシスタント」と呼びます）は、AIを使いエディター中の文章の書き換え・文章の生成をする機能です。
