@@ -112,6 +112,14 @@ pageClass: admin-cookbook-env-vars
 | `OPENAI_VECTOR_STORE_FILE_DELETION_API_CALL_INTERVAL` | Vector store ファイル削除 API 呼び出しの間隔（ミリ秒） | 36000 |
 | `OPENAI_SEARCH_ASSISTANT_INSTRUCTIONS` | 検索アシスタント機能で利用されるインストラクション | `''` (空文字列) |
 | `OPENAI_LIMIT_LEARNABLE_PAGE_COUNT_PER_ASSISTANT` | 1つのナレッジアシスタントが学習できるページの上限数  | 3000  |
+| **GROWI AI Agent オプション（v8.0〜）** |  |  |
+| `AI_ENABLED` | `true` の場合、GROWI AI Agent を有効にします。 | `false` |
+| `AI_PROVIDERS` | プロバイダごとの設定（有効化・Azure OpenAI 設定など）を JSON で指定します。 |  |
+| `AI_PROVIDER_API_KEYS` | プロバイダごとの API キーを JSON で指定します。 |  |
+| `AI_ALLOWED_MODELS` | ユーザーが選択できるモデルの一覧を JSON 配列で指定します。 | `[]` |
+| `AI_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、接続設定（AI 機能の有効化・プロバイダの有効化・API キー）はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
+| `AI_MODEL_CATALOG_REFRESH_ON_STARTUP` | `true` の場合、起動時にモデルカタログを更新します。 | `false` |
+| `AI_MODEL_CATALOG_REFRESH_CRON_SCHEDULE` | モデルカタログを定期更新するスケジュールを cron 形式で指定します。空にすると定期更新を無効化します。 | `0 4 * * *` |
 | **管理設定を上書きする環境変数** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | `true` の場合、サイト URL の設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` |`true` の場合、ファイルアップロードタイプの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。|`false`|
