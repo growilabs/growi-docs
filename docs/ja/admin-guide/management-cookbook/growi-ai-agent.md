@@ -36,8 +36,6 @@ AI 設定画面は、大きく次の要素で構成されます。
 
 ## プロバイダーを設定する
 
-<ContextualBlock context="docs-growi-org">
-
 利用する LLM プロバイダを、次の 4 つから選べます。複数を同時に有効にできます。
 
 - **OpenAI**
@@ -75,16 +73,6 @@ Azure OpenAI では、API キーに加えてエンドポイントの設定が必
 Microsoft Entra ID による認証を使う場合は、「Microsoft Entra ID を使用する」をオンにします。この場合、API キーは使用されず、資格情報は Azure 環境から自動的に解決されます。GROWI を Azure 上でマネージド ID やワークロード ID を有効にして動かしている場合、追加設定は不要です。それ以外の環境では、GROWI サーバに `AZURE_TENANT_ID`・`AZURE_CLIENT_ID`・`AZURE_CLIENT_SECRET` を設定してください。
 
 <!-- TODO: スクリーンショットを挿入（Azure OpenAI 設定） -->
-
-</ContextualBlock>
-
-<ContextualBlock context="help-growi-cloud">
-
-GROWI.cloud では、プロバイダの接続設定（有効化・API キーなど）は GROWI.cloud 側で管理されます。管理画面の「AI 設定」からは接続設定を変更できず、その旨のメッセージと GROWI.cloud の管理画面への導線が表示されます。
-
-利用できるモデルの登録やデフォルトモデルの選択は、GROWI の管理画面から行えます。
-
-</ContextualBlock>
 
 
 ## モデルを登録する
