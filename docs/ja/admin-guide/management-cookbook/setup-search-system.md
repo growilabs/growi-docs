@@ -68,6 +68,6 @@ Elasticsearch への同期に失敗した監査ログが存在する場合はこ
 
 監査ログ機能が無効な場合はこのセクションを操作できません。有効にする場合は環境変数 `AUDIT_LOG_ENABLED` を `true` に設定してください（詳細は[環境変数](/ja/admin-guide/admin-cookbook/env-vars.html)を参照）。
 
-</ContextualBlock>
-
 <img :src="$withBase('/assets/images/ja/setup-search-system3.png')" alt="setup-search-system3">
+
+</ContextualBlock>

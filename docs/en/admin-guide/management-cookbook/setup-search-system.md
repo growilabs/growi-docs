@@ -68,6 +68,6 @@ If some audit log events failed to sync to Elasticsearch, a warning will be disp
 
 If the Audit Log feature is disabled, this section cannot be operated. To enable it, set the environment variable `AUDIT_LOG_ENABLED` to `true` (see [Environment Variables](/en/admin-guide/admin-cookbook/env-vars.html) for details).
 
-</ContextualBlock>
-
 <img :src="$withBase('/assets/images/en/setup-search-system3.png')" alt="setup-search-system3">
+
+</ContextualBlock>
