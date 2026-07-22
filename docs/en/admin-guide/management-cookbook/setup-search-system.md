@@ -39,8 +39,7 @@ Please refer to system management page for instructions on activating and connec
 
 <img :src="$withBase('/assets/images/en/setup-search-system1.png')" alt="setup-search-system1">
 
-- If you see an error message indicating a connection failure, double check your Elasticsearch status.
-
+- If you see an error message indicating a connection failure, double-check your Elasticsearch status.
 
 ## Rebuilding the Page Data Index
 
