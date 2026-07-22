@@ -39,7 +39,7 @@ Elasticsearch サーバーの起動と接続に関しては、システム管理
 
 <img :src="$withBase('/assets/images/ja/setup-search-system1.png')" alt="setup-search-system1">
 
-- Elasticsearch の URI を指定しているにもかかわらず、接続できない旨のエラーが表示される場合は Elasticsearch の状態と URI の設定を再度確認してください。
+- 正常に接続できない旨のエラーが表示される場合は Elasticsearch の状態を再度確認してください。
 
 
 ## ページデータのインデックスのリビルド
