@@ -114,7 +114,7 @@ Microsoft Entra ID による認証を使う場合は、「Microsoft Entra ID を
 
 画面下部の「更新」ボタンで設定を保存します。
 
-利用可能なプロバイダに少なくとも 1 つのモデルが登録され、デフォルトモデルが設定されていれば、GROWI AI Agent が利用できるようになります。GROWI 画面の左サイドバーに「GROWI AI」アイコンが表示されることを確認してください。
+利用可能なプロバイダに少なくとも 1 つのモデルが登録され、デフォルトモデルが設定されていれば、GROWI AI Agent が利用できるようになります。GROWI 画面の左サイドバーに「GROWI AI Agent」アイコンが表示されることを確認してください。
 
 使い方は [GROWI AI Agent を使う](/ja/guide/features/growi-ai-agent.html) を参照してください。
 
