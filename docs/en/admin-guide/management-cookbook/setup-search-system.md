@@ -21,11 +21,23 @@ Please refer to system management page for instructions on activating and connec
 
 ## Confirming your Elasticsearch connection
 
-- If your Elasticsearch is properly set up using the Elasticsearch URI in the `ELASTICSEARCH_URI` environment variable, a search bar wil appear in the GROWI top bar.
+<ContextualBlock context="docs-growi-org">
+
+- If your Elasticsearch is properly set up using the Elasticsearch URI in the `ELASTICSEARCH_URI` environment variable, a search bar will appear in the GROWI top bar.
   You will also be able to check the connection status and index information on the **Elasticsearch Management** page of the management screen (labeled "Elasticsearch management" in the sidebar; formerly "Full Text Search Management").
   This page consists of two sections: "Page Data Management" and "Audit Log Index Management".
 
-  <img :src="$withBase('/assets/images/en/setup-search-system1.png')" alt="setup-search-system1">
+</ContextualBlock>
+
+<ContextualBlock context="help-growi-cloud">
+
+- If your Elasticsearch is properly connected, a search bar will appear in the GROWI top bar.
+  You will also be able to check the connection status and index information on the **Elasticsearch Management** page of the management screen.
+  This page consists of two sections: "Page Data Management" and "Audit Log Index Management".
+
+</ContextualBlock>
+
+<img :src="$withBase('/assets/images/en/setup-search-system1.png')" alt="setup-search-system1">
 
 - If you see the error message even though you have set your Elasticsearch URI properly, double check your Elasticsearch information and URI.
 
@@ -52,6 +64,10 @@ If the Audit Log feature is enabled, the "Audit Log Index Management" section of
 
 If some audit log events failed to sync to Elasticsearch, a warning will be displayed in this section. In that case, please rebuild the index.
 
+<ContextualBlock context="docs-growi-org">
+
 If the Audit Log feature is disabled, this section cannot be operated. To enable it, set the environment variable `AUDIT_LOG_ENABLED` to `true` (see [Environment Variables](/en/admin-guide/admin-cookbook/env-vars.html) for details).
+
+</ContextualBlock>
 
 <img :src="$withBase('/assets/images/en/setup-search-system3.png')" alt="setup-search-system3">
