@@ -1,5 +1,9 @@
 # ナレッジアシスタント機能を使う
 
+::: warning
+ナレッジアシスタントは GROWI v8.0 で廃止予定です。GROWI v8.0 では新規作成する機能が廃止され、その役割はエージェント駆動の [GROWI AI Agent](/ja/guide/features/growi-ai-agent.html) へ引き継がれます。詳しくは [GROWI v8.0.x へのアップグレード](/ja/admin-guide/upgrading/80x.html) を参照してください。
+:::
+
 ## GROWI AI ナレッジアシスタントとは
 
 GROWI AI ナレッジアシスタント（以下、「ナレッジアシスタント」と呼びます）は、ユーザーの質問に対して、GROWI 内の情報をもとにチャット形式で質問に回答する機能です。
