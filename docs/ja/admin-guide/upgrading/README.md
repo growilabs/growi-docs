@@ -155,8 +155,8 @@ Revision（ページの更新履歴）データの重大な不具合があるた
   - 新機能 GROWI Vault が MongoDB の change stream を使用するため、MongoDB をレプリカセット構成で運用する必要があります（change stream はレプリカセット構成でのみ利用できます）。
   - 単一ノードの standalone 構成で運用している場合は、レプリカセット構成へ移行してください（単一ノードのレプリカセットでも利用できます）。移行方法は [growi-docker-compose](https://github.com/growilabs/growi-docker-compose) の更新内容を参照してください。
 - [該当時] **AI 連携機能を利用している場合**
-  - GROWI AI のエージェント駆動への全面刷新に伴い、従来の AI 連携設定は廃止されました。アップグレード後はそのままだと動作しないため、新しい設定方法での再設定が必要です。
-  - 再設定の手順は [AI 連携機能のセットアップと管理](/ja/admin-guide/management-cookbook/setup-ai.html) を参照してください。
+  - GROWI AI Agent への全面刷新に伴い、従来の AI 連携設定は廃止されました。アップグレード後はそのままだと動作しないため、新しい設定方法での再設定が必要です。
+  - 再設定の手順は [GROWI AI Agent のセットアップと管理](/ja/admin-guide/management-cookbook/growi-ai-agent.html) を参照してください。
 - [該当時] **アクセス数の多い大規模な環境の場合**
   - メモリ使用量の最適化のため、MongoDB コネクションプールの既定の上限値が縮小されました。多くの環境では対応不要です。
   - アクティブユーザーが数百人（おおむね 500 人）を超える規模では、既定値のままだと不足しがちです。その場合は環境変数 `MONGO_MAX_POOL_SIZE` で上限を引き上げてください。
