@@ -1,8 +1,8 @@
 ---
-title: Migration Guide to the Latest Version of GROWI
+title: Upgrade Overview and Migration to the Latest Version
 ---
 
-# Migration Guide to the Latest Version of GROWI
+# Upgrade Overview and Migration to the Latest Version
 This guide is for everyone running an older version of GROWI. It provides a cross-cutting overview of **how to update to the latest version of GROWI (v8.0.x as of June 2026)**.
 
 The latest series receives continuous improvements in features, performance, and security, and its supported runtime environments are kept up to date.
