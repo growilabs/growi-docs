@@ -22,7 +22,7 @@ The minimum environment variables required for setup are below. Tuning options s
 - `VAULT_ENABLED`: Enables the GROWI Vault feature.
 - `VAULT_MANAGER_ENDPOINT`: The URL the GROWI app uses to reach vault-manager.
 - `VAULT_MANAGER_INTERNAL_SECRET`: The shared secret for authentication between the app and vault-manager.
-- `VAULT_REPO_PATH`: The path of the bare Git repository managed by vault-manager.
+- `VAULT_REPO_PATH`: The path of the bare Git repository managed by vault-manager. (e.g. `/data/vault-repo.git`).
 - `VAULT_BOOTSTRAP_ON_START`: Whether to run the initial bootstrap at startup.
 
 ::: warning

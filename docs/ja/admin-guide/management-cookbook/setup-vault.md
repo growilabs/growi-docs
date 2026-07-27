@@ -22,7 +22,7 @@ GROWI Vault は、GROWI アプリ本体に組み込まれたゲートウェイ�
 - `VAULT_ENABLED`: GROWI Vault 機能を有効化します。
 - `VAULT_MANAGER_ENDPOINT`: GROWI アプリが vault-manager へ接続する URL です。
 - `VAULT_MANAGER_INTERNAL_SECRET`: アプリと vault-manager 間の認証に使う共有シークレットです。
-- `VAULT_REPO_PATH`: vault-manager が管理する bare Git リポジトリのパスです。
+- `VAULT_REPO_PATH`: vault-manager が管理する bare Git リポジトリのパスです。（例: `/data/vault-repo.git`）。
 - `VAULT_BOOTSTRAP_ON_START`: 起動時に初期 bootstrap を実行するかどうかを指定します。
 
 ::: warning

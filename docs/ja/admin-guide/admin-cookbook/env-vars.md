@@ -145,7 +145,7 @@ pageClass: admin-cookbook-env-vars
 | `VAULT_ENABLED` | GROWI Vault 機能の有効化（デプロイ時に固定。実行時の切り替えは不可） | `false` |
 | `VAULT_MANAGER_ENDPOINT` | GROWI アプリが vault-manager サービスへ接続する URL（有効化には設定が必須） | |
 | `VAULT_MANAGER_INTERNAL_SECRET` | アプリと vault-manager 間の認証に使う共有シークレット。**本番では必ず設定し、外部に漏らさないこと** | |
-| `VAULT_REPO_PATH` | vault-manager が管理する bare Git リポジトリのファイルパス | `/data/vault-repo.git` |
+| `VAULT_REPO_PATH` | vault-manager が管理する bare Git リポジトリのファイルパス（設定は必須。未設定のままでは vault-manager は起動しない。慣例値は `/data/vault-repo.git`） | |
 | `VAULT_BOOTSTRAP_ON_START` | 起動時に初期 bootstrap を実行する（`true` / `false` / `force`） | `false` |
 | `VAULT_BOOTSTRAP_RETRY_MAX` | bootstrap のリトライ最大回数 | `5` |
 | `VAULT_BOOTSTRAP_RETRY_BASE_MS` | bootstrap リトライの基本バックオフ時間（ミリ秒） | `30000` |

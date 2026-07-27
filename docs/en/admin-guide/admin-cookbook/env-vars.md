@@ -136,7 +136,7 @@ pageClass: admin-cookbook-env-vars
 | `VAULT_ENABLED` | Enables the GROWI Vault feature (fixed at deploy time; no runtime toggle). | `false` |
 | `VAULT_MANAGER_ENDPOINT` | URL the GROWI app uses to reach the vault-manager service (required to enable Vault). | |
 | `VAULT_MANAGER_INTERNAL_SECRET` | Shared secret for app-to-vault-manager authentication. **Must be set in production and kept confidential.** | |
-| `VAULT_REPO_PATH` | Filesystem path of the bare Git repository managed by vault-manager. | `/data/vault-repo.git` |
+| `VAULT_REPO_PATH` | Filesystem path of the bare Git repository managed by vault-manager (required; vault-manager does not start without it. The conventional value is `/data/vault-repo.git`). | |
 | `VAULT_BOOTSTRAP_ON_START` | Run the initial bootstrap at startup (`true` / `false` / `force`). | `false` |
 | `VAULT_BOOTSTRAP_RETRY_MAX` | Maximum number of bootstrap retry attempts. | `5` |
 | `VAULT_BOOTSTRAP_RETRY_BASE_MS` | Base backoff delay between bootstrap retries (ms). | `30000` |
