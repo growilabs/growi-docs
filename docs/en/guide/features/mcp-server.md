@@ -80,13 +80,23 @@ Instructions like "List old project pages under the /projects directory" or "Fin
 You can work with AI to perform tasks that maintain Wiki quality, such as checking for duplicate pages, verifying broken links, and unifying naming conventions.  
 This is a particularly effective use case for GROWI instances with large numbers of pages.
 
-## MCP Configuration Method (Claude Desktop)
+## Choosing a Connection Method
 
-This section explains how to configure GROWI MCP for use with Claude Desktop.
+There are three ways to connect to GROWI MCP:
 
-### Configuration Steps
+1. **Set up with AI Tools (Skills) — the shortest path (recommended)**  
+   The setup skill interactively guides you through everything from UTCP Code-Mode configuration to verifying the GROWI connection.  
+   Start from the installation instructions in [Using AI Tools (Skills)](/en/guide/features/ai-tools.html).
+1. **Set up manually via UTCP Code-Mode**  
+   Manually configure the recommended setup — connecting via UTCP Code-Mode — without using the skill.  
+   See the "Connecting via UTCP Code-Mode" section on this page.
+1. **Connect MCP directly (fallback)**  
+   For environments where UTCP Code-Mode cannot be used, or for trying out a few tools lightly.  
+   See the "Connecting MCP Directly" section on this page.
 
-#### 1. Obtain a GROWI Access Token
+Whichever method you choose, you need a GROWI access token. Obtain one by following the next section first.
+
+## Prerequisite: Obtain a GROWI Access Token
 
 1. Log in to GROWI and open "User Settings" from the user menu in the lower left.
 2. Navigate to the "Access token settings" section in "API Settings".
@@ -99,7 +109,134 @@ This section explains how to configure GROWI MCP for use with Claude Desktop.
 Access tokens are confidential information. Do not share them with third parties.
 :::
 
-#### 2. Configure MCP in Claude Desktop
+## Connecting via UTCP Code-Mode
+
+UTCP (Universal Tool Calling Protocol) is an intermediate layer for efficiently utilizing MCP servers. It reduces token consumption by combining multiple tool calls into a single request.
+
+GROWI MCP Server provides nearly 30 tools, so with a direct connection, all tool schemas constantly consume your MCP client's context.  
+Connecting via UTCP Code-Mode keeps this consumption small.
+
+In addition, by connecting to GROWI MCP via UTCP Code-Mode, you can use [AI Tools (Skills)](/en/guide/features/ai-tools.html).
+
+::: tip
+The steps below are for setting things up manually.  
+With the setup skill from [AI Tools (Skills)](/en/guide/features/ai-tools.html), the skill interactively guides you through this configuration.
+:::
+
+### UTCP Setup Steps
+
+#### 1. Create the UTCP Configuration File
+
+Create `.utcp_config.json` in your home directory.
+
+**Windows:** `C:\Users\<username>\.utcp_config.json`
+
+**macOS/Linux:** `~/.utcp_config.json`
+
+```json
+{
+  "manual_call_templates": [
+    {
+      "name": "growi",
+      "call_template_type": "mcp",
+      "config": {
+        "mcpServers": {
+          "growi": {
+            "transport": "stdio",
+            "command": "npx",
+            "args": ["-y", "@growi/mcp-server"],
+            "env": {
+              "GROWI_API_TOKEN_1": "<API token>",
+              "GROWI_APP_NAME_1": "<app name>",
+              "GROWI_BASE_URL_1": "<GROWI URL>",
+              "GROWI_DEFAULT_APP_NAME": "<default app name>"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+```
+
+::: tip
+If you want to place `.utcp_config.json` in a different location such as within a repository,
+you can specify the full path using the `UTCP_CONFIG_FILE` environment variable
+in the MCP client configuration described below.
+Since the file contains API tokens, adding it to `.gitignore` is recommended.
+:::
+
+For environment variable descriptions (`GROWI_API_TOKEN_1`, etc.),
+refer to the "Connecting MCP Directly" section below.
+To use multiple GROWI instances, add entries with incrementing numbers (`_2`, `_3`, ...) in the same way.
+
+#### 2. Configure UTCP in Your MCP Client
+
+Add UTCP Code-Mode as an MCP server in your MCP client (such as Claude Desktop) configuration file.
+
+**For Claude Desktop (`claude_desktop_config.json`):**
+
+```json
+{
+  "mcpServers": {
+    "code-mode": {
+      "command": "npx",
+      "args": ["-y", "@utcp/code-mode-mcp"],
+      "env": {
+        "UTCP_CONFIG_FILE": "<full path to .utcp_config.json>"
+      }
+    }
+  }
+}
+```
+
+::: warning
+Even if `.utcp_config.json` is placed in the home directory, the full path must be specified.
+:::
+
+#### 3. Restart Your MCP Client
+
+After saving the configuration, completely quit and restart your MCP client.
+
+#### 4. Verify Connection
+
+Ask "Can you connect to GROWI?" to verify that MCP is working correctly via UTCP.
+
+#### UTCP Connection Troubleshooting
+
+##### Warning Messages on Startup
+
+```text
+MCP code-mode: Unexpected token 'M', "[McpCommuni"... is not valid JSON
+```
+
+This warning is caused by UTCP internal logs being output to stdout. The tools function normally, so you can continue using them as-is.
+
+##### Tools Not Found
+
+1. Verify that the path to `.utcp_config.json` is correct.
+2. Verify that the GROWI URL includes `https://`.
+3. Verify that the URL does not end with a trailing slash (`/`).
+4. Restart your MCP client.
+
+##### isolated-vm Error on Startup
+
+If you see an error like `No native build was found for ... isolated-vm`, no prebuilt binary exists for your Node.js version.  
+Install and use a Node.js LTS release (20 or 22 recommended).
+
+## Connecting MCP Directly
+
+For environments where UTCP Code-Mode cannot be used, or for trying out a few tools lightly, you can also register the GROWI MCP server directly in your MCP client.
+
+::: tip
+All tools work with a direct connection, but every tool schema stays loaded in your MCP client's context, which increases token consumption.  
+For regular use, we recommend connecting via UTCP Code-Mode.  
+Also, connecting via UTCP Code-Mode is required to use [AI Tools (Skills)](/en/guide/features/ai-tools.html).
+:::
+
+### Setup Steps (Claude Desktop)
+
+#### 1. Configure MCP in Claude Desktop
 
 1. Launch the Claude Desktop app.
 2. Open the settings screen.
@@ -108,7 +245,7 @@ Access tokens are confidential information. Do not share them with third parties
 3. Select the "Developer" tab.
 4. Click "Edit Config" to open the configuration file.
 
-#### 3. Edit the Configuration File
+#### 2. Edit the Configuration File
 
 Edit the configuration file (`claude_desktop_config.json`). Perform one of the following configurations depending on the number of GROWI instances you use.
 
@@ -183,11 +320,11 @@ When multiple GROWI instances are configured, you can switch operation targets b
 If you don't explicitly specify an app name (GROWI_APP_NAME_{N}), the GROWI with the app name specified in `GROWI_DEFAULT_APP_NAME` will be the target of operations.
 :::
 
-#### 4. Restart Claude Desktop
+#### 3. Restart Claude Desktop
 
 After saving the configuration, completely quit and restart the Claude Desktop app.
 
-#### 5. Verify Connection
+#### 4. Verify Connection
 
 Ask Claude in conversation "Can you connect to GROWI?" to confirm that MCP is working correctly.
 
@@ -195,111 +332,9 @@ If the connection is successful, Claude will respond and GROWI operations will b
 
 If you have configured multiple GROWI instances, you can check all connection statuses by asking "Can you connect to each GROWI?"
 
-## Connecting via UTCP Code-Mode
+## Troubleshooting
 
-UTCP (Universal Tool Calling Protocol) is an intermediate layer for efficiently utilizing MCP servers. It reduces token consumption by combining multiple tool calls into a single request.
-
-By connecting to GROWI MCP via UTCP Code-Mode, you can use [AI Tools (Skills)](/en/guide/features/ai-tools.html).
-
-### UTCP Setup Steps
-
-#### 1. Create the UTCP Configuration File
-
-Create `.utcp_config.json` in your home directory.
-
-**Windows:** `C:\Users\<username>\.utcp_config.json`
-
-**macOS/Linux:** `~/.utcp_config.json`
-
-```json
-{
-  "manual_call_templates": [
-    {
-      "name": "growi",
-      "call_template_type": "mcp",
-      "config": {
-        "mcpServers": {
-          "growi": {
-            "transport": "stdio",
-            "command": "npx",
-            "args": ["-y", "@growi/mcp-server"],
-            "env": {
-              "GROWI_API_TOKEN_1": "<API token>",
-              "GROWI_APP_NAME_1": "<app name>",
-              "GROWI_BASE_URL_1": "<GROWI URL>",
-              "GROWI_DEFAULT_APP_NAME": "<default app name>"
-            }
-          }
-        }
-      }
-    }
-  ]
-}
-```
-
-::: tip
-If you want to place `.utcp_config.json` in a different location such as within a repository,
-you can specify the full path using the `UTCP_CONFIG_FILE` environment variable
-in the MCP client configuration described below.
-Since the file contains API tokens, adding it to `.gitignore` is recommended.
-:::
-
-For environment variable descriptions (`GROWI_API_TOKEN_1`, etc.),
-refer to the "MCP Configuration Method" section above.
-To use multiple GROWI instances, add entries with incrementing numbers (`_2`, `_3`, ...) in the same way.
-
-#### 2. Configure UTCP in Your MCP Client
-
-Add UTCP Code-Mode as an MCP server in your MCP client (such as Claude Desktop) configuration file.
-
-**For Claude Desktop (`claude_desktop_config.json`):**
-
-```json
-{
-  "mcpServers": {
-    "code-mode": {
-      "command": "npx",
-      "args": ["-y", "@utcp/code-mode-mcp"],
-      "env": {
-        "UTCP_CONFIG_FILE": "<full path to .utcp_config.json>"
-      }
-    }
-  }
-}
-```
-
-::: warning
-Even if `.utcp_config.json` is placed in the home directory, the full path must be specified.
-:::
-
-#### 3. Restart Your MCP Client
-
-After saving the configuration, completely quit and restart your MCP client.
-
-#### 4. Verify Connection
-
-Ask "Can you connect to GROWI?" to verify that MCP is working correctly via UTCP.
-
-#### UTCP Connection Troubleshooting
-
-##### Warning Messages on Startup
-
-```text
-MCP code-mode: Unexpected token 'M', "[McpCommuni"... is not valid JSON
-```
-
-This warning is caused by UTCP internal logs being output to stdout. The tools function normally, so you can continue using them as-is.
-
-##### Tools Not Found
-
-1. Verify that the path to `.utcp_config.json` is correct.
-2. Verify that the GROWI URL includes `https://`.
-3. Verify that the URL does not end with a trailing slash (`/`).
-4. Restart your MCP client.
-
-### Troubleshooting
-
-#### When Connection Fails
+### When Connection Fails
 
 1. **Verify API Token is Configured Correctly**  
    Check that the API token in the configuration file is copied accurately.
@@ -310,19 +345,19 @@ This warning is caused by UTCP internal logs being output to stdout. The tools f
 4. **Check Claude Desktop Logs**  
    Check logs from `View > Toggle Developer Tools` and review error messages.
 
-#### When Permission Errors Occur
+### When Permission Errors Occur
 
 1. **Verify Appropriate Permissions are Granted to Access Token**  
    Check the access token permission settings in GROWI user settings.
 
-#### When Unable to Connect to Specific Instance in Multiple GROWI Configuration
+### When Unable to Connect to Specific Instance in Multiple GROWI Configuration
 
 1. **Verify Identification Names are Not Duplicated**  
    Check that the same identification name is not used in the configuration file.
 2. **Individually Verify Configuration of Each Instance is Correct**  
    Temporarily leave only the configuration for the problematic instance and perform a connection test.
 
-### Token Management Best Practices
+## Token Management Best Practices
 
 - Treat access tokens as confidential information and do not share them.
 - We recommend regularly rotating (regenerating) tokens.

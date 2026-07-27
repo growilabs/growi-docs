@@ -9,6 +9,8 @@ pageClass: admin-cookbook-env-vars
 | ------------------- | ---------- | ------------- |
 | `APP_SITE_URL` | サイト URL (例: `https://example.com` 、 `https://example.com:8080`) | |
 | `MONGO_URI` | 接続する MongoDB サーバーの URI | `mongodb://localhost/growi` |
+| `MONGO_MAX_POOL_SIZE` | MongoDB コネクションプールの最大接続数。アクセス数の多い大規模な環境で同時実行の性能が不足する場合に引き上げます。 | `15` |
+| `MONGO_MIN_POOL_SIZE` | MongoDB コネクションプールの最小接続数。 | `2` |
 | `PASSWORD_SEED` | パスワードハッシュ生成時に使用されるパスワードシード | |
 | `SECRET_TOKEN` | 発行された cookie の正当性を検証するためのシークレットトークン | |
 | `SESSION_NAME` | Express からのレスポンスに含まれる cookie 内のセッション ID 名 | `connect.sid` |
@@ -61,7 +63,7 @@ pageClass: admin-cookbook-env-vars
 | `AZURE_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、Azure(Blob) 関連設定の一部はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | **全文検索オプション** | | |
 | `ELASTICSEARCH_URI` | 接続する Elasticsearch サーバーの URI | |
-| `ELASTICSEARCH_VERSION` | 接続する Elasticsearch のメジャーバージョン。(`7` または `8` を指定可能) | `8` |
+| `ELASTICSEARCH_VERSION` | 接続する Elasticsearch のメジャーバージョン。(`8` または `9` を指定可能) | `9` |
 | `ELASTICSEARCH_MAX_BODY_LENGTH_TO_INDEX` | インデックスを作成する1ページあたりの最大文字数。本文の文字数がこの値を上回るページはインデックスされなくなります。 | 100000 |
 | `ELASTICSEARCH_REINDEX_BULK_SIZE` | インデックス再作成時に一度に処理するページドキュメントの数 | 100 |
 | `ELASTICSEARCH_REINDEX_ON_BOOT` | システム起動時にインデックスを再作成する | `false` |
@@ -110,6 +112,14 @@ pageClass: admin-cookbook-env-vars
 | `OPENAI_VECTOR_STORE_FILE_DELETION_API_CALL_INTERVAL` | Vector store ファイル削除 API 呼び出しの間隔（ミリ秒） | 36000 |
 | `OPENAI_SEARCH_ASSISTANT_INSTRUCTIONS` | 検索アシスタント機能で利用されるインストラクション | `''` (空文字列) |
 | `OPENAI_LIMIT_LEARNABLE_PAGE_COUNT_PER_ASSISTANT` | 1つのナレッジアシスタントが学習できるページの上限数  | 3000  |
+| **GROWI AI Agent オプション** |  |  |
+| `AI_ENABLED` | `true` の場合、GROWI AI Agent を有効にします。 | `false` |
+| `AI_PROVIDERS` | プロバイダごとの設定（有効化・Azure OpenAI 設定など）を JSON で指定します。<br>例: `{"openai":{"enabled":true},"azure-openai":{"enabled":true,"azureOpenaiSettings":{"resourceName":"<リソース名>"}}}` |  |
+| `AI_PROVIDER_API_KEYS` | プロバイダごとの API キーを JSON で指定します。<br>例: `{"openai":"sk-xxxx","anthropic":"sk-ant-xxxx"}` |  |
+| `AI_ALLOWED_MODELS` | ユーザーが選択できるモデルの一覧を JSON 配列で指定します。<br>例: `[{"provider":"openai","modelId":"gpt-4o","isDefault":true},{"provider":"anthropic","modelId":"claude-sonnet-4-5"}]` | `[]` |
+| `AI_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、接続設定（AI 機能の有効化・プロバイダの有効化・API キー）はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
+| `AI_MODEL_CATALOG_REFRESH_ON_STARTUP` | `true` の場合、起動時にモデルカタログを更新します。 | `false` |
+| `AI_MODEL_CATALOG_REFRESH_CRON_SCHEDULE` | モデルカタログを定期更新するスケジュールを cron 形式で指定します。空にすると定期更新を無効化します。 | `0 4 * * *` |
 | **管理設定を上書きする環境変数** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | `true` の場合、サイト URL の設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` |`true` の場合、ファイルアップロードタイプの設定値はローカル DB の値を参照せず、環境変数の値のみを参照します。|`false`|
@@ -131,3 +141,31 @@ pageClass: admin-cookbook-env-vars
 | `OAUTH_GITHUB_CLIENT_SECRET` | OAuth ログインで使用する GitHub API のクライアント シークレット | |
 | `OAUTH_TWITTER_CONSUMER_KEY` | OAuth ログインで使用する Twitter カスタマーキー (API キー) | |
 | `OAUTH_TWITTER_CONSUMER_SECRET` | OAuth ログインで使用する Twitter カスタマーシークレット(API シークレット) | |
+| **GROWI Vault オプション** | | |
+| `VAULT_ENABLED` | GROWI Vault 機能の有効化（デプロイ時に固定。実行時の切り替えは不可） | `false` |
+| `VAULT_MANAGER_ENDPOINT` | GROWI アプリが vault-manager サービスへ接続する URL（有効化には設定が必須） | |
+| `VAULT_MANAGER_INTERNAL_SECRET` | アプリと vault-manager 間の認証に使う共有シークレット。**本番では必ず設定し、外部に漏らさないこと** | |
+| `VAULT_REPO_PATH` | vault-manager が管理する bare Git リポジトリのファイルパス（設定は必須。未設定のままでは vault-manager は起動しない。慣例値は `/data/vault-repo.git`） | |
+| `VAULT_BOOTSTRAP_ON_START` | 起動時に初期 bootstrap を実行する（`true` / `false` / `force`） | `false` |
+| `VAULT_BOOTSTRAP_RETRY_MAX` | bootstrap のリトライ最大回数 | `5` |
+| `VAULT_BOOTSTRAP_RETRY_BASE_MS` | bootstrap リトライの基本バックオフ時間（ミリ秒） | `30000` |
+| `VAULT_BOOTSTRAP_RETRY_MAX_MS` | bootstrap リトライのバックオフ上限（ミリ秒） | `1800000` |
+| `VAULT_BOOTSTRAP_RETRY_DISABLED` | bootstrap の自動リトライを無効化する | `false` |
+| `VAULT_BOOTSTRAP_HEARTBEAT_INTERVAL_MS` | bootstrap 実行中のハートビート書き込み間隔（ミリ秒） | `10000` |
+| `VAULT_BOOTSTRAP_HEARTBEAT_STALE_MS` | bootstrap のハートビートが古いと判断するまでの時間（ミリ秒） | `60000` |
+| `VAULT_DRIFT_DETECTION_DISABLED` | bootstrap 後の drift 検出スイープを無効化する | `false` |
+| `VAULT_DRIFT_DETECTION_INTERVAL_MS` | drift 検出の実行間隔（ミリ秒） | `300000` |
+| `VAULT_DRIFT_MAX_PAGES_PER_TICK` | drift 検出 1 回あたりにスキャンする最大ページ数 | `10000` |
+| `VAULT_RECONCILE_MAX_PAGES_PER_USER_REQUEST` | ユーザーによる reconcile 1 回あたりの最大ページ数 | `1000` |
+| `VAULT_RECONCILE_MAX_PAGES_PER_ADMIN_REQUEST` | 管理者による reconcile 1 回あたりの最大ページ数 | `1000` |
+| `VAULT_RECONCILE_MAX_CONCURRENT_PER_USER` | ユーザーごとの reconcile 同時実行数の上限 | `1` |
+| `VAULT_RECONCILE_MAX_CONCURRENT_SYSTEM` | システム全体での reconcile 同時実行数の上限 | `3` |
+| `VAULT_RECONCILE_CHUNK_SIZE` | reconcile 処理 1 チャンクあたりのページ数 | `100` |
+| `VAULT_RECONCILE_HISTORY_RETENTION_DAYS` | reconcile 履歴ログの保持日数 | `30` |
+| `VAULT_RECONCILE_REJECT_WHEN_BOOTSTRAP_NOT_DONE` | bootstrap 未完了時に reconcile 要求を拒否する | `true` |
+| `VAULT_RECONCILE_ADMIN_BYPASS_CAPACITY_LIMIT` | 管理者の reconcile 要求がシステム同時実行数の上限を超過できるようにする | `false` |
+| `VAULT_MAINTENANCE_TICK_MS` | vault-manager のメンテナンスループの tick 間隔（ミリ秒）。squash / gc の判定を駆動する | `300000` |
+| `VAULT_SQUASH_COMMIT_THRESHOLD` | namespace のコミット数がこの値を超えると履歴を squash する | `1000` |
+| `VAULT_SQUASH_AGE_HOURS` | 前回の squash からこの時間が経過すると squash を強制する（時間） | `1` |
+| `VAULT_GC_LOOSE_OBJECT_THRESHOLD` | loose object 数がこの値を超えると `git gc` を実行する | `50000` |
+| `VAULT_GC_INTERVAL_HOURS` | `git gc` を実行する間隔（時間） | `24` |

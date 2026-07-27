@@ -1,5 +1,9 @@
 # Editor Assistant
 
+::: warning
+The Editor Assistant is scheduled to be discontinued in GROWI v8.0. Its role is taken over by the agent-driven [GROWI AI Agent](/en/guide/features/growi-ai-agent.html). For details, see [Upgrading to GROWI v8.0.x](/en/admin-guide/upgrading/80x.html).
+:::
+
 ## What is GROWI AI Editor Assistant?
 
 GROWI AI Editor Assistant (hereinafter referred to as "Editor Assistant") is a feature that uses AI to rewrite and generate text in the editor.

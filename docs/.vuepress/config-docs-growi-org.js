@@ -161,6 +161,7 @@ module.exports = {
                 '/en/guide/features/presentation.md',
                 '/en/guide/features/frontmatter.md',
                 '/en/guide/features/lsx.md',
+                '/en/guide/features/attachment-refs.md',
                 '/en/guide/features/embed_html.md',
                 '/en/guide/features/checkbox.md',
                 '/en/guide/features/page_linker.md',
@@ -170,6 +171,7 @@ module.exports = {
                 '/en/guide/features/ai-editor-assistant.md',
                 '/en/guide/features/mcp-server',
                 '/en/guide/features/ai-tools.md',
+                '/en/guide/features/vault.md',
                 '/en/guide/features/shortcut-keys.md'
               ]
             },
@@ -199,6 +201,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/en/admin-guide/upgrading/',
+                '/en/admin-guide/upgrading/80x.md',
                 '/en/admin-guide/upgrading/75x.md',
                 '/en/admin-guide/upgrading/74x.md',
                 '/en/admin-guide/upgrading/73x.md',
@@ -293,6 +296,7 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/audit-log.md',
                 '/en/admin-guide/management-cookbook/plugins.md',
                 '/en/admin-guide/management-cookbook/setup-ai.md',
+                '/en/admin-guide/management-cookbook/setup-vault.md',
                 '/en/admin-guide/management-cookbook/news.md',
               ],
             },
@@ -436,15 +440,18 @@ module.exports = {
                 '/ja/guide/features/presentation.md',
                 '/ja/guide/features/frontmatter.md',
                 '/ja/guide/features/lsx.md',
+                '/ja/guide/features/attachment-refs.md',
                 '/ja/guide/features/embed_html.md',
                 '/ja/guide/features/checkbox.md',
                 '/ja/guide/features/page_linker.md',
                 '/ja/guide/features/footnote.md',
                 '/ja/guide/features/forgot_password.md',
+                '/ja/guide/features/growi-ai-agent.md',
                 '/ja/guide/features/ai-knowledge-assistant.md',
                 '/ja/guide/features/ai-editor-assistant.md',
                 '/ja/guide/features/mcp-server.md',
                 '/ja/guide/features/ai-tools.md',
+                '/ja/guide/features/vault.md',
                 '/ja/guide/features/shortcut-keys.md'
               ]
             },
@@ -475,6 +482,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/admin-guide/upgrading/',
+                '/ja/admin-guide/upgrading/80x.md',
                 '/ja/admin-guide/upgrading/75x.md',
                 '/ja/admin-guide/upgrading/74x.md',
                 '/ja/admin-guide/upgrading/73x.md',
@@ -568,7 +576,9 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/setup-search-system.md',
                 '/ja/admin-guide/management-cookbook/audit-log.md',
                 '/ja/admin-guide/management-cookbook/plugins.md',
+                '/ja/admin-guide/management-cookbook/growi-ai-agent.md',
                 '/ja/admin-guide/management-cookbook/setup-ai.md',
+                '/ja/admin-guide/management-cookbook/setup-vault.md',
                 '/ja/admin-guide/management-cookbook/news.md',
               ],
             },
