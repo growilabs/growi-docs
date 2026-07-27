@@ -1,5 +1,9 @@
 # Knowledge Assistant
 
+::: warning
+The Knowledge Assistant is scheduled to be discontinued in GROWI v8.0. In GROWI v8.0, the ability to create new knowledge assistants has been removed, and its role is taken over by the agent-driven [GROWI AI Agent](/en/guide/features/growi-ai-agent.html). For details, see [Upgrading to GROWI v8.0.x](/en/admin-guide/upgrading/80x.html).
+:::
+
 ## What is the GROWI AI Knowledge Assistant?
 
 The GROWI AI Knowledge Assistant (hereinafter referred to as "Knowledge Assistant") is a feature that provides answers to users' questions in a chat format based on information stored within GROWI.
