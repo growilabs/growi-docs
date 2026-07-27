@@ -19,7 +19,7 @@ Because of a serious bug in Revision (page edit history) data, **do not upgrade 
 [[toc]]
 
 ## Check your current version
-Check the GROWI version you are currently running, and proceed from the section that matches your series.
+Check the GROWI version you are currently running, and starting from the section that matches your series, work through each section one by one, in order.
 Before upgrading, always take a backup of MongoDB.
 
 Reference: [Backing up / restoring MongoDB](https://docs.growi.org/en/admin-guide/admin-cookbook/mongodb-backup.html)
