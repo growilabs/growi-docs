@@ -63,7 +63,7 @@ pageClass: admin-cookbook-env-vars
 | `AZURE_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、Azure(Blob) 関連設定の一部はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | **全文検索オプション** | | |
 | `ELASTICSEARCH_URI` | 接続する Elasticsearch サーバーの URI | |
-| `ELASTICSEARCH_VERSION` | 接続する Elasticsearch のメジャーバージョン。(`7` または `8` を指定可能) | `8` |
+| `ELASTICSEARCH_VERSION` | 接続する Elasticsearch のメジャーバージョン。(`8` または `9` を指定可能) | `9` |
 | `ELASTICSEARCH_MAX_BODY_LENGTH_TO_INDEX` | インデックスを作成する1ページあたりの最大文字数。本文の文字数がこの値を上回るページはインデックスされなくなります。 | 100000 |
 | `ELASTICSEARCH_REINDEX_BULK_SIZE` | インデックス再作成時に一度に処理するページドキュメントの数 | 100 |
 | `ELASTICSEARCH_REINDEX_ON_BOOT` | システム起動時にインデックスを再作成する | `false` |

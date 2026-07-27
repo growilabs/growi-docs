@@ -62,7 +62,7 @@ pageClass: admin-cookbook-env-vars
 | `AZURE_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | Prioritize env vars over values in DB for some Azure(Blob) options.  | `false` |
 | **Option for full-text search** | | |
 | `ELASTICSEARCH_URI` | URI to connect to Elasticsearch. | |
-| `ELASTICSEARCH_VERSION` | Elasticsearch major version that system connects to. (`7` or `8` can be specified) | `8` |
+| `ELASTICSEARCH_VERSION` | Elasticsearch major version that system connects to. (`8` or `9` can be specified) | `9` |
 | `ELASTICSEARCH_MAX_BODY_LENGTH_TO_INDEX` | The maximum number of characters per page to create an index. Pages with a body length exceeding this value will not be indexed. | 100000 |
 | `ELASTICSEARCH_REINDEX_BULK_SIZE` | The number of page documents to process at once when reindexing | 100 |
 | `ELASTICSEARCH_REINDEX_ON_BOOT` | Recreate the index on system boot | `false` |
