@@ -111,6 +111,14 @@ pageClass: admin-cookbook-env-vars
 | `OPENAI_VECTOR_STORE_FILE_DELETION_API_CALL_INTERVAL` | Interval between Vector store file deletion API calls (milliseconds) | 36000 |
 | `OPENAI_SEARCH_ASSISTANT_INSTRUCTIONS` | Instructions used for Search Assistant functionality | `''` (empty string) |
 | `OPENAI_LIMIT_LEARNABLE_PAGE_COUNT_PER_ASSISTANT` | Maximum number of pages that a single Knowledge Assistant can learn | 3000 |
+| **GROWI AI Agent options** |  |  |
+| `AI_ENABLED` | Enables GROWI AI Agent when `true`. | `false` |
+| `AI_PROVIDERS` | Specifies per-provider settings (enabling, Azure OpenAI settings, etc.) as JSON.<br>Example: `{"openai":{"enabled":true},"azure-openai":{"enabled":true,"azureOpenaiSettings":{"resourceName":"<resource-name>"}}}` |  |
+| `AI_PROVIDER_API_KEYS` | Specifies per-provider API keys as JSON.<br>Example: `{"openai":"sk-xxxx","anthropic":"sk-ant-xxxx"}` |  |
+| `AI_ALLOWED_MODELS` | Specifies the list of models that users can select, as a JSON array.<br>Example: `[{"provider":"openai","modelId":"gpt-4o","isDefault":true},{"provider":"anthropic","modelId":"claude-sonnet-4-5"}]` | `[]` |
+| `AI_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | When `true`, the connection settings (enabling the AI feature, enabling providers, and API keys) reference only the environment variable values, not the values in the local DB. | `false` |
+| `AI_MODEL_CATALOG_REFRESH_ON_STARTUP` | When `true`, refreshes the model catalog on startup. | `false` |
+| `AI_MODEL_CATALOG_REFRESH_CRON_SCHEDULE` | Specifies the schedule for periodically refreshing the model catalog in cron format. Leave empty to disable periodic refresh. | `0 4 * * *` |
 | **Option (Overwritable in admin page)** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | Prioritize env vars over values in DB for Site URL | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` | Prioritize env var over value in DB for File Upload Type | `false` |
