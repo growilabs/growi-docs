@@ -13,7 +13,7 @@ In v8.0, the legacy OpenAI-based settings (such as environment variables for the
 
 From the left menu of the admin page, open "AI Settings" (`/admin/ai`).
 
-<!-- TODO: Insert a screenshot (the overall "AI Settings" admin screen) -->
+<img :src="$withBase('/assets/images/en/growi-ai-agent-admin-1.png')" alt="growi-ai-agent-admin-1" class="border">
 
 The AI Settings screen consists mainly of the following elements.
 
