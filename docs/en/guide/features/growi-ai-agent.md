@@ -16,11 +16,11 @@ For administrators: for how to enable the AI feature and configure providers and
 
 1. Click the "GROWI AI Agent" icon in the left sidebar.
 
-    <!-- TODO: Insert a screenshot (the "GROWI AI Agent" icon in the left sidebar) -->
+    <img :src="$withBase('/assets/images/en/growi-ai-agent-1.png')" alt="growi-ai-agent-1" class="border">
 
 1. The AI panel opens. Click the "New Chat" button to show the chat window on the right side of the screen.
 
-    <!-- TODO: Insert a screenshot (the AI panel and the "New Chat" button) -->
+    <img :src="$withBase('/assets/images/en/growi-ai-agent-2.png')" alt="growi-ai-agent-2" class="border">
 
 ## Sending a message
 
@@ -28,13 +28,13 @@ Type your question into the input field at the bottom of the chat window and pre
 
 The answer is generated as GROWI AI Agent searches GROWI and reads related pages, so it takes a little while to appear. While an answer is being generated, you cannot send another message.
 
-<!-- TODO: Insert a screenshot (a question and answer shown in the chat) -->
+<img :src="$withBase('/assets/images/en/growi-ai-agent-3.png')" alt="growi-ai-agent-3" class="border">
 
 ## Choosing a model
 
 From the model selector below the input field, you can choose the AI model used for answers. The selectable models are the ones allowed by your administrator. They are grouped by provider (OpenAI / Anthropic / Google / Azure OpenAI).
 
-<!-- TODO: Insert a screenshot (the model selector) -->
+<img :src="$withBase('/assets/images/en/growi-ai-agent-4.png')" alt="growi-ai-agent-4" class="border">
 
 Your choice is remembered and reused in later chats. You can also switch models in the middle of a conversation.
 
@@ -42,13 +42,13 @@ Your choice is remembered and reused in later chats. You can also switch models 
 
 To have the AI reference a specific page in your question, type `@` in the input field. When you type a page name after `@`, pages you are allowed to view appear as candidates.
 
-<!-- TODO: Insert a screenshot (candidates shown while searching after typing @) -->
+<img :src="$withBase('/assets/images/en/growi-ai-agent-5.png')" alt="growi-ai-agent-5" class="border">
 
 - `@` is activated when typed at the beginning of a line or right after a space.
 - Candidates are narrowed as you type. Move through candidates with the arrow keys, and confirm with the Enter or Tab key. Press Esc to close the candidates.
 - When confirmed, the path of the selected page is inserted into the input field. You can click the inserted path to open that page.
 
-<!-- TODO: Insert a screenshot (the selected page path inserted into the input field) -->
+<img :src="$withBase('/assets/images/en/growi-ai-agent-6.png')" alt="growi-ai-agent-6" class="border">
 
 Only pages you are allowed to view appear as candidates. Pages you do not have permission for are not shown.
 
@@ -60,7 +60,7 @@ A page referenced with `@` is not passed in full at that moment. GROWI AI Agent 
 
 GROWI AI Agent lists the pages it actually opened and read while composing the answer as "referenced pages" above the answer. Each item is a link to the page, so you can verify the basis of the answer.
 
-<!-- TODO: Insert a screenshot (the list of referenced pages) -->
+<img :src="$withBase('/assets/images/en/growi-ai-agent-7.png')" alt="growi-ai-agent-7" class="border">
 
 ::: warning
 The answers from GROWI AI Agent are not always accurate. For important information, open the referenced pages and verify the content.
@@ -82,7 +82,7 @@ Your chat exchanges are automatically saved as threads. You can review past thre
 - Selecting a thread from the list lets you resume that conversation.
 - You can delete a thread from the trash icon shown when you hover over it.
 
-<!-- TODO: Insert a screenshot (the thread list under "Recent items") -->
+<img :src="$withBase('/assets/images/en/growi-ai-agent-8.png')" alt="growi-ai-agent-8" class="border">
 
 Threads are private to you and are not visible to other users. You also cannot delete other users' threads.
 
