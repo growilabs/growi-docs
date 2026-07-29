@@ -21,3 +21,8 @@
   - If you turn off "Show only stable versions" or "Automatic updates only for stable versions", you will be able to use versions other than stable.
 <img :src="$withBase('/assets/images/en/version_2.png')" alt="version_2.png">
 
+### Updating from an Older Version to the Latest Version
+
+- When you update from an older version straight to the latest version, for example after pinning a specific version for a long time, some tasks have to be carried out on your side before and after the update.
+- The tasks that apply to you are collected in "A. If You Use GROWI.cloud" of [Upgrade Overview and Migration to the Latest Version](/en/admin-guide/upgrading/#a-if-you-use-growi-cloud).
+

@@ -31,7 +31,8 @@ module.exports = {
     '!(ja|en)/admin-guide/upgrading/(34x|35x|36x|37x|38x).md',
     '!(ja|en)/admin-guide/management-cookbook/active-directory.md', // Excluded due to lack of substance
     // The following should also be included in README.md
-    '(ja|en)/admin-guide/management-cookbook/slack-integration/README.md'
+    '(ja|en)/admin-guide/management-cookbook/slack-integration/README.md',
+    '(ja|en)/admin-guide/upgrading/README.md'
   ],
 
   themeConfig: {
@@ -214,6 +215,7 @@ module.exports = {
           'title': 'アップグレードガイド',
           'key': 'upgrade-guide',
           'children': [
+            '/ja/admin-guide/upgrading/',
             '/ja/admin-guide/upgrading/80x.md',
             '/ja/admin-guide/upgrading/74x.md',
             '/ja/admin-guide/upgrading/73x.md',
@@ -387,6 +389,7 @@ module.exports = {
           'title': 'Uupgrade guide',
           'key': 'upgrade-guide',
           'children': [
+            '/en/admin-guide/upgrading/',
             '/en/admin-guide/upgrading/80x.md',
             '/en/admin-guide/upgrading/74x.md',
             '/en/admin-guide/upgrading/73x.md',

@@ -8,11 +8,9 @@ This page is for everyone running an older version of GROWI. It brings together,
 
 The latest series receives continuous improvements in features, performance, and security, and its supported runtime environments are kept up to date. To help you keep using GROWI safely, the development team strongly recommends updating to the latest version.
 
-The work proceeds in the following order.
+This page is split into the section you read, depending on whether you use GROWI.cloud (A) or self-host the OSS version (B). Follow A or B from top to bottom according to your deployment. The detailed steps for each task are collected in "C. Detailed procedures", which both A and B link to.
 
-1. Tasks to complete before upgrading
-2. Upgrading GROWI to the latest version
-3. Tasks to complete after upgrading
+How to read the A and B tables: find the column for the version you are running now, read it from top to bottom, and carry out every row marked with a check mark. A check mark means the item has to be dealt with somewhere on the way from that version to the latest version. The `[Required]` and `[If applicable]` labels at the beginning of each row indicate the nature of the task; `[If applicable]` means the task is only necessary when the stated condition applies to you.
 
 ::: danger
 Because of a serious bug in Revision (page edit history) data, **do not upgrade to v6.1.0 - v7.0.15; always upgrade directly to v7.4.0 or later**.
@@ -23,15 +21,62 @@ For details, see the Dev Wiki page [Revision data migration bug in v5.0.0 - v7.0
 
 [[toc]]
 
-## Check your current version
+## A. If You Use GROWI.cloud
+
+On GROWI.cloud, middleware such as MongoDB and Elasticsearch, the container image, and the build environment are all managed by GROWI.cloud. For that reason, the only tasks we ask you to carry out are the ones listed in the A-2 and A-4 tables below. If you have any questions about an item that is not listed, please contact us through the [inquiry page](https://growicloud.atlassian.net/servicedesk/customer/portal/1).
+
+Updating the version of the GROWI app itself is done from the app detail screen of GROWI.cloud (see A-3 for details). The docker-compose and build-from-source procedures described in "B. If You Use the OSS Version of GROWI" are for self-hosted OSS deployments and are not needed on GROWI.cloud.
+
+### A-1. Check your current version
+
+- First, check the version of the GROWI app you are currently running. You can check it in the "Version" field of the app detail screen on GROWI.cloud ([Version](https://growi.cloud/help/en/cloud/version.html)).
+- GROWI.cloud takes generation-managed backups of MongoDB according to your plan ([Backup](https://growi.cloud/help/en/cloud/backup.html)). You do not need to take a backup yourself in advance.
+
+### A-2. Tasks to complete before upgrading on GROWI.cloud
+
+Find the column for the version you are running now and carry out every row marked with a check mark.
+
+| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| [If applicable] [When you specify Owned AWS as the file storage destination: add s3:AbortMultipartUpload to the IAM policy](#add-s3-abortmultipartupload-to-the-iam-policy) | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [When you specify Owned AWS as the file storage destination: disable the bucket ACL and change to blocking public access (if you would like the environment variable `S3_OBJECT_ACL` changed, please contact us)](#review-the-aws-s3-bucket-acl-settings-and-s3-object-acl) | | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [When page data migrated from an OSS deployment built on v3.3 or earlier remains: rewrite legacy attachment URLs](#rewrite-legacy-attachment-urls) | | | | | | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [When you have enabled simultaneous editing (HackMD): migrate to simultaneous editing in the built-in editor](#migrate-from-hackmd-integration-to-simultaneous-editing-in-the-built-in-editor) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [When you use the Custom HTML Header: migrate to Custom Noscript or a custom script](#migrate-away-from-the-custom-html-header) | | | | | | | | ✓ | ✓ |
+| [If applicable] [When you use Twitter OAuth 2 authentication: migrate to another authentication method](#migrate-from-twitter-oauth-2-authentication-to-another-authentication-method) | | | | | | | | ✓ | ✓ |
+| [If applicable] [Notify users that the syntax and HTML changes will alter how existing pages display and that page content needs to be rewritten](#rewrite-page-content-affected-by-the-syntax-and-html-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Required] [Notify users about the introduction of WIP pages, the change in the new page creation flow, and the change in how full-text search is invoked](#notify-users-about-wip-pages-and-ui-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Required] [Notify users of the v5 specification changes (move / rename / delete including descendants, permalink URLs, UI changes)](#notify-users-of-the-v5-specification-changes) | | | | | | | | | ✓ |
+
+Regarding the HackMD row above, note that HackMD integration cannot be used from GROWI v7 onward ([Simultaneous Editing (HackMD)](https://growi.cloud/help/en/cloud/hackmd.html)).
+
+### A-3. Upgrading to the latest version on GROWI.cloud
+
+- After completing every task in A-2, update the version from the app detail screen of GROWI.cloud. For the detailed steps, see [Version](https://growi.cloud/help/en/cloud/version.html).
+- If you use automatic version updates, you are updated to the latest version automatically. If you have pinned a specific version, update it manually.
+- As warned at the top of this page, do not select v6.1.0 - v7.0.15.
+- After upgrading, carry out [Rebuilding the full-text search index](#rebuilding-the-full-text-search-index).
+
+### A-4. Tasks to complete after upgrading on GROWI.cloud
+
+Find the column for the version you are running now and carry out every row marked with a check mark.
+
+| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| [If applicable] [When you used the legacy AI integration features: configure them again with the GROWI AI Agent method](#reconfigure-growi-ai-agent) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [When you customized the XSS prevention settings: they are reset to the default at startup, so configure them again](#reconfigure-the-xss-prevention-settings) | | | | | | | | ✓ | ✓ |
+| [If applicable] [When unconverted pages created in v4.5 or earlier remain: convert them to the v5 Compatible Format](#convert-unconverted-pages-to-the-v5-compatible-format) | | | | | | | | ✓ | ✓ |
+| [If applicable] [Rewrite existing page content affected by the syntax and HTML changes](#rewrite-page-content-affected-by-the-syntax-and-html-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+Note that you cannot run the bulk rewrite of page content with `bin/data-migrations` yourself on GROWI.cloud. If you would like it to be run, please contact us through the [inquiry page](https://growicloud.atlassian.net/servicedesk/customer/portal/1). No script is provided for math, presentation page breaks, or the inline footnote syntax; rewrite those pages manually.
+
+## B. If You Use the OSS Version of GROWI
+
+### B-1. Check your current version
 
 First, check the version of GROWI you are currently running.
 
-In the tables under "1. Tasks to complete before upgrading" and "3. Tasks to complete after upgrading", find the **column** for the version you are running now, read it from top to bottom, and carry out every row marked with a check mark. A check mark means that the item has to be dealt with somewhere on the way from that version to the latest version.
-
-The `[Required]` and `[If applicable]` labels at the beginning of each row indicate the nature of the task. `[If applicable]` means that the task is only necessary when the stated condition applies to you.
-
-For the detailed steps of each item, see "4. Detailed procedures".
+For the detailed steps of each item, see "C. Detailed procedures".
 
 Before upgrading, always take a backup of MongoDB.
 
@@ -50,11 +95,11 @@ docker run --rm \
 
 If MongoDB runs in a docker container, add the `--link ${container}:mongo` option. If it does not run in a docker container and the Docker host OS is Linux, add the `--network host` option. For the restore procedure, see the reference page above (it is not repeated on this page).
 
-## 1. Tasks to complete before upgrading
+### B-2. Tasks to complete before upgrading
 
 The tables below list, by category, the tasks you have to finish **before** upgrading GROWI itself to the latest version. Find the column for the version you are running now and carry out every row marked with a check mark.
 
-### Middleware
+#### Middleware
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -63,7 +108,7 @@ The tables below list, by category, the tasks you have to finish **before** upgr
 | [Required] [Upgrade MongoDB to v6.0 or later (one major version at a time, without skipping)](#upgrade-mongodb-to-v6-0-or-later) | | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you build and run GROWI from source: upgrade Node.js to v24 (not needed when you use the official Docker image)](#upgrade-node-js-to-v24) | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-### Infrastructure and storage
+#### Infrastructure and storage
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -72,7 +117,7 @@ The tables below list, by category, the tasks you have to finish **before** upgr
 | [If applicable] [When you use AWS S3: disable the bucket ACL, block public access, and review the S3_OBJECT_ACL environment variable](#review-the-aws-s3-bucket-acl-settings-and-s3-object-acl) | | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When your system was built on v3.3 or earlier and uses MongoDB GridFS: rewrite legacy attachment URLs to the /attachment/{attachmentId} form](#rewrite-legacy-attachment-urls) | | | | | | ✓ | ✓ | ✓ | ✓ |
 
-### Environment variables and settings
+#### Environment variables and settings
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -83,20 +128,20 @@ The tables below list, by category, the tasks you have to finish **before** upgr
 | [If applicable] [When you use Twitter OAuth 2 authentication: migrate to another authentication method](#migrate-from-twitter-oauth-2-authentication-to-another-authentication-method) | | | | | | | | ✓ | ✓ |
 | [If applicable] [When you use the nocdn image: migrate to the consolidated official image](#migrate-from-the-nocdn-image-to-the-official-image) | | | | | | | | ✓ | ✓ |
 
-### Building from source
+#### Building from source
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [If applicable] [When you build from source yourself: adapt to the build tool changes (Lerna to Turborepo, yarn v1 to pnpm v9.4 or later)](#adapt-to-the-build-tool-changes-when-building-from-source) | | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-### Removed features
+#### Removed features
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [If applicable] [When you use HackMD integration: migrate to simultaneous editing in the built-in editor and consider decommissioning the HackMD server](#migrate-from-hackmd-integration-to-simultaneous-editing-in-the-built-in-editor) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you monitor GROWI with Promster: review your monitoring setup](#review-your-monitoring-setup-that-uses-promster) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-### Notifying your users
+#### Notifying your users
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -104,17 +149,17 @@ The tables below list, by category, the tasks you have to finish **before** upgr
 | [Required] [Notify users about WIP pages, the new page creation flow, and the change in how full-text search is invoked](#notify-users-about-wip-pages-and-ui-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [Required] [Notify users of the v5 specification changes (move / rename / delete including descendants, permalink URLs, UI changes)](#notify-users-of-the-v5-specification-changes) | | | | | | | | | ✓ |
 
-## 2. Upgrading GROWI to the latest version
+### B-3. Upgrading GROWI to the latest version
 
-Once you have completed every task in "1. Tasks to complete before upgrading" and taken a backup of MongoDB, upgrade GROWI itself.
+Once you have completed every task in "B-2. Tasks to complete before upgrading" and taken the MongoDB backup described in B-1, upgrade GROWI itself.
 
 Whatever version you are running now, you do not need to go through intermediate versions. Upgrade directly to the latest version (v8.0.x).
 
 As warned at the top of this page, do not go through v6.1.0 - v7.0.15 on the way.
 
-### Upgrading a docker-compose deployment
+#### Upgrading a docker-compose deployment
 
-If you run GROWI with [growi-docker-compose](https://github.com/growilabs/growi-docker-compose), follow the steps below. For details, see [Upgrade GROWI](/en/admin-guide/getting-started/docker-compose.html#upgrade-growi).
+If you run GROWI with [growi-docker-compose](https://github.com/growilabs/growi-docker-compose), follow the steps below. For details, see [Upgrade GROWI](https://docs.growi.org/en/admin-guide/getting-started/docker-compose.html#upgrade-growi).
 
 In the folder where you downloaded `growi-docker-compose`, stop the containers.
 
@@ -138,9 +183,9 @@ docker-compose build
 docker-compose up
 ```
 
-### Upgrading a build-from-source deployment
+#### Upgrading a build-from-source deployment
 
-If you fetch and build the source yourself, follow the flow below. For a concrete example of the steps, see the [GROWI section of Ubuntu Server](/en/admin-guide/getting-started/ubuntu-server.html#growi) (the flow is the same on AlmaLinux OS and CentOS).
+If you fetch and build the source yourself, follow the flow below. For a concrete example of the steps, see the [GROWI section of Ubuntu Server](https://docs.growi.org/en/admin-guide/getting-started/ubuntu-server.html#growi) (the flow is the same on AlmaLinux OS and CentOS).
 
 After stopping the GROWI server process, check the latest stable tag in the repository and switch to it.
 
@@ -173,17 +218,15 @@ ELASTICSEARCH_URI=http://localhost:9200/growi \
 npm run app:server
 ```
 
-For automatic startup with systemd, see [Autostart using systemd](/en/admin-guide/admin-cookbook/launch-with-systemd.html).
+For automatic startup with systemd, see [Autostart using systemd](https://docs.growi.org/en/admin-guide/admin-cookbook/launch-with-systemd.html).
 
-### Rebuilding the full-text search index
+After upgrading, carry out [Rebuilding the full-text search index](#rebuilding-the-full-text-search-index).
 
-After upgrading GROWI itself, rebuild the index from the **Elasticsearch Management** page of the admin panel (`/admin/search`; this is the name shown in the sidebar, formerly "Full Text Search Management"). Use the **Rebuild page data index** button in the "Page Data Management" section. If the index is shown as corrupted, you can normalize it. If you have enabled the Audit Log feature, you can also manage the audit log index in the "Audit Log Index Management" section of the same page. For details, see [Setup of Full Text Search and Audit Log Index Management](/en/admin-guide/management-cookbook/setup-search-system.html).
+### B-4. Tasks to complete after upgrading
 
-## 3. Tasks to complete after upgrading
+The tables below list, by category, the tasks that have to be dealt with **after** upgrading GROWI itself. Find the column for the version you were running and carry out every row marked with a check mark (the columns have the same meaning as in "B-2. Tasks to complete before upgrading").
 
-The tables below list, by category, the tasks that have to be dealt with **after** upgrading GROWI itself. Find the column for the version you were running and carry out every row marked with a check mark (the columns have the same meaning as in "1. Tasks to complete before upgrading").
-
-### Reconfiguration
+#### Reconfiguration
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -191,22 +234,22 @@ The tables below list, by category, the tasks that have to be dealt with **after
 | [If applicable] [When LOCAL_STRATEGY_ENABLED / SAML_ENABLED are set: check again at /login that each authentication method is enabled or disabled as expected](#check-the-actual-state-of-local-strategy-enabled-and-saml-enabled) | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you customized the XSS prevention settings: they are reset to the default at startup, so configure them again (the format for allowed attributes has changed to JSON)](#reconfigure-the-xss-prevention-settings) | | | | | | | | ✓ | ✓ |
 
-### Data and file migration
+#### Data and file migration
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [If applicable] [When you use FILE_UPLOAD=local: move the attachments to the new storage directory](#move-attachments-to-the-new-location-when-file-upload-local) | | | | | | | ✓ | ✓ | ✓ |
 | [If applicable] [When unconverted pages created in v4.5 or earlier remain: convert them to the v5 Compatible Format (public pages can be converted in bulk from the admin page; legacy private pages are converted by each user)](#convert-unconverted-pages-to-the-v5-compatible-format) | | | | | | | | ✓ | ✓ |
 
-### Rewriting page content
+#### Rewriting page content
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [If applicable] [Rewrite existing page content affected by the syntax and HTML changes in bulk with the data-migrations scripts](#rewrite-page-content-affected-by-the-syntax-and-html-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-## 4. Detailed procedures
+## C. Detailed procedures
 
-These are the detailed steps for each task, linked from the tables in "1. Tasks to complete before upgrading" and "3. Tasks to complete after upgrading". The "When to do this" field of each item states when it has to be carried out.
+These are the detailed steps for each task, linked from the tables in "A-2. Tasks to complete before upgrading on GROWI.cloud", "A-4. Tasks to complete after upgrading on GROWI.cloud", "B-2. Tasks to complete before upgrading", and "B-4. Tasks to complete after upgrading". The "When to do this" field of each item states when it has to be carried out.
 
 ### Migrate Elasticsearch to v8 or v9
 
@@ -248,7 +291,7 @@ These are the detailed steps for each task, linked from the tables in "1. Tasks 
 - **When to do this**: Before upgrading
 - **Introduced in**: v7.1
 - **When it applies**: When you use MongoDB v5.0 or earlier
-- **References**: [v7.1.x](/en/admin-guide/upgrading/71x.html#for-admin), [Upgrading MongoDB](/en/admin-guide/admin-cookbook/upgrade-mongodb.html)
+- **References**: [v7.1.x](/en/admin-guide/upgrading/71x.html#for-admin), [Upgrading MongoDB](https://docs.growi.org/en/admin-guide/admin-cookbook/upgrade-mongodb.html)
 
 1. Check the version of MongoDB you use.
 1. If it is older than v6.0, upgrade one major version at a time without skipping (for example, to go from v4.4 to v6.0, go through v5.0 first). For the steps between each version, see the official MongoDB release notes.
@@ -375,7 +418,7 @@ These are the detailed steps for each task, linked from the tables in "1. Tasks 
 - **When to do this**: Before upgrading
 - **Introduced in**: v8.0
 - **When it applies**: For large environments with many active users (roughly more than 500)
-- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators), [Environment Variables](/en/admin-guide/admin-cookbook/env-vars.html)
+- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators), [Environment Variables](https://docs.growi.org/en/admin-guide/admin-cookbook/env-vars.html)
 
 1. From GROWI v8.0, the default upper limit of the MongoDB connection pool is reduced compared with previous versions.
 1. In large environments with many active users, many pages, or high access frequency, the default may be insufficient.
@@ -489,7 +532,7 @@ After upgrading:
 - **When to do this**: Before upgrading
 - **Introduced in**: v7.0
 - **When it applies**: When you use HackMD(CodiMD) integration
-- **References**: [v7.0.x](/en/admin-guide/upgrading/70x.html#for-admin), [HackMD(CodiMD) Integration](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html)
+- **References**: [v7.0.x](/en/admin-guide/upgrading/70x.html#for-admin), [HackMD(CodiMD) Integration](https://docs.growi.org/en/admin-guide/admin-cookbook/integrate-with-hackmd.html)
 
 1. From v7.0, the feature for simultaneous editing by multiple people through HackMD integration is removed.
 1. Migrate to simultaneous editing by multiple people in the built-in editor instead. No additional setup is required on the user side.
@@ -602,6 +645,17 @@ After upgrading (administrator bulk rewrite):
         - Footprint icon for displaying the page browsing user list
         - Link button to scroll to the comment list
     ```
+
+### Rebuilding the full-text search index
+
+- **When to do this**: After upgrading
+- **Introduced in**: Not tied to a specific version
+- **When it applies**: Any environment where you upgraded GROWI itself
+- **References**: [Setup of Full Text Search and Audit Log Index Management](/en/admin-guide/management-cookbook/setup-search-system.html)
+
+1. After upgrading GROWI itself, rebuild the index from the **Elasticsearch Management** page of the admin panel (`/admin/search`; this is the name shown in the sidebar, formerly "Full Text Search Management"). Use the **Rebuild page data index** button in the "Page Data Management" section.
+1. If the index is shown as corrupted, you can normalize it.
+1. If you have enabled the Audit Log feature, you can also manage the audit log index in the "Audit Log Index Management" section of the same page.
 
 ### Reconfigure GROWI AI Agent
 
