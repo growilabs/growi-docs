@@ -29,7 +29,7 @@ First, check the version of GROWI you are currently running.
 
 In the tables under "1. Tasks to complete before upgrading" and "3. Tasks to complete after upgrading", find the **column** for the version you are running now, read it from top to bottom, and carry out every row marked with a check mark. A check mark means that the item has to be dealt with somewhere on the way from that version to the latest version.
 
-The `[Required]`, `[If applicable]`, and `[Optional]` labels at the beginning of each row indicate the nature of the task. `[If applicable]` means that the task is only necessary when the stated condition applies to you.
+The `[Required]` and `[If applicable]` labels at the beginning of each row indicate the nature of the task. `[If applicable]` means that the task is only necessary when the stated condition applies to you.
 
 For the detailed steps of each item, see "4. Detailed procedures".
 
