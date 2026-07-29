@@ -61,7 +61,7 @@ GROWI 本体を最新バージョンへアップグレードする**前**に済�
 | [該当時] [Elasticsearch v7 系以前を利用している場合: v8 系または v9 系へ移行（インデックスは再生成を推奨）](#elasticsearch-を-v8-系または-v9-系へ移行する) | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ○ |
 | [該当時] [MongoDB を standalone 構成で運用している場合: レプリカセット構成へ移行（単一ノードのレプリカセットでも可）](#mongodb-をレプリカセット構成へ移行する) | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ○ |
 | [必須] [MongoDB を v6.0 以上へアップグレード（メジャーバージョンを飛ばさず段階的に）](#mongodb-を-v6-0-以上へアップグレードする) | | | | ○ | ○ | ○ | ○ | ○ | ○ |
-| [必須] [Node.js を v18 または v20 へアップグレード（公式 Docker イメージ利用時は対応不要）](#node-js-を-v18-または-v20-へアップグレードする) | | | | | ○ | ○ | ○ | ○ | ○ |
+| [該当時] [ソースからビルド・実行している場合: Node.js を v24 へアップグレード（公式 Docker イメージ利用時は対応不要）](#node-js-を-v24-へアップグレードする) | | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ○ |
 
 ### インフラ・ストレージ
 
@@ -76,12 +76,10 @@ GROWI 本体を最新バージョンへアップグレードする**前**に済�
 
 | 対応内容 | v7.5.x | v7.2.x〜v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x〜v6.2.x | v6.0.x | v5.x | 〜v4.x |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| [該当時] [OpenTelemetry の計装をカスタマイズしている場合: 計装切り替え用の環境変数が廃止されたため設定方法を確認](#opentelemetry-の計装カスタマイズを見直す) | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ○ |
 | [該当時] [アクティブユーザーが数百人を超える大規模環境: MongoDB コネクションプール上限の引き上げを検討](#mongodb-コネクションプールの上限を引き上げる) | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ○ |
 | [該当時] [LOCAL_STRATEGY_ENABLED / SAML_ENABLED 設定時: /login で認証方式の実際の有効・無効状態を確認](#local-strategy-enabled-と-saml-enabled-の実際の状態を確認する) | | | ○ | ○ | ○ | ○ | ○ | ○ | ○ |
-| [該当時] [廃止された環境変数 FILE_UPLOAD_DISABLED / DISABLE_LINK_SHARING からの移行](#廃止された環境変数-file-upload-disabled-と-disable-link-sharing-から移行する) | | | ○ | ○ | ○ | ○ | ○ | ○ | ○ |
-| [任意] [OpenTelemetry によるテレメトリ送信が既定で有効になるため、送信可否・送信先を確認](#opentelemetry-のテレメトリ送信可否と送信先を確認する) | | | ○ | ○ | ○ | ○ | ○ | ○ | ○ |
-| [該当時] [カスタム HTML Header 利用時: カスタム Noscript やカスタムスクリプトへ移行](#カスタム-html-header-から移行する) | | | | | | | | ○ | ○ |
+| [該当時] [環境変数 FILE_UPLOAD_DISABLED / DISABLE_LINK_SHARING 設定時: 廃止されたため代替の設定に置き換え](#廃止された環境変数-file-upload-disabled-と-disable-link-sharing-の設定を置き換える) | | | ○ | ○ | ○ | ○ | ○ | ○ | ○ |
+| [該当時] [カスタム HTML Header 利用時: カスタム Noscript やカスタムスクリプトへ移行](#カスタム-html-header-の代替手段に切り替える) | | | | | | | | ○ | ○ |
 | [該当時] [Twitter OAuth 2 認証利用時: 別の認証方式へ移行](#twitter-oauth-2-認証から別の認証方式へ移行する) | | | | | | | | ○ | ○ |
 | [該当時] [nocdn 版イメージ利用時: 統合された公式イメージへ移行](#nocdn-版イメージから公式イメージへ移行する) | | | | | | | | ○ | ○ |
 
@@ -102,10 +100,8 @@ GROWI 本体を最新バージョンへアップグレードする**前**に済�
 
 | 対応内容 | v7.5.x | v7.2.x〜v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x〜v6.2.x | v6.0.x | v5.x | 〜v4.x |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| [該当時] [Bootstrap v4 → v5 に伴い Markdown 中の HTML 記法が変わることを利用者へ周知](#bootstrap-v5-化に伴う-markdown-中の-html-を周知し、書き換える) | | | | | ○ | ○ | ○ | ○ | ○ |
+| [該当時] [記法・HTML の仕様変更で既存ページの表示が変わり、本文の書き換えが必要になることを利用者へ周知](#記法と-html-の仕様変更に伴うページ本文の書き換え) | | | | | ○ | ○ | ○ | ○ | ○ |
 | [必須] [WIP ページの導入・新規ページ作成導線の変更・全文検索の呼び出し方の変更を利用者へ周知](#wip-ページと-ui-変更を利用者へ周知する) | | | | | ○ | ○ | ○ | ○ | ○ |
-| [該当時] [mdcont- プレフィクス付きアンカーリンクが使えなくなることを利用者へ周知](#mdcont-プレフィクス付きアンカーリンクを周知し、書き換える) | | | | | | | ○ | ○ | ○ |
-| [該当時] [v6.0 の記法変更（Draw.io / PlantUML / CSV・TSV / 数式 / プレゼンテーションのページ区切り / 脚注インライン記法 / GROWI 独自ページリンク記法 / blockdiag）を利用者へ周知](#v6-0-の記法変更を周知し、既存ページを書き換える) | | | | | | | | ○ | ○ |
 | [必須] [v5 の仕様変更（子孫ページを含む移動・リネーム・削除、URL のパーマリンク化、UI 変更）を利用者へ周知](#v5-の仕様変更を利用者へ周知する) | | | | | | | | | ○ |
 
 ## 2. GROWI 最新バージョンへのアップグレード
@@ -206,15 +202,7 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 
 | 対応内容 | v7.5.x | v7.2.x〜v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x〜v6.2.x | v6.0.x | v5.x | 〜v4.x |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| [該当時] [Bootstrap v4 → v5 に伴う Markdown 中の HTML の書き換え](#bootstrap-v5-化に伴う-markdown-中の-html-を周知し、書き換える) | | | | | ○ | ○ | ○ | ○ | ○ |
-| [該当時] [mdcont- プレフィクス付きアンカーリンクの書き換え](#mdcont-プレフィクス付きアンカーリンクを周知し、書き換える) | | | | | | | ○ | ○ | ○ |
-| [該当時] [v6.0 の記法変更に該当する既存ページの書き換え](#v6-0-の記法変更を周知し、既存ページを書き換える) | | | | | | | | ○ | ○ |
-
-### 新機能のセットアップ
-
-| 対応内容 | v7.5.x | v7.2.x〜v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x〜v6.2.x | v6.0.x | v5.x | 〜v4.x |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| [任意] [GROWI Vault を利用する場合: 専用コンテナの追加と有効化](#growi-vault-をセットアップする) | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ○ |
+| [該当時] [記法・HTML の仕様変更に該当する既存ページの本文を data-migrations スクリプトで一括書き換え](#記法と-html-の仕様変更に伴うページ本文の書き換え) | | | | | ○ | ○ | ○ | ○ | ○ |
 
 ## 4. 手順詳細
 
@@ -223,6 +211,7 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 ### Elasticsearch を v8 系または v9 系へ移行する
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v8.0（Elasticsearch v7 系のサポート終了）
 - **対応が必要な条件**: Elasticsearch v7 系以前を利用している場合
 - **参考**: [v5.0.x](/ja/admin-guide/upgrading/50x.html)、[v6.1.x](/ja/admin-guide/upgrading/61x.html#管理者向け)、[v8.0.x](/ja/admin-guide/upgrading/80x.html#管理者向け)
 
@@ -245,6 +234,7 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 ### MongoDB をレプリカセット構成へ移行する
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v8.0
 - **対応が必要な条件**: MongoDB を standalone 構成で運用している場合（GROWI v8.0 以降で必須）
 - **参考**: [v8.0.x](/ja/admin-guide/upgrading/80x.html#管理者向け)
 
@@ -256,6 +246,7 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 ### MongoDB を v6.0 以上へアップグレードする
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v7.1
 - **対応が必要な条件**: MongoDB v5.0 以前を利用している場合
 - **参考**: [v7.1.x](/ja/admin-guide/upgrading/71x.html#管理者向け)、[MongoDB のアップグレード](/ja/admin-guide/admin-cookbook/upgrade-mongodb.html)
 
@@ -283,32 +274,41 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 
 1. 目的のバージョンに達するまで、1 メジャーバージョンずつ上記を繰り返します。MongoDB v4.4 および v5.0 のサポートは終了しているため、最終的に v6.0 以上にしてください。
 
-### Node.js を v18 または v20 へアップグレードする
+### Node.js を v24 へアップグレードする
 
 - **対応タイミング**: アップグレード前
-- **対応が必要な条件**: v6.3.x 以前を利用している場合。公式 Docker イメージ利用時は対応不要です。
-- **参考**: [v7.0.x](/ja/admin-guide/upgrading/70x.html#管理者向け)、[v6.1.x](/ja/admin-guide/upgrading/61x.html#管理者向け)
+- **対象バージョン**: v7.5（サポート対象の Node.js が v24 系のみに変更）
+- **対応が必要な条件**: ソースコードから GROWI をビルド・実行している場合。公式 Docker イメージ利用時は対応不要です。
+- **参考**: [v7.5.x](/ja/admin-guide/upgrading/75x.html#管理者向け)
+
+1. GROWI v7.5.0 で、サポート対象の Node.js が v24 系のみになりました。v18 系・v20 系のサポートは終了しています。
+
+    | GROWI | <= v7.4.x | v7.5.x 以降 |
+    | :---: | :---: | :---: |
+    | Node.js | 18, 20 | 24 |
 
 1. 現在の Node.js のバージョンを確認します。
 
     ```bash
-    $ nodejs -v
+    $ node -v
     ```
 
-1. v18 または v20 でない場合は、Node.js を v18 または v20 にアップグレードします。NodeSource のリポジトリを利用する場合の手順は次のとおりです（`20.x` の部分は導入したいバージョンに読み替えてください）。
+1. v24 系でない場合は、Node.js を v24 系へアップグレードします。NodeSource のリポジトリを利用する場合の手順は次のとおりです。
 
     ```bash
     $ cd ~
-    $ curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+    $ curl -sL https://deb.nodesource.com/setup_24.x -o nodesource_setup.sh
     $ sudo bash nodesource_setup.sh
     $ sudo apt -y install nodejs
     ```
 
+1. v7.5.0 では、Node.js v24 で追加された組み込み関数 `RegExp.escape()` をページパスの処理で利用しています。v18 系・v20 系のままアップグレードすると、この関数が存在しないため、ページの移動・複製などの操作が実行時エラーとなります。GROWI 本体のアップグレード前に必ず対応してください。
 1. 公式 Docker イメージを利用している場合、この対応は不要です。
 
 ### IAM ポリシーに s3:AbortMultipartUpload を追加する
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v7.5
 - **対応が必要な条件**: S3 互換オブジェクトストレージを利用している場合
 - **参考**: [v7.5.x](/ja/admin-guide/upgrading/75x.html#管理者向け)
 
@@ -319,6 +319,7 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 ### Docker Hardened Images 化による運用への影響を確認する
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v7.5
 - **対応が必要な条件**: 公式 Docker イメージを利用している場合
 - **参考**: [v7.5.x](/ja/admin-guide/upgrading/75x.html#管理者向け)
 
@@ -329,6 +330,7 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 ### AWS S3 バケットの ACL 設定と S3_OBJECT_ACL を見直す
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v7.1
 - **対応が必要な条件**: AWS S3 を添付ファイルの保存先に利用している場合
 - **参考**: [v7.1.x](/ja/admin-guide/upgrading/71x.html#管理者向け)
 
@@ -352,6 +354,7 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 ### 旧形式の添付ファイル URL を書き換える
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v6.3
 - **対応が必要な条件**: v3.3 系以前に構築し、MongoDB GridFS で添付ファイルを管理している場合
 - **参考**: [v6.3.x](/ja/admin-guide/upgrading/63x.html)
 
@@ -359,19 +362,10 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 1. Markdown 中にこの形式の URL を含むページがないかを確認します。
 1. 該当する URL を `/attachment/{attachmentId}` 形式へ書き換えるか、ファイルをアップロードし直します。
 
-### OpenTelemetry の計装カスタマイズを見直す
-
-- **対応タイミング**: アップグレード前
-- **対応が必要な条件**: OpenTelemetry の自動計装の範囲を環境変数で切り替えている場合
-- **参考**: [v8.0.x](/ja/admin-guide/upgrading/80x.html#管理者向け)
-
-1. GROWI v8.0 以降、OpenTelemetry の計装は GROWI が実際に使用する必要最小限のセットに固定されます。
-1. 従来、自動計装の範囲を環境変数で切り替えていた場合、その環境変数は廃止されます。
-1. 標準的な利用では追加の対応は不要ですが、計装をカスタマイズしていた場合は、アップグレード後に設定方法が変わっている点に注意してください。
-
 ### MongoDB コネクションプールの上限を引き上げる
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v8.0
 - **対応が必要な条件**: アクティブユーザー数の多い（おおむね 500 人超の）大規模環境の場合
 - **参考**: [v8.0.x](/ja/admin-guide/upgrading/80x.html#管理者向け)、[環境変数](/ja/admin-guide/admin-cookbook/env-vars.html)
 
@@ -387,6 +381,7 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 ### LOCAL_STRATEGY_ENABLED と SAML_ENABLED の実際の状態を確認する
 
 - **対応タイミング**: アップグレード前（設定確認）とアップグレード後（再確認）
+- **対象バージョン**: v7.2
 - **対応が必要な条件**: 環境変数 `LOCAL_STRATEGY_ENABLED` または `SAML_ENABLED` を設定している場合
 - **参考**: [v7.2.x](/ja/admin-guide/upgrading/72x.html#管理者向け)
 
@@ -402,38 +397,20 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 
 1. 再度 `/login` にアクセスし、ID/Pass 認証・SAML 認証の有効・無効状態が期待どおりかを確認します。
 
-### 廃止された環境変数 FILE_UPLOAD_DISABLED と DISABLE_LINK_SHARING から移行する
+### 廃止された環境変数 FILE_UPLOAD_DISABLED と DISABLE_LINK_SHARING の設定を置き換える
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v7.2
 - **対応が必要な条件**: 環境変数 `FILE_UPLOAD_DISABLED` または `DISABLE_LINK_SHARING` を設定している場合
 - **参考**: [v7.2.x](/ja/admin-guide/upgrading/72x.html#管理者向け)
 
 1. 環境変数 `FILE_UPLOAD_DISABLED`（ファイルアップロード機能の無効化）は廃止されました。代わりに、環境変数 `FILE_UPLOAD` に `none` を設定してください。
 1. 環境変数 `DISABLE_LINK_SHARING`（シェアリンク機能の無効化）は廃止されました。代わりに、管理画面の「セキュリティ設定」からシェアリンク機能を無効化してください。
 
-### OpenTelemetry のテレメトリ送信可否と送信先を確認する
+### カスタム HTML Header の代替手段に切り替える
 
 - **対応タイミング**: アップグレード前
-- **対応が必要な条件**: v7.1.x 以前から v7.2.x 以降へアップグレードする場合（全員が対象）
-- **参考**: [v7.2.x](/ja/admin-guide/upgrading/72x.html#管理者向け)、[テレメトリー](/ja/admin-guide/admin-cookbook/telemetry.html)、[環境変数](/ja/admin-guide/admin-cookbook/env-vars.html)
-
-1. GROWI v7.2.9 以降、OpenTelemetry によるテレメトリ送信は既定で有効です。関連する環境変数は次のとおりです。
-
-    | 環境変数名 | 説明 | 既定値 |
-    | --- | --- | --- |
-    | `OPENTELEMETRY_ENABLED` | OpenTelemetry によるデータ送信を有効にします | `true` |
-    | `OTEL_EXPORTER_OTLP_ENDPOINT` | データ送信先エンドポイント | `https://telemetry.growi.org` |
-    | `OPENTELEMETRY_ANONYMIZE_IN_BEST_EFFORT` | 追加の匿名化処理を行います（有効時はサーバーパフォーマンスにわずかに影響する可能性があります） | `false` |
-    | `OPENTELEMETRY_IS_APP_SITE_URL_HASHED` | 送信データ中のサイト URL をハッシュ化します | `false` |
-
-1. 送信を望まない場合は、環境変数 `OPENTELEMETRY_ENABLED` に `false` を設定します。
-1. 送信先を変更したい場合は、環境変数 `OTEL_EXPORTER_OTLP_ENDPOINT` を設定します。
-1. 送信内容を確認したい場合は、環境変数 `OTEL_LOG_LEVEL` を設定します。
-1. 収集される内容の詳細は [テレメトリー](/ja/admin-guide/admin-cookbook/telemetry.html) を参照してください。
-
-### カスタム HTML Header から移行する
-
-- **対応タイミング**: アップグレード前
+- **対象バージョン**: v6.0
 - **対応が必要な条件**: カスタム HTML Header を利用している場合
 - **参考**: [v6.0.x](/ja/admin-guide/upgrading/60x.html#管理者向け)
 
@@ -452,6 +429,7 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 ### Twitter OAuth 2 認証から別の認証方式へ移行する
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v6.0
 - **対応が必要な条件**: Twitter OAuth 2 認証を利用している場合
 - **参考**: [v6.0.x](/ja/admin-guide/upgrading/60x.html#管理者向け)
 
@@ -461,6 +439,7 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 ### nocdn 版イメージから公式イメージへ移行する
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v6.0
 - **対応が必要な条件**: nocdn 版の Docker イメージを利用している場合
 - **参考**: [v6.0.x](/ja/admin-guide/upgrading/60x.html#管理者向け)
 
@@ -470,6 +449,7 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 ### 自前ビルドのビルドツールの変更に対応する
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v6.1（Lerna → Turborepo）、v7.1（yarn → pnpm）
 - **対応が必要な条件**: ソースから自前でビルドしている場合。公式 Docker イメージ利用時は対応不要です。
 - **参考**: [v6.1.x](/ja/admin-guide/upgrading/61x.html#管理者向け)、[v7.1.x](/ja/admin-guide/upgrading/71x.html#管理者向け)
 
@@ -499,6 +479,7 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 ### HackMD 連携からビルトインエディタの同時多人数編集へ移行する
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v7.0
 - **対応が必要な条件**: HackMD(CodiMD) 連携を利用している場合
 - **参考**: [v7.0.x](/ja/admin-guide/upgrading/70x.html#管理者向け)、[HackMD(CodiMD)連携](/ja/admin-guide/admin-cookbook/integrate-with-hackmd.html)
 
@@ -509,32 +490,45 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 ### Promster による監視構成を見直す
 
 - **対応タイミング**: アップグレード前
+- **対象バージョン**: v7.0
 - **対応が必要な条件**: Promster 連携で監視している場合
 - **参考**: [v7.0.x](/ja/admin-guide/upgrading/70x.html#管理者向け)
 
 1. v7.0 以降、Promster と連携する機能は廃止されます。
 1. Promster 経由で GROWI を監視している場合は、アップグレード前に監視構成を見直してください。
 
-### Bootstrap v5 化に伴う Markdown 中の HTML を周知し、書き換える
+### 記法と HTML の仕様変更に伴うページ本文の書き換え
 
-- **対応タイミング**: アップグレード前（周知）とアップグレード後（書き換え）
+- **対応タイミング**: アップグレード前（利用者への周知）とアップグレード後（本文の一括書き換え）
+- **対象バージョン**: v6.0（記法変更）、v6.1（`mdcont-` プレフィクスの廃止）、v7.0（Bootstrap v4 → v5）
 - **対応が必要な条件**: v6.3.x 以前を利用している場合
-- **参考**: [v7.0.x](/ja/admin-guide/upgrading/70x.html#管理者向け)
+- **参考**: [v6.0.x](/ja/admin-guide/upgrading/60x.html#利用者向け)、[v6.1.x](/ja/admin-guide/upgrading/61x.html#利用者向け)、[v7.0.x](/ja/admin-guide/upgrading/70x.html#管理者向け)
 
-アップグレード前:
+v6.0 から v7.0 にかけて、Markdown の記法とレンダリング結果が次のように変わりました。現在ご利用中のバージョンより後に入った変更が対象です。
 
-1. v7.0 で、フロントエンドフレームワークが Bootstrap v4.6 から v5.3 へアップグレードされることを利用者へ周知します。
-1. Markdown 文書中に Bootstrap の記法で記述された HTML タグがある場合は影響を受けます。Bootstrap 公式の [v5 で変更された内容](https://getbootstrap.jp/docs/5.3/migration/) を確認してください。
+| 変更が入ったバージョン | 変更内容 | 詳細 | `MIGRATION_MODULE` |
+| :--- | :--- | :--- | :--- |
+| v6.0 | Draw.io、PlantUML、CSV・TSV によるテーブル描画、数式（MathJax から KaTeX へ）、プレゼンテーションのページ区切り、脚注のインライン記法（廃止）、GROWI 独自のページリンク記法（廃止）、blockdiag（未実装） | [v6.0.x へのアップグレード](/ja/admin-guide/upgrading/60x.html#利用者向け) | `v60x` |
+| v6.1 | アンカーリンクに自動付与されていた `mdcont-` プレフィクスの廃止 | [v6.1.x へのアップグレード](/ja/admin-guide/upgrading/61x.html#利用者向け) | `v61x` |
+| v7.0 | Bootstrap v4.6 から v5.3 への変更に伴う、Markdown 中の HTML タグの記法変更 | [v7.0.x へのアップグレード](/ja/admin-guide/upgrading/70x.html#管理者向け) | `v70x` |
 
-アップグレード後:
+アップグレード前（利用者への周知）:
 
-1. 該当する HTML タグを含む既存ページを洗い出し、Bootstrap v5 の記法へ書き換えます。マークダウン文書を一括で新しい記法に書き換えるためのスクリプトが次のディスカッションで提供されています。
+1. 上の表の記法・HTML を使っているページは、アップグレード後にそのままでは意図した表示にならなくなることを利用者へ周知します。
+1. アップグレード後に管理者が一括書き換えを実施する場合は、**既存ページの本文そのものが書き換わる**ことも併せて周知してください。
+1. 各変更の具体的な内容は、上の表の「詳細」列のアップグレードガイドを参照してください。
 
-    <https://github.com/growilabs/growi/discussions/7180>
+アップグレード後（管理者による一括書き換え）:
+
+1. GROWI 本体をアップグレードしても、以前の記法で保存されたページの本文は自動では変更されません。
+1. GROWI リポジトリの [bin/data-migrations](https://github.com/growilabs/growi/tree/master/bin/data-migrations) に、ページ本文を一括で書き換えるスクリプトが用意されています。環境変数 `MIGRATION_MODULE` に上の表の値（`v60x`、`v61x`、`v70x`）を指定して実行します。実行手順は同ディレクトリの README を参照してください。参考ディスカッション: <https://github.com/growilabs/growi/discussions/7180>
+1. **書き換えが適用されるのは各ページの最新リビジョンのみで、過去のリビジョンは書き換えられません。**
+1. 数式（MathJax から KaTeX へ）、プレゼンテーションのページ区切り、脚注のインライン記法にはスクリプトが用意されていません。該当するページは手動で書き換えてください。
 
 ### WIP ページと UI 変更を利用者へ周知する
 
 - **対応タイミング**: アップグレード前（周知）
+- **対象バージョン**: v7.0
 - **対応が必要な条件**: v6.3.x 以前を利用している場合
 - **参考**: [v7.0.x](/ja/admin-guide/upgrading/70x.html#利用者向け)
 
@@ -544,134 +538,10 @@ GROWI 本体のアップグレード**後**に対応が必要な項目を、分�
 1. 全文検索機能を呼び出す場所・使い方が変わります。
 1. これらの変更を、アップグレード前に利用者へ周知してください。
 
-### mdcont- プレフィクス付きアンカーリンクを周知し、書き換える
-
-- **対応タイミング**: アップグレード前（周知）とアップグレード後（書き換え）
-- **対応が必要な条件**: v6.0.x 以前を利用している場合
-- **参考**: [v6.1.x](/ja/admin-guide/upgrading/61x.html#利用者向け)
-
-アップグレード前:
-
-1. v6.1.0 以降、アンカーリンクに自動付与されていた `mdcont-` プレフィクスが廃止されることを利用者へ周知します。例えば、`/Sandbox` の `Headers` セクションの `id` はこれまで `#mdcont-headers` でしたが、`mdcont-` プレフィクスが付かなくなります。
-1. GROWI が生成する目次のリンクは影響を受けませんが、`mdcont-` を含むリンクをページ内やページ外から参照している場合は、アップグレード後にアンカーへジャンプしなくなります。
-
-アップグレード後:
-
-1. `mdcont-` を含むリンクを記述しているページを洗い出し、プレフィクスなしの記法へ書き換えます。マークダウン文書を一括で新しい記法に書き換えるためのスクリプトが次のディスカッションで提供されています。
-
-    <https://github.com/growilabs/growi/discussions/7180>
-
-### v6.0 の記法変更を周知し、既存ページを書き換える
-
-- **対応タイミング**: アップグレード前（周知）とアップグレード後（書き換え）
-- **対応が必要な条件**: v5.x 以前を利用している場合
-- **参考**: [v6.0.x](/ja/admin-guide/upgrading/60x.html#利用者向け)
-
-アップグレード前:
-
-1. 次の記法が変更されることを利用者へ周知します: Draw.io、PlantUML、CSV・TSV によるテーブル描画、数式（MathJax から KaTeX へ）、プレゼンテーションのページ区切り、脚注のインライン記法（廃止）、GROWI 独自のページリンク記法（廃止）、blockdiag（未実装）。
-
-アップグレード後:
-
-既存ページのうち、次の記法を使っているページを洗い出し、新しい記法へ書き換えます。以前の記法で保存されたページの内容は、GROWI 本体をアップグレードしても自動では変更されません。
-
-#### Draw.io (Diagrams.net) 記法
-
-図データ本体（`drawio` コードブロックの中身）はそのままで、外側の区切り記法だけが変わります。
-
-Before:
-
-~~~ drawio
-::: drawio
-（図のデータ）
-:::
-~~~
-
-After:
-
-~~~ drawio
-``` drawio
-（図のデータ）
-```
-~~~
-
-#### PlantUML 記法
-
-Before:
-
-~~~ plantuml
-@startuml
-class RemarkPlugin {
-    + transform(syntaxTree: AST): AST
-}
-@enduml
-~~~
-
-After（`@startuml`/`@enduml` は省略可）:
-
-~~~ plantuml
-``` plantuml
-class RemarkPlugin {
-    + transform(syntaxTree: AST): AST
-}
-```
-~~~
-
-#### CSV, TSV によるテーブル描画記法
-
-Before:
-
-~~~
-::: tsv
-Content Cell  Content Cell
-Content Cell  Content Cell
-:::
-~~~
-
-After:
-
-~~~
-``` tsv
-Content Cell  Content Cell
-Content Cell  Content Cell
-```
-~~~
-
-#### 数式描画ライブラリ（MathJax → KaTeX）
-
-`$` を特殊文字ではなくそのまま使いたい場合は、`\$` のようにエスケープしてください。数式については、一括で書き換えるための手法は提供されていません。
-
-#### プレゼンテーションのページ区切り
-
-ページ区切り文字列は「水平方向の罫線 `---`」のみになりました。プレゼンテーションのページ区切りについても、一括で書き換えるための手法は提供されていません。
-
-#### 脚注のインライン記法（廃止）
-
-次の記法は廃止されました。代替手段への移行を検討してください。
-
-```markdown
-文章内に [^インラインで注釈文章を追加] します
-```
-
-#### GROWI 独自記法のページリンク（廃止）
-
-`[/Sandbox/Math]` のような記法は廃止されました。代わりに次のいずれかの記法を利用してください。
-
-- `[[/Sandbox/Math]]`
-- `[[Label>/Sandbox/Math]]`
-- `[Label](/Sandbox/Math)`
-
-#### blockdiag（未実装）
-
-blockdiag 記法での図表描画は実装されていません。
-
-Draw.io・PlantUML・CSV/TSV・GROWI 独自ページリンク記法については、マークダウン文書を一括で新しい記法に書き換えるためのスクリプトが次のディスカッションで提供されています。
-
-<https://github.com/growilabs/growi/discussions/7180>
-
 ### v5 の仕様変更を利用者へ周知する
 
 - **対応タイミング**: アップグレード前（周知）
+- **対象バージョン**: v5.0
 - **対応が必要な条件**: v4.x 以前を利用している場合
 - **参考**: [v5.0.x](/ja/admin-guide/upgrading/50x.html)
 
@@ -728,6 +598,7 @@ Draw.io・PlantUML・CSV/TSV・GROWI 独自ページリンク記法について�
 ### GROWI AI Agent の設定をやり直す
 
 - **対応タイミング**: アップグレード後
+- **対象バージョン**: v8.0
 - **対応が必要な条件**: 旧 AI 連携機能（ナレッジアシスタントの作成機能・エディターアシスタント）を利用していた場合
 - **参考**: [v8.0.x](/ja/admin-guide/upgrading/80x.html#管理者向け)、[GROWI AI Agent のセットアップと管理](/ja/admin-guide/management-cookbook/growi-ai-agent.html)
 
@@ -741,6 +612,7 @@ Draw.io・PlantUML・CSV/TSV・GROWI 独自ページリンク記法について�
 ### XSS 対策設定を再設定する
 
 - **対応タイミング**: アップグレード後
+- **対象バージョン**: v6.0
 - **対応が必要な条件**: XSS 対策設定でカスタムホワイトリストを独自に設定している場合
 - **参考**: [v6.0.x](/ja/admin-guide/upgrading/60x.html#管理者向け)、[マークダウン設定](/ja/admin-guide/management-cookbook/markdown.html#xss-cross-site-scripting-対策設定)
 
@@ -758,6 +630,7 @@ Draw.io・PlantUML・CSV/TSV・GROWI 独自ページリンク記法について�
 ### FILE_UPLOAD=local の添付ファイルを新しい保存先へ移動する
 
 - **対応タイミング**: アップグレード後
+- **対象バージョン**: v6.1
 - **対応が必要な条件**: 環境変数 `FILE_UPLOAD=local`（ローカルファイルシステムへの保存）を利用している場合
 - **参考**: [v6.1.x](/ja/admin-guide/upgrading/61x.html#管理者向け)
 
@@ -772,6 +645,7 @@ Draw.io・PlantUML・CSV/TSV・GROWI 独自ページリンク記法について�
 ### 未変換のページを v5 互換形式へ変換する
 
 - **対応タイミング**: アップグレード後
+- **対象バージョン**: v5.0
 - **対応が必要な条件**: v4.5 以前に作成され、未変換のページが残っている場合
 - **参考**: [v5.0.x](/ja/admin-guide/upgrading/50x.html)
 
@@ -788,27 +662,3 @@ Draw.io・PlantUML・CSV/TSV・GROWI 独自ページリンク記法について�
 
 1. 事前に [v5.0.x へのアップグレード](/ja/admin-guide/upgrading/50x.html) の該当箇所を確認してください。
 
-### GROWI Vault をセットアップする
-
-- **対応タイミング**: アップグレード後
-- **対応が必要な条件**: GROWI Vault を利用したい場合（任意）
-- **参考**: [v8.0.x](/ja/admin-guide/upgrading/80x.html#管理者向け)、[GROWI Vault のセットアップ](/ja/admin-guide/management-cookbook/setup-vault.html)
-
-GROWI Vault は、GROWI アプリ本体に組み込まれたゲートウェイ（`/vault.git` で公開）と、独立した vault-manager サービス（コンテナ）の 2 つで構成されます。vault-manager は共有ファイルシステム上の bare Git リポジトリを保持し、ページの変更は MongoDB の change stream を通じて取り込まれます。
-
-1. 前提条件を満たしていることを確認します。
-    - **MongoDB のレプリカセット構成**（[MongoDB をレプリカセット構成へ移行する](#mongodb-をレプリカセット構成へ移行する) を参照。単一ノードのレプリカセットでも可）
-    - vault-manager が bare Git リポジトリを保持するための、永続的な共有ファイルシステム
-1. vault-manager サービス（コンテナ）を配置します。コンテナ定義は [growi-docker-compose](https://github.com/growilabs/growi-docker-compose) の更新内容を参照してください。
-1. GROWI アプリと vault-manager の双方に、接続・認証用の環境変数を設定します。セットアップに最低限必要なものは次のとおりです（チューニング系を含む全一覧は [環境変数](/ja/admin-guide/admin-cookbook/env-vars.html) の「GROWI Vault オプション」を参照）。
-
-    | 環境変数名 | 説明 | 既定値 |
-    | --- | --- | --- |
-    | `VAULT_ENABLED` | GROWI Vault 機能の有効化（デプロイ時に固定。実行時の切り替えは不可） | `false` |
-    | `VAULT_MANAGER_ENDPOINT` | GROWI アプリが vault-manager サービスへ接続する URL（有効化には設定が必須） | |
-    | `VAULT_MANAGER_INTERNAL_SECRET` | アプリと vault-manager 間の認証に使う共有シークレット | |
-    | `VAULT_REPO_PATH` | vault-manager が管理する bare Git リポジトリのファイルパス（設定は必須。慣例値は `/data/vault-repo.git`） | |
-    | `VAULT_BOOTSTRAP_ON_START` | 起動時に初期 bootstrap を実行する（`true` / `false` / `force`） | `false` |
-
-1. GROWI を再起動し、管理画面の `/admin/vault` から初期 bootstrap を実行します。bootstrap の進捗と保存状況は同じ画面で確認できます。
-1. `VAULT_MANAGER_INTERNAL_SECRET` は内部通信用のシークレットです。外部に漏らさず、安全に管理してください。

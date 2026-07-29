@@ -61,7 +61,7 @@ The tables below list, by category, the tasks you have to finish **before** upgr
 | [If applicable] [When you use Elasticsearch v7 or earlier: migrate to v8 or v9 (rebuilding the index is recommended)](#migrate-elasticsearch-to-v8-or-v9) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you run MongoDB in a standalone configuration: migrate to a replica set (a single-node replica set is acceptable)](#migrate-mongodb-to-a-replica-set-configuration) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [Required] [Upgrade MongoDB to v6.0 or later (one major version at a time, without skipping)](#upgrade-mongodb-to-v6-0-or-later) | | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Required] [Upgrade Node.js to v18 or v20 (not needed when you use the official Docker image)](#upgrade-node-js-to-v18-or-v20) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [When you build and run GROWI from source: upgrade Node.js to v24 (not needed when you use the official Docker image)](#upgrade-node-js-to-v24) | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ### Infrastructure and storage
 
@@ -76,11 +76,9 @@ The tables below list, by category, the tasks you have to finish **before** upgr
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| [If applicable] [When you customize OpenTelemetry instrumentation: the environment variable that switched instrumentation has been removed, so check the configuration method](#review-your-opentelemetry-instrumentation-customization) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [For large environments with more than several hundred active users: consider raising the MongoDB connection pool limit](#raise-the-mongodb-connection-pool-limits) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When LOCAL_STRATEGY_ENABLED / SAML_ENABLED are set: check the actual enabled/disabled state of each authentication method at /login](#check-the-actual-state-of-local-strategy-enabled-and-saml-enabled) | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [Migrate away from the removed environment variables FILE_UPLOAD_DISABLED and DISABLE_LINK_SHARING](#migrate-away-from-the-removed-environment-variables-file-upload-disabled-and-disable-link-sharing) | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Optional] [Sending telemetry with OpenTelemetry is enabled by default, so decide whether to send it and where to send it](#decide-whether-to-send-opentelemetry-telemetry-and-where-to-send-it) | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you use the Custom HTML Header: migrate to Custom Noscript or to a custom script](#migrate-away-from-the-custom-html-header) | | | | | | | | ✓ | ✓ |
 | [If applicable] [When you use Twitter OAuth 2 authentication: migrate to another authentication method](#migrate-from-twitter-oauth-2-authentication-to-another-authentication-method) | | | | | | | | ✓ | ✓ |
 | [If applicable] [When you use the nocdn image: migrate to the consolidated official image](#migrate-from-the-nocdn-image-to-the-official-image) | | | | | | | | ✓ | ✓ |
@@ -102,10 +100,8 @@ The tables below list, by category, the tasks you have to finish **before** upgr
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| [If applicable] [Notify users that HTML notation in Markdown changes with Bootstrap v4 to v5](#notify-users-of-and-rewrite-html-in-markdown-affected-by-bootstrap-v5) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [Notify users that the syntax and HTML changes will alter how existing pages display and that page content needs to be rewritten](#rewrite-page-content-affected-by-the-syntax-and-html-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [Required] [Notify users about WIP pages, the new page creation flow, and the change in how full-text search is invoked](#notify-users-about-wip-pages-and-ui-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [If applicable] [Notify users that anchor links with the mdcont- prefix stop working](#notify-users-of-and-rewrite-anchor-links-with-the-mdcont-prefix) | | | | | | | ✓ | ✓ | ✓ |
-| [If applicable] [Notify users of the v6.0 syntax changes (Draw.io / PlantUML / CSV and TSV / math / presentation page breaks / inline footnote syntax / GROWI original page link notation / blockdiag)](#notify-users-of-the-v6-0-syntax-changes-and-rewrite-existing-pages) | | | | | | | | ✓ | ✓ |
 | [Required] [Notify users of the v5 specification changes (move / rename / delete including descendants, permalink URLs, UI changes)](#notify-users-of-the-v5-specification-changes) | | | | | | | | | ✓ |
 
 ## 2. Upgrading GROWI to the latest version
@@ -206,15 +202,7 @@ The tables below list, by category, the tasks that have to be dealt with **after
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| [If applicable] [Rewrite HTML in Markdown affected by Bootstrap v4 to v5](#notify-users-of-and-rewrite-html-in-markdown-affected-by-bootstrap-v5) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [If applicable] [Rewrite anchor links that use the mdcont- prefix](#notify-users-of-and-rewrite-anchor-links-with-the-mdcont-prefix) | | | | | | | ✓ | ✓ | ✓ |
-| [If applicable] [Rewrite existing pages affected by the v6.0 syntax changes](#notify-users-of-the-v6-0-syntax-changes-and-rewrite-existing-pages) | | | | | | | | ✓ | ✓ |
-
-### Setting up new features
-
-| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| [Optional] [When you want to use GROWI Vault: add and enable the dedicated container](#set-up-growi-vault) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [Rewrite existing page content affected by the syntax and HTML changes in bulk with the data-migrations scripts](#rewrite-page-content-affected-by-the-syntax-and-html-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ## 4. Detailed procedures
 
@@ -223,6 +211,7 @@ These are the detailed steps for each task, linked from the tables in "1. Tasks 
 ### Migrate Elasticsearch to v8 or v9
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v8.0 (support for the Elasticsearch v7 series has ended)
 - **When it applies**: When you use Elasticsearch v7 or earlier
 - **References**: [v5.0.x](/en/admin-guide/upgrading/50x.html), [v6.1.x](/en/admin-guide/upgrading/61x.html#for-admin), [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators)
 
@@ -245,6 +234,7 @@ These are the detailed steps for each task, linked from the tables in "1. Tasks 
 ### Migrate MongoDB to a replica set configuration
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v8.0
 - **When it applies**: When you run MongoDB in a standalone configuration (required from GROWI v8.0)
 - **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators)
 
@@ -256,6 +246,7 @@ These are the detailed steps for each task, linked from the tables in "1. Tasks 
 ### Upgrade MongoDB to v6.0 or later
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v7.1
 - **When it applies**: When you use MongoDB v5.0 or earlier
 - **References**: [v7.1.x](/en/admin-guide/upgrading/71x.html#for-admin), [Upgrading MongoDB](/en/admin-guide/admin-cookbook/upgrade-mongodb.html)
 
@@ -291,32 +282,41 @@ These are the detailed steps for each task, linked from the tables in "1. Tasks 
 
 1. Repeat the steps above one major version at a time until you reach the version you want. Support for MongoDB v4.4 and v5.0 has ended, so make sure you end up on v6.0 or later.
 
-### Upgrade Node.js to v18 or v20
+### Upgrade Node.js to v24
 
 - **When to do this**: Before upgrading
-- **When it applies**: When you use v6.3.x or earlier. Not needed when you use the official Docker image.
-- **References**: [v7.0.x](/en/admin-guide/upgrading/70x.html#for-admin), [v6.1.x](/en/admin-guide/upgrading/61x.html#for-admin)
+- **Introduced in**: v7.5 (the only supported Node.js series is now v24)
+- **When it applies**: When you build and run GROWI from source. Not needed when you use the official Docker image.
+- **References**: [v7.5.x](/en/admin-guide/upgrading/75x.html#for-administrators)
+
+1. From GROWI v7.5.0, the only supported Node.js series is v24. Support for the v18 and v20 series has ended.
+
+    | GROWI | <= v7.4.x | v7.5.x or later |
+    | :---: | :---: | :---: |
+    | Node.js | 18, 20 | 24 |
 
 1. Check the version of Node.js you use.
 
     ```bash
-    $ nodejs -v
+    $ node -v
     ```
 
-1. If it is neither v18 nor v20, upgrade Node.js to v18 or v20. The steps for using the NodeSource repository are as follows (replace `20.x` with the version you want to install).
+1. If it is not in the v24 series, upgrade Node.js to the v24 series. The steps for using the NodeSource repository are as follows.
 
     ```bash
     $ cd ~
-    $ curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+    $ curl -sL https://deb.nodesource.com/setup_24.x -o nodesource_setup.sh
     $ sudo bash nodesource_setup.sh
     $ sudo apt -y install nodejs
     ```
 
+1. GROWI v7.5.0 uses the built-in function `RegExp.escape()`, added in Node.js v24, to process page paths. If you upgrade while staying on the v18 or v20 series, this function does not exist, so operations such as moving or duplicating pages fail at runtime. Make sure you complete this task before upgrading GROWI itself.
 1. If you use the official Docker image, this task is not needed.
 
 ### Add s3:AbortMultipartUpload to the IAM policy
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v7.5
 - **When it applies**: When you use S3-compatible object storage
 - **References**: [v7.5.x](/en/admin-guide/upgrading/75x.html#for-administrators)
 
@@ -327,6 +327,7 @@ These are the detailed steps for each task, linked from the tables in "1. Tasks 
 ### Check the operational impact of Docker Hardened Images
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v7.5
 - **When it applies**: When you use the official Docker image
 - **References**: [v7.5.x](/en/admin-guide/upgrading/75x.html#for-administrators)
 
@@ -337,6 +338,7 @@ These are the detailed steps for each task, linked from the tables in "1. Tasks 
 ### Review the AWS S3 bucket ACL settings and S3_OBJECT_ACL
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v7.1
 - **When it applies**: When you use AWS S3 to store attachments
 - **References**: [v7.1.x](/en/admin-guide/upgrading/71x.html#for-admin)
 
@@ -360,6 +362,7 @@ These are the detailed steps for each task, linked from the tables in "1. Tasks 
 ### Rewrite legacy attachment URLs
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v6.3
 - **When it applies**: When your system was built on v3.3 or earlier and manages attachments with MongoDB GridFS
 - **References**: [v6.3.x](/en/admin-guide/upgrading/63x.html)
 
@@ -367,19 +370,10 @@ These are the detailed steps for each task, linked from the tables in "1. Tasks 
 1. Check whether any pages contain URLs in that form in their Markdown.
 1. Rewrite the relevant URLs to the `/attachment/{attachmentId}` form, or upload the files again.
 
-### Review your OpenTelemetry instrumentation customization
-
-- **When to do this**: Before upgrading
-- **When it applies**: When you switch the scope of OpenTelemetry auto-instrumentation with an environment variable
-- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators)
-
-1. From GROWI v8.0, OpenTelemetry instrumentation is fixed to the minimal set that GROWI actually uses.
-1. If you used to switch the scope of auto-instrumentation with an environment variable, that environment variable is removed.
-1. Standard usage needs no action, but if you customized instrumentation, note that the configuration method changes after the upgrade.
-
 ### Raise the MongoDB connection pool limits
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v8.0
 - **When it applies**: For large environments with many active users (roughly more than 500)
 - **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators), [Environment Variables](/en/admin-guide/admin-cookbook/env-vars.html)
 
@@ -395,6 +389,7 @@ These are the detailed steps for each task, linked from the tables in "1. Tasks 
 ### Check the actual state of LOCAL_STRATEGY_ENABLED and SAML_ENABLED
 
 - **When to do this**: Before upgrading (check the settings) and after upgrading (check them again)
+- **Introduced in**: v7.2
 - **When it applies**: When you set the environment variable `LOCAL_STRATEGY_ENABLED` or `SAML_ENABLED`
 - **References**: [v7.2.x](/en/admin-guide/upgrading/72x.html#for-admin)
 
@@ -419,26 +414,6 @@ After upgrading:
 1. The environment variable `FILE_UPLOAD_DISABLED` (disabling the file upload feature) has been removed. Set the environment variable `FILE_UPLOAD` to `none` instead.
 1. The environment variable `DISABLE_LINK_SHARING` (disabling the share link feature) has been removed. Disable the share link feature from "Security settings" in the admin panel instead.
 
-### Decide whether to send OpenTelemetry telemetry and where to send it
-
-- **When to do this**: Before upgrading
-- **When it applies**: When you upgrade from v7.1.x or earlier to v7.2.x or later (this applies to everyone)
-- **References**: [v7.2.x](/en/admin-guide/upgrading/72x.html#for-admin), [Telemetry](/en/admin-guide/admin-cookbook/telemetry.html), [Environment Variables](/en/admin-guide/admin-cookbook/env-vars.html)
-
-1. From GROWI v7.2.9, sending telemetry with OpenTelemetry is enabled by default. The related environment variables are as follows.
-
-    | Environment variable | Description | Default |
-    | --- | --- | --- |
-    | `OPENTELEMETRY_ENABLED` | Enables sending data with OpenTelemetry | `true` |
-    | `OTEL_EXPORTER_OTLP_ENDPOINT` | Endpoint to send the data to | `https://telemetry.growi.org` |
-    | `OPENTELEMETRY_ANONYMIZE_IN_BEST_EFFORT` | Performs additional anonymization (when enabled, this may slightly affect server performance) | `false` |
-    | `OPENTELEMETRY_IS_APP_SITE_URL_HASHED` | Hashes the site URL contained in the sent data | `false` |
-
-1. If you do not want to send data, set the environment variable `OPENTELEMETRY_ENABLED` to `false`.
-1. If you want to change the destination, set the environment variable `OTEL_EXPORTER_OTLP_ENDPOINT`.
-1. If you want to check what is sent, set the environment variable `OTEL_LOG_LEVEL`.
-1. For details on what is collected, see [Telemetry](/en/admin-guide/admin-cookbook/telemetry.html).
-
 ### Migrate away from the Custom HTML Header
 
 - **When to do this**: Before upgrading
@@ -460,6 +435,7 @@ After upgrading:
 ### Migrate from Twitter OAuth 2 authentication to another authentication method
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v6.0
 - **When it applies**: When you use Twitter OAuth 2 authentication
 - **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
 
@@ -469,6 +445,7 @@ After upgrading:
 ### Migrate from the nocdn image to the official image
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v6.0
 - **When it applies**: When you use the nocdn Docker image
 - **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
 
@@ -478,6 +455,7 @@ After upgrading:
 ### Adapt to the build tool changes when building from source
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v6.1 (Lerna to Turborepo), v7.1 (yarn to pnpm)
 - **When it applies**: When you build from source yourself. Not needed when you use the official Docker image.
 - **References**: [v6.1.x](/en/admin-guide/upgrading/61x.html#for-admin), [v7.1.x](/en/admin-guide/upgrading/71x.html#for-admin)
 
@@ -507,6 +485,7 @@ After upgrading:
 ### Migrate from HackMD integration to simultaneous editing in the built-in editor
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v7.0
 - **When it applies**: When you use HackMD(CodiMD) integration
 - **References**: [v7.0.x](/en/admin-guide/upgrading/70x.html#for-admin), [HackMD(CodiMD) Integration](/en/admin-guide/admin-cookbook/integrate-with-hackmd.html)
 
@@ -517,32 +496,45 @@ After upgrading:
 ### Review your monitoring setup that uses Promster
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v7.0
 - **When it applies**: When you monitor GROWI with Promster integration
 - **References**: [v7.0.x](/en/admin-guide/upgrading/70x.html#for-admin)
 
 1. From v7.0, the feature that integrates with Promster is removed.
 1. If you monitor GROWI through Promster, review your monitoring setup before upgrading.
 
-### Notify users of, and rewrite, HTML in Markdown affected by Bootstrap v5
+### Rewrite page content affected by the syntax and HTML changes
 
-- **When to do this**: Before upgrading (notification) and after upgrading (rewriting)
+- **When to do this**: Before upgrading (notify users) and after upgrading (bulk rewrite of page content)
+- **Introduced in**: v6.0 (syntax changes), v6.1 (removal of the `mdcont-` prefix), v7.0 (Bootstrap v4 to v5)
 - **When it applies**: When you use v6.3.x or earlier
-- **References**: [v7.0.x](/en/admin-guide/upgrading/70x.html#for-admin)
+- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-user), [v6.1.x](/en/admin-guide/upgrading/61x.html#for-user), [v7.0.x](/en/admin-guide/upgrading/70x.html#for-admin)
 
-Before upgrading:
+From v6.0 through v7.0, Markdown syntax and its rendered output changed as shown below. Only the changes introduced after the version you currently run apply to you.
 
-1. Notify your users that, in v7.0, the frontend framework is upgraded from Bootstrap v4.6 to v5.3.
-1. HTML tags written with Bootstrap notation in Markdown documents are affected. Check the official Bootstrap [Migrating to v5](https://getbootstrap.com/docs/5.3/migration/) guide.
+| Version introduced | What changed | Details | `MIGRATION_MODULE` |
+| :--- | :--- | :--- | :--- |
+| v6.0 | Draw.io, PlantUML, drawing tables with CSV and TSV, math (from MathJax to KaTeX), presentation page breaks, the inline footnote syntax (removed), the GROWI original page link notation (removed), blockdiag (not implemented) | [Upgrading GROWI to v6.0.x](/en/admin-guide/upgrading/60x.html#for-user) | `v60x` |
+| v6.1 | Removal of the `mdcont-` prefix that used to be added automatically to anchor links | [Upgrading GROWI to v6.1.x](/en/admin-guide/upgrading/61x.html#for-user) | `v61x` |
+| v7.0 | Notation changes for HTML tags in Markdown caused by the change from Bootstrap v4.6 to v5.3 | [Upgrading GROWI to v7.0.x](/en/admin-guide/upgrading/70x.html#for-admin) | `v70x` |
 
-After upgrading:
+Before upgrading (notify users):
 
-1. Find the existing pages that contain the affected HTML tags and rewrite them with Bootstrap v5 notation. A script for rewriting Markdown documents to the new notation in bulk is provided in the following discussion.
+1. Notify your users that pages using the syntax and HTML listed above will no longer render as intended after the upgrade unless rewritten.
+1. If an administrator plans to run the bulk rewrite after upgrading, also notify users that **the content of existing pages itself will be rewritten**.
+1. For the specific details of each change, see the upgrade guide linked in the "Details" column above.
 
-    <https://github.com/growilabs/growi/discussions/7180>
+After upgrading (administrator bulk rewrite):
+
+1. Upgrading GROWI itself does not automatically change the content of pages saved with the previous notation.
+1. The GROWI repository provides scripts under [bin/data-migrations](https://github.com/growilabs/growi/tree/master/bin/data-migrations) to rewrite page content in bulk. Run them with the environment variable `MIGRATION_MODULE` set to one of the values in the table above (`v60x`, `v61x`, `v70x`). See the README in that directory for the exact steps. Related discussion: <https://github.com/growilabs/growi/discussions/7180>
+1. **The rewrite is applied only to the latest revision of each page; past revisions are not rewritten.**
+1. No script is provided for math (from MathJax to KaTeX), presentation page breaks, or the inline footnote syntax. Rewrite the affected pages manually.
 
 ### Notify users about WIP pages and UI changes
 
 - **When to do this**: Before upgrading (notification)
+- **Introduced in**: v7.0
 - **When it applies**: When you use v6.3.x or earlier
 - **References**: [v7.0.x](/en/admin-guide/upgrading/70x.html#for-user)
 
@@ -552,144 +544,10 @@ After upgrading:
 1. The place and the way you invoke the full-text search feature change.
 1. Notify your users of these changes before upgrading.
 
-### Notify users of, and rewrite, anchor links with the mdcont- prefix
-
-- **When to do this**: Before upgrading (notification) and after upgrading (rewriting)
-- **When it applies**: When you use v6.0.x or earlier
-- **References**: [v6.1.x](/en/admin-guide/upgrading/61x.html#for-user)
-
-Before upgrading:
-
-1. Notify your users that, from v6.1.0, the `mdcont-` prefix automatically added to anchor links is eliminated. For example, the `id` of the `Headers` section in `/Sandbox` used to be `#mdcont-headers`, and the `mdcont-` prefix is no longer attached.
-1. Links in the table of contents generated by GROWI are not affected, but if links containing `mdcont-` are referenced from inside or outside the page, they will no longer jump to the anchor after the upgrade.
-
-After upgrading:
-
-1. Find the pages that contain links with `mdcont-` and rewrite them without the prefix. A script for rewriting Markdown documents to the new notation in bulk is provided in the following discussion.
-
-    <https://github.com/growilabs/growi/discussions/7180>
-
-### Notify users of the v6.0 syntax changes and rewrite existing pages
-
-- **When to do this**: Before upgrading (notification) and after upgrading (rewriting)
-- **When it applies**: When you use v5.x or earlier
-- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-user)
-
-Before upgrading:
-
-1. Notify your users that the following syntax changes.
-
-    - Draw.io
-    - PlantUML
-    - Drawing tables with CSV and TSV
-    - Math (from MathJax to KaTeX)
-    - Presentation page breaks
-    - The inline syntax for footnotes (removed)
-    - The GROWI original page link notation (removed)
-    - blockdiag (not implemented)
-
-
-After upgrading:
-
-Find the existing pages that use the following syntax and rewrite them with the new notation. The content of pages saved with the previous notation does not change automatically when you upgrade GROWI itself.
-
-#### Draw.io (Diagrams.net) notation
-
-The diagram data itself (the content of the `drawio` code block) stays the same; only the surrounding delimiter notation changes.
-
-Before:
-
-~~~ drawio
-::: drawio
-(diagram data)
-:::
-~~~
-
-After:
-
-~~~ drawio
-``` drawio
-(diagram data)
-```
-~~~
-
-#### PlantUML notation
-
-Before:
-
-~~~ plantuml
-@startuml
-class RemarkPlugin {
-    + transform(syntaxTree: AST): AST
-}
-@enduml
-~~~
-
-After (`@startuml` / `@enduml` can be omitted):
-
-~~~ plantuml
-``` plantuml
-class RemarkPlugin {
-    + transform(syntaxTree: AST): AST
-}
-```
-~~~
-
-#### Notation for drawing tables with CSV and TSV
-
-Before:
-
-~~~
-::: tsv
-Content Cell  Content Cell
-Content Cell  Content Cell
-:::
-~~~
-
-After:
-
-~~~
-``` tsv
-Content Cell  Content Cell
-Content Cell  Content Cell
-```
-~~~
-
-#### Mathematical drawing library (from MathJax to KaTeX)
-
-If you want to use `$` as an ordinary character rather than a special character, escape it as `\$`. No method is provided for rewriting math expressions in bulk.
-
-#### Presentation page breaks
-
-The only page break string is now the horizontal rule `---`. No method is provided for rewriting presentation page breaks in bulk either.
-
-#### Inline syntax for footnotes (removed)
-
-The following notation has been removed. Consider migrating to an alternative.
-
-```markdown
-Add an inline annotation [^like this] in a sentence
-```
-
-#### GROWI original notation for page links (removed)
-
-Notation such as `[/Sandbox/Math]` has been removed. Use one of the following instead.
-
-- `[[/Sandbox/Math]]`
-- `[[Label>/Sandbox/Math]]`
-- `[Label](/Sandbox/Math)`
-
-#### blockdiag (not implemented)
-
-Drawing diagrams with blockdiag notation is not implemented.
-
-For Draw.io, PlantUML, CSV/TSV, and the GROWI original page link notation, a script for rewriting Markdown documents to the new notation in bulk is provided in the following discussion.
-
-<https://github.com/growilabs/growi/discussions/7180>
-
 ### Notify users of the v5 specification changes
 
 - **When to do this**: Before upgrading (notification)
+- **Introduced in**: v5.0
 - **When it applies**: When you use v4.x or earlier
 - **References**: [v5.0.x](/en/admin-guide/upgrading/50x.html)
 
@@ -746,6 +604,7 @@ For Draw.io, PlantUML, CSV/TSV, and the GROWI original page link notation, a scr
 ### Reconfigure GROWI AI Agent
 
 - **When to do this**: After upgrading
+- **Introduced in**: v8.0
 - **When it applies**: When you used the legacy AI integration features (creating knowledge assistants, the editor assistant)
 - **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators), [Setting Up and Managing AI Integration](/en/admin-guide/management-cookbook/setup-ai.html)
 
@@ -759,6 +618,7 @@ For Draw.io, PlantUML, CSV/TSV, and the GROWI original page link notation, a scr
 ### Reconfigure the XSS prevention settings
 
 - **When to do this**: After upgrading
+- **Introduced in**: v6.0
 - **When it applies**: When you configured your own custom whitelist in the XSS prevention settings
 - **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin), [Markdown Settings](/en/admin-guide/management-cookbook/markdown.html#prevent-xss-cross-site-scripting-setting)
 
@@ -776,6 +636,7 @@ For Draw.io, PlantUML, CSV/TSV, and the GROWI original page link notation, a scr
 ### Move attachments to the new location when FILE_UPLOAD=local
 
 - **When to do this**: After upgrading
+- **Introduced in**: v6.1
 - **When it applies**: When you use the environment variable `FILE_UPLOAD=local` (storing attachments on the local file system)
 - **References**: [v6.1.x](/en/admin-guide/upgrading/61x.html#for-admin)
 
@@ -790,6 +651,7 @@ For Draw.io, PlantUML, CSV/TSV, and the GROWI original page link notation, a scr
 ### Convert unconverted pages to the v5 Compatible Format
 
 - **When to do this**: After upgrading
+- **Introduced in**: v5.0
 - **When it applies**: When unconverted pages created in v4.5 or earlier remain
 - **References**: [v5.0.x](/en/admin-guide/upgrading/50x.html)
 
@@ -806,27 +668,3 @@ For Draw.io, PlantUML, CSV/TSV, and the GROWI original page link notation, a scr
 
 1. Check the relevant part of [Upgrading GROWI to v5.0.x](/en/admin-guide/upgrading/50x.html) in advance.
 
-### Set up GROWI Vault
-
-- **When to do this**: After upgrading
-- **When it applies**: When you want to use GROWI Vault (optional)
-- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators), [Setting up GROWI Vault](/en/admin-guide/management-cookbook/setup-vault.html)
-
-GROWI Vault consists of two parts: a gateway built into the GROWI app itself (exposed at `/vault.git`) and an independent vault-manager service (a container). vault-manager holds a bare Git repository on a shared file system, and page changes are taken in through MongoDB change streams.
-
-1. Make sure you meet the prerequisites.
-    - **MongoDB in a replica set configuration** (see [Migrate MongoDB to a replica set configuration](#migrate-mongodb-to-a-replica-set-configuration); a single-node replica set is acceptable)
-    - A persistent shared file system for vault-manager to hold the bare Git repository
-1. Deploy the vault-manager service (container). For the container definition, refer to the updates in [growi-docker-compose](https://github.com/growilabs/growi-docker-compose).
-1. Set the environment variables for connection and authentication on both the GROWI app and vault-manager. The minimum required for setup are as follows (for the full list including tuning options, see "GROWI Vault options" in [Environment Variables](/en/admin-guide/admin-cookbook/env-vars.html)).
-
-    | Environment variable | Description | Default |
-    | --- | --- | --- |
-    | `VAULT_ENABLED` | Enables the GROWI Vault feature (fixed at deploy time; it cannot be switched at runtime) | `false` |
-    | `VAULT_MANAGER_ENDPOINT` | URL the GROWI app uses to reach the vault-manager service (required to enable Vault) | |
-    | `VAULT_MANAGER_INTERNAL_SECRET` | Shared secret used for authentication between the app and vault-manager | |
-    | `VAULT_REPO_PATH` | Filesystem path of the bare Git repository managed by vault-manager (required; the conventional value is `/data/vault-repo.git`) | |
-    | `VAULT_BOOTSTRAP_ON_START` | Runs the initial bootstrap at startup (`true` / `false` / `force`) | `false` |
-
-1. Restart GROWI and run the initial bootstrap from `/admin/vault` in the admin panel. You can check the bootstrap progress and the storage status on the same screen.
-1. `VAULT_MANAGER_INTERNAL_SECRET` is a secret for internal communication. Keep it confidential and manage it securely.
