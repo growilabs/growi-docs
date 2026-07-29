@@ -10,7 +10,7 @@ The latest series receives continuous improvements in features, performance, and
 
 This page is split into the section you read, depending on whether you use GROWI.cloud (A) or self-host the OSS version (B). Follow A or B from top to bottom according to your deployment. The detailed steps for each task are collected in "C. Detailed procedures", which both A and B link to.
 
-How to read the A and B tables: find the column for the version you are running now, read it from top to bottom, and carry out every row marked with a check mark. A check mark means the item has to be dealt with somewhere on the way from that version to the latest version. The `[Required]` and `[If applicable]` labels at the beginning of each row indicate the nature of the task; `[If applicable]` means the task is only necessary when the stated condition applies to you.
+How to read the A and B tables: find the column for the version you are running now, read it from top to bottom, and carry out every row marked with a check mark. A check mark means the item has to be dealt with somewhere on the way from that version to the latest version. The `[Required]` and `[If applicable]` labels at the beginning of each row indicate the nature of the task; `[If applicable]` means the task is only necessary when the stated condition applies to you. In every table, `[Required]` rows come first, and rows are then ordered by the number of versions that need the work, from most to fewest.
 
 ::: danger
 Because of a serious bug in Revision (page edit history) data, **do not upgrade to v6.1.0 - v7.0.15; always upgrade directly to v7.4.0 or later**.
@@ -38,15 +38,15 @@ Find the column for the version you are running now and carry out every row mark
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| [If applicable] [When you specify Owned AWS as the file storage destination: add s3:AbortMultipartUpload to the IAM policy](#add-s3-abortmultipartupload-to-the-iam-policy) | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [If applicable] [When you specify Owned AWS as the file storage destination: disable the bucket ACL and change to blocking public access (if you would like the environment variable `S3_OBJECT_ACL` changed, please contact us)](#review-the-aws-s3-bucket-acl-settings-and-s3-object-acl) | | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [If applicable] [When page data migrated from an OSS deployment built on v3.3 or earlier remains: rewrite legacy attachment URLs](#rewrite-legacy-attachment-urls) | | | | | | ✓ | ✓ | ✓ | ✓ |
-| [If applicable] [When you have enabled simultaneous editing (HackMD): migrate to simultaneous editing in the built-in editor](#migrate-from-hackmd-integration-to-simultaneous-editing-in-the-built-in-editor) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [If applicable] [When you use the Custom HTML Header: migrate to Custom Noscript or a custom script](#migrate-away-from-the-custom-html-header) | | | | | | | | ✓ | ✓ |
-| [If applicable] [When you use Twitter OAuth 2 authentication: migrate to another authentication method](#migrate-from-twitter-oauth-2-authentication-to-another-authentication-method) | | | | | | | | ✓ | ✓ |
-| [If applicable] [Notify users that the syntax and HTML changes will alter how existing pages display and that page content needs to be rewritten](#rewrite-page-content-affected-by-the-syntax-and-html-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [Required] [Notify users about the introduction of WIP pages, the change in the new page creation flow, and the change in how full-text search is invoked](#notify-users-about-wip-pages-and-ui-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [Required] [Notify users of the v5 specification changes (move / rename / delete including descendants, permalink URLs, UI changes)](#notify-users-of-the-v5-specification-changes) | | | | | | | | | ✓ |
+| [If applicable] [When you specify Owned AWS as the file storage destination: add s3:AbortMultipartUpload to the IAM policy](#add-s3-abortmultipartupload-to-the-iam-policy) | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [When you specify Owned AWS as the file storage destination: disable the bucket ACL and change to blocking public access (if you would like the environment variable `S3_OBJECT_ACL` changed, please contact us)](#review-the-aws-s3-bucket-acl-settings-and-s3-object-acl) | | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [When you have enabled simultaneous editing (HackMD): migrate to simultaneous editing in the built-in editor](#migrate-from-hackmd-integration-to-simultaneous-editing-in-the-built-in-editor) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [Notify users that the syntax and HTML changes will alter how existing pages display and that page content needs to be rewritten](#rewrite-page-content-affected-by-the-syntax-and-html-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [When page data migrated from an OSS deployment built on v3.3 or earlier remains: rewrite legacy attachment URLs](#rewrite-legacy-attachment-urls) | | | | | | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [When you use the Custom HTML Header: migrate to Custom Noscript or a custom script](#migrate-away-from-the-custom-html-header) | | | | | | | | ✓ | ✓ |
+| [If applicable] [When you use Twitter OAuth 2 authentication: migrate to another authentication method](#migrate-from-twitter-oauth-2-authentication-to-another-authentication-method) | | | | | | | | ✓ | ✓ |
 
 Regarding the HackMD row above, note that HackMD integration cannot be used from GROWI v7 onward ([Simultaneous Editing (HackMD)](https://growi.cloud/help/en/cloud/hackmd.html)).
 
@@ -64,9 +64,9 @@ Find the column for the version you are running now and carry out every row mark
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [If applicable] [When you used the legacy AI integration features: configure them again with the GROWI AI Agent method](#reconfigure-growi-ai-agent) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [If applicable] [Rewrite existing page content affected by the syntax and HTML changes](#rewrite-page-content-affected-by-the-syntax-and-html-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you customized the XSS prevention settings: they are reset to the default at startup, so configure them again](#reconfigure-the-xss-prevention-settings) | | | | | | | | ✓ | ✓ |
 | [If applicable] [When unconverted pages created in v4.5 or earlier remain: convert them to the v5 Compatible Format](#convert-unconverted-pages-to-the-v5-compatible-format) | | | | | | | | ✓ | ✓ |
-| [If applicable] [Rewrite existing page content affected by the syntax and HTML changes](#rewrite-page-content-affected-by-the-syntax-and-html-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 Note that you cannot run the bulk rewrite of page content with `bin/data-migrations` yourself on GROWI.cloud. If you would like it to be run, please contact us through the [inquiry page](https://growicloud.atlassian.net/servicedesk/customer/portal/1). No script is provided for math, presentation page breaks, or the inline footnote syntax; rewrite those pages manually.
 
@@ -103,9 +103,9 @@ The tables below list, by category, the tasks you have to finish **before** upgr
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| [Required] [Upgrade MongoDB to v6.0 or later (one major version at a time, without skipping)](#upgrade-mongodb-to-v6-0-or-later) | | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you use Elasticsearch v7 or earlier: migrate to v8 or v9 (rebuilding the index is recommended)](#migrate-elasticsearch-to-v8-or-v9) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you run MongoDB in a standalone configuration: migrate to a replica set (a single-node replica set is acceptable)](#migrate-mongodb-to-a-replica-set-configuration) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Required] [Upgrade MongoDB to v6.0 or later (one major version at a time, without skipping)](#upgrade-mongodb-to-v6-0-or-later) | | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you build and run GROWI from source: upgrade Node.js to v24 (not needed when you use the official Docker image)](#upgrade-node-js-to-v24) | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 #### Infrastructure and storage
@@ -145,9 +145,9 @@ The tables below list, by category, the tasks you have to finish **before** upgr
 
 | Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| [If applicable] [Notify users that the syntax and HTML changes will alter how existing pages display and that page content needs to be rewritten](#rewrite-page-content-affected-by-the-syntax-and-html-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [Required] [Notify users about WIP pages, the new page creation flow, and the change in how full-text search is invoked](#notify-users-about-wip-pages-and-ui-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [Required] [Notify users of the v5 specification changes (move / rename / delete including descendants, permalink URLs, UI changes)](#notify-users-of-the-v5-specification-changes) | | | | | | | | | ✓ |
+| [If applicable] [Notify users that the syntax and HTML changes will alter how existing pages display and that page content needs to be rewritten](#rewrite-page-content-affected-by-the-syntax-and-html-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ### B-3. Upgrading GROWI to the latest version
 
@@ -251,41 +251,6 @@ The tables below list, by category, the tasks that have to be dealt with **after
 
 These are the detailed steps for each task, linked from the tables in "A-2. Tasks to complete before upgrading on GROWI.cloud", "A-4. Tasks to complete after upgrading on GROWI.cloud", "B-2. Tasks to complete before upgrading", and "B-4. Tasks to complete after upgrading". The "When to do this" field of each item states when it has to be carried out.
 
-### Migrate Elasticsearch to v8 or v9
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v8.0 (support for the Elasticsearch v7 series has ended)
-- **When it applies**: When you use Elasticsearch v7 or earlier
-- **References**: [v5.0.x](/en/admin-guide/upgrading/50x.html), [v6.1.x](/en/admin-guide/upgrading/61x.html#for-admin), [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators)
-
-1. Check the major version of Elasticsearch you use.
-
-    | GROWI | <= v7.3.x | v8.0.x or later |
-    | :---: | :---: | :---: |
-    | Supported Elasticsearch | 7.x, 8.x, 9.x | 8.x, 9.x |
-
-1. If you use v7 or earlier, prepare a new Elasticsearch v8 or v9. We recommend creating a new index rather than carrying over the existing one. The steps are as follows (when using docker).
-    1. Remove the Elasticsearch container you were using.
-    1. Remove the docker volume that the Elasticsearch container used.
-    1. Start the new Elasticsearch container (make sure no index data for GROWI exists).
-    1. Start GROWI (after startup, you can rebuild the index from the Elasticsearch Management page).
-
-    For an on-premises installation, uninstall the old version, install the new version from scratch, and likewise make sure that no index for GROWI exists before starting GROWI.
-1. Set the environment variable `ELASTICSEARCH_VERSION` to the major version you connect to (`8` or `9`; the default is `9`).
-1. If you start GROWI v8.0 or later while still on Elasticsearch v7, full-text search fails to initialize and becomes unavailable (the server process itself still starts, but an error is logged). Always migrate before upgrading.
-
-### Migrate MongoDB to a replica set configuration
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v8.0
-- **When it applies**: When you run MongoDB in a standalone configuration (required from GROWI v8.0)
-- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators)
-
-1. Check whether your current MongoDB runs as a standalone instance or as a replica set.
-1. Because GROWI Vault uses MongoDB change streams, a replica set is required from v8.0 onward. Change streams are only available on a replica set.
-1. If you run a standalone configuration, migrate to a replica set. A single-node replica set is acceptable.
-1. If you use [growi-docker-compose](https://github.com/growilabs/growi-docker-compose), refer to the updates in that repository when migrating.
-
 ### Upgrade MongoDB to v6.0 or later
 
 - **When to do this**: Before upgrading
@@ -324,6 +289,127 @@ These are the detailed steps for each task, linked from the tables in "A-2. Task
     After running the command above, stop MongoDB v5.0, change the MongoDB version specified in the yml file, and start v6.0.
 
 1. Repeat the steps above one major version at a time until you reach the version you want. Support for MongoDB v4.4 and v5.0 has ended, so make sure you end up on v6.0 or later.
+
+### Notify users about WIP pages and UI changes
+
+- **When to do this**: Before upgrading (notification)
+- **Introduced in**: v7.0
+- **When it applies**: When you use v6.3.x or earlier
+- **References**: [v7.0.x](/en/admin-guide/upgrading/70x.html#for-user)
+
+1. From v7.0, a page is saved as a WIP (Work In Progress) page such as "Untitled-1" as soon as the edit screen is opened (up to v6, no page data was created until you saved).
+1. A newly created WIP page is deleted automatically after a certain period from creation (48 hours by default; configurable with the environment variable `WIP_PAGE_EXPIRATION_SECONDS`). Pages created from the page tree or from the new page creation modal are also covered. However, once a page has been updated at least once after creation (whether saved as WIP or saved normally), it is no longer subject to automatic deletion.
+1. The new page creation button moves from the navbar at the top of the screen into the sidebar at the top left.
+1. The place and the way you invoke the full-text search feature change.
+1. Notify your users of these changes before upgrading.
+
+### Notify users of the v5 specification changes
+
+- **When to do this**: Before upgrading (notification)
+- **Introduced in**: v5.0
+- **When it applies**: When you use v4.x or earlier
+- **References**: [v5.0.x](/en/admin-guide/upgrading/50x.html)
+
+1. In v5.0, the URL used when viewing and navigating pages changes from the page path to a permalink.
+1. Moving, renaming, or deleting a parent page also affects the pages under it, regardless of whether the user can view them (pages set to "Anyone with the link" are excluded).
+1. A page tree is added to the sidebar.
+1. Icons that used to sit above the table of contents, such as history, attached data, and shared link management, move into the three dot leader dropdown.
+1. An example of the text you can use to notify your users is published in "Example of Well-known Content to Users" on [Upgrading GROWI to v5.0.x](/en/admin-guide/upgrading/50x.html). You can copy the following text and use it publicly.
+
+    ```text
+    GROWI has been upgraded to v5.0.0. There are some changes for users, so please check the details below.
+
+    Official Upgrade Guide
+    https://docs.growi.org/en/admin-guide/upgrading/50x.html
+
+
+    Access URI has been changed
+    ---------------------------
+
+    - In the new version, the URL displayed in the browser's address bar will be a permalink instead of the page path URL.
+        - Before: http://example.com/Page1/Page1-1
+        - After: http://example.com/61d04d3aecc2ec9f6cce3d3e
+
+
+    The behavior of move / rename / delete has been changed
+    ----------------------------------------
+
+    - In the new version, if you move / rename / delete the parent page, all the pages under it will also be affected.
+        - However, private pages that are set to "Only Me" or "Only Specific Group" remain in the old format, so they are not affected now.
+        - Please convert your manageable private pages from http://example.com/_private-legacy-pages to the new format.
+        - Please note that after converting these private pages, **move / rename / delete functions on the parent page will now effect the private page**.
+
+
+    Page Tree Added
+    ----------------------------
+
+    - Available from the sidebar.
+
+
+    UI has been changed
+    ----------------
+
+    - The following icons located at the top of the table of contents have been moved into the three dot leader dropdown.
+        - Page List (Displaying the Page list of Descendants)
+        - Timeline (Listing the Contents of Descendant Pages)
+        - Change Log
+        - Attached Data
+        - Shared Link Management
+    - Also, the position of the following link buttons has changed.
+        - Footprint icon for displaying the page browsing user list
+        - Link button to scroll to the comment list
+    ```
+
+### Migrate Elasticsearch to v8 or v9
+
+- **When to do this**: Before upgrading
+- **Introduced in**: v8.0 (support for the Elasticsearch v7 series has ended)
+- **When it applies**: When you use Elasticsearch v7 or earlier
+- **References**: [v5.0.x](/en/admin-guide/upgrading/50x.html), [v6.1.x](/en/admin-guide/upgrading/61x.html#for-admin), [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators)
+
+1. Check the major version of Elasticsearch you use.
+
+    | GROWI | <= v7.3.x | v8.0.x or later |
+    | :---: | :---: | :---: |
+    | Supported Elasticsearch | 7.x, 8.x, 9.x | 8.x, 9.x |
+
+1. If you use v7 or earlier, prepare a new Elasticsearch v8 or v9. We recommend creating a new index rather than carrying over the existing one. The steps are as follows (when using docker).
+    1. Remove the Elasticsearch container you were using.
+    1. Remove the docker volume that the Elasticsearch container used.
+    1. Start the new Elasticsearch container (make sure no index data for GROWI exists).
+    1. Start GROWI (after startup, you can rebuild the index from the Elasticsearch Management page).
+
+    For an on-premises installation, uninstall the old version, install the new version from scratch, and likewise make sure that no index for GROWI exists before starting GROWI.
+1. Set the environment variable `ELASTICSEARCH_VERSION` to the major version you connect to (`8` or `9`; the default is `9`).
+1. If you start GROWI v8.0 or later while still on Elasticsearch v7, full-text search fails to initialize and becomes unavailable (the server process itself still starts, but an error is logged). Always migrate before upgrading.
+
+### Migrate MongoDB to a replica set configuration
+
+- **When to do this**: Before upgrading
+- **Introduced in**: v8.0
+- **When it applies**: When you run MongoDB in a standalone configuration (required from GROWI v8.0)
+- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators)
+
+1. Check whether your current MongoDB runs as a standalone instance or as a replica set.
+1. Because GROWI Vault uses MongoDB change streams, a replica set is required from v8.0 onward. Change streams are only available on a replica set.
+1. If you run a standalone configuration, migrate to a replica set. A single-node replica set is acceptable.
+1. If you use [growi-docker-compose](https://github.com/growilabs/growi-docker-compose), refer to the updates in that repository when migrating.
+
+### Raise the MongoDB connection pool limits
+
+- **When to do this**: Before upgrading
+- **Introduced in**: v8.0
+- **When it applies**: For large environments with many active users (roughly more than 500)
+- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators), [Environment Variables](https://docs.growi.org/en/admin-guide/admin-cookbook/env-vars.html)
+
+1. From GROWI v8.0, the default upper limit of the MongoDB connection pool is reduced compared with previous versions.
+1. In large environments with many active users, many pages, or high access frequency, the default may be insufficient.
+1. If that applies to you, raise the upper and lower limits with the following environment variables.
+
+    | Environment variable | Description | Default |
+    | --- | --- | --- |
+    | `MONGO_MAX_POOL_SIZE` | Maximum number of connections in the MongoDB connection pool | `15` |
+    | `MONGO_MIN_POOL_SIZE` | Minimum number of connections in the MongoDB connection pool | `2` |
 
 ### Upgrade Node.js to v24
 
@@ -378,57 +464,6 @@ These are the detailed steps for each task, linked from the tables in "A-2. Task
 1. Check whether your operations rely on entering the container interactively with `docker exec`.
 1. If you customize the official image (installing additional packages, using your own entry point, and so on), verify before upgrading that it still works on a DHI.
 
-### Review the AWS S3 bucket ACL settings and S3_OBJECT_ACL
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v7.1
-- **When it applies**: When you use AWS S3 to store attachments
-- **References**: [v7.1.x](/en/admin-guide/upgrading/71x.html#for-admin)
-
-1. From v7.1.x, the object ACL setting used when uploading files changes as follows.
-
-    | Version | Behavior when uploading a file |
-    | :--- | :--- |
-    | v7.0.x or earlier | The request attaches the object ACL setting `ACL: 'public-read'` |
-    | v7.1.x or later | The request does not set an object ACL |
-
-1. Following the AWS official [Security best practices for Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html), disable the ACL of the S3 bucket and change the settings to block public access.
-1. If you have set the environment variable `S3_OBJECT_ACL` (default `public-read`) to `public-read`, change it to `private` or remove the setting.
-1. Attachments uploaded in v3.3.0 or earlier, which are referenced directly through the bucket URL as shown below, may become inaccessible after this change. Check the impact in advance.
-
-    ```text
-    https://${AWS bucket name}.s3.amazonaws.com/attachment/5d091f611fe336003eec5bfd/foobar.jpg
-    ```
-
-1. If you want to keep operating as before without changing the S3 bucket settings (not recommended), explicitly set the environment variable `S3_OBJECT_ACL=public-read`.
-
-### Rewrite legacy attachment URLs
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v6.3
-- **When it applies**: When your system was built on v3.3 or earlier and manages attachments with MongoDB GridFS
-- **References**: [v6.3.x](/en/admin-guide/upgrading/63x.html)
-
-1. In v6.3.x, the legacy endpoint for MongoDB GridFS (`/attachment/{pageID}/{fileName}`) is removed.
-1. Check whether any pages contain URLs in that form in their Markdown.
-1. Rewrite the relevant URLs to the `/attachment/{attachmentId}` form, or upload the files again.
-
-### Raise the MongoDB connection pool limits
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v8.0
-- **When it applies**: For large environments with many active users (roughly more than 500)
-- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators), [Environment Variables](https://docs.growi.org/en/admin-guide/admin-cookbook/env-vars.html)
-
-1. From GROWI v8.0, the default upper limit of the MongoDB connection pool is reduced compared with previous versions.
-1. In large environments with many active users, many pages, or high access frequency, the default may be insufficient.
-1. If that applies to you, raise the upper and lower limits with the following environment variables.
-
-    | Environment variable | Description | Default |
-    | --- | --- | --- |
-    | `MONGO_MAX_POOL_SIZE` | Maximum number of connections in the MongoDB connection pool | `15` |
-    | `MONGO_MIN_POOL_SIZE` | Minimum number of connections in the MongoDB connection pool | `2` |
-
 ### Check the actual state of LOCAL_STRATEGY_ENABLED and SAML_ENABLED
 
 - **When to do this**: Before upgrading (check the settings) and after upgrading (check them again)
@@ -458,44 +493,29 @@ After upgrading:
 1. The environment variable `FILE_UPLOAD_DISABLED` (disabling the file upload feature) has been removed. Set the environment variable `FILE_UPLOAD` to `none` instead.
 1. The environment variable `DISABLE_LINK_SHARING` (disabling the share link feature) has been removed. Disable the share link feature from "Security settings" in the admin panel instead.
 
-### Migrate away from the Custom HTML Header
+### Review the AWS S3 bucket ACL settings and S3_OBJECT_ACL
 
 - **When to do this**: Before upgrading
-- **Introduced in**: v6.0
-- **When it applies**: When you use the Custom HTML Header
-- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
+- **Introduced in**: v7.1
+- **When it applies**: When you use AWS S3 to store attachments
+- **References**: [v7.1.x](/en/admin-guide/upgrading/71x.html#for-admin)
 
-1. From v6.0, the "Custom HTML Header", which allowed you to freely insert strings and tags into the head tag, is removed.
-1. Migrate to the newly added "Custom Noscript" or to a custom script.
-1. For example, if you want to add a `link` tag, you can do it with a custom script like the following.
+1. From v7.1.x, the object ACL setting used when uploading files changes as follows.
 
-    ```javascript
-    var link = document.createElement('link');
-    link.id = 'mylink';
-    link.rel = 'stylesheet';
-    link.href = 'https://example.com/mystyles.css';
-    document.head.appendChild(link);
+    | Version | Behavior when uploading a file |
+    | :--- | :--- |
+    | v7.0.x or earlier | The request attaches the object ACL setting `ACL: 'public-read'` |
+    | v7.1.x or later | The request does not set an object ACL |
+
+1. Following the AWS official [Security best practices for Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html), disable the ACL of the S3 bucket and change the settings to block public access.
+1. If you have set the environment variable `S3_OBJECT_ACL` (default `public-read`) to `public-read`, change it to `private` or remove the setting.
+1. Attachments uploaded in v3.3.0 or earlier, which are referenced directly through the bucket URL as shown below, may become inaccessible after this change. Check the impact in advance.
+
+    ```text
+    https://${AWS bucket name}.s3.amazonaws.com/attachment/5d091f611fe336003eec5bfd/foobar.jpg
     ```
 
-### Migrate from Twitter OAuth 2 authentication to another authentication method
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v6.0
-- **When it applies**: When you use Twitter OAuth 2 authentication
-- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
-
-1. From v6.0, the authentication mechanism that uses Twitter is removed.
-1. Before upgrading, switch to another authentication method such as ID/Pass authentication or SAML authentication.
-
-### Migrate from the nocdn image to the official image
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v6.0
-- **When it applies**: When you use the nocdn Docker image
-- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
-
-1. From v6.0, the official container images, which used to be split into a default build and a nocdn build, are consolidated into one.
-1. If you use the nocdn build, migrate to the consolidated official image.
+1. If you want to keep operating as before without changing the S3 bucket settings (not recommended), explicitly set the environment variable `S3_OBJECT_ACL=public-read`.
 
 ### Adapt to the build tool changes when building from source
 
@@ -576,75 +596,55 @@ After upgrading (administrator bulk rewrite):
 1. **The rewrite is applied only to the latest revision of each page; past revisions are not rewritten.**
 1. No script is provided for math (from MathJax to KaTeX), presentation page breaks, or the inline footnote syntax. Rewrite the affected pages manually.
 
-### Notify users about WIP pages and UI changes
+### Rewrite legacy attachment URLs
 
-- **When to do this**: Before upgrading (notification)
-- **Introduced in**: v7.0
-- **When it applies**: When you use v6.3.x or earlier
-- **References**: [v7.0.x](/en/admin-guide/upgrading/70x.html#for-user)
+- **When to do this**: Before upgrading
+- **Introduced in**: v6.3
+- **When it applies**: When your system was built on v3.3 or earlier and manages attachments with MongoDB GridFS
+- **References**: [v6.3.x](/en/admin-guide/upgrading/63x.html)
 
-1. From v7.0, a page is saved as a WIP (Work In Progress) page such as "Untitled-1" as soon as the edit screen is opened (up to v6, no page data was created until you saved).
-1. A newly created WIP page is deleted automatically after a certain period from creation (48 hours by default; configurable with the environment variable `WIP_PAGE_EXPIRATION_SECONDS`). Pages created from the page tree or from the new page creation modal are also covered. However, once a page has been updated at least once after creation (whether saved as WIP or saved normally), it is no longer subject to automatic deletion.
-1. The new page creation button moves from the navbar at the top of the screen into the sidebar at the top left.
-1. The place and the way you invoke the full-text search feature change.
-1. Notify your users of these changes before upgrading.
+1. In v6.3.x, the legacy endpoint for MongoDB GridFS (`/attachment/{pageID}/{fileName}`) is removed.
+1. Check whether any pages contain URLs in that form in their Markdown.
+1. Rewrite the relevant URLs to the `/attachment/{attachmentId}` form, or upload the files again.
 
-### Notify users of the v5 specification changes
+### Migrate away from the Custom HTML Header
 
-- **When to do this**: Before upgrading (notification)
-- **Introduced in**: v5.0
-- **When it applies**: When you use v4.x or earlier
-- **References**: [v5.0.x](/en/admin-guide/upgrading/50x.html)
+- **When to do this**: Before upgrading
+- **Introduced in**: v6.0
+- **When it applies**: When you use the Custom HTML Header
+- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
 
-1. In v5.0, the URL used when viewing and navigating pages changes from the page path to a permalink.
-1. Moving, renaming, or deleting a parent page also affects the pages under it, regardless of whether the user can view them (pages set to "Anyone with the link" are excluded).
-1. A page tree is added to the sidebar.
-1. Icons that used to sit above the table of contents, such as history, attached data, and shared link management, move into the three dot leader dropdown.
-1. An example of the text you can use to notify your users is published in "Example of Well-known Content to Users" on [Upgrading GROWI to v5.0.x](/en/admin-guide/upgrading/50x.html). You can copy the following text and use it publicly.
+1. From v6.0, the "Custom HTML Header", which allowed you to freely insert strings and tags into the head tag, is removed.
+1. Migrate to the newly added "Custom Noscript" or to a custom script.
+1. For example, if you want to add a `link` tag, you can do it with a custom script like the following.
 
-    ```text
-    GROWI has been upgraded to v5.0.0. There are some changes for users, so please check the details below.
-
-    Official Upgrade Guide
-    https://docs.growi.org/en/admin-guide/upgrading/50x.html
-
-
-    Access URI has been changed
-    ---------------------------
-
-    - In the new version, the URL displayed in the browser's address bar will be a permalink instead of the page path URL.
-        - Before: http://example.com/Page1/Page1-1
-        - After: http://example.com/61d04d3aecc2ec9f6cce3d3e
-
-
-    The behavior of move / rename / delete has been changed
-    ----------------------------------------
-
-    - In the new version, if you move / rename / delete the parent page, all the pages under it will also be affected.
-        - However, private pages that are set to "Only Me" or "Only Specific Group" remain in the old format, so they are not affected now.
-        - Please convert your manageable private pages from http://example.com/_private-legacy-pages to the new format.
-        - Please note that after converting these private pages, **move / rename / delete functions on the parent page will now effect the private page**.
-
-
-    Page Tree Added
-    ----------------------------
-
-    - Available from the sidebar.
-
-
-    UI has been changed
-    ----------------
-
-    - The following icons located at the top of the table of contents have been moved into the three dot leader dropdown.
-        - Page List (Displaying the Page list of Descendants)
-        - Timeline (Listing the Contents of Descendant Pages)
-        - Change Log
-        - Attached Data
-        - Shared Link Management
-    - Also, the position of the following link buttons has changed.
-        - Footprint icon for displaying the page browsing user list
-        - Link button to scroll to the comment list
+    ```javascript
+    var link = document.createElement('link');
+    link.id = 'mylink';
+    link.rel = 'stylesheet';
+    link.href = 'https://example.com/mystyles.css';
+    document.head.appendChild(link);
     ```
+
+### Migrate from Twitter OAuth 2 authentication to another authentication method
+
+- **When to do this**: Before upgrading
+- **Introduced in**: v6.0
+- **When it applies**: When you use Twitter OAuth 2 authentication
+- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
+
+1. From v6.0, the authentication mechanism that uses Twitter is removed.
+1. Before upgrading, switch to another authentication method such as ID/Pass authentication or SAML authentication.
+
+### Migrate from the nocdn image to the official image
+
+- **When to do this**: Before upgrading
+- **Introduced in**: v6.0
+- **When it applies**: When you use the nocdn Docker image
+- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
+
+1. From v6.0, the official container images, which used to be split into a default build and a nocdn build, are consolidated into one.
+1. If you use the nocdn build, migrate to the consolidated official image.
 
 ### Rebuilding the full-text search index
 
@@ -671,6 +671,21 @@ After upgrading (administrator bulk rewrite):
 1. Save the settings with the "Update" button at the bottom of the screen. No server restart is required.
 1. For the detailed configuration steps, see [Setting Up and Managing AI Integration](/en/admin-guide/management-cookbook/setup-ai.html).
 
+### Move attachments to the new location when FILE_UPLOAD=local
+
+- **When to do this**: After upgrading
+- **Introduced in**: v6.1
+- **When it applies**: When you use the environment variable `FILE_UPLOAD=local` (storing attachments on the local file system)
+- **References**: [v6.1.x](/en/admin-guide/upgrading/61x.html#for-admin)
+
+1. Because the location of the `app` package changed in v6.1, the location where files are stored changes as follows.
+
+    | Before | | After |
+    | :-: | :-: | :-: |
+    | `/opt/growi/packages/app/public` | -> | `/opt/growi/apps/app/public` |
+
+1. After upgrading, move the existing files to the new location. Related discussion: <https://github.com/growilabs/growi/discussions/6086>
+
 ### Reconfigure the XSS prevention settings
 
 - **When to do this**: After upgrading
@@ -688,21 +703,6 @@ After upgrading (administrator bulk rewrite):
     - Use the recommended settings
     - Upgrade to v7.0.12 or later, select the custom whitelist, import the values of the recommended settings for both tag names and tag attributes, and change the settings based on them
 1. For details, see [Markdown Settings](/en/admin-guide/management-cookbook/markdown.html#prevent-xss-cross-site-scripting-setting).
-
-### Move attachments to the new location when FILE_UPLOAD=local
-
-- **When to do this**: After upgrading
-- **Introduced in**: v6.1
-- **When it applies**: When you use the environment variable `FILE_UPLOAD=local` (storing attachments on the local file system)
-- **References**: [v6.1.x](/en/admin-guide/upgrading/61x.html#for-admin)
-
-1. Because the location of the `app` package changed in v6.1, the location where files are stored changes as follows.
-
-    | Before | | After |
-    | :-: | :-: | :-: |
-    | `/opt/growi/packages/app/public` | -> | `/opt/growi/apps/app/public` |
-
-1. After upgrading, move the existing files to the new location. Related discussion: <https://github.com/growilabs/growi/discussions/6086>
 
 ### Convert unconverted pages to the v5 Compatible Format
 
