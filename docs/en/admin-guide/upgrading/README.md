@@ -408,6 +408,7 @@ After upgrading:
 ### Migrate away from the removed environment variables FILE_UPLOAD_DISABLED and DISABLE_LINK_SHARING
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v7.2
 - **When it applies**: When you set the environment variable `FILE_UPLOAD_DISABLED` or `DISABLE_LINK_SHARING`
 - **References**: [v7.2.x](/en/admin-guide/upgrading/72x.html#for-admin)
 
@@ -417,6 +418,7 @@ After upgrading:
 ### Migrate away from the Custom HTML Header
 
 - **When to do this**: Before upgrading
+- **Introduced in**: v6.0
 - **When it applies**: When you use the Custom HTML Header
 - **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
 
