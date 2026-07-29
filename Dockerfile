@@ -9,13 +9,13 @@ FROM node:20-slim AS builder
 
 WORKDIR /growi-docs
 
-COPY . .
-
 ENV PNPM_HOME="/root/.local/share/pnpm"
 ENV PATH="$PNPM_HOME/bin:$PATH"
 
 RUN apt-get update && apt-get install -y ca-certificates wget libatomic1 --no-install-recommends \
   && wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.shrc" SHELL="$(which sh)" sh -
+
+COPY . .
 
 RUN pnpm install
 RUN pnpm run help-growi-cloud:build
