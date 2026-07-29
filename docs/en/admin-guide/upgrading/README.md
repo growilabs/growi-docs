@@ -23,14 +23,15 @@ For details, see the Dev Wiki page [Revision data migration bug in v5.0.0 - v7.0
 
 ## A. If You Use GROWI.cloud
 
-On GROWI.cloud, middleware such as MongoDB and Elasticsearch, the container image, and the build environment are all managed by GROWI.cloud. For that reason, the only tasks we ask you to carry out are the ones listed in the A-2 and A-4 tables below. If you have any questions about an item that is not listed, please contact us through the [inquiry page](https://growicloud.atlassian.net/servicedesk/customer/portal/1).
-
-Updating the version of the GROWI app itself is done from the app detail screen of GROWI.cloud (see A-3 for details). The docker-compose and build-from-source procedures described in "B. If You Use the OSS Version of GROWI" are for self-hosted OSS deployments and are not needed on GROWI.cloud.
+- On GROWI.cloud, middleware such as MongoDB and Elasticsearch, the container image, and the build environment are all managed by GROWI.cloud. For that reason, when you update the version of GROWI, the only tasks we ask you to carry out are the ones listed in the A-2 and A-4 tables below.
+  - If you have any questions about an item that is not listed, please contact us through the [inquiry page](https://growicloud.atlassian.net/servicedesk/customer/portal/1).
+- Updating the version of the GROWI app itself is done from the app detail screen of GROWI.cloud. See A-3 for details.
+  - The docker-compose and build-from-source procedures described in "B. If You Use the OSS Version of GROWI" are for self-hosted OSS deployments. They are not needed on GROWI.cloud.
 
 ### A-1. Check your current version
 
 - First, check the version of the GROWI app you are currently running. You can check it in the "Version" field of the app detail screen on GROWI.cloud ([Version](https://growi.cloud/help/en/cloud/version.html)).
-- GROWI.cloud takes generation-managed backups of MongoDB according to your plan ([Backup](https://growi.cloud/help/en/cloud/backup.html)). You do not need to take a backup yourself in advance.
+- GROWI.cloud automatically takes backups of your MongoDB data according to your contracted plan ([Backup](https://growi.cloud/help/en/cloud/backup.html)). You do not need to take a backup yourself in advance.
 
 ### A-2. Tasks to complete before upgrading on GROWI.cloud
 
@@ -48,13 +49,11 @@ Find the column for the version you are running now and carry out every row mark
 | [If applicable] [When you use the Custom HTML Header: migrate to Custom Noscript or a custom script](#migrate-away-from-the-custom-html-header) | | | | | | | | ✓ | ✓ |
 | [If applicable] [When you use Twitter OAuth 2 authentication: migrate to another authentication method](#migrate-from-twitter-oauth-2-authentication-to-another-authentication-method) | | | | | | | | ✓ | ✓ |
 
-Regarding the HackMD row above, note that HackMD integration cannot be used from GROWI v7 onward ([Simultaneous Editing (HackMD)](https://growi.cloud/help/en/cloud/hackmd.html)).
-
 ### A-3. Upgrading to the latest version on GROWI.cloud
 
-- After completing every task in A-2, update the version from the app detail screen of GROWI.cloud. For the detailed steps, see [Version](https://growi.cloud/help/en/cloud/version.html).
-- If you use automatic version updates, you are updated to the latest version automatically. If you have pinned a specific version, update it manually.
-- As warned at the top of this page, do not select v6.1.0 - v7.0.15.
+- After completing every task in A-2, update the GROWI version from the app detail screen of GROWI.cloud. For the detailed steps, see [Version](https://growi.cloud/help/en/cloud/version.html).
+  - If you use automatic version updates, you are updated to the latest version automatically. If you have pinned a specific version, update it manually.
+  - As warned at the top of this page, do not go through v6.1.0 - v7.0.15 on the way.
 - After upgrading, carry out [Rebuilding the full-text search index](#rebuilding-the-full-text-search-index).
 
 ### A-4. Tasks to complete after upgrading on GROWI.cloud
