@@ -1,0 +1,75 @@
+name: TEMPORARY invite probe
+
+# Throwaway experiment: can a GitHub Actions runner tell a live Slack shared
+# invite link apart from a dead one? Delete this file once the answer is known.
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/tmp-invite-probe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+
+  curl-probe:
+    runs-on: ubuntu-latest
+    steps:
+    - name: curl, valid vs invalid token
+      continue-on-error: true
+      run: |
+        probe() {
+          label="$1"; url="$2"
+          echo "===== $label ====="
+          code=$(curl -sS --max-time 25 -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
+            -H 'Accept: text/html,application/xhtml+xml' -H 'Accept-Language: en-US,en;q=0.9' \
+            -o body.html -w '%{http_code}' "$url" || echo "curl-failed")
+          echo "status=$code bytes=$(wc -c < body.html)"
+          echo "title: $(grep -oiE '<title>[^<]*</title>' body.html | head -1)"
+          echo "--- markers ---"
+          grep -ioE '(no longer active|expired|invite[^<]{0,50}|sign up|Create an account|Confirm your email|not authorized|try again)' body.html \
+            | sort | uniq -c | sort -rn | head -8
+          echo
+        }
+        probe "VALID   first hop (follow redirects)" "https://join.slack.com/t/wsgrowi/shared_invite/zt-45hm10bo3-djV8tFMsJdV1VfTiGeIKPg"
+        probe "VALID   second hop" "https://wsgrowi.slack.com/join/shared_invite/zt-45hm10bo3-djV8tFMsJdV1VfTiGeIKPg"
+        probe "INVALID second hop" "https://wsgrowi.slack.com/join/shared_invite/zt-45hm10bo3-INVALIDsignature000000"
+
+  browser-probe:
+    runs-on: ubuntu-latest
+    steps:
+    - name: headless Chromium, valid vs invalid token
+      continue-on-error: true
+      run: |
+        npm init -y >/dev/null 2>&1
+        npm i playwright >/dev/null 2>&1
+        npx playwright install --with-deps chromium >/dev/null 2>&1
+        cat > probe.mjs <<'JS'
+        import { chromium } from 'playwright';
+        const urls = {
+          valid:   'https://join.slack.com/t/wsgrowi/shared_invite/zt-45hm10bo3-djV8tFMsJdV1VfTiGeIKPg',
+          invalid: 'https://join.slack.com/t/wsgrowi/shared_invite/zt-45hm10bo3-INVALIDsignature000000',
+        };
+        const browser = await chromium.launch();
+        for (const [label, url] of Object.entries(urls)) {
+          const page = await browser.newPage();
+          let status = 'n/a';
+          try {
+            const res = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+            status = res?.status();
+          } catch (e) {
+            console.log(`${label}: navigation error ${e.message}`);
+          }
+          const text = (await page.evaluate(() => document.body?.innerText || '')).replace(/\s+/g, ' ').trim();
+          console.log(`===== ${label} =====`);
+          console.log(`status=${status} finalUrl=${page.url()}`);
+          console.log(`title=${await page.title()}`);
+          console.log(`text[0..400]=${text.slice(0, 400)}`);
+          console.log();
+          await page.close();
+        }
+        await browser.close();
+        JS
+        node probe.mjs
