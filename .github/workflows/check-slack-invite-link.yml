@@ -4,18 +4,21 @@ name: Check Slack invite link
 # so that it never rots unnoticed again (growilabs/growi#11619: the previous
 # invite service was shut down and every "Join our Slack" link 404'd for months).
 #
-# What this workflow can prove:
-#   - the redirect page holds exactly one invite URL, in the shape Slack issues
-#   - that URL still resolves the way Slack shared invite links are supposed to
-#   - the deployed page really serves that URL
+# The link does not only break when a service dies. One Slack shared invite link
+# accepts up to 400 sign-ups, "Never expires" stops working past 2,000
+# invitations, and an owner can revoke it -- so it has to be watched, not just
+# fixed once.
 #
-# What it cannot prove: that the link still accepts new members. join.slack.com
-# rewrites any token to <workspace>.slack.com without validating it, and that
-# page answers 403 with a byte-identical body to scripted requests whether the
-# invite is alive, expired, revoked, or made up. So neither expiry nor a typo in
-# the token is visible from CI -- only a human opening the link in a real
-# browser can tell. The check-last-verified job covers that gap by asking for
-# one before the last check gets too old.
+# curl cannot see any of that: Slack answers 403 with a byte-identical body to
+# scripted requests whether the invite is alive, expired, revoked or made up
+# (measured from a GitHub runner: 403 / 40789 bytes for both a valid and a
+# tampered token). A headless browser does get through, and the page title tells
+# the two apart:
+#
+#   valid token   -> HTTP 200, title "Join GROWI on Slack | Slack"
+#   invalid token -> HTTP 200, title "Create Account | Slack"
+#
+# So the liveness check drives Chromium and requires the join page title.
 
 on:
   schedule:
@@ -25,12 +28,14 @@ on:
     paths:
       - 'docs/.vuepress/public/slack/index.html'
       - '.github/workflows/check-slack-invite-link.yml'
+      - '.github/workflows/scripts/check-invite-opens-join-page.mjs'
   push:
     branches:
       - master
     paths:
       - 'docs/.vuepress/public/slack/index.html'
       - '.github/workflows/check-slack-invite-link.yml'
+      - '.github/workflows/scripts/check-invite-opens-join-page.mjs'
 
 permissions:
   contents: read
@@ -107,52 +112,22 @@ jobs:
         fi
         echo "$PUBLISHED_URL serves the current invite link."
 
+    - name: Install Chromium
+      run: |
+        npm install --no-save --no-fund --no-audit playwright
+        npx playwright install --with-deps chromium
+
+    - name: Verify the invite link still accepts new members
+      env:
+        INVITE_URL: ${{ steps.extract.outputs.invite_url }}
+      run: node .github/workflows/scripts/check-invite-opens-join-page.mjs
+
     - name: Slack Notification
       uses: weseek/ghaction-slack-notification@master
       if: failure() && github.event_name != 'pull_request'
       with:
         type: ${{ job.status }}
         job_name: '*Check Slack invite link*'
-        channel: '#ci'
-        isCompactMode: true
-        url: ${{ secrets.SLACK_WEBHOOK_URL }}
-
-  check-last-verified:
-    runs-on: ubuntu-latest
-
-    env:
-      # How long a browser check stays good for. One shared invite link accepts
-      # up to 400 sign-ups, so an active community will exhaust one eventually,
-      # and CI cannot see it happen.
-      REVERIFY_AFTER_DAYS: 180
-
-    steps:
-    - uses: actions/checkout@v4
-
-    - name: Ask for a browser check once the last one gets old
-      run: |
-        verified_on=$(grep -oE '<!-- last-verified: [0-9]{4}-[0-9]{2}-[0-9]{2} -->' "$REDIRECT_PAGE" \
-          | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' || true)
-
-        if [ -z "$verified_on" ]; then
-          echo "::error file=$REDIRECT_PAGE::No '<!-- last-verified: YYYY-MM-DD -->' comment found. It records when a human last confirmed the invite link works."
-          exit 1
-        fi
-
-        age_days=$(( ( $(date -u +%s) - $(date -u -d "$verified_on" +%s) ) / 86400 ))
-        echo "Last verified in a browser on $verified_on ($age_days days ago)."
-
-        if [ "$age_days" -gt "$REVERIFY_AFTER_DAYS" ]; then
-          echo "::error file=$REDIRECT_PAGE::The invite link has not been checked in a browser for $age_days days. Open $PUBLISHED_URL in a browser and confirm a new member can still join -- an exhausted or expired link looks identical to a working one over HTTP. Then update the last-verified date (and reissue the link first if it is dead)."
-          exit 1
-        fi
-
-    - name: Slack Notification
-      uses: weseek/ghaction-slack-notification@master
-      if: failure() && github.event_name != 'pull_request'
-      with:
-        type: ${{ job.status }}
-        job_name: '*Slack invite link needs a browser check*'
         channel: '#ci'
         isCompactMode: true
         url: ${{ secrets.SLACK_WEBHOOK_URL }}
