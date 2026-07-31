@@ -112,15 +112,24 @@ jobs:
         fi
         echo "$PUBLISHED_URL serves the current invite link."
 
+    # Installed outside the checkout, and the script is run from there too:
+    # npm cannot resolve this repo's dependency tree (vuepress-plugin-sitemap
+    # pins commander@^2 against the root's commander@14) and ESM ignores
+    # NODE_PATH, so the script has to sit next to its own node_modules.
     - name: Install Chromium
       run: |
-        npm install --no-save --no-fund --no-audit playwright
+        mkdir -p "$RUNNER_TEMP/invite-check"
+        cd "$RUNNER_TEMP/invite-check"
+        npm init -y > /dev/null
+        npm install --no-fund --no-audit playwright
         npx playwright install --with-deps chromium
 
     - name: Verify the invite link still accepts new members
       env:
         INVITE_URL: ${{ steps.extract.outputs.invite_url }}
-      run: node .github/workflows/scripts/check-invite-opens-join-page.mjs
+      run: |
+        cp .github/workflows/scripts/check-invite-opens-join-page.mjs "$RUNNER_TEMP/invite-check/"
+        node "$RUNNER_TEMP/invite-check/check-invite-opens-join-page.mjs"
 
     - name: Slack Notification
       uses: weseek/ghaction-slack-notification@master
