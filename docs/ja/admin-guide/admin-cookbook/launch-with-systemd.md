@@ -16,7 +16,7 @@ After=network.target mongod.service
 [Service]
 WorkingDirectory=/opt/growi
 Environment=PORT=3000\
-MONGO_URI=mongodb://localhost:27017/growi\
+MONGO_URI=mongodb://localhost:27017/growi?replicaSet=rs0\
 ELASTICSEARCH_URI=http://localhost:9200/growi
 ExecStart=/usr/bin/npm run app:server
 
@@ -34,7 +34,8 @@ GROWI のディレクトリのある場所を指定します。
 #### Environment
 
 環境変数を指定します。  
-`MONGO_URI` や `FILE_UPLOAD` などをここで指定します。
+`MONGO_URI` や `FILE_UPLOAD` などをここで指定します。  
+Elasticsearch 8.x に接続する場合は `ELASTICSEARCH_VERSION=8` も指定してください。GROWI の既定値は `9` です。
 
 #### ExecStart
 

@@ -16,7 +16,7 @@ After=network.target mongod.service
 [Service]
 WorkingDirectory=/opt/growi
 Environment=PORT=3000\
-MONGO_URI=mongodb://localhost:27017/growi\
+MONGO_URI=mongodb://localhost:27017/growi?replicaSet=rs0\
 ELASTICSEARCH_URI=http://localhost:9200/growi
 ExecStart=/usr/bin/npm run app:server
 
@@ -34,6 +34,7 @@ Set `WorkingDirectory` to the directory where GROWI is located. If you have foll
 #### Environment
 
 Set environment variables such as `MONGO_URI` and `FILE_UPLOAD`.
+When you connect to Elasticsearch 8.x, also set `ELASTICSEARCH_VERSION=8`. GROWI defaults to `9`.
 
 #### ExecStart
 

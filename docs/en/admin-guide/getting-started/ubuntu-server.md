@@ -8,11 +8,11 @@ This chapter introduces how to install GROWI on Ubuntu Server 22.04 (Jammy). Oth
 
 The software required for setup is as follows:
 
-* node.js 18.x or 20.x
-* npm 6.x
+* Node.js 24.x
+* npm 11.x (bundled with Node.js 24.x)
 * pnpm
-* MongoDB 4.4 or higher (6.0 or higher recommended)
-* (Option) Elasticsearch 7.x or 8.x
+* MongoDB 6.0 or higher (a replica set configuration is required)
+* (Option) Elasticsearch 8.x or 9.x
 * (Option) systemd
 * (Option) Apache or nginx
 
@@ -28,7 +28,7 @@ Install `git` and `curl` which are required during the installation process.
 $ sudo apt update && sudo apt -y install git curl
 ```
 
-## Installing node.js 20.x & npm
+## Installing Node.js 24.x & npm
 
 ### Using NodeSource repository
 
@@ -38,7 +38,7 @@ Get the Node.js installation script from [https://deb.nodesource.com/](https://d
 
 ```bash
 $ cd ~
-$ curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+$ curl -sL https://deb.nodesource.com/setup_24.x -o nodesource_setup.sh
 ```
 
 Execute the downloaded script.
@@ -55,30 +55,24 @@ $ sudo apt -y install nodejs
 
 Since GROWI uses pnpm for package installation, install the `pnpm` command here.
 
-For the `<version>` part, please check the official site information and select appropriately.
+For the `<version>` part, use the value that the GROWI you are installing declares in `packageManager` in its `package.json` (v8.0.0 declares `pnpm@11.1.1`).
 
 ```bash
 $ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sudo sh -
 $ sudo pnpm setup
 ```
 
-Also, since GROWI uses Turborepo for building, install the `turbo` command.
+GROWI uses Turborepo for building, but `turbo` is in devDependencies, so `pnpm install` below installs it. You do not need to install it globally.
 
-```bash
-$ sudo pnpm add turbo --global
-```
-
-After installing Node.js, npm, pnpm, and turbo, check the installed versions.
+After installing Node.js, npm, and pnpm, check the installed versions.
 
 ```bash
 $ nodejs -v
-v20.12.2
+v24.14.0
 $ npm -v
-10.5.0
+11.9.0
 $ pnpm -v
-9.12.2
-$ turbo --version
-2.1.3
+11.1.1
 ```
 
 ## Elasticsearch
@@ -86,6 +80,8 @@ $ turbo --version
 ### Installation
 
 Follow the [official page](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) to proceed with installation. Here we install Elasticsearch 8.x.
+
+GROWI v8.0 supports Elasticsearch 8.x and 9.x. GROWI defaults to 9.x, so when you use 8.x, set the environment variable `ELASTICSEARCH_VERSION` to `8` (see "Startup verification" below).
 
 First, install JDK17 to run Elasticsearch.
 
@@ -310,6 +306,38 @@ $ systemctl status mongod
 ...
 ```
 
+### Enabling a replica set configuration
+
+From GROWI v8.0, GROWI uses MongoDB change streams, so MongoDB has to run as a replica set. A single-node replica set is acceptable.
+
+Add the replica set name to `/etc/mongod.conf`. This example uses `rs0`.
+
+```yaml
+replication:
+  replSetName: rs0
+```
+
+Restart MongoDB to apply the setting.
+
+```bash
+$ sudo systemctl restart mongod
+```
+
+Initiate the replica set. This is only needed the first time.
+
+```bash
+$ mongosh --eval 'rs.initiate({ _id: "rs0", members: [{ _id: 0, host: "localhost:27017" }] })'
+```
+
+Check that this member has become `PRIMARY`.
+
+```bash
+$ mongosh --eval 'rs.status().members[0].stateStr'
+PRIMARY
+```
+
+GROWI connects to it with `?replicaSet=rs0` in `MONGO_URI` (see "Startup verification" below).
+
 ## GROWI
 
 ### Installation
@@ -362,12 +390,13 @@ After the build is complete, perform startup verification.
 
 This assumes that MongoDB and Elasticsearch are running on the same host.
 
-Please modify `MONGO_URI` and `ELASTICSEARCH_URI` according to your environment.
+Please modify `MONGO_URI` and `ELASTICSEARCH_URI` according to your environment. `ELASTICSEARCH_VERSION` takes the major version of the Elasticsearch you connect to. The steps on this page install 8.x, so set it to `8` (GROWI defaults to `9`).
 
 ```bash
 $ sudo \
-MONGO_URI=mongodb://localhost:27017/growi \
+MONGO_URI=mongodb://localhost:27017/growi?replicaSet=rs0 \
 ELASTICSEARCH_URI=http://localhost:9200/growi \
+ELASTICSEARCH_VERSION=8 \
 npm run app:server
 
 ...
