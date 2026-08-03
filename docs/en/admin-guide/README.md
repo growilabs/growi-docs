@@ -23,7 +23,7 @@ You can install on docker-compose, Ubuntu Server, and CentOS.
 We recommend installing with docker-compose to use the latest version.
 :::
 
-### [Upgrade](/en/admin-guide/upgrading/42x.html)
+### [Upgrade](/en/admin-guide/upgrading/)
 
 Upgrade guide from old versions of GROWI.
 About data integrity and other things to note.
