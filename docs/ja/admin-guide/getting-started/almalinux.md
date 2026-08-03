@@ -293,6 +293,38 @@ $ systemctl status mongod
 ...
 ```
 
+### レプリカセット構成の有効化
+
+GROWI v8.0 以降は MongoDB の change stream を利用するため、MongoDB をレプリカセット構成で運用する必要があります。単一ノードのレプリカセットでも構いません。
+
+`/etc/mongod.conf` に、レプリカセット名を追記します。ここでは `rs0` とします。
+
+```yaml
+replication:
+  replSetName: rs0
+```
+
+設定を反映するため、MongoDB を再起動します。
+
+```text
+$ sudo systemctl restart mongod
+```
+
+レプリカセットを初期化します。この操作が必要なのは初回のみです。
+
+```text
+$ mongosh --eval 'rs.initiate({ _id: "rs0", members: [{ _id: 0, host: "localhost:27017" }] })'
+```
+
+このノードが `PRIMARY` になったことを確認します。
+
+```text
+$ mongosh --eval 'rs.status().members[0].stateStr'
+PRIMARY
+```
+
+GROWI からは、`MONGO_URI` に `?replicaSet=rs0` を付けて接続します（後述の「起動確認」を参照）。
+
 ## GROWI
 
 ### Git LFS の導入
@@ -378,7 +410,7 @@ success
 
 ```text
 $ sudo \
-MONGO_URI=mongodb://localhost:27017/growi \
+MONGO_URI=mongodb://localhost:27017/growi?replicaSet=rs0 \
 ELASTICSEARCH_URI=http://localhost:9200/growi \
 npm run app:server
 

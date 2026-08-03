@@ -16,7 +16,7 @@ After=network.target mongod.service
 [Service]
 WorkingDirectory=/opt/growi
 Environment=PORT=3000\
-MONGO_URI=mongodb://localhost:27017/growi\
+MONGO_URI=mongodb://localhost:27017/growi?replicaSet=rs0\
 ELASTICSEARCH_URI=http://localhost:9200/growi
 ExecStart=/usr/bin/npm run app:server
 

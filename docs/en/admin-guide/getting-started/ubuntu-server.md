@@ -310,6 +310,38 @@ $ systemctl status mongod
 ...
 ```
 
+### Enabling a replica set configuration
+
+From GROWI v8.0, GROWI uses MongoDB change streams, so MongoDB has to run as a replica set. A single-node replica set is acceptable.
+
+Add the replica set name to `/etc/mongod.conf`. This example uses `rs0`.
+
+```yaml
+replication:
+  replSetName: rs0
+```
+
+Restart MongoDB to apply the setting.
+
+```bash
+$ sudo systemctl restart mongod
+```
+
+Initiate the replica set. This is only needed the first time.
+
+```bash
+$ mongosh --eval 'rs.initiate({ _id: "rs0", members: [{ _id: 0, host: "localhost:27017" }] })'
+```
+
+Check that this member has become `PRIMARY`.
+
+```bash
+$ mongosh --eval 'rs.status().members[0].stateStr'
+PRIMARY
+```
+
+GROWI connects to it with `?replicaSet=rs0` in `MONGO_URI` (see "Startup verification" below).
+
 ## GROWI
 
 ### Installation
@@ -366,7 +398,7 @@ Please modify `MONGO_URI` and `ELASTICSEARCH_URI` according to your environment.
 
 ```bash
 $ sudo \
-MONGO_URI=mongodb://localhost:27017/growi \
+MONGO_URI=mongodb://localhost:27017/growi?replicaSet=rs0 \
 ELASTICSEARCH_URI=http://localhost:9200/growi \
 npm run app:server
 

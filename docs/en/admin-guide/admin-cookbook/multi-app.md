@@ -37,7 +37,7 @@ services:
       - elasticsearch
     environment:
       # Use the same paths for app-1 in MONGO_URI and ELASTICSEARCH_URI
-      - MONGO_URI=mongodb://mongo:27017/growi-1
+      - MONGO_URI=mongodb://mongo:27017/growi-1?replicaSet=rs0
       - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-1
       - PASSWORD_SEED=changeme
     command: "dockerize
@@ -62,7 +62,7 @@ services:
       - elasticsearch
     environment:
       # Use the same paths for app-2 in MONGO_URI and ELASTICSEARCH_URI
-      - MONGO_URI=mongodb://mongo:27017/growi-2
+      - MONGO_URI=mongodb://mongo:27017/growi-2?replicaSet=rs0
       - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-2
       - PASSWORD_SEED=changeme
     command: "dockerize
@@ -87,7 +87,7 @@ services:
       - elasticsearch
     environment:
       # Use the same paths for app-3 in MONGO_URI and ELASTICSEARCH_URI
-      - MONGO_URI=mongodb://mongo:27017/growi-3
+      - MONGO_URI=mongodb://mongo:27017/growi-3?replicaSet=rs0
       - ELASTICSEARCH_URI=http://elasticsearch:9200/growi-3
       - PASSWORD_SEED=changeme
     command: "dockerize
