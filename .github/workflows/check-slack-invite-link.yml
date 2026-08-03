@@ -1,0 +1,144 @@
+name: Check Slack invite link
+
+# Watches the community Slack invite link served at https://docs.growi.org/slack
+# so that it never rots unnoticed again (growilabs/growi#11619: the previous
+# invite service was shut down and every "Join our Slack" link 404'd for months).
+#
+# The link does not only break when a service dies. One Slack shared invite link
+# accepts up to 400 sign-ups, "Never expires" stops working past 2,000
+# invitations, and an owner can revoke it -- so it has to be watched, not just
+# fixed once.
+#
+# curl cannot see any of that: Slack answers 403 with a byte-identical body to
+# scripted requests whether the invite is alive, expired, revoked or made up
+# (measured from a GitHub runner: 403 / 40789 bytes for both a valid and a
+# tampered token). A headless browser does get through, and the page title tells
+# the two apart:
+#
+#   valid token   -> HTTP 200, title "Join GROWI on Slack | Slack"
+#   invalid token -> HTTP 200, title "Create Account | Slack"
+#
+# So the liveness check drives Chromium and requires the join page title.
+
+on:
+  schedule:
+    # Daily, not weekly: the whole point is to shorten how long a dead invite
+    # link can stay dead. The run takes under a minute.
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'docs/.vuepress/public/slack/index.html'
+      - '.github/workflows/check-slack-invite-link.yml'
+      - '.github/workflows/scripts/check-invite-opens-join-page.mjs'
+  push:
+    branches:
+      - master
+    paths:
+      - 'docs/.vuepress/public/slack/index.html'
+      - '.github/workflows/check-slack-invite-link.yml'
+      - '.github/workflows/scripts/check-invite-opens-join-page.mjs'
+
+permissions:
+  contents: read
+
+env:
+  REDIRECT_PAGE: docs/.vuepress/public/slack/index.html
+  PUBLISHED_URL: https://docs.growi.org/slack
+
+jobs:
+
+  check-link:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Extract the invite link
+      id: extract
+      run: |
+        urls=$(grep -oE 'https://join\.slack\.com/t/[A-Za-z0-9._-]+/shared_invite/[A-Za-z0-9_-]+' "$REDIRECT_PAGE" | sort -u || true)
+        count=$(printf '%s' "$urls" | grep -c . || true)
+
+        if [ "$count" -eq 0 ]; then
+          echo "::error file=$REDIRECT_PAGE::No Slack invite URL found. The page must contain a https://join.slack.com/t/<workspace>/shared_invite/<token> URL."
+          exit 1
+        fi
+        if [ "$count" -gt 1 ]; then
+          echo "::error file=$REDIRECT_PAGE::Found $count different invite URLs, expected 1. Every occurrence must be updated together:"
+          echo "$urls"
+          exit 1
+        fi
+
+        echo "invite_url=$urls" >> "$GITHUB_OUTPUT"
+        echo "Invite URL: $urls"
+
+    - name: Verify the invite link still resolves as a Slack shared invite
+      run: |
+        invite_url='${{ steps.extract.outputs.invite_url }}'
+        workspace=$(printf '%s' "$invite_url" | sed -E 's#https://join\.slack\.com/t/([^/]+)/shared_invite/.*#\1#')
+        token=$(printf '%s' "$invite_url" | sed -E 's#.*/shared_invite/##')
+        expected="https://${workspace}.slack.com/join/shared_invite/${token}"
+
+        response=$(curl -sS --max-time 20 --max-redirs 0 -o /dev/null -w '%{http_code} %{redirect_url}' "$invite_url")
+        code=$(printf '%s' "$response" | cut -d' ' -f1)
+        location=$(printf '%s' "$response" | cut -d' ' -f2-)
+
+        echo "HTTP $code -> $location"
+
+        if [ "$code" != "301" ] && [ "$code" != "302" ]; then
+          echo "::error::Expected a redirect from $invite_url but got HTTP $code. The link, or the URL form Slack uses for shared invites, is gone."
+          exit 1
+        fi
+        if [ "$location" != "$expected" ]; then
+          echo "::error::$invite_url redirected to $location instead of $expected. Reissue the invite link and update $REDIRECT_PAGE."
+          exit 1
+        fi
+
+    # Not on push: the Deploy docs-growi-org workflow is still running at that
+    # point, so the published page would legitimately be behind.
+    - name: Verify the deployed page serves the same link
+      if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+      run: |
+        invite_url='${{ steps.extract.outputs.invite_url }}'
+        body=$(curl -sSL --max-time 20 -w '\n%{http_code}' "$PUBLISHED_URL")
+        code=$(printf '%s' "$body" | tail -n 1)
+
+        if [ "$code" != "200" ]; then
+          echo "::error::$PUBLISHED_URL returned HTTP $code. Every 'Join our Slack' link points here, so it must stay reachable."
+          exit 1
+        fi
+        if ! printf '%s' "$body" | grep -qF "$invite_url"; then
+          echo "::error::$PUBLISHED_URL does not serve $invite_url. The deployed page is out of date -- check the Deploy docs-growi-org workflow."
+          exit 1
+        fi
+        echo "$PUBLISHED_URL serves the current invite link."
+
+    # Installed outside the checkout, and the script is run from there too:
+    # npm cannot resolve this repo's dependency tree (vuepress-plugin-sitemap
+    # pins commander@^2 against the root's commander@14) and ESM ignores
+    # NODE_PATH, so the script has to sit next to its own node_modules.
+    - name: Install Chromium
+      run: |
+        mkdir -p "$RUNNER_TEMP/invite-check"
+        cd "$RUNNER_TEMP/invite-check"
+        npm init -y > /dev/null
+        npm install --no-fund --no-audit playwright
+        npx playwright install --with-deps chromium
+
+    - name: Verify the invite link still accepts new members
+      env:
+        INVITE_URL: ${{ steps.extract.outputs.invite_url }}
+      run: |
+        cp .github/workflows/scripts/check-invite-opens-join-page.mjs "$RUNNER_TEMP/invite-check/"
+        node "$RUNNER_TEMP/invite-check/check-invite-opens-join-page.mjs"
+
+    - name: Slack Notification
+      uses: weseek/ghaction-slack-notification@master
+      if: failure() && github.event_name != 'pull_request'
+      with:
+        type: ${{ job.status }}
+        job_name: '*Check Slack invite link*'
+        channel: '#ci'
+        isCompactMode: true
+        url: ${{ secrets.SLACK_WEBHOOK_URL }}
