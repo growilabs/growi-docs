@@ -157,7 +157,7 @@ cd growi
 docker-compose stop
 ```
 
-既存の Docker コンテナと Docker イメージを削除します。イメージのタグ（下記例の `growilabs/growi:7`）は利用中のバージョンに合わせて読み替えてください。Elasticsearch を移行する場合は、コンテナだけでなく Elasticsearch が使用していた docker volume も削除してください（残っていると旧バージョンのインデックスデータが原因で起動に失敗します。ボリューム名は `docker volume ls` で確認できます。既定の compose 構成では `<フォルダ名>_es_data` という名前になります）。
+既存の Docker コンテナと Docker イメージを削除します。イメージのタグ（下記例の `growilabs/growi:7`）は利用中のバージョンに合わせて読み替えてください。Elasticsearch を移行する場合は、コンテナだけでなく Elasticsearch が使用していた docker volume も削除してください。残っていると、旧バージョンのインデックスデータが原因で起動に失敗します。ボリューム名は `docker volume ls` で確認でき、既定の compose 構成では `<フォルダ名>_es_data` になります。
 
 ```bash
 docker-compose rm app mongo elasticsearch
@@ -165,7 +165,7 @@ docker rmi growilabs/growi:7
 docker volume rm growi_es_data  # Elasticsearch を移行する場合のみ。フォルダ名が growi 以外なら読み替える
 ```
 
-最新版を pull し、Docker イメージを作成した後、コンテナを起動します。B-2 で `docker-compose.yml` を編集している場合、`git pull` がその変更点と衝突することがあります。あらかじめ `git stash` で変更を退避したうえで `git pull` を実行し、`git stash pop` で戻してから、MongoDB・Elasticsearch のバージョン指定が意図したとおりに残っているか確認してください。
+最新版を pull し、Docker イメージを作成した後、コンテナを起動します。B-2 で `docker-compose.yml` を編集している場合、`git pull` がその変更点と衝突することがあります。その場合は `git stash` に変更を退避してから `git pull` を実行し、`git stash pop` を実行して戻したあと、MongoDB・Elasticsearch のバージョン指定が意図したとおりに残っているか確認してください。
 
 ```bash
 git pull
@@ -296,9 +296,9 @@ A・B の表からリンクする、対応ごとの詳細手順です。
 - **参考**: [v8.0.x](/ja/admin-guide/upgrading/80x.html#管理者向け)
 
 1. 現在の MongoDB の構成が standalone か、レプリカセットかを確認します。
-1. GROWI Vault が MongoDB の change stream を利用するため、v8.0 以降ではレプリカセット構成が必須です。change stream はレプリカセット構成でのみ利用できます。
+1. GROWI v8.0 以降は MongoDB の change stream を利用するため、レプリカセット構成が必須です。change stream はレプリカセット構成でのみ利用できます。
 1. standalone 構成の場合は、レプリカセット構成へ移行します。単一ノードのレプリカセットでも構いません。
-1. [growi-docker-compose](https://github.com/growilabs/growi-docker-compose) を利用している場合、同リポジトリの `docker-compose.yml` は既にレプリカセット（`rs0`）構成になっています。最新版を pull すればその構成で起動しますが、既存の standalone 構成の MongoDB データはそのままでは昇格されないため、上記の手順で事前にレプリカセットへ変換してください。
+1. [growi-docker-compose](https://github.com/growilabs/growi-docker-compose) を利用している場合は、同リポジトリの最新の `docker-compose.yml` が MongoDB をレプリカセット（`rs0`）構成で起動するようになっています。最新版を取得してください。
 
 #### MongoDB コネクションプールの上限を引き上げる
 
@@ -596,7 +596,7 @@ v6.0 から v7.0 にかけて、Markdown の記法とレンダリング結果が
 1. v6.0 以降、起動時に XSS 対策設定は「おすすめ設定」を選択した状態にリセットされ、過去の設定は引き継がれません。
 1. 「全てのタグを削除」モードは廃止されているため、選択できません。
 1. カスタムホワイトリストを利用していた場合は、管理画面のマークダウン設定（`/admin/markdown`）から再設定します。入力形式は [マークダウン設定](/ja/admin-guide/management-cookbook/markdown.html#xss-cross-site-scripting-対策設定) を参照してください。
-1. **GROWI v6.0.0〜v7.0.11 には、カスタムホワイトリストの入力値が正しく反映されないバグがあります。** バグ自体は v6.0.0 から存在しますが、症状が顕在化するのは v7.0.10 以降で、マークダウン中の HTML タグが正常にレンダリングされなくなります。該当する場合は、次のいずれかで対処してください。
+1. **GROWI v6.0.0〜v7.0.11 では、カスタムホワイトリストに入力した値が正しく反映されません。** 不具合自体は v6.0.0 から存在しますが、症状が顕在化するのは v7.0.10 以降で、マークダウン中の HTML タグを正常にレンダリングできなくなります。該当する場合は、次のいずれかで対処してください。
     - おすすめ設定を利用する
     - v7.0.12 以降にアップグレードしたうえでカスタムホワイトリストを選択し、タグ名・タグ属性ともにおすすめ設定の値をインポートして、それをベースに設定を変更する
 

@@ -157,14 +157,14 @@ cd growi
 docker-compose stop
 ```
 
-Remove the existing Docker containers and Docker images. Replace the image tag (`growilabs/growi:7` in the example below) with the version you are running. If you are migrating Elasticsearch, also remove the docker volume that Elasticsearch was using, not just the container (if it remains, the old version's index data can cause startup to fail).
+Remove the existing Docker containers and Docker images. Replace the image tag (`growilabs/growi:7` in the example below) with the version you are running. If you are migrating Elasticsearch, also remove the docker volume that Elasticsearch was using, not just the container. If it remains, the old version's index data can cause startup to fail. You can find the volume name with `docker volume ls`; with the default compose setup it is `<folder name>_es_data`.
 
 ```bash
 docker-compose rm app mongo elasticsearch
 docker rmi growilabs/growi:7
 ```
 
-Pull the latest version, build the Docker image, and start the containers. This conflicts with `docker-compose.yml` if you edited it in B-2; resolve it by keeping the MongoDB and Elasticsearch version settings you decided on there.
+Pull the latest version, build the Docker image, and start the containers. If you edited `docker-compose.yml` in B-2, `git pull` can conflict with those edits. Stash your changes with `git stash` before running `git pull`, restore them with `git stash pop`, and then check that the MongoDB and Elasticsearch version settings you decided on are still in place.
 
 ```bash
 git pull
@@ -295,9 +295,9 @@ These are the detailed steps for each task, linked from the A and B tables.
 - **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators)
 
 1. Check whether your current MongoDB runs as a standalone instance or as a replica set.
-1. Because GROWI Vault uses MongoDB change streams, a replica set is required from v8.0 onward. Change streams are only available on a replica set.
+1. From v8.0, GROWI uses MongoDB change streams, so a replica set is required. Change streams are only available on a replica set.
 1. If you run a standalone configuration, migrate to a replica set. A single-node replica set is acceptable.
-1. If you use [growi-docker-compose](https://github.com/growilabs/growi-docker-compose), refer to the updates in that repository when migrating.
+1. If you use [growi-docker-compose](https://github.com/growilabs/growi-docker-compose), the latest `docker-compose.yml` in that repository already starts MongoDB as a replica set (`rs0`). Pull the latest version.
 
 #### Raise the MongoDB connection pool limits
 
@@ -595,7 +595,7 @@ You cannot run the bulk rewrite of page content with `bin/data-migrations` yours
 1. From v6.0, the XSS prevention settings are reset at startup to the state where "Recommended settings" is selected, and the previous settings are not carried over.
 1. The "Remove All Tags" mode has been removed and can no longer be selected.
 1. If you used a custom whitelist, configure it again from the Markdown settings (`/admin/markdown`) in the admin panel. For the input format, see [Markdown Settings](/en/admin-guide/management-cookbook/markdown.html#prevent-xss-cross-site-scripting-setting).
-1. **GROWI v6.0.0 - v7.0.11 have a bug in the custom whitelist.** The values you enter are not applied correctly. Upgrading to v7.0.10 or later brings this problem to the surface, and HTML tags in Markdown can no longer be rendered correctly. If this applies to you, take one of the following measures.
+1. **In GROWI v6.0.0 - v7.0.11, the values you enter in the custom whitelist are not applied correctly.** The bug itself exists from v6.0.0, but the symptom surfaces from v7.0.10 onward, where HTML tags in Markdown can no longer be rendered correctly. If this applies to you, take one of the following measures.
     - Use the recommended settings
     - Upgrade to v7.0.12 or later, select the custom whitelist, import the values of the recommended settings for both tag names and tag attributes, and change the settings based on them
 
