@@ -34,6 +34,7 @@ Set `WorkingDirectory` to the directory where GROWI is located. If you have foll
 #### Environment
 
 Set environment variables such as `MONGO_URI` and `FILE_UPLOAD`.
+When you connect to Elasticsearch 8.x, also set `ELASTICSEARCH_VERSION=8`. GROWI defaults to `9`.
 
 #### ExecStart
 

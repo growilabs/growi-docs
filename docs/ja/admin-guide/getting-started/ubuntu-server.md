@@ -8,11 +8,11 @@
 
 セットアップに必要となるソフトウェアは以下の通りです。
 
-* node.js 18.x or 20.x
-* npm 6.x
+* Node.js 24.x
+* npm 11.x \(Node.js 24.x に同梱\)
 * pnpm
-* MongoDB 4.4 以上 \(6.0 以上を推奨\)
-* \(Option\) Elasticsearch 7.x or 8.x
+* MongoDB 6.0 以上 \(レプリカセット構成が必須\)
+* \(Option\) Elasticsearch 8.x or 9.x
 * \(Option\) systemd
 * \(Option\) Apache or nginx
 
@@ -28,7 +28,7 @@ Optional となっているものは必須ではありません。ただし、�
 $ sudo apt update && sudo apt -y install git curl
 ```
 
-## node.js 20.x & npm のインストール
+## Node.js 24.x & npm のインストール
 
 ### NodeSource repository を利用する
 
@@ -38,7 +38,7 @@ $ sudo apt update && sudo apt -y install git curl
 
 ```bash
 $ cd ~
-$ curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+$ curl -sL https://deb.nodesource.com/setup_24.x -o nodesource_setup.sh
 ```
 
 取得したスクリプトを実行します。
@@ -55,30 +55,24 @@ $ sudo apt -y install nodejs
 
 GROWI では pnpm を用いたパッケージインストールを利用するため、ここで `pnpm` コマンドをインストールしておきます。
 
-`<version>` 部分は公式サイトの情報を確認し、適宜選択してください。
+`<version>` 部分は、インストールする GROWI が `package.json` の `packageManager` で宣言している値に合わせてください（v8.0.0 は `pnpm@11.1.1`）。
 
 ```bash
 $ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sudo sh -
 $ sudo pnpm setup
 ```
 
-また、GROWI では Turborepo を用いてビルドを行うため、`turbo` コマンドをインストールします。
+GROWI は Turborepo を用いてビルドしますが、`turbo` は devDependencies に含まれるため、後述の `pnpm install` で導入されます。グローバルインストールは不要です。
 
-```bash
-$ sudo pnpm add turbo --global
-```
-
-Node.js, npm, pnpm, turbo のインストールが完了したら、インストールしたバージョンを確認しましょう。
+Node.js, npm, pnpm のインストールが完了したら、インストールしたバージョンを確認しましょう。
 
 ```bash
 $ nodejs -v
-v20.12.2
+v24.14.0
 $ npm -v
-10.5.0
+11.9.0
 $ pnpm -v
-9.12.2
-$ turbo --version
-2.1.3
+11.1.1
 ```
 
 ## Elasticsearch
@@ -86,6 +80,8 @@ $ turbo --version
 ### インストール
 
 [公式ページ](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) に従い、インストールを進めます。 ここでは Elasticsearch 8.x をインストールします。
+
+GROWI v8.0 が対応する Elasticsearch は 8.x・9.x です。GROWI 側の既定は 9.x のため、8.x を利用する場合は環境変数 `ELASTICSEARCH_VERSION` に `8` を指定します（後述の「起動確認」を参照）。
 
 まず、Elasticsearch を実行できるように JDK17 をインストールします。
 
@@ -394,12 +390,13 @@ $ pnpm run app:build
 
 ここでは MongoDB と Elasticsearch が同一ホストで稼働していることを前提としています。
 
-`MONGO_URI` と `ELASTICSEARCH_URI` は環境に合わせて適宜書き換えてください。
+`MONGO_URI` と `ELASTICSEARCH_URI` は環境に合わせて適宜書き換えてください。`ELASTICSEARCH_VERSION` には、接続先 Elasticsearch のメジャーバージョンを指定します。本ページの手順では 8.x をインストールしているため `8` を指定します（GROWI 側の既定値は `9` です）。
 
 ```bash
 $ sudo \
 MONGO_URI=mongodb://localhost:27017/growi?replicaSet=rs0 \
 ELASTICSEARCH_URI=http://localhost:9200/growi \
+ELASTICSEARCH_VERSION=8 \
 npm run app:server
 
 ...
