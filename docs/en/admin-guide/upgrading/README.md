@@ -35,7 +35,7 @@ The latest release series receives continuous improvements in features, performa
 
 ### A-2. Tasks to complete before upgrading on GROWI.cloud
 
-| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
+| Task<br />Your current version → | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [Required] [Notify users about the introduction of WIP pages, the change in the new page creation flow, and the change in how full-text search is invoked](#notify-users-about-wip-pages-and-ui-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [Required] [Notify users of the v5 specification changes (move / rename / delete including descendants, permalink URLs, UI changes)](#notify-users-of-the-v5-specification-changes) | | | | | | | | | ✓ |
@@ -64,7 +64,7 @@ For details, see the Dev Wiki page [Revision data migration bug in v5.0.0 - v7.0
 
 ### A-4. Tasks to complete after upgrading on GROWI.cloud
 
-| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
+| Task<br />Your current version → | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [Required] [Rebuilding the full-text search index](#rebuilding-the-full-text-search-index) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you used the legacy AI integration features: configure them again with the GROWI AI Agent method](#reconfigure-growi-ai-agent) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -89,7 +89,7 @@ Carry out the tasks under "Middleware" **with GROWI itself stopped, as part of t
 
 #### Middleware
 
-| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
+| Task<br />Your current version → | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [Required] [Upgrade MongoDB to v6.0 or later (one major version at a time, without skipping)](#upgrade-mongodb-to-v6-0-or-later) | | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you use Elasticsearch v7 or earlier: migrate to v8 or v9 (rebuilding the index is recommended)](#migrate-elasticsearch-to-v8-or-v9) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -98,7 +98,7 @@ Carry out the tasks under "Middleware" **with GROWI itself stopped, as part of t
 
 #### Infrastructure and storage
 
-| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
+| Task<br />Your current version → | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [If applicable] [When you use S3-compatible object storage: add s3:AbortMultipartUpload to the IAM policy](#add-s3-abortmultipartupload-to-the-iam-policy) | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you use the official Docker image: check the operational impact of the move to Docker Hardened Images (no shell or package manager included)](#check-the-operational-impact-of-docker-hardened-images) | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -107,7 +107,7 @@ Carry out the tasks under "Middleware" **with GROWI itself stopped, as part of t
 
 #### Environment variables and settings
 
-| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
+| Task<br />Your current version → | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [If applicable] [For large environments with roughly more than 500 active users: consider raising the MongoDB connection pool limit](#raise-the-mongodb-connection-pool-limits) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When LOCAL_STRATEGY_ENABLED / SAML_ENABLED are set: check the actual enabled/disabled state of each authentication method at /login](#check-the-actual-state-of-local-strategy-enabled-and-saml-enabled) | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -118,20 +118,20 @@ Carry out the tasks under "Middleware" **with GROWI itself stopped, as part of t
 
 #### Building from source
 
-| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
+| Task<br />Your current version → | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [If applicable] [When you build from source yourself: adapt to the build tool changes (Lerna to Turborepo, yarn v1 to pnpm)](#adapt-to-the-build-tool-changes-when-building-from-source) | | | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 #### Removed features
 
-| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
+| Task<br />Your current version → | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [If applicable] [When you use HackMD integration: migrate to simultaneous editing in the built-in editor and consider decommissioning the HackMD server](#migrate-from-hackmd-integration-to-simultaneous-editing-in-the-built-in-editor) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you monitor GROWI with Promster: review your monitoring setup](#review-your-monitoring-setup-that-uses-promster) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 #### Notifying your users
 
-| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
+| Task<br />Your current version → | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [Required] [Notify users about the introduction of WIP pages, the change in the new page creation flow, and the change in how full-text search is invoked](#notify-users-about-wip-pages-and-ui-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [Required] [Notify users of the v5 specification changes (move / rename / delete including descendants, permalink URLs, UI changes)](#notify-users-of-the-v5-specification-changes) | | | | | | | | | ✓ |
@@ -207,7 +207,7 @@ For automatic startup with systemd, see [Autostart using systemd](https://docs.g
 
 #### Reconfiguration
 
-| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
+| Task<br />Your current version → | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [Required] [Rebuilding the full-text search index](#rebuilding-the-full-text-search-index) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [If applicable] [When you used the AI integration features: the legacy AI settings have been removed, so configure them again with the GROWI AI Agent method](#reconfigure-growi-ai-agent) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -216,14 +216,14 @@ For automatic startup with systemd, see [Autostart using systemd](https://docs.g
 
 #### Data and file migration
 
-| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
+| Task<br />Your current version → | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [If applicable] [When you use FILE_UPLOAD=local: move the attachments to the new storage directory](#move-attachments-to-the-new-location-when-file-upload-local) | | | | | | | ✓ | ✓ | ✓ |
 | [If applicable] [When unconverted pages created in v4.5 or earlier remain: convert them to the v5 Compatible Format (public pages can be converted in bulk from the admin page; legacy private pages are converted by each user)](#convert-unconverted-pages-to-the-v5-compatible-format) | | | | | | | | ✓ | ✓ |
 
 #### Rewriting page content
 
-| Task | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
+| Task<br />Your current version → | v7.5.x | v7.2.x - v7.4.x | v7.1.x | v7.0.x | v6.3.x | v6.1.x - v6.2.x | v6.0.x | v5.x | v4.x or earlier |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | [If applicable] [Rewrite existing page content affected by the syntax and HTML changes in bulk with the data-migrations scripts](#rewrite-page-content-affected-by-the-syntax-and-html-changes) | | | | | ✓ | ✓ | ✓ | ✓ | ✓ |
 
