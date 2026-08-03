@@ -31,7 +31,7 @@ The latest release series receives continuous improvements in features, performa
 ### A-1. Check your current version
 
 - You can check the version of the GROWI app you are currently running in the "Version" field of the app detail screen on GROWI.cloud ([Version](https://growi.cloud/help/en/cloud/version.html)).
-- GROWI.cloud takes backups automatically, depending on your contracted plan ([Backup](https://growi.cloud/help/en/cloud/backup.html)). If you would like a backup restored, please contact us through the [inquiry page](https://growicloud.atlassian.net/servicedesk/customer/portal/1).
+- GROWI.cloud takes backups automatically, depending on your contracted plan ([Backup](https://growi.cloud/help/en/cloud/backup.html)). If you would like a backup restored, please contact us through the [GROWI.cloud Service Desk](https://growicloud.atlassian.net/servicedesk/customer/portal/1).
 
 ### A-2. Tasks to complete before upgrading on GROWI.cloud
 
@@ -47,7 +47,7 @@ The latest release series receives continuous improvements in features, performa
 | [If applicable] [When you use the Custom HTML Header: migrate to Custom Noscript or a custom script](#migrate-away-from-the-custom-html-header) | | | | | | | | ✓ | ✓ |
 | [If applicable] [When you use Twitter OAuth 2 authentication: migrate to another authentication method](#migrate-from-twitter-oauth-2-authentication-to-another-authentication-method) | | | | | | | | ✓ | ✓ |
 
-If you have any questions about an item that is not listed here, please contact us through the [inquiry page](https://growicloud.atlassian.net/servicedesk/customer/portal/1).
+If you have any questions about an item that is not listed here, please contact us through the [GROWI.cloud Service Desk](https://growicloud.atlassian.net/servicedesk/customer/portal/1).
 
 ### A-3. Upgrading to the latest version on GROWI.cloud
 
@@ -162,9 +162,10 @@ Remove the existing Docker containers and Docker images. Replace the image tag (
 ```bash
 docker-compose rm app mongo elasticsearch
 docker rmi growilabs/growi:7
+docker volume rm growi_es_data  # only when migrating Elasticsearch; replace growi if your folder name differs
 ```
 
-Pull the latest version, build the Docker image, and start the containers. If you edited `docker-compose.yml` in B-2, `git pull` can conflict with those edits. Stash your changes with `git stash` before running `git pull`, restore them with `git stash pop`, and then check that the MongoDB and Elasticsearch version settings you decided on are still in place.
+Pull the latest version, build the Docker image, and start the containers. If you edited `docker-compose.yml` in B-2, `git pull` can conflict with those edits. Stash your changes with `git stash` before running `git pull`, restore them with `git stash pop`, and then check that the MongoDB and Elasticsearch version settings you decided on are still in place. Also check that MongoDB is still set up to start as a replica set (`--replSet` and `?replicaSet=` in `MONGO_URI`).
 
 ```bash
 git pull
@@ -195,7 +196,7 @@ Specify `MONGO_URI` and `ELASTICSEARCH_URI` for your environment and confirm tha
 
 ```bash
 $ sudo \
-MONGO_URI=mongodb://localhost:27017/growi \
+MONGO_URI=mongodb://localhost:27017/growi?replicaSet=rs0 \
 ELASTICSEARCH_URI=http://localhost:9200/growi \
 npm run app:server
 ```
@@ -232,89 +233,6 @@ These are the detailed steps for each task, linked from the A and B tables.
 
 ### Procedures to carry out before upgrading
 
-#### Upgrade MongoDB to v6.0 or later
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v7.1
-- **When it applies**: When you use MongoDB v5.0 or earlier
-- **References**: [v7.1.x](/en/admin-guide/upgrading/71x.html#for-admin), [Upgrading MongoDB](https://docs.growi.org/en/admin-guide/admin-cookbook/upgrade-mongodb.html)
-
-1. Check the version of MongoDB you are running.
-1. If it is older than v6.0, upgrade one major version at a time without skipping (for example, to go from v4.4 to v6.0, go through v5.0 first). For the steps, see [Upgrading MongoDB](https://docs.growi.org/en/admin-guide/admin-cookbook/upgrade-mongodb.html).
-1. Support for MongoDB v4.4 and v5.0 has ended, so be sure to finish on v6.0 or later.
-
-#### Notify users about WIP pages and UI changes
-
-- **When to do this**: Before upgrading (notify users)
-- **Introduced in**: v7.0
-- **When it applies**: When upgrading from v6.3.x or earlier
-- **References**: [v7.0.x](/en/admin-guide/upgrading/70x.html#for-user)
-
-1. From v7.0, a page is saved as a WIP (Work In Progress) page such as "Untitled-1" as soon as the edit screen is opened (up to v6, no page data was created until you saved).
-1. A newly created WIP page is deleted automatically after a certain period from creation (48 hours by default; configurable with the environment variable `WIP_PAGE_EXPIRATION_SECONDS`). Pages created from the page tree or from the new page creation modal are also covered. However, once a page has been updated at least once after creation (whether saved as WIP or saved normally), it is no longer subject to automatic deletion.
-1. The new page creation button moves from the navbar at the top of the screen into the sidebar at the top left.
-1. Where and how you invoke the full-text search feature changes.
-1. Notify your users of these changes before upgrading.
-
-#### Notify users of the v5 specification changes
-
-- **When to do this**: Before upgrading (notify users)
-- **Introduced in**: v5.0
-- **When it applies**: When upgrading from v4.x or earlier
-- **References**: [v5.0.x](/en/admin-guide/upgrading/50x.html)
-
-1. In v5.0, the URL used when viewing and navigating pages changes from the page path to a permalink.
-1. Moving, renaming, or deleting a parent page also affects the pages under it, regardless of whether the user can view them (pages set to "Anyone with the link" are excluded).
-1. A page tree is added to the sidebar.
-1. Icons that used to sit above the table of contents, such as Change Log, Attached Data, and Shared Link Management, move into the three dot leader dropdown.
-1. An example announcement you can copy and use as-is is published in "Example of Well-known Content to Users" on [Upgrading GROWI to v5.0.x](/en/admin-guide/upgrading/50x.html#example-of-well-known-content-to-users).
-
-#### Migrate Elasticsearch to v8 or v9
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v8.0 (support for the Elasticsearch v7 series has ended)
-- **When it applies**: When you use Elasticsearch v7 or earlier
-- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators)
-
-1. Check the major version of Elasticsearch you are running. GROWI v8.0.x supports only the v8 and v9 series (the default is v9).
-1. If you use v7 or earlier, prepare a new Elasticsearch v8 or v9. We recommend creating a new index rather than carrying over the existing one. The steps are as follows (when using docker).
-    1. Remove the Elasticsearch container you were using.
-    1. Remove the docker volume that the Elasticsearch container used.
-    1. Start the new Elasticsearch container (make sure no index data for GROWI exists).
-    1. Start GROWI (after startup, you can rebuild the index from the Elasticsearch Management page).
-
-    For an on-premises installation, uninstall the old version, install the new version from scratch, and likewise make sure that no index for GROWI exists before starting GROWI.
-1. Set the environment variable `ELASTICSEARCH_VERSION` to the major version you connect to (`8` or `9`; the default is `9`).
-1. If you start GROWI v8.0 or later while still on Elasticsearch v7, full-text search fails to initialize and becomes unavailable (the server process itself still starts, but an error is logged). Always migrate before upgrading.
-
-#### Migrate MongoDB to a replica set configuration
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v8.0
-- **When it applies**: When you run MongoDB in a standalone configuration (required from GROWI v8.0)
-- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators)
-
-1. Check whether your current MongoDB runs as a standalone instance or as a replica set.
-1. From v8.0, GROWI uses MongoDB change streams, so a replica set is required. Change streams are only available on a replica set.
-1. If you run a standalone configuration, migrate to a replica set. A single-node replica set is acceptable.
-1. If you use [growi-docker-compose](https://github.com/growilabs/growi-docker-compose), the latest `docker-compose.yml` in that repository already starts MongoDB as a replica set (`rs0`). Pull the latest version.
-
-#### Raise the MongoDB connection pool limits
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v8.0
-- **When it applies**: For large environments with many active users (roughly more than 500)
-- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators), [Environment Variables](https://docs.growi.org/en/admin-guide/admin-cookbook/env-vars.html)
-
-1. From GROWI v8.0, the default upper limit of the MongoDB connection pool is reduced compared with previous versions.
-1. In large environments with many active users, many pages, or high access frequency, the default may be insufficient.
-1. If that applies to you, raise the upper and lower limits with the following environment variables.
-
-    | Environment variable | Description | Default |
-    | --- | --- | --- |
-    | `MONGO_MAX_POOL_SIZE` | Maximum number of connections in the MongoDB connection pool | `15` |
-    | `MONGO_MIN_POOL_SIZE` | Minimum number of connections in the MongoDB connection pool | `2` |
-
 #### Upgrade Node.js to v24
 
 - **When to do this**: Before upgrading
@@ -341,27 +259,97 @@ These are the detailed steps for each task, linked from the A and B tables.
 1. GROWI v7.5.0 uses the built-in function `RegExp.escape()`, added in Node.js v24, to process page paths. If you upgrade while staying on the v18 or v20 series, this function does not exist, so operations such as moving or duplicating pages fail at runtime. Make sure you complete this task before upgrading GROWI itself.
 1. If you use the official Docker image, this task is not needed.
 
-#### Add s3:AbortMultipartUpload to the IAM policy
+#### Adapt to the build tool changes when building from source
 
 - **When to do this**: Before upgrading
-- **Introduced in**: v7.5
-- **When it applies**: When you use S3-compatible object storage (on GROWI.cloud, when you specify Owned AWS as the file storage destination)
-- **References**: [v7.5.x](/en/admin-guide/upgrading/75x.html#for-administrators)
+- **Introduced in**: v6.1 (Lerna to Turborepo), v7.1 (yarn to pnpm)
+- **When it applies**: When you build from source yourself (not needed when you use the official Docker image)
+- **References**: [v6.1.x](/en/admin-guide/upgrading/61x.html#for-admin), [v7.1.x](/en/admin-guide/upgrading/71x.html#for-admin)
 
-1. From v7.5.x, the upload method to S3 changes from a single PutObject to multipart upload (files of 5 MB or smaller fall back to PutObject).
-1. Add the `s3:AbortMultipartUpload` permission to your IAM policy.
-1. `CreateMultipartUpload`, `CompleteMultipartUpload`, and `UploadPart` are included in `s3:PutObject` in IAM, so `s3:AbortMultipartUpload` is the only permission you need to add.
+1. From v7.1, the package manager and task runner change from yarn (v1) to pnpm. GROWI v8.0.0 declares `packageManager: pnpm@11.1.1`, so install the latest version, referring to the [pnpm official site](https://pnpm.io/installation).
 
-#### Check the operational impact of Docker Hardened Images
+    ```bash
+    $ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sudo sh -
+    $ sudo pnpm setup
+    ```
+
+1. From v6.1, the build tool changes from Lerna to [Turborepo](https://turbo.build/repo). GROWI v8.0.0 includes `turbo` in its devDependencies, so it is installed automatically when you run `pnpm install`; a separate global install is not needed.
+1. Check the versions you installed.
+
+    ```bash
+    $ node -v
+    $ pnpm -v
+    ```
+
+1. If you ran npm scripts with the `yarn` command, change those commands to `pnpm run` or `npm run`.
+
+#### Upgrade MongoDB to v6.0 or later
 
 - **When to do this**: Before upgrading
-- **Introduced in**: v7.5
-- **When it applies**: When you use the official Docker image
-- **References**: [v7.5.x](/en/admin-guide/upgrading/75x.html#for-administrators)
+- **Introduced in**: v7.1
+- **When it applies**: When you use MongoDB v5.0 or earlier
+- **References**: [v7.1.x](/en/admin-guide/upgrading/71x.html#for-admin), [Upgrading MongoDB](https://docs.growi.org/en/admin-guide/admin-cookbook/upgrade-mongodb.html)
 
-1. From v7.5.x, the base image of the official Docker image changes to a [Docker Hardened Image (DHI)](https://www.docker.com/products/hardened-images/). A DHI does not include a shell (`sh`, `bash`) or a package manager.
-1. Check whether your operations rely on entering the container interactively with `docker exec`.
-1. If you customize the official image (installing additional packages, using your own entry point, and so on), verify before upgrading that it still works on a DHI.
+1. Check the version of MongoDB you are running.
+1. If it is older than v6.0, upgrade one major version at a time without skipping (for example, to go from v4.4 to v6.0, go through v5.0 first). For the steps, see [Upgrading MongoDB](https://docs.growi.org/en/admin-guide/admin-cookbook/upgrade-mongodb.html).
+1. Support for MongoDB v4.4 and v5.0 has ended, so be sure to finish on v6.0 or later.
+
+#### Migrate MongoDB to a replica set configuration
+
+- **When to do this**: Before upgrading
+- **Introduced in**: v8.0
+- **When it applies**: When you run MongoDB in a standalone configuration (required from GROWI v8.0)
+- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators)
+
+1. Check whether your current MongoDB runs as a standalone instance or as a replica set.
+1. From v8.0, GROWI uses MongoDB change streams, so a replica set is required. Change streams are only available on a replica set.
+1. If you run a standalone configuration, migrate to a replica set. A single-node replica set is acceptable.
+1. After migrating, rewrite the `MONGO_URI` environment variable so that it names the replica set it connects to. When the replica set is named `rs0`, give the `replicaSet` query parameter that name, as in `mongodb://localhost:27017/growi?replicaSet=rs0`.
+1. If you use [growi-docker-compose](https://github.com/growilabs/growi-docker-compose), the latest `docker-compose.yml` in that repository already starts MongoDB as a replica set (`rs0`) and sets `?replicaSet=rs0` in `MONGO_URI`. Pull the latest version.
+
+#### Raise the MongoDB connection pool limits
+
+- **When to do this**: Before upgrading
+- **Introduced in**: v8.0
+- **When it applies**: For large environments with many active users (roughly more than 500)
+- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators), [Environment Variables](https://docs.growi.org/en/admin-guide/admin-cookbook/env-vars.html)
+
+1. From GROWI v8.0, the default upper limit of the MongoDB connection pool is reduced compared with previous versions.
+1. In large environments with many active users, many pages, or high access frequency, the default may be insufficient.
+1. If that applies to you, raise the upper and lower limits with the following environment variables.
+
+    | Environment variable | Description | Default |
+    | --- | --- | --- |
+    | `MONGO_MAX_POOL_SIZE` | Maximum number of connections in the MongoDB connection pool | `15` |
+    | `MONGO_MIN_POOL_SIZE` | Minimum number of connections in the MongoDB connection pool | `2` |
+
+#### Migrate Elasticsearch to v8 or v9
+
+- **When to do this**: Before upgrading
+- **Introduced in**: v8.0 (support for the Elasticsearch v7 series has ended)
+- **When it applies**: When you use Elasticsearch v7 or earlier
+- **References**: [v8.0.x](/en/admin-guide/upgrading/80x.html#for-administrators)
+
+1. Check the major version of Elasticsearch you are running. GROWI v8.0.x supports only the v8 and v9 series (the default is v9).
+1. If you use v7 or earlier, prepare a new Elasticsearch v8 or v9. We recommend creating a new index rather than carrying over the existing one. The steps are as follows (when using docker).
+    1. Remove the Elasticsearch container you were using.
+    1. Remove the docker volume that the Elasticsearch container used.
+    1. Start the new Elasticsearch container (make sure no index data for GROWI exists).
+    1. Start GROWI (after startup, you can rebuild the index from the Elasticsearch Management page).
+
+    For an on-premises installation, uninstall the old version, install the new version from scratch, and likewise make sure that no index for GROWI exists before starting GROWI.
+1. Set the environment variable `ELASTICSEARCH_VERSION` to the major version you connect to (`8` or `9`; the default is `9`).
+1. If you start GROWI v8.0 or later while still on Elasticsearch v7, full-text search fails to initialize and becomes unavailable (the server process itself still starts, but an error is logged). Always migrate before upgrading.
+
+#### Migrate away from the removed environment variables FILE_UPLOAD_DISABLED and DISABLE_LINK_SHARING
+
+- **When to do this**: Before upgrading
+- **Introduced in**: v7.2
+- **When it applies**: When you set the environment variable `FILE_UPLOAD_DISABLED` or `DISABLE_LINK_SHARING`
+- **References**: [v7.2.x](/en/admin-guide/upgrading/72x.html#for-admin)
+
+1. The environment variable `FILE_UPLOAD_DISABLED` (disabling the file upload feature) has been removed. Set the environment variable `FILE_UPLOAD` to `none` instead.
+1. The environment variable `DISABLE_LINK_SHARING` (disabling the share link feature) has been removed. Disable the share link feature from "Security settings" in the admin panel instead.
 
 #### Check the actual state of LOCAL_STRATEGY_ENABLED and SAML_ENABLED
 
@@ -378,21 +366,11 @@ Before upgrading:
     1. **Give priority to the DB value (recommended)**: Toggle them on the "Security settings" page of the admin panel so that the correct state is stored in the DB, remove the environment variables `LOCAL_STRATEGY_ENABLED` and `SAML_ENABLED`, and restart the server.
     1. **Give priority to the environment variable value**: Delete the document with `key: 'security:passport-local:isEnabled'` from the `configs` collection of the database. Delete the document with `key: 'security:passport-saml:isEnabled'` in the same way. Then restart the server.
 
-On GROWI.cloud, you cannot remove environment variables or operate on the database yourself. If what you see at `/login` differs from what you expect, please contact us through the [inquiry page](https://growicloud.atlassian.net/servicedesk/customer/portal/1).
+On GROWI.cloud, you cannot remove environment variables or operate on the database yourself. If what you see at `/login` differs from what you expect, please contact us through the [GROWI.cloud Service Desk](https://growicloud.atlassian.net/servicedesk/customer/portal/1).
 
 After upgrading:
 
 1. Access `/login` again and confirm that ID/Pass authentication and SAML authentication are enabled or disabled as you expect.
-
-#### Migrate away from the removed environment variables FILE_UPLOAD_DISABLED and DISABLE_LINK_SHARING
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v7.2
-- **When it applies**: When you set the environment variable `FILE_UPLOAD_DISABLED` or `DISABLE_LINK_SHARING`
-- **References**: [v7.2.x](/en/admin-guide/upgrading/72x.html#for-admin)
-
-1. The environment variable `FILE_UPLOAD_DISABLED` (disabling the file upload feature) has been removed. Set the environment variable `FILE_UPLOAD` to `none` instead.
-1. The environment variable `DISABLE_LINK_SHARING` (disabling the share link feature) has been removed. Disable the share link feature from "Security settings" in the admin panel instead.
 
 #### Review the AWS S3 bucket ACL settings and S3_OBJECT_ACL
 
@@ -418,29 +396,77 @@ After upgrading:
 
 1. If you want to keep operating as before without changing the S3 bucket settings (not recommended), explicitly set the environment variable `S3_OBJECT_ACL=public-read`.
 
-#### Adapt to the build tool changes when building from source
+#### Add s3:AbortMultipartUpload to the IAM policy
 
 - **When to do this**: Before upgrading
-- **Introduced in**: v6.1 (Lerna to Turborepo), v7.1 (yarn to pnpm)
-- **When it applies**: When you build from source yourself (not needed when you use the official Docker image)
-- **References**: [v6.1.x](/en/admin-guide/upgrading/61x.html#for-admin), [v7.1.x](/en/admin-guide/upgrading/71x.html#for-admin)
+- **Introduced in**: v7.5
+- **When it applies**: When you use S3-compatible object storage (on GROWI.cloud, when you specify Owned AWS as the file storage destination)
+- **References**: [v7.5.x](/en/admin-guide/upgrading/75x.html#for-administrators)
 
-1. From v7.1, the package manager and task runner change from yarn (v1) to pnpm. GROWI v8.0.0 declares `packageManager: pnpm@11.1.1`, so install the latest version, referring to the [pnpm official site](https://pnpm.io/installation).
+1. From v7.5.x, the upload method to S3 changes from a single PutObject to multipart upload (files of 5 MB or smaller fall back to PutObject).
+1. Add the `s3:AbortMultipartUpload` permission to your IAM policy.
+1. `CreateMultipartUpload`, `CompleteMultipartUpload`, and `UploadPart` are included in `s3:PutObject` in IAM, so `s3:AbortMultipartUpload` is the only permission you need to add.
 
-    ```bash
-    $ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sudo sh -
-    $ sudo pnpm setup
+#### Check the operational impact of Docker Hardened Images
+
+- **When to do this**: Before upgrading
+- **Introduced in**: v7.5
+- **When it applies**: When you use the official Docker image
+- **References**: [v7.5.x](/en/admin-guide/upgrading/75x.html#for-administrators)
+
+1. From v7.5.x, the base image of the official Docker image changes to a [Docker Hardened Image (DHI)](https://www.docker.com/products/hardened-images/). A DHI does not include a shell (`sh`, `bash`) or a package manager.
+1. Check whether your operations rely on entering the container interactively with `docker exec`.
+1. If you customize the official image (installing additional packages, using your own entry point, and so on), verify before upgrading that it still works on a DHI.
+
+#### Rewrite legacy attachment URLs
+
+- **When to do this**: Before upgrading
+- **Introduced in**: v6.3
+- **When it applies**: When your system was built on v3.3 or earlier and manages attachments with MongoDB GridFS
+- **References**: [v6.3.x](/en/admin-guide/upgrading/63x.html)
+
+1. In v6.3.x, the legacy endpoint for MongoDB GridFS (`/attachment/{pageID}/{fileName}`) is removed.
+1. Check whether any pages contain URLs in that form in their Markdown.
+1. Rewrite the relevant URLs to the `/attachment/{attachmentId}` form, or upload the files again.
+
+#### Migrate away from the Custom HTML Header
+
+- **When to do this**: Before upgrading
+- **Introduced in**: v6.0
+- **When it applies**: When you use the Custom HTML Header
+- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
+
+1. From v6.0, the "Custom HTML Header", which allowed you to freely insert strings and tags into the head tag, is removed.
+1. Migrate to the newly added "Custom Noscript" or to a custom script.
+1. For example, if you want to add a `link` tag, you can do it with a custom script like the following.
+
+    ```javascript
+    var link = document.createElement('link');
+    link.id = 'mylink';
+    link.rel = 'stylesheet';
+    link.href = 'https://example.com/mystyles.css';
+    document.head.appendChild(link);
     ```
 
-1. From v6.1, the build tool changes from Lerna to [Turborepo](https://turbo.build/repo). GROWI v8.0.0 includes `turbo` in its devDependencies, so it is installed automatically when you run `pnpm install`; a separate global install is not needed.
-1. Check the versions you installed.
+#### Migrate from Twitter OAuth 2 authentication to another authentication method
 
-    ```bash
-    $ node -v
-    $ pnpm -v
-    ```
+- **When to do this**: Before upgrading
+- **Introduced in**: v6.0
+- **When it applies**: When you use Twitter OAuth 2 authentication
+- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
 
-1. If you ran npm scripts with the `yarn` command, change those commands to `pnpm run` or `npm run`.
+1. From v6.0, the authentication mechanism that uses Twitter is removed.
+1. Before upgrading, switch to another authentication method such as ID/Pass authentication or SAML authentication.
+
+#### Migrate from the nocdn image to the official image
+
+- **When to do this**: Before upgrading
+- **Introduced in**: v6.0
+- **When it applies**: When you use the nocdn Docker image
+- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
+
+1. From v6.0, the official container images, which used to be split into a default build and a nocdn build, are consolidated into one.
+1. If you use the nocdn build, migrate to the consolidated official image.
 
 #### Migrate from HackMD integration to simultaneous editing in the built-in editor
 
@@ -493,58 +519,34 @@ After upgrading (administrator bulk rewrite):
 1. No script is provided for math (from MathJax to KaTeX), presentation page breaks, or the inline footnote syntax. Rewrite the affected pages manually.
 
 ::: tip If you use GROWI.cloud
-You cannot run the bulk rewrite of page content with `bin/data-migrations` yourself in a GROWI.cloud environment. If you would like it to be run, please contact us through the [inquiry page](https://growicloud.atlassian.net/servicedesk/customer/portal/1). No script is provided for math, presentation page breaks, or the inline footnote syntax, so those need to be rewritten manually.
+You cannot run the bulk rewrite of page content with `bin/data-migrations` yourself in a GROWI.cloud environment. If you would like it to be run, please contact us through the [GROWI.cloud Service Desk](https://growicloud.atlassian.net/servicedesk/customer/portal/1). No script is provided for math, presentation page breaks, or the inline footnote syntax, so those need to be rewritten manually.
 :::
 
-#### Rewrite legacy attachment URLs
+#### Notify users about WIP pages and UI changes
 
-- **When to do this**: Before upgrading
-- **Introduced in**: v6.3
-- **When it applies**: When your system was built on v3.3 or earlier and manages attachments with MongoDB GridFS
-- **References**: [v6.3.x](/en/admin-guide/upgrading/63x.html)
+- **When to do this**: Before upgrading (notify users)
+- **Introduced in**: v7.0
+- **When it applies**: When upgrading from v6.3.x or earlier
+- **References**: [v7.0.x](/en/admin-guide/upgrading/70x.html#for-user)
 
-1. In v6.3.x, the legacy endpoint for MongoDB GridFS (`/attachment/{pageID}/{fileName}`) is removed.
-1. Check whether any pages contain URLs in that form in their Markdown.
-1. Rewrite the relevant URLs to the `/attachment/{attachmentId}` form, or upload the files again.
+1. From v7.0, a page is saved as a WIP (Work In Progress) page such as "Untitled-1" as soon as the edit screen is opened (up to v6, no page data was created until you saved).
+1. A newly created WIP page is deleted automatically after a certain period from creation (48 hours by default; configurable with the environment variable `WIP_PAGE_EXPIRATION_SECONDS`). Pages created from the page tree or from the new page creation modal are also covered. However, once a page has been updated at least once after creation (whether saved as WIP or saved normally), it is no longer subject to automatic deletion.
+1. The new page creation button moves from the navbar at the top of the screen into the sidebar at the top left.
+1. Where and how you invoke the full-text search feature changes.
+1. Notify your users of these changes before upgrading.
 
-#### Migrate away from the Custom HTML Header
+#### Notify users of the v5 specification changes
 
-- **When to do this**: Before upgrading
-- **Introduced in**: v6.0
-- **When it applies**: When you use the Custom HTML Header
-- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
+- **When to do this**: Before upgrading (notify users)
+- **Introduced in**: v5.0
+- **When it applies**: When upgrading from v4.x or earlier
+- **References**: [v5.0.x](/en/admin-guide/upgrading/50x.html)
 
-1. From v6.0, the "Custom HTML Header", which allowed you to freely insert strings and tags into the head tag, is removed.
-1. Migrate to the newly added "Custom Noscript" or to a custom script.
-1. For example, if you want to add a `link` tag, you can do it with a custom script like the following.
-
-    ```javascript
-    var link = document.createElement('link');
-    link.id = 'mylink';
-    link.rel = 'stylesheet';
-    link.href = 'https://example.com/mystyles.css';
-    document.head.appendChild(link);
-    ```
-
-#### Migrate from Twitter OAuth 2 authentication to another authentication method
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v6.0
-- **When it applies**: When you use Twitter OAuth 2 authentication
-- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
-
-1. From v6.0, the authentication mechanism that uses Twitter is removed.
-1. Before upgrading, switch to another authentication method such as ID/Pass authentication or SAML authentication.
-
-#### Migrate from the nocdn image to the official image
-
-- **When to do this**: Before upgrading
-- **Introduced in**: v6.0
-- **When it applies**: When you use the nocdn Docker image
-- **References**: [v6.0.x](/en/admin-guide/upgrading/60x.html#for-admin)
-
-1. From v6.0, the official container images, which used to be split into a default build and a nocdn build, are consolidated into one.
-1. If you use the nocdn build, migrate to the consolidated official image.
+1. In v5.0, the URL used when viewing and navigating pages changes from the page path to a permalink.
+1. Moving, renaming, or deleting a parent page also affects the pages under it, regardless of whether the user can view them (pages set to "Anyone with the link" are excluded).
+1. A page tree is added to the sidebar.
+1. Icons that used to sit above the table of contents, such as Change Log, Attached Data, and Shared Link Management, move into the three dot leader dropdown.
+1. An example announcement you can copy and use as-is is published in "Example of Well-known Content to Users" on [Upgrading GROWI to v5.0.x](/en/admin-guide/upgrading/50x.html#example-of-well-known-content-to-users).
 
 ### Procedures to carry out after upgrading
 
@@ -556,7 +558,7 @@ You cannot run the bulk rewrite of page content with `bin/data-migrations` yours
 - **References**: [Setup of Full Text Search and Audit Log Index Management](/en/admin-guide/management-cookbook/setup-search-system.html)
 
 1. After upgrading GROWI itself, rebuild the index from the **Elasticsearch Management** page of the admin panel (`/admin/search`; this is the name shown in the sidebar, formerly "Full Text Search Management"). Use the **Rebuild page data index** button in the "Page Data Management" section.
-1. If the index is shown as corrupted, you can normalize it.
+1. If the index is shown as corrupted, normalizing it lets you restore search using the index produced by the previous rebuild (for details, see "Normalizing the Page Data Index" in [Setup of Full Text Search and Audit Log Index Management](/en/admin-guide/management-cookbook/setup-search-system.html)).
 1. If you have enabled the Audit Log feature, you can also manage the audit log index in the "Audit Log Index Management" section of the same page.
 
 #### Reconfigure GROWI AI Agent

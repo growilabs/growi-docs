@@ -31,7 +31,7 @@ Revision（ページの更新履歴）データの重大な不具合があるた
 ### A-1. 現在のバージョンを確認する
 
 - 現在ご利用中の GROWI アプリのバージョンは、GROWI.cloud のアプリ詳細画面の「バージョン」項目で確認できます（[バージョン](https://growi.cloud/help/ja/cloud/version.html)）。
-- GROWI.cloud では、ご契約中のプランに応じて自動でバックアップを取得しています（[バックアップ](https://growi.cloud/help/ja/cloud/backup.html)）。リストアをご希望の場合は、[お問い合わせページ](https://growicloud.atlassian.net/servicedesk/customer/portal/1) までご連絡ください。
+- GROWI.cloud では、ご契約中のプランに応じて自動でバックアップを取得しています（[バックアップ](https://growi.cloud/help/ja/cloud/backup.html)）。リストアをご希望の場合は、[GROWI.cloud サービスデスク](https://growicloud.atlassian.net/servicedesk/customer/portal/1) までご連絡ください。
 
 ### A-2. GROWI.cloud でアップグレード前に実施すること
 
@@ -47,7 +47,7 @@ Revision（ページの更新履歴）データの重大な不具合があるた
 | [該当時] [カスタム HTML Header 利用時: カスタム Noscript やカスタムスクリプトへ移行](#カスタム-html-header-の代替手段に切り替える) | | | | | | | | ○ | ○ |
 | [該当時] [Twitter OAuth 2 認証利用時: 別の認証方式へ移行](#twitter-oauth-2-認証から別の認証方式へ移行する) | | | | | | | | ○ | ○ |
 
-表に記載のない事項でご不明な点があれば、[お問い合わせページ](https://growicloud.atlassian.net/servicedesk/customer/portal/1) までご連絡ください。
+表に記載のない事項でご不明な点があれば、[GROWI.cloud サービスデスク](https://growicloud.atlassian.net/servicedesk/customer/portal/1) までご連絡ください。
 
 ### A-3. GROWI.cloud での GROWI 最新バージョンへのアップグレード
 
@@ -165,7 +165,7 @@ docker rmi growilabs/growi:7
 docker volume rm growi_es_data  # Elasticsearch を移行する場合のみ。フォルダ名が growi 以外なら読み替える
 ```
 
-最新版を pull し、Docker イメージを作成した後、コンテナを起動します。B-2 で `docker-compose.yml` を編集している場合、`git pull` がその変更点と衝突することがあります。その場合は `git stash` に変更を退避してから `git pull` を実行し、`git stash pop` を実行して戻したあと、MongoDB・Elasticsearch のバージョン指定が意図したとおりに残っているか確認してください。
+最新版を pull し、Docker イメージを作成した後、コンテナを起動します。B-2 で `docker-compose.yml` を編集している場合、`git pull` がその変更点と衝突することがあります。その場合は `git stash` に変更を退避してから `git pull` を実行し、`git stash pop` を実行して戻したあと、MongoDB・Elasticsearch のバージョン指定が意図したとおりに残っているか確認してください。あわせて、MongoDB がレプリカセット構成（`--replSet` と `MONGO_URI` の `?replicaSet=`）で起動する設定になっているかも確認してください。
 
 ```bash
 git pull
@@ -196,7 +196,7 @@ $ pnpm run app:build
 
 ```bash
 $ sudo \
-MONGO_URI=mongodb://localhost:27017/growi \
+MONGO_URI=mongodb://localhost:27017/growi?replicaSet=rs0 \
 ELASTICSEARCH_URI=http://localhost:9200/growi \
 npm run app:server
 ```
@@ -233,89 +233,6 @@ A・B の表からリンクする、対応ごとの詳細手順です。
 
 ### アップグレード前に実施する手順
 
-#### MongoDB を v6.0 以上へアップグレードする
-
-- **対応タイミング**: アップグレード前
-- **変更が入ったバージョン**: v7.1
-- **対応が必要な条件**: MongoDB v5.0 以前を利用している場合
-- **参考**: [v7.1.x](/ja/admin-guide/upgrading/71x.html#管理者向け)、[MongoDB のアップグレード](https://docs.growi.org/ja/admin-guide/admin-cookbook/upgrade-mongodb.html)
-
-1. 現在の MongoDB のバージョンを確認します。
-1. v6.0 未満の場合は、メジャーバージョンを 1 つずつ順にアップグレードします（例: v4.4 から v6.0 へアップグレードする場合は、先に v5.0 を経由します）。手順は [MongoDB のアップグレード](https://docs.growi.org/ja/admin-guide/admin-cookbook/upgrade-mongodb.html) を参照してください。
-1. MongoDB v4.4 および v5.0 のサポートは終了しているため、最終的に v6.0 以上にしてください。
-
-#### WIP ページと UI 変更を利用者へ周知する
-
-- **対応タイミング**: アップグレード前（利用者への周知）
-- **変更が入ったバージョン**: v7.0
-- **対応が必要な条件**: v6.3.x 以前から最新バージョンへアップグレードする場合
-- **参考**: [v7.0.x](/ja/admin-guide/upgrading/70x.html#利用者向け)
-
-1. v7.0 以降、編集画面を表示した時点で「無題のページ-1」のような WIP (Work In Progress) ページとして保存されるようになります（v6 までは保存操作をするまでページデータ自体が作成されませんでした）。
-1. 新規作成された WIP ページは、作成から一定期間（既定 48 時間。環境変数 `WIP_PAGE_EXPIRATION_SECONDS` で変更可能）が経過すると自動削除されます。ページツリーや新規ページ作成モーダルから作成したページも対象です。ただし、新規作成後に一度でもページを更新（WIP としての保存・通常の保存を問わず）した場合は自動削除の対象になりません。
-1. 新規ページ作成ボタンの位置が、画面上部のナビバーから左上のサイドバー内へ移ります。
-1. 全文検索機能を呼び出す場所・使い方が変わります。
-1. これらの変更を、アップグレード前に利用者へ周知してください。
-
-#### v5 の仕様変更を利用者へ周知する
-
-- **対応タイミング**: アップグレード前（利用者への周知）
-- **変更が入ったバージョン**: v5.0
-- **対応が必要な条件**: 〜v4.x から最新バージョンへアップグレードする場合
-- **参考**: [v5.0.x](/ja/admin-guide/upgrading/50x.html)
-
-1. v5.0 では、ページ閲覧・遷移時の URL がページパスからパーマリンクへ変わります。
-1. 親ページを移動・リネーム・削除すると、閲覧権限の有無に関わらず配下ページも影響を受けるよう変わります（「リンクを知っている人のみ」設定のページを除きます）。
-1. サイドバーにページツリーが追加されます。
-1. 目次上部にあった更新履歴・添付データ・共有リンク管理などのアイコンが、三点リーダードロップダウン内に移動します。
-1. 利用者向けの周知文の例（そのままコピーして使えます）は、[v5.0.x へのアップグレード](/ja/admin-guide/upgrading/50x.html#利用者への周知内容例) に掲載しています。
-
-#### Elasticsearch を v8 系または v9 系へ移行する
-
-- **対応タイミング**: アップグレード前
-- **変更が入ったバージョン**: v8.0（Elasticsearch v7 系のサポート終了）
-- **対応が必要な条件**: Elasticsearch v7 系以前を利用している場合
-- **参考**: [v8.0.x](/ja/admin-guide/upgrading/80x.html#管理者向け)
-
-1. 利用している Elasticsearch のメジャーバージョンを確認します。GROWI v8.0.x が対応するのは v8 系・v9 系のみです（既定の利用バージョンは v9 系）。
-1. v7 系以前の場合は、v8 系または v9 系の Elasticsearch を新たに用意します。既存のインデックスは引き継がず、新しいインデックスを作成することを推奨します。手順は次のとおりです（docker を利用している場合）。
-    1. 利用していた Elasticsearch のコンテナを削除する
-    1. Elasticsearch コンテナが使っていた docker volume を削除する
-    1. 新バージョンの Elasticsearch コンテナを起動する（GROWI 用のインデックスデータが存在しないことを確認）
-    1. GROWI を起動する（起動後、Elasticsearch 管理ページでインデックスを再構築できます）
-
-    オンプレミスの場合は、旧バージョンをアンインストールしたうえで新バージョンを新規インストールし、同様に GROWI 用のインデックスが存在しないことを確認してから GROWI を起動してください。
-1. 環境変数 `ELASTICSEARCH_VERSION` に、接続先のメジャーバージョン（`8` または `9`。既定値は `9`）を設定します。
-1. Elasticsearch v7 系のまま GROWI v8.0 以降を起動すると、全文検索の初期化に失敗し検索が利用できなくなります（サーバープロセス自体は起動しますが、ログにエラーが出力されます）。必ずアップグレード前に移行してください。
-
-#### MongoDB をレプリカセット構成へ移行する
-
-- **対応タイミング**: アップグレード前
-- **変更が入ったバージョン**: v8.0
-- **対応が必要な条件**: MongoDB を standalone 構成で運用している場合（GROWI v8.0 以降で必須）
-- **参考**: [v8.0.x](/ja/admin-guide/upgrading/80x.html#管理者向け)
-
-1. 現在の MongoDB の構成が standalone か、レプリカセットかを確認します。
-1. GROWI v8.0 以降は MongoDB の change stream を利用するため、レプリカセット構成が必須です。change stream はレプリカセット構成でのみ利用できます。
-1. standalone 構成の場合は、レプリカセット構成へ移行します。単一ノードのレプリカセットでも構いません。
-1. [growi-docker-compose](https://github.com/growilabs/growi-docker-compose) を利用している場合は、同リポジトリの最新の `docker-compose.yml` が MongoDB をレプリカセット（`rs0`）構成で起動するようになっています。最新版を取得してください。
-
-#### MongoDB コネクションプールの上限を引き上げる
-
-- **対応タイミング**: アップグレード前
-- **変更が入ったバージョン**: v8.0
-- **対応が必要な条件**: アクティブユーザーの多い（おおむね 500 人を超える）大規模環境
-- **参考**: [v8.0.x](/ja/admin-guide/upgrading/80x.html#管理者向け)、[環境変数](https://docs.growi.org/ja/admin-guide/admin-cookbook/env-vars.html)
-
-1. GROWI v8.0 以降、MongoDB コネクションプールの既定の上限値が、従来より小さい値に変更されます。
-1. アクティブユーザー数や総ページ数、アクセス頻度が高い大規模環境では、既定値のままだと不足する場合があります。
-1. 該当する場合は、次の環境変数で上限・下限を引き上げます。
-
-    | 環境変数名 | 説明 | 既定値 |
-    | --- | --- | --- |
-    | `MONGO_MAX_POOL_SIZE` | MongoDB コネクションプールの最大接続数 | `15` |
-    | `MONGO_MIN_POOL_SIZE` | MongoDB コネクションプールの最小接続数 | `2` |
-
 #### Node.js を v24 へアップグレードする
 
 - **対応タイミング**: アップグレード前
@@ -342,27 +259,97 @@ A・B の表からリンクする、対応ごとの詳細手順です。
 1. v7.5.0 では、Node.js v24 で追加された組み込み関数 `RegExp.escape()` をページパスの処理で利用しています。v18 系・v20 系のままアップグレードすると、この関数が存在しないため、ページの移動・複製などの操作が実行時エラーとなります。GROWI 本体のアップグレード前に必ず対応してください。
 1. 公式 Docker イメージを利用している場合、この対応は不要です。
 
-#### IAM ポリシーに s3:AbortMultipartUpload を追加する
+#### 自前ビルドのビルドツールの変更に対応する
 
 - **対応タイミング**: アップグレード前
-- **変更が入ったバージョン**: v7.5
-- **対応が必要な条件**: S3 互換オブジェクトストレージを利用している場合（GROWI.cloud では、ファイル保存先に【Owned】AWS を指定している場合）
-- **参考**: [v7.5.x](/ja/admin-guide/upgrading/75x.html#管理者向け)
+- **変更が入ったバージョン**: v6.1（Lerna → Turborepo）、v7.1（yarn → pnpm）
+- **対応が必要な条件**: ソースから自前でビルドしている場合（公式 Docker イメージ利用時は対応不要）
+- **参考**: [v6.1.x](/ja/admin-guide/upgrading/61x.html#管理者向け)、[v7.1.x](/ja/admin-guide/upgrading/71x.html#管理者向け)
 
-1. v7.5.x 以降、S3 へのアップロード方式が単一の PutObject からマルチパートアップロードに変わります（5MB 以下のファイルは PutObject にフォールバックします）。
-1. IAM ポリシーに `s3:AbortMultipartUpload` 権限を追加します。
-1. `CreateMultipartUpload`・`CompleteMultipartUpload`・`UploadPart` は IAM 上 `s3:PutObject` に含まれるため、追加が必要なのは `s3:AbortMultipartUpload` のみです。
+1. v7.1 以降、パッケージマネージャー・タスクランナーが yarn (v1) から pnpm に変わります。v8.0.0 は `packageManager: pnpm@11.1.1` を宣言しているため、[pnpm 公式サイト](https://pnpm.io/installation) を参考に最新版をインストールしてください。
 
-#### Docker Hardened Images 化による運用への影響を確認する
+    ```bash
+    $ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sudo sh -
+    $ sudo pnpm setup
+    ```
+
+1. v6.1 以降、ビルドツールが Lerna から [Turborepo](https://turbo.build/repo) に変わります。v8.0.0 は `turbo` を devDependencies に含むため、`pnpm install` を実行すれば導入され、グローバルインストールは不要です。
+1. インストールしたバージョンを確認します。
+
+    ```bash
+    $ node -v
+    $ pnpm -v
+    ```
+
+1. yarn コマンドで npm script を実行していた箇所は、`pnpm run` または `npm run` に書き換えてください。
+
+#### MongoDB を v6.0 以上へアップグレードする
 
 - **対応タイミング**: アップグレード前
-- **変更が入ったバージョン**: v7.5
-- **対応が必要な条件**: 公式 Docker イメージを利用している場合
-- **参考**: [v7.5.x](/ja/admin-guide/upgrading/75x.html#管理者向け)
+- **変更が入ったバージョン**: v7.1
+- **対応が必要な条件**: MongoDB v5.0 以前を利用している場合
+- **参考**: [v7.1.x](/ja/admin-guide/upgrading/71x.html#管理者向け)、[MongoDB のアップグレード](https://docs.growi.org/ja/admin-guide/admin-cookbook/upgrade-mongodb.html)
 
-1. v7.5.x 以降、公式 Docker イメージのベースイメージが [Docker Hardened Images (DHI)](https://www.docker.com/products/hardened-images/) に変わります。DHI はシェル（`sh`、`bash`）やパッケージマネージャーを含みません。
-1. `docker exec` でコンテナ内部に入って対話的に操作する運用をしていないかを確認します。
-1. 公式イメージをベースに独自のカスタマイズ（追加パッケージのインストール、独自のエントリポイントなど）をしている場合は、アップグレード前に DHI 上で動作するかを確認します。
+1. 現在の MongoDB のバージョンを確認します。
+1. v6.0 未満の場合は、メジャーバージョンを 1 つずつ順にアップグレードします（例: v4.4 から v6.0 へアップグレードする場合は、先に v5.0 を経由します）。手順は [MongoDB のアップグレード](https://docs.growi.org/ja/admin-guide/admin-cookbook/upgrade-mongodb.html) を参照してください。
+1. MongoDB v4.4 および v5.0 のサポートは終了しているため、最終的に v6.0 以上にしてください。
+
+#### MongoDB をレプリカセット構成へ移行する
+
+- **対応タイミング**: アップグレード前
+- **変更が入ったバージョン**: v8.0
+- **対応が必要な条件**: MongoDB を standalone 構成で運用している場合（GROWI v8.0 以降で必須）
+- **参考**: [v8.0.x](/ja/admin-guide/upgrading/80x.html#管理者向け)
+
+1. 現在の MongoDB の構成が standalone か、レプリカセットかを確認します。
+1. GROWI v8.0 以降は MongoDB の change stream を利用するため、レプリカセット構成が必須です。change stream はレプリカセット構成でのみ利用できます。
+1. standalone 構成の場合は、レプリカセット構成へ移行します。単一ノードのレプリカセットでも構いません。
+1. 移行後は、環境変数 `MONGO_URI` も接続先のレプリカセットを明示する形へ書き換えます。レプリカセット名が `rs0` の場合は `mongodb://localhost:27017/growi?replicaSet=rs0` のように、クエリパラメータ `replicaSet` にレプリカセット名を指定します。
+1. [growi-docker-compose](https://github.com/growilabs/growi-docker-compose) を利用している場合は、同リポジトリの最新の `docker-compose.yml` が MongoDB をレプリカセット（`rs0`）構成で起動し、`MONGO_URI` にも `?replicaSet=rs0` を設定するようになっています。最新版を取得してください。
+
+#### MongoDB コネクションプールの上限を引き上げる
+
+- **対応タイミング**: アップグレード前
+- **変更が入ったバージョン**: v8.0
+- **対応が必要な条件**: アクティブユーザーの多い（おおむね 500 人を超える）大規模環境
+- **参考**: [v8.0.x](/ja/admin-guide/upgrading/80x.html#管理者向け)、[環境変数](https://docs.growi.org/ja/admin-guide/admin-cookbook/env-vars.html)
+
+1. GROWI v8.0 以降、MongoDB コネクションプールの既定の上限値が、従来より小さい値に変更されます。
+1. アクティブユーザー数や総ページ数、アクセス頻度が高い大規模環境では、既定値のままだと不足する場合があります。
+1. 該当する場合は、次の環境変数で上限・下限を引き上げます。
+
+    | 環境変数名 | 説明 | 既定値 |
+    | --- | --- | --- |
+    | `MONGO_MAX_POOL_SIZE` | MongoDB コネクションプールの最大接続数 | `15` |
+    | `MONGO_MIN_POOL_SIZE` | MongoDB コネクションプールの最小接続数 | `2` |
+
+#### Elasticsearch を v8 系または v9 系へ移行する
+
+- **対応タイミング**: アップグレード前
+- **変更が入ったバージョン**: v8.0（Elasticsearch v7 系のサポート終了）
+- **対応が必要な条件**: Elasticsearch v7 系以前を利用している場合
+- **参考**: [v8.0.x](/ja/admin-guide/upgrading/80x.html#管理者向け)
+
+1. 利用している Elasticsearch のメジャーバージョンを確認します。GROWI v8.0.x が対応するのは v8 系・v9 系のみです（既定の利用バージョンは v9 系）。
+1. v7 系以前の場合は、v8 系または v9 系の Elasticsearch を新たに用意します。既存のインデックスは引き継がず、新しいインデックスを作成することを推奨します。手順は次のとおりです（docker を利用している場合）。
+    1. 利用していた Elasticsearch のコンテナを削除する
+    1. Elasticsearch コンテナが使っていた docker volume を削除する
+    1. 新バージョンの Elasticsearch コンテナを起動する（GROWI 用のインデックスデータが存在しないことを確認）
+    1. GROWI を起動する（起動後、Elasticsearch 管理ページでインデックスを再構築できます）
+
+    オンプレミスの場合は、旧バージョンをアンインストールしたうえで新バージョンを新規インストールし、同様に GROWI 用のインデックスが存在しないことを確認してから GROWI を起動してください。
+1. 環境変数 `ELASTICSEARCH_VERSION` に、接続先のメジャーバージョン（`8` または `9`。既定値は `9`）を設定します。
+1. Elasticsearch v7 系のまま GROWI v8.0 以降を起動すると、全文検索の初期化に失敗し検索が利用できなくなります（サーバープロセス自体は起動しますが、ログにエラーが出力されます）。必ずアップグレード前に移行してください。
+
+#### 廃止された環境変数 FILE_UPLOAD_DISABLED と DISABLE_LINK_SHARING の設定を置き換える
+
+- **対応タイミング**: アップグレード前
+- **変更が入ったバージョン**: v7.2
+- **対応が必要な条件**: 環境変数 `FILE_UPLOAD_DISABLED` または `DISABLE_LINK_SHARING` を設定している場合
+- **参考**: [v7.2.x](/ja/admin-guide/upgrading/72x.html#管理者向け)
+
+1. 環境変数 `FILE_UPLOAD_DISABLED`（ファイルアップロード機能の無効化）は廃止されました。代わりに、環境変数 `FILE_UPLOAD` に `none` を設定してください。
+1. 環境変数 `DISABLE_LINK_SHARING`（シェアリンク機能の無効化）は廃止されました。代わりに、管理画面の「セキュリティ設定」からシェアリンク機能を無効化してください。
 
 #### LOCAL_STRATEGY_ENABLED と SAML_ENABLED の実際の状態を確認する
 
@@ -379,21 +366,11 @@ A・B の表からリンクする、対応ごとの詳細手順です。
     1. **DB の値を優先させる（推奨）**: 管理画面の「セキュリティ設定」ページで ON/OFF を切り替えて DB に正しい状態を保存し、環境変数 `LOCAL_STRATEGY_ENABLED` および `SAML_ENABLED` を削除してサーバーを再起動します。
     1. **環境変数の値を優先させる**: データベースの `configs` collection から `key: 'security:passport-local:isEnabled'` のドキュメントを削除します。`key: 'security:passport-saml:isEnabled'` のドキュメントも同様に削除します。その後サーバーを再起動します。
 
-GROWI.cloud をご利用の場合、環境変数の削除やデータベースの直接操作はお客様側で実施できません。`/login` の表示が期待と異なる場合は、[お問い合わせページ](https://growicloud.atlassian.net/servicedesk/customer/portal/1) までご連絡ください。
+GROWI.cloud をご利用の場合、環境変数の削除やデータベースの直接操作はお客様側で実施できません。`/login` の表示が期待と異なる場合は、[GROWI.cloud サービスデスク](https://growicloud.atlassian.net/servicedesk/customer/portal/1) までご連絡ください。
 
 アップグレード後:
 
 1. 再度 `/login` にアクセスし、ID/Pass 認証・SAML 認証の有効・無効状態が期待どおりかを確認します。
-
-#### 廃止された環境変数 FILE_UPLOAD_DISABLED と DISABLE_LINK_SHARING の設定を置き換える
-
-- **対応タイミング**: アップグレード前
-- **変更が入ったバージョン**: v7.2
-- **対応が必要な条件**: 環境変数 `FILE_UPLOAD_DISABLED` または `DISABLE_LINK_SHARING` を設定している場合
-- **参考**: [v7.2.x](/ja/admin-guide/upgrading/72x.html#管理者向け)
-
-1. 環境変数 `FILE_UPLOAD_DISABLED`（ファイルアップロード機能の無効化）は廃止されました。代わりに、環境変数 `FILE_UPLOAD` に `none` を設定してください。
-1. 環境変数 `DISABLE_LINK_SHARING`（シェアリンク機能の無効化）は廃止されました。代わりに、管理画面の「セキュリティ設定」からシェアリンク機能を無効化してください。
 
 #### AWS S3 バケットの ACL 設定と S3_OBJECT_ACL を見直す
 
@@ -419,29 +396,77 @@ GROWI.cloud をご利用の場合、環境変数の削除やデータベース�
 
 1. S3 バケットの設定を変えずこれまで通りの運用を続けたい場合（非推奨）は、環境変数 `S3_OBJECT_ACL=public-read` を明示的に設定してください。
 
-#### 自前ビルドのビルドツールの変更に対応する
+#### IAM ポリシーに s3:AbortMultipartUpload を追加する
 
 - **対応タイミング**: アップグレード前
-- **変更が入ったバージョン**: v6.1（Lerna → Turborepo）、v7.1（yarn → pnpm）
-- **対応が必要な条件**: ソースから自前でビルドしている場合（公式 Docker イメージ利用時は対応不要）
-- **参考**: [v6.1.x](/ja/admin-guide/upgrading/61x.html#管理者向け)、[v7.1.x](/ja/admin-guide/upgrading/71x.html#管理者向け)
+- **変更が入ったバージョン**: v7.5
+- **対応が必要な条件**: S3 互換オブジェクトストレージを利用している場合（GROWI.cloud では、ファイル保存先に【Owned】AWS を指定している場合）
+- **参考**: [v7.5.x](/ja/admin-guide/upgrading/75x.html#管理者向け)
 
-1. v7.1 以降、パッケージマネージャー・タスクランナーが yarn (v1) から pnpm に変わります。v8.0.0 は `packageManager: pnpm@11.1.1` を宣言しているため、[pnpm 公式サイト](https://pnpm.io/installation) を参考に最新版をインストールしてください。
+1. v7.5.x 以降、S3 へのアップロード方式が単一の PutObject からマルチパートアップロードに変わります（5MB 以下のファイルは PutObject にフォールバックします）。
+1. IAM ポリシーに `s3:AbortMultipartUpload` 権限を追加します。
+1. `CreateMultipartUpload`・`CompleteMultipartUpload`・`UploadPart` は IAM 上 `s3:PutObject` に含まれるため、追加が必要なのは `s3:AbortMultipartUpload` のみです。
 
-    ```bash
-    $ curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sudo sh -
-    $ sudo pnpm setup
+#### Docker Hardened Images 化による運用への影響を確認する
+
+- **対応タイミング**: アップグレード前
+- **変更が入ったバージョン**: v7.5
+- **対応が必要な条件**: 公式 Docker イメージを利用している場合
+- **参考**: [v7.5.x](/ja/admin-guide/upgrading/75x.html#管理者向け)
+
+1. v7.5.x 以降、公式 Docker イメージのベースイメージが [Docker Hardened Images (DHI)](https://www.docker.com/products/hardened-images/) に変わります。DHI はシェル（`sh`、`bash`）やパッケージマネージャーを含みません。
+1. `docker exec` でコンテナ内部に入って対話的に操作する運用をしていないかを確認します。
+1. 公式イメージをベースに独自のカスタマイズ（追加パッケージのインストール、独自のエントリポイントなど）をしている場合は、アップグレード前に DHI 上で動作するかを確認します。
+
+#### 旧形式の添付ファイル URL を書き換える
+
+- **対応タイミング**: アップグレード前
+- **変更が入ったバージョン**: v6.3
+- **対応が必要な条件**: v3.3 系以前に構築し、MongoDB GridFS で添付ファイルを管理している場合
+- **参考**: [v6.3.x](/ja/admin-guide/upgrading/63x.html)
+
+1. v6.3.x で、MongoDB GridFS 用の旧エンドポイント（`/attachment/{pageID}/{fileName}`）が廃止されます。
+1. Markdown 中にこの形式の URL を含むページがないかを確認します。
+1. 該当する URL を `/attachment/{attachmentId}` 形式へ書き換えるか、ファイルをアップロードし直します。
+
+#### カスタム HTML Header の代替手段に切り替える
+
+- **対応タイミング**: アップグレード前
+- **変更が入ったバージョン**: v6.0
+- **対応が必要な条件**: カスタム HTML Header を利用している場合
+- **参考**: [v6.0.x](/ja/admin-guide/upgrading/60x.html#管理者向け)
+
+1. v6.0 以降、head タグに自由に文字列・タグを挿入できる「カスタム HTML Header」は廃止されます。
+1. 代わりに追加された「カスタム Noscript」、またはカスタムスクリプトへ移行します。
+1. 例えば `link` タグを追加したい場合は、次のようなカスタムスクリプトで代替できます。
+
+    ```javascript
+    var link = document.createElement('link');
+    link.id = 'mylink';
+    link.rel = 'stylesheet';
+    link.href = 'https://example.com/mystyles.css';
+    document.head.appendChild(link);
     ```
 
-1. v6.1 以降、ビルドツールが Lerna から [Turborepo](https://turbo.build/repo) に変わります。v8.0.0 は `turbo` を devDependencies に含むため、`pnpm install` を実行すれば導入され、グローバルインストールは不要です。
-1. インストールしたバージョンを確認します。
+#### Twitter OAuth 2 認証から別の認証方式へ移行する
 
-    ```bash
-    $ node -v
-    $ pnpm -v
-    ```
+- **対応タイミング**: アップグレード前
+- **変更が入ったバージョン**: v6.0
+- **対応が必要な条件**: Twitter OAuth 2 認証を利用している場合
+- **参考**: [v6.0.x](/ja/admin-guide/upgrading/60x.html#管理者向け)
 
-1. yarn コマンドで npm script を実行していた箇所は、`pnpm run` または `npm run` に書き換えてください。
+1. v6.0 以降、Twitter を使った認証機構は廃止されます。
+1. アップグレード前に、ID/Pass 認証や SAML 認証など、別の認証方式へ切り替えてください。
+
+#### nocdn 版イメージから公式イメージへ移行する
+
+- **対応タイミング**: アップグレード前
+- **変更が入ったバージョン**: v6.0
+- **対応が必要な条件**: nocdn 版の Docker イメージを利用している場合
+- **参考**: [v6.0.x](/ja/admin-guide/upgrading/60x.html#管理者向け)
+
+1. v6.0 以降、default 版と nocdn 版に分かれていた公式コンテナイメージが 1 本化されます。
+1. nocdn 版を利用している場合は、統合された公式イメージへ移行してください。
 
 #### HackMD 連携からビルトインエディタの同時多人数編集へ移行する
 
@@ -494,58 +519,34 @@ v6.0 から v7.0 にかけて、Markdown の記法とレンダリング結果が
 1. 数式（MathJax から KaTeX へ）、プレゼンテーションのページ区切り、脚注のインライン記法にはスクリプトが用意されていません。該当するページは手動で書き換えてください。
 
 ::: tip GROWI.cloud をご利用の場合
-`bin/data-migrations` によるページ本文の一括書き換えは、GROWI.cloud の環境ではお客様が実行できません。実行をご希望の場合は [お問い合わせページ](https://growicloud.atlassian.net/servicedesk/customer/portal/1) までご連絡ください。数式・プレゼンテーションのページ区切り・脚注のインライン記法はスクリプトが用意されていないため、手動での書き換えが必要です。
+`bin/data-migrations` によるページ本文の一括書き換えは、GROWI.cloud の環境ではお客様が実行できません。実行をご希望の場合は [GROWI.cloud サービスデスク](https://growicloud.atlassian.net/servicedesk/customer/portal/1) までご連絡ください。数式・プレゼンテーションのページ区切り・脚注のインライン記法はスクリプトが用意されていないため、手動での書き換えが必要です。
 :::
 
-#### 旧形式の添付ファイル URL を書き換える
+#### WIP ページと UI 変更を利用者へ周知する
 
-- **対応タイミング**: アップグレード前
-- **変更が入ったバージョン**: v6.3
-- **対応が必要な条件**: v3.3 系以前に構築し、MongoDB GridFS で添付ファイルを管理している場合
-- **参考**: [v6.3.x](/ja/admin-guide/upgrading/63x.html)
+- **対応タイミング**: アップグレード前（利用者への周知）
+- **変更が入ったバージョン**: v7.0
+- **対応が必要な条件**: v6.3.x 以前から最新バージョンへアップグレードする場合
+- **参考**: [v7.0.x](/ja/admin-guide/upgrading/70x.html#利用者向け)
 
-1. v6.3.x で、MongoDB GridFS 用の旧エンドポイント（`/attachment/{pageID}/{fileName}`）が廃止されます。
-1. Markdown 中にこの形式の URL を含むページがないかを確認します。
-1. 該当する URL を `/attachment/{attachmentId}` 形式へ書き換えるか、ファイルをアップロードし直します。
+1. v7.0 以降、編集画面を表示した時点で「無題のページ-1」のような WIP (Work In Progress) ページとして保存されるようになります（v6 までは保存操作をするまでページデータ自体が作成されませんでした）。
+1. 新規作成された WIP ページは、作成から一定期間（既定 48 時間。環境変数 `WIP_PAGE_EXPIRATION_SECONDS` で変更可能）が経過すると自動削除されます。ページツリーや新規ページ作成モーダルから作成したページも対象です。ただし、新規作成後に一度でもページを更新（WIP としての保存・通常の保存を問わず）した場合は自動削除の対象になりません。
+1. 新規ページ作成ボタンの位置が、画面上部のナビバーから左上のサイドバー内へ移ります。
+1. 全文検索機能を呼び出す場所・使い方が変わります。
+1. これらの変更を、アップグレード前に利用者へ周知してください。
 
-#### カスタム HTML Header の代替手段に切り替える
+#### v5 の仕様変更を利用者へ周知する
 
-- **対応タイミング**: アップグレード前
-- **変更が入ったバージョン**: v6.0
-- **対応が必要な条件**: カスタム HTML Header を利用している場合
-- **参考**: [v6.0.x](/ja/admin-guide/upgrading/60x.html#管理者向け)
+- **対応タイミング**: アップグレード前（利用者への周知）
+- **変更が入ったバージョン**: v5.0
+- **対応が必要な条件**: 〜v4.x から最新バージョンへアップグレードする場合
+- **参考**: [v5.0.x](/ja/admin-guide/upgrading/50x.html)
 
-1. v6.0 以降、head タグに自由に文字列・タグを挿入できる「カスタム HTML Header」は廃止されます。
-1. 代わりに追加された「カスタム Noscript」、またはカスタムスクリプトへ移行します。
-1. 例えば `link` タグを追加したい場合は、次のようなカスタムスクリプトで代替できます。
-
-    ```javascript
-    var link = document.createElement('link');
-    link.id = 'mylink';
-    link.rel = 'stylesheet';
-    link.href = 'https://example.com/mystyles.css';
-    document.head.appendChild(link);
-    ```
-
-#### Twitter OAuth 2 認証から別の認証方式へ移行する
-
-- **対応タイミング**: アップグレード前
-- **変更が入ったバージョン**: v6.0
-- **対応が必要な条件**: Twitter OAuth 2 認証を利用している場合
-- **参考**: [v6.0.x](/ja/admin-guide/upgrading/60x.html#管理者向け)
-
-1. v6.0 以降、Twitter を使った認証機構は廃止されます。
-1. アップグレード前に、ID/Pass 認証や SAML 認証など、別の認証方式へ切り替えてください。
-
-#### nocdn 版イメージから公式イメージへ移行する
-
-- **対応タイミング**: アップグレード前
-- **変更が入ったバージョン**: v6.0
-- **対応が必要な条件**: nocdn 版の Docker イメージを利用している場合
-- **参考**: [v6.0.x](/ja/admin-guide/upgrading/60x.html#管理者向け)
-
-1. v6.0 以降、default 版と nocdn 版に分かれていた公式コンテナイメージが 1 本化されます。
-1. nocdn 版を利用している場合は、統合された公式イメージへ移行してください。
+1. v5.0 では、ページ閲覧・遷移時の URL がページパスからパーマリンクへ変わります。
+1. 親ページを移動・リネーム・削除すると、閲覧権限の有無に関わらず配下ページも影響を受けるよう変わります（「リンクを知っている人のみ」設定のページを除きます）。
+1. サイドバーにページツリーが追加されます。
+1. 目次上部にあった更新履歴・添付データ・共有リンク管理などのアイコンが、三点リーダードロップダウン内に移動します。
+1. 利用者向けの周知文の例（そのままコピーして使えます）は、[v5.0.x へのアップグレード](/ja/admin-guide/upgrading/50x.html#利用者への周知内容例) に掲載しています。
 
 ### アップグレード後に実施する手順
 
