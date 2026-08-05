@@ -96,21 +96,6 @@ pageClass: admin-cookbook-env-vars
 | `OPENTELEMETRY_ANONYMIZE_IN_BEST_EFFORT` | Applies additional anonymization to data sent via OpenTelemetry. While sensitive information is not sent under normal circumstances, enabling this setting provides an extra layer of protection for environments requiring stricter data anonymization. Note that enabling this may have a slight impact on server performance. | `false` |
 | `OTEL_EXPORTER_OTLP_ENDPOINT` | Endpoint for data transmission | `https://telemetry.growi.org` |
 | Other environment variables starting with `OTEL_` | Refer to the official OpenTelemetry documentation.<ul><li><a href="https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/">Environment Variable Specification</a></li><li><a href="https://opentelemetry.io/docs/languages/sdk-configuration/">SDK Configuration</a></li></ul> |  |
-| **Option for GROWI AI features** |  |  |
-| `AI_ENABLED` | Enable or disable AI function | `false` |
-| `OPENAI_SERVICE_TYPE` | Type of OpenAI compatible service. As of v7.1.2, only `openai` is available. | `openai` |
-|  | : `openai` Use OpenAI API. |  | <!-- TODO: add "`azure-openai`: Use "Azure OpenAI"" -->|
-| `OPENAI_API_KEY` | API key for using OpenAI services. |  |
-| `OPENAI_CHAT_ASSISTANT_INSTRUCTIONS` | Instructions used by Knowledge Assistant feature. | [ref](https://github.com/growilabs/growi/blob/82042b3a409e867615acedd9fb3e99f3236c1917/apps/app/src/server/service/config-manager/config-definition.ts#L1077) |
-| `OPENAI_CHAT_ASSISTANT_MODEL` | AI model used by Knowledge Assistant feature. | `gpt-4o-mini` |
-| `OPENAI_THREAD_DELETION_CRON_EXPRESSION` | Specifies the schedule for executing OpenAI thread deletion in cron format. | `0 * * * *` |
-| `OPENAI_THREAD_DELETION_BARCH_SIZE` | Maximum number of threads to delete in a single process | 100 |
-| `OPENAI_THREAD_DELETION_API_CALL_INTERVAL` | Interval between thread deletion API calls (milliseconds) | 36000 |
-| `OPENAI_VECTOR_STORE_FILE_DELETION_CRON_EXPRESSION` | Specifies the schedule for executing Vector store file deletion in cron format. | `0 * * * *` |
-| `OPENAI_VECTOR_STORE_FILE_DELETION_BARCH_SIZE` | Maximum number of Vector store files to delete in a single process | 100 |
-| `OPENAI_VECTOR_STORE_FILE_DELETION_API_CALL_INTERVAL` | Interval between Vector store file deletion API calls (milliseconds) | 36000 |
-| `OPENAI_SEARCH_ASSISTANT_INSTRUCTIONS` | Instructions used for Search Assistant functionality | `''` (empty string) |
-| `OPENAI_LIMIT_LEARNABLE_PAGE_COUNT_PER_ASSISTANT` | Maximum number of pages that a single Knowledge Assistant can learn | 3000 |
 | **GROWI AI Agent options** |  |  |
 | `AI_ENABLED` | Enables GROWI AI Agent when `true`. | `false` |
 | `AI_PROVIDERS` | Specifies per-provider settings (enabling, Azure OpenAI settings, etc.) as JSON.<br>Example: `{"openai":{"enabled":true},"azure-openai":{"enabled":true,"azureOpenaiSettings":{"resourceName":"<resource-name>"}}}` |  |
@@ -119,6 +104,10 @@ pageClass: admin-cookbook-env-vars
 | `AI_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | When `true`, the connection settings (enabling the AI feature, enabling providers, and API keys) reference only the environment variable values, not the values in the local DB. | `false` |
 | `AI_MODEL_CATALOG_REFRESH_ON_STARTUP` | When `true`, refreshes the model catalog on startup. | `false` |
 | `AI_MODEL_CATALOG_REFRESH_CRON_SCHEDULE` | Specifies the schedule for periodically refreshing the model catalog in cron format. Leave empty to disable periodic refresh. | `0 4 * * *` |
+| `AI_SUGGEST_PATH_AGENT_PROVIDER_OPTIONS` | Overrides the model's providerOptions for the path suggestion (suggest-path) agent only, as JSON. When empty, the model catalog's options are used as-is.<br>Example: `{"openai":{"reasoningEffort":"minimal"}}` |  |
+| `AI_TOOLS_SUGGEST_PATH_AGENTIC_SEARCH_LIMIT` | Maximum number of pages the path suggestion agent retrieves per search. | 5 |
+| `AI_TOOLS_SUGGEST_PATH_AGENTIC_CHILD_LISTING_LIMIT` | Maximum number of entries the path suggestion agent retrieves when listing child pages. | 5 |
+| `AI_TOOLS_SUGGEST_PATH_AGENTIC_TIMEOUT_MS` | Timeout (in milliseconds) for the path suggestion agent's processing. | 60000 |
 | **Option (Overwritable in admin page)** | | |
 | `APP_SITE_URL_USES_ONLY_ENV_VARS` | Prioritize env vars over values in DB for Site URL | `false` |
 | `FILE_UPLOAD_USES_ONLY_ENV_VAR_FOR_FILE_UPLOAD_TYPE` | Prioritize env var over value in DB for File Upload Type | `false` |
