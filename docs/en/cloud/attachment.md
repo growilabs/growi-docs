@@ -11,7 +11,7 @@
 
 Users can also upload and manage files through GROWI by preparing their own Amason S3 storage separately from the launched GROWI App and configuring the linkage settings on the GROWI settings screen.
 
-[^1]: The standard storage capacity available for file upload on GROWI.cloud is 100 MB.
+[^1]: The maximum size per attached file depends on the file save location. If it is **[Hosted] GCP**, the limit is `100 MB` with the storage option and `15 MB` without it. If it is not [Hosted] GCP, the limit is `100 MB` regardless of the storage option.
 By purchasing the paid storage option, you will be able to upload files on GROWI according to your desired capacity.
 
 
