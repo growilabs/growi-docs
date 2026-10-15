@@ -6,6 +6,8 @@ GROWI.cloud では**法人向けプラン5つ**、**個人向けプラン3つ**�
 
 [料金・機能 ページ](https://growi.cloud/price-and-features)
 
+※ 2027 年 1 月 18 日(月)よりプラン料金が変更になります。詳しくは [お知らせ](https://growi.cloud/v2/news/209) をご覧ください。
+
 ### 法人向けプラン表<br>
 
 <img :src="$withBase('/assets/images/ja/price_1_ja.png')" alt="price_1_ja.png">
