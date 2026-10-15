@@ -9,6 +9,9 @@
 <img :src="$withBase('/assets/images/en/attachment_2.png')" alt="attachment_2.png">
 - After the above settings are made, file uploading will be enabled. [^1]
 
+On January 18, 2027 (Mon), the maximum size per attached file on paid plans will be raised.
+For details, see the [announcement](https://growi.cloud/v2/news/209) (in Japanese).
+
 Users can also upload and manage files through GROWI by preparing their own Amason S3 storage separately from the launched GROWI App and configuring the linkage settings on the GROWI settings screen.
 
 [^1]: The maximum size per attached file depends on the file save location. If it is **[Hosted] GCP**, the limit is `100 MB` with the storage option and `15 MB` without it. If it is not [Hosted] GCP, the limit is `100 MB` regardless of the storage option.
