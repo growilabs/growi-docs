@@ -202,6 +202,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/en/admin-guide/upgrading/',
+                '/en/admin-guide/upgrading/81x.md',
                 '/en/admin-guide/upgrading/80x.md',
                 '/en/admin-guide/upgrading/75x.md',
                 '/en/admin-guide/upgrading/74x.md',
@@ -484,6 +485,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/admin-guide/upgrading/',
+                '/ja/admin-guide/upgrading/81x.md',
                 '/ja/admin-guide/upgrading/80x.md',
                 '/ja/admin-guide/upgrading/75x.md',
                 '/ja/admin-guide/upgrading/74x.md',

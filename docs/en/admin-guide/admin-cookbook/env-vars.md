@@ -20,6 +20,7 @@ pageClass: admin-cookbook-env-vars
 | | : `public` Forces all pages to become public | |
 | | : `private` Forces all pages to become private | |
 | `FORMAT_NODE_LOG` | If `false`, Output server log as JSON. (Enabled only when `NODE_ENV=production`) | `true` |
+| `CHECK_CONFIGURATION_VALUE_STRICTLY` | If `true`, GROWI stops at startup when an environment variable has a value that does not match its type. If `false`, invalid values fall back to their defaults and a warning is logged. | `true` |
 | `USER_UPPER_LIMIT` | (TBD) | |
 | `MIN_PASSWORD_LENGTH` | Minimum password length that users can set. | 8 |
 | `DEFAULT_EMAIL_PUBLISHED` | Default setting for publishing new user email addresses. | `true` |
@@ -42,8 +43,8 @@ pageClass: admin-cookbook-env-vars
 | | : `mongodb` MongoDB GridFS (Setting-less) | |
 | | : `local` Server's Local file system (Setting-less) | |
 | | : `none` Disable file uploading | |
-| `MAX_FILE_SIZE` | The maximum file size limit for uploads (bytes). | `Infinity` |
-| `FILE_UPLOAD_TOTAL_LIMIT` | Total capacity limit for uploads (bytes). | `Infinity` |
+| `MAX_FILE_SIZE` | The maximum file size limit for uploads (bytes). | No limit (leave unset) |
+| `FILE_UPLOAD_TOTAL_LIMIT` | Total capacity limit for uploads (bytes). | No limit (leave unset) |
 | `S3_OBJECT_ACL` | Object ACL. ([Reference: Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl))<br />Set `private` to disable. **(Recommended)** | `public-read` |
 | `S3_LIFETIME_SEC_FOR_TEMPORARY_URL` | Time to keep the cache of signed URLs (number of seconds) | 120 |
 | `GCS_API_KEY_JSON_PATH` | Path of the JSON file that contains [service account key to authenticate to GCP API](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) | |

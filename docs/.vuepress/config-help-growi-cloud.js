@@ -216,6 +216,7 @@ module.exports = {
           'key': 'upgrade-guide',
           'children': [
             '/ja/admin-guide/upgrading/',
+            '/ja/admin-guide/upgrading/81x.md',
             '/ja/admin-guide/upgrading/80x.md',
             '/ja/admin-guide/upgrading/74x.md',
             '/ja/admin-guide/upgrading/73x.md',
@@ -390,6 +391,7 @@ module.exports = {
           'key': 'upgrade-guide',
           'children': [
             '/en/admin-guide/upgrading/',
+            '/en/admin-guide/upgrading/81x.md',
             '/en/admin-guide/upgrading/80x.md',
             '/en/admin-guide/upgrading/74x.md',
             '/en/admin-guide/upgrading/73x.md',

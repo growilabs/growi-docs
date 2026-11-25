@@ -19,6 +19,7 @@ pageClass: admin-cookbook-env-vars
 | | : `public` 全てのページを強制的にパブリックにします。 | |
 | | : `private` 全てのページを強制的に非公開にします。 | |
 | `FORMAT_NODE_LOG` |  `false`の場合、サーバーログを JSON 形式で出力します。(`NODE_ENV=production` の時のみ可能) | `true` |
+| `CHECK_CONFIGURATION_VALUE_STRICTLY` | `true` の場合、型に合わない値の環境変数があると起動を停止します。`false` の場合、不正な値は既定値に置き換えられ、警告がログに出力されます。 | `true` |
 | `USER_UPPER_LIMIT` | (TBD) | |
 | `MIN_PASSWORD_LENGTH` | ユーザーが設定可能なパスワードの最短文字数 | 8 |
 | `DEFAULT_EMAIL_PUBLISHED` | 新規作成されたユーザーのデフォルトの email 公開設定 | `true` |
@@ -43,8 +44,8 @@ pageClass: admin-cookbook-env-vars
 | | : `mongodb` MongoDB の GridFS　機能を使用します。 (別途の設定は不要です。) | |
 | | : `local` ローカルのファイルシステムを使用します。 (別途の設定は不要です。) | |
 | | : `none` ファイルアップロードを無効にします。  | |
-| `MAX_FILE_SIZE` | アップロード可能なファイルサイズ上限（bytes）。 | `Infinity` |
-| `FILE_UPLOAD_TOTAL_LIMIT` | アップロードファイルの総容量の上限（bytes） | `Infinity` |
+| `MAX_FILE_SIZE` | アップロード可能なファイルサイズ上限（bytes）。 | 上限なし（未設定のまま） |
+| `FILE_UPLOAD_TOTAL_LIMIT` | アップロードファイルの総容量の上限（bytes） | 上限なし（未設定のまま） |
 | `S3_OBJECT_ACL` | オブジェクト ACL。([参考: 既定 ACL](https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/userguide/acl-overview.html#canned-acl))<br />無効化する場合は `private` をセットしてください。**(推奨)** | `public-read` |
 | `S3_LIFETIME_SEC_FOR_TEMPORARY_URL` | 署名付きURLのキャッシュを保持する期間(秒数) | 120 |
 | `GCS_API_KEY_JSON_PATH` |  [GCP API 認証用のサービスアカウントキー](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) を含む JSON ファイルのパス | |
