@@ -1,0 +1,30 @@
+# GROWI Docs
+
+> GROWIの公式ドキュメントサイトです。ユーザーズガイド・管理者ガイド・開発ガイド・APIリファレンスを提供しています。
+> Official documentation site for GROWI. Provides Users Guide, Admin Guide, Developers Guide, and API Reference.
+
+user-agent: *
+x-canonical-url: https://docs.growi.org/
+x-content-license: "(c) GROWI, Inc. All rights reserved."
+x-ai-training-policy: "allowed"
+x-publisher-name: "GROWI, Inc."
+x-publisher-description: "GROWI, Inc. is the developer of GROWI, an open-source Markdown-based Wiki system. GROWI is used by teams and organizations for knowledge management and information sharing."
+x-sitemap: https://docs.growi.org/sitemap.xml
+x-supported-languages: ja, en
+
+## Users Guide
+- [GROWIを始めよう](https://docs.growi.org/ja/guide/getting-started/try_growi.html): 最初のステップ
+- [ページの作成](https://docs.growi.org/ja/guide/features/create_page.html): ページ作成方法
+- [Markdown記法](https://docs.growi.org/ja/guide/getting-started/markdown.html): 対応Markdown記法
+- [Getting Started](https://docs.growi.org/en/guide/getting-started/try_growi.html): First steps
+- [Create Page](https://docs.growi.org/en/guide/features/create_page.html): How to create pages
+- [Markdown](https://docs.growi.org/en/guide/getting-started/markdown.html): Supported Markdown syntax
+
+## Admin Guide
+- [Docker Composeでインストール](https://docs.growi.org/ja/admin-guide/getting-started/docker-compose.html): 推奨インストール方法
+- [環境変数](https://docs.growi.org/ja/admin-guide/admin-cookbook/env-vars.html): 設定一覧
+- [Install with Docker Compose](https://docs.growi.org/en/admin-guide/getting-started/docker-compose.html): Recommended installation
+- [Environment Variables](https://docs.growi.org/en/admin-guide/admin-cookbook/env-vars.html): Configuration reference
+
+## API
+- [API Reference](https://docs.growi.org/en/api/rest-v3.html): REST API v3

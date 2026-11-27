@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Join GROWI on Slack</title>
+
+<!--
+  This file is the only place that holds the GROWI community Slack invite link.
+
+  Everything else links to https://docs.growi.org/slack instead of embedding the
+  Slack URL, so reissuing the link is a one-file change. Please keep it that way:
+  do not copy the join.slack.com URL into README files, issue templates or apps.
+
+  Why the link has to be reissued from time to time:
+
+    - One Slack shared invite link accepts up to 400 sign-ups.
+    - "Never expires" stops working once the workspace passes 2,000 invitations.
+    - An owner may deactivate or renew a link at any time.
+
+  How to reissue it:
+
+    1. Slack workspace menu -> "Invite people to GROWI"
+    2. "Edit link settings" at the bottom of the dialog
+    3. Set the expiration to "Never expires" and copy the new link
+    4. Replace both occurrences of the URL below
+
+  .github/workflows/check-slack-invite-link.yml opens the link in a headless
+  browser every day and fails if it stops showing the Slack join page, so an
+  exhausted or revoked link surfaces on its own -- you should hear about it in
+  #ci rather than from someone who could not join.
+-->
+
+<meta http-equiv="refresh" content="0; url=https://join.slack.com/t/wsgrowi/shared_invite/zt-45hm10bo3-djV8tFMsJdV1VfTiGeIKPg">
+
+<style>
+  body {
+    margin: 0;
+    padding: 3rem 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    line-height: 1.7;
+    color: #2c3e50;
+    text-align: center;
+  }
+  p { margin: 0 0 .75rem; }
+  .sub { color: #6b7785; font-size: .9rem; }
+</style>
+</head>
+<body>
+  <p>Redirecting you to the GROWI community Slack workspace&hellip;</p>
+  <p>
+    If nothing happens,
+    <a href="https://join.slack.com/t/wsgrowi/shared_invite/zt-45hm10bo3-djV8tFMsJdV1VfTiGeIKPg">open the invite link</a>.
+  </p>
+  <p class="sub">
+    自動で移動しない場合は上のリンクから参加してください。<br>
+    リンクが切れている場合は
+    <a href="https://github.com/growilabs/growi/issues">growilabs/growi の issue</a>
+    でお知らせください。
+  </p>
+</body>
+</html>
