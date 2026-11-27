@@ -20,6 +20,7 @@ pageClass: admin-cookbook-env-vars
 | | : `public` Forces all pages to become public | |
 | | : `private` Forces all pages to become private | |
 | `FORMAT_NODE_LOG` | If `false`, Output server log as JSON. (Enabled only when `NODE_ENV=production`) | `true` |
+| `CHECK_CONFIGURATION_VALUE_STRICTLY` | If `true`, GROWI stops at startup when an environment variable has a value that does not match its type. If `false`, invalid values fall back to their defaults and a warning is logged. | `true` |
 | `USER_UPPER_LIMIT` | (TBD) | |
 | `MIN_PASSWORD_LENGTH` | Minimum password length that users can set. | 8 |
 | `DEFAULT_EMAIL_PUBLISHED` | Default setting for publishing new user email addresses. | `true` |
@@ -42,8 +43,8 @@ pageClass: admin-cookbook-env-vars
 | | : `mongodb` MongoDB GridFS (Setting-less) | |
 | | : `local` Server's Local file system (Setting-less) | |
 | | : `none` Disable file uploading | |
-| `MAX_FILE_SIZE` | The maximum file size limit for uploads (bytes). | `Infinity` |
-| `FILE_UPLOAD_TOTAL_LIMIT` | Total capacity limit for uploads (bytes). | `Infinity` |
+| `MAX_FILE_SIZE` | The maximum file size limit for uploads (bytes). | No limit (leave unset) |
+| `FILE_UPLOAD_TOTAL_LIMIT` | Total capacity limit for uploads (bytes). | No limit (leave unset) |
 | `S3_OBJECT_ACL` | Object ACL. ([Reference: Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl))<br />Set `private` to disable. **(Recommended)** | `public-read` |
 | `S3_LIFETIME_SEC_FOR_TEMPORARY_URL` | Time to keep the cache of signed URLs (number of seconds) | 120 |
 | `GCS_API_KEY_JSON_PATH` | Path of the JSON file that contains [service account key to authenticate to GCP API](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) | |
@@ -68,6 +69,11 @@ pageClass: admin-cookbook-env-vars
 | `ELASTICSEARCH_REINDEX_ON_BOOT` | Recreate the index on system boot | `false` |
 | `ELASTICSEARCH_REQUEST_TIMEOUT` | Timeout for requests to the Elasticsearch server (msec) | 8000 |
 | `ELASTICSEARCH_REJECT_UNAUTHORIZED` | Turn off certificate verification when connecting with HTTPS schema. | `false` |
+| `GROWI_ATTACHMENT_EXTRACTOR_URI` | URI of the extraction service (attachment-text-extractor) that extracts the text of attachments. Setting it together with the token enables full-text search for attachments. See [here](/en/admin-guide/management-cookbook/setup-attachment-search.html) for setup. | |
+| `GROWI_ATTACHMENT_EXTRACTOR_SERVICE_TOKEN` | Token used to authenticate to the extraction service. Set the same value as `ATTACHMENT_EXTRACTOR_SERVICE_TOKEN` of the extraction service. | |
+| `GROWI_ATTACHMENT_EXTRACTOR_TIMEOUT_MS` | How long to wait for one request to the extraction service (msec) | 90000 |
+| `GROWI_ATTACHMENT_EXTRACTOR_MAX_FILE_SIZE_BYTES` | Largest attachment sent to the extraction service (bytes). Larger attachments are not searchable. | 52428800 |
+| `ATTACHMENT_EXTRACTOR_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | If `true`, the settings of full-text search for attachments (the four above) only refer to the environment variables, not to the values in the local DB. | `false` |
 | **Option to integrate with external systems** | | |
 | `REDIS_URI` | URI to connect to Redis (use it as a session store instead of MongoDB). | |
 | `NCHAN_URI` | URI to connect to Nginx [Nchan](https://nchan.io/) server. | |

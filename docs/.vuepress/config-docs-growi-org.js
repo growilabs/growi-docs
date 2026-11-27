@@ -202,6 +202,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/en/admin-guide/upgrading/',
+                '/en/admin-guide/upgrading/81x.md',
                 '/en/admin-guide/upgrading/80x.md',
                 '/en/admin-guide/upgrading/75x.md',
                 '/en/admin-guide/upgrading/74x.md',
@@ -294,6 +295,7 @@ module.exports = {
                 '/en/admin-guide/management-cookbook/import.md',
                 '/en/admin-guide/management-cookbook/export.md',
                 '/en/admin-guide/management-cookbook/setup-search-system.md',
+                '/en/admin-guide/management-cookbook/setup-attachment-search.md',
                 '/en/admin-guide/management-cookbook/audit-log.md',
                 '/en/admin-guide/management-cookbook/plugins.md',
                 '/en/admin-guide/management-cookbook/growi-ai-agent.md',
@@ -484,6 +486,7 @@ module.exports = {
               collapsable: false,
               children: [
                 '/ja/admin-guide/upgrading/',
+                '/ja/admin-guide/upgrading/81x.md',
                 '/ja/admin-guide/upgrading/80x.md',
                 '/ja/admin-guide/upgrading/75x.md',
                 '/ja/admin-guide/upgrading/74x.md',
@@ -576,6 +579,7 @@ module.exports = {
                 '/ja/admin-guide/management-cookbook/export.md',
                 '/ja/admin-guide/management-cookbook/g2g-transfer.md',
                 '/ja/admin-guide/management-cookbook/setup-search-system.md',
+                '/ja/admin-guide/management-cookbook/setup-attachment-search.md',
                 '/ja/admin-guide/management-cookbook/audit-log.md',
                 '/ja/admin-guide/management-cookbook/plugins.md',
                 '/ja/admin-guide/management-cookbook/growi-ai-agent.md',
