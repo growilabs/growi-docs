@@ -69,6 +69,11 @@ pageClass: admin-cookbook-env-vars
 | `ELASTICSEARCH_REINDEX_ON_BOOT` | Recreate the index on system boot | `false` |
 | `ELASTICSEARCH_REQUEST_TIMEOUT` | Timeout for requests to the Elasticsearch server (msec) | 8000 |
 | `ELASTICSEARCH_REJECT_UNAUTHORIZED` | Turn off certificate verification when connecting with HTTPS schema. | `false` |
+| `GROWI_ATTACHMENT_EXTRACTOR_URI` | URI of the extraction service (attachment-text-extractor) that extracts the text of attachments. Setting it together with the token enables full-text search for attachments. See [here](/en/admin-guide/management-cookbook/setup-attachment-search.html) for setup. | |
+| `GROWI_ATTACHMENT_EXTRACTOR_SERVICE_TOKEN` | Token used to authenticate to the extraction service. Set the same value as `ATTACHMENT_EXTRACTOR_SERVICE_TOKEN` of the extraction service. | |
+| `GROWI_ATTACHMENT_EXTRACTOR_TIMEOUT_MS` | How long to wait for one request to the extraction service (msec) | 90000 |
+| `GROWI_ATTACHMENT_EXTRACTOR_MAX_FILE_SIZE_BYTES` | Largest attachment sent to the extraction service (bytes). Larger attachments are not searchable. | 52428800 |
+| `ATTACHMENT_EXTRACTOR_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | If `true`, the settings of full-text search for attachments (the four above) only refer to the environment variables, not to the values in the local DB. | `false` |
 | **Option to integrate with external systems** | | |
 | `REDIS_URI` | URI to connect to Redis (use it as a session store instead of MongoDB). | |
 | `NCHAN_URI` | URI to connect to Nginx [Nchan](https://nchan.io/) server. | |

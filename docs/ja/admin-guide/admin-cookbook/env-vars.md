@@ -70,6 +70,11 @@ pageClass: admin-cookbook-env-vars
 | `ELASTICSEARCH_REINDEX_ON_BOOT` | システム起動時にインデックスを再作成する | `false` |
 | `ELASTICSEARCH_REQUEST_TIMEOUT` | Elasticsearch サーバーへのリクエストに対するタイムアウト(msec) | 8000 |
 | `ELASTICSEARCH_REJECT_UNAUTHORIZED` | HTTPS スキーマでの接続時に証明書の検証を行うかどうか | `false` |
+| `GROWI_ATTACHMENT_EXTRACTOR_URI` | 添付ファイルの本文を取り出す抽出サービス (attachment-text-extractor) の URI。トークンと合わせて設定すると、添付ファイルの全文検索が有効になります。セットアップ方法は[こちら](/ja/admin-guide/management-cookbook/setup-attachment-search.html)。 | |
+| `GROWI_ATTACHMENT_EXTRACTOR_SERVICE_TOKEN` | 抽出サービスへの認証に使うトークン。抽出サービス側の `ATTACHMENT_EXTRACTOR_SERVICE_TOKEN` と同じ値を設定します。 | |
+| `GROWI_ATTACHMENT_EXTRACTOR_TIMEOUT_MS` | 抽出サービスへの 1 回の要求を待つ時間 (msec) | 90000 |
+| `GROWI_ATTACHMENT_EXTRACTOR_MAX_FILE_SIZE_BYTES` | 抽出サービスへ送る添付ファイルの最大サイズ (bytes)。これより大きい添付ファイルは検索対象になりません。 | 52428800 |
+| `ATTACHMENT_EXTRACTOR_USES_ONLY_ENV_VARS_FOR_SOME_OPTIONS` | `true` の場合、添付ファイルの全文検索の設定 (上の 4 つ) はローカル DB の値を参照せず、環境変数の値のみを参照します。 | `false` |
 | **外部システム連携オプション** | | |
 | `REDIS_URI` | 接続する Redis サーバーの URI (Redis を MongoDB の代わりにセッションストアとして利用する場合に設定してください） | |
 | `NCHAN_URI` | 接続する Nginx [Nchan](https://nchan.io/) サーバーの URI | |
